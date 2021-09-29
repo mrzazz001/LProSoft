@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBPROSOFT_default" Class="Rate_DataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\prosoft;Initial Catalog=DBPROSOFT_default;User ID=sa" SettingsObjectName="InvAcc.Properties.Settings" SettingsPropertyName="DBPROSOFT_defaultConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.T_Branch" Member="T_Branches">
+    <Type Name="T_Branch">
+      <Column Name="Branch_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Branch_no" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Branch_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Branch_NameE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Branch_address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Branch_city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Branch_phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Branch_fax" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Branch_mem" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="REP_FLG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartEg" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EndEg" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="crNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="crIssu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="crExp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BldNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BldIssu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BldExp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dfNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dfIssu" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="dfExp" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="T_Branch_T_User" Member="T_Users" ThisKey="Branch_no" OtherKey="Brn" Type="T_User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Users" Member="T_Users">
+    <Type Name="T_User">
+      <Column Name="Usr_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UsrNo" Type="System.String" DbType="VarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UsrNamA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrNamE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Pass" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Brn" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Typ" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProLng" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FilStr" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="InvStr" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="SndStr" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="StkRep" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="AccRep" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="SetStr" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="EditCost" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="PassQty" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="RepInv1" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RepInv2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RepInv3" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RepInv4" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RepInv5" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RepInv6" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RepAcc1" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RepAcc2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RepAcc3" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RepAcc4" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RepAcc5" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RepAcc6" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Emp_FilStr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Emp_MovStr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Emp_SalStr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Emp_RepStr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Emp_GenStr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreateGaid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserPointTyp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CashAccNo_D" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CashAccNo_C" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NetworkAccNo_D" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NetworkAccNo_C" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CreaditAccNo_D" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CreaditAccNo_C" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Comm_Inv" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Comm_Gaid" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CashAccNo_D_R" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CashAccNo_C_R" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NetworkAccNo_D_R" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NetworkAccNo_C_R" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CreaditAccNo_D_R" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CreaditAccNo_C_R" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PeaperTyp" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="StorePrmission" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="DefStores" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StopBanner" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UsrImg" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaxDiscountSals" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MaxDiscountPurchaes" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="vColumnStr1" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="vColumnStr2" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="vColumnStr3" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="vColumnStr4" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="vColumnNum1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="vColumnNum2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Eqar_FilStr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Eqar_TenantStr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Eqar_RepStr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Eqar_GenStr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="T_Branch_T_User" Member="T_Branch" ThisKey="Brn" OtherKey="Branch_no" Type="T_Branch" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

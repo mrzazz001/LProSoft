@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="netResize1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="textBox9.Text" xml:space="preserve">
+    <value>اتفاقية الترخيص لعملاء مؤسسة برو سوفت
+عزيزي المستخدم .. تحتوي هذه الاتفاقية على معلومات هامة ، الرجاء قراءتها بعناية قبل الشروع في استخدام البرنامج 
+تعد اتفاقية الترخيص هذه اتفاقاً مشروعاً بينك وبين مؤسسة البرامج التطبيقية (برو سوفت) ، بشأن منتجها المشار إليه في الاعلى ، ويتضمن هذا الاتفاق البرنامج والمطبوعات والمستندات المباشرة أو الإلكترونية المرفقة به.
+إن استخدامك للبرنامج بتحميله على جهاز الكمبيوتر وتسجيله لدى مؤسسة البرامج التطبيقية (برو سوفت) يعتبر إقراراً منك بالالتزام بما ورد في اتفاقية الترخيص هذه . فإذا لم توافق على ما ورد في اتفاقية الترخيص هذه ، لا تقم بتسجيل البرنامج . ويمكنك إعادته فوراً إلى الجهة التي حصلت عليه منها خلال فتره محدده لتسترد ما سددته بالكامل .
+يتمتع هذا البرنامج بحماية القوانين والاتفاقيات الدولية الخاصة بحقوق المؤلف ، علاوة على غيرها من القوانين والاتفاقيات الدولية في مجال الملكية الفكرية.
+تخولك اتفاقية الترخيص هذه الحقوق التالية:
+•	بعد تسجيل البرنامج لدى مؤسسة البرامج التطبيقية (برو سوفت) لا يحق لك إرجاع البرنامج .
+•	يجوز لك أن تحمل وأن تستخدم هذه النسخة من البرنامج لجهاز واحد فقط .
+•	عند استبدال أو تهيئة الأقراص الصلبة لن يؤثر ذلك على تشغيل البرنامج مرة أخرى على نفس الجهاز في حالة تغيير المعالج أو المد بورد تبع الجهاز فأنة يحتاج إلى شراء نسخة جديدة مباشرة وتعتبر نسخه فرعية .
+•	هده النسخة لا تدعم الشبكة الداخلية ولا الخارجية نهائياً .
+•	إذا أردت تشغيل البرنامج على جهاز آخر يمكنك الاتصال بنا وشراء نسخة جديدة .
+•	الدعم الفني للبرنامج لمدة سنة من تاريخ تفعيل البرنامج عن طريق الهاتف أو حضور العميل بالجهاز لمقر مؤسسة تطبيقات البرامج (برو سوفت)  في جدة أو بيشة 
+•	الدعم الفني يشمل التحديثات و أي استفسارات أو مشكلة تتعلق بالبرنامج أو البيانات ويتم حلها عن طريق الهاتف إن أمكن أو عن طريق الانترنت، ولا يشمل أيام العطل والإجازات الرسمية
+•	في حال اراد العميل نقل البرنامج من جهاز الى اخر يتم الغاء تفعيل النسخه من الجهاز الحالي نهائياً ويتم تفعيل نسخه جديده في الجهاز الجديد ويتم دفع رسوم نقل بيانات الى الجهاز الجديد بمبلغ رمزي , كما يتوجب على العميل ارسال خطاب يوضح فيه الغاء النسخه في الجهاز المراد الغاء النسخه منه حتى لاتحتسب عليه بقيمة اشتراك دعم فني او صيانه 
+•	بعد انتهاء عقد الصيانة  المجاني والذي مدته سنة من تاريخ الشراء  يتم تجديد العقد بمبلغ مقطوع لاتتجاوز نسبته عن 30% من قيمة البرنامج .
+•	في حالة عدم تجديد عقد الصيانة سوف يكون هناك  دعم عن طريق الهاتف فقط خلال أوقات الدوام الرسمية وأي مشكلة فنية سوف يكون حلها بمبلغ مقطوع وتكون قيمتها حسب المشكله الفنية .
+•	لا تتحمل المؤسسة شرح الأعمال المحاسبية أو المشاكل الناتجة عن الشبكة أو الأجهزة أو الطابعات أو نظام التشغيل وغيرها من البرامج ولا الخلل الناتج عن انقطاع التيار الكهربائي أو الفيروسات وخلافه ويتم حلها من قبل العميل أو أن يتحمل العميل مصاريف حلها .
+•	الحصول على أي اوامر تشغيل تختص بالبرنامج ( تحديثات ) بعد السنة سوف تكون برسوم معينة .
+•	لا يجوز لك بيع أو نقل ملكية البرنامج بأي حال من الأحوال.
+•	لا يجوز لك أن تؤجر منتج البرنامج أو أن تمنحه على سبيل الإعارة .
+•	المؤسسة غير مسؤلة عن أي مبلغ يتم دفعه الى افراد او موزعين او مندوبين , ويجب تحويل المبلغ الى ادارة المؤسسة وذلك بالاتصال على ارقام المؤسسة والاستفسار عن ذلك
+•	يجوز لـ مؤسسة البرامج التطبيقية (برو سوفت) إنهاء هذا الترخيص إذا لم يلتزم العميل بالبنود الموضحة في الاتفاقية  .
+•	تضمن مؤسسة البرامج التطبيقية (برو سوفت) البرنامج من العيوب الناتجة عن سوء الإنتاج ولا تضمنه من العيوب الناتجة عن سوء الاستخدام .
+•	للاستفسار بخصوص اتفاقية الترخيص هذه أو أي استفسار آخر، يرجى الاتصال بالأرقم الموجودة أسفل العقد .
+•	يجب على العميل توفير الانترنت لتقديم خدمه الدعم الفني عن بعد  وهده إلزامية .
+ .
+									مؤسسة برو سوفت  
+										  الإدارة</value>
+  </data>
+</root>

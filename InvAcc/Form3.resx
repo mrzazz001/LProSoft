@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="dataGridView_ItemDet.ColumnInfo" xml:space="preserve">
+    <value>35,1,0,0,0,100,Columns:0{Visible:False;}	1{Width:60;Caption:"Item Code";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	2{Width:100;Caption:"الوصف";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	3{Width:60;Caption:"الوحدة";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	4{Width:100;Caption:"Item Name";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	5{Width:60;Caption:"Unit";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	6{Width:50;Caption:"S";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	7{Width:50;Caption:"Quantity";Style:"DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	8{Width:50;Caption:"Price";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	9{Width:77;Caption:"Discount %";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	10{Caption:"AvrageCost";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	11{Caption:"Pack";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	12{Caption:"relQty";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	13{Caption:"itmIvDsc";Visible:False;}	14{Caption:"dfUCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	15{Caption:"ItmDesE";Visible:False;}	16{Visible:False;}	17{Width:66;Visible:False;}	18{Caption:"DefUNum";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	19{Visible:False;}	20{Visible:False;}	21{Visible:False;}	22{Visible:False;}	23{Visible:False;}	24{Caption:"stkQty";Visible:False;Style:"DataType:System.Double;TextAlign:CenterCenter;";}	25{Visible:False;}	26{Visible:False;}	27{Width:83;Caption:"Date Exp";Visible:False;Style:"DataType:System.String;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	28{Caption:"Lot";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	29{Width:77;Visible:False;}	30{Caption:"LastCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	31{Caption:"Net Amount";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;ImageAlign:CenterCenter;";}	32{Caption:"ItmTyp";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	33{Caption:"Wight";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	34{Caption:"Wight _T";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	</value>
+  </data>
+  <data name="dataGridView_ItemDet.StyleInfo" xml:space="preserve">
+    <value>Normal{Font:Tahoma, 8.25pt;}	Alternate{BackColor:Gainsboro;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	FrozenAlternate{}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	</value>
+  </data>
+  <data name="FlxStkQty.ColumnInfo" xml:space="preserve">
+    <value>3,1,0,0,0,100,Columns:0{Width:76;Caption:"المستودع";Visible:False;Style:"BackColor:Gainsboro;Margins:1, 0, 0, 0;TextAlign:CenterCenter;TextEffect:Flat;TextDirection:Normal;ImageAlign:CenterCenter;Trimming:None;Border:Flat,1,ControlDark,Both;";StyleFixed:"BackColor:Control;Margins:1, 0, 0, 0;TextAlign:CenterCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";}	1{Width:109;Caption:"الكمية المتاحة";Style:"Format:""N2"";DataType:System.Double;Margins:1, 0, 0, 0;TextAlign:CenterCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;Border:Flat,1,ControlDark,Both;";StyleFixed:"TextAlign:CenterCenter;";}	2{Width:80;Caption:"المستودع";Style:"Format:""N2"";Margins:1, 0, 0, 0;TextAlign:CenterCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;Border:Flat,1,ControlDark,Both;";StyleFixed:"TextAlign:CenterCenter;";}	</value>
+  </data>
+  <data name="FlxStkQty.StyleInfo" xml:space="preserve">
+    <value>Normal{Font:Tahoma, 8.25pt, style=Bold;BackColor:Transparent;BackgroundImageLayout:Hide;}	Alternate{}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;BackgroundImageLayout:Hide;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	FrozenAlternate{}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:Control;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txtRemark.ButtonCustom.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAb9JREFUOE+N
+        k79LW1EUx997uc8k5r0Ek6UNBaGdpBVEREEQIgSFZLFTZx39A+zaodBBKB07de/YQZCM7i66OAjioi7+
+        TBGtaPr53tybGKTFAx/evefc77nnnntf4Ow1zEJiZ8+zAsxo8BM6jnNYhbBerwkDsfuG+A18gE04gBoE
+        R+ATeFqVSnkU0TDknVjCfRf/BWXnDyrwEXqJjMl04tgcF4vpPN+X+DZc7B60NpAYVFHPcmEYriFuG2Ns
+        EnzXcAIa/4YmSByBKos1t+YyptXqi7E4jlu4bDWOC5gGL05Bx+tWwEBiZSxBSiXvcT+AT/AHFol5sdb5
+        3tgE6rIyplEUqbM3IOEttN34slwemWSN3QS6YhkTXVU+k8m8YXoKfudlmIKzbmPj3YmJ8QprI3x9w2GS
+        JBliuA1e/APsmUul4hyNvVISjvdJ/gFjkcr5Al58CInEYM+cJIUGPh1JN1OFAXsLd+ATLD0Wu6/KXnHx
+        rzBg6+DFW/8Qe/sOevJZ/L1GfgObgFtY+I9YloMdetEk1nuJOp8S7OHU/T7+B54Ym7zjiX8m3n+JYRg0
+        stmhcTnB/31PTH7F0zR5Va/XzF8YUI/rGMlZ3AAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="txtRemark.ButtonCustom2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAA1FJREFUWEe9
+        V01rFEEUXDQkMSEEyR4yuz0zmyUJuAQUQxLJxSj5CR79A0oE8aR48OBB/4JnDxEUxIsHQT3GgyAiePA3
+        5CARUciSWNX9era7d2b2Ex8UTXfXvqp50/Nmp8JI08UL9Xr9TRzXfwGno6P2UCeWQO5rWD8E9jGdMKsS
+        Rjz66ScwSBJC6TFv3yLgPZDUOrB2HWu/LQ/mXqVpPCXb2h2v3EtoyExokLdvEfDuS1odvniHp1T0Etum
+        EtgMy95OUwXEeuS8CA7vGPPCK8c+EOuRcyIzYRcE7d3dnTlgXsYzJp0fXC/j+eIUNnB0BLXnngFeUVFS
+        G1yX/RHFiehHZoD3BkRbgaHE5bT3KV4/BP+iNsDTaQzoCvwXcaXUJeQ4KwayU9yWfF5QTETHKT4FmEPI
+        CshmlwGKieg4xWeAacBUwIFngGJAmfgOfjOoOPPMAlNYe1xogGJCHrc4880oVXuC9XauAYo55C5xJLsK
+        7rDicxB/KnvdBijmkjkXXR1INi5xItdAoTgDnNfkDiNerS5MBhzfQFknxD1f4dhsNmeTJPkwqLjkmwh4
+        HQO9OiHa5lc8rre5v7m5vkgTTiIXReKMfAO9OmEURVXwTmDwpNlM7zEpK4GqvHOSEWXiDM8AdK2B8k6I
+        pDdsyWmClZD1c46JXuKMzIBodiogG7mdsNFInlkDwjvBq/QW95Ux8QJjL3GGNsD/BcaAcwYEuZ2w0Yi/
+        O+IWmQnLA8rEK3wK7IVkFQ+SdnXCtbVWEz+AmMc7xf/IP/hX8z5GiGipONc3Ni6fNwayf0b5BkiWZPNL
+        S42b3KMgnoSPaCSPFJrR8vIy32Z9XbnlbW2tLwSV7DZgyYBOivu7rURQ8ukIeZzLlhcujxUI9fIMDJR0
+        EN5IndAG12V/GF7YiI7RYqO/nPBU8v7g0KVC7gquS7KhTOJ2qsDAERc/O50Qh40fKnENfH44ZGD5eA95
+        kDhyHnLKeEa89tY1AM0D3oK7pil0PhryYB4frxnlol+e6O1VeLqTpPYtJLhgZUzSXib758Wx+rK9fWUa
+        1eGbLq7zbRcSCVudXhUahEfx1dWVVIvbaLVak0qpOzDyCUR+L7bZq/EDPXJehD54/HY8AucA41525ZVK
+        5R9+7JGmPgNM6AAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="FlxInv.ColumnInfo" xml:space="preserve">
+    <value>41,1,0,0,0,95,Columns:0{Visible:False;}	1{Width:79;Caption:"Item Code";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	2{Width:150;Caption:"الوصف";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	3{Width:64;Caption:"الوحدة";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	4{Width:150;Caption:"Item Name";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	5{Width:64;Caption:"Unit";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	6{Width:45;Caption:"S";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	7{Width:60;Caption:"Quantity";Style:"DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	8{Width:60;Caption:"Price";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	9{Width:45;Caption:"Discount %";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	10{Caption:"AvrageCost";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	11{Caption:"Pack";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	12{Caption:"relQty";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	13{Caption:"itmIvDsc";Visible:False;}	14{Caption:"dfUCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	15{Caption:"ItmDesE";Visible:False;}	16{Visible:False;}	17{Width:66;Visible:False;}	18{Caption:"DefUNum";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	19{Visible:False;}	20{Visible:False;}	21{Visible:False;}	22{Visible:False;}	23{Visible:False;}	24{Caption:"stkQty";Visible:False;Style:"DataType:System.Double;TextAlign:CenterCenter;";}	25{Visible:False;}	26{Visible:False;}	27{Width:83;Caption:"Date Exp";Visible:False;Style:"DataType:System.String;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	28{Caption:"Lot";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	29{Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	30{Caption:"LastCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	31{Width:70;Caption:"Net Amount";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;ImageAlign:CenterCenter;";}	32{Caption:"ItmTyp";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	33{Width:40;Caption:"هدية";Visible:False;Style:"DataType:System.Boolean;TextAlign:CenterCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	34{Caption:"Wight _T";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	35{Width:60;Caption:"MakeNo";Visible:False;Style:"TextAlign:GeneralCenter;";StyleFixed:"TextAlign:CenterCenter;";}	36{Caption:"Other Details";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	37{Width:30;AllowSorting:False;Caption:"*";Visible:False;AllowResizing:False;AllowEditing:False;Style:"DataType:System.Boolean;TextAlign:LeftCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	38{Width:45;Caption:"Tax";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	39{Caption:"sfsss";ShowButtons:Always;Style:"ComboList:""..."";Margins:1, 0, 0, 0;TextEffect:Flat;TextDirection:Normal;Trimming:None;BackgroundImage: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;BackgroundImageLayout:Scale;";StyleFixed:"Margins:1, 0, 0, 0;TextEffect:Flat;TextDirection:Normal;Trimming:None;BackgroundImage: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;BackgroundImageLayout:TileStretch;";}	40{Caption:"حالة العرض";Visible:False;}	</value>
+  </data>
+  <data name="FlxInv.StyleInfo" xml:space="preserve">
+    <value>Normal{Font:Tahoma, 8pt;BackColor:White;}	Alternate{BackColor:Gainsboro;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	FrozenAlternate{}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	</value>
+  </data>
+</root>

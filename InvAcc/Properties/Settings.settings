@@ -1,0 +1,84 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="InvAcc.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.\PROSOFT</Value>
+    </Setting>
+    <Setting Name="SUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="DefaultDDatabaseName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PROSOFT_default</Value>
+    </Setting>
+    <Setting Name="DefaultUDatabaseName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DBPROSOFT_default</Value>
+    </Setting>
+    <Setting Name="DBPROSOFT_defaultConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\prosoft;Initial Catalog=DBPROSOFT_default;Persist Security Info=True;User ID=sa;Password="Prosoft@prosoft&amp;amp;ma89"&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\prosoft;Initial Catalog=DBPROSOFT_default;Persist Security Info=True;User ID=sa;Password="Prosoft@prosoft&amp;ma89"</Value>
+    </Setting>
+    <Setting Name="SSSTyp" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="SSSLevel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="runTyp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">G.</Value>
+    </Setting>
+    <Setting Name="Mode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SQL</Value>
+    </Setting>
+    <Setting Name="SqlFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MSSQL10_50.PROSOFT</Value>
+    </Setting>
+    <Setting Name="pscomp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Password=Prosoft@prosoft&amp;ma89;Persist Security Info=True;</Value>
+    </Setting>
+    <Setting Name="Registerks" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Software\PRS AND PR Settings\MrdSoft\\Register</Value>
+    </Setting>
+    <Setting Name="WinOperation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Software\PRS AND PR Settings\WinSystemOperation</Value>
+    </Setting>
+    <Setting Name="Intelk" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Software\MrdHrdw\ItIntel</Value>
+    </Setting>
+    <Setting Name="Prog_MessageToShow" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Prog_StartCommandToExecute" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Prog_AutoCommandToExecute" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MRDClientsDBConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\prosoft;Initial Catalog=MRDClientsDB;Persist Security Info=True;User ID=sa;Password=Prosoft@prosoft&amp;amp;ma89&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\prosoft;Initial Catalog=MRDClientsDB;Persist Security Info=True;User ID=sa;Password=Prosoft@prosoft&amp;ma89</Value>
+    </Setting>
+    <Setting Name="PROSOFT_default_1ConnectionStringh" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=EC2AMAZ-SI4ASSC\PROSOFT;Initial Catalog=PROSOFT_default_1;Persist Security Info=True;User ID=sa;Password="Prosoft@prosoft&amp;amp;amp;ma89"&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=EC2AMAZ-SI4ASSC\PROSOFT;Initial Catalog=PROSOFT_default_1;Persist Security Info=True;User ID=sa;Password="Prosoft@prosoft&amp;amp;ma89"</Value>
+    </Setting>
+    <Setting Name="SPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"Prosoft@prosoft&amp;ma89"</Value>
+    </Setting>
+    <Setting Name="B3" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

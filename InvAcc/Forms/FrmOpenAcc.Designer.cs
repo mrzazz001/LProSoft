@@ -1,0 +1,433 @@
+   
+
+namespace InvAcc.Forms
+{
+partial class FrmOpenAcc
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+    
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvAcc.Forms.FrmOpenAcc));
+            this.PanelSpecialContainer = new System.Windows.Forms.Panel();
+
+            components = new System.ComponentModel.Container();
+
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn1 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn5 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background1 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background2 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
+            superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
+            superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            label2 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            txtGDate = new System.Windows.Forms.MaskedTextBox();
+            txtHDate = new System.Windows.Forms.MaskedTextBox();
+            CmbCurr = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            label3 = new System.Windows.Forms.Label();
+            txtSumCredit = new DevComponents.Editors.DoubleInput();
+            txtSumDebit = new DevComponents.Editors.DoubleInput();
+            DVG_ACC = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
+            CmbPosting = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            superTabItem_General = new DevComponents.DotNetBar.SuperTabItem();
+            ButWithSave = new DevComponents.DotNetBar.ButtonItem();
+            labelItem2 = new DevComponents.DotNetBar.LabelItem();
+            ButWithoutSave = new DevComponents.DotNetBar.ButtonItem();
+            labelItem1 = new DevComponents.DotNetBar.LabelItem();
+            buttonItemDelete = new DevComponents.DotNetBar.ButtonItem();
+            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);  this.netResize1.LabelsAutoEllipse = false;
+            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
+            this.Shown += new System.EventHandler(this.FrmInvSale_Shown);
+            this.SizeChanged += new System.EventHandler(this.FrmInvSale_SizeChanged);
+            ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
+
+            ribbonBar1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)superTabControl1).BeginInit();
+            superTabControl1.SuspendLayout();
+            superTabControlPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)txtSumCredit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtSumDebit).BeginInit();
+            SuspendLayout();
+            ribbonBar1.AccessibleDescription = null;
+            ribbonBar1.AccessibleName = null;
+            resources.ApplyResources(ribbonBar1, "ribbonBar1");
+            ribbonBar1.AutoOverflowEnabled = true;
+            ribbonBar1.BackgroundImage = null;
+            ribbonBar1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            ribbonBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            ribbonBar1.ContainerControlProcessDialogKey = true;
+            ribbonBar1.Controls.Add(superTabControl1);
+            ribbonBar1.Font = null;
+          // ribbonBar1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            ribbonBar1.Name = "ribbonBar1";
+            ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            ribbonBar1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            superTabControl1.AccessibleDescription = null;
+            superTabControl1.AccessibleName = null;
+            resources.ApplyResources(superTabControl1, "superTabControl1");
+            superTabControl1.BackColor = System.Drawing.Color.White;
+            superTabControl1.BackgroundImage = null;
+            superTabControl1.ControlBox.Category = null;
+            superTabControl1.ControlBox.CloseBox.Category = null;
+            superTabControl1.ControlBox.CloseBox.CommandParameter = null;
+            superTabControl1.ControlBox.CloseBox.Description = null;
+            superTabControl1.ControlBox.CloseBox.Name = string.Empty;
+            superTabControl1.ControlBox.CloseBox.Tag = null;
+            superTabControl1.ControlBox.CloseBox.Text = resources.GetString("superTabControl1.ControlBox.CloseBox.Text");
+            superTabControl1.ControlBox.CloseBox.Tooltip = resources.GetString("superTabControl1.ControlBox.CloseBox.Tooltip");
+            superTabControl1.ControlBox.CommandParameter = null;
+            superTabControl1.ControlBox.Description = null;
+            superTabControl1.ControlBox.MenuBox.Category = null;
+            superTabControl1.ControlBox.MenuBox.CommandParameter = null;
+            superTabControl1.ControlBox.MenuBox.Description = null;
+            superTabControl1.ControlBox.MenuBox.Name = string.Empty;
+            superTabControl1.ControlBox.MenuBox.Tag = null;
+            superTabControl1.ControlBox.MenuBox.Text = resources.GetString("superTabControl1.ControlBox.MenuBox.Text");
+            superTabControl1.ControlBox.MenuBox.Tooltip = resources.GetString("superTabControl1.ControlBox.MenuBox.Tooltip");
+            superTabControl1.ControlBox.Name = string.Empty;
+            superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[2]
+            {
+                superTabControl1.ControlBox.MenuBox,
+                superTabControl1.ControlBox.CloseBox
+            });
+            superTabControl1.ControlBox.Tag = null;
+            superTabControl1.ControlBox.Text = resources.GetString("superTabControl1.ControlBox.Text");
+            superTabControl1.ControlBox.Tooltip = resources.GetString("superTabControl1.ControlBox.Tooltip");
+            superTabControl1.ControlBox.Visible = false;
+            superTabControl1.Controls.Add(superTabControlPanel5);
+            superTabControl1.Font = null;
+            superTabControl1.ForeColor = System.Drawing.Color.Black;
+            superTabControl1.Name = "superTabControl1";
+            superTabControl1.ReorderTabsEnabled = true;
+            superTabControl1.SelectedTabIndex = 0;
+            superTabControl1.TabHorizontalSpacing = 40;
+            superTabControl1.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[6]
+            {
+                superTabItem_General,
+                ButWithSave,
+                labelItem2,
+                ButWithoutSave,
+                labelItem1,
+                buttonItemDelete
+            });
+            superTabControl1.TabVerticalSpacing = 8;
+            superTabControl1.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            superTabControlPanel5.AccessibleDescription = null;
+            superTabControlPanel5.AccessibleName = null;
+            resources.ApplyResources(superTabControlPanel5, "superTabControlPanel5");
+            superTabControlPanel5.BackgroundImage = null;
+            superTabControlPanel5.Controls.Add(label2);
+            superTabControlPanel5.Controls.Add(label1);
+            superTabControlPanel5.Controls.Add(label4);
+            superTabControlPanel5.Controls.Add(txtGDate);
+            superTabControlPanel5.Controls.Add(txtHDate);
+            superTabControlPanel5.Controls.Add(CmbCurr);
+            superTabControlPanel5.Controls.Add(label3);
+            superTabControlPanel5.Controls.Add(txtSumCredit);
+            superTabControlPanel5.Controls.Add(txtSumDebit);
+            superTabControlPanel5.Controls.Add(DVG_ACC);
+            superTabControlPanel5.Controls.Add(CmbPosting);
+            superTabControlPanel5.Font = null;
+            superTabControlPanel5.Name = "superTabControlPanel5";
+            superTabControlPanel5.TabItem = superTabItem_General;
+            label2.AccessibleDescription = null;
+            label2.AccessibleName = null;
+            resources.ApplyResources(label2, "label2");
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            label2.Name = "label2";
+            label1.AccessibleDescription = null;
+            label1.AccessibleName = null;
+            resources.ApplyResources(label1, "label1");
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            label1.Name = "label1";
+            label4.AccessibleDescription = null;
+            label4.AccessibleName = null;
+            resources.ApplyResources(label4, "label4");
+            label4.BackColor = System.Drawing.Color.Transparent;
+            label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            label4.Name = "label4";
+            txtGDate.AccessibleDescription = null;
+            txtGDate.AccessibleName = null;
+            resources.ApplyResources(txtGDate, "txtGDate");
+            txtGDate.BackColor = System.Drawing.Color.WhiteSmoke;
+            txtGDate.BackgroundImage = null;
+            txtGDate.Name = "txtGDate";
+            txtGDate.Leave += new System.EventHandler(txtGDate_Leave);
+            txtGDate.Click += new System.EventHandler(txtGDate_Click);
+            txtHDate.AccessibleDescription = null;
+            txtHDate.AccessibleName = null;
+            resources.ApplyResources(txtHDate, "txtHDate");
+            txtHDate.BackColor = System.Drawing.Color.WhiteSmoke;
+            txtHDate.BackgroundImage = null;
+            txtHDate.Name = "txtHDate";
+            txtHDate.Leave += new System.EventHandler(txtHDate_Leave);
+            txtHDate.Click += new System.EventHandler(txtHDate_Click);
+            CmbCurr.AccessibleDescription = null;
+            CmbCurr.AccessibleName = null;
+            resources.ApplyResources(CmbCurr, "CmbCurr");
+            CmbCurr.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            CmbCurr.BackgroundImage = null;
+            CmbCurr.CommandParameter = null;
+            CmbCurr.DisplayMember = "Text";
+            CmbCurr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            CmbCurr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            CmbCurr.Font = null;
+            CmbCurr.FormattingEnabled = true;
+            CmbCurr.Name = "CmbCurr";
+            CmbCurr.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            label3.AccessibleDescription = null;
+            label3.AccessibleName = null;
+            resources.ApplyResources(label3, "label3");
+            label3.Name = "label3";
+            txtSumCredit.AccessibleDescription = null;
+            txtSumCredit.AccessibleName = null;
+            resources.ApplyResources(txtSumCredit, "txtSumCredit");
+            txtSumCredit.BackgroundImage = null;
+            txtSumCredit.BackgroundStyle.Class = "DateTimeInputBackground";
+            txtSumCredit.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            txtSumCredit.ButtonCalculator.DisplayPosition = (int)resources.GetObject("txtSumCredit.ButtonCalculator.DisplayPosition");
+            txtSumCredit.ButtonCalculator.Image = null;
+            txtSumCredit.ButtonCalculator.Text = resources.GetString("txtSumCredit.ButtonCalculator.Text");
+            txtSumCredit.ButtonClear.DisplayPosition = (int)resources.GetObject("txtSumCredit.ButtonClear.DisplayPosition");
+            txtSumCredit.ButtonClear.Image = null;
+            txtSumCredit.ButtonClear.Text = resources.GetString("txtSumCredit.ButtonClear.Text");
+            txtSumCredit.ButtonCustom.DisplayPosition = (int)resources.GetObject("txtSumCredit.ButtonCustom.DisplayPosition");
+            txtSumCredit.ButtonCustom.Image = null;
+            txtSumCredit.ButtonCustom.Text = resources.GetString("txtSumCredit.ButtonCustom.Text");
+            txtSumCredit.ButtonCustom2.DisplayPosition = (int)resources.GetObject("txtSumCredit.ButtonCustom2.DisplayPosition");
+            txtSumCredit.ButtonCustom2.Image = null;
+            txtSumCredit.ButtonCustom2.Text = resources.GetString("txtSumCredit.ButtonCustom2.Text");
+            txtSumCredit.ButtonDropDown.DisplayPosition = (int)resources.GetObject("txtSumCredit.ButtonDropDown.DisplayPosition");
+            txtSumCredit.ButtonDropDown.Image = null;
+            txtSumCredit.ButtonDropDown.Text = resources.GetString("txtSumCredit.ButtonDropDown.Text");
+            txtSumCredit.ButtonFreeText.DisplayPosition = (int)resources.GetObject("txtSumCredit.ButtonFreeText.DisplayPosition");
+            txtSumCredit.ButtonFreeText.Image = null;
+            txtSumCredit.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            txtSumCredit.ButtonFreeText.Text = resources.GetString("txtSumCredit.ButtonFreeText.Text");
+            txtSumCredit.CommandParameter = null;
+            txtSumCredit.DisplayFormat = "0.00";
+            txtSumCredit.ForeColor = System.Drawing.Color.Maroon;
+            txtSumCredit.Increment = 1.0;
+            txtSumCredit.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            txtSumCredit.IsInputReadOnly = true;
+            txtSumCredit.Name = "txtSumCredit";
+            txtSumDebit.AccessibleDescription = null;
+            txtSumDebit.AccessibleName = null;
+            resources.ApplyResources(txtSumDebit, "txtSumDebit");
+            txtSumDebit.BackgroundImage = null;
+            txtSumDebit.BackgroundStyle.Class = "DateTimeInputBackground";
+            txtSumDebit.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            txtSumDebit.ButtonCalculator.DisplayPosition = (int)resources.GetObject("txtSumDebit.ButtonCalculator.DisplayPosition");
+            txtSumDebit.ButtonCalculator.Image = null;
+            txtSumDebit.ButtonCalculator.Text = resources.GetString("txtSumDebit.ButtonCalculator.Text");
+            txtSumDebit.ButtonClear.DisplayPosition = (int)resources.GetObject("txtSumDebit.ButtonClear.DisplayPosition");
+            txtSumDebit.ButtonClear.Image = null;
+            txtSumDebit.ButtonClear.Text = resources.GetString("txtSumDebit.ButtonClear.Text");
+            txtSumDebit.ButtonCustom.DisplayPosition = (int)resources.GetObject("txtSumDebit.ButtonCustom.DisplayPosition");
+            txtSumDebit.ButtonCustom.Image = null;
+            txtSumDebit.ButtonCustom.Text = resources.GetString("txtSumDebit.ButtonCustom.Text");
+            txtSumDebit.ButtonCustom2.DisplayPosition = (int)resources.GetObject("txtSumDebit.ButtonCustom2.DisplayPosition");
+            txtSumDebit.ButtonCustom2.Image = null;
+            txtSumDebit.ButtonCustom2.Text = resources.GetString("txtSumDebit.ButtonCustom2.Text");
+            txtSumDebit.ButtonDropDown.DisplayPosition = (int)resources.GetObject("txtSumDebit.ButtonDropDown.DisplayPosition");
+            txtSumDebit.ButtonDropDown.Image = null;
+            txtSumDebit.ButtonDropDown.Text = resources.GetString("txtSumDebit.ButtonDropDown.Text");
+            txtSumDebit.ButtonFreeText.DisplayPosition = (int)resources.GetObject("txtSumDebit.ButtonFreeText.DisplayPosition");
+            txtSumDebit.ButtonFreeText.Image = null;
+            txtSumDebit.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            txtSumDebit.ButtonFreeText.Text = resources.GetString("txtSumDebit.ButtonFreeText.Text");
+            txtSumDebit.CommandParameter = null;
+            txtSumDebit.DisplayFormat = "0.00";
+            txtSumDebit.ForeColor = System.Drawing.Color.Maroon;
+            txtSumDebit.Increment = 1.0;
+            txtSumDebit.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            txtSumDebit.IsInputReadOnly = true;
+            txtSumDebit.Name = "txtSumDebit";
+            txtSumDebit.UseWaitCursor = true;
+            DVG_ACC.AccessibleDescription = null;
+            DVG_ACC.AccessibleName = null;
+            resources.ApplyResources(DVG_ACC, "DVG_ACC");
+            DVG_ACC.BackgroundImage = null;
+            DVG_ACC.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
+            DVG_ACC.Font = null;
+            DVG_ACC.HScrollBarVisible = false;
+            DVG_ACC.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            DVG_ACC.Name = "DVG_ACC";
+            gridColumn1.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.None;
+            gridColumn1.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            gridColumn1.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            gridColumn1.EnableFiltering = DevComponents.DotNetBar.SuperGrid.Style.Tbool.True;
+            gridColumn1.FilterAutoScan = true;
+            gridColumn1.FilterMatchType = DevComponents.DotNetBar.SuperGrid.FilterMatchType.Wildcards;
+            gridColumn1.HeaderText = null;
+            gridColumn1.Name = string.Empty;
+            gridColumn1.Width = 110;
+            gridColumn2.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.None;
+            gridColumn2.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            gridColumn2.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            gridColumn2.EnableFiltering = DevComponents.DotNetBar.SuperGrid.Style.Tbool.True;
+            gridColumn2.FilterAutoScan = true;
+            gridColumn2.FilterMatchType = DevComponents.DotNetBar.SuperGrid.FilterMatchType.Wildcards;
+            gridColumn2.HeaderText = null;
+            gridColumn2.Name = string.Empty;
+            gridColumn2.Width = 110;
+            gridColumn3.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.None;
+            gridColumn3.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            gridColumn3.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridIntegerInputEditControl);
+            gridColumn3.EnableFiltering = DevComponents.DotNetBar.SuperGrid.Style.Tbool.True;
+            gridColumn3.FilterAutoScan = true;
+            gridColumn3.FilterMatchType = DevComponents.DotNetBar.SuperGrid.FilterMatchType.Wildcards;
+            gridColumn3.HeaderText = null;
+            gridColumn3.Name = string.Empty;
+            gridColumn3.ReadOnly = true;
+            gridColumn3.Visible = false;
+            gridColumn3.Width = 60;
+            gridColumn4.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.None;
+            gridColumn4.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            gridColumn4.CellStyles.Default.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.True;
+            gridColumn4.EnableFiltering = DevComponents.DotNetBar.SuperGrid.Style.Tbool.True;
+            gridColumn4.FilterAutoScan = true;
+            gridColumn4.FilterMatchType = DevComponents.DotNetBar.SuperGrid.FilterMatchType.RegularExpressions;
+            gridColumn4.HeaderText = null;
+            gridColumn4.Name = string.Empty;
+            gridColumn4.ReadOnly = true;
+            gridColumn4.Width = 280;
+            gridColumn5.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.None;
+            gridColumn5.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            gridColumn5.EnableFiltering = DevComponents.DotNetBar.SuperGrid.Style.Tbool.True;
+            gridColumn5.FilterAutoScan = true;
+            gridColumn5.FilterMatchType = DevComponents.DotNetBar.SuperGrid.FilterMatchType.Wildcards;
+            gridColumn5.HeaderText = null;
+            gridColumn5.Name = string.Empty;
+            gridColumn5.ReadOnly = true;
+            gridColumn5.Width = 110;
+            DVG_ACC.PrimaryGrid.Columns.Add(gridColumn1);
+            DVG_ACC.PrimaryGrid.Columns.Add(gridColumn2);
+            DVG_ACC.PrimaryGrid.Columns.Add(gridColumn3);
+            DVG_ACC.PrimaryGrid.Columns.Add(gridColumn4);
+            DVG_ACC.PrimaryGrid.Columns.Add(gridColumn5);
+            DVG_ACC.PrimaryGrid.DefaultVisualStyles.AlternateColumnCellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            DVG_ACC.PrimaryGrid.DefaultVisualStyles.AlternateRowCellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            background1.Color1 = System.Drawing.SystemColors.ActiveCaption;
+            background1.Color2 = System.Drawing.SystemColors.GradientInactiveCaption;
+            DVG_ACC.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.Background = background1;
+            background2.Color1 = System.Drawing.SystemColors.ActiveCaption;
+            DVG_ACC.PrimaryGrid.DefaultVisualStyles.FilterColumnHeaderStyles.Default.Background = background2;
+            DVG_ACC.PrimaryGrid.EnableColumnFiltering = true;
+            DVG_ACC.PrimaryGrid.EnableFiltering = true;
+            DVG_ACC.PrimaryGrid.EnableRowFiltering = true;
+            DVG_ACC.PrimaryGrid.Filter.Visible = true;
+            DVG_ACC.PrimaryGrid.ShowRowGridIndex = true;
+            DVG_ACC.PrimaryGrid.UseAlternateColumnStyle = true;
+            DVG_ACC.SizingStyle = DevComponents.DotNetBar.SuperGrid.Style.StyleType.NotSelectable;
+            DVG_ACC.EndEdit += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridEditEventArgs>(DVG_ACC_EndEdit);
+            CmbPosting.AccessibleDescription = null;
+            CmbPosting.AccessibleName = null;
+            resources.ApplyResources(CmbPosting, "CmbPosting");
+            CmbPosting.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            CmbPosting.BackgroundImage = null;
+            CmbPosting.CommandParameter = null;
+            CmbPosting.DisplayMember = "Text";
+            CmbPosting.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            CmbPosting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            CmbPosting.Font = null;
+            CmbPosting.FormattingEnabled = true;
+            CmbPosting.Name = "CmbPosting";
+            CmbPosting.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            CmbPosting.SelectedIndexChanged += new System.EventHandler(CmbPosting_SelectedIndexChanged);
+            superTabItem_General.AttachedControl = superTabControlPanel5;
+            resources.ApplyResources(superTabItem_General, "superTabItem_General");
+            superTabItem_General.CommandParameter = null;
+            superTabItem_General.GlobalItem = false;
+            superTabItem_General.Name = "superTabItem_General";
+            resources.ApplyResources(ButWithSave, "ButWithSave");
+            ButWithSave.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            ButWithSave.Checked = true;
+            ButWithSave.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            ButWithSave.CommandParameter = null;
+            ButWithSave.FontBold = true;
+            ButWithSave.Name = "ButWithSave";
+            ButWithSave.Stretch = true;
+            ButWithSave.Symbol = "\uf00c";
+            ButWithSave.SymbolSize = 8f;
+            ButWithSave.Click += new System.EventHandler(ButWithSave_Click);
+            resources.ApplyResources(labelItem2, "labelItem2");
+            labelItem2.CommandParameter = null;
+            labelItem2.Name = "labelItem2";
+            resources.ApplyResources(ButWithoutSave, "ButWithoutSave");
+            ButWithoutSave.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            ButWithoutSave.Checked = true;
+            ButWithoutSave.CommandParameter = null;
+            ButWithoutSave.FontBold = true;
+            ButWithoutSave.Name = "ButWithoutSave";
+            ButWithoutSave.Stretch = true;
+            ButWithoutSave.Symbol = "\uf00d";
+            ButWithoutSave.SymbolSize = 8f;
+            ButWithoutSave.Click += new System.EventHandler(ButWithoutSave_Click);
+            resources.ApplyResources(labelItem1, "labelItem1");
+            labelItem1.CommandParameter = null;
+            labelItem1.Name = "labelItem1";
+            resources.ApplyResources(buttonItemDelete, "buttonItemDelete");
+            buttonItemDelete.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            buttonItemDelete.Checked = true;
+            buttonItemDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.MagentaWithBackground;
+            buttonItemDelete.CommandParameter = null;
+            buttonItemDelete.FontBold = true;
+            buttonItemDelete.Name = "buttonItemDelete";
+            buttonItemDelete.Stretch = true;
+            buttonItemDelete.Symbol = "\uf014";
+            buttonItemDelete.SymbolSize = 12f;
+            buttonItemDelete.Visible = false;
+            buttonItemDelete.Click += new System.EventHandler(buttonItemDelete_Click);
+            base.AccessibleDescription = null;
+            base.AccessibleName = null;
+            resources.ApplyResources(this, "$this");
+            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackgroundImage = null;
+            base.Controls.Add(ribbonBar1);
+            Font = null;
+            base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            base.KeyPreview = true;
+            base.MaximizeBox = false;
+            base.Name = "FrmOpenAcc";
+            base.Load += new System.EventHandler(FrmOpenAcc_Load);
+            base.KeyPress += new System.Windows.Forms.KeyPressEventHandler(Frm_KeyPress);
+            base.KeyDown += new System.Windows.Forms.KeyEventHandler(Frm_KeyDown);
+            ribbonBar1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)superTabControl1).EndInit();
+            superTabControl1.ResumeLayout(false);
+            superTabControlPanel5.ResumeLayout(false);
+            superTabControlPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)txtSumCredit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtSumDebit).EndInit();
+            ResumeLayout(false);
+        }//###########&&&&&&&&&&
+
+}
+}
