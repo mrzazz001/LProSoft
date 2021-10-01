@@ -1,8 +1,8 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Metro;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using InvAcc.Properties;
-using InvAcc.Stock_Data;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using SSSLanguage;
 using System;
@@ -20,7 +20,7 @@ namespace InvAcc.Forms
  ToolStripMenuItem_Det.Text=   (arln == 0 ? "  إظهار التفاصيل  " : "  Show details") ; ToolStripMenuItem_Rep.Text=   (arln == 0 ? "  إظهار التقرير  " : "  Show report") ; superTabControlPanel1.Text=   (arln == 0 ? "  .  " : "  .") ; superTabItem_Customer.Text=   (arln == 0 ? "  العمـــــــلاء  " : "  customer") ; labelItem2.Text=   (arln == 0 ? "          بحث بـ  " : "          search by") ; labelItem_Mobile.Text=   (arln == 0 ? "  جوال العميل :  " : "  Customer mobile:") ; txtSearchMobile.Text=   (arln == 0 ? "  بحـــــث  " : "  search") ; txtSearchMobile.Text=   (arln == 0 ? "  مســــح  " : "  clear") ; checkBox_ByMobile.Text=   (arln == 0 ? "  جوال العميل  " : "  Customer mobile") ; checkBox_ByName.Text=   (arln == 0 ? "  إسم العميل  " : "  customer name") ; itemPanel1.Text=   (arln == 0 ? "  itemPanel1  " : "  itemPanel1") ; labelItem_Tables.Text=   (arln == 0 ? "  labelItem1  " : "  labelItem1") ; labelItem_Note.Text=   (arln == 0 ? "  labelItem2  " : "  labelItem2") ; labelItem_Time.Text=   (arln == 0 ? "  labelItem6  " : "  labelItem6") ; labelItem_Nadel.Text=   (arln == 0 ? "  labelItem7  " : "  labelItem7") ; labelItem_Type.Text=   (arln == 0 ? "  labelItem1  " : "  labelItem1") ; itemPanel2.Text=   (arln == 0 ? "  itemPanel2  " : "  itemPanel2") ; labelItem_SumTable.Text=   (arln == 0 ? "  labelItem1  " : "  labelItem1") ; ButOk.Text=   (arln == 0 ? "  اختيــــــــار  " : "  choose") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public int vTy_ = 0;

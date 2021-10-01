@@ -2,8 +2,8 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
 using Framework.UI;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +20,7 @@ namespace InvAcc.Forms
  button1.Text=   (arln == 0 ? "  شكل توضيح  " : "  illustration shape") ; checkBox_previewPrint.Text=   (arln == 0 ? "  تعيين إعدادات الطابعة الإفتراضية   " : "  Set the default printer settings") ; checkBox_Collate.Text=   (arln == 0 ? "  تجـميــــع  " : "  collection") ; label7.Text=   (arln == 0 ? "  الإرتفاع بين كروت الباركود :  " : "  Height between barcode cards:") ; label10.Text=   (arln == 0 ? "  هامش يسار :  " : "  left margin:") ; label5.Text=   (arln == 0 ? "  الإرتفـــاع :  " : "  Height:") ; label4.Text=   (arln == 0 ? "  العـــرض :  " : "  Presentation:") ; label6.Text=   (arln == 0 ? "  البعد العرضي بين كروت الباركود :  " : "  The transverse dimension between the barcode cards:") ; label1.Text=   (arln == 0 ? "  اختيار الطابعة :  " : "  Printer selection:") ; label2.Text=   (arln == 0 ? "  هامش اعلى :  " : "  higher margin:") ; label33.Text=   (arln == 0 ? "  عدد النسخ :  " : "  Number of copies :") ; label9.Text=   (arln == 0 ? "  عدد الكروت عرضيا :  " : "  Number of cross cards:") ; label8.Text=   (arln == 0 ? "  عدد الكروت طوليا :  " : "  Number of cards longitudinally:") ; ButWithoutSave.Text=   (arln == 0 ? "  خــــروج  " : "  exit") ; ButWithSave.Text=   (arln == 0 ? "  حفــــظ  " : "  save") ; labelX1.Text=   (arln == 0 ? "  إعدادات طباعة الباركود  " : "  Barcode printing settings") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

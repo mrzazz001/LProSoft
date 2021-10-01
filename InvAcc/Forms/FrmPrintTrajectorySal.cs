@@ -3,8 +3,8 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.Editors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Library.RepShow;
 using SSSDateTime.Date;
 using SSSLanguage;
@@ -23,7 +23,7 @@ namespace InvAcc.Forms
  itemPanel4.Text=   (arln == 0 ? "  itemPanel4  " : "  itemPanel4") ; bar1.Text=   (arln == 0 ? "  bar1  " : "  bar1") ; button_Close.Text=   (arln == 0 ? "  خـــروج  " : "  Close") ; Button_OK.Text=   (arln == 0 ? "  طباعة  " : "  Print") ; label1.Text=   (arln == 0 ? "  تقرير رواتب شهــر  " : "  Monthly salary report") ; label3.Text=   (arln == 0 ? "  عدد الأيام :  " : "  The number of days :") ; Text = "طبــــــاعة الــــرواتب";this.Text=   (arln == 0 ? "  طبــــــاعة الــــرواتب  " : "  Payroll printing") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinaryRep

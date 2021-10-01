@@ -4,8 +4,8 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.Editors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Library.RepShow;
 using SSSDateTime.Date;
 using SSSLanguage;
@@ -24,7 +24,7 @@ namespace InvAcc.Forms
  itemPanel4.Text=   (arln == 0 ? "  itemPanel4  " : "  itemPanel4") ; itemPanel3.Text=   (arln == 0 ? "  itemPanel3  " : "  itemPanel3") ; itemPanel2.Text=   (arln == 0 ? "  itemPanel2  " : "  itemPanel2") ; itemPanel1.Text=   (arln == 0 ? "  itemPanel1  " : "  itemPanel1") ; bar1.Text=   (arln == 0 ? "  bar1  " : "  bar1") ; buttonItem_ListSal.Text=   (arln == 0 ? "  المســــيّرات  " : "  the marches") ; ToolStripMenuItem_PrintSalary.Text=   (arln == 0 ? "  مسّير رواتب الموظفين  " : "  Employee Payroll Manager") ; ToolStripMenuItem_PrintSalaryDet.Text=   (arln == 0 ? "  تقرير راتــــــب الموظف   " : "  Employee salary report") ; ToolStripMenuItem_PrintBankID.Text=   (arln == 0 ? "  تقرير البنـــك  " : "  bank report") ; buttonItem_ListAdd.Text=   (arln == 0 ? "  المستحقات والمستقطعات  " : "  Receivables and deductions") ; ToolStripMenuItem_PrintAllownces.Text=   (arln == 0 ? "  تقرير البدلات  " : "  Allowance Report") ; ToolStripMenuItem_PrintAdd.Text=   (arln == 0 ? "  تقرير بالإضافــي  " : "  additional report") ; ToolStripMenuItem_PrintReward.Text=   (arln == 0 ? "  تقرير بالحوافز  " : "  incentive report") ; ToolStripMenuItem_PrintDiscount.Text=   (arln == 0 ? "  تقرير بالخصــم  " : "  discount report") ; ToolStripMenuItem_PrintAdvances.Text=   (arln == 0 ? "  تقرير بالسلــف  " : "  advance report") ; ButClose.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; label1.Text=   (arln == 0 ? "  تقرير رواتب شهــر  " : "  Monthly salary report") ; label3.Text=   (arln == 0 ? "  عدد الأيام :  " : "  The number of days :") ; Text = "طبــــــاعة الــــرواتب";this.Text=   (arln == 0 ? "  طبــــــاعة الــــرواتب  " : "  Payroll printing") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinaryRep

@@ -15,7 +15,7 @@ namespace InvAcc.Forms
  Text = "Frmsaveoverbills";this.Text=   (arln == 0 ? "  Frmsaveoverbills  " : "  Frmsaveoverbills") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public Frmsaveoverbills()

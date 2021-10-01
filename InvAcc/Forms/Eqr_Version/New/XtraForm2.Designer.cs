@@ -98,7 +98,7 @@
             // 
             // t_AinTypsBindingSource
             // 
-            this.t_AinTypsBindingSource.DataSource = typeof(InvAcc.Stock_Data.T_AinTyp);
+            this.t_AinTypsBindingSource.DataSource = typeof(ProShared.Stock_Data.T_AinTyp);
             this.t_AinTypsBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.t_AinTypsBindingSource_AddingNew);
             this.t_AinTypsBindingSource.BindingComplete += new System.Windows.Forms.BindingCompleteEventHandler(this.t_AinTypsBindingSource_BindingComplete);
             this.t_AinTypsBindingSource.CurrentChanged += new System.EventHandler(this.t_AinTypsBindingSource_CurrentChanged);
@@ -238,7 +238,7 @@
             this.ubar1.Location = new System.Drawing.Point(0, 339);
             this.ubar1.Name = "ubar1";
             this.ubar1.Size = new System.Drawing.Size(784, 61);
-            this.ubar1.State = InvAcc.GeneralM.FormState.Saved;
+            this.ubar1.State = ProShared.GeneralM.FormState.Saved;
             this.ubar1.TabIndex = 9;
             this.ubar1.Button_Add_Click += new InvAcc.Controls.Ubar.customMessageHandler(this.ubar1_Button_Add_Click);
             this.ubar1.Button_Save_Click += new InvAcc.Controls.Ubar.customMessageHandler(this.ubar1_Button_Save_Click);

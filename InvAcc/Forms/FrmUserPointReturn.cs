@@ -1,7 +1,7 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSLanguage;
 using System;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ namespace InvAcc.Forms
  label3.Text=   (arln == 0 ? "  تعيين مستخدمين نقاط البيع  " : "  Assigning point of sale users") ; buttonX_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; label13.Text=   (arln == 0 ? "  حسابات فاتورة المبيعات  " : "  Sales invoice accounts") ; groupPanel4.Text=   (arln == 0 ? "  حسابات القيد الآجــل  " : "  deferred entry accounts") ; label7.Text=   (arln == 0 ? "  الحساب المديـن :  " : "  Debit account:") ; label8.Text=   (arln == 0 ? "  الحساب الدائـــن :  " : "  Debit account:") ; groupPanel5.Text=   (arln == 0 ? "  حسابات القيد النقــدي  " : "  cash entry accounts") ; label9.Text=   (arln == 0 ? "  الحساب المديـن :  " : "  Debit account:") ; label10.Text=   (arln == 0 ? "  الحسـاب الدائـن :  " : "  Credit account:") ; groupPanel6.Text=   (arln == 0 ? "  حسابات قيد الشــبكة  " : "  Network accounts") ; label11.Text=   (arln == 0 ? "  الحساب المديـن :  " : "  Debit account:") ; label12.Text=   (arln == 0 ? "  الحساب الدائـــن :  " : "  Debit account:") ; groupPanel3.Text=   (arln == 0 ? "  حسابات القيد الآجــل  " : "  deferred entry accounts") ; label5.Text=   (arln == 0 ? "  الحساب المديـن :  " : "  Debit account:") ; label6.Text=   (arln == 0 ? "  الحساب الدائـــن :  " : "  Debit account:") ; groupPanel1.Text=   (arln == 0 ? "  حسابات القيد النقــدي  " : "  cash entry accounts") ; labelD1.Text=   (arln == 0 ? "  الحساب المديـن :  " : "  Debit account:") ; labelC1.Text=   (arln == 0 ? "  الحسـاب الدائـن :  " : "  Credit account:") ; groupPanel2.Text=   (arln == 0 ? "  حسابات قيد الشــبكة  " : "  Network accounts") ; label2.Text=   (arln == 0 ? "  الحساب المديـن :  " : "  Debit account:") ; label4.Text=   (arln == 0 ? "  الحساب الدائـــن :  " : "  Debit account:") ; label14.Text=   (arln == 0 ? "  حسابات فاتورة مرتجع المبيعات  " : "  Sales return invoice accounts") ; buttonX_Delete.Text=   (arln == 0 ? "  حــــذف  " : "  delete") ; ChkGaid.Text=   (arln == 0 ? "  انشاء قيد تلقائي  " : "  Automatic entry creation") ; label1.Text=   (arln == 0 ? "  إسم المستخدم :  " : "  user name :") ; buttonX_OK.Text=   (arln == 0 ? "  حفــظ  " : "  save") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

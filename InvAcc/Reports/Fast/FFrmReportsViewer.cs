@@ -1,9 +1,9 @@
 
 using CrystalDecisions.Shared;
 using Framework.Cache;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using InvAcc.Reports;
-using InvAcc.Stock_Data;
+using ProShared.Stock_Data;
 //using InvAcc.ReportsEmpE;
 using Library.RepShow;
 using Microsoft.Win32;
@@ -32,6 +32,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
+using ProShared;
 
 namespace InvAcc.Forms
 {

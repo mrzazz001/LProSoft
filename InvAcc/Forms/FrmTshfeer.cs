@@ -1,5 +1,5 @@
 using DevComponents.DotNetBar.Controls;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -13,7 +13,7 @@ namespace InvAcc.Forms
  Text = "تشفير";this.Text=   (arln == 0 ? "  تشفير  " : "  cipher") ; Text = "فك التشفير";this.Text=   (arln == 0 ? "  فك التشفير  " : "  decoding") ; Text = "slidePanel1";this.Text=   (arln == 0 ? "  slidePanel1  " : "  slidePanel1") ; Text = "line1";this.Text=   (arln == 0 ? "  line1  " : "  line1") ; Text = "خـــــــــروج";this.Text=   (arln == 0 ? "  خـــــــــروج  " : "  exit") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
        // private IContainer components = null;

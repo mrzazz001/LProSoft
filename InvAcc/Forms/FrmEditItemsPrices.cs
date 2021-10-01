@@ -1,8 +1,8 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using SSSLanguage;
 using System;
@@ -23,7 +23,7 @@ namespace InvAcc.Forms
  toolStripMenuItem1.Text=   (arln == 0 ? "  إظهار التفاصيل  " : "  Show details") ; toolStripMenuItem2.Text=   (arln == 0 ? "  إظهار التقرير  " : "  Show report") ; label4.Text=   (arln == 0 ? "  سعر التكلفة  :  " : "  Cost price  :") ; label28.Text=   (arln == 0 ? "  سعر الجملة  " : "  Wholesale price") ; label24.Text=   (arln == 0 ? "  سعر المندوب  " : "  delegate price") ; label27.Text=   (arln == 0 ? "  سعر الموزع  " : "  distributor price") ; label26.Text=   (arln == 0 ? "  سعر اخر  " : "  another price") ; label25.Text=   (arln == 0 ? "  سعر التجزئة  " : "  retail price") ; label12.Text=   (arln == 0 ? "  رقم الصنــــف :  " : "  Item No.:") ; label7.Text=   (arln == 0 ? "  الوحـــــدة :  " : "  Unity:") ; label6.Text=   (arln == 0 ? "  سعر البيع 5 :  " : "  Selling price 5:") ; label5.Text=   (arln == 0 ? "  سعر البيع 4 :  " : "  Selling price 4:") ; label3.Text=   (arln == 0 ? "  سعر البيع 3 :  " : "  Selling Price 3:") ; label2.Text=   (arln == 0 ? "  سعر البيع 2 :  " : "  Selling price 2:") ; label1.Text=   (arln == 0 ? "  سعر البيع 1 :  " : "  Selling price 1:") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; Button_Save.Text=   (arln == 0 ? "  حفظ  " : "  save") ; Text = "شاشة تعديل اسعار الصنف";this.Text=   (arln == 0 ? "  شاشة تعديل اسعار الصنف  " : "  Item price adjustment screen") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

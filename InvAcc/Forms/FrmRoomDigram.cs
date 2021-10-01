@@ -1,8 +1,8 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.SuperGrid;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using InvAcc.Properties;
-using InvAcc.Stock_Data;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using System;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ namespace InvAcc.Forms
  Text = "superTabControl3";this.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Text = "إغلاق";this.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; Text = "حفظ";this.Text=   (arln == 0 ? "  حفظ  " : "  save") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

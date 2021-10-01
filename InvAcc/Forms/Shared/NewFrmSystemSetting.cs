@@ -8,8 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using C1.Util.Localization;
 using System.IO;
@@ -1049,7 +1049,7 @@ namespace InvAcc.Forms.Shared
         public NewFrmSystemSetting()
         {
             InitializeComponent();
-            textBox_BackupPath.ButtonCustomClick += textBox_BackupPath_ButtonCustomClick;
+        //    textBox_BackupPath.ButtonCustomClick += textBox_BackupPath_ButtonCustomClick;
             textBox_LineDetailNameA.Click += Button_Edit_Click;
             textBox_LineDetailNameE.Click += Button_Edit_Click;
             txtAct.Click += Button_Edit_Click;
@@ -2573,6 +2573,7 @@ namespace InvAcc.Forms.Shared
             c1FlexGrid2.SetData(60, 1, "عدم السماح بارجاع بضاعة بدون تحديد فاتورة المبيعات  ");
             c1FlexGrid2.SetData(61, 1, "استخدام حقل البار كود لفلترة الاصناف في نقاط البيع  ");
             c1FlexGrid2.SetData(62, 1, "اضهار مفاتيح التنقل بين الاصناف  والتصنيفات في نقاط البيع  ");
+            c1FlexGrid2.SetData(63, 1, "خاصية الصفحات في الاصناف في نقاط البيع   ");
 
             //c1FlexGrid2.SetData(59, 1, "");
             //c1FlexGrid2.SetData(60, 1, "");
@@ -2641,6 +2642,7 @@ namespace InvAcc.Forms.Shared
             setbilloption(60, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 86));
             setbilloption(61, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 87));
             setbilloption(62, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 88));
+            setbilloption(62, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 89));
             optionflag = 0;
         }
         public class ColumnDictinaryBankopp
@@ -3427,6 +3429,7 @@ namespace InvAcc.Forms.Shared
 
 
                 setting += VarGeneral.TString.ChkStatSave((bool)c1FlexGrid2.GetData(62, 2));
+                setting += VarGeneral.TString.ChkStatSave((bool)c1FlexGrid2.GetData(63, 2));
 
 
                 _SysSetting.Seting = setting;

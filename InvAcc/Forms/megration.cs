@@ -1,5 +1,5 @@
 using InvAcc.Forms;
-using InvAcc.Stock_Data;
+using ProShared.Stock_Data;
 using Microsoft.Win32;
 using ShamelSynch;
 using SqlDbCloner.Core.Data;
@@ -560,7 +560,7 @@ DROP TABLE [dbo].[T_INVHED]";
 
         private void megration_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //  DBUdate.DbUpdates.periodicupdate();
+            // ProShared. DBUdate.DbUpdates.periodicupdate();
         }
     }
 }

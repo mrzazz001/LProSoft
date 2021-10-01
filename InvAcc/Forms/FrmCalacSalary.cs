@@ -3,8 +3,8 @@ using DevComponents.DotNetBar.Controls;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.Editors;
 using Framework.Data;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Microsoft.Win32;
 using SSSDateTime.Date;
 using SSSLanguage;
@@ -26,7 +26,7 @@ namespace InvAcc.Forms
  checkBox_AccID.Text=   (arln == 0 ? "  إصدار قيد إثبات مصروف الموظفين  " : "  Issuance of employee expense record entry قيد") ; label8.Text=   (arln == 0 ? "  العملــــــــة :  " : "  work:") ; label2.Text=   (arln == 0 ? "  حساب المصروف :  " : "  Expense account:") ; label6.Text=   (arln == 0 ? "  مركـــز التكلفـــة :  " : "  Cost center:") ; label1.Text=   (arln == 0 ? "  الشهـــــر :  " : "  month:") ; label4.Text=   (arln == 0 ? "  إجمالي الرواتب :  " : "  Total salary:") ; Button_OK.Text=   (arln == 0 ? "  إصدار الرواتب  " : "  Payroll Issuance") ; button_Close.Text=   (arln == 0 ? "  الخـــــــروج  " : "  Close") ; Text = "إصدار رواتب الموظفين";this.Text=   (arln == 0 ? "  إصدار رواتب الموظفين  " : "  Issuance of employee salaries") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

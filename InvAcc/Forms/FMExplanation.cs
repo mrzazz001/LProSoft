@@ -1,4 +1,4 @@
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -11,7 +11,7 @@ namespace InvAcc.Forms
 }
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
        // private IContainer components = null;

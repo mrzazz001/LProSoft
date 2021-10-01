@@ -1,7 +1,7 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +18,7 @@ namespace InvAcc.Forms
  Text = "أسعار الأصنـــاف  |  Prices of items\r\n";this.Text=   (arln == 0 ? "  أسعار الأصنـــاف  |  Prices of items\r\n  " : "  Items Prices | Prices of items\r\n") ; Text = "صورة الصنف | Pic";this.Text=   (arln == 0 ? "  صورة الصنف | Pic  " : "  Category Picture | Pic") ; Text = "إسم الصنف  |  Item Name";this.Text=   (arln == 0 ? "  إسم الصنف  |  Item Name  " : "  class name | Item Name") ; Text = "0";this.Text=   (arln == 0 ? "  0  " : "  0") ; Text = "السعــــر  |  Price";this.Text=   (arln == 0 ? "  السعــــر  |  Price  " : "  Price | Price") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
        // private IContainer components = null;

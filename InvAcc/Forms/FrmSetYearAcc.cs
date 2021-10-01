@@ -1,6 +1,6 @@
 using DevComponents.DotNetBar;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using SSSLanguage;
 using System;
@@ -18,7 +18,7 @@ namespace InvAcc.Forms
  label54.Text=   (arln == 0 ? "  مــــن :  " : "  from:") ; label55.Text=   (arln == 0 ? "  إلـــى :  " : "  to:") ; label1.Text=   (arln == 0 ? "  سيتم تعيين السنة المالية للنظام ,يرجى كتابة تاريخ البداية لإتمام العملية  " : "  The system's fiscal year will be set, please write the start date to complete the process") ; label_HEADER.Text=   (arln == 0 ? "  تعيين السنة المالية  " : "  Set the fiscal year") ; buttonX_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; buttonX_Ok.Text=   (arln == 0 ? "  موافــــق  " : "  ok") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         private HijriGreg.HijriGregDates n = new HijriGreg.HijriGregDates();

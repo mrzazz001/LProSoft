@@ -1,8 +1,8 @@
 using DevComponents.DotNetBar;
 using DevComponents.Editors;
 using Framework.UI;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace InvAcc.Forms
  labelHeader.Text=   (arln == 0 ? "  إعدادات الميزان الباركود  " : "  Barcode Scale Settings") ; checkBox_BalanceActivated.Text=   (arln == 0 ? "  تفعيل خاصية الميزان مع الأصناف  " : "  Activate the balance feature with items") ; label8.Text=   (arln == 0 ? "  بداية فاصلة السعر العشرية بعد :  " : "  Starting price decimal point after:") ; label7.Text=   (arln == 0 ? "  بداية فاصلة الــوزن العشرية بعد :  " : "  Beginning of the decimal point after:") ; label3.Text=   (arln == 0 ? "  إجمالي خانات الباركود :  " : "  Total barcode digits:") ; label1.Text=   (arln == 0 ? "  رقم بداية الباركود :  " : "  Barcode starting number:") ; groupBox_PrintType.Text=   (arln == 0 ? "  نوع الميزان  " : "  scale type") ; RedButWightPrice.Text=   (arln == 0 ? "  إستخدام بالوزن والسعر  " : "  Use by weight and price") ; RedButPrice.Text=   (arln == 0 ? "  إستخدام بالسعر  " : "  use price") ; RedButWight.Text=   (arln == 0 ? "  إستخدام بالوزن  " : "  Use by weight") ; label5.Text=   (arln == 0 ? "  عدد بداية السعر :  " : "  number start price:") ; label6.Text=   (arln == 0 ? "  إجمالي خانات السعر :  " : "  Total price tags:") ; label4.Text=   (arln == 0 ? "  عدد بداية الوزن :  " : "  Starting weight:") ; label2.Text=   (arln == 0 ? "  إجمالي خانات الوزن :  " : "  Total weight boxes:") ; ButWithoutSave.Text=   (arln == 0 ? "  خروج | ESC  " : "  exit | ESC") ; ButWithSave.Text=   (arln == 0 ? "  حفظ | Save  " : "  save | Save") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinaryBalance

@@ -1,4 +1,4 @@
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using System.Data.SqlClient;
 
 namespace InvAcc.Controls

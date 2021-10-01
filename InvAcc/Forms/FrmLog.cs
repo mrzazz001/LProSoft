@@ -1,8 +1,8 @@
 // InvAcc.Forms.FrmLog
 using Check_Data.Forms;
 using InputKey;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Microsoft.Win32;
 using SSSDateTime.Date;
 using System;
@@ -1099,7 +1099,7 @@ namespace InvAcc.Forms
                         }
                     }
                 }
-                DBUdate.DbUpdates.copyforallusers();
+               ProShared. DBUdate.DbUpdates.copyforallusers();
             }
             catch (Exception error)
             {
@@ -1139,7 +1139,7 @@ namespace InvAcc.Forms
                         }
                     }
                 }
-                DBUdate.DbUpdates.copyforallusers();
+               ProShared. DBUdate.DbUpdates.copyforallusers();
             }
             catch (Exception error)
             {
@@ -1179,7 +1179,7 @@ namespace InvAcc.Forms
                         }
                     }
                 }
-                DBUdate.DbUpdates.copyforallusers();
+               ProShared. DBUdate.DbUpdates.copyforallusers();
             }
             catch (Exception error)
             {
@@ -2060,7 +2060,7 @@ namespace InvAcc.Forms
                         }
                     }
                 }
-                DBUdate.DbUpdates.copyforallusers();
+               ProShared. DBUdate.DbUpdates.copyforallusers();
             }
             catch (Exception error)
             {
@@ -2137,16 +2137,16 @@ namespace InvAcc.Forms
         {
         }
 #pragma warning disable CS0169 // The field 'FrmLog.roundButton1' is never used
-        private DroBoxSync.RoundButton roundButton1;
+        private  ProShared. DroBoxSync.RoundButton roundButton1;
 #pragma warning restore CS0169 // The field 'FrmLog.roundButton1' is never used
 #pragma warning disable CS0169 // The field 'FrmLog.roundButton2' is never used
-        private DroBoxSync.RoundButton roundButton2;
+        private  ProShared. DroBoxSync.RoundButton roundButton2;
 #pragma warning restore CS0169 // The field 'FrmLog.roundButton2' is never used
 #pragma warning disable CS0169 // The field 'FrmLog.roundButton3' is never used
-        private DroBoxSync.RoundButton roundButton3;
+        private  ProShared. DroBoxSync.RoundButton roundButton3;
 #pragma warning restore CS0169 // The field 'FrmLog.roundButton3' is never used
 #pragma warning disable CS0169 // The field 'FrmLog.roundButton4' is never used
-        private DroBoxSync.RoundButton roundButton4;
+        private  ProShared. DroBoxSync.RoundButton roundButton4;
 #pragma warning restore CS0169 // The field 'FrmLog.roundButton4' is never used
         private void roundButton2_Click(object sender, EventArgs e)
         {
@@ -2217,7 +2217,7 @@ namespace InvAcc.Forms
 
             if (VarGeneral.currentDbVersion == "")
             {
-                //  VarGeneral.currentDbVersion = DBUdate.DbUpdates.GetDatabaseVersion();
+                //  VarGeneral.currentDbVersion =ProShared. DBUdate.DbUpdates.GetDatabaseVersion();
 
                 if (VarGeneral.currentDbVersion == "ERROR" || VarGeneral.currentDbVersion == "old")
                 {
@@ -2229,8 +2229,8 @@ namespace InvAcc.Forms
 
                     this.Enabled = false;
 
-                    // DBUdate.DbUpdates.internalupdate(0);
-                    VarGeneral.currentDbVersion = DBUdate.DbUpdates.GetDatabaseVersion();
+                    //ProShared. DBUdate.DbUpdates.internalupdate(0);
+                    VarGeneral.currentDbVersion =ProShared. DBUdate.DbUpdates.GetDatabaseVersion();
                     this.Enabled = true;
 
                 }

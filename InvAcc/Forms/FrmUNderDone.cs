@@ -1,4 +1,4 @@
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using System;
 using System.Windows.Forms;
 namespace InvAcc.Forms
@@ -10,7 +10,7 @@ namespace InvAcc.Forms
  InvDetails.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Text = "شاشة التنفيذ";this.Text=   (arln == 0 ? "  شاشة التنفيذ  " : "  Execution screen") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public FrmUNderDone()
@@ -28,7 +28,7 @@ namespace InvAcc.Forms
             }
             try
             {
-                if (MessageBox.Show((GeneralM.VarGeneral.UserLang == 0) ? "هل انت متأكد من الخروج من النظام حقا ؟ " : "Do you want to exit the program already?", VarGeneral.ProdectNam, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly) == DialogResult.No)
+                if (MessageBox.Show((ProShared.GeneralM.VarGeneral.UserLang == 0) ? "هل انت متأكد من الخروج من النظام حقا ؟ " : "Do you want to exit the program already?", VarGeneral.ProdectNam, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly) == DialogResult.No)
                 {
                     switchButtonItem_Exit.Value = true;
                 }
@@ -64,7 +64,7 @@ namespace InvAcc.Forms
             }
             try
             {
-                if (MessageBox.Show((GeneralM.VarGeneral.UserLang == 0) ? "هل انت متأكد من الخروج من النظام حقا ؟ " : "Do you want to exit the program already?", VarGeneral.ProdectNam, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly) == DialogResult.No)
+                if (MessageBox.Show((ProShared.GeneralM.VarGeneral.UserLang == 0) ? "هل انت متأكد من الخروج من النظام حقا ؟ " : "Do you want to exit the program already?", VarGeneral.ProdectNam, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly) == DialogResult.No)
                 {
                     switchButtonItem2.Value = true;
                 }

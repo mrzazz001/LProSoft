@@ -1,8 +1,8 @@
 using C1.Win.C1FlexGrid;
 using DevComponents.DotNetBar;
 using DevComponents.Editors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using SSSLanguage;
 using System;
@@ -20,7 +20,7 @@ namespace InvAcc.Forms
  ButWithoutSave.Text=   (arln == 0 ? "  خـــروج  " : "  Close") ; ButWithSave.Text=   (arln == 0 ? "  حفــــظ  " : "  save") ; label30Tax.Text=   (arln == 0 ? "  ضريبة المبيعات  " : "  sales tax") ; label1Tax.Text=   (arln == 0 ? "  %  " : "  %") ; ButGeneralSalesTax.Text=   (arln == 0 ? "  تعميم  " : "  Generalization") ; ButGeneralPurchaesTax.Text=   (arln == 0 ? "  تعميم  " : "  Generalization") ; label2Tax.Text=   (arln == 0 ? "  %  " : "  %") ; label3Tax.Text=   (arln == 0 ? "  ضريبة المشتريات  " : "  purchase tax") ; label10.Text=   (arln == 0 ? "  الرقم الضريبـــي  " : "  tax number") ; label4Tax.Text=   (arln == 0 ? "  حساب الضريبــة  " : "  tax account") ; label5.Text=   (arln == 0 ? "  ملاحظة بالضريبـة  " : "  tax note") ; Text = "خيارات الضــرائب";this.Text=   (arln == 0 ? "  خيارات الضــرائب  " : "  Tax Options") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinaryTax

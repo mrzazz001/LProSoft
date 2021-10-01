@@ -4,12 +4,13 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using Framework.Date;
 using Framework.UI;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Library.RepShow;
 using Microsoft.Win32;
 using SSSDateTime.Date;
 using System;
+using ProShared;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,7 +29,7 @@ namespace InvAcc.Forms
         }
         private void langloads(object sender, EventArgs e)
         {
-            avs(GeneralM.VarGeneral.currentintlanguage);
+            avs(ProShared.GeneralM.VarGeneral.currentintlanguage);
         }
 
         public class ColumnDictinary
@@ -54,7 +55,7 @@ namespace InvAcc.Forms
                 {
                     VarGeneral.Print_set_Gen_Stat = true;
                     FrmReportsViewer.IsSettingOnly = true;
-                    VarGeneral.IsGeneralUsed = true;
+                   VarGeneral.IsGeneralUsed = true;
                     {
                         FrmReportsViewer frm = new FrmReportsViewer();
                         frm.Repvalue = "AccountTax";
@@ -254,7 +255,7 @@ namespace InvAcc.Forms
                 VarGeneral.DebLog.writeLog("Load:", error, enable: true);
                 MessageBox.Show(error.Message);
             }
-            avs(GeneralM.VarGeneral.currentintlanguage);
+            avs(ProShared.GeneralM.VarGeneral.currentintlanguage);
         }
         protected override void OnParentRightToLeftChanged(EventArgs e)
         {
@@ -801,7 +802,7 @@ GROUP BY fvc.InvTyp";
                 scc = scc.Replace("WHERE ", " WHERE " + BuildRuleList(0));
                 scc += w;
                 scc = scc.Replace("IsTaxGaid", "IsTaxUse");
-                DataTable tb = DBUdate.DbUpdates.execute(scc, VarGeneral.BranchCS);
+                DataTable tb = ProShared.DBUdate.DbUpdates.execute(scc, VarGeneral.BranchCS);
                
             if(tb.Rows.Count>0)
                 {

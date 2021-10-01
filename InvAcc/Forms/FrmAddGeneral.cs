@@ -2,8 +2,8 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.Editors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Microsoft.Win32;
 using SSSDateTime.Date;
 using SSSLanguage;
@@ -23,7 +23,7 @@ namespace InvAcc.Forms
  panelEx2.Text=   (arln == 0 ? "  Click to collapse  " : "  Click to collapse") ; checkBox_Minute.Text=   (arln == 0 ? "  بالدقـــائــق  " : "  in minutes") ; itemPanel4.Text=   (arln == 0 ? "  itemPanel4  " : "  itemPanel4") ; itemPanel3.Text=   (arln == 0 ? "  itemPanel3  " : "  itemPanel3") ; itemPanel2.Text=   (arln == 0 ? "  itemPanel2  " : "  itemPanel2") ; itemPanel1.Text=   (arln == 0 ? "  itemPanel1  " : "  itemPanel1") ; label_lblDaysOfMonth.Text=   (arln == 0 ? "  يضاف الى راتب شهر :  " : "  In addition to a month's salary:") ; label6.Text=   (arln == 0 ? "  قيمة الإضافي :  " : "  Additional value:") ; label_DaysAcountInMonth.Text=   (arln == 0 ? "  عدد الأيام في الشهر :  " : "  Number of days in a month:") ; label9.Text=   (arln == 0 ? "  الملاحظــــات :  " : "  Notes:") ; label8.Text=   (arln == 0 ? "  الإجمالـــــــي :  " : "  Total:") ; label5.Text=   (arln == 0 ? "  الــعــــــــــدد :  " : "  number:") ; label2.Text=   (arln == 0 ? "  احتساب حسب :  " : "  Calculate by:") ; label1.Text=   (arln == 0 ? "  نوع الاضافي :  " : "  Extra type:") ; label54.Text=   (arln == 0 ? "  التاريخ :  " : "  Date :") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; Button_Save.Text=   (arln == 0 ? "  حفظ  " : "  save") ; ToolStripMenuItem_Rep.Text=   (arln == 0 ? "  إظهار التقرير  " : "  Show report") ; ToolStripMenuItem_Det.Text=   (arln == 0 ? "  إظهار التفاصيل  " : "  Show details") ; Text = "كــــــرت الإضافــــــــي";this.Text=   (arln == 0 ? "  كــــــرت الإضافــــــــي  " : "  Added card") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

@@ -2,8 +2,8 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
 using DevComponents.Editors.DateTimeAdv;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Microsoft.Office.Interop.Excel;
 using SSSDateTime.Date;
 using SSSLanguage;
@@ -28,7 +28,7 @@ namespace InvAcc.Forms
  buttonX_ImportFile.Text=   (arln == 0 ? "  الإستيراد من ملف أكسيل  " : "  Import from excel file") ; groupBox1.Text=   (arln == 0 ? "  تخصيص  " : "  Customize") ; label2.Text=   (arln == 0 ? "  رقم الجوال :  " : "  Mobile number :") ; label1.Text=   (arln == 0 ? "  حساب الأب :  " : "  Father's account:") ; label5.Text=   (arln == 0 ? "  الإسم الانجليزي :  " : "  English name:") ; label4.Text=   (arln == 0 ? "  الإسم العربي :  " : "  Arabic name:") ; Button_Cancel.Text=   (arln == 0 ? "  خـــروج  " : "  Close") ; button_OK.Text=   (arln == 0 ? "  موافق  " : "  OK") ; Text = "استيراد بيانات الأصناف";this.Text=   (arln == 0 ? "  استيراد بيانات الأصناف  " : "  Import item data") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

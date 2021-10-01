@@ -3,8 +3,8 @@ using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
 using Framework.Data;
 using Framework.UI;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ namespace InvAcc.Forms
  label1.Text=   (arln == 0 ? "  الشهـــــر :  " : "  month:") ; button_Close.Text=   (arln == 0 ? "  خـــروج  " : "  Close") ; Button_OK.Text=   (arln == 0 ? "  إلغاء الترحيل  " : "  cancel deportation") ; label3.Text=   (arln == 0 ? "  عدد الأيام :  " : "  The number of days :") ; Text = "إلغاء ترحيل رواتب شهر";this.Text=   (arln == 0 ? "  إلغاء ترحيل رواتب شهر  " : "  Cancellation of posting monthly salaries") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

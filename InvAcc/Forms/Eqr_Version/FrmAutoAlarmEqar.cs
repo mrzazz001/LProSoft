@@ -1,7 +1,7 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.SuperGrid;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Library.RepShow;
 using SSSDateTime.Date;
 using SSSLanguage;
@@ -20,7 +20,7 @@ namespace InvAcc.Forms
  tabControl2.Text=   (arln == 0 ? "  tabControl2  " : "  tabControl2") ; tabItem_Contracts.Text=   (arln == 0 ? "  تنبيه بالعقود  " : "  Contract alert") ; tabItem_Rents.Text=   (arln == 0 ? "  تنبيه بالإيجار  " : "  Rent Alert") ; tabItem_EqarDoc.Text=   (arln == 0 ? "    " : "    ") ; Text = "تنبيهات الــــوثائق";this.Text=   (arln == 0 ? "  تنبيهات الــــوثائق  " : "  Document alerts") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

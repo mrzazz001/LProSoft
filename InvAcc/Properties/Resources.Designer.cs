@@ -801,6 +801,16 @@ namespace InvAcc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap next_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("next_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NOIMAGE {
             get {
                 object obj = ResourceManager.GetObject("NOIMAGE", resourceCulture);
@@ -864,6 +874,16 @@ namespace InvAcc.Properties {
         internal static System.Drawing.Bitmap POS {
             get {
                 object obj = ResourceManager.GetObject("POS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prev_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("prev_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

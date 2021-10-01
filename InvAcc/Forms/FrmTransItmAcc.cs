@@ -1,8 +1,8 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using Framework.UI;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using System;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ namespace InvAcc.Forms
  groupBox_BranchFrom.Text=   (arln == 0 ? "  من فـــــــرع :  " : "  From branch:") ; groupBox_BranchTo.Text=   (arln == 0 ? "  نقل البيانات الى الفرع :  " : "  Transferring data to the branch:") ; groupBox_Choese.Text=   (arln == 0 ? "  خيارات النقل  " : "  Transportation options") ; chk1.Text=   (arln == 0 ? "  نقل الأصنـــــــاف  " : "  Transfer of items") ; chk2.Text=   (arln == 0 ? "  نقل كرت الحســــــابات  " : "  Account card transfer") ; ProgressBar1.Text=   (arln == 0 ? "  progressBarX1  " : "  progressBarX1") ; ButOk.Text=   (arln == 0 ? "  نقــــل  " : "  move") ; ButExit.Text=   (arln == 0 ? "  خـــروج  " : "  Close") ; Text = "نقل البيانات بين الفروع";this.Text=   (arln == 0 ? "  نقل البيانات بين الفروع  " : "  Transfer data between branches") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

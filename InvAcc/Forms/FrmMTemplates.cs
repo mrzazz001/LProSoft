@@ -1,8 +1,8 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.DotNetBar.SuperGrid;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using System;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ namespace InvAcc.Forms
  panelEx2.Text=   (arln == 0 ? "  Click to collapse  " : "  Click to collapse") ; groupBox1.Text=   (arln == 0 ? "  بيانات كرت التشغيل  " : "  play card data") ; label_PlayMTemplatedExpDat.Text=   (arln == 0 ? "  الرقم  " : "  the number") ; label_MTemplatedPlayIssDat.Text=   (arln == 0 ? "  تاريخ الاصدار  " : "  Release Date") ; label_MTemplatedPlayNo.Text=   (arln == 0 ? "  تاريخ الانتهاء  " : "  Expiry date") ; label36.Text=   (arln == 0 ? "  عنوان النموذج :  " : "  Form title:") ; label38.Text=   (arln == 0 ? "  الرمـــــــــــــز :  " : "  Code:") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; Button_Search.Text=   (arln == 0 ? "  بحث  " : "  Search") ; Button_Delete.Text=   (arln == 0 ? "  حذف  " : "  delete") ; Button_Save.Text=   (arln == 0 ? "  حفظ  " : "  save") ; Button_Add.Text=   (arln == 0 ? "  إضافة  " : "  addition") ; superTabControl_Main2.Text=   (arln == 0 ? "  superTabControl1  " : "  superTabControl1") ; Button_First.Text=   (arln == 0 ? "  الأول  " : "  the first") ; Button_Prev.Text=   (arln == 0 ? "  السابق  " : "  the previous") ; lable_Records.Text=   (arln == 0 ? "  ---  " : "  ---") ; Button_Next.Text=   (arln == 0 ? "  التالي  " : "  next one") ; Button_Last.Text=   (arln == 0 ? "  الأخير  " : "  the last one") ; ToolStripMenuItem_Rep.Text=   (arln == 0 ? "  إظهار التقرير  " : "  Show report") ; ToolStripMenuItem_Det.Text=   (arln == 0 ? "  إظهار التفاصيل  " : "  Show details") ; Text = "نماذج الرسائل";this.Text=   (arln == 0 ? "  نماذج الرسائل  " : "  Message Forms") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

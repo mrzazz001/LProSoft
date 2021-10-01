@@ -1,4 +1,4 @@
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using System;
 using System.Windows.Forms;
 namespace InvAcc.Forms
@@ -11,7 +11,7 @@ namespace InvAcc.Forms
         private void langloads(object sender, EventArgs e)
         {
           //  Program.min();
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public FrmCarPOSLog()

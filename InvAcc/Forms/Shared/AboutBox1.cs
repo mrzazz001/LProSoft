@@ -107,8 +107,8 @@ namespace InvAcc.Forms.Shared
             labelProductName.Text = "Prosoft Golden";
 
             LabelEmail.Text = @"info@dpite.com";
-            labelVersion.Text= GeneralM.VarGeneral.ProdectNo.ToString();
-            LabelCopy.Text = GeneralM.VarGeneral.ProdectNam.ToString();
+            labelVersion.Text= ProShared.GeneralM.VarGeneral.ProdectNo.ToString();
+            LabelCopy.Text = ProShared. GeneralM.VarGeneral.ProdectNam.ToString();
 
         }
 

@@ -1,5 +1,5 @@
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using System;
 using System.Windows.Forms;
 
@@ -139,7 +139,7 @@ namespace InvAcc.Controls
             }
             try
             {
-                price = Math.Round(double.Parse(TxtPrice.Text), GeneralM.VarGeneral.DecimalNo);
+                price = Math.Round(double.Parse(TxtPrice.Text), ProShared.GeneralM.VarGeneral.DecimalNo);
             }
             catch { }
 
@@ -177,7 +177,7 @@ namespace InvAcc.Controls
             }
             try
             {
-                price = Math.Round(double.Parse(TxtPrice.Text), GeneralM.VarGeneral.DecimalNo);
+                price = Math.Round(double.Parse(TxtPrice.Text), ProShared.GeneralM.VarGeneral.DecimalNo);
             }
             catch { }
 

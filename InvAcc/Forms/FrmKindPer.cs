@@ -1,8 +1,8 @@
 using DevComponents.DotNetBar;
 using DevComponents.Editors;
 using Framework.Data;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using System;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ namespace InvAcc.Forms
  panelEx2.Text=   (arln == 0 ? "  Click to collapse  " : "  Click to collapse") ; label2.Text=   (arln == 0 ? "  السعر :  " : "  price :") ; label5.Text=   (arln == 0 ? "  عدد الشهور المقفلة :  " : "  Number of months closed:") ; label1.Text=   (arln == 0 ? "  سعرهـــا :  " : "  Its price:") ; label36.Text=   (arln == 0 ? "  إسم النزيل :  " : "  Guest name:") ; label13z.Text=   (arln == 0 ? "  الغرفة الحالية :  " : "  current room:") ; label38.Text=   (arln == 0 ? "  رقم النزيل :  " : "  guest number:") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; Button_Save.Text=   (arln == 0 ? "  حفظ  " : "  save") ; ToolStripMenuItem_Rep.Text=   (arln == 0 ? "  إظهار التقرير  " : "  Show report") ; ToolStripMenuItem_Det.Text=   (arln == 0 ? "  إظهار التفاصيل  " : "  Show details") ; Text = "تغيير نوع التسكين";this.Text=   (arln == 0 ? "  تغيير نوع التسكين  " : "  Change the type of housing") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

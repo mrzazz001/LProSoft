@@ -1,7 +1,7 @@
 using C1.Win.C1FlexGrid;
 using DevComponents.DotNetBar;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using SSSLanguage;
 using System;
@@ -19,7 +19,7 @@ namespace InvAcc.Forms
  ButWithoutSave.Text=   (arln == 0 ? "  خـــروج  " : "  Close") ; ButWithSave.Text=   (arln == 0 ? "  حفــــظ  " : "  save") ; Text = "خيارات العمولات البنكية";this.Text=   (arln == 0 ? "  خيارات العمولات البنكية  " : "  Bank commission options") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinaryBankopp

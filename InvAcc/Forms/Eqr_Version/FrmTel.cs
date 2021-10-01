@@ -4,8 +4,8 @@ using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.DotNetBar.SuperGrid.Style;
 using DevComponents.Editors;
 using Framework.Data;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Microsoft.Win32;
 using SSSDateTime.Date;
 using System;
@@ -17,6 +17,8 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using ProShared;
+
 namespace InvAcc.Forms
 {
     public partial  class FrmTel : Form
@@ -26,7 +28,7 @@ namespace InvAcc.Forms
 }
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

@@ -168,7 +168,7 @@
             // linqServerModeSource1
             // 
             this.linqServerModeSource1.DefaultSorting = "InvNo ASC";
-            this.linqServerModeSource1.ElementType = typeof(InvAcc.Stock_Data.T_INVHED);
+            this.linqServerModeSource1.ElementType = typeof(ProShared.Stock_Data.T_INVHED);
             this.linqServerModeSource1.KeyExpression = "InvHed_ID";
             // 
             // imageList1
@@ -480,7 +480,7 @@
             // 
             // linqServerModeSource2
             // 
-            this.linqServerModeSource2.ElementType = typeof(InvAcc.Stock_Data.T_GDHEAD);
+            this.linqServerModeSource2.ElementType = typeof(ProShared.Stock_Data.T_GDHEAD);
             this.linqServerModeSource2.KeyExpression = "gdhead_ID";
             // 
             // gridControl2

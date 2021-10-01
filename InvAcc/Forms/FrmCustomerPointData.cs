@@ -1,8 +1,8 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Library.RepShow;
 using SSSDateTime.Date;
 using SSSLanguage;
@@ -21,7 +21,7 @@ namespace InvAcc.Forms
  buttonX_RepPointAll.Text=   (arln == 0 ? "  تقرير بإجمالي النقاط المستحقة والمرتجعة حسب كل فاتورة  " : "  Report of the total points due and returned according to each invoice") ; button_ItemMovementPoint.Text=   (arln == 0 ? "  تقرير تفصـــيلي بالنقاط المستحقة حسب حركة الأصناف  " : "  Detailed report of the points due according to the movement of items") ; buttonX_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; buttonX_Ok.Text=   (arln == 0 ? "  موافــــق  " : "  ok") ; label11.Text=   (arln == 0 ? "  نقطــــة  " : "  point") ; label12.Text=   (arln == 0 ? "  إجمالي النقاط المرتجعــــة  " : "  Total points returned") ; lablCurr2.Text=   (arln == 0 ? "  ريــال  " : "  SAR") ; label8.Text=   (arln == 0 ? "  نقطــــة  " : "  point") ; label7.Text=   (arln == 0 ? "  نقطــــة  " : "  point") ; label6.Text=   (arln == 0 ? "  نقطــــة  " : "  point") ; lablCurr.Text=   (arln == 0 ? "  ريــال  " : "  SAR") ; label10.Text=   (arln == 0 ? "  " : "  ") ; lablPoint.Text=   (arln == 0 ? "  نقطــــة  " : "  point") ; label9.Text=   (arln == 0 ? "  " : "  ") ; label5.Text=   (arln == 0 ? "  قيمة خصم النقاط  " : "  Point discount value قيمة") ; Label26.Text=   (arln == 0 ? "  صافي الفاتورة  " : "  net invoice") ; label3.Text=   (arln == 0 ? "  إجمالي النقاط المتبقية  " : "  Total points remaining إجمالي") ; label2.Text=   (arln == 0 ? "  إجمالي النقاط المستخدمة  " : "  Total points used") ; label1.Text=   (arln == 0 ? "  إجمالي النقاط المستحقة  " : "  Total points earned") ; label4.Text=   (arln == 0 ? "  حساب العميــل  " : "  customer account") ; labelHeader.Text=   (arln == 0 ? "  بيانات نقاط عميل  " : "  Customer score data") ; line1.Text=   (arln == 0 ? "  line1  " : "  line1") ; label13.Text=   (arln == 0 ? "  نقطــــة  " : "  point") ; label14.Text=   (arln == 0 ? "  رصيد سابق للنقاط  " : "  Previous balance of points") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

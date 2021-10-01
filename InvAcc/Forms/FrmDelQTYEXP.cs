@@ -1,6 +1,6 @@
 using DevComponents.DotNetBar;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +15,7 @@ namespace InvAcc.Forms
  label5.Text=   (arln == 0 ? "  رقم الصنف :  " : "  Item No :") ; ButExit.Text=   (arln == 0 ? "  خـــروج  " : "  Close") ; ButOk.Text=   (arln == 0 ? "  حـذف البيانات  " : "  delete data") ; label9.Text=   (arln == 0 ? "  المستودع :  " : "  Warehouse:") ; Text = "حذف بيانات جدول تاريخ الصلاحية";this.Text=   (arln == 0 ? "  حذف بيانات جدول تاريخ الصلاحية  " : "  Delete expiration date table data بيانات") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

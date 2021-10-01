@@ -1,8 +1,8 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Metro;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using InvAcc.Properties;
-using InvAcc.Stock_Data;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using System;
 using System.Collections.Generic;

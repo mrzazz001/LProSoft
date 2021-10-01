@@ -3,8 +3,8 @@ using DevComponents.DotNetBar.Controls;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.DotNetBar.SuperGrid.Style;
 using DevComponents.Editors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using System;
 using System.Collections.Generic;
@@ -23,7 +23,7 @@ namespace InvAcc.Forms
  label12.Text=   (arln == 0 ? "  إسم الموظف :  " : "  Employee Name :") ; label2.Text=   (arln == 0 ? "  ماركة السيارة :  " : "  car brand:") ; label3.Text=   (arln == 0 ? "  سنة الصنـــع :  " : "  year of manufacture:") ; label1.Text=   (arln == 0 ? "  اللوحـــــــة :  " : "  The board:") ; label4.Text=   (arln == 0 ? "  اللون  " : "  the color") ; groupBox1.Text=   (arln == 0 ? "  بيانات كرت التشغيل  " : "  play card data") ; label_PlayCardExpDat.Text=   (arln == 0 ? "  الرقم  " : "  the number") ; label_CardPlayIssDat.Text=   (arln == 0 ? "  تاريخ الاصدار  " : "  Release Date") ; label_CardPlayNo.Text=   (arln == 0 ? "  تاريخ الانتهاء  " : "  Expiry date") ; label_FormExpDat.Text=   (arln == 0 ? "  رقم الاستمارة :  " : "  Form number:") ; label_FormIssDat.Text=   (arln == 0 ? "  تاريخهــــــــــا :  " : "  Its history:") ; label_FormNo.Text=   (arln == 0 ? "  انتهائها :  " : "  its end:") ; label_AllownceName.Text=   (arln == 0 ? "  شركة التأمين:  " : "  Insurance company:") ; label_AllowncExpDat.Text=   (arln == 0 ? "  انتهائها :  " : "  its end:") ; Label_AllowncIssDat.Text=   (arln == 0 ? "  تاريخهــــــــــا :  " : "  Its history:") ; label_AllownceNo.Text=   (arln == 0 ? "  رقم التأمــــين :  " : "  Insurance number:") ; label40.Text=   (arln == 0 ? "  إسم السيارة - انجليزي :  " : "  Car name - English:") ; label36.Text=   (arln == 0 ? "  إسم السيارة - عربـــي :  " : "  Car name - Arabic:") ; label38.Text=   (arln == 0 ? "  الرمـــــــــــــز :  " : "  Code:") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; Button_Search.Text=   (arln == 0 ? "  بحث  " : "  Search") ; Button_Delete.Text=   (arln == 0 ? "  حذف  " : "  delete") ; Button_Save.Text=   (arln == 0 ? "  حفظ  " : "  save") ; Button_Add.Text=   (arln == 0 ? "  إضافة  " : "  addition") ; superTabControl_Main2.Text=   (arln == 0 ? "  superTabControl1  " : "  superTabControl1") ; Button_First.Text=   (arln == 0 ? "  الأول  " : "  the first") ; Button_Prev.Text=   (arln == 0 ? "  السابق  " : "  the previous") ; lable_Records.Text=   (arln == 0 ? "  ---  " : "  ---") ; Button_Next.Text=   (arln == 0 ? "  التالي  " : "  next one") ; Button_Last.Text=   (arln == 0 ? "  الأخير  " : "  the last one") ; panelEx2.Text=   (arln == 0 ? "  Click to collapse  " : "  Click to collapse") ; DGV_Main.Text=   (arln == 0 ? "    " : "    ") ; DGV_Main.Text=   (arln == 0 ? "  جميــع السجــــلات  " : "  All records") ; DGV_Main.Text=   (arln == 0 ? "    " : "    ") ; panelEx3.Text=   (arln == 0 ? "  Fill Panel  " : "  Fill Panel") ; superTabControl_DGV.Text=   (arln == 0 ? "  superTabControl1  " : "  superTabControl1") ; textBox_search.Text=   (arln == 0 ? "  ...  " : "  ...") ; Button_ExportTable2.Text=   (arln == 0 ? "  تصدير  " : "  Export") ; /*Button_PrintTable.Text=   (arln == 0 ? "  طباعة  " : "  Print") ; */ToolStripMenuItem_Rep.Text=   (arln == 0 ? "  إظهار التقرير  " : "  Show report") ; ToolStripMenuItem_Det.Text=   (arln == 0 ? "  إظهار التفاصيل  " : "  Show details") ; Text = "كــــــرت السيارات";this.Text=   (arln == 0 ? "  كــــــرت السيارات  " : "  car card") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

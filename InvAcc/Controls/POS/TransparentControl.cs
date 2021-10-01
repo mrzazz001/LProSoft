@@ -9,7 +9,7 @@ public class TransparentLabel : Label
     public TransparentLabel()
     {
         this.transparentBackColor = Color.Blue;
-        this.opacity = 50;
+        this.opacity = 90;
         this.AutoSize = false;
 
         this.AutoEllipsis = true;

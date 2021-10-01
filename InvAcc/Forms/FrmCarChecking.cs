@@ -1,5 +1,5 @@
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,7 +16,7 @@ namespace InvAcc.Forms
  Button_Next.Text=   (arln == 0 ? "  التالي  " : "  next one") ; Button_Privieos.Text=   (arln == 0 ? "  السابق  " : "  the previous") ; حذفToolStripMenuItem.Text=   (arln == 0 ? "  حذف  " : "  delete") ; buttonX3.Text=   (arln == 0 ? "  حفظ  " : "  save") ; Text = "FrmCarChecking";this.Text=   (arln == 0 ? "  FrmCarChecking  " : "  FrmCarChecking") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         class pinlocation

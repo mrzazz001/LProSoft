@@ -80,6 +80,7 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="ARVSPackage">
       <HintPath>D:\Program Files\PROSOFT\ARVSPackage.dll</HintPath>
     </Reference>
@@ -216,6 +217,7 @@
     </Reference>
     <Reference Include="DevExpress.Images.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -233,21 +235,25 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>C:\Users\Administrator\Downloads\Debug\Debug\New folder\EnvDTE80.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport, Version=2020.1.17.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="FastReport, Version=2020.1.17.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Psoft302\InvAcc\bin\Debug\FastReport.dll</HintPath>
+      <HintPath>..\..\ProShared\ProShared\bin\Debug\FastReport.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport.Bars">
-      <HintPath>..\..\Psoft302\InvAcc\bin\Debug\FastReport.Bars.dll</HintPath>
+    <Reference Include="FastReport.Bars, Version=2021.2.8.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ProShared\ProShared\bin\Debug\FastReport.Bars.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport.Editor">
-      <HintPath>..\..\Psoft302\InvAcc\bin\Debug\FastReport.Editor.dll</HintPath>
+    <Reference Include="FastReport.Editor, Version=2021.2.8.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ProShared\ProShared\bin\Debug\FastReport.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport.VSDesign">
-      <HintPath>..\..\Psoft302\InvAcc\bin\Debug\FastReport.VSDesign.dll</HintPath>
+    <Reference Include="FastReport.VSDesign, Version=1.0.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ProShared\ProShared\bin\Debug\FastReport.VSDesign.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport.Web">
-      <HintPath>..\..\Psoft302\InvAcc\bin\Debug\FastReport.Web.dll</HintPath>
+    <Reference Include="FastReport.Web, Version=2021.2.8.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ProShared\ProShared\bin\Debug\FastReport.Web.dll</HintPath>
     </Reference>
     <Reference Include="Framework.Security">
       <HintPath>D:\Program Files\PROSOFT\Framework.Security.dll</HintPath>
@@ -381,6 +387,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="PresentationCore" />
+    <Reference Include="ProShared">
+      <HintPath>..\..\ProShared\ProShared\bin\Debug\ProShared.dll</HintPath>
+    </Reference>
     <Reference Include="Softgroup.NetResize45">
       <HintPath>C:\Program Files (x86)\Softgroup .Net Forms Resize\Softgroup.NetResize45.dll</HintPath>
     </Reference>
@@ -441,16 +450,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Check_Data\FrmBranch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Check_Data\FrmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Check_Data\FrmPathSetting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Check_Data\TOwordClass.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="ControlHosting\EmployeeCard.cs">
       <SubType>UserControl</SubType>
@@ -473,8 +472,6 @@
     <Compile Include="Controls\catPanel.Designer.cs">
       <DependentUpon>catPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\classes\SerExtension.cs" />
-    <Compile Include="Controls\classes\SerilaizeingEntitytoxml.cs" />
     <Compile Include="Controls\datagried.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -609,39 +606,6 @@
     <Compile Include="CRep\ReportHelper.cs" />
     <Compile Include="CRep\ReportOperations.cs" />
     <Compile Include="CRep\RepShow.cs" />
-    <Compile Include="DBUdate\CarRepParameters.cs" />
-    <Compile Include="DBUdate\clsResize.cs" />
-    <Compile Include="DBUdate\databasemonitoring.cs" />
-    <Compile Include="DBUdate\Data\DataObject.cs" />
-    <Compile Include="DBUdate\Data\DataTransfer.cs" />
-    <Compile Include="DBUdate\DbUpdates.cs" />
-    <Compile Include="DBUdate\ExptionLoging.cs" />
-    <Compile Include="DBUdate\FrmReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DBUdate\FrmReport.designer.cs">
-      <DependentUpon>FrmReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DBUdate\InputDialog.cs" />
-    <Compile Include="DBUdate\Inputkey.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DBUdate\Shema\SqlObject.cs" />
-    <Compile Include="DBUdate\Shema\SqlTransfer.cs" />
-    <Compile Include="DroBoxSync\DatabaseManger.cs" />
-    <Compile Include="DroBoxSync\DropBoxSyncronization.cs" />
-    <Compile Include="DroBoxSync\FixingDB.cs" />
-    <Compile Include="DroBoxSync\Frm_PrinterShow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DroBoxSync\Frm_PrinterShow.designer.cs">
-      <DependentUpon>Frm_PrinterShow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DroBoxSync\RoundButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DroBoxSync\SQLnotification.cs" />
-    <Compile Include="DroBoxSync\Utilites.cs" />
     <Compile Include="ExportExcel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -730,10 +694,31 @@
     <Compile Include="Forms\FMExplanation.Designer.cs">
       <DependentUpon>FMExplanation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FMFind.cs">
+    <Compile Include="Forms\SellPurSystem\specialcontrols\Glassess\GFrmInvPuchaesReturn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FMFind.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\specialcontrols\Glassess\GFrminvsale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\specialcontrols\Glassess\GFrmInvPuchaes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\specialcontrols\Glassess\GFrmInvSalePoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\specialcontrols\Glassess\GFrmInvSalesReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\specialcontrols\Glassess\XGmesures.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\specialcontrols\Glassess\XGmesures.Designer.cs">
+      <DependentUpon>XGmesures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Shared\FMFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shared\FMFind.Designer.cs">
       <DependentUpon>FMFind.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FMInvPrintSetup.cs">
@@ -742,70 +727,70 @@
     <Compile Include="Forms\FMInvPrintSetup.Designer.cs">
       <DependentUpon>FMInvPrintSetup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FMJournalVoucher.cs">
+    <Compile Include="Forms\SellPurSystem\FMJournalVoucher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FMJournalVoucher.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FMJournalVoucher.Designer.cs">
       <DependentUpon>FMJournalVoucher.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FMJournalVoucherEmpRelaySal.cs">
+    <Compile Include="Forms\SellPurSystem\FMJournalVoucherEmpRelaySal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FMJournalVoucherEmpRelaySal.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FMJournalVoucherEmpRelaySal.Designer.cs">
       <DependentUpon>FMJournalVoucherEmpRelaySal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FMOpenQuantities.cs">
+    <Compile Include="Forms\SellPurSystem\FMOpenQuantities.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FMOpenQuantities.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FMOpenQuantities.Designer.cs">
       <DependentUpon>FMOpenQuantities.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FMPaymentOrder.cs">
+    <Compile Include="Forms\SellPurSystem\FMPaymentOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FMPaymentOrder.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FMPaymentOrder.Designer.cs">
       <DependentUpon>FMPaymentOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FMPaymentOReturn.cs">
+    <Compile Include="Forms\SellPurSystem\FMPaymentOReturn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FMPaymentOReturn.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FMPaymentOReturn.Designer.cs">
       <DependentUpon>FMPaymentOReturn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FMPaymentVoucher.cs">
+    <Compile Include="Forms\SellPurSystem\FMPaymentVoucher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FMPaymentVoucher.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FMPaymentVoucher.Designer.cs">
       <DependentUpon>FMPaymentVoucher.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FMPurchaseOrder.cs">
+    <Compile Include="Forms\SellPurSystem\FMPurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FMPurchaseOrder.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FMPurchaseOrder.Designer.cs">
       <DependentUpon>FMPurchaseOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FMReceiptVoucher.cs">
+    <Compile Include="Forms\SellPurSystem\FMReceiptVoucher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FMReceiptVoucher.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FMReceiptVoucher.Designer.cs">
       <DependentUpon>FMReceiptVoucher.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FMReceiptVoucherCustSupp.cs">
+    <Compile Include="Forms\SellPurSystem\FMReceiptVoucherCustSupp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FMReceiptVoucherCustSupp.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FMReceiptVoucherCustSupp.Designer.cs">
       <DependentUpon>FMReceiptVoucherCustSupp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FMSndPrintSetup.cs">
+    <Compile Include="Forms\SellPurSystem\FMSndPrintSetup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FMSndPrintSetup.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FMSndPrintSetup.Designer.cs">
       <DependentUpon>FMSndPrintSetup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FMStockAdjustment.cs">
+    <Compile Include="Forms\SellPurSystem\FMStockAdjustment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FMStockAdjustment.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FMStockAdjustment.Designer.cs">
       <DependentUpon>FMStockAdjustment.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form1.cs">
@@ -820,142 +805,142 @@
     <Compile Include="Forms\FormInvoicesDataViewre.Designer.cs">
       <DependentUpon>FormInvoicesDataViewre.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRAccount.cs">
+    <Compile Include="Forms\ReportingForms\FRAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRAccount.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRAccount.Designer.cs">
       <DependentUpon>FRAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRAccountExpense.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountExpense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRAccountExpense.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountExpense.Designer.cs">
       <DependentUpon>FRAccountExpense.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRAccountReport.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRAccountReport.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountReport.Designer.cs">
       <DependentUpon>FRAccountReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRAccountReportGabthSerf.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountReportGabthSerf.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRAccountReportGabthSerf.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountReportGabthSerf.Designer.cs">
       <DependentUpon>FRAccountReportGabthSerf.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRAccountReportToGuest.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountReportToGuest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRAccountReportToGuest.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountReportToGuest.Designer.cs">
       <DependentUpon>FRAccountReportToGuest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRInvTotals.cs">
+    <Compile Include="Forms\ReportingForms\FRInvTotals.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRInvTotals.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRInvTotals.Designer.cs">
       <DependentUpon>FRInvTotals.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRAccountTax.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountTax.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRAccountTax.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountTax.Designer.cs">
       <DependentUpon>FRAccountTax.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRAccountTranc.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountTranc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRAccountTranc.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountTranc.Designer.cs">
       <DependentUpon>FRAccountTranc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRAccountTrans.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountTrans.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRAccountTrans.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRAccountTrans.Designer.cs">
       <DependentUpon>FRAccountTrans.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRCustBalance.cs">
+    <Compile Include="Forms\ReportingForms\FRCustBalance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRCustBalance.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRCustBalance.Designer.cs">
       <DependentUpon>FRCustBalance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRInvoice.cs">
+    <Compile Include="Forms\ReportingForms\FRInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRInvoice.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRInvoice.Designer.cs">
       <DependentUpon>FRInvoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRInvoiceGaid.cs">
+    <Compile Include="Forms\ReportingForms\FRInvoiceGaid.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRInvoiceGaid.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRInvoiceGaid.Designer.cs">
       <DependentUpon>FRInvoiceGaid.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRInvoiceMnd.cs">
+    <Compile Include="Forms\ReportingForms\FRInvoiceMnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRInvoiceMnd.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRInvoiceMnd.Designer.cs">
       <DependentUpon>FRInvoiceMnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRItemsData.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRItemsData.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsData.Designer.cs">
       <DependentUpon>FRItemsData.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRItemsDataExpir.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsDataExpir.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRItemsDataExpir.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsDataExpir.Designer.cs">
       <DependentUpon>FRItemsDataExpir.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRItemsDataExtrnalMdn.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsDataExtrnalMdn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRItemsDataExtrnalMdn.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsDataExtrnalMdn.Designer.cs">
       <DependentUpon>FRItemsDataExtrnalMdn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRItemsDataMoreSale.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsDataMoreSale.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRItemsDataMoreSale.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsDataMoreSale.Designer.cs">
       <DependentUpon>FRItemsDataMoreSale.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRItemsMovement.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsMovement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRItemsMovement.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsMovement.Designer.cs">
       <DependentUpon>FRItemsMovement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRItemsMovementPrint.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsMovementPrint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRItemsMovementPrint.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsMovementPrint.Designer.cs">
       <DependentUpon>FRItemsMovementPrint.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRItemsTransf.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsTransf.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRItemsTransf.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsTransf.Designer.cs">
       <DependentUpon>FRItemsTransf.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FRItemsTransfDatExpir.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsTransfDatExpir.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FRItemsTransfDatExpir.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FRItemsTransfDatExpir.Designer.cs">
       <DependentUpon>FRItemsTransfDatExpir.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmAccCat.cs">
+    <Compile Include="Forms\Cards\FrmAccCat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmAccCat.Designer.cs">
+    <Compile Include="Forms\Cards\FrmAccCat.Designer.cs">
       <DependentUpon>FrmAccCat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmAccDef_.cs">
+    <Compile Include="Forms\Cards\FrmAccDef_.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmAccDef_.Designer.cs">
+    <Compile Include="Forms\Cards\FrmAccDef_.Designer.cs">
       <DependentUpon>FrmAccDef_.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmAdd.cs">
@@ -1058,16 +1043,16 @@
     <Compile Include="Forms\FrmBoxes.Designer.cs">
       <DependentUpon>FrmBoxes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmBrachSetting.cs">
+    <Compile Include="Forms\Cards\FrmBrachSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmBrachSetting.designer.cs">
+    <Compile Include="Forms\Cards\FrmBrachSetting.designer.cs">
       <DependentUpon>FrmBrachSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmBranch.cs">
+    <Compile Include="Forms\Cards\FrmBranch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmBranch.Designer.cs">
+    <Compile Include="Forms\Cards\FrmBranch.Designer.cs">
       <DependentUpon>FrmBranch.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmCalacSalary.cs">
@@ -1094,25 +1079,25 @@
     <Compile Include="Forms\FrmCarChecking.Designer.cs">
       <DependentUpon>FrmCarChecking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCarFixingOrder.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmCarFixingOrder.Designer.cs">
       <DependentUpon>FrmCarFixingOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCarFixingPOSOrders.cs">
+    <Compile Include="Forms\SellPurSystem\FrmCarFixingPOSOrders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCarFixingPOSOrders.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmCarFixingPOSOrders.Designer.cs">
       <DependentUpon>FrmCarFixingPOSOrders.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCarS.cs">
+    <Compile Include="Forms\Cards\FrmCarS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCarS.Designer.cs">
+    <Compile Include="Forms\Cards\FrmCarS.Designer.cs">
       <DependentUpon>FrmCarS.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCarTyp.Designer.cs">
+    <Compile Include="Forms\Cards\FrmCarTyp.Designer.cs">
       <DependentUpon>FrmCarTyp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCarTypS.Designer.cs">
+    <Compile Include="Forms\Cards\FrmCarTypS.Designer.cs">
       <DependentUpon>FrmCarTypS.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmCheck.Designer.cs">
@@ -1130,10 +1115,10 @@
     <Compile Include="Forms\Eqr_Version\FrmCity.Designer.cs">
       <DependentUpon>FrmCity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmColor.Designer.cs">
+    <Compile Include="Forms\Cards\FrmColor.Designer.cs">
       <DependentUpon>FrmColor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCommentary.Designer.cs">
+    <Compile Include="Forms\Cards\FrmCommentary.Designer.cs">
       <DependentUpon>FrmCommentary.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmCommOpiton.Designer.cs">
@@ -1142,16 +1127,16 @@
     <Compile Include="Forms\FrmContract.Designer.cs">
       <DependentUpon>FrmContract.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCostCenter.Designer.cs">
+    <Compile Include="Forms\Cards\FrmCostCenter.Designer.cs">
       <DependentUpon>FrmCostCenter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCurrncy.Designer.cs">
+    <Compile Include="Forms\Cards\FrmCurrncy.Designer.cs">
       <DependentUpon>FrmCurrncy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmCustomer.cs">
+    <Compile Include="Forms\Cards\FrmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCustomer.Designer.cs">
+    <Compile Include="Forms\Cards\FrmCustomer.Designer.cs">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmCustomerDisplay.Designer.cs">
@@ -1178,7 +1163,7 @@
     <Compile Include="Forms\FrmDelQTYEXP.Designer.cs">
       <DependentUpon>FrmDelQTYEXP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmDept.Designer.cs">
+    <Compile Include="Forms\Cards\FrmDept.Designer.cs">
       <DependentUpon>FrmDept.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmDiscount.Designer.cs">
@@ -1199,7 +1184,7 @@
     <Compile Include="Forms\FrmEditItemsPricesAll.Designer.cs">
       <DependentUpon>FrmEditItemsPricesAll.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmEmp.Designer.cs">
+    <Compile Include="Forms\Cards\FrmEmp.Designer.cs">
       <DependentUpon>FrmEmp.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmEmployees.Designer.cs">
@@ -1271,73 +1256,73 @@
     <Compile Include="Forms\FrmGuestMove.Designer.cs">
       <DependentUpon>FrmGuestMove.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmGuests.Designer.cs">
+    <Compile Include="Forms\Cards\FrmGuests.Designer.cs">
       <DependentUpon>FrmGuests.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Eqr_Version\FrmIDType.Designer.cs">
       <DependentUpon>FrmIDType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmImports.Designer.cs">
+    <Compile Include="Forms\Cards\FrmImports.Designer.cs">
       <DependentUpon>FrmImports.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmInsuranceHealth.Designer.cs">
       <DependentUpon>FrmInsuranceHealth.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvCat.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvCat.Designer.cs">
       <DependentUpon>FrmInvCat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvCommAcc.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvCommAcc.Designer.cs">
       <DependentUpon>FrmInvCommAcc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvCommMnd.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvCommMnd.Designer.cs">
       <DependentUpon>FrmInvCommMnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvDetNote.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvDetNote.Designer.cs">
       <DependentUpon>FrmInvDetNote.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvDetNoteSrch.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvDetNoteSrch.Designer.cs">
       <DependentUpon>FrmInvDetNoteSrch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvExport.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvExport.Designer.cs">
       <DependentUpon>FrmInvExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvFact.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvFact.Designer.cs">
       <DependentUpon>FrmInvFact.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvOffer.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvOffer.Designer.cs">
       <DependentUpon>FrmInvOffer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvPuchaes.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvPuchaes.Designer.cs">
       <DependentUpon>FrmInvPuchaes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvPuchaesReturn.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvPuchaesReturn.Designer.cs">
       <DependentUpon>FrmInvPuchaesReturn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvSale.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvSale.Designer.cs">
       <DependentUpon>FrmInvSale.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvSaleCar.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvSaleCar.Designer.cs">
       <DependentUpon>FrmInvSaleCar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvSalePoint.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvSalePoint.Designer.cs">
       <DependentUpon>FrmInvSalePoint.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvSalePoint_Branch.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvSalePoint_Branch.Designer.cs">
       <DependentUpon>FrmInvSalePoint_Branch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInvSalesReturn.Designer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvSalesReturn.Designer.cs">
       <DependentUpon>FrmInvSalesReturn.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmItemPriceMonitor.Designer.cs">
       <DependentUpon>FrmItemPriceMonitor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmItems.Designer.cs">
+    <Compile Include="Forms\Cards\FrmItems.Designer.cs">
       <DependentUpon>FrmItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmItemSize.Designer.cs">
       <DependentUpon>FrmItemSize.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmItmGroup.Designer.cs">
+    <Compile Include="Forms\Cards\FrmItmGroup.Designer.cs">
       <DependentUpon>FrmItmGroup.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Eqr_Version\FrmJob.Designer.cs">
@@ -1352,7 +1337,7 @@
     <Compile Include="Forms\Eqr_Version\FrmLocation.Designer.cs">
       <DependentUpon>FrmLocation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmMndob.Designer.cs">
+    <Compile Include="Forms\Cards\FrmMndob.Designer.cs">
       <DependentUpon>FrmMndob.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmMTemplates.Designer.cs">
@@ -1385,7 +1370,7 @@
     <Compile Include="Forms\Eqr_Version\FrmOwners.Designer.cs">
       <DependentUpon>FrmOwners.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmPassportForm.Designer.cs">
+    <Compile Include="Forms\Cards\FrmPassportForm.Designer.cs">
       <DependentUpon>FrmPassportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmPayid.Designer.cs">
@@ -1400,10 +1385,10 @@
     <Compile Include="Forms\FrmPOSPriceForm2.Designer.cs">
       <DependentUpon>FrmPOSPriceForm2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmPOSREP.cs">
+    <Compile Include="Forms\Shared\FrmPOSREP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmPOSREP.Designer.cs">
+    <Compile Include="Forms\Shared\FrmPOSREP.Designer.cs">
       <DependentUpon>FrmPOSREP.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmCarPOSLog.cs">
@@ -1415,13 +1400,13 @@
     <Compile Include="Forms\FrmMTemplates.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCarTyp.cs">
+    <Compile Include="Forms\Cards\FrmCarTyp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmColor.cs">
+    <Compile Include="Forms\Cards\FrmColor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCarTypS.cs">
+    <Compile Include="Forms\Cards\FrmCarTypS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmCheck.cs">
@@ -1439,7 +1424,7 @@
     <Compile Include="Forms\Eqr_Version\FrmCity.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCommentary.cs">
+    <Compile Include="Forms\Cards\FrmCommentary.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmCommOpiton.cs">
@@ -1448,10 +1433,10 @@
     <Compile Include="Forms\FrmContract.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCostCenter.cs">
+    <Compile Include="Forms\Cards\FrmCostCenter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCurrncy.cs">
+    <Compile Include="Forms\Cards\FrmCurrncy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmCustomerDisplay.cs">
@@ -1463,7 +1448,7 @@
     <Compile Include="Forms\FrmCustQutation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCarFixingOrder.cs">
+    <Compile Include="Forms\SellPurSystem\FrmCarFixingOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmCustSearch.cs">
@@ -1481,7 +1466,7 @@
     <Compile Include="Forms\FrmDelQTYEXP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmDept.cs">
+    <Compile Include="Forms\Cards\FrmDept.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmDiscount.cs">
@@ -1502,7 +1487,7 @@
     <Compile Include="Forms\FrmEditItemsPricesAll.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmEmp.cs">
+    <Compile Include="Forms\Cards\FrmEmp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmEmployees.cs">
@@ -1577,70 +1562,70 @@
     <Compile Include="Forms\FrmGuestMove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmGuests.cs">
+    <Compile Include="Forms\Cards\FrmGuests.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Eqr_Version\FrmIDType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmImports.cs">
+    <Compile Include="Forms\Cards\FrmImports.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmInsuranceHealth.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvCat.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvCat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvCommAcc.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvCommAcc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvCommMnd.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvCommMnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvDetNote.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvDetNote.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvDetNoteSrch.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvDetNoteSrch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvExport.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvExport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvFact.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvFact.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvOffer.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvOffer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvPuchaes.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvPuchaes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvPuchaesReturn.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvPuchaesReturn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvSaleCar.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvSaleCar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvSalePoint.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvSalePoint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvSalePoint_Branch.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvSalePoint_Branch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvSalesReturn.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvSalesReturn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmItemPriceMonitor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmItems.cs">
+    <Compile Include="Forms\Cards\FrmItems.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmItemSize.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmItmGroup.cs">
+    <Compile Include="Forms\Cards\FrmItmGroup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Eqr_Version\FrmJob.cs">
@@ -1661,7 +1646,7 @@
     <Compile Include="Forms\FrmLog.designer.cs">
       <DependentUpon>FrmLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmMndob.cs">
+    <Compile Include="Forms\Cards\FrmMndob.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Eqr_Version\FrmNation.cs">
@@ -1691,7 +1676,7 @@
     <Compile Include="Forms\Eqr_Version\FrmOwners.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmPassportForm.cs">
+    <Compile Include="Forms\Cards\FrmPassportForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmPayid.cs">
@@ -1778,106 +1763,106 @@
     <Compile Include="Forms\FrmReligions.Designer.cs">
       <DependentUpon>FrmReligions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepAdd.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepAdd.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepAdd.Designer.cs">
       <DependentUpon>FrmRepAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepAdvances.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepAdvances.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepAdvances.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepAdvances.Designer.cs">
       <DependentUpon>FrmRepAdvances.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepairGd.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepairGd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepairGd.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepairGd.Designer.cs">
       <DependentUpon>FrmRepairGd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepairInvGaid.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepairInvGaid.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepairInvGaid.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepairInvGaid.Designer.cs">
       <DependentUpon>FrmRepairInvGaid.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepairPurchaes.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepairPurchaes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepairPurchaes.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepairPurchaes.Designer.cs">
       <DependentUpon>FrmRepairPurchaes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepairSales.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepairSales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepairSales.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepairSales.Designer.cs">
       <DependentUpon>FrmRepairSales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepAllownce.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepAllownce.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepAllownce.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepAllownce.Designer.cs">
       <DependentUpon>FrmRepAllownce.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepAttnd.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepAttnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepAttnd.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepAttnd.Designer.cs">
       <DependentUpon>FrmRepAttnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepAuthorization.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepAuthorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepAuthorization.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepAuthorization.Designer.cs">
       <DependentUpon>FrmRepAuthorization.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepCalls.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepCalls.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepCalls.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepCalls.Designer.cs">
       <DependentUpon>FrmRepCalls.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepCars.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepCars.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepCars.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepCars.Designer.cs">
       <DependentUpon>FrmRepCars.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepCommentary.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepCommentary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepCommentary.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepCommentary.Designer.cs">
       <DependentUpon>FrmRepCommentary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepDiscount.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepDiscount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepDiscount.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepDiscount.Designer.cs">
       <DependentUpon>FrmRepDiscount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepEmployees.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepEmployees.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepEmployees.Designer.cs">
       <DependentUpon>FrmRepEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepEmps.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepEmps.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepEmps.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepEmps.Designer.cs">
       <DependentUpon>FrmRepEmps.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepEndService.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepEndService.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepEndService.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepEndService.Designer.cs">
       <DependentUpon>FrmRepEndService.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepForm.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepForm.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepForm.Designer.cs">
       <DependentUpon>FrmRepForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Eqr_Version\FrmRepID.cs">
@@ -1886,16 +1871,16 @@
     <Compile Include="Forms\Eqr_Version\FrmRepID.Designer.cs">
       <DependentUpon>FrmRepID.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepLicense.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepLicense.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepLicense.Designer.cs">
       <DependentUpon>FrmRepLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepMidicalAllownce.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepMidicalAllownce.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepMidicalAllownce.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepMidicalAllownce.Designer.cs">
       <DependentUpon>FrmRepMidicalAllownce.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Eqr_Version\FrmRepPassport.cs">
@@ -1904,70 +1889,70 @@
     <Compile Include="Forms\Eqr_Version\FrmRepPassport.Designer.cs">
       <DependentUpon>FrmRepPassport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepProject.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepProject.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepProject.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepProject.Designer.cs">
       <DependentUpon>FrmRepProject.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepRevenue.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepRevenue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepRevenue.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepRevenue.Designer.cs">
       <DependentUpon>FrmRepRevenue.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepReward.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepReward.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepReward.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepReward.Designer.cs">
       <DependentUpon>FrmRepReward.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepSalary.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepSalary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepSalary.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepSalary.Designer.cs">
       <DependentUpon>FrmRepSalary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepSalaryOp.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepSalaryOp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepSalaryOp.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepSalaryOp.Designer.cs">
       <DependentUpon>FrmRepSalaryOp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepSecretariats.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepSecretariats.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepSecretariats.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepSecretariats.Designer.cs">
       <DependentUpon>FrmRepSecretariats.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepTickit.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepTickit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepTickit.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepTickit.Designer.cs">
       <DependentUpon>FrmRepTickit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepUpdateDoc.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepUpdateDoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepUpdateDoc.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepUpdateDoc.Designer.cs">
       <DependentUpon>FrmRepUpdateDoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepUpdateDocAllownce.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepUpdateDocAllownce.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepUpdateDocAllownce.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepUpdateDocAllownce.Designer.cs">
       <DependentUpon>FrmRepUpdateDocAllownce.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepVacation.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepVacation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepVacation.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepVacation.Designer.cs">
       <DependentUpon>FrmRepVacation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRepVisa.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepVisa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRepVisa.Designer.cs">
+    <Compile Include="Forms\ReportingForms\FrmRepVisa.Designer.cs">
       <DependentUpon>FrmRepVisa.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmResv.cs">
@@ -1982,10 +1967,10 @@
     <Compile Include="Forms\FrmRewards.Designer.cs">
       <DependentUpon>FrmRewards.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRoom.cs">
+    <Compile Include="Forms\Cards\FrmRoom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRoom.Designer.cs">
+    <Compile Include="Forms\Cards\FrmRoom.Designer.cs">
       <DependentUpon>FrmRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmRoomDigram.cs">
@@ -2018,10 +2003,10 @@
     <Compile Include="Forms\FrmScannerFiles.Designer.cs">
       <DependentUpon>FrmScannerFiles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmSearch.cs">
+    <Compile Include="Forms\Shared\FrmSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmSearch.Designer.cs">
+    <Compile Include="Forms\Shared\FrmSearch.Designer.cs">
       <DependentUpon>FrmSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmSecretariats.cs">
@@ -2036,10 +2021,10 @@
     <Compile Include="Forms\FrmSecretariatTyp.Designer.cs">
       <DependentUpon>FrmSecretariatTyp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmSection.cs">
+    <Compile Include="Forms\Cards\FrmSection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmSection.Designer.cs">
+    <Compile Include="Forms\Cards\FrmSection.Designer.cs">
       <DependentUpon>FrmSection.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmSerials.cs">
@@ -2048,10 +2033,10 @@
     <Compile Include="Forms\FrmSerials.Designer.cs">
       <DependentUpon>FrmSerials.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmServes.cs">
+    <Compile Include="Forms\Cards\FrmServes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmServes.Designer.cs">
+    <Compile Include="Forms\Cards\FrmServes.Designer.cs">
       <DependentUpon>FrmServes.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmServesToLeave.cs">
@@ -2090,10 +2075,10 @@
     <Compile Include="Forms\FrmShowReserv.Designer.cs">
       <DependentUpon>FrmShowReserv.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmSMS.cs">
+    <Compile Include="Forms\Shared\FrmSMS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmSMS.Designer.cs">
+    <Compile Include="Forms\Shared\FrmSMS.Designer.cs">
       <DependentUpon>FrmSMS.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmSnd.cs">
@@ -2120,16 +2105,16 @@
     <Compile Include="Forms\FrmSponser.Designer.cs">
       <DependentUpon>FrmSponser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmStore.cs">
+    <Compile Include="Forms\Cards\FrmStore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmStore.Designer.cs">
+    <Compile Include="Forms\Cards\FrmStore.Designer.cs">
       <DependentUpon>FrmStore.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmSuppliers.cs">
+    <Compile Include="Forms\Cards\FrmSuppliers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmSuppliers.Designer.cs">
+    <Compile Include="Forms\Cards\FrmSuppliers.Designer.cs">
       <DependentUpon>FrmSuppliers.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmSuppQutation.cs">
@@ -2138,10 +2123,10 @@
     <Compile Include="Forms\FrmSuppQutation.Designer.cs">
       <DependentUpon>FrmSuppQutation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmSystemSetting.cs">
+    <Compile Include="Forms\Shared\FrmSystemSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmSystemSetting.Designer.cs">
+    <Compile Include="Forms\Shared\FrmSystemSetting.Designer.cs">
       <DependentUpon>FrmSystemSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmTableManage.cs">
@@ -2261,10 +2246,10 @@
     <Compile Include="Forms\FrmUNderDone.Designer.cs">
       <DependentUpon>FrmUNderDone.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmUnit.cs">
+    <Compile Include="Forms\Cards\FrmUnit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmUnit.Designer.cs">
+    <Compile Include="Forms\Cards\FrmUnit.Designer.cs">
       <DependentUpon>FrmUnit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmUpdateDoc.cs">
@@ -2279,10 +2264,10 @@
     <Compile Include="Forms\FrmUpdateDocAllownc.Designer.cs">
       <DependentUpon>FrmUpdateDocAllownc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmUserPoint.cs">
+    <Compile Include="Forms\Cards\FrmUserPoint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmUserPoint.Designer.cs">
+    <Compile Include="Forms\Cards\FrmUserPoint.Designer.cs">
       <DependentUpon>FrmUserPoint.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmUserPointReturn.cs">
@@ -2291,10 +2276,10 @@
     <Compile Include="Forms\FrmUserPointReturn.Designer.cs">
       <DependentUpon>FrmUserPointReturn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmUsr.cs">
+    <Compile Include="Forms\Shared\FrmUsr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmUsr.Designer.cs">
+    <Compile Include="Forms\Shared\FrmUsr.Designer.cs">
       <DependentUpon>FrmUsr.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmVacation.cs">
@@ -2315,10 +2300,10 @@
     <Compile Include="Forms\Frmvisa.Designer.cs">
       <DependentUpon>Frmvisa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frmwaiter.cs">
+    <Compile Include="Forms\Cards\Frmwaiter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frmwaiter.Designer.cs">
+    <Compile Include="Forms\Cards\Frmwaiter.Designer.cs">
       <DependentUpon>Frmwaiter.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmWaiterMenue.cs">
@@ -2327,10 +2312,10 @@
     <Compile Include="Forms\FrmWaiterMenue.Designer.cs">
       <DependentUpon>FrmWaiterMenue.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Main.cs">
+    <Compile Include="Forms\Shared\Frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Main.designer.cs">
+    <Compile Include="Forms\Shared\Frm_Main.designer.cs">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FRStatementOfAccount.cs">
@@ -2384,7 +2369,7 @@
     <Compile Include="Forms\SSSFMSndPrintSetup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInvSale.cs">
+    <Compile Include="Forms\SellPurSystem\FrmInvSale.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\SSSFMSndPrintSetup.Designer.cs">
@@ -2393,19 +2378,14 @@
     <Compile Include="FrmMn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GeneralM\FormState.cs" />
-    <Compile Include="GeneralM\VarGeneral.cs" />
-    <Compile Include="GeneralM\ViewState.cs" />
     <Compile Include="Installer1.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Installer1.Designer.cs">
       <DependentUpon>Installer1.cs</DependentUpon>
     </Compile>
-    <Compile Include="NetworkShareAccesser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportOnline.cs" />
     <Compile Include="Reports\Fast\FFrmReportsViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2425,25 +2405,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\ReportChooser.cs" />
-    <Compile Include="Stock_Data\Rate_Data.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Rate_Data.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Stock_Data\Stock_Data.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Stock_Data.dbml</DependentUpon>
-    </Compile>
     <Compile Include="SuperGridDemo\VcrControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <EmbeddedResource Include="Check_Data\FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Check_Data\FrmPathSetting.resx">
-      <DependentUpon>FrmPathSetting.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ControlHosting\EmployeeCard.resx">
       <DependentUpon>EmployeeCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -2513,18 +2477,6 @@
     <EmbeddedResource Include="Controls\Ubar.resx">
       <DependentUpon>Ubar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DBUdate\FrmReport.resx">
-      <DependentUpon>FrmReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DBUdate\InputDialog.resx">
-      <DependentUpon>InputDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DBUdate\Inputkey.resx">
-      <DependentUpon>Inputkey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DroBoxSync\Frm_PrinterShow.resx">
-      <DependentUpon>Frm_PrinterShow.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -2568,43 +2520,46 @@
     <EmbeddedResource Include="Forms\FMExplanation.resx">
       <DependentUpon>FMExplanation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FMFind.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\specialcontrols\Glassess\XGmesures.resx">
+      <DependentUpon>XGmesures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shared\FMFind.resx">
       <DependentUpon>FMFind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FMInvPrintSetup.resx">
       <DependentUpon>FMInvPrintSetup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FMJournalVoucher.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FMJournalVoucher.resx">
       <DependentUpon>FMJournalVoucher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FMJournalVoucherEmpRelaySal.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FMJournalVoucherEmpRelaySal.resx">
       <DependentUpon>FMJournalVoucherEmpRelaySal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FMOpenQuantities.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FMOpenQuantities.resx">
       <DependentUpon>FMOpenQuantities.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FMPaymentOrder.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FMPaymentOrder.resx">
       <DependentUpon>FMPaymentOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FMPaymentOReturn.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FMPaymentOReturn.resx">
       <DependentUpon>FMPaymentOReturn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FMPaymentVoucher.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FMPaymentVoucher.resx">
       <DependentUpon>FMPaymentVoucher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FMPurchaseOrder.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FMPurchaseOrder.resx">
       <DependentUpon>FMPurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FMReceiptVoucher.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FMReceiptVoucher.resx">
       <DependentUpon>FMReceiptVoucher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FMReceiptVoucherCustSupp.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FMReceiptVoucherCustSupp.resx">
       <DependentUpon>FMReceiptVoucherCustSupp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FMSndPrintSetup.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FMSndPrintSetup.resx">
       <DependentUpon>FMSndPrintSetup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FMStockAdjustment.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FMStockAdjustment.resx">
       <DependentUpon>FMStockAdjustment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
@@ -2613,73 +2568,73 @@
     <EmbeddedResource Include="Forms\FormInvoicesDataViewre.resx">
       <DependentUpon>FormInvoicesDataViewre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRAccount.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRAccount.resx">
       <DependentUpon>FRAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRAccountExpense.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRAccountExpense.resx">
       <DependentUpon>FRAccountExpense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRAccountReport.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRAccountReport.resx">
       <DependentUpon>FRAccountReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRAccountReportGabthSerf.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRAccountReportGabthSerf.resx">
       <DependentUpon>FRAccountReportGabthSerf.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRAccountReportToGuest.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRAccountReportToGuest.resx">
       <DependentUpon>FRAccountReportToGuest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRInvTotals.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRInvTotals.resx">
       <DependentUpon>FRInvTotals.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRAccountTax.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRAccountTax.resx">
       <DependentUpon>FRAccountTax.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRAccountTranc.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRAccountTranc.resx">
       <DependentUpon>FRAccountTranc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRAccountTrans.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRAccountTrans.resx">
       <DependentUpon>FRAccountTrans.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRCustBalance.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRCustBalance.resx">
       <DependentUpon>FRCustBalance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRInvoice.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRInvoice.resx">
       <DependentUpon>FRInvoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRInvoiceGaid.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRInvoiceGaid.resx">
       <DependentUpon>FRInvoiceGaid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRInvoiceMnd.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRInvoiceMnd.resx">
       <DependentUpon>FRInvoiceMnd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRItemsData.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRItemsData.resx">
       <DependentUpon>FRItemsData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRItemsDataExpir.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRItemsDataExpir.resx">
       <DependentUpon>FRItemsDataExpir.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRItemsDataExtrnalMdn.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRItemsDataExtrnalMdn.resx">
       <DependentUpon>FRItemsDataExtrnalMdn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRItemsDataMoreSale.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRItemsDataMoreSale.resx">
       <DependentUpon>FRItemsDataMoreSale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRItemsMovement.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRItemsMovement.resx">
       <DependentUpon>FRItemsMovement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRItemsMovementPrint.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRItemsMovementPrint.resx">
       <DependentUpon>FRItemsMovementPrint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRItemsTransf.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRItemsTransf.resx">
       <DependentUpon>FRItemsTransf.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FRItemsTransfDatExpir.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FRItemsTransfDatExpir.resx">
       <DependentUpon>FRItemsTransfDatExpir.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmAccCat.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmAccCat.resx">
       <DependentUpon>FrmAccCat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmAccDef_.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmAccDef_.resx">
       <DependentUpon>FrmAccDef_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAdd.resx">
@@ -2733,10 +2688,10 @@
     <EmbeddedResource Include="Forms\FrmBoxes.resx">
       <DependentUpon>FrmBoxes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmBrachSetting.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmBrachSetting.resx">
       <DependentUpon>FrmBrachSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmBranch.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmBranch.resx">
       <DependentUpon>FrmBranch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCalacSalary.resx">
@@ -2751,19 +2706,19 @@
     <EmbeddedResource Include="Forms\FrmCarChecking.resx">
       <DependentUpon>FrmCarChecking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCarFixingPOSOrders.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmCarFixingPOSOrders.resx">
       <DependentUpon>FrmCarFixingPOSOrders.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCarS.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmCarS.resx">
       <DependentUpon>FrmCarS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCustomer.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmEndYearsFiles.resx">
       <DependentUpon>FrmEndYearsFiles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmPOSREP.resx">
+    <EmbeddedResource Include="Forms\Shared\FrmPOSREP.resx">
       <DependentUpon>FrmPOSREP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCarPOSLog.resx">
@@ -2772,13 +2727,13 @@
     <EmbeddedResource Include="Forms\FrmMTemplates.resx">
       <DependentUpon>FrmMTemplates.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCarTyp.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmCarTyp.resx">
       <DependentUpon>FrmCarTyp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmColor.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmColor.resx">
       <DependentUpon>FrmColor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCarTypS.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmCarTypS.resx">
       <DependentUpon>FrmCarTypS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCheck.resx">
@@ -2796,7 +2751,7 @@
     <EmbeddedResource Include="Forms\Eqr_Version\FrmCity.resx">
       <DependentUpon>FrmCity.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCommentary.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmCommentary.resx">
       <DependentUpon>FrmCommentary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCommOpiton.resx">
@@ -2805,10 +2760,10 @@
     <EmbeddedResource Include="Forms\FrmContract.resx">
       <DependentUpon>FrmContract.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCostCenter.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmCostCenter.resx">
       <DependentUpon>FrmCostCenter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCurrncy.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmCurrncy.resx">
       <DependentUpon>FrmCurrncy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCustomerDisplay.resx">
@@ -2820,7 +2775,7 @@
     <EmbeddedResource Include="Forms\FrmCustQutation.resx">
       <DependentUpon>FrmCustQutation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCarFixingOrder.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmCarFixingOrder.resx">
       <DependentUpon>FrmCarFixingOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCustSearch.resx">
@@ -2838,7 +2793,7 @@
     <EmbeddedResource Include="Forms\FrmDelQTYEXP.resx">
       <DependentUpon>FrmDelQTYEXP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmDept.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmDept.resx">
       <DependentUpon>FrmDept.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDiscount.resx">
@@ -2859,7 +2814,7 @@
     <EmbeddedResource Include="Forms\FrmEditItemsPricesAll.resx">
       <DependentUpon>FrmEditItemsPricesAll.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmEmp.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmEmp.resx">
       <DependentUpon>FrmEmp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmEmployees.resx">
@@ -2931,7 +2886,7 @@
     <EmbeddedResource Include="Forms\FrmGuestMove.resx">
       <DependentUpon>FrmGuestMove.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmGuests.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmGuests.resx">
       <DependentUpon>FrmGuests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Eqr_Version\FrmIDType.resx">
@@ -2940,58 +2895,58 @@
     <EmbeddedResource Include="Forms\FrmInsuranceHealth.resx">
       <DependentUpon>FrmInsuranceHealth.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvCat.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvCat.resx">
       <DependentUpon>FrmInvCat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvCommAcc.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvCommAcc.resx">
       <DependentUpon>FrmInvCommAcc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvCommMnd.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvCommMnd.resx">
       <DependentUpon>FrmInvCommMnd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvDetNote.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvDetNote.resx">
       <DependentUpon>FrmInvDetNote.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvDetNoteSrch.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvDetNoteSrch.resx">
       <DependentUpon>FrmInvDetNoteSrch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvExport.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvExport.resx">
       <DependentUpon>FrmInvExport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvFact.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvFact.resx">
       <DependentUpon>FrmInvFact.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvOffer.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvOffer.resx">
       <DependentUpon>FrmInvOffer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvPuchaes.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvPuchaes.resx">
       <DependentUpon>FrmInvPuchaes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvPuchaesReturn.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvPuchaesReturn.resx">
       <DependentUpon>FrmInvPuchaesReturn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvSaleCar.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvSaleCar.resx">
       <DependentUpon>FrmInvSaleCar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvSalePoint.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvSalePoint.resx">
       <DependentUpon>FrmInvSalePoint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvSalePoint_Branch.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvSalePoint_Branch.resx">
       <DependentUpon>FrmInvSalePoint_Branch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvSalesReturn.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvSalesReturn.resx">
       <DependentUpon>FrmInvSalesReturn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmItemPriceMonitor.resx">
       <DependentUpon>FrmItemPriceMonitor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmItems.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmItems.resx">
       <DependentUpon>FrmItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmItemSize.resx">
       <DependentUpon>FrmItemSize.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmItmGroup.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmItmGroup.resx">
       <DependentUpon>FrmItmGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Eqr_Version\FrmJob.resx">
@@ -3009,7 +2964,7 @@
     <EmbeddedResource Include="Forms\FrmLog.resx">
       <DependentUpon>FrmLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmMndob.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmMndob.resx">
       <DependentUpon>FrmMndob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Eqr_Version\FrmNation.resx">
@@ -3039,7 +2994,7 @@
     <EmbeddedResource Include="Forms\Eqr_Version\FrmOwners.resx">
       <DependentUpon>FrmOwners.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmPassportForm.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmPassportForm.resx">
       <DependentUpon>FrmPassportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmPayid.resx">
@@ -3088,97 +3043,97 @@
     <EmbeddedResource Include="Forms\FrmReligions.resx">
       <DependentUpon>FrmReligions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepAdd.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepAdd.resx">
       <DependentUpon>FrmRepAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepAdvances.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepAdvances.resx">
       <DependentUpon>FrmRepAdvances.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepairInvGaid.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepairInvGaid.resx">
       <DependentUpon>FrmRepairInvGaid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepairPurchaes.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepairPurchaes.resx">
       <DependentUpon>FrmRepairPurchaes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepairSales.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepairSales.resx">
       <DependentUpon>FrmRepairSales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepAllownce.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepAllownce.resx">
       <DependentUpon>FrmRepAllownce.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepAttnd.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepAttnd.resx">
       <DependentUpon>FrmRepAttnd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepAuthorization.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepAuthorization.resx">
       <DependentUpon>FrmRepAuthorization.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepCalls.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepCalls.resx">
       <DependentUpon>FrmRepCalls.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepCars.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepCars.resx">
       <DependentUpon>FrmRepCars.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepCommentary.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepCommentary.resx">
       <DependentUpon>FrmRepCommentary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepDiscount.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepDiscount.resx">
       <DependentUpon>FrmRepDiscount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepEmployees.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepEmployees.resx">
       <DependentUpon>FrmRepEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepEmps.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepEmps.resx">
       <DependentUpon>FrmRepEmps.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepEndService.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepEndService.resx">
       <DependentUpon>FrmRepEndService.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepForm.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepForm.resx">
       <DependentUpon>FrmRepForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Eqr_Version\FrmRepID.resx">
       <DependentUpon>FrmRepID.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepLicense.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepLicense.resx">
       <DependentUpon>FrmRepLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepMidicalAllownce.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepMidicalAllownce.resx">
       <DependentUpon>FrmRepMidicalAllownce.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Eqr_Version\FrmRepPassport.resx">
       <DependentUpon>FrmRepPassport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepProject.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepProject.resx">
       <DependentUpon>FrmRepProject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepRevenue.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepRevenue.resx">
       <DependentUpon>FrmRepRevenue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepReward.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepReward.resx">
       <DependentUpon>FrmRepReward.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepSalary.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepSalary.resx">
       <DependentUpon>FrmRepSalary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepSalaryOp.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepSalaryOp.resx">
       <DependentUpon>FrmRepSalaryOp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepSecretariats.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepSecretariats.resx">
       <DependentUpon>FrmRepSecretariats.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepTickit.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepTickit.resx">
       <DependentUpon>FrmRepTickit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepUpdateDoc.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepUpdateDoc.resx">
       <DependentUpon>FrmRepUpdateDoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepUpdateDocAllownce.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepUpdateDocAllownce.resx">
       <DependentUpon>FrmRepUpdateDocAllownce.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepVacation.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepVacation.resx">
       <DependentUpon>FrmRepVacation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRepVisa.resx">
+    <EmbeddedResource Include="Forms\ReportingForms\FrmRepVisa.resx">
       <DependentUpon>FrmRepVisa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmResv.resx">
@@ -3187,7 +3142,7 @@
     <EmbeddedResource Include="Forms\FrmRewards.resx">
       <DependentUpon>FrmRewards.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRoom.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmRoom.resx">
       <DependentUpon>FrmRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmRoomDigram.resx">
@@ -3202,7 +3157,7 @@
     <EmbeddedResource Include="Forms\FrmScannerFiles.resx">
       <DependentUpon>FrmScannerFiles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmSearch.resx">
+    <EmbeddedResource Include="Forms\Shared\FrmSearch.resx">
       <DependentUpon>FrmSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmSecretariats.resx">
@@ -3211,13 +3166,13 @@
     <EmbeddedResource Include="Forms\FrmSecretariatTyp.resx">
       <DependentUpon>FrmSecretariatTyp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmSection.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmSection.resx">
       <DependentUpon>FrmSection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmSerials.resx">
       <DependentUpon>FrmSerials.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmServes.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmServes.resx">
       <DependentUpon>FrmServes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmServesToLeave.resx">
@@ -3238,7 +3193,7 @@
     <EmbeddedResource Include="Forms\FrmShowReserv.resx">
       <DependentUpon>FrmShowReserv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmSMS.resx">
+    <EmbeddedResource Include="Forms\Shared\FrmSMS.resx">
       <DependentUpon>FrmSMS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmSnd.resx">
@@ -3253,16 +3208,16 @@
     <EmbeddedResource Include="Forms\FrmSponser.resx">
       <DependentUpon>FrmSponser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmStore.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmStore.resx">
       <DependentUpon>FrmStore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmSuppliers.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmSuppliers.resx">
       <DependentUpon>FrmSuppliers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmSuppQutation.resx">
       <DependentUpon>FrmSuppQutation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmSystemSetting.resx">
+    <EmbeddedResource Include="Forms\Shared\FrmSystemSetting.resx">
       <DependentUpon>FrmSystemSetting.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -3323,7 +3278,7 @@
     <EmbeddedResource Include="Forms\FrmUNderDone.resx">
       <DependentUpon>FrmUNderDone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmUnit.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmUnit.resx">
       <DependentUpon>FrmUnit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmUpdateDoc.resx">
@@ -3332,13 +3287,13 @@
     <EmbeddedResource Include="Forms\FrmUpdateDocAllownc.resx">
       <DependentUpon>FrmUpdateDocAllownc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmUserPoint.resx">
+    <EmbeddedResource Include="Forms\Cards\FrmUserPoint.resx">
       <DependentUpon>FrmUserPoint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmUserPointReturn.resx">
       <DependentUpon>FrmUserPointReturn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmUsr.resx">
+    <EmbeddedResource Include="Forms\Shared\FrmUsr.resx">
       <DependentUpon>FrmUsr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmVacation.resx">
@@ -3350,13 +3305,13 @@
     <EmbeddedResource Include="Forms\Frmvisa.resx">
       <DependentUpon>Frmvisa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frmwaiter.resx">
+    <EmbeddedResource Include="Forms\Cards\Frmwaiter.resx">
       <DependentUpon>Frmwaiter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmWaiterMenue.resx">
       <DependentUpon>FrmWaiterMenue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_Main.resx">
+    <EmbeddedResource Include="Forms\Shared\Frm_Main.resx">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FRStatementOfAccount.resx">
@@ -3386,7 +3341,7 @@
     <EmbeddedResource Include="Forms\SSSFMSndPrintSetup.resx">
       <DependentUpon>SSSFMSndPrintSetup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInvSale.resx">
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvSale.resx">
       <DependentUpon>FrmInvSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMn.resx">
@@ -3425,9 +3380,6 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="app.manifest" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
-    <None Include="ClassDiagram3.cd" />
     <None Include="InvAcc.ruleset" />
     <None Include="InvAcc_TemporaryKey.pfx" />
     <None Include="packages.config" />
@@ -3441,22 +3393,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Prosoft.gclicx" />
-    <None Include="Stock_Data\Rate_Data.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Rate_Data.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Stock_Data\Rate_Data.dbml.layout">
-      <DependentUpon>Rate_Data.dbml</DependentUpon>
-    </None>
-    <None Include="Stock_Data\Stock_Data.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Stock_Data.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Stock_Data\Stock_Data.dbml.layout">
-      <DependentUpon>Stock_Data.dbml</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\face.PNG" />
@@ -3591,6 +3527,8 @@
     <Content Include="favicon.ico" />
     <AdditionalFiles Include="InvAcc_ml.xml" />
     <Content Include="Forms\HTMLPage1.html" />
+    <None Include="Resources\prev_32x32.png" />
+    <None Include="Resources\next_32x32.png" />
     <None Include="Resources\cancel_32x32.png" />
     <None Include="Resources\save_32x32.png" />
     <None Include="Resources\add_32x321.png" />
@@ -3683,7 +3621,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controls\classes\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
@@ -3691,7 +3631,7 @@ if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties IntelliLock_Configuration="ALL" IntelliLock_Enabled="0" IntelliLock_Deployment="0" IntelliLock_Settings="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" IntelliLock_Output="[output_dir]InvAcc_Locked\InvAcc.exe" IntelliLock_ProjectFile="" />
+      <UserProperties IntelliLock_ProjectFile="" IntelliLock_Output="[output_dir]InvAcc_Locked\InvAcc.exe" IntelliLock_Settings="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" IntelliLock_Deployment="0" IntelliLock_Enabled="0" IntelliLock_Configuration="ALL" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

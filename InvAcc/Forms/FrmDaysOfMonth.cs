@@ -1,7 +1,7 @@
 using DevComponents.DotNetBar;
 using DevComponents.Editors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using System;
 using System.ComponentModel;
@@ -16,7 +16,7 @@ namespace InvAcc.Forms
  button_Save.Text=   (arln == 0 ? "  حفــــظ  " : "  save") ; button_Close.Text=   (arln == 0 ? "  رجــوع  " : "  back") ; label_M12.Text=   (arln == 0 ? "  ذو الحجة  " : "  Dhul-Hijjah") ; label_M11.Text=   (arln == 0 ? "  ذو القعدة  " : "  Zul Qi'dah") ; label_M10.Text=   (arln == 0 ? "  شوال  " : "  Shawwal") ; label_M9.Text=   (arln == 0 ? "  رمضان  " : "  Ramadan") ; label_M8.Text=   (arln == 0 ? "  شعبان  " : "  Shaban") ; label_M7.Text=   (arln == 0 ? "  رجب  " : "  Regep") ; label_M6.Text=   (arln == 0 ? "  جمادى الثاني  " : "  Jumada II") ; label_M5.Text=   (arln == 0 ? "  جمادى الأول  " : "  Jumada I") ; label_M4.Text=   (arln == 0 ? "  ربيع الثاني  " : "  second spring") ; label_M3.Text=   (arln == 0 ? "  ربيع الأول  " : "  Rabi' al-Awal") ; label_M2.Text=   (arln == 0 ? "  صفر  " : "  zero") ; label_M1.Text=   (arln == 0 ? "  محرم  " : "  Muharram") ; button_Defalte.Text=   (arln == 0 ? "  استرجاع التقويم السنوي  " : "  Retrieve the annual calendar") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
        // private IContainer components = null;

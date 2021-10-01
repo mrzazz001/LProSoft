@@ -1,7 +1,7 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +18,7 @@ namespace InvAcc.Forms
  label29.Text=   (arln == 0 ? "  البيانات المقفلة                             The Data Locked  " : "  The Data Locked") ; textBox_EndsPath.Text=   (arln == 0 ? "  ....  " : "  ....") ; buttonX_Ok.Text=   (arln == 0 ? "  OK  موافـق  " : "  OK") ; buttonX_Close.Text=   (arln == 0 ? "  Close  إغلاق  " : "  Close") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
 #pragma warning disable CS0414 // The field 'FrmEndYearsFiles.LangArEn' is assigned but its value is never used

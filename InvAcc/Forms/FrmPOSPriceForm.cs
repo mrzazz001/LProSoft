@@ -1,4 +1,4 @@
-using InvAcc.Stock_Data;
+using ProShared.Stock_Data;
 using System;
 using System.Windows.Forms;
 namespace InvAcc.Forms
@@ -10,7 +10,7 @@ namespace InvAcc.Forms
  groupPanel1.Text=   (arln == 0 ? "  السعر - Price  " : "  Price") ; buttonX1.Text=   (arln == 0 ? "  تــــراجــــــع  " : "  backtrack") ; button_Close.Text=   (arln == 0 ? "  موافق  " : "  OK") ; label3.Text=   (arln == 0 ? "  كبـــير  " : "  big") ; label4.Text=   (arln == 0 ? "  وســـط  " : "  middle") ; label5.Text=   (arln == 0 ? "  كبـــير  " : "  big") ; label4E.Text=   (arln == 0 ? "  وســـط  " : "  middle") ; label5E.Text=   (arln == 0 ? "  كبـــير  " : "  big") ; Text = "FrmPOSPriceForm";this.Text=   (arln == 0 ? "  FrmPOSPriceForm  " : "  FrmPOSPriceForm") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public FrmPOSPriceForm()

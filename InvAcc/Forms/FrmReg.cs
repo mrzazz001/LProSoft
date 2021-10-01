@@ -1,7 +1,7 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using InputKey;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using Microsoft.Win32;
 using SSSDateTime.Date;
 using System;
@@ -235,7 +235,7 @@ namespace InvAcc.Forms
             label21.Text=   (arln == 0 ? "  تفعيل النسخة  " : "  Activate version") ; label1.Text=   (arln == 0 ? "  Activation No  " : "  Activation No") ; label12.Text=   (arln == 0 ? "  Hard Desc  " : "  Hard Desc") ; label13.Text=   (arln == 0 ? "  Process  " : "  Process") ; label14.Text=   (arln == 0 ? "  Bord  " : "  Bord") ; label15.Text=   (arln == 0 ? "  Win  " : "  Win") ; label10.Text=   (arln == 0 ? "  Serial  " : "  Serial") ; label11.Text=   (arln == 0 ? "  Prouduct Code   " : "  Product Code") ; label16.Text=   (arln == 0 ? "  إسم المنتج :  " : "  product name :") ; checkBox1.Text=   (arln == 0 ? "  نعم , أوافق على جميع شروط المنتج  " : "  Yes, I agree to all product terms") ; label20.Text=   (arln == 0 ? "  بيانات الشراء  " : "  Purchase data") ; label28.Text=   (arln == 0 ? "  تاريخ الفاتورة :  " : "  Invoice date:") ; label31.Text=   (arln == 0 ? "  رقم الفاتورة :  " : "  invoice number :") ; label32.Text=   (arln == 0 ? "  فاكس :  " : "  Fax:") ; label33.Text=   (arln == 0 ? "  تلفـــون :  " : "  Telephone:") ; label34.Text=   (arln == 0 ? "  المدينة :  " : "  City :") ; label35.Text=   (arln == 0 ? "  محل الشراء :  " : "  Where to buy:") ; label40.Text=   (arln == 0 ? "  بريد إلكتروني :  " : "  e-mail :") ; label41.Text=   (arln == 0 ? "  اسم المسؤول :  " : "  Name of the manager :") ; label43.Text=   (arln == 0 ? "  البلد :  " : "  Country :") ; label44.Text=   (arln == 0 ? "  الرمز البريدي :  " : "  Postal code :") ; label45.Text=   (arln == 0 ? "  صندوق البريدي :  " : "  postal box:") ; label46.Text=   (arln == 0 ? "  موبايــــل :  " : "  Mobile:") ; label47.Text=   (arln == 0 ? "  فاكس :  " : "  Fax:") ; label48.Text=   (arln == 0 ? "  تلفـــون :  " : "  Telephone:") ; label49.Text=   (arln == 0 ? "  نشاط المنشأة :  " : "  Enterprise activity:") ; label50.Text=   (arln == 0 ? "  إسم المنشأة :  " : "  Facility Name :") ; label29.Text=   (arln == 0 ? "  بيانات العميل  " : "  Customer data") ; tabItem1.Text=   (arln == 0 ? "  بيانات عامــــة  " : "  general data") ; c1Button1.Text=   (arln == 0 ? "  اغلاق  " : "  Close") ; Text = "تفعيل النسخة";this.Text=   (arln == 0 ? "  تفعيل النسخة  " : "  Activate version") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
             TopMost = true;
         }
    

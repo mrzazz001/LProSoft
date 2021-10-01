@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ItemGried = new System.Windows.Forms.TableLayoutPanel();
+            this.ItemsGride = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.arrowButton2 = new ArrowButton.ArrowButton();
             this.arrowButton1 = new ArrowButton.ArrowButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ItemGried
+            // ItemsGride
             // 
-            this.ItemGried.ColumnCount = 2;
-            this.ItemGried.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ItemGried.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ItemGried.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ItemGried.Location = new System.Drawing.Point(0, 0);
-            this.ItemGried.Name = "ItemGried";
-            this.ItemGried.RowCount = 2;
-            this.ItemGried.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ItemGried.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ItemGried.Size = new System.Drawing.Size(658, 352);
-            this.ItemGried.TabIndex = 0;
-            this.ItemGried.Paint += new System.Windows.Forms.PaintEventHandler(this.ItemGried_Paint);
+            this.ItemsGride.ColumnCount = 2;
+            this.ItemsGride.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ItemsGride.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ItemsGride.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ItemsGride.Location = new System.Drawing.Point(0, 0);
+            this.ItemsGride.Name = "ItemsGride";
+            this.ItemsGride.RowCount = 2;
+            this.ItemsGride.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ItemsGride.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ItemsGride.Size = new System.Drawing.Size(658, 352);
+            this.ItemsGride.TabIndex = 0;
+            this.ItemsGride.Paint += new System.Windows.Forms.PaintEventHandler(this.ItemsGride_Paint);
             // 
             // panel1
             // 
@@ -95,7 +95,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.ItemGried);
+            this.Controls.Add(this.ItemsGride);
             this.Name = "Pos_ItemPanel";
             this.Size = new System.Drawing.Size(658, 352);
             this.Load += new System.EventHandler(this.Pos_ItemPanel_Load);
@@ -106,7 +106,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel ItemGried;
+        private System.Windows.Forms.TableLayoutPanel ItemsGride;
         private System.Windows.Forms.Panel panel1;
         private ArrowButton.ArrowButton arrowButton2;
         private ArrowButton.ArrowButton arrowButton1;

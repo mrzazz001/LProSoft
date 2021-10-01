@@ -8,11 +8,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using System.Linq;
 using System.Collections.Generic;
 using System.Data.Linq;
-using InvAcc.Stock_Data;
+using ProShared.Stock_Data;
 
 namespace InvAcc.Controls
 {

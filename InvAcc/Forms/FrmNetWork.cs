@@ -1,7 +1,7 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using InputKey;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using Microsoft.Win32;
 using System;
 using System.ComponentModel;
@@ -23,7 +23,7 @@ namespace InvAcc.Forms
 
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
        // private IContainer components = null;

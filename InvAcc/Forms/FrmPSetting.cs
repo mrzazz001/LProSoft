@@ -9,7 +9,7 @@ namespace InvAcc.Forms
  tabPage1.Text=   (arln == 0 ? "  tabPage1  " : "  tabPage1") ; tabPage2.Text=   (arln == 0 ? "  tabPage2  " : "  tabPage2") ; tabPage3.Text=   (arln == 0 ? "  tabPage3  " : "  tabPage3") ; Text = "FrmPSetting";this.Text=   (arln == 0 ? "  FrmPSetting  " : "  FrmPSetting") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public FrmPSetting()

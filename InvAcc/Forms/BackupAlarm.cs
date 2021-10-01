@@ -1,5 +1,5 @@
 
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using System;
 using System.Windows.Forms;
 namespace InvAcc.Forms
@@ -11,7 +11,7 @@ namespace InvAcc.Forms
  Text = "BackupAlarm";this.Text=   (arln == 0 ? "  BackupAlarm  " : "  BackupAlarm") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+             avs(ProShared. GeneralM.VarGeneral.currentintlanguage);
         }
    
         FrmMn caller;

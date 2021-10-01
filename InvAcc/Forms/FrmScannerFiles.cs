@@ -1,5 +1,5 @@
 using DevComponents.DotNetBar;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using SSSLanguage;
 using System;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ namespace InvAcc.Forms
 }
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
 #pragma warning disable CS0414 // The field 'FrmScannerFiles.LangArEn' is assigned but its value is never used

@@ -1,8 +1,8 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using SSSLanguage;
 using System;
@@ -19,7 +19,7 @@ namespace InvAcc.Forms
  panelEx2.Text=   (arln == 0 ? "  Click to collapse  " : "  Click to collapse") ; label4.Text=   (arln == 0 ? "  الضريبة  " : "  Tax") ; label3.Text=   (arln == 0 ? "  سعر الدقيقة للمكالمات  " : "  Per minute rate for calls") ; label1.Text=   (arln == 0 ? "  عبر الأقمار الصناعية :  " : "  Via satellite:") ; label2.Text=   (arln == 0 ? "  حول الدول الأجنبية :  " : "  About foreign countries:") ; labelx.Text=   (arln == 0 ? "  حــول الدول العربية :  " : "  About the Arab countries:") ; labelxx.Text=   (arln == 0 ? "  المكالمات الداخلية :  " : "  Internal calls:") ; label38.Text=   (arln == 0 ? "  المكالمات المحلية :  " : "  local calls:") ; label72.Text=   (arln == 0 ? "  حساب القيد التلقائي لمستخدمين الخدمة  " : "  Automatic enrollment account for service users") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; Button_Save.Text=   (arln == 0 ? "  حفظ  " : "  save") ; ToolStripMenuItem_Rep.Text=   (arln == 0 ? "  إظهار التقرير  " : "  Show report") ; ToolStripMenuItem_Det.Text=   (arln == 0 ? "  إظهار التفاصيل  " : "  Show details") ; Text = "كرت تعديل أسعار المكالمات";this.Text=   (arln == 0 ? "  كرت تعديل أسعار المكالمات  " : "  Call rate adjustment card") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

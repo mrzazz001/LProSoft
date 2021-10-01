@@ -1,8 +1,8 @@
 using Check_Data.Forms;
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSLanguage;
 using System;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ namespace InvAcc.Forms
  labelX1.Text=   (arln == 0 ? "  تغيير مسار قاعدة البيانات ( تغيير الفرع )  " : "  Change database path (change branch)") ; buttonX_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; buttonX_Ok.Text=   (arln == 0 ? "  موافــــق  " : "  ok") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         private T_Branch _Branch = new T_Branch();
@@ -173,12 +173,12 @@ namespace InvAcc.Forms
                     try
                     {
                         new FrmMain(null, null, VarGeneral.BranchNumber, 0);
-                        //VarGeneral.currentDbVersion = DBUdate.DbUpdates.GetDatabaseVersion();
+                        //VarGeneral.currentDbVersion =ProShared. DBUdate.DbUpdates.GetDatabaseVersion();
                         //if (VarGeneral.currentDbVersion == "ERROR" || VarGeneral.currentDbVersion == "old")
                         //{
                         //    MessageBox.Show("إصدار قاعدة البيانات لهذا الفرع قديمة اضغط موافق للتحديث وانتضر قليلا");
                         //    this.Enabled = false;
-                        //    DBUdate.DbUpdates.internalupdate(0);
+                        //   ProShared. DBUdate.DbUpdates.internalupdate(0);
                         //    this.Enabled = true;
                         //}
                     }

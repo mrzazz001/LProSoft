@@ -1,7 +1,7 @@
 using InvAcc.Forms;
 using InvAcc.Forms.Eqr_Version.New;
 using InvAcc.Forms.Shared;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using Microsoft.VisualBasic;
 using Microsoft.Win32;
 using System;
@@ -105,8 +105,8 @@ namespace InvAcc
 
             }
             FrmReportsViewer.TypeOfReporting = isfastversion();
-           
-            DBUdate.DbUpdates fd = new DBUdate.DbUpdates();
+
+            ProShared.DBUdate.DbUpdates fd = new ProShared.DBUdate.DbUpdates();
          
             //InvAcc.Properties.Settings.Default.B4 = k
 
@@ -238,15 +238,15 @@ if(!(Environment.MachineName== "EC2AMAZ-SI4ASSC"))
         public static void setdbver(string s)
         {
             VarGeneral.dbversion = "db.0" + s;
-        //    DBUdate.DbUpdates.dbvers = DBUdate.DbUpdates.dbvers.Replace("Versiong0001", VarGeneral.dbversion);
+        //   ProShared. DBUdate.DbUpdates.dbvers =ProShared. DBUdate.DbUpdates.dbvers.Replace("Versiong0001", VarGeneral.dbversion);
         }
 
         public static void setnewviersion(string s)
         {
             s = "." + s;
-            GeneralM.VarGeneral.virStockAcc = s;
-            GeneralM.VarGeneral.virAcc = s;
-            GeneralM.VarGeneral.virStock = s;
+            ProShared.GeneralM.VarGeneral.virStockAcc = s;
+            ProShared.GeneralM.VarGeneral.virAcc = s;
+            ProShared.GeneralM.VarGeneral.virStock = s;
 
 
         }

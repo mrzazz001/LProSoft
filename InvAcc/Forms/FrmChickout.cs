@@ -3,8 +3,8 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
 using Framework.Data;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Microsoft.Win32;
 using SSSDateTime.Date;
 using SSSLanguage;
@@ -25,7 +25,7 @@ namespace InvAcc.Forms
  panelEx2.Text=   (arln == 0 ? "  Click to collapse  " : "  Click to collapse") ; label4.Text=   (arln == 0 ? "  العملـــــــــة :  " : "  work:") ; labelPercentage.Text=   (arln == 0 ? "  %  " : "  %") ; label12z.Text=   (arln == 0 ? "  خصم على :  " : "  discount on:") ; label10z.Text=   (arln == 0 ? "  الإجمالــــي :  " : "  Total:") ; label14z.Text=   (arln == 0 ? "  الصــــافي :  " : "  net:") ; label3.Text=   (arln == 0 ? "  المدفوعات :  " : "  Payments:") ; label9z.Text=   (arln == 0 ? "  الخصــــــم :  " : "  Discount:") ; label21.Text=   (arln == 0 ? "  إجمالي فترة الإقامة  " : "  Total length of stay") ; label20.Text=   (arln == 0 ? "  أيام السكن  " : "  Residence days") ; label18.Text=   (arln == 0 ? "  سعر الغرفة  " : "  room price") ; labelD1.Text=   (arln == 0 ? "  المدين :  " : "  Debtor:") ; labelC1.Text=   (arln == 0 ? "  الدائن :  " : "  creditor:") ; label7z.Text=   (arln == 0 ? "  الخصم :  " : "  Discount :") ; label6z.Text=   (arln == 0 ? "  تاريخ السكن :  " : "  Residence date:") ; label5z.Text=   (arln == 0 ? "  حساب النزيل :  " : "  Guest account:") ; label13z.Text=   (arln == 0 ? "  رقم الغرفة :  " : "  room number :") ; label1.Text=   (arln == 0 ? "  نوع التسكين :  " : "  Soothing type:") ; label2.Text=   (arln == 0 ? "  طريقة الدفع :  " : "  Payment method :") ; label36.Text=   (arln == 0 ? "  إسم النزيل :  " : "  Guest name:") ; label22.Text=   (arln == 0 ? "  تفـــاصيـــــل حســــاب النزيـــــل  " : "  Guest account details") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; Button_GaidSerf.Text=   (arln == 0 ? "  سند صرف نزيل  " : "  Guest voucher") ; Button_GaidGabth.Text=   (arln == 0 ? "  سند قبض نزيل  " : "  guest receipt voucher") ; Button_Save.Text=   (arln == 0 ? "  مغادرة  " : "  Leaving") ; buttonItem_EditDays.Text=   (arln == 0 ? "  تعديل عدد أيام الإقامة  " : "  Modify the number of days of stay") ; Button_GaidGabthAcc.Text=   (arln == 0 ? "  قبض محاسبي  " : "  Accounting Receipt") ; ToolStripMenuItem_Rep.Text=   (arln == 0 ? "  إظهار التقرير  " : "  Show report") ; ToolStripMenuItem_Det.Text=   (arln == 0 ? "  إظهار التفاصيل  " : "  Show details") ; Text = "مغادرة النزلاء";this.Text=   (arln == 0 ? "  مغادرة النزلاء  " : "  Guests leaving") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

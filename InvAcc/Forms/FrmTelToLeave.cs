@@ -14,8 +14,8 @@ using DevComponents.DotNetBar.SuperGrid.Style;
 using DevComponents.Editors;
 using Framework.Data;
 using Framework.Keyboard;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using SSSLanguage;
 using TFG;
@@ -269,7 +269,7 @@ namespace InvAcc.Forms
 
 		private List<T_GDDET> listGdDet = new List<T_GDDET>();
 
-		private ScriptNumber ScriptNumber1 = new ScriptNumber();
+		private ProShared.ScriptNumber ScriptNumber1 = new ProShared.ScriptNumber();
 
 		public Dictionary<string, ColumnDictinary> columns_Names_visible2 = new Dictionary<string, ColumnDictinary>();
 

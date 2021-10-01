@@ -3,8 +3,8 @@ using Check_Data.Forms;
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Library.RepShow;
 using Microsoft.Win32;
 using SSSDateTime.Date;
@@ -27,7 +27,7 @@ namespace InvAcc.Forms
  label5.Text=   (arln == 0 ? "  طريقة الإقفــــال  " : "  locking method") ; label3.Text=   (arln == 0 ? "  السنــــــة  " : "  year") ; ButOk.Text=   (arln == 0 ? "  إقفـــال  " : "  close") ; groupBox_Options.Text=   (arln == 0 ? "  خيارات الإقفال  " : "  Lock options") ; chk7.Text=   (arln == 0 ? "  نقل النقاط العملاء المستحقة  " : "  Transfer accrued customer points") ; label2.Text=   (arln == 0 ? "  [ الإيرادات - المصروفات ]  " : "  [Revenues - Expenses]") ; label1.Text=   (arln == 0 ? "  [ الميزانية ]  " : "  [ budget ]") ; chk6.Text=   (arln == 0 ? "  نقل أرصدة الأرباح والخسائر  " : "  Transfer of profit and loss balances") ; chk4.Text=   (arln == 0 ? "  مسح جميع بيانات الفندق  " : "  Clear all hotel data") ; chk5.Text=   (arln == 0 ? "  حذف حسابات النـــزلاء الذين ارصدتهم صفر  " : "  Delete guest accounts with zero balances") ; chk1.Text=   (arln == 0 ? "  نقل أرصدة الحسابات   " : "  Transfer account balances") ; chk2.Text=   (arln == 0 ? "  نقل الكميات الى السنة الجديدة كبضاعة أول المدة  " : "  Transferring quantities to the new year as first-term merchandise") ; chk3.Text=   (arln == 0 ? "  مسح جميع بيانات الفندق | النزلاء المغادرين فقط  " : "  Erase all hotel data | Departing guests only") ; label25.Text=   (arln == 0 ? "  مسار الإقفـــــال  " : "  closing path") ; ButExit.Text=   (arln == 0 ? "  خـــروج  " : "  Close") ; Text = "إقفال السنـــــة";this.Text=   (arln == 0 ? "  إقفال السنـــــة  " : "  year closing") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
        // private IContainer components = null;

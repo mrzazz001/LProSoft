@@ -1,7 +1,7 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSLanguage;
 using System;
 using System.ComponentModel;
@@ -15,7 +15,7 @@ namespace InvAcc.Forms
             // groupPanel1.Text=   (arln == 0 ? "  Units   -   الوحدات  " : "  Units") ; label5E.Text=   (arln == 0 ? "  كبـــير  " : "  big") ; label4E.Text=   (arln == 0 ? "  وســـط  " : "  middle") ; label3E.Text=   (arln == 0 ? "  كبـــير  " : "  big") ; label1E.Text=   (arln == 0 ? "  صغـــير  " : "  small") ; label2E.Text=   (arln == 0 ? "  وســـط  " : "  middle") ; label5.Text=   (arln == 0 ? "  كبـــير  " : "  big") ; label4.Text=   (arln == 0 ? "  وســـط  " : "  middle") ; button_Close.Text=   (arln == 0 ? "  تــــراجــــــع  " : "  backtrack") ; label3.Text=   (arln == 0 ? "  كبـــير  " : "  big") ; label1.Text=   (arln == 0 ? "  صغـــير  " : "  small") ; label2.Text=   (arln == 0 ? "  وســـط  " : "  middle") ;}
         }    private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
        // private IContainer components = null;

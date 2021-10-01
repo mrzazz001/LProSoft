@@ -5,8 +5,8 @@ using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.DotNetBar.SuperGrid.Style;
 using DevComponents.Editors;
 using Framework.Data;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Library.RepShow;
 using Microsoft.Win32;
 using SSSDateTime.Date;
@@ -30,7 +30,7 @@ namespace InvAcc.Forms
  label6.Text=   (arln == 0 ? "  الفــــرع :  " : "  Branch:") ; label25.Text=   (arln == 0 ? "  الوحدة  " : "  Unit") ; label22.Text=   (arln == 0 ? "  سعر اخر إخراج بضاعة  " : "  Last price of merchandise") ; label23.Text=   (arln == 0 ? "  أخر تكلفة  " : "  latest cost") ; label24.Text=   (arln == 0 ? "  متوسط التكلفة  " : "  average cost") ; superTabItem_items.Text=   (arln == 0 ? "  م.الصنف  " : "  M. Category") ; labelC1.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; labelD1.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; superTabItem_Pay.Text=   (arln == 0 ? "  السند المحاسبي  " : "  Accounting bond") ; label27.Text=   (arln == 0 ? "  المستخدم :  " : "  the user :") ; label30.Text=   (arln == 0 ? "  إجمالي الكمية :  " : "  Total Quantity:") ; superTabItem_Detiles.Text=   (arln == 0 ? "  تفاصيل  " : "  details") ; superTabItem_Note.Text=   (arln == 0 ? "  ملاحظات  " : "  Notes") ; superTabControl_CostSts.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; label34.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label35.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; checkBox_CostGaidTax.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; label36.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; superTabItem_Tax.Text=   (arln == 0 ? "  الضـــرائب  " : "  taxes") ; label31.Text=   (arln == 0 ? "  إجمالي القيمة  " : "  Total value") ; label37.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label38.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; label39.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; checkBox_GaidDis.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; superTabItem_Dis.Text=   (arln == 0 ? "  الخصـــــم  " : "  discount ال") ; superTabItem_Gaids.Text=   (arln == 0 ? "  السنـــدات  " : "  bonds") ; label10.Text=   (arln == 0 ? "  إلى المستودع :  " : "  To the warehouse:") ; label4.Text=   (arln == 0 ? "  من المستودع :  " : "  From the warehouse:") ; Label2.Text=   (arln == 0 ? "  التاريــــــــخ :  " : "  date:") ; Label1.Text=   (arln == 0 ? "  رقم الفاتورة :  " : "  invoice number :") ; checkBox_Chash.Text=   (arln == 0 ? "  إخراج بضاعة  " : "  take out merchandise") ; label8.Text=   (arln == 0 ? "  نسبة الخصم  " : "  discount percentage") ; label33.Text=   (arln == 0 ? "  قيمه الضريبه :  " : "  Tax value:") ; Label26.Text=   (arln == 0 ? "  قيمة الخصم  " : "  discount value") ; label3.Text=   (arln == 0 ? "  بالريــال  " : "  in riyals") ; label9.Text=   (arln == 0 ? "  صافي الفاتورة :  " : "  net bill:") ; label17.Text=   (arln == 0 ? "  قيمة الفاتـــورة :  " : "  Invoice value:") ; label5.Text=   (arln == 0 ? "  السعر المعتمــد :  " : "  Approved price:") ; label15.Text=   (arln == 0 ? "  مركز التكلفـــــة :  " : "  cost center:") ; label19.Text=   (arln == 0 ? "  العملــــــــة :  " : "  work:") ; label18.Text=   (arln == 0 ? "  المنـــــدوب :  " : "  The delegate:") ; label7.Text=   (arln == 0 ? "  رقم المرجع :  " : "  reference number :") ; superTabControl1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; ButReturn.Text=   (arln == 0 ? "  فاتورة ادخال بضاعة  " : "  Goods entry invoice") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; /*buttonItem_Print.Text=   (arln == 0 ? "  طباعة  " : "  Print") ;*/ printingsettings.Text=   (arln == 0 ? "  اعدادات الطابعه  " : "  printer settings") ; Button_Search.Text=   (arln == 0 ? "  بحث  " : "  Search") ; Button_Delete.Text=   (arln == 0 ? "  حذف  " : "  delete") ; Button_Save.Text=   (arln == 0 ? "  حفظ  " : "  save") ; Button_Add.Text=   (arln == 0 ? "  إضافة  " : "  addition") ; superTabControl2.Text=   (arln == 0 ? "  superTabControl1  " : "  superTabControl1") ; Button_First.Text=   (arln == 0 ? "  الأول  " : "  the first") ; Button_Prev.Text=   (arln == 0 ? "  السابق  " : "  the previous") ; lable_Records.Text=   (arln == 0 ? "  ---  " : "  ---") ; Button_Next.Text=   (arln == 0 ? "  التالي  " : "  next one") ; Button_Last.Text=   (arln == 0 ? "  الأخير  " : "  the last one") ; ToolStripMenuItem_Rep.Text=   (arln == 0 ? "  إظهار التقرير  " : "  Show report") ; ToolStripMenuItem_Det.Text=   (arln == 0 ? "  إظهار التفاصيل  " : "  Show details") ; panelEx3.Text=   (arln == 0 ? "  Fill Panel  " : "  Fill Panel") ; DGV_Main.Text=   (arln == 0 ? "    " : "    ") ; DGV_Main.Text=   (arln == 0 ? "  جميــع السجــــلات  " : "  All records") ; DGV_Main.Text=   (arln == 0 ? "    " : "    ") ; superTabControl_DGV.Text=   (arln == 0 ? "  superTabControl1  " : "  superTabControl1") ; textBox_search.Text=   (arln == 0 ? "  ...  " : "  ...") ; Button_ExportTable2.Text=   (arln == 0 ? "  تصدير  " : "  Export") ; /*Button_PrintTable.Text=   (arln == 0 ? "  طباعة  " : "  Print") ; */panelEx2.Text=   (arln == 0 ? "  Click to collapse  " : "  Click to collapse") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; superTabControl_Main2.Text=   (arln == 0 ? "  superTabControl1  " : "  superTabControl1") ; Text = "فاتورة اخراج بضاعة";this.Text=   (arln == 0 ? "  فاتورة اخراج بضاعة  " : "  merchandise release invoice") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary
@@ -8362,10 +8362,10 @@ namespace InvAcc.Forms
         }
         private void printingsettings_Click(object sender, EventArgs e)
         {
-            DroBoxSync.Frm_PrinterShow f = new DroBoxSync.Frm_PrinterShow(VarGeneral.InvTyp);
+             ProShared. DroBoxSync.Frm_PrinterShow f = new  ProShared. DroBoxSync.Frm_PrinterShow(VarGeneral.InvTyp);
             f.TopMost = true;
             f.ShowDialog();
-            _InvSetting.InvpRINTERInfo.nTyp = DroBoxSync.Frm_PrinterShow.PLSetting;
+            _InvSetting.InvpRINTERInfo.nTyp =  ProShared. DroBoxSync.Frm_PrinterShow.PLSetting;
         }
         int kk = 0;
         private void FlxInv_StartEdit(object sender, RowColEventArgs e)

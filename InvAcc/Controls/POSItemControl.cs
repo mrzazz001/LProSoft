@@ -1,7 +1,7 @@
 using DevComponents.DotNetBar;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using InvAcc.Properties;
-using InvAcc.Stock_Data;
+using ProShared.Stock_Data;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -459,7 +459,7 @@ namespace InvAcc.Controls
                 //   Row_ID = ef.Row_ID;
                 try
                 {
-                    price = Math.Round(TxtPrice.Value, GeneralM.VarGeneral.DecimalNo);
+                    price = Math.Round(TxtPrice.Value, ProShared.GeneralM.VarGeneral.DecimalNo);
                 }
                 catch { }
                 TxtPrice.TextChanged += TxtPrice_ValueChanged;

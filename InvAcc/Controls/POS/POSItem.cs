@@ -1,7 +1,7 @@
 using DevComponents.DotNetBar;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using InvAcc.Properties;
-using InvAcc.Stock_Data;
+using ProShared.Stock_Data;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -103,6 +103,11 @@ namespace InvAcc.Controls
             get { return Item_Price.Visible; }
         }
         private void Item_Price_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Item_name_Click_3(object sender, EventArgs e)
         {
 
         }

@@ -1,8 +1,8 @@
 using DevComponents.DotNetBar.Controls;
-using InvAcc.DBUdate;
+using ProShared.DBUdate;
 using InvAcc.Forms;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -448,7 +448,7 @@ string.Empty).Replace("' موديل السيارة'", "'Car Model'").Replace("' 
 
             sampleSqlConnection = new SqlConnection(VarGeneral.BranchCS);
 
-            DataTable tb = DBUdate.DbUpdates.execute("SELECT is_broker_enabled FROM sys.databases WHERE name = 'Database_name';".Replace("Database_name", dbname), VarGeneral.BranchCS);
+            DataTable tb = ProShared.DBUdate.DbUpdates.execute("SELECT is_broker_enabled FROM sys.databases WHERE name = 'Database_name';".Replace("Database_name", dbname), VarGeneral.BranchCS);
             if (tb.Rows.Count > 0)
             {
                 if (((bool)tb.Rows[0][0]) == false)

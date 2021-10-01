@@ -3,8 +3,8 @@ using DevComponents.DotNetBar.Controls;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.DotNetBar.SuperGrid.Style;
 using DevComponents.Editors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Microsoft.Win32;
 using SSSDateTime.Date;
 using System;
@@ -24,7 +24,7 @@ namespace InvAcc.Forms
  checkBox_Minute.Text=   (arln == 0 ? "  بالدقـــائــق  " : "  in minutes") ; label_lblDaysOfMonth.Text=   (arln == 0 ? "  يخصم من راتب شهـر :  " : "  Deducted from one month's salary:") ; label9.Text=   (arln == 0 ? "  الملاحظــــات :  " : "  Notes:") ; label8.Text=   (arln == 0 ? "  الإجمالـــــــي :  " : "  Total:") ; lblValue.Text=   (arln == 0 ? "  قيمة الخصم :  " : "  discount value :") ; lblNumber.Text=   (arln == 0 ? "  العدد :  " : "  the number :") ; label2.Text=   (arln == 0 ? "  احتساب حسب :  " : "  Calculate by:") ; lblDaysOfMonth.Text=   (arln == 0 ? "  عدد الأيام في الشهر :  " : "  Number of days in a month:") ; label1.Text=   (arln == 0 ? "  نوع الخصم :  " : "  Discount type:") ; label12.Text=   (arln == 0 ? "  الموظف :  " : "  employee:") ; label54.Text=   (arln == 0 ? "  التاريخ :  " : "  Date :") ; label38.Text=   (arln == 0 ? "  الكود :  " : "  Code:") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; buttonItem_DisGeneral.Text=   (arln == 0 ? "  تعميم  " : "  Generalization") ; Button_Search.Text=   (arln == 0 ? "  بحث  " : "  Search") ; Button_Delete.Text=   (arln == 0 ? "  حذف  " : "  delete") ; Button_Save.Text=   (arln == 0 ? "  حفظ  " : "  save") ; Button_Add.Text=   (arln == 0 ? "  إضافة  " : "  addition") ; superTabControl_Main2.Text=   (arln == 0 ? "  superTabControl1  " : "  superTabControl1") ; Button_First.Text=   (arln == 0 ? "  الأول  " : "  the first") ; Button_Prev.Text=   (arln == 0 ? "  السابق  " : "  the previous") ; lable_Records.Text=   (arln == 0 ? "  ---  " : "  ---") ; Button_Next.Text=   (arln == 0 ? "  التالي  " : "  next one") ; Button_Last.Text=   (arln == 0 ? "  الأخير  " : "  the last one") ; buttonItem_Late.Text=   (arln == 0 ? "  سجلات التأخير  " : "  delay records") ; buttonItem_Sleep.Text=   (arln == 0 ? "  سجلات الغيـاب  " : "  Absence records") ; buttonItem_SaveLate.Text=   (arln == 0 ? "  خصــــــم  " : "  discount") ; buttonItem_SaveAll.Text=   (arln == 0 ? "  خصـم الكـل  " : "  discount all") ; buttonItem_Exit.Text=   (arln == 0 ? "  الرجــــوع  " : "  Back") ; panelEx2.Text=   (arln == 0 ? "  Click to collapse  " : "  Click to collapse") ; DGV_Main.Text=   (arln == 0 ? "    " : "    ") ; DGV_Main.Text=   (arln == 0 ? "  جميــع السجــــلات  " : "  All records") ; DGV_Main.Text=   (arln == 0 ? "    " : "    ") ; panelEx3.Text=   (arln == 0 ? "  Fill Panel  " : "  Fill Panel") ; superTabControl_DGV.Text=   (arln == 0 ? "  superTabControl1  " : "  superTabControl1") ; textBox_search.Text=   (arln == 0 ? "  ...  " : "  ...") ; Button_ExportTable2.Text=   (arln == 0 ? "  تصدير  " : "  Export") ; /*Button_PrintTable.Text=   (arln == 0 ? "  طباعة  " : "  Print") ; */ToolStripMenuItem_Rep.Text=   (arln == 0 ? "  إظهار التقرير  " : "  Show report") ; ToolStripMenuItem_Det.Text=   (arln == 0 ? "  إظهار التفاصيل  " : "  Show details") ; Text = "كــــــرت الخصــــــم";this.Text=   (arln == 0 ? "  كــــــرت الخصــــــم  " : "  discount card") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

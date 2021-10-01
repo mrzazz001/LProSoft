@@ -9,7 +9,7 @@ namespace InvAcc.Forms
  Text = "ContactUsForm";this.Text=   (arln == 0 ? "  ContactUsForm  " : "  ContactUsForm") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public ContactUsForm()

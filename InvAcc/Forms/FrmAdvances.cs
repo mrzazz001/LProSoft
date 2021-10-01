@@ -4,8 +4,8 @@ using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.DotNetBar.SuperGrid.Style;
 using DevComponents.Editors;
 using Framework.Data;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using Microsoft.Win32;
 using SSSDateTime.Date;
 using SSSLanguage;
@@ -27,7 +27,7 @@ namespace InvAcc.Forms
  panelEx2.Text=   (arln == 0 ? "  Click to collapse  " : "  Click to collapse") ; label7.Text=   (arln == 0 ? "  الـــــــراتب :  " : "  salary:") ; label1.Text=   (arln == 0 ? "  يخصم بدءاُ :  " : "  deduct starting with:") ; checkBox_AccID.Text=   (arln == 0 ? "  إصدار قيد محاسبي تلقائي  " : "  Issuance of automatic accounting entry") ; button_SavePremuim.Text=   (arln == 0 ? "  حفظ الأقساط  " : "  Save installments") ; buttonItem_Cancel.Text=   (arln == 0 ? "  إلغاء  " : "  Cancellation") ; label4.Text=   (arln == 0 ? "  إجمالي السلف التي عليه  " : "  Total advances on it") ; label3.Text=   (arln == 0 ? "  المتبقــــــــي :  " : "  Remaining:") ; label11.Text=   (arln == 0 ? "  عـدد الأقساط :  " : "  The number of installments:") ; label2.Text=   (arln == 0 ? "  قيمة السلفـة :  " : "  Advance value:") ; groupPanel1.Text=   (arln == 0 ? "  جـــدول الأقســــاط  " : "  Installment Table") ; label12.Text=   (arln == 0 ? "  الموظف :  " : "  employee:") ; label38.Text=   (arln == 0 ? "  الكود :  " : "  Code:") ; label8.Text=   (arln == 0 ? "  العملــــــــة :  " : "  work:") ; label5.Text=   (arln == 0 ? "  حساب سلف الموظف :  " : "  Employee advance account:") ; label6.Text=   (arln == 0 ? "  مركز التكلفة :  " : "  cost center:") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; Button_Search.Text=   (arln == 0 ? "  بحث  " : "  Search") ; Button_Delete.Text=   (arln == 0 ? "  حذف  " : "  delete") ; Button_Save.Text=   (arln == 0 ? "  حفظ  " : "  save") ; Button_Add.Text=   (arln == 0 ? "  إضافة  " : "  addition") ; superTabControl_Main2.Text=   (arln == 0 ? "  superTabControl1  " : "  superTabControl1") ; Button_First.Text=   (arln == 0 ? "  الأول  " : "  the first") ; Button_Prev.Text=   (arln == 0 ? "  السابق  " : "  the previous") ; lable_Records.Text=   (arln == 0 ? "  ---  " : "  ---") ; Button_Next.Text=   (arln == 0 ? "  التالي  " : "  next one") ; Button_Last.Text=   (arln == 0 ? "  الأخير  " : "  the last one") ; DGV_Main.Text=   (arln == 0 ? "    " : "    ") ; DGV_Main.Text=   (arln == 0 ? "  جميــع السجــــلات  " : "  All records") ; DGV_Main.Text=   (arln == 0 ? "    " : "    ") ; panelEx3.Text=   (arln == 0 ? "  Fill Panel  " : "  Fill Panel") ; superTabControl_DGV.Text=   (arln == 0 ? "  superTabControl1  " : "  superTabControl1") ; textBox_search.Text=   (arln == 0 ? "  ...  " : "  ...") ; Button_ExportTable2.Text=   (arln == 0 ? "  تصدير  " : "  Export") ; /*Button_PrintTable.Text=   (arln == 0 ? "  طباعة  " : "  Print") ; */ToolStripMenuItem_Rep.Text=   (arln == 0 ? "  إظهار التقرير  " : "  Show report") ; ToolStripMenuItem_Det.Text=   (arln == 0 ? "  إظهار التفاصيل  " : "  Show details") ; Text = "كرت السلفيـــات";this.Text=   (arln == 0 ? "  كرت السلفيـــات  " : "  credit card") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

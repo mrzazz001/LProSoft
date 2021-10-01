@@ -1,7 +1,7 @@
 using DevComponents.DotNetBar;
 using DevComponents.Editors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace InvAcc.Forms
  panelEx2.Text=   (arln == 0 ? "  Click to collapse  " : "  Click to collapse") ; ButDayMinus.Text=   (arln == 0 ? "  -  " : "  -") ; ButAddDay.Text=   (arln == 0 ? "  +  " : "  +") ; label1.Text=   (arln == 0 ? "  أيام الإقامة :  " : "  Stay days:") ; label36.Text=   (arln == 0 ? "  إسم النزيل :  " : "  Guest name:") ; label13z.Text=   (arln == 0 ? "  رقم الغرفة :  " : "  room number :") ; label38.Text=   (arln == 0 ? "  رقم النزيل :  " : "  guest number:") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; Button_Save.Text=   (arln == 0 ? "  حفظ  " : "  save") ; ToolStripMenuItem_Rep.Text=   (arln == 0 ? "  إظهار التقرير  " : "  Show report") ; ToolStripMenuItem_Det.Text=   (arln == 0 ? "  إظهار التفاصيل  " : "  Show details") ; Text = "كرت تعديل عدد أيام الإقامة";this.Text=   (arln == 0 ? "  كرت تعديل عدد أيام الإقامة  " : "  Card to modify the number of days of stay") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

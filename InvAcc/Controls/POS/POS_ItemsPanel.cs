@@ -1,5 +1,5 @@
-﻿using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+﻿using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +22,11 @@ namespace InvAcc.Controls.POS
             try
             {
                 InitializeComponent();
+                if (VarGeneral.ISPOSPagesVisable == true)
+                {
 
+                    panel1.Visible = true;
+                }
                 panel2.BackColor = Color.White;
                 this.BackColor= Color.White;
                 ItemsGride.BackColor= Color.White;
@@ -33,11 +37,6 @@ namespace InvAcc.Controls.POS
             }
             catch { }
           
-        }
-      
-        private void arrowButton1_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void simpleButton1_Paint(object sender, PaintEventArgs e)
@@ -152,6 +151,43 @@ namespace InvAcc.Controls.POS
         {
 
         
+        }
+  
+        private int TotalPage = 0;
+        private int CurrentPageIndex = 1;
+#pragma warning disable CS0414 // The field 'Pos_ItemPanel.CurrentPageIndexItmDet' is assigned but its value is never used
+        private int CurrentPageIndexItmDet = 1;
+        private void arrowButton3_Click(object sender, EventArgs e)
+        {
+            ItemsGride.PreivousPage();
+        }
+
+        private void arrowButton4_Click(object sender, EventArgs e)
+        {
+
+            ItemsGride.NextPage();
+       
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            arrowButton3_Click(null, null);
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            arrowButton4_Click(null, null);
+        }
+
+        private void POS_ItemsPanel_SizeChanged(object sender, EventArgs e)
+        {
+            HeaderPanel.Height = 115;
         }
     }
 }

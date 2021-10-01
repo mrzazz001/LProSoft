@@ -2,7 +2,7 @@ using Framework;
 using Framework.Business;
 using Framework.Data;
 using Framework.DataPortal;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using System;
 using System.Data;
 using System.Diagnostics;

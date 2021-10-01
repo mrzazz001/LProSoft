@@ -1,6 +1,6 @@
 using DevComponents.DotNetBar;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +16,7 @@ namespace InvAcc.Forms
  label29.Text=   (arln == 0 ? "  قواعد البيانات                 Data Bases  " : "  Databases") ; buttonX_Close.Text=   (arln == 0 ? "  Close - إغلاق  " : "  Close") ; button_Del.Text=   (arln == 0 ? "  Del - حذف  " : "  Del - delete") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
        // private IContainer components = null;

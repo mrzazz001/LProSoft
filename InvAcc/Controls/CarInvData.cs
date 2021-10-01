@@ -1,10 +1,11 @@
 using DevComponents.DotNetBar;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using ProShared.Stock_Data;
 
 namespace InvAcc.Controls
 {
@@ -17,7 +18,7 @@ namespace InvAcc.Controls
             this.RightToLeft = RightToLeft.Inherit;
             loaditems(pos);
         }
-        Stock_Data.Stock_DataDataContext db = new Stock_Data.Stock_DataDataContext(GeneralM.VarGeneral.BranchCS);
+        ProShared.Stock_Data.Stock_DataDataContext db = new ProShared.Stock_Data.Stock_DataDataContext(ProShared.GeneralM.VarGeneral.BranchCS);
 #pragma warning disable CS0169 // The field 'CarInvData.t_items' is never used
         List<T_Item> t_items;
 #pragma warning restore CS0169 // The field 'CarInvData.t_items' is never used

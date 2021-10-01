@@ -30,8 +30,16 @@ namespace InvAcc.Controls.POS
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.CategoryGride = new InvAcc.Controls.POS.POS_ItemsGride();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.arrowButton2 = new ArrowButton.ArrowButton();
+            this.arrowButton1 = new ArrowButton.ArrowButton();
             this.ItemsGride = new InvAcc.Controls.POS.POS_ItemsGride();
             this.HeaderPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // HeaderPanel
@@ -40,7 +48,7 @@ namespace InvAcc.Controls.POS
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanel.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(671, 115);
+            this.HeaderPanel.Size = new System.Drawing.Size(576, 115);
             this.HeaderPanel.TabIndex = 0;
             this.HeaderPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.HeaderPanel_Paint);
             // 
@@ -59,7 +67,7 @@ namespace InvAcc.Controls.POS
             this.CategoryGride.PagesEnable = false;
             this.CategoryGride.selectStatement = "SELECT       [CAT_ID],[CAT_No]      ,[Arb_Des] ,[Eng_Des],[CompanyID],[TotalPurch" +
     "aes],[TotalPoint],[CAT_Symbol],[CatImage]        FROM[dbo].[T_CATEGORY]";
-            this.CategoryGride.Size = new System.Drawing.Size(671, 115);
+            this.CategoryGride.Size = new System.Drawing.Size(576, 115);
             this.CategoryGride.TabIndex = 0;
             this.CategoryGride.Load += new System.EventHandler(this.poS_ItemsGride2_Load_1);
             // 
@@ -72,6 +80,79 @@ namespace InvAcc.Controls.POS
             this.panel2.Size = new System.Drawing.Size(671, 4);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.IndianRed;
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.arrowButton2);
+            this.panel1.Controls.Add(this.arrowButton1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 229);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(576, 31);
+            this.panel1.TabIndex = 2;
+            this.panel1.Visible = false;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.simpleButton2);
+            this.panel3.Controls.Add(this.simpleButton1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(108, 31);
+            this.panel3.TabIndex = 6;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Options.UseImage = true;
+            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.simpleButton2.ImageOptions.Image = global::InvAcc.Properties.Resources.next_32x32;
+            this.simpleButton2.Location = new System.Drawing.Point(61, 0);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(47, 31);
+            this.simpleButton2.TabIndex = 1;
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.simpleButton1.ImageOptions.Image = global::InvAcc.Properties.Resources.prev_32x32;
+            this.simpleButton1.Location = new System.Drawing.Point(0, 0);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(49, 31);
+            this.simpleButton1.TabIndex = 0;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // arrowButton2
+            // 
+            this.arrowButton2.ArrowEnabled = true;
+            this.arrowButton2.HoverEndColor = System.Drawing.Color.DarkRed;
+            this.arrowButton2.HoverStartColor = System.Drawing.Color.WhiteSmoke;
+            this.arrowButton2.Location = new System.Drawing.Point(575, 3);
+            this.arrowButton2.Name = "arrowButton2";
+            this.arrowButton2.NormalEndColor = System.Drawing.Color.Maroon;
+            this.arrowButton2.NormalStartColor = System.Drawing.Color.WhiteSmoke;
+            this.arrowButton2.Rotation = 270;
+            this.arrowButton2.Size = new System.Drawing.Size(37, 37);
+            this.arrowButton2.TabIndex = 3;
+            this.arrowButton2.Text = "التالي";
+            // 
+            // arrowButton1
+            // 
+            this.arrowButton1.ArrowEnabled = true;
+            this.arrowButton1.HoverEndColor = System.Drawing.Color.DarkRed;
+            this.arrowButton1.HoverStartColor = System.Drawing.Color.WhiteSmoke;
+            this.arrowButton1.Location = new System.Drawing.Point(618, 3);
+            this.arrowButton1.Name = "arrowButton1";
+            this.arrowButton1.NormalEndColor = System.Drawing.Color.Maroon;
+            this.arrowButton1.NormalStartColor = System.Drawing.Color.WhiteSmoke;
+            this.arrowButton1.Rotation = 90;
+            this.arrowButton1.Size = new System.Drawing.Size(37, 37);
+            this.arrowButton1.TabIndex = 2;
+            this.arrowButton1.Text = "السابق ";
             // 
             // ItemsGride
             // 
@@ -86,7 +167,7 @@ namespace InvAcc.Controls.POS
             this.ItemsGride.Name = "ItemsGride";
             this.ItemsGride.PagesEnable = false;
             this.ItemsGride.selectStatement = "";
-            this.ItemsGride.Size = new System.Drawing.Size(671, 115);
+            this.ItemsGride.Size = new System.Drawing.Size(576, 114);
             this.ItemsGride.TabIndex = 1;
             this.ItemsGride.Load += new System.EventHandler(this.ItemsGride_Load);
             this.ItemsGride.Click += new System.EventHandler(this.ItemsGride_Click);
@@ -97,11 +178,15 @@ namespace InvAcc.Controls.POS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.ItemsGride);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.HeaderPanel);
             this.Name = "POS_ItemsPanel";
-            this.Size = new System.Drawing.Size(671, 230);
+            this.Size = new System.Drawing.Size(576, 260);
             this.Load += new System.EventHandler(this.POS_ItemsPanel_Load);
+            this.SizeChanged += new System.EventHandler(this.POS_ItemsPanel_SizeChanged);
             this.HeaderPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -112,6 +197,11 @@ namespace InvAcc.Controls.POS
         private POS_ItemsGride ItemsGride;
         
         private System.Windows.Forms.Panel panel2;
- 
+        private System.Windows.Forms.Panel panel1;
+        private ArrowButton.ArrowButton arrowButton2;
+        private ArrowButton.ArrowButton arrowButton1;
+        private System.Windows.Forms.Panel panel3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

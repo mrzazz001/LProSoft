@@ -1,7 +1,7 @@
 using DevComponents.DotNetBar;
 using DevComponents.Editors;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace InvAcc.Forms
  buttonX5.Text=   (arln == 0 ? "  1000  " : "  1000") ; buttonX6.Text=   (arln == 0 ? "  500  " : "  500") ; buttonX7.Text=   (arln == 0 ? "  200  " : "  200") ; buttonX8.Text=   (arln == 0 ? "  100  " : "  100") ; buttonX3.Text=   (arln == 0 ? "  50  " : "  50") ; buttonX4.Text=   (arln == 0 ? "  10  " : "  10") ; buttonX2.Text=   (arln == 0 ? "  5  " : "  5") ; buttonX1.Text=   (arln == 0 ? "  1  " : "  1") ; button_Bac.Text=   (arln == 0 ? "  مسح  " : "  Survey") ; button_0.Text=   (arln == 0 ? "  0  " : "  0") ; button_2.Text=   (arln == 0 ? "  2  " : "  2") ; button_6.Text=   (arln == 0 ? "  6  " : "  6") ; button_5.Text=   (arln == 0 ? "  5  " : "  5") ; button_8.Text=   (arln == 0 ? "  8  " : "  8") ; button_7.Text=   (arln == 0 ? "  7  " : "  7") ; button_3.Text=   (arln == 0 ? "  3  " : "  3") ; button_4.Text=   (arln == 0 ? "  4  " : "  4") ; button_9.Text=   (arln == 0 ? "  9  " : "  9") ; button_1.Text=   (arln == 0 ? "  1  " : "  1") ; label17.Text=   (arln == 0 ? "  الإجمالي :  " : "  Total :") ; superTabItem_General.Text=   (arln == 0 ? "  صافــــي الفــاتـــــورة  " : "  net bill") ; labelD3.Text=   (arln == 0 ? "  المدين :  " : "  Debtor:") ; buttonX9.Text=   (arln == 0 ? "  تــــراجــــــع  " : "  backtrack") ; button_Close.Text=   (arln == 0 ? "  موافق  " : "  OK") ; Text = "-";this.Text=   (arln == 0 ? "  -  " : "  -") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

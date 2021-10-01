@@ -3,8 +3,8 @@ using DevComponents.DotNetBar.Controls;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.Editors;
 using DevComponents.Editors.DateTimeAdv;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using SSSLanguage;
 using System;
@@ -23,7 +23,7 @@ namespace InvAcc.Forms
  itemPanel4.Text=   (arln == 0 ? "  itemPanel4  " : "  itemPanel4") ; itemPanel3.Text=   (arln == 0 ? "  itemPanel3  " : "  itemPanel3") ; itemPanel2.Text=   (arln == 0 ? "  itemPanel2  " : "  itemPanel2") ; itemPanel1.Text=   (arln == 0 ? "  itemPanel1  " : "  itemPanel1") ; ButExit.Text=   (arln == 0 ? "  خـــروج  " : "  Close") ; ButOk.Text=   (arln == 0 ? "  تحـــديث  " : "  update") ; groupBox1.Text=   (arln == 0 ? "  حسابات الموظف  " : "  employee accounts") ; label2.Text=   (arln == 0 ? "  بدل السكن :  " : "  housing allowance:") ; label1.Text=   (arln == 0 ? "  الســـــــلف :  " : "  ancestor:") ; label5.Text=   (arln == 0 ? "  الـــراتـــــب :  " : "  salary:") ; Text = "تحــــديث حسابات الموظفــــين";this.Text=   (arln == 0 ? "  تحــــديث حسابات الموظفــــين  " : "  Update employee accounts") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

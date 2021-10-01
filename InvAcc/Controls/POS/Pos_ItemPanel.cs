@@ -6,8 +6,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using InvAcc.Stock_Data;
-using InvAcc.GeneralM;
+using ProShared.Stock_Data;
+using ProShared.GeneralM;using ProShared;
 
 namespace InvAcc.Controls.POS
 {
@@ -41,9 +41,9 @@ namespace InvAcc.Controls.POS
 #pragma warning disable CS1717 // Assignment made to same variable; did you mean to assign something else?
             CAT_ID = CAT_ID;
 #pragma warning restore CS1717 // Assignment made to same variable; did you mean to assign something else?
-            ItemGried.Controls.Clear();
-            col = ItemGried.ColumnCount;
-            row = ItemGried.RowCount;
+            ItemsGride.Controls.Clear();
+            col = ItemsGride.ColumnCount;
+            row = ItemsGride.RowCount;
             PageSize = Math.Abs(col * row);
             List<T_Item> vItemsMain = new List<T_Item>();
             Stock_DataDataContext dbc = new Stock_DataDataContext();
@@ -171,21 +171,21 @@ namespace InvAcc.Controls.POS
 #pragma warning restore CS0219 // The variable 'irow' is assigned but its value is never used
 
 
-                for (int j = 0; j <ItemGried.RowCount; j++)
+                for (int j = 0; j <ItemsGride.RowCount; j++)
                 {
 
 
 
 
                     {
-                        for (int i = 0; i < ItemGried.ColumnCount; i++)
+                        for (int i = 0; i < ItemsGride.ColumnCount; i++)
                         {
                             if (iicnt < dt.Count)
                             { POSItem p = new POSItem();
                         p.Item_name.Text = dt[iicnt].Arb_Des;
                         if (dt[iicnt].ItmImg != null)
                             p.Item_Image.Image = Utilites.byteArrayToImage(dt[iicnt].ItmImg.ToArray());
-                        ItemGried.Controls.Add(p, i, j);
+                        ItemsGride.Controls.Add(p, i, j);
                         p.Tag = dt[iicnt].Itm_No;
                         p.Item_Click += clickitem;
                         iicnt++;
@@ -194,7 +194,7 @@ namespace InvAcc.Controls.POS
                             {
                                 try
                                 {
-                                    POSItem c = ItemGried.GetControlFromPosition(i, j) as POSItem;
+                                    POSItem c = ItemsGride.GetControlFromPosition(i, j) as POSItem;
                                     if (c != null)
                                     {
                                         c.Dispose();
@@ -281,14 +281,14 @@ namespace InvAcc.Controls.POS
             if (DesignMode == false)
             {
                 this.BackColor = Color.White;
-                ItemGried.ColumnCount = (Width / ItemWidth);
-                ItemGried.RowCount = (Height/ItemHieght);
-                foreach (RowStyle i in ItemGried.RowStyles)
+                ItemsGride.ColumnCount = (Width / ItemWidth);
+                ItemsGride.RowCount = (Height/ItemHieght);
+                foreach (RowStyle i in ItemsGride.RowStyles)
                 {
                     i.SizeType = SizeType.Absolute;
                     i.Height = ItemHieght;
                 }
-                foreach (ColumnStyle i in ItemGried.ColumnStyles)
+                foreach (ColumnStyle i in ItemsGride.ColumnStyles)
                 {
                     i.SizeType = SizeType.Absolute;
                     i.Width = ItemWidth;
@@ -324,15 +324,15 @@ namespace InvAcc.Controls.POS
         {
             if (DesignMode == false)
             {
-                ItemGried.ColumnCount = (Width / ItemWidth);
-                ItemGried.RowCount = (Height / ItemHieght);
-                if (ItemGried.RowCount == 0) (ItemGried.RowCount) = 1;
-                foreach (RowStyle i in ItemGried.RowStyles)
+                ItemsGride.ColumnCount = (Width / ItemWidth);
+                ItemsGride.RowCount = (Height / ItemHieght);
+                if (ItemsGride.RowCount == 0) (ItemsGride.RowCount) = 1;
+                foreach (RowStyle i in ItemsGride.RowStyles)
                 {
                     i.SizeType = SizeType.Absolute;
                     i.Height = ItemHieght;
                 }
-                foreach (ColumnStyle i in ItemGried.ColumnStyles)
+                foreach (ColumnStyle i in ItemsGride.ColumnStyles)
                 {
                     i.SizeType = SizeType.Absolute;
                     i.Width = ItemWidth;
@@ -341,10 +341,10 @@ namespace InvAcc.Controls.POS
             }
             FillItmesMain(CAT_ID, false);
         }
-
-        private void ItemGried_Paint(object sender, PaintEventArgs e)
+      
+        private void ItemsGride_Paint(object sender, PaintEventArgs e)
         {
-
+         
         }
     }
 }

@@ -6,8 +6,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using InvAcc.Stock_Data;
-using InvAcc.GeneralM;
+using ProShared.Stock_Data;
+using ProShared.GeneralM;using ProShared;
 
 namespace InvAcc.Controls.POS
 {
@@ -106,7 +106,7 @@ namespace InvAcc.Controls.POS
             filtertext = txt;
             currentcolumn = 0;
             curentrow = 0;
-            ItemGried.Controls.Clear();
+            ItemsGride.Controls.Clear();
             setinitial();
             if (string.IsNullOrEmpty(filtertext))
             {
@@ -179,9 +179,9 @@ namespace InvAcc.Controls.POS
                 gridwidth = this.Width;
                 gridheight = this.Height;
                 if(ItemWidth!=0)
-                ItemGried.ColumnCount = (gridwidth / ItemWidth);
+                ItemsGride.ColumnCount = (gridwidth / ItemWidth);
                 if (ItemHieght != 0)
-                    ItemGried.RowCount = (gridheight / ItemHieght);
+                    ItemsGride.RowCount = (gridheight / ItemHieght);
                 if (ItemWidth != 0)
 
                     col = (gridwidth / ItemWidth);
@@ -339,7 +339,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
                                 "ر.س");
                                 p.Tag = dt[i].Itm_No;
                                 p.Dock = DockStyle.Fill;
-                                ItemGried.Controls.Add(p, currentcolumn, curentrow);
+                                ItemsGride.Controls.Add(p, currentcolumn, curentrow);
                                 increment();
                                 p.Refresh();
 
@@ -367,18 +367,18 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 
         private void increment()
         {
-            if (currentcolumn < ItemGried.ColumnCount)
+            if (currentcolumn < ItemsGride.ColumnCount)
                 currentcolumn++;
             else
             {
                 currentcolumn = 0; curentrow++;
-                if (curentrow >= ItemGried.RowCount)
+                if (curentrow >= ItemsGride.RowCount)
                 {
-                    ItemGried.RowCount++;
+                    ItemsGride.RowCount++;
                     RowStyle c = new RowStyle();
                     c.SizeType = SizeType.Absolute;
                     c.Height = ItemHieght;
-                    ItemGried.RowStyles.Add(c);
+                    ItemsGride.RowStyles.Add(c);
 
                 }
             }
@@ -460,7 +460,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 
                                 p.Tag = dt[i].CAT_ID;
                                 p.Dock = DockStyle.Fill;
-                                ItemGried.Controls.Add(p, currentcolumn, curentrow);
+                                ItemsGride.Controls.Add(p, currentcolumn, curentrow);
                                 increment();
                                 p.Refresh();
 
@@ -512,13 +512,13 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
         {
             get
             {
-                return ItemGried.HorizontalScroll.Visible;
+                return ItemsGride.HorizontalScroll.Visible;
             }
             set
             {
                 HorizontalScroll.Visible = value;
-                ItemGried.HorizontalScroll.Enabled = false;
-                ItemGried.HorizontalScroll.Visible = false;
+                ItemsGride.HorizontalScroll.Enabled = false;
+                ItemsGride.HorizontalScroll.Visible = false;
             }
         }
         bool enablepages = false;
@@ -587,11 +587,11 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 #pragma warning disable CS0414 // The field 'POS_ItemsGride.CurrentPageIndexItmDet' is assigned but its value is never used
         private int CurrentPageIndexItmDet = 1;
 #pragma warning restore CS0414 // The field 'POS_ItemsGride.CurrentPageIndexItmDet' is assigned but its value is never used
-        private void CalculateTotalPages(List<T_Item> vItemsMain)
+        private void CalculateTotalPages(int cc)
         {
             try
             {
-                int rowCount = vItemsMain.ToList().Count;
+                int rowCount = cc;
                 TotalPage = rowCount / PageSize;
                 if (rowCount % PageSize > 0)
                 {
@@ -635,11 +635,11 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
             posflag = pos;
             CAT_ID = cat_id;
 
-            col = ItemGried.ColumnCount;
-            row = ItemGried.RowCount;
+            col = ItemsGride.ColumnCount;
+            row = ItemsGride.RowCount;
             //  PageSize = Math.Abs(col * row);
             
-            int rowCount = ItemGried.RowCount;
+            int rowCount = ItemsGride.RowCount;
             if(PageSize!=0)
             TotalPage = rowCount / PageSize;
             if (rowCount % PageSize > 0)
@@ -692,33 +692,33 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 
         private void InitializeComponent()
         {
-            this.ItemGried = new System.Windows.Forms.TableLayoutPanel();
+            this.ItemsGride = new System.Windows.Forms.TableLayoutPanel();
             this.But_Back = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ItemGried.SuspendLayout();
+            this.ItemsGride.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ItemGried
+            // ItemsGride
             // 
-            this.ItemGried.AutoSize = true;
-            this.ItemGried.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ItemGried.BackColor = System.Drawing.Color.White;
-            this.ItemGried.ColumnCount = 1;
-            this.ItemGried.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ItemGried.Controls.Add(this.But_Back, 0, 0);
-            this.ItemGried.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ItemGried.Location = new System.Drawing.Point(0, 0);
-            this.ItemGried.Margin = new System.Windows.Forms.Padding(0);
-            this.ItemGried.Name = "ItemGried";
-            this.ItemGried.RowCount = 1;
-            this.ItemGried.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ItemGried.Size = new System.Drawing.Size(148, 115);
-            this.ItemGried.TabIndex = 0;
-            this.ItemGried.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ItemGried_Scroll);
-            this.ItemGried.SizeChanged += new System.EventHandler(this.ItemGried_SizeChanged);
-            this.ItemGried.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.ItemGried_ControlRemoved);
-            this.ItemGried.Paint += new System.Windows.Forms.PaintEventHandler(this.ItemGried_Paint);
+            this.ItemsGride.AutoSize = true;
+            this.ItemsGride.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ItemsGride.BackColor = System.Drawing.Color.White;
+            this.ItemsGride.ColumnCount = 1;
+            this.ItemsGride.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ItemsGride.Controls.Add(this.But_Back, 0, 0);
+            this.ItemsGride.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ItemsGride.Location = new System.Drawing.Point(0, 0);
+            this.ItemsGride.Margin = new System.Windows.Forms.Padding(0);
+            this.ItemsGride.Name = "ItemsGride";
+            this.ItemsGride.RowCount = 1;
+            this.ItemsGride.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ItemsGride.Size = new System.Drawing.Size(148, 115);
+            this.ItemsGride.TabIndex = 0;
+            this.ItemsGride.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ItemsGride_Scroll);
+            this.ItemsGride.SizeChanged += new System.EventHandler(this.ItemsGride_SizeChanged);
+            this.ItemsGride.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.ItemsGride_ControlRemoved);
+            this.ItemsGride.Paint += new System.Windows.Forms.PaintEventHandler(this.ItemsGride_Paint);
             // 
             // But_Back
             // 
@@ -736,14 +736,14 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.ItemGried);
+            this.panel2.Controls.Add(this.ItemsGride);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(148, 115);
             this.panel2.TabIndex = 2;
-            this.panel2.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ItemGried_Scroll);
+            this.panel2.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ItemsGride_Scroll);
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // POS_ItemsGride
@@ -758,7 +758,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
             this.Size = new System.Drawing.Size(148, 115);
             this.Load += new System.EventHandler(this.Pos_ItemPanel_Load);
             this.SizeChanged += new System.EventHandler(this.POS_ItemsGride_SizeChanged);
-            this.ItemGried.ResumeLayout(false);
+            this.ItemsGride.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -788,43 +788,44 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
             try
             {
                 maxcount = db.ExecuteQuery<T_Item>("Select * From T_Items where  ItmCat ='" + CAT_ID.ToString() + "'").Count();
-
+                CalculateTotalPages(maxcount);
                 curentrow = 0;
                 currentcolumn = 0;
                 CurrentPageIndex = 1;
                 gridwidth = this.Width;
-                gridheight = this.Height;
+
+                gridheight = this.Height - getPanelSize() ;
                 {
                     if (ItemWidth == 0) return;
                     if (ItemHieght == 0) return;
 
 
                     col = ((gridwidth) / ItemWidth);
-                    ItemGried.ColumnCount = col;
+                    ItemsGride.ColumnCount = col;
                     row = (gridheight / ItemHieght);
-                    ItemGried.ColumnCount = (gridwidth / ItemWidth);
-                    ItemGried.RowCount = (gridheight / ItemHieght);
-                    ItemGried.Controls.Clear();
+                    ItemsGride.ColumnCount = (gridwidth / ItemWidth);
+                    ItemsGride.RowCount = (gridheight / ItemHieght);
+                    ItemsGride.Controls.Clear();
                     col = (gridwidth / ItemWidth);
                     row = (gridheight / ItemHieght);
-                    ItemGried.RowStyles.Clear();
+                    ItemsGride.RowStyles.Clear();
                     for (int i = 0; i < row; i++)
                     {
                         RowStyle c = new RowStyle();
                         c.SizeType = SizeType.Absolute;
                         c.Height = ItemHieght;
-                        ItemGried.RowStyles.Add(c);
+                        ItemsGride.RowStyles.Add(c);
                     }
                     if (col == 0) return;
 
                     float cc = (float)100 / col;
-                    ItemGried.ColumnStyles.Clear();
+                    ItemsGride.ColumnStyles.Clear();
                     for (int i = 0; i < col; i++)
                     {
                         ColumnStyle c = new ColumnStyle();
                         c.SizeType = SizeType.Percent;
                         c.Width = cc;
-                        ItemGried.ColumnStyles.Add(c);
+                        ItemsGride.ColumnStyles.Add(c);
                     }
                     PageSize = Math.Abs(col * row);
                     setbackButton();
@@ -836,20 +837,27 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
             catch { }
         }
 
+        private int getPanelSize()
+        {
+            return 0;
+        }
+
         private void setbackButton()
         {
             if (IsBackButtonOn == 1)
             {
                 if (mode == 0)
                 {
-                    ItemGried.Controls.Add(But_Back, 0, 0);
+                    ItemsGride.Controls.Add(But_Back, 0, 0);
                     increment();
                 }
             }
         }
 
         private void But_NextPage_Click(object sender, EventArgs e)
-        {if (PageSize == 0) return;
+        {
+            if (PageSize == 0) return;
+
             numberofpages = maxcount / PageSize;
             if (CurrentPageIndex <numberofpages)
             {
@@ -912,14 +920,14 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
         void setscrol()
 
         {
-            vScrollBar1 = ItemGried.VerticalScroll;
+            vScrollBar1 = ItemsGride.VerticalScroll;
             if (this.vScrollBar1.Visible)
             {
                 this.vScrollBar1.Minimum = 0;
                 this.vScrollBar1.SmallChange = this.panel2.Height / 20;
                 this.vScrollBar1.LargeChange = this.panel2.Height / 10;
 
-                this.vScrollBar1.Maximum = this.ItemGried.Size.Height - ItemGried.ClientSize.Height; //step 1
+                this.vScrollBar1.Maximum = this.ItemsGride.Size.Height - ItemsGride.ClientSize.Height; //step 1
 
               
 
@@ -927,12 +935,12 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
             }
         }
 
-        private void ItemGried_SizeChanged(object sender, EventArgs e)
+        private void ItemsGride_SizeChanged(object sender, EventArgs e)
         {
            
         }
 
-        private void ItemGried_ControlRemoved(object sender, ControlEventArgs e)
+        private void ItemsGride_ControlRemoved(object sender, ControlEventArgs e)
         {
             
         }
@@ -948,7 +956,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
         }
 
         int numberofpages = 1;
-        private void ItemGried_Scroll(object sender, ScrollEventArgs e)
+        private void ItemsGride_Scroll(object sender, ScrollEventArgs e)
         {
             VScrollProperties vs = panel2.VerticalScroll;
             if (e.NewValue == vs.Maximum - vs.LargeChange + 1)
@@ -963,26 +971,26 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 #pragma warning disable CS1998 // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
         public async void fill(int cAT_ID, bool v)
          {
-            ItemGried.RowStyles.Clear();
+            ItemsGride.RowStyles.Clear();
             setinitial();
             CAT_ID = cAT_ID;
 
         
-            for (int i = 0; i < ItemGried.RowCount; i++)
+            for (int i = 0; i < ItemsGride.RowCount; i++)
             {
                 RowStyle c = new RowStyle();
                 c.SizeType = SizeType.Absolute;
                 c.Height = ItemHieght;
-                ItemGried.RowStyles.Add(c);
+                ItemsGride.RowStyles.Add(c);
             }
             float ff = (float)100 / col;
-            ItemGried.ColumnStyles.Clear();
-            for (int i = 0; i < ItemGried.ColumnCount; i++)
+            ItemsGride.ColumnStyles.Clear();
+            for (int i = 0; i < ItemsGride.ColumnCount; i++)
             {
                 ColumnStyle c = new ColumnStyle();
                 c.SizeType = SizeType.Percent;
                 c.Width = ff;
-                ItemGried.ColumnStyles.Add(c);
+                ItemsGride.ColumnStyles.Add(c);
             }
             try
             {
@@ -999,12 +1007,12 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
                     numberofpages = maxcount / PageSize;
                     if (CurrentPageIndex < numberofpages)
                     {
-                        CurrentPageIndex++;
+                        //CurrentPageIndex++;
 
-                        if (mode == 0)
-                            GetCurrentRecords(CurrentPageIndex, false);
-                        else
-                            GetCurrentRecordscats(CurrentPageIndex, false);
+                        //if (mode == 0)
+                        //    GetCurrentRecords(CurrentPageIndex, false);
+                        //else
+                        //    GetCurrentRecordscats(CurrentPageIndex, false);
 
                     }
                 }
@@ -1014,9 +1022,153 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
             { }
  
         }
-
-        private void ItemGried_Paint(object sender, PaintEventArgs e)
+        private void ssss(int page, bool vBestSaller)
         {
+            try
+            {
+
+                int romhit = 0;
+                string ItmMainParameter = CAT_ID.ToString();
+                if (CAT_ID == 2)
+                {
+
+#pragma warning disable CS0219 // The variable 'k' is assigned but its value is never used
+                    int k = 0;
+#pragma warning restore CS0219 // The variable 'k' is assigned but its value is never used
+
+                }
+                List<T_Item> dt = new List<T_Item>();
+                if (!vBestSaller)
+                {
+                    if (page == 1)
+                    {
+                        dt = db.ExecuteQuery<T_Item>("Select TOP " + PageSize + " * from T_Items " + ((!string.IsNullOrEmpty(ItmMainParameter) && ItmMainParameter != "0") ? (" where ItmCat = " + ItmMainParameter + " and ") : " where ") + "  T_Items.InvSaleStoped = 0 ORDER BY Itm_ID", new object[0]).ToList();
+                    }
+                    else
+                    {
+                        int PreviouspageLimit = (page - 1) * PageSize;
+                        dt = db.ExecuteQuery<T_Item>("Select TOP " + PageSize + " * from T_Items WHERE " + ((!string.IsNullOrEmpty(ItmMainParameter) && ItmMainParameter != "0") ? (" ItmCat = " + ItmMainParameter + " AND ") : " ") + " Itm_ID NOT IN (Select TOP " + PreviouspageLimit + " Itm_ID from T_Items WHERE " + ((!string.IsNullOrEmpty(ItmMainParameter) && ItmMainParameter != "0") ? (" ItmCat = " + ItmMainParameter) : " 1 = 1 ") + "ORDER BY Itm_ID)  and T_Items.InvSaleStoped = 0 ORDER BY Itm_ID", new object[0]).ToList();
+                    }
+                }
+                else if (page == 1)
+                {
+                    dt = db.ExecuteQuery<T_Item>("SELECT   TOP " + PageSize + "  T_Items.Itm_ID, T_Items.Itm_No, T_Items.ItmCat, T_Items.Arb_Des, T_Items.Eng_Des, T_Items.StartCost, T_Items.AvrageCost, T_Items.LastCost, T_Items.Price1, \r\n                                                                                  T_Items.Price3, T_Items.Price2, T_Items.Price5, T_Items.Price4, T_Items.Price6, T_Items.Unit1, T_Items.Pack1, T_Items.Unit2, T_Items.UntPri2, T_Items.UntPri1, \r\n                                                                                  T_Items.Pack2, T_Items.Unit3, T_Items.Pack3, T_Items.Unit4, T_Items.UntPri3, T_Items.UntPri4, T_Items.Pack4, T_Items.Unit5, T_Items.UntPri5, T_Items.Pack5, \r\n                                                                                  T_Items.DefultUnit, T_Items.DefultVendor, T_Items.OpenQty, T_Items.QtyLvl, T_Items.ItmLoc, T_Items.BarCod1, T_Items.BarCod2, T_Items.BarCod3, \r\n                                                                                  T_Items.BarCod4, T_Items.BarCod5, T_Items.Lot, T_Items.LrnExp, T_Items.DMY, T_Items.ItmTyp, T_Items.DefPack, T_Items.ItmImg, \r\n                                                                                  T_Items.InvSaleStoped, T_Items.InvPaymentStoped, T_Items.InvPaymentReturnStoped, T_Items.FirstCost, T_Items.CompanyID, T_Items.InvSaleReturnStoped, \r\n                                                                                  T_Items.SerialKey,sum(RealQty) as QtyMax\r\n                                                            FROM         T_Items INNER JOIN\r\n                                                                                  T_INVDET ON T_Items.Itm_No = T_INVDET.ItmNo INNER JOIN\r\n                                                                                  T_INVHED ON T_INVDET.InvId = T_INVHED.InvHed_ID\r\n                                                            WHERE T_INVHED.InvTyp = 1 and T_Items.ItmTyp != 1 and T_Items.InvSaleStoped = 0\r\n                                                            Group By T_Items.Itm_ID, T_Items.Itm_No, T_Items.ItmCat, T_Items.Arb_Des, T_Items.Eng_Des, T_Items.StartCost, T_Items.AvrageCost, T_Items.LastCost, T_Items.Price1, \r\n                                                                                  T_Items.Price3, T_Items.Price2, T_Items.Price5, T_Items.Price4, T_Items.Price6, T_Items.Unit1, T_Items.Pack1, T_Items.Unit2, T_Items.UntPri2, T_Items.UntPri1, \r\n                                                                                  T_Items.Pack2, T_Items.Unit3, T_Items.Pack3, T_Items.Unit4, T_Items.UntPri3, T_Items.UntPri4, T_Items.Pack4, T_Items.Unit5, T_Items.UntPri5, T_Items.Pack5, \r\n                                                                                  T_Items.DefultUnit, T_Items.DefultVendor, T_Items.OpenQty, T_Items.QtyLvl, T_Items.ItmLoc, T_Items.BarCod1, T_Items.BarCod2, T_Items.BarCod3, \r\n                                                                                  T_Items.BarCod4, T_Items.BarCod5, T_Items.Lot, T_Items.QtyMax, T_Items.LrnExp, T_Items.DMY, T_Items.ItmTyp, T_Items.DefPack, T_Items.ItmImg, \r\n                                                                                  T_Items.InvSaleStoped, T_Items.InvPaymentStoped, T_Items.InvPaymentReturnStoped, T_Items.FirstCost, T_Items.CompanyID, T_Items.InvSaleReturnStoped, \r\n                                                                                  T_Items.SerialKey\r\n                                                                                  order by QtyMax desc", new object[0]).ToList();
+                }
+                else
+                {
+                    int PreviouspageLimit = (page - 1) * PageSize;
+                    dt = db.ExecuteQuery<T_Item>("SELECT   TOP " + PageSize + "  T_Items.Itm_ID, T_Items.Itm_No, T_Items.ItmCat, T_Items.Arb_Des, T_Items.Eng_Des, T_Items.StartCost, T_Items.AvrageCost, T_Items.LastCost, T_Items.Price1, \r\n                                                                                  T_Items.Price3, T_Items.Price2, T_Items.Price5, T_Items.Price4, T_Items.Price6, T_Items.Unit1, T_Items.Pack1, T_Items.Unit2, T_Items.UntPri2, T_Items.UntPri1, \r\n                                                                                  T_Items.Pack2, T_Items.Unit3, T_Items.Pack3, T_Items.Unit4, T_Items.UntPri3, T_Items.UntPri4, T_Items.Pack4, T_Items.Unit5, T_Items.UntPri5, T_Items.Pack5, \r\n                                                                                  T_Items.DefultUnit, T_Items.DefultVendor, T_Items.OpenQty, T_Items.QtyLvl, T_Items.ItmLoc, T_Items.BarCod1, T_Items.BarCod2, T_Items.BarCod3, \r\n                                                                                  T_Items.BarCod4, T_Items.BarCod5, T_Items.Lot, T_Items.LrnExp, T_Items.DMY, T_Items.ItmTyp, T_Items.DefPack, T_Items.ItmImg, \r\n                                                                                  T_Items.InvSaleStoped, T_Items.InvPaymentStoped, T_Items.InvPaymentReturnStoped, T_Items.FirstCost, T_Items.CompanyID, T_Items.InvSaleReturnStoped, \r\n                                                                                  T_Items.SerialKey,sum(RealQty) as QtyMax\r\n                                                            FROM         T_Items INNER JOIN\r\n                                                                                  T_INVDET ON T_Items.Itm_No = T_INVDET.ItmNo INNER JOIN\r\n                                                                                  T_INVHED ON T_INVDET.InvId = T_INVHED.InvHed_ID\r\n                                                            WHERE T_INVHED.InvTyp = 1 and T_Items.ItmTyp != 1 and T_Items.InvSaleStoped = 0 AND  Itm_No NOT IN (Select TOP " + PreviouspageLimit + " Itm_ID from T_Items ORDER BY Itm_ID)\r\n                                                            Group By T_Items.Itm_ID, T_Items.Itm_No, T_Items.ItmCat, T_Items.Arb_Des, T_Items.Eng_Des, T_Items.StartCost, T_Items.AvrageCost, T_Items.LastCost, T_Items.Price1, \r\n                                                                                  T_Items.Price3, T_Items.Price2, T_Items.Price5, T_Items.Price4, T_Items.Price6, T_Items.Unit1, T_Items.Pack1, T_Items.Unit2, T_Items.UntPri2, T_Items.UntPri1, \r\n                                                                                  T_Items.Pack2, T_Items.Unit3, T_Items.Pack3, T_Items.Unit4, T_Items.UntPri3, T_Items.UntPri4, T_Items.Pack4, T_Items.Unit5, T_Items.UntPri5, T_Items.Pack5, \r\n                                                                                  T_Items.DefultUnit, T_Items.DefultVendor, T_Items.OpenQty, T_Items.QtyLvl, T_Items.ItmLoc, T_Items.BarCod1, T_Items.BarCod2, T_Items.BarCod3, \r\n                                                                                  T_Items.BarCod4, T_Items.BarCod5, T_Items.Lot, T_Items.QtyMax, T_Items.LrnExp, T_Items.DMY, T_Items.ItmTyp, T_Items.DefPack, T_Items.ItmImg, \r\n                                                                                  T_Items.InvSaleStoped, T_Items.InvPaymentStoped, T_Items.InvPaymentReturnStoped, T_Items.FirstCost, T_Items.CompanyID, T_Items.InvSaleReturnStoped, \r\n                                                                                  T_Items.SerialKey\r\n                                                                                  order by QtyMax desc", new object[0]).ToList();
+                }
+                int iicnt = 0;
+                Size newSize = default(Size);
+                try
+                {
+                    //          newSize = new Size(colW, rowH / 2 + rowH * 25 / 100);
+                }
+                catch
+                {
+                    newSize = new Size(130, 110);
+                }
+
+
+                List<T_Item> g = (from isa in dt
+                                  where isa.ItmCat == CAT_ID
+                                  select isa).ToList<T_Item>();
+                dt = g;
+#pragma warning disable CS0219 // The variable 'irowTeplate' is assigned but its value is never used
+                int irowTeplate = 5;
+#pragma warning restore CS0219 // The variable 'irowTeplate' is assigned but its value is never used
+#pragma warning disable CS0219 // The variable 'irow' is assigned but its value is never used
+                int irow = 0;
+#pragma warning restore CS0219 // The variable 'irow' is assigned but its value is never used
+
+
+                for (int j = 0; j < ItemsGride.RowCount; j++)
+                {
+
+
+
+
+                    {
+                        for (int i = 0; i < ItemsGride.ColumnCount; i++)
+                        {
+                            if (iicnt < dt.Count)
+                            {
+                                POSItem p = new POSItem();
+                                p.Item_name.Text = dt[iicnt].Arb_Des;
+                                if (dt[iicnt].ItmImg != null)
+                                    p.Item_Image.Image = Utilites.byteArrayToImage(dt[iicnt].ItmImg.ToArray());
+                                ItemsGride.Controls.Add(p, i, j);
+                                p.Tag = dt[iicnt].Itm_No;
+                                p.Item_Click += clickitem;
+                                iicnt++;
+
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    POSItem c = ItemsGride.GetControlFromPosition(i, j) as POSItem;
+                                    if (c != null)
+                                    {
+                                        c.Dispose();
+
+                                    }
+
+                                }
+                                catch
+                                {
+
+                                }
+
+
+                            }
+                        }
+                    }
+
+                    romhit += ItemHieght;
+                    //  else
+                    //rowCell.Visible = false;
+                }
+
+            }
+            catch
+            {
+            }
+
+
+        }
+        int pageindex = 1;
+        public void NextPage()
+        {
+
+            if (pageindex < TotalPage)
+            {
+                currentcolumn = 0;
+                curentrow = 0;
+                ItemsGride.Controls.Clear();
+
+                pageindex++;
+                ssss(pageindex, vBestSaller: false);
+            }
+        }
+     
+        public void PreivousPage()
+        {
+            Program.min();
+            if (pageindex >1)
+            {
+                currentcolumn = 0;
+                curentrow = 0;
+                ItemsGride.Controls.Clear();
+
+                pageindex--;
+                ssss(pageindex, vBestSaller: false);
+            }
+        }
+        private void ItemsGride_Paint(object sender, PaintEventArgs e)
+        {
+    
 
         }
     }

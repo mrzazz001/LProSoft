@@ -2,8 +2,8 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using Framework.Data;
 using Framework.UI;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using System;
 using System.Collections.Generic;
@@ -22,7 +22,7 @@ namespace InvAcc.Forms
  label1.Text=   (arln == 0 ? "  الشهـــــر :  " : "  month:") ; Button_OK.Text=   (arln == 0 ? "  ترحيـــــــل  " : "  deportation") ; checkBox_AccID.Text=   (arln == 0 ? "  إصدار قيد محاسبي تلقائي  " : "  Issuance of automatic accounting entry") ; label8.Text=   (arln == 0 ? "  العملــــــــة :  " : "  work:") ; label6.Text=   (arln == 0 ? "  مركز التكلفة :  " : "  cost center:") ; button_Close.Text=   (arln == 0 ? "  خـــروج  " : "  Close") ; Text = "ترحيل الرواتب";this.Text=   (arln == 0 ? "  ترحيل الرواتب  " : "  Salary posting") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

@@ -8,9 +8,9 @@ using Framework;
 using Framework.Data;
 using Framework.Date;
 using InputKey;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;using ProShared;
 using InvAcc.Properties;
-using InvAcc.Stock_Data;
+using ProShared.Stock_Data;
 //using InvAcc.Reports;
 //using InvAcc.Reports;
 using Library.RepShow;
@@ -41,6 +41,7 @@ using System.Threading;
 using System.Windows.Forms;
 namespace InvAcc.Forms
 {
+    using ProShared;
     public partial class FrmMn : Form
     {
         private IContainer components = null;
@@ -16510,14 +16511,14 @@ namespace InvAcc.Forms
                     Server server = new Server(new ServerConnection(conn));
                     try
                     {
-                        server.ConnectionContext.ExecuteNonQuery(DBUdate.DbUpdates.s1);
+                        server.ConnectionContext.ExecuteNonQuery(ProShared.DBUdate.DbUpdates.s1);
                     }
                     catch
                     {
                     }
                     try
                     {
-                        server.ConnectionContext.ExecuteNonQuery(DBUdate.DbUpdates.s2);
+                        server.ConnectionContext.ExecuteNonQuery(ProShared.DBUdate.DbUpdates.s2);
                     }
                     catch
                     {

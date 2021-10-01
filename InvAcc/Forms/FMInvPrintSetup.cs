@@ -3,8 +3,8 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
 using Framework.UI;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +23,7 @@ namespace InvAcc.Forms
  checkBox_WaiterAll.Text=   (arln == 0 ? "  الكل  " : "  All") ; groupBox_PrintType.Text=   (arln == 0 ? "  طريقة الطباعة  " : "  printing method") ; RedButCasher.Text=   (arln == 0 ? "  طباعة على ورق الكاشير  " : "  Print on cashier paper") ; RedButPaperA4.Text=   (arln == 0 ? "  طباعة على ورق A4  " : "  Print on A4 paper") ; checkBox_previewPrint.Text=   (arln == 0 ? "  تعيين إعدادات الطابعة الإفتراضية   " : "  Set the default printer settings") ; groupBox4.Text=   (arln == 0 ? "  الإتجـــــاه  " : "  direction") ; RButLandscape.Text=   (arln == 0 ? "  عرضي                     " : "  accidental") ; RButPortrait.Text=   (arln == 0 ? "  طولي                      " : "  linear") ; label9.Text=   (arln == 0 ? "  حجم الورقة :  " : "  paper size:") ; label33.Text=   (arln == 0 ? "  عدد النسخ :  " : "  Number of copies :") ; label6.Text=   (arln == 0 ? "  المسافة بين السطور :  " : "  Line spacing:") ; label4.Text=   (arln == 0 ? "  الهامش الأيسر :  " : "  left margin:") ; label3.Text=   (arln == 0 ? "  الهامش الأسفل :  " : "  bottom margin:") ; label2.Text=   (arln == 0 ? "  الهامش الأيمن :  " : "  Right margin:") ; label1.Text=   (arln == 0 ? "  الهامش الأعلى :  " : "  top margin:") ; label5.Text=   (arln == 0 ? "  السطور في الصفحة :  " : "  The lines on the page:") ; label7.Text=   (arln == 0 ? "  الطابعة الإفتراضية :  " : "  default printer:") ; labelX1.Text=   (arln == 0 ? "  اعدادات طباعة الفواتير  " : "  Invoice printing settings") ; label8.Text=   (arln == 0 ? "   نوع الفاتورة:  " : "   Invoice type:") ; ChkPTable.Text=   (arln == 0 ? "  طباعة الفاتورة بالشكل الإفتراضي  " : "  Print invoice as default بالشكل") ; ButWithoutSave.Text=   (arln == 0 ? "  خــــروج  " : "  exit") ; ButWithSave.Text=   (arln == 0 ? "  حفــــظ  " : "  save") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary

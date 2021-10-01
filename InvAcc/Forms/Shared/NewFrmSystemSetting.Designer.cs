@@ -30,19 +30,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TileItemElement tileItemElement40 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement41 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement42 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement43 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement44 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement45 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement46 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement47 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement48 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement49 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement50 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement51 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement52 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement13 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewFrmSystemSetting));
             this.tileBar = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroupTables = new DevExpress.XtraBars.Navigation.TileBarGroup();
@@ -483,11 +483,11 @@
             this.groupPanel8 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.ChkEmp1 = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.label39 = new System.Windows.Forms.Label();
+            this.checkBox_VacationManually = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.checkBox_Sponer = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.textBox_AutoEmpLeaveAfter = new DevComponents.Editors.IntegerInput();
             this.checkBox_AttendanceManually = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.checkBox_AutoLeave = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.checkBox_Sponer = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.checkBox_VacationManually = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.button_DayofMonth = new DevComponents.DotNetBar.ButtonX();
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
@@ -638,9 +638,9 @@
             this.superTabItem_General.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.superTabItem_General.AppearanceItem.Normal.Options.UseBackColor = true;
             this.superTabItem_General.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement40.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
-            tileItemElement40.Text = "الاعدادات العامه";
-            this.superTabItem_General.Elements.Add(tileItemElement40);
+            tileItemElement1.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
+            tileItemElement1.Text = "الاعدادات العامه";
+            this.superTabItem_General.Elements.Add(tileItemElement1);
             this.superTabItem_General.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.superTabItem_General.Name = "superTabItem_General";
             this.superTabItem_General.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.GeneralSettings_ItemClick);
@@ -650,9 +650,9 @@
             this.superTabItem_Banner.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.superTabItem_Banner.AppearanceItem.Normal.Options.UseBackColor = true;
             this.superTabItem_Banner.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement41.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
-            tileItemElement41.Text = "معلومات الشركه ";
-            this.superTabItem_Banner.Elements.Add(tileItemElement41);
+            tileItemElement2.ImageOptions.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
+            tileItemElement2.Text = "معلومات الشركه ";
+            this.superTabItem_Banner.Elements.Add(tileItemElement2);
             this.superTabItem_Banner.Id = 2;
             this.superTabItem_Banner.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.superTabItem_Banner.Name = "superTabItem_Banner";
@@ -662,8 +662,8 @@
             this.Seller_Info.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.Seller_Info.AppearanceItem.Normal.Options.UseBackColor = true;
             this.Seller_Info.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement42.Text = "معلومات البائع";
-            this.Seller_Info.Elements.Add(tileItemElement42);
+            tileItemElement3.Text = "معلومات البائع";
+            this.Seller_Info.Elements.Add(tileItemElement3);
             this.Seller_Info.Id = 3;
             this.Seller_Info.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.Seller_Info.Name = "Seller_Info";
@@ -673,9 +673,9 @@
             this.Bar_Accounts.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.Bar_Accounts.AppearanceItem.Normal.Options.UseBackColor = true;
             this.Bar_Accounts.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement43.Text = "اعدادات الحسابات";
-            tileItemElement43.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            this.Bar_Accounts.Elements.Add(tileItemElement43);
+            tileItemElement4.Text = "اعدادات الحسابات";
+            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            this.Bar_Accounts.Elements.Add(tileItemElement4);
             this.Bar_Accounts.Id = 4;
             this.Bar_Accounts.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.Bar_Accounts.Name = "Bar_Accounts";
@@ -686,8 +686,8 @@
             this.tileBarItem3.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.tileBarItem3.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileBarItem3.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement44.Text = "العمولات البنكيه";
-            this.tileBarItem3.Elements.Add(tileItemElement44);
+            tileItemElement5.Text = "العمولات البنكيه";
+            this.tileBarItem3.Elements.Add(tileItemElement5);
             this.tileBarItem3.Id = 6;
             this.tileBarItem3.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.tileBarItem3.Name = "tileBarItem3";
@@ -697,8 +697,8 @@
             this.Bar_Invsale.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.Bar_Invsale.AppearanceItem.Normal.Options.UseBackColor = true;
             this.Bar_Invsale.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement45.Text = "اعدادات الفواتير";
-            this.Bar_Invsale.Elements.Add(tileItemElement45);
+            tileItemElement6.Text = "اعدادات الفواتير";
+            this.Bar_Invsale.Elements.Add(tileItemElement6);
             this.Bar_Invsale.Id = 7;
             this.Bar_Invsale.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.Bar_Invsale.Name = "Bar_Invsale";
@@ -708,8 +708,8 @@
             this.tileBarItem5.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.tileBarItem5.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileBarItem5.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement46.Text = "اعدادات الضريبة";
-            this.tileBarItem5.Elements.Add(tileItemElement46);
+            tileItemElement7.Text = "اعدادات الضريبة";
+            this.tileBarItem5.Elements.Add(tileItemElement7);
             this.tileBarItem5.Id = 8;
             this.tileBarItem5.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.tileBarItem5.Name = "tileBarItem5";
@@ -719,8 +719,8 @@
             this.tileBarItem6.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.tileBarItem6.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tileBarItem6.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement47.Text = "اعدادات شاشة الزبون والميزان";
-            this.tileBarItem6.Elements.Add(tileItemElement47);
+            tileItemElement8.Text = "اعدادات شاشة الزبون والميزان";
+            this.tileBarItem6.Elements.Add(tileItemElement8);
             this.tileBarItem6.Id = 9;
             this.tileBarItem6.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.tileBarItem6.Name = "tileBarItem6";
@@ -730,8 +730,8 @@
             this.Bar_Eqarat.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.Bar_Eqarat.AppearanceItem.Normal.Options.UseBackColor = true;
             this.Bar_Eqarat.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement48.Text = "اعدادات العقارات";
-            this.Bar_Eqarat.Elements.Add(tileItemElement48);
+            tileItemElement9.Text = "اعدادات العقارات";
+            this.Bar_Eqarat.Elements.Add(tileItemElement9);
             this.Bar_Eqarat.Id = 12;
             this.Bar_Eqarat.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.Bar_Eqarat.Name = "Bar_Eqarat";
@@ -741,8 +741,8 @@
             this.Bar_Hotil.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.Bar_Hotil.AppearanceItem.Normal.Options.UseBackColor = true;
             this.Bar_Hotil.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement49.Text = "اعدادات الفنادق";
-            this.Bar_Hotil.Elements.Add(tileItemElement49);
+            tileItemElement10.Text = "اعدادات الفنادق";
+            this.Bar_Hotil.Elements.Add(tileItemElement10);
             this.Bar_Hotil.Id = 13;
             this.Bar_Hotil.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.Bar_Hotil.Name = "Bar_Hotil";
@@ -752,8 +752,8 @@
             this.superTabItem_Employee.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.superTabItem_Employee.AppearanceItem.Normal.Options.UseBackColor = true;
             this.superTabItem_Employee.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement50.Text = "شؤون الموضفين";
-            this.superTabItem_Employee.Elements.Add(tileItemElement50);
+            tileItemElement11.Text = "شؤون الموضفين";
+            this.superTabItem_Employee.Elements.Add(tileItemElement11);
             this.superTabItem_Employee.Id = 14;
             this.superTabItem_Employee.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.superTabItem_Employee.Name = "superTabItem_Employee";
@@ -769,10 +769,10 @@
             this.ButWithSave.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.ButWithSave.AppearanceItem.Normal.Options.UseBackColor = true;
             this.ButWithSave.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement51.ImageOptions.Image = global::InvAcc.Properties.Resources.save_32x32;
-            tileItemElement51.Text = "حفظ";
-            tileItemElement51.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
-            this.ButWithSave.Elements.Add(tileItemElement51);
+            tileItemElement12.ImageOptions.Image = global::InvAcc.Properties.Resources.save_32x32;
+            tileItemElement12.Text = "حفظ";
+            tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomCenter;
+            this.ButWithSave.Elements.Add(tileItemElement12);
             this.ButWithSave.Id = 15;
             this.ButWithSave.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.ButWithSave.Name = "ButWithSave";
@@ -783,9 +783,9 @@
             this.ButWithoutSave.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.ButWithoutSave.AppearanceItem.Normal.Options.UseBackColor = true;
             this.ButWithoutSave.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement52.ImageOptions.Image = global::InvAcc.Properties.Resources.cancel_32x32;
-            tileItemElement52.Text = "اغلاق";
-            this.ButWithoutSave.Elements.Add(tileItemElement52);
+            tileItemElement13.ImageOptions.Image = global::InvAcc.Properties.Resources.cancel_32x32;
+            tileItemElement13.Text = "اغلاق";
+            this.ButWithoutSave.Elements.Add(tileItemElement13);
             this.ButWithoutSave.Id = 16;
             this.ButWithoutSave.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Medium;
             this.ButWithoutSave.Name = "ButWithoutSave";
@@ -3147,7 +3147,7 @@
             this.c1FlexGrid2.Font = new System.Drawing.Font("Tahoma", 8F);
             this.c1FlexGrid2.Location = new System.Drawing.Point(240, 27);
             this.c1FlexGrid2.Name = "c1FlexGrid2";
-            this.c1FlexGrid2.Rows.Count = 63;
+            this.c1FlexGrid2.Rows.Count = 64;
             this.c1FlexGrid2.Rows.DefaultSize = 19;
             this.c1FlexGrid2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.c1FlexGrid2.Size = new System.Drawing.Size(835, 392);
@@ -7619,6 +7619,38 @@
             this.label39.TabIndex = 979;
             this.label39.Text = "دقيقـة";
             // 
+            // checkBox_VacationManually
+            // 
+            this.checkBox_VacationManually.AutoSize = true;
+            this.checkBox_VacationManually.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.checkBox_VacationManually.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBox_VacationManually.Location = new System.Drawing.Point(105, 92);
+            this.checkBox_VacationManually.Name = "checkBox_VacationManually";
+            this.checkBox_VacationManually.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBox_VacationManually.Size = new System.Drawing.Size(193, 15);
+            this.checkBox_VacationManually.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBox_VacationManually.TabIndex = 18;
+            this.checkBox_VacationManually.Text = "احتساب تلقائي للاجازة في قرار الاجازة";
+            // 
+            // checkBox_Sponer
+            // 
+            this.checkBox_Sponer.AutoSize = true;
+            this.checkBox_Sponer.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.checkBox_Sponer.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBox_Sponer.Location = new System.Drawing.Point(304, 89);
+            this.checkBox_Sponer.Name = "checkBox_Sponer";
+            this.checkBox_Sponer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBox_Sponer.Size = new System.Drawing.Size(148, 15);
+            this.checkBox_Sponer.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBox_Sponer.TabIndex = 976;
+            this.checkBox_Sponer.Text = "تحديد كفيل لكل موظف جديد";
+            // 
             // textBox_AutoEmpLeaveAfter
             // 
             this.textBox_AutoEmpLeaveAfter.AllowEmptyState = false;
@@ -7672,38 +7704,6 @@
             this.checkBox_AutoLeave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_AutoLeave.TabIndex = 978;
             this.checkBox_AutoLeave.Text = "صـــرف الموظفــــين تلقــــائيا بعد ";
-            // 
-            // checkBox_Sponer
-            // 
-            this.checkBox_Sponer.AutoSize = true;
-            this.checkBox_Sponer.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.checkBox_Sponer.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.checkBox_Sponer.Location = new System.Drawing.Point(304, 89);
-            this.checkBox_Sponer.Name = "checkBox_Sponer";
-            this.checkBox_Sponer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_Sponer.Size = new System.Drawing.Size(148, 15);
-            this.checkBox_Sponer.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.checkBox_Sponer.TabIndex = 976;
-            this.checkBox_Sponer.Text = "تحديد كفيل لكل موظف جديد";
-            // 
-            // checkBox_VacationManually
-            // 
-            this.checkBox_VacationManually.AutoSize = true;
-            this.checkBox_VacationManually.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.checkBox_VacationManually.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.checkBox_VacationManually.Location = new System.Drawing.Point(105, 92);
-            this.checkBox_VacationManually.Name = "checkBox_VacationManually";
-            this.checkBox_VacationManually.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_VacationManually.Size = new System.Drawing.Size(193, 15);
-            this.checkBox_VacationManually.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.checkBox_VacationManually.TabIndex = 18;
-            this.checkBox_VacationManually.Text = "احتساب تلقائي للاجازة في قرار الاجازة";
             // 
             // button_DayofMonth
             // 

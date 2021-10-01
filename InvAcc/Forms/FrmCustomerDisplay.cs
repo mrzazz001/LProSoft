@@ -1,7 +1,7 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+using ProShared.GeneralM;using ProShared;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using SSSLanguage;
 using System;
@@ -19,7 +19,7 @@ namespace InvAcc.Forms
  label2custDis.Text=   (arln == 0 ? "  طريقة العرض  " : "  show style") ; button_CheckConn.Text=   (arln == 0 ? "  إختبــــار  " : "  test") ; label14CustDis.Text=   (arln == 0 ? "  رسالة ترحيبية  " : "  welcome message") ; groupPanel3CustDis.Text=   (arln == 0 ? "  التمـــاثل  " : "  symmetry") ; chkSync5.Text=   (arln == 0 ? "  مسافة  " : "  distance") ; chkSync4.Text=   (arln == 0 ? "  علامة  " : "  sign") ; chkSync3.Text=   (arln == 0 ? "  بلا  " : "  without") ; chkSync2.Text=   (arln == 0 ? "  زوجي  " : "  my husband") ; chkSync1.Text=   (arln == 0 ? "  فردي  " : "  Individually") ; groupPanel2CustDis.Text=   (arln == 0 ? "  البيــانات  " : "  data") ; chkData5.Text=   (arln == 0 ? "  8  " : "  8") ; chkData4.Text=   (arln == 0 ? "  7  " : "  7") ; chkData3.Text=   (arln == 0 ? "  6  " : "  6") ; chkData2.Text=   (arln == 0 ? "  5  " : "  5") ; chkData1.Text=   (arln == 0 ? "  4  " : "  4") ; groupPanel1CustDis.Text=   (arln == 0 ? "  التــوقـف  " : "  stop") ; chkStop3.Text=   (arln == 0 ? "  2  " : "  2") ; chkStop2.Text=   (arln == 0 ? "  1.5  " : "  1.5") ; chkStop1.Text=   (arln == 0 ? "  1  " : "  1") ; label1CustDis.Text=   (arln == 0 ? "  الســرعة :  " : "  speed:") ; label8CustDis.Text=   (arln == 0 ? "  المنفـــذ :  " : "  Executor:") ; chkIsActive.Text=   (arln == 0 ? "  تفعيل شاشة الــزبــون  " : "  Activate the customer screen") ; ButWithoutSave.Text=   (arln == 0 ? "  خـــروج  " : "  Close") ; ButWithSave.Text=   (arln == 0 ? "  حفــــظ  " : "  save") ; Text = "شاشة الزبون";this.Text=   (arln == 0 ? "  شاشة الزبون  " : "  customer screen") ;}
         private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinaryCusDis

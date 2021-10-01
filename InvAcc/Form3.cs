@@ -3,7 +3,7 @@ using C1.Win.C1Input;
 using Check_Data.Forms;
 using InvAcc.Controls.POS;
 using InvAcc.Forms;
-using InvAcc.GeneralM;
+using ProShared.GeneralM;using ProShared;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

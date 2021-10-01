@@ -1,4 +1,4 @@
-using InvAcc.Stock_Data;
+using ProShared.Stock_Data;
 using System;
 using System.Drawing;
 using System.Windows.Forms;

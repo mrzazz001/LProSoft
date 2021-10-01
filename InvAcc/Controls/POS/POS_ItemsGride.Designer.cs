@@ -6,7 +6,7 @@
         #region Component Designer generated code
 
         #endregion
-        private System.Windows.Forms.TableLayoutPanel ItemGried;
+        private System.Windows.Forms.TableLayoutPanel ItemsGride;
 #pragma warning disable CS0169 // The field 'POS_ItemsGride.arrowButton2' is never used
         private ArrowButton.ArrowButton arrowButton2;
 #pragma warning restore CS0169 // The field 'POS_ItemsGride.arrowButton2' is never used
