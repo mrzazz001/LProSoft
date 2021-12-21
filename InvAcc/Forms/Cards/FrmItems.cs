@@ -164,7 +164,6 @@ namespace InvAcc.Forms
         private IntegerInput textbox_DateNo;
         private Label label1;
         private ExpandablePanel expandablePanel_AnotherPrice;
-        private ComboBoxEx combobox_DateTyp;
         private C1BarCode c1BarCode1;
         private TextBox txtCurr;
         private ComboBox combobox_Unit5;
@@ -698,7 +697,7 @@ namespace InvAcc.Forms
             Button_Next.Click += Button_Next_Click;
             Button_Last.Click += Button_Last_Click;
             Button_Add.Click += Button_Add_Click;
-            Button_Search.Click += Button_Search_Click;
+ 
             Button_Delete.Click += Button_Delete_Click;
             Button_Save.Click += Button_Save_Click;
             Button_Close.Click += Button_Close_Click;
@@ -741,7 +740,7 @@ namespace InvAcc.Forms
         }
         private void GetInvSetting()
         {
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, 22);
+            _InvSetting = db.StockInvSetting( 22);
             _SysSetting = db.SystemSettingStock();
             _Company = db.StockCompanyList().FirstOrDefault();
             _Curency = db.Fillcurency_2(string.Empty).FirstOrDefault();
@@ -4948,7 +4947,7 @@ void ArbEng()
             try
             {
                 Button_Edit_Click(sender, e);
-                if (e.Col == 5)
+                if (e.Col == 6)
                 {
                     if ((bool)c1FlexGrid_Items.GetData(e.Row, e.Col))
                     {
@@ -5062,7 +5061,7 @@ void ArbEng()
         }
         private void radiobutton_RButDef1_CheckedChanged(object sender, CheckBoxChangeEventArgs e)
         {
-            if (radiobutton_RButDef1.Checked)
+            if (e.NewChecked.Checked)
             {
                 radiobutton_RButDef1.Checked = true;
                 radiobutton_RButDef2.Checked = false;
@@ -5073,7 +5072,7 @@ void ArbEng()
         }
         private void radiobutton_RButDef2_CheckedChanged(object sender, CheckBoxChangeEventArgs e)
         {
-            if (radiobutton_RButDef2.Checked)
+            if (e.NewChecked.Checked)
             {
                 radiobutton_RButDef1.Checked = false;
                 radiobutton_RButDef2.Checked = true;
@@ -5084,7 +5083,7 @@ void ArbEng()
         }
         private void radiobutton_RButDef3_CheckedChanged(object sender, CheckBoxChangeEventArgs e)
         {
-            if (radiobutton_RButDef3.Checked)
+            if (e.NewChecked.Checked)
             {
                 radiobutton_RButDef1.Checked = false;
                 radiobutton_RButDef2.Checked = false;
@@ -5095,7 +5094,7 @@ void ArbEng()
         }
         private void radiobutton_RButDef4_CheckedChanged(object sender, CheckBoxChangeEventArgs e)
         {
-            if (radiobutton_RButDef4.Checked)
+            if (e.NewChecked.Checked)
             {
                 radiobutton_RButDef1.Checked = false;
                 radiobutton_RButDef2.Checked = false;
@@ -5106,7 +5105,7 @@ void ArbEng()
         }
         private void radiobutton_RButDef5_CheckedChanged(object sender, CheckBoxChangeEventArgs e)
         {
-            if (radiobutton_RButDef5.Checked)
+            if (e.NewChecked.Checked)
             {
                 radiobutton_RButDef1.Checked = false;
                 radiobutton_RButDef2.Checked = false;
@@ -5622,7 +5621,7 @@ void ArbEng()
             PrintDialog PrintDialog1 = new PrintDialog();
             printDialog1.Document = prnt_doc;
             T_INVSETTING _InvSetting = new T_INVSETTING();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, 22);
+            _InvSetting = db.StockInvSetting( 22);
             try
             {
                 if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
@@ -5905,7 +5904,7 @@ void ArbEng()
             PrintDialog PrintDialog1 = new PrintDialog();
             printDialog1.Document = prnt_doc;
             T_INVSETTING _InvSetting = new T_INVSETTING();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, 22);
+            _InvSetting = db.StockInvSetting( 22);
             try
             {
                 if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
@@ -5995,7 +5994,7 @@ void ArbEng()
             PrintDialog PrintDialog1 = new PrintDialog();
             printDialog1.Document = prnt_doc;
             T_INVSETTING _InvSetting = new T_INVSETTING();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, 22);
+            _InvSetting = db.StockInvSetting( 22);
             try
             {
                 if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
@@ -6085,7 +6084,7 @@ void ArbEng()
             PrintDialog PrintDialog1 = new PrintDialog();
             printDialog1.Document = prnt_doc;
             T_INVSETTING _InvSetting = new T_INVSETTING();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, 22);
+            _InvSetting = db.StockInvSetting( 22);
             try
             {
                 if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
@@ -6175,7 +6174,7 @@ void ArbEng()
             PrintDialog PrintDialog1 = new PrintDialog();
             printDialog1.Document = prnt_doc;
             T_INVSETTING _InvSetting = new T_INVSETTING();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, 22);
+            _InvSetting = db.StockInvSetting( 22);
             try
             {
                 if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
@@ -7607,8 +7606,8 @@ void ArbEng()
             if (radiobutton_RButDef2.Checked)
             {
                 radiobutton_RButDef1.Checked = false;
-                radiobutton_RButDef2.Checked = false;
-                radiobutton_RButDef3.Checked = true;
+                radiobutton_RButDef2.Checked = true;
+                radiobutton_RButDef3.Checked = false;
                 radiobutton_RButDef4.Checked = false;
                 radiobutton_RButDef5.Checked = false;
             }
@@ -7701,6 +7700,11 @@ void ArbEng()
         }
 
         private void PanelContainerSpatial_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void metroStatusBar_itemsType_ItemClick(object sender, EventArgs e)
         {
 
         }

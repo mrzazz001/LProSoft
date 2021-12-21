@@ -2763,7 +2763,7 @@ namespace InvAcc.Forms
             _InvSetting = new T_INVSETTING();
             _SysSetting = new T_SYSSETTING();
             _GdAuto = new T_GdAuto();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+            _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
             _SysSetting = db.SystemSettingStock();
             _GdAuto = db.GdAutoStock();
         }
@@ -4402,7 +4402,9 @@ namespace InvAcc.Forms
                         dbHead.AddParameter("PointsCount", DbType.Double, data_this.PointsCount);
                         dbHead.AddParameter("IsPoints", DbType.Boolean, data_this.IsPoints);
                         dbHead.AddParameter("tailor20", DbType.String, data_this.tailor20);
-                        dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_INSERT");
+                           dbHead.AddParameter("CusVenTaxNo", DbType.String, data_this.CusVenTaxNo);
+                     dbHead.AddParameter("IS_ServiceBill", DbType.Boolean, data_this.IS_ServiceBill);
+  dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_INSERT");
                         data_this.InvHed_ID = int.Parse(dbHead.GetParameterValue("InvHed_ID").ToString());
                     }
                     catch (SqlException ex4)
@@ -4556,8 +4558,10 @@ namespace InvAcc.Forms
                     dbHead.AddParameter("PointsCount", DbType.Double, data_this.PointsCount);
                     dbHead.AddParameter("IsPoints", DbType.Boolean, data_this.IsPoints);
                     dbHead.AddParameter("tailor20", DbType.String, data_this.tailor20);
-                    dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_UPDATE");
-                }
+                     dbHead.AddParameter("CusVenTaxNo", DbType.String, data_this.CusVenTaxNo);
+                        dbHead.AddParameter("IS_ServiceBill", DbType.Boolean, data_this.IS_ServiceBill);
+ dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_UPDATE");
+                                 }
                 int iiCnt = 0;
                 try
                 {
@@ -4602,7 +4606,7 @@ namespace InvAcc.Forms
                         }
                         catch
                         {
-                            db_.AddParameter("ItmWight", DbType.Double, 0);
+                            db_.AddParameter("ItmWight", DbType.Double,(double) 0);
                         }
                         db_.AddParameter("ItmWight_T", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 34)))));
                         if (!string.IsNullOrEmpty(string.Concat(FlxInv.GetData(iiCnt, 35))))
@@ -4615,7 +4619,7 @@ namespace InvAcc.Forms
                         }
                         db_.AddParameter("LineDetails", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 36)));
                         db_.AddParameter("Serial_Key", DbType.String, "");
-                        db_.AddParameter("ItmTax", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 31)))));
+                          db_.AddParameter("ItmTax", DbType.Double,double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 31)))));
                         db_.ExecuteNonQuery(storedProcedure: true, "S_T_INVDET_INSERT");
                         if (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 32)))) != 2.0)
                         {
@@ -4694,7 +4698,7 @@ namespace InvAcc.Forms
                                 db_.AddParameter("SQtyDef", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(dataGridView_ItemDet.GetData(j, 29)))));
                                 db_.AddParameter("SPriceDef", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(dataGridView_ItemDet.GetData(j, 17)))));
                                 db_.AddParameter("SInvIdHEAD", DbType.Int32, data_this.InvHed_ID);
-                                db_.AddParameter("SItmTax", DbType.Double, 0);
+                                db_.AddParameter("SItmTax", DbType.Double,(double) 0);
                                 db_.ExecuteNonQuery(storedProcedure: true, "S_T_SINVDET_INSERT");
                             }
                         }
@@ -5063,8 +5067,8 @@ namespace InvAcc.Forms
             {
                 _Curency = listCurency[0];
             }
-            data_this.ArbTaf = ScriptNumber1.ScriptNum(decimal.Parse(VarGeneral.TString.TEmpty(txtDueAmountLoc.Text ?? ""))) + " " + _Curency.Arb_Des + " " + "فقط لاغير ";
-            data_this.EngTaf = ScriptNumber1.TafEng(decimal.Parse(VarGeneral.TString.TEmpty(txtDueAmountLoc.Text ?? ""))) + " " + _Curency.Eng_Des;
+            data_this.ArbTaf = ScriptNumber1.ScriptNum(decimal.Parse(VarGeneral.TString.TEmpty(txtDueAmountLoc.Text ?? "")));;
+            data_this.EngTaf = ScriptNumber1.TafEng(decimal.Parse(VarGeneral.TString.TEmpty(txtDueAmountLoc.Text ?? "")));
             data_this.DATE_MODIFIED = DateTime.Now;
             data_this.CreditPay = 0.0;
             data_this.NetworkPay = 0.0;

@@ -306,6 +306,7 @@ private void InitializeComponent()
             this.button_Deperction.Text = "قيــد الإهــــلاك";
             this.button_Deperction.TextColor = System.Drawing.Color.SteelBlue;
             this.button_Deperction.CheckedChanged += new System.EventHandler(this.button_Deperction_CheckedChanged);
+            this.button_Deperction.Click += new System.EventHandler(this.button_Deperction_Click);
             // 
             // label_LockeName
             // 
@@ -336,6 +337,7 @@ private void InitializeComponent()
             this.button_OpenGaid.Text = "القيد الإفتتــــاحي";
             this.button_OpenGaid.TextColor = System.Drawing.Color.SteelBlue;
             this.button_OpenGaid.CheckedChanged += new System.EventHandler(this.button_OpenGaid_CheckedChanged);
+            this.button_OpenGaid.Click += new System.EventHandler(this.button_OpenGaid_Click);
             // 
             // switchButton_Lock
             // 
@@ -616,7 +618,6 @@ private void InitializeComponent()
             this.CmbCostC.DisplayMember = "Text";
             this.CmbCostC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbCostC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbCostC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmbCostC.FormattingEnabled = true;
             this.CmbCostC.ItemHeight = 15;
             this.CmbCostC.Location = new System.Drawing.Point(172, 37);
@@ -631,7 +632,6 @@ private void InitializeComponent()
             this.CmbCurr.DisplayMember = "Text";
             this.CmbCurr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbCurr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbCurr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmbCurr.FormattingEnabled = true;
             this.CmbCurr.ItemHeight = 15;
             this.CmbCurr.Location = new System.Drawing.Point(144, 13);
@@ -646,7 +646,6 @@ private void InitializeComponent()
             this.CmbLegate.DisplayMember = "Text";
             this.CmbLegate.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbLegate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbLegate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmbLegate.FormattingEnabled = true;
             this.CmbLegate.ItemHeight = 15;
             this.CmbLegate.Location = new System.Drawing.Point(37, 61);
@@ -766,6 +765,7 @@ private void InitializeComponent()
             this.superTabControl_Main1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
             this.superTabControl_Main1.Text = "superTabControl3";
             this.superTabControl_Main1.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            this.superTabControl_Main1.SelectedTabChanged += new System.EventHandler<DevComponents.DotNetBar.SuperTabStripSelectedTabChangedEventArgs>(this.superTabControl_Main1_SelectedTabChanged);
             this.superTabControl_Main1.RightToLeftChanged += new System.EventHandler(this.superTabControl_Main1_RightToLeftChanged);
             // 
             // Button_Close
@@ -787,6 +787,7 @@ private void InitializeComponent()
             this.Button_Close.SymbolSize = 15F;
             this.Button_Close.Text = "إغلاق";
             this.Button_Close.Tooltip = "إغلاق النافذة الحالية";
+            this.Button_Close.Click += new System.EventHandler(this.Button_Close_Click_1);
             // 
             // buttonItem_Print
             // 
@@ -863,6 +864,7 @@ private void InitializeComponent()
             this.Button_Save.SymbolSize = 15F;
             this.Button_Save.Text = "حفظ";
             this.Button_Save.Tooltip = "حفظ التغييرات";
+            this.Button_Save.Click += new System.EventHandler(this.Button_Save_Click_1);
             // 
             // Button_Add
             // 
@@ -935,6 +937,7 @@ private void InitializeComponent()
             this.superTabControl_Main2.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
             this.superTabControl_Main2.Text = "superTabControl1";
             this.superTabControl_Main2.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            this.superTabControl_Main2.SelectedTabChanged += new System.EventHandler<DevComponents.DotNetBar.SuperTabStripSelectedTabChangedEventArgs>(this.superTabControl_Main2_SelectedTabChanged);
             // 
             // labelItem1
             // 
@@ -986,6 +989,7 @@ private void InitializeComponent()
             this.TextBox_Index.Name = "TextBox_Index";
             this.TextBox_Index.TextBoxWidth = 50;
             this.TextBox_Index.Visible = false;
+            this.TextBox_Index.WatermarkColor = System.Drawing.SystemColors.GrayText;
             // 
             // Label_Count
             // 
@@ -1268,6 +1272,7 @@ private void InitializeComponent()
             this.textBox_search.Name = "textBox_search";
             this.textBox_search.TextBoxHeight = 44;
             this.textBox_search.TextBoxWidth = 150;
+            this.textBox_search.WatermarkColor = System.Drawing.SystemColors.GrayText;
             // 
             // Button_ExportTable2
             // 

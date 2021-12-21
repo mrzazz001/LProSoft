@@ -663,7 +663,7 @@ private void InitializeComponent()
             this.checkBoxX_Stoped.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.checkBoxX_Stoped.Location = new System.Drawing.Point(8, 21);
             this.checkBoxX_Stoped.Name = "checkBoxX_Stoped";
-            this.checkBoxX_Stoped.Size = new System.Drawing.Size(113, 17);
+            this.checkBoxX_Stoped.Size = new System.Drawing.Size(107, 15);
             this.checkBoxX_Stoped.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBoxX_Stoped.TabIndex = 1292;
             this.checkBoxX_Stoped.Text = "حظــر الحســــاب";
@@ -803,7 +803,7 @@ private void InitializeComponent()
             this.checkBox_Credit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_Credit.Location = new System.Drawing.Point(11, 30);
             this.checkBox_Credit.Name = "checkBox_Credit";
-            this.checkBox_Credit.Size = new System.Drawing.Size(57, 17);
+            this.checkBox_Credit.Size = new System.Drawing.Size(52, 16);
             this.checkBox_Credit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_Credit.TabIndex = 11;
             this.checkBox_Credit.Text = "دائــن";
@@ -827,7 +827,7 @@ private void InitializeComponent()
             this.checkBox_Debit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_Debit.Location = new System.Drawing.Point(100, 30);
             this.checkBox_Debit.Name = "checkBox_Debit";
-            this.checkBox_Debit.Size = new System.Drawing.Size(60, 17);
+            this.checkBox_Debit.Size = new System.Drawing.Size(56, 16);
             this.checkBox_Debit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_Debit.TabIndex = 10;
             this.checkBox_Debit.Text = "مــدين";
@@ -1027,7 +1027,7 @@ private void InitializeComponent()
             this.treeView1.PathSeparator = ";";
             this.treeView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.treeView1.SelectionBoxStyle = DevComponents.AdvTree.eSelectionStyle.FullRowSelect;
-            this.treeView1.Size = new System.Drawing.Size(343, 390);
+            this.treeView1.Size = new System.Drawing.Size(345, 390);
             this.treeView1.Styles.Add(this.elementStyle1);
             this.treeView1.Styles.Add(this.elementStyle7);
             this.treeView1.Styles.Add(this.elementStyle8);
@@ -2162,10 +2162,10 @@ private void InitializeComponent()
             this.tabControlPanel1.Controls.Add(this.advTree3);
             this.tabControlPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel1.Location = new System.Drawing.Point(0, 24);
+            this.tabControlPanel1.Location = new System.Drawing.Point(0, 26);
             this.tabControlPanel1.Name = "tabControlPanel1";
             this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(436, 256);
+            this.tabControlPanel1.Size = new System.Drawing.Size(436, 254);
             this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
@@ -2196,7 +2196,7 @@ private void InitializeComponent()
             this.advTree3.NodesConnector = this.nodeConnector1;
             this.advTree3.NodeStyle = this.elementStyle3;
             this.advTree3.PathSeparator = ";";
-            this.advTree3.Size = new System.Drawing.Size(434, 254);
+            this.advTree3.Size = new System.Drawing.Size(434, 252);
             this.advTree3.Styles.Add(this.elementStyle3);
             this.advTree3.Styles.Add(this.elementStyle4);
             this.advTree3.TabIndex = 0;
@@ -2209,7 +2209,7 @@ private void InitializeComponent()
             // 
             this.progressBarX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.progressBarX1.ColorTable = DevComponents.DotNetBar.eProgressBarItemColor.Paused;
-            this.progressBarX1.Location = new System.Drawing.Point(58, 272);
+            this.progressBarX1.Location = new System.Drawing.Point(58, 246);
             this.progressBarX1.Name = "progressBarX1";
             this.progressBarX1.Size = new System.Drawing.Size(140, 20);
             this.progressBarX1.TabIndex = 4;
@@ -2400,10 +2400,10 @@ private void InitializeComponent()
             this.tabControlPanel3.Controls.Add(this.advTree5);
             this.tabControlPanel3.DisabledBackColor = System.Drawing.Color.Empty;
             this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel3.Location = new System.Drawing.Point(0, 24);
+            this.tabControlPanel3.Location = new System.Drawing.Point(0, 26);
             this.tabControlPanel3.Name = "tabControlPanel3";
             this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel3.Size = new System.Drawing.Size(436, 256);
+            this.tabControlPanel3.Size = new System.Drawing.Size(436, 254);
             this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
             this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -2433,7 +2433,7 @@ private void InitializeComponent()
             this.advTree5.NodeStyle = this.elementStyle6;
             this.advTree5.PathSeparator = ";";
             this.advTree5.SelectionBoxStyle = DevComponents.AdvTree.eSelectionStyle.FullRowSelect;
-            this.advTree5.Size = new System.Drawing.Size(434, 254);
+            this.advTree5.Size = new System.Drawing.Size(434, 252);
             this.advTree5.Styles.Add(this.elementStyle6);
             this.advTree5.TabIndex = 0;
             this.advTree5.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -2456,10 +2456,10 @@ private void InitializeComponent()
             this.tabControlPanel2.Controls.Add(this.advTree4);
             this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel2.Location = new System.Drawing.Point(0, 24);
+            this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
             this.tabControlPanel2.Name = "tabControlPanel2";
             this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(436, 256);
+            this.tabControlPanel2.Size = new System.Drawing.Size(436, 254);
             this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
@@ -2492,7 +2492,7 @@ private void InitializeComponent()
             this.node33});
             this.advTree4.NodeStyle = this.elementStyle5;
             this.advTree4.PathSeparator = ";";
-            this.advTree4.Size = new System.Drawing.Size(434, 254);
+            this.advTree4.Size = new System.Drawing.Size(434, 252);
             this.advTree4.Styles.Add(this.elementStyle5);
             this.advTree4.TabIndex = 0;
             this.advTree4.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";

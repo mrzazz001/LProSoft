@@ -32,24 +32,24 @@ private void InitializeComponent()
             DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates1 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
             DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates2 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
             DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable8 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable8 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates3 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
             DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
@@ -95,6 +95,7 @@ private void InitializeComponent()
             this.FlxDat = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.superTabControl_Info = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.xGmesures1 = new InvAcc.Forms.SellPurSystem.specialcontrols.XGmesures();
             this.FlxStkQty = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.label32 = new System.Windows.Forms.Label();
             this.txtVSerial = new System.Windows.Forms.TextBox();
@@ -107,6 +108,13 @@ private void InitializeComponent()
             this.txtLCost = new System.Windows.Forms.TextBox();
             this.txtVCost = new System.Windows.Forms.TextBox();
             this.superTabItem_items = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.label_LockeName = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtTotalQ = new DevComponents.Editors.DoubleInput();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox_Usr = new System.Windows.Forms.TextBox();
+            this.superTabItem_Detiles = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel8 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabControl3 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
@@ -164,13 +172,6 @@ private void InitializeComponent()
             this.textBoxItem_TaxByNetValue = new DevComponents.DotNetBar.TextBoxItem();
             this.labelItem_TaxByNetPer = new DevComponents.DotNetBar.LabelItem();
             this.superTabItem_Gaids = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.label_LockeName = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txtTotalQ = new DevComponents.Editors.DoubleInput();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox_Usr = new System.Windows.Forms.TextBox();
-            this.superTabItem_Detiles = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabControl_CostSts = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel6 = new DevComponents.DotNetBar.SuperTabControlPanel();
@@ -312,7 +313,6 @@ private void InitializeComponent()
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtItemName = new System.Windows.Forms.TextBox();
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
-            this.xGmesures1 = new InvAcc.Forms.SellPurSystem.specialcontrols.XGmesures();
             this.PanelSpecialContainer.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FlxDat)).BeginInit();
@@ -320,6 +320,8 @@ private void InitializeComponent()
             this.superTabControl_Info.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FlxStkQty)).BeginInit();
+            this.superTabControlPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).BeginInit();
             this.superTabControlPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl3)).BeginInit();
             this.superTabControl3.SuspendLayout();
@@ -331,8 +333,6 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.txtTotDis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotDisLoc)).BeginInit();
             this.superTabControlPanel9.SuspendLayout();
-            this.superTabControlPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).BeginInit();
             this.superTabControlPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_CostSts)).BeginInit();
             this.superTabControl_CostSts.SuspendLayout();
@@ -536,6 +536,7 @@ private void InitializeComponent()
             this.netResize1.SetResizeTextBoxMultiline(this.textBox_ID, false);
             this.textBox_ID.Size = new System.Drawing.Size(300, 20);
             this.textBox_ID.TabIndex = 1208;
+            this.textBox_ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox_ID.ButtonCustomClick += new System.EventHandler(this.textBox_ID_ButtonCustomClick);
             // 
             // switchButton_Lock
@@ -624,8 +625,8 @@ private void InitializeComponent()
             this.superTabControl_Info.ControlBox.CloseBox,
             this.superTabControl_Info.ControlBox.MenuBox});
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel3);
-            this.superTabControl_Info.Controls.Add(this.superTabControlPanel8);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel2);
+            this.superTabControl_Info.Controls.Add(this.superTabControlPanel8);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel5);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel4);
             this.superTabControl_Info.ForeColor = System.Drawing.Color.Black;
@@ -677,6 +678,17 @@ private void InitializeComponent()
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.superTabItem_items;
             this.superTabControlPanel3.Click += new System.EventHandler(this.superTabControlPanel3_Click);
+            // 
+            // xGmesures1
+            // 
+            this.xGmesures1.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xGmesures1.Appearance.Options.UseBackColor = true;
+            this.xGmesures1.Location = new System.Drawing.Point(435, 6);
+            this.xGmesures1.Name = "xGmesures1";
+            this.xGmesures1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.xGmesures1.Size = new System.Drawing.Size(340, 91);
+            this.xGmesures1.TabIndex = 1242;
+            this.xGmesures1.Visible = false;
             // 
             // FlxStkQty
             // 
@@ -844,6 +856,119 @@ private void InitializeComponent()
             this.superTabItem_items.TabColor = superTabItemColorTable1;
             this.superTabItem_items.Text = "م.الصنف";
             // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.Controls.Add(this.label_LockeName);
+            this.superTabControlPanel2.Controls.Add(this.label27);
+            this.superTabControlPanel2.Controls.Add(this.txtTotalQ);
+            this.superTabControlPanel2.Controls.Add(this.label30);
+            this.superTabControlPanel2.Controls.Add(this.textBox_Usr);
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            superTabLinearGradientColorTable3.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.Gray,
+        System.Drawing.Color.White};
+            superTabPanelItemColorTable2.Background = superTabLinearGradientColorTable3;
+            superTabPanelColorTable2.Default = superTabPanelItemColorTable2;
+            this.superTabControlPanel2.PanelColor = superTabPanelColorTable2;
+            this.superTabControlPanel2.Size = new System.Drawing.Size(986, 111);
+            this.superTabControlPanel2.TabIndex = 0;
+            this.superTabControlPanel2.TabItem = this.superTabItem_Detiles;
+            this.superTabControlPanel2.Visible = false;
+            // 
+            // label_LockeName
+            // 
+            this.label_LockeName.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label_LockeName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_LockeName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label_LockeName.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label_LockeName.ForeColor = System.Drawing.Color.Maroon;
+            this.label_LockeName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label_LockeName.Location = new System.Drawing.Point(0, 0);
+            this.label_LockeName.Name = "label_LockeName";
+            this.label_LockeName.Size = new System.Drawing.Size(132, 111);
+            this.label_LockeName.TabIndex = 1118;
+            this.label_LockeName.Text = "--";
+            this.label_LockeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label27
+            // 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label27.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label27.Location = new System.Drawing.Point(892, 55);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(67, 14);
+            this.label27.TabIndex = 1056;
+            this.label27.Text = "المستخدم :";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtTotalQ
+            // 
+            this.txtTotalQ.AllowEmptyState = false;
+            this.txtTotalQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.txtTotalQ.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTotalQ.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTotalQ.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTotalQ.DisplayFormat = "0.00";
+            this.txtTotalQ.Font = new System.Drawing.Font("Tahoma", 6.75F);
+            this.txtTotalQ.Increment = 0D;
+            this.txtTotalQ.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtTotalQ.IsInputReadOnly = true;
+            this.txtTotalQ.Location = new System.Drawing.Point(837, 21);
+            this.txtTotalQ.Name = "txtTotalQ";
+            this.txtTotalQ.Size = new System.Drawing.Size(53, 18);
+            this.txtTotalQ.TabIndex = 1051;
+            // 
+            // label30
+            // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label30.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label30.Location = new System.Drawing.Point(892, 21);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(86, 14);
+            this.label30.TabIndex = 1050;
+            this.label30.Text = "إجمالي الكمية :";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox_Usr
+            // 
+            this.textBox_Usr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_Usr.BackColor = System.Drawing.Color.SteelBlue;
+            this.textBox_Usr.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.textBox_Usr.ForeColor = System.Drawing.Color.White;
+            this.textBox_Usr.Location = new System.Drawing.Point(620, 52);
+            this.textBox_Usr.MaxLength = 30;
+            this.textBox_Usr.Name = "textBox_Usr";
+            this.textBox_Usr.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_Usr, false);
+            this.textBox_Usr.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox_Usr.Size = new System.Drawing.Size(268, 20);
+            this.textBox_Usr.TabIndex = 1058;
+            this.textBox_Usr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // superTabItem_Detiles
+            // 
+            this.superTabItem_Detiles.AttachedControl = this.superTabControlPanel2;
+            this.superTabItem_Detiles.GlobalItem = false;
+            this.superTabItem_Detiles.Name = "superTabItem_Detiles";
+            superTabLinearGradientColorTable4.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.White};
+            superTabItemStateColorTable2.Background = superTabLinearGradientColorTable4;
+            superTabColorStates2.Normal = superTabItemStateColorTable2;
+            superTabItemColorTable2.Default = superTabColorStates2;
+            this.superTabItem_Detiles.TabColor = superTabItemColorTable2;
+            this.superTabItem_Detiles.Text = "تفاصيل";
+            // 
             // superTabControlPanel8
             // 
             this.superTabControlPanel8.Controls.Add(this.superTabControl3);
@@ -894,9 +1019,9 @@ private void InitializeComponent()
             this.switchButton_TaxByNet,
             this.textBoxItem_TaxByNetValue,
             this.labelItem_TaxByNetPer});
-            superTabLinearGradientColorTable6.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable8.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gainsboro};
-            superTabColorTable1.Background = superTabLinearGradientColorTable6;
+            superTabColorTable1.Background = superTabLinearGradientColorTable8;
             this.superTabControl3.TabStripColor = superTabColorTable1;
             this.superTabControl3.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
             this.superTabControl3.Text = "superTabControl3";
@@ -930,12 +1055,12 @@ private void InitializeComponent()
             this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel1.Location = new System.Drawing.Point(0, 25);
             this.superTabControlPanel1.Name = "superTabControlPanel1";
-            superTabLinearGradientColorTable3.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable5.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable2.Background = superTabLinearGradientColorTable3;
-            superTabPanelColorTable2.Default = superTabPanelItemColorTable2;
-            this.superTabControlPanel1.PanelColor = superTabPanelColorTable2;
+            superTabPanelItemColorTable3.Background = superTabLinearGradientColorTable5;
+            superTabPanelColorTable3.Default = superTabPanelItemColorTable3;
+            this.superTabControlPanel1.PanelColor = superTabPanelColorTable3;
             this.superTabControlPanel1.Size = new System.Drawing.Size(986, 86);
             this.superTabControlPanel1.TabIndex = 1;
             this.superTabControlPanel1.TabItem = this.superTabItem_Pay;
@@ -1347,12 +1472,12 @@ private void InitializeComponent()
             this.superTabControlPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel10.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel10.Name = "superTabControlPanel10";
-            superTabLinearGradientColorTable4.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable6.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable3.Background = superTabLinearGradientColorTable4;
-            superTabPanelColorTable3.Default = superTabPanelItemColorTable3;
-            this.superTabControlPanel10.PanelColor = superTabPanelColorTable3;
+            superTabPanelItemColorTable4.Background = superTabLinearGradientColorTable6;
+            superTabPanelColorTable4.Default = superTabPanelItemColorTable4;
+            this.superTabControlPanel10.PanelColor = superTabPanelColorTable4;
             this.superTabControlPanel10.Size = new System.Drawing.Size(986, 111);
             this.superTabControlPanel10.TabIndex = 0;
             this.superTabControlPanel10.TabItem = this.superTabItem_Dis;
@@ -1548,12 +1673,12 @@ private void InitializeComponent()
             this.superTabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel9.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel9.Name = "superTabControlPanel9";
-            superTabLinearGradientColorTable5.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable7.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable4.Background = superTabLinearGradientColorTable5;
-            superTabPanelColorTable4.Default = superTabPanelItemColorTable4;
-            this.superTabControlPanel9.PanelColor = superTabPanelColorTable4;
+            superTabPanelItemColorTable5.Background = superTabLinearGradientColorTable7;
+            superTabPanelColorTable5.Default = superTabPanelItemColorTable5;
+            this.superTabControlPanel9.PanelColor = superTabPanelColorTable5;
             this.superTabControlPanel9.Size = new System.Drawing.Size(986, 111);
             this.superTabControlPanel9.TabIndex = 1;
             this.superTabControlPanel9.TabItem = this.superTabItem_Tax;
@@ -1767,126 +1892,13 @@ private void InitializeComponent()
             this.superTabItem_Gaids.AttachedControl = this.superTabControlPanel8;
             this.superTabItem_Gaids.GlobalItem = false;
             this.superTabItem_Gaids.Name = "superTabItem_Gaids";
-            superTabLinearGradientColorTable7.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.Empty};
-            superTabItemStateColorTable2.Background = superTabLinearGradientColorTable7;
-            superTabColorStates2.Normal = superTabItemStateColorTable2;
-            superTabItemColorTable2.Default = superTabColorStates2;
-            this.superTabItem_Gaids.TabColor = superTabItemColorTable2;
-            this.superTabItem_Gaids.Text = "القيود";
-            // 
-            // superTabControlPanel2
-            // 
-            this.superTabControlPanel2.Controls.Add(this.label_LockeName);
-            this.superTabControlPanel2.Controls.Add(this.label27);
-            this.superTabControlPanel2.Controls.Add(this.txtTotalQ);
-            this.superTabControlPanel2.Controls.Add(this.label30);
-            this.superTabControlPanel2.Controls.Add(this.textBox_Usr);
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            superTabLinearGradientColorTable8.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.Gray,
-        System.Drawing.Color.White};
-            superTabPanelItemColorTable5.Background = superTabLinearGradientColorTable8;
-            superTabPanelColorTable5.Default = superTabPanelItemColorTable5;
-            this.superTabControlPanel2.PanelColor = superTabPanelColorTable5;
-            this.superTabControlPanel2.Size = new System.Drawing.Size(986, 111);
-            this.superTabControlPanel2.TabIndex = 0;
-            this.superTabControlPanel2.TabItem = this.superTabItem_Detiles;
-            this.superTabControlPanel2.Visible = false;
-            // 
-            // label_LockeName
-            // 
-            this.label_LockeName.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label_LockeName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label_LockeName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label_LockeName.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.label_LockeName.ForeColor = System.Drawing.Color.Maroon;
-            this.label_LockeName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label_LockeName.Location = new System.Drawing.Point(0, 0);
-            this.label_LockeName.Name = "label_LockeName";
-            this.label_LockeName.Size = new System.Drawing.Size(132, 111);
-            this.label_LockeName.TabIndex = 1118;
-            this.label_LockeName.Text = "--";
-            this.label_LockeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label27
-            // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.label27.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label27.Location = new System.Drawing.Point(892, 55);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(67, 14);
-            this.label27.TabIndex = 1056;
-            this.label27.Text = "المستخدم :";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtTotalQ
-            // 
-            this.txtTotalQ.AllowEmptyState = false;
-            this.txtTotalQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.txtTotalQ.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtTotalQ.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTotalQ.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtTotalQ.DisplayFormat = "0.00";
-            this.txtTotalQ.Font = new System.Drawing.Font("Tahoma", 6.75F);
-            this.txtTotalQ.Increment = 0D;
-            this.txtTotalQ.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtTotalQ.IsInputReadOnly = true;
-            this.txtTotalQ.Location = new System.Drawing.Point(837, 21);
-            this.txtTotalQ.Name = "txtTotalQ";
-            this.txtTotalQ.Size = new System.Drawing.Size(53, 18);
-            this.txtTotalQ.TabIndex = 1051;
-            // 
-            // label30
-            // 
-            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.label30.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label30.Location = new System.Drawing.Point(892, 21);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(86, 14);
-            this.label30.TabIndex = 1050;
-            this.label30.Text = "إجمالي الكمية :";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox_Usr
-            // 
-            this.textBox_Usr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_Usr.BackColor = System.Drawing.Color.SteelBlue;
-            this.textBox_Usr.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.textBox_Usr.ForeColor = System.Drawing.Color.White;
-            this.textBox_Usr.Location = new System.Drawing.Point(620, 52);
-            this.textBox_Usr.MaxLength = 30;
-            this.textBox_Usr.Name = "textBox_Usr";
-            this.textBox_Usr.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_Usr, false);
-            this.textBox_Usr.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_Usr.Size = new System.Drawing.Size(268, 20);
-            this.textBox_Usr.TabIndex = 1058;
-            this.textBox_Usr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // superTabItem_Detiles
-            // 
-            this.superTabItem_Detiles.AttachedControl = this.superTabControlPanel2;
-            this.superTabItem_Detiles.GlobalItem = false;
-            this.superTabItem_Detiles.Name = "superTabItem_Detiles";
             superTabLinearGradientColorTable9.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.White};
+        System.Drawing.Color.Empty};
             superTabItemStateColorTable3.Background = superTabLinearGradientColorTable9;
             superTabColorStates3.Normal = superTabItemStateColorTable3;
             superTabItemColorTable3.Default = superTabColorStates3;
-            this.superTabItem_Detiles.TabColor = superTabItemColorTable3;
-            this.superTabItem_Detiles.Text = "تفاصيل";
+            this.superTabItem_Gaids.TabColor = superTabItemColorTable3;
+            this.superTabItem_Gaids.Text = "القيود";
             // 
             // superTabControlPanel5
             // 
@@ -4285,16 +4297,6 @@ private void InitializeComponent()
             this.netResize1.ParentControl = this;
             this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 
-            // xGmesures1
-            // 
-            this.xGmesures1.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.xGmesures1.Appearance.Options.UseBackColor = true;
-            this.xGmesures1.Location = new System.Drawing.Point(435, 6);
-            this.xGmesures1.Name = "xGmesures1";
-            this.xGmesures1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.xGmesures1.Size = new System.Drawing.Size(340, 91);
-            this.xGmesures1.TabIndex = 1242;
-            // 
             // FrmInvPuchaesReturn
             // 
             this.ClientSize = new System.Drawing.Size(1278, 514);
@@ -4332,6 +4334,9 @@ private void InitializeComponent()
             this.superTabControlPanel3.ResumeLayout(false);
             this.superTabControlPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FlxStkQty)).EndInit();
+            this.superTabControlPanel2.ResumeLayout(false);
+            this.superTabControlPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).EndInit();
             this.superTabControlPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl3)).EndInit();
             this.superTabControl3.ResumeLayout(false);
@@ -4346,9 +4351,6 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.txtTotDisLoc)).EndInit();
             this.superTabControlPanel9.ResumeLayout(false);
             this.superTabControlPanel9.PerformLayout();
-            this.superTabControlPanel2.ResumeLayout(false);
-            this.superTabControlPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).EndInit();
             this.superTabControlPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_CostSts)).EndInit();
             this.superTabControl_CostSts.ResumeLayout(false);

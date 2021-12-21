@@ -16,7 +16,7 @@ using ProShared.Stock_Data;
 
 namespace InvAcc.Controls
 {
-
+  
     public partial class Ubar : DevExpress.XtraEditors.XtraUserControl
     {
         public Ubar()
@@ -27,7 +27,7 @@ namespace InvAcc.Controls
 
         FormState statex;
         bool canUpdate;
-        private bool CanEdit;
+        public bool CanEdit;
 
         protected bool CanUpdate
         {
@@ -41,7 +41,7 @@ namespace InvAcc.Controls
             }
         }
         public delegate void customMessageHandler(System.Object sender,
-                                        ItemEventArg e);
+                                        BarEvArg e);
         public event customMessageHandler Button_Next_Click;
         public event customMessageHandler Button_Previous_Click;
         public event customMessageHandler Button_First_Click;
@@ -52,21 +52,20 @@ namespace InvAcc.Controls
         public event customMessageHandler Button_Close_Click;
 
         public event customMessageHandler Button_Search_Click;
-        public BindingSource Binding;
-        private void Button_Prev_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public void Button_Prev_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Binding.MovePrevious();
-            UpdateVcr();
+           Binding.MovePrevious();
+       
             if (Button_Previous_Click != null)
                 Button_Previous_Click(null, null);
         }
 
-        private void Button_First_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public void Button_First_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
             {
-                Binding.MoveFirst();
-                UpdateVcr();
+               Binding.MoveFirst();
+           
             }
             catch { }
             if (Button_First_Click != null)
@@ -74,28 +73,30 @@ namespace InvAcc.Controls
 
          }
 
-        private void Button_Next_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public void Button_Next_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Binding.MoveNext();
-            UpdateVcr();
+           Binding.MoveNext();
+            
             if (Button_Next_Click != null)
                 Button_Next_Click(null, null);
 
         }
 
-        private void Button_Last_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public void Button_Last_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Binding.MoveLast();
-            UpdateVcr();
+           Binding.MoveLast();
+             
             if (Button_Last_Click != null)
                 Button_Last_Click(null, null);
         }
 
-        private void Button_Add_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public void Button_Add_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Binding.AddNew();
+            ItemEventArg ee = new ItemEventArg();
+          
             if (Button_Add_Click != null)
                 Button_Add_Click(null, null);
+           Binding.AddNew();
         }
         public FormState State
         {
@@ -109,11 +110,15 @@ namespace InvAcc.Controls
                 Button_Add.Visibility = (value ? DevExpress.XtraBars.BarItemVisibility.Always : DevExpress.XtraBars.BarItemVisibility.Never);
             }
         }
+
+        internal void setPostion(string v, string serachNo)
+        { }
+
         public bool IfDelete
         {
             set
             {
-                Button_Delete.Visibility = (value?DevExpress.XtraBars.BarItemVisibility.Always: DevExpress.XtraBars.BarItemVisibility.Never);
+               Button_Delete.Visibility = (value?DevExpress.XtraBars.BarItemVisibility.Always: DevExpress.XtraBars.BarItemVisibility.Never);
                 
             }
         }
@@ -121,57 +126,87 @@ namespace InvAcc.Controls
         {
             set
             {
-                Button_Save.Visibility = (value ? DevExpress.XtraBars.BarItemVisibility.Always : DevExpress.XtraBars.BarItemVisibility.Never);
+               Button_Save.Visibility = (value ? DevExpress.XtraBars.BarItemVisibility.Always : DevExpress.XtraBars.BarItemVisibility.Never);
             }
         }
         bool fcanUpdate;
      
       
-        public int LangArEn { get; private set; }
+        public int LangArEn { get; internal set; }
         public object Table { get; internal set; }
-
-        private void Button_Save_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (!Button_Save.Enabled)
+        public BindingSource BindingSource { 
+            
+            get
             {
-                return;
+                return Binding;
             }
-            if (State == FormState.Edit && !CanEdit)
+            set 
             {
-                MessageBox.Show((LangArEn == 0) ? "لا يمكن اتمام هذه العملية .. الرجاء مراجعة صلاحيات المستخدمين !" : "Can not complete this process .. please see the powers of the users!", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                return;
+                Binding = value;
+                Binding.PositionChanged += Binding_PositionChanged;
+                Binding.ListChanged += Button_edit_Click;
             }
-            if (State == FormState.New && !Button_Add.Enabled)
-            {
-                MessageBox.Show((LangArEn == 0) ? "لا يمكن اتمام هذه العملية .. الرجاء مراجعة صلاحيات المستخدمين !" : "Can not complete this process .. please see the powers of the users!", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                return;
-            }
-          
-            if (Button_Save_Click != null)
-                Button_Save_Click(null, null);
-
+        
         }
 
-        private void Button_Search_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Button_edit_Click(object sender, ListChangedEventArgs e)
+        {
+            if (CanEdit && State != FormState.Edit && State != FormState.New )
+            {
+                if (State != FormState.New)
+                {
+                    State = FormState.Edit;
+                }
+              
+            }
+        }
+
+        public void Button_Save_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BarEvArg ee = new BarEvArg();
+           
+            if (Button_Save_Click != null)
+                Button_Save_Click(null, ee);
+            if(ee.ReturnedCommand==CommandTOexecute.Ok)
+            {
+               
+                ee.db.SubmitChanges();
+                State = FormState.Saved;
+                MessageBox.Show("تم الحفظ بنجاح");
+            }
+        }
+
+        public void Button_Search_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (Button_Search_Click != null)
                 Button_Search_Click(null, null);
         }
+
      
-     
-        private void Button_Delete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {   if (Button_Delete_Click != null)
-                Button_Delete_Click(null, null);
-        }
-        private void UpdateVcr()
+        public void Button_Delete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Label_Count.Caption = Binding.Count.ToString();
-            TextBox_Index.EditValue = Binding.Position;
+            BarEvArg ee = new BarEvArg();
+            if (Button_Delete_Click != null)
+                Button_Delete_Click(null, ee);
+            if (ee.ReturnedCommand == CommandTOexecute.Ok)
+            {
+                if (MessageBox.Show("هل انت متاكم من حذف السجل الحالي", "تحذير", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Binding.RemoveCurrent();
+               
+                }
+             
+            }
+        }
+        public void UpdateVcr()
+        {
+            Label_Count.Caption =Binding.Count.ToString();
+            TextBox_Index.EditValue =Binding.Position;
             int vCount = 0;
             int vPosition = 0;
             try
             {
-                vCount = int.Parse(Label_Count.Caption);
+                vCount = Binding.Count;
             }
             catch
             {
@@ -179,7 +214,7 @@ namespace InvAcc.Controls
             }
             try
             {
-                vPosition = int.Parse(TextBox_Index.EditValue.ToString());
+                vPosition = Binding.Position+1;
             }
             catch
             {
@@ -204,12 +239,12 @@ namespace InvAcc.Controls
             }
             if (vPosition == 1)
             {
-                DevExpress.XtraBars.BarLargeButtonItem Button_Firsst = Button_First;
+                 
                 bool enabled = (Button_Prev.Enabled = false);
-                Button_Firsst.Enabled = enabled;
-                DevExpress.XtraBars.BarLargeButtonItem Button_Lasst = Button_Last;
+                Button_First.Enabled = enabled;
+               
                 enabled = (Button_Next.Enabled = vCount > 1);
-                Button_Lasst.Enabled = enabled;
+                Button_Last.Enabled = enabled;
                 if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                 {
                     lable_Records.Caption = "الأول من " + vCount + " سجلات";
@@ -224,9 +259,9 @@ namespace InvAcc.Controls
             {
                 Button_Last.Enabled = false;
                 Button_Next.Enabled = false;
-                DevExpress.XtraBars.BarLargeButtonItem Button_First2 = Button_First;
+               
                 bool enabled = (Button_Prev.Enabled = vCount > 1);
-                Button_First2.Enabled = enabled;
+                Button_First.Enabled = enabled;
                 if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                 {
                     lable_Records.Caption = "الأخير من " + vCount + " سجلات";
@@ -237,36 +272,72 @@ namespace InvAcc.Controls
                 }
                 return;
             }
-            //Button_First.Enabled = true;
-            //Button_Prev.Enabled = true;
-            //Button_Next.Enabled = true;
-            //Button_Last.Enabled = true;
+            Button_First.Enabled = true;
+            Button_Prev.Enabled = true;
+            Button_Next.Enabled = true;
+            Button_Last.Enabled = true;
             if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
             {
-             //   lable_Records.Caption = "السجل " + vPosition + " من " + vCount;
+                lable_Records.Caption = "السجل " + vPosition + " من " + vCount;
             }
             else
             {
-               // lable_Records.Caption = "Record " + vPosition + " of " + vCount;
+                lable_Records.Caption = "Record " + vPosition + " of " + vCount;
             }
         }
 
-        private void TextBox_Index_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public void TextBox_Index_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
         }
 
-        private void Button_Close_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public void Button_Close_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if(State==FormState.Edit)
+            if (MessageBox.Show("هل تريد حفظ جميع التعديلات والخروج", "Close", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+
+            }
+
             if (Button_Close_Click!=null)
             {
                 Button_Close_Click(null, null);
             }
+           
+
         }
 
-        private void ذ_LinkDeleted(object sender, DevExpress.XtraBars.LinkEventArgs e)
+        public void ذ_LinkDeleted(object sender, DevExpress.XtraBars.LinkEventArgs e)
         {
 
         }
+
+        public void Binding_PositionChanged(object sender, EventArgs e)
+        {
+            UpdateVcr();
+        }
     }
+
+    static class ExtensionMethods
+    {
+        public static BindingList<T> ToBindingList<T>(this IEnumerable<T> range)
+        {
+            return new BindingList<T>(range.ToList());
+        }
+    }
+
+    public enum CommandTOexecute
+    {
+        Ok, Cancel, NeedPermision
+    }
+    public class BarEvArg
+    {
+        public CommandTOexecute ReturnedCommand = CommandTOexecute.Ok;
+        public Stock_DataDataContext db;
+        public Rate_DataDataContext dbc;
+        public BindingSource binding;
+
+
+    }
+
 }

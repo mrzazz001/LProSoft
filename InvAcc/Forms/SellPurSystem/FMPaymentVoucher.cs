@@ -158,6 +158,7 @@ namespace InvAcc.Forms
         {
             this.WindowState = FormWindowState.Minimized;
             this.WindowState = FormWindowState.Maximized;
+            ActiveControl = c1FlexGrid1;
         }
         private void FrmInvSale_SizeChanged(object sender, EventArgs e)
         {
@@ -682,7 +683,7 @@ namespace InvAcc.Forms
                 {
                     return;
                 }
-                //if (_InvSetting.InvpRINTERInfo.nTyp.Substring(0, 1) == "1")
+                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) != "1")
                 {
                     RepShow _RepShow = new RepShow();
                     _RepShow.Tables = "T_GDDET LEFT OUTER JOIN T_GDHEAD ON T_GDDET.gdID = T_GDHEAD.gdhead_ID LEFT OUTER JOIN T_INVSETTING ON T_GDHEAD.gdTyp = T_INVSETTING.InvID  LEFT OUTER JOIN T_Curency ON T_GDHEAD.CurTyp = T_Curency.Curency_ID LEFT OUTER JOIN T_CstTbl ON T_GDHEAD.gdCstNo = T_CstTbl.Cst_ID LEFT OUTER JOIN T_Mndob ON T_GDHEAD.gdMnd = T_Mndob.Mnd_ID LEFT OUTER JOIN T_AccDef ON T_GDDET.AccNo = T_AccDef.AccDef_No LEFT OUTER JOIN T_SYSSETTING ON T_GDHEAD.CompanyID = T_SYSSETTING.SYSSETTING_ID";
@@ -747,8 +748,8 @@ namespace InvAcc.Forms
                     }
                     return;
                 }
-                //PrintSet();
-                //prnt_doc.Print();
+                PrintSet();
+                prnt_doc.Print();
             }
             catch
             {
@@ -1944,7 +1945,7 @@ namespace InvAcc.Forms
             _InvSetting = new T_INVSETTING();
             _SysSetting = new T_SYSSETTING();
             listAccDef = new List<T_AccDef>();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+            _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
             _SysSetting = db.SystemSettingStock();
             listAccDef = db.StockAccDefList();
         }
@@ -2407,6 +2408,7 @@ namespace InvAcc.Forms
                     c1FlexGrid1.Rows.Count = 100;
                 }
                 List<T_AccDef> listAccDefSer = new List<T_AccDef>();
+                if (c1FlexGrid1.GetData(e.Row, e.Col) == null) c1FlexGrid1.SetData(e.Row, e.Col, "");
                 listAccDefSer = db.T_AccDefs.Where((T_AccDef t) => t.AccDef_ID == 0).ToList();
                 if (e.Col == 1 && !Utilites.isnollorempty(c1FlexGrid1.GetData(e.Row, e.Col)))
                 {
@@ -3374,8 +3376,8 @@ namespace InvAcc.Forms
                 double _totPaid = 0.0;
                 for (int i = 0; i < VarGeneral._GaidInv.ToList().Count; i++)
                 {
-                    VarGeneral._GaidInv.ToList()[i].GDat = db.StockInvSetting(VarGeneral.UserID, VarGeneral._GaidInv.ToList()[i].InvTyp.Value).InvNamA;
-                    VarGeneral._GaidInv.ToList()[i].HDat = db.StockInvSetting(VarGeneral.UserID, VarGeneral._GaidInv.ToList()[i].InvTyp.Value).InvNamE;
+                    VarGeneral._GaidInv.ToList()[i].GDat = db.StockInvSetting( VarGeneral._GaidInv.ToList()[i].InvTyp.Value).InvNamA;
+                    VarGeneral._GaidInv.ToList()[i].HDat = db.StockInvSetting( VarGeneral._GaidInv.ToList()[i].InvTyp.Value).InvNamE;
                     List<T_GDHEAD> _gd = dbx.ExecuteQuery<T_GDHEAD>("select (select sum(ABS(T_GDDET.gdValue)) from T_GDDET where T_GDHEAD.gdhead_ID = T_GDDET.gdID and T_GDDET.gdValue < 0) as gdTot,gdhead_ID from T_GDHEAD where BName='" + VarGeneral._GaidInv.ToList()[i].InvHed_ID.ToString() + "' and gdLok =0 and gdTyp =" + VarGeneral.InvTyp, new object[0]).ToList();
                     _totPaid = 0.0;
                     try

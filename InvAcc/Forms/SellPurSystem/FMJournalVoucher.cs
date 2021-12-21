@@ -101,6 +101,7 @@ namespace InvAcc.Forms
 		{
 			this.WindowState = FormWindowState.Minimized;
 			this.WindowState = FormWindowState.Maximized;
+            ActiveControl = c1FlexGrid1;
 		}
 		private void FrmInvSale_SizeChanged(object sender, EventArgs e)
 		{
@@ -753,7 +754,7 @@ namespace InvAcc.Forms
                 {
                     return;
                 }
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(0, 1) == "1")
+                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) != "1")
                 {
                     RepShow _RepShow = new RepShow();
                     _RepShow.Tables = "T_GDDET LEFT OUTER JOIN T_GDHEAD ON T_GDDET.gdID = T_GDHEAD.gdhead_ID LEFT OUTER JOIN T_INVSETTING ON T_GDHEAD.gdTyp = T_INVSETTING.InvID  LEFT OUTER JOIN T_Curency ON T_GDHEAD.CurTyp = T_Curency.Curency_ID LEFT OUTER JOIN T_CstTbl ON T_GDHEAD.gdCstNo = T_CstTbl.Cst_ID LEFT OUTER JOIN T_Mndob ON T_GDHEAD.gdMnd = T_Mndob.Mnd_ID LEFT OUTER JOIN T_AccDef ON T_GDDET.AccNo = T_AccDef.AccDef_No LEFT OUTER JOIN T_SYSSETTING ON T_GDHEAD.CompanyID = T_SYSSETTING.SYSSETTING_ID ";
@@ -1759,6 +1760,7 @@ namespace InvAcc.Forms
                     switchButton_Lock.Value = value.AdminLock.Value;
                     try
                     {
+                 
                         if (data_this.AdminLock.HasValue)
                         {
                             if (!data_this.AdminLock.Value)
@@ -1931,7 +1933,7 @@ namespace InvAcc.Forms
                 _InvSetting = new T_INVSETTING();
                 _SysSetting = new T_SYSSETTING();
                 listAccDef = new List<T_AccDef>();
-                _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+                _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
                 _SysSetting = db.SystemSettingStock();
                 listAccDef = db.StockAccDefList();
             }
@@ -2560,6 +2562,7 @@ namespace InvAcc.Forms
             {
                 List<T_AccDef> listAccDefSer = new List<T_AccDef>();
                 listAccDefSer = db.T_AccDefs.Where((T_AccDef t) => t.AccDef_ID == 0).ToList();
+                if (c1FlexGrid1.GetData(e.Row, e.Col) == null) c1FlexGrid1.SetData(e.Row, e.Col, "");
                 if (e.Col == 1 &&!Utilites.isnollorempty( c1FlexGrid1.GetData(e.Row, e.Col)) )
                 {
                     listAccDefSer = (from t in db.T_AccDefs
@@ -3134,6 +3137,7 @@ namespace InvAcc.Forms
         }
         private void button_OpenGaid_CheckedChanged(object sender, EventArgs e)
         {
+
             button_Deperction.CheckedChanged -= button_Deperction_CheckedChanged;
             button_Deperction.Checked = false;
             button_Deperction.CheckedChanged += button_Deperction_CheckedChanged;
@@ -3352,6 +3356,36 @@ namespace InvAcc.Forms
         private void c1FlexGrid1_LeaveEdit(object sender, RowColEventArgs e)
         {
             kk = 0;
+        }
+
+        private void Button_Close_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void superTabControl_Main1_SelectedTabChanged(object sender, SuperTabStripSelectedTabChangedEventArgs e)
+        {
+
+        }
+
+        private void button_Deperction_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_OpenGaid_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_Save_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void superTabControl_Main2_SelectedTabChanged(object sender, SuperTabStripSelectedTabChangedEventArgs e)
+        {
+
         }
     }
 }

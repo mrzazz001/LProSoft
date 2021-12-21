@@ -557,10 +557,12 @@ namespace InvAcc.Controls
 
         }
     }
+  
     public partial class ItemEventArg : System.EventArgs
     {
-
-
+        public CommandTOexecute ReturnedCommand = CommandTOexecute.Ok;
+     public   Stock_DataDataContext db;
+        public Rate_DataDataContext dbc;
         private double price;
         public T_Unit Type;
         public T_Item ItemData;

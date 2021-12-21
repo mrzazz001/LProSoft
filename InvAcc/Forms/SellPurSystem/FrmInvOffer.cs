@@ -132,7 +132,6 @@ namespace InvAcc.Forms
         internal Label label47;
         private ExpandableSplitter expandableSplitter2;
         private PanelEx panelEx3x;
-        private C1FlexGrid FlxInvDet;
         private PanelEx panelEx2x;
         private C1FlexGrid FlxInv;
         private Panel panel2;
@@ -1405,6 +1404,7 @@ namespace InvAcc.Forms
             }
             FlxInv.DrawMode = DrawModeEnum.OwnerDraw;
             FlxInv.OwnerDrawCell += _ownerDraw;
+   
         }
         private void MainProcess()
         {
@@ -1563,17 +1563,23 @@ namespace InvAcc.Forms
             if (index <= PKeys.Count && index > 0)
             {
                 textBox_ID.Text = PKeys[index - 1];
+                if(kss==0)
+                {
+                    textBox_ID_TextChanged(null, null);
+                }
             }
         }
         private void GetInvSetting()
         {
             _InvSetting = new T_INVSETTING();
             _SysSetting = new T_SYSSETTING();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, 1);
+            _InvSetting = db.StockInvSetting( 1);
             _SysSetting = db.SystemSettingStock();
         }
+        int kss = 0;
         private void textBox_ID_TextChanged(object sender, EventArgs e)
         {
+            kss = 1;
             string no = "";
             try
             {
@@ -1708,6 +1714,12 @@ namespace InvAcc.Forms
                     SendKeys.Send("{Tab}");
                 }
             }
+            if ((e.KeyCode == Keys.Enter && FlxInvDet.ColSel == 1) || (e.KeyCode == Keys.Enter && kk == 1))
+            {
+                {
+                    SendKeys.Send("{Tab}");
+                }
+            }
             if (e.KeyCode == Keys.F1 && Button_Add.Enabled && Button_Add.Visible)
             {
                 Button_Add_Click(sender, e);
@@ -1730,7 +1742,7 @@ namespace InvAcc.Forms
                 {
                     PrintDocument prnt_doc = new PrintDocument();
                     T_INVSETTING _InvSetting = new T_INVSETTING();
-                    _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+                    _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
                     string _PrinterName = prnt_doc.PrinterSettings.PrinterName;
                     try
                     {
@@ -4267,6 +4279,16 @@ namespace InvAcc.Forms
         private void ribbonBar1_ItemClick(object sender, EventArgs e)
         {
 
+        }
+
+        private void FlxInvDet_StartEdit(object sender, RowColEventArgs e)
+        {
+            kk = 1;
+        }
+
+        private void FlxInvDet_LeaveEdit(object sender, RowColEventArgs e)
+        {
+            kk = 0;
         }
     }
 }

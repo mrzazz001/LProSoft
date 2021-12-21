@@ -7,7 +7,8 @@ using DevComponents.DotNetBar.SuperGrid.Style;
 using DevComponents.Editors;
 using Framework.Data;
 using InputKey;
-using ProShared.GeneralM;using ProShared;
+using ProShared.GeneralM;
+using ProShared;
 using ProShared.Stock_Data;
 using Library.RepShow;
 using Microsoft.Win32;
@@ -24,19 +25,140 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using TFG;
+using InvAcc.Forms.SellPurSystem.specialcontrols;
+
 namespace InvAcc.Forms
 {
-    public partial  class FrmInvPuchaes : Form
-    { void avs(int arln)
+    public partial class FrmInvPuchaes : Form
+    {
+        private void FlxInv_CellChanged(object sender, RowColEventArgs e)
+        {
+            try
+            {
+                if (e.Col == 8)
+                {
+                    pricel = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()); ;
+                }
+                if (e.Col == 35)
+                    ta = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()); ;
+                if (edit)
+                {
+                    if (e.Col == 8)
+                    {
+                        pricel = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()); without = pricel; edit = false; newprice = true;
+                    }
+                    if (e.Col == 35)
+                    {
+                        ta = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()); t1 = ta;
+                    }
+                    else
+                        t1 = 0;
+                    if (e.Col == 38)
+                    {
+                        tot = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString());
+                    }
+                    else
+                        tot = 0;
+                }
+                try
+                {
+                    if (e.Row > 0 && (e.Col == 38 || e.Col == 8 || e.Col == 7 || e.Col == 35))
+                        FlxInv.SetData(e.Row, e.Col, Math.Round(double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()), VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2));
+                }
+                catch
+                {
+                }
+            }
+            catch { }
+        }
+        public double fs = 0;
+        bool enterflag = false, edit = false, modefiy = false; double pt = 0, tt = 0;
 
-{ 
- button_opendraft.Text=   (arln == 0 ? "  الفواتير المعلقة  " : "  Pending invoices") ; button_Draft.Text=   (arln == 0 ? "  تعليق الفاتورة  " : "  Invoice comment") ; label43.Text=   (arln == 0 ? "  الجوال :  " : "  cell phone :") ; label_Pay.Text=   (arln == 0 ? "  صرّف  " : "  Cashing") ; c1BarCode1.Text=   (arln == 0 ? "  1225  " : "  1225") ; label32.Text=   (arln == 0 ? "  السيريال  " : "  serial السي") ; label25.Text=   (arln == 0 ? "  الوحدة  " : "  Unit") ; label22.Text=   (arln == 0 ? "  سعر اخر شراء  " : "  last purchase price") ; label23.Text=   (arln == 0 ? "  أخر تكلفة  " : "  latest cost") ; label24.Text=   (arln == 0 ? "  متوسط التكلفة  " : "  average cost") ; superTabItem_items.Text=   (arln == 0 ? "  م.الصنف  " : "  M. Category") ; superTabControl3.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; labelD1.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; labelD2.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; labelC3.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; labelC2.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; labelD3.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; labelC1.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; label6.Text=   (arln == 0 ? "  نقــداٌ :  " : "  cash:") ; label14.Text=   (arln == 0 ? "  شبكة :  " : "  Network :") ; label11.Text=   (arln == 0 ? "  آجــل :  " : "  deferred:") ; superTabItem_Pay.Text=   (arln == 0 ? "  الدفع  " : "  paying off") ; label48.Text=   (arln == 0 ? "  إجمالي القيمة  " : "  Total value") ; label41.Text=   (arln == 0 ? "  المديــــن :  " : "  Debtor:") ; label49.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; checkBox_GaidBankComm.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; superTabItem_LocalComm.Text=   (arln == 0 ? "  عمولات بنكية  " : "  Bank commissions") ; label37.Text=   (arln == 0 ? "  إجمالي القيمة  " : "  Total value") ; label38.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label39.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; label40.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; checkBox_GaidDis.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; superTabItem_Dis.Text=   (arln == 0 ? "  الخصـــــم  " : "  discount ال") ; label34.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label35.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; checkBox_CostGaidTax.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; label36.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; superTabItem_Tax.Text=   (arln == 0 ? "  الضـــرائب  " : "  taxes") ; labelItem_TaxByNetPer.Text=   (arln == 0 ? "  %  " : "  %") ; superTabItem_Gaids.Text=   (arln == 0 ? "  القيود  " : "  limitations") ; superTabControl_CostSts.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; checkBox_CostLocal.Text=   (arln == 0 ? "  يضاف الى صافي الفاتورة  " : "  Added to the net bill") ; label29.Text=   (arln == 0 ? "  إجمالي التكلفة المحلية  " : "  Total Domestic Cost") ; label20.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; superTabItem_LocalCosts.Text=   (arln == 0 ? "  تكاليف محلية  " : "  local costs") ; button_AutoCost.Text=   (arln == 0 ? "  تقسيم تلقائي  " : "  Auto split") ; label31.Text=   (arln == 0 ? "  التكلفة الخارجية  " : "  External cost") ; label21.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; label16.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; checkBox_CostGaid.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; label28.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; superTabItem_ExtrnalCosts.Text=   (arln == 0 ? "  تكاليف خارجية  " : "  External costs") ; superTabItem_Costs.Text=   (arln == 0 ? "  التكــاليف  " : "  costs") ; label42.Text=   (arln == 0 ? "  تاريخ الإستحقاق   " : "  due date") ; superTabItem_Note.Text=   (arln == 0 ? "  ملاحظات  " : "  Notes") ; label_LockeName.Text=   (arln == 0 ? "  --  " : "  --") ; label27.Text=   (arln == 0 ? "  المستخدم :  " : "  the user :") ; label30.Text=   (arln == 0 ? "  إجمالي الكمية :  " : "  Total Quantity:") ; superTabItem_Detiles.Text=   (arln == 0 ? "  تفاصيل  " : "  details") ; label12.Text=   (arln == 0 ? "  هاتف :  " : "  Telephone :") ;  checkBox_NetWork.Text=   (arln == 0 ? "  شبكـــة  " : "Network") ; checkBox_Credit.Text=   (arln == 0 ? "  أجـــل  " : "Credit") ; checkBox_Chash.Text=   (arln == 0 ? "  نقـــدي  " : "Cach") ; label10.Text=   (arln == 0 ? "  اسم المــــــورد :  " : "  Supplier name:") ; label4.Text=   (arln == 0 ? "  حساب  المـــورد :  " : "  Supplier account:") ; label13.Text=   (arln == 0 ? "  عنوان المـــورد :  " : "  Supplier address:") ; Label2.Text=   (arln == 0 ? "  التاريــــــــخ :  " : "  date:") ; Label1.Text=   (arln == 0 ? "  رقم الفاتورة :  " : "  invoice number :") ; label8.Text=   (arln == 0 ? "  نسبة الخصم  " : "  discount percentage") ; label33.Text=   (arln == 0 ? "  الضريبة VAT:  " : "  VAT:") ; Label26.Text=   (arln == 0 ? "  قيمة الخصم  " : "  discount value") ; label3.Text=   (arln == 0 ? "  بالريــال  " : "  in riyals") ; label9.Text=   (arln == 0 ? "  صافي الفاتورة :  " : "  net bill:") ; label17.Text=   (arln == 0 ? "  قيمة الفاتـــورة :  " : "  Invoice value:") ; label5.Text=   (arln == 0 ? "  السعر المعتمــد :  " : "  Approved price:") ; label19.Text=   (arln == 0 ? "  العملــــــــة :  " : "  work:") ; label18.Text=   (arln == 0 ? "  المنـــــدوب :  " : "  The delegate:") ; label7.Text=   (arln == 0 ? "  رقم المرجع :  " : "  reference number :") ; label15.Text=   (arln == 0 ? "  مركز التكلفـــــة :  " : "  cost center:") ; superTabControl1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_BarcodPrint.Text=   (arln == 0 ? "  BC  " : "  BC") ; button_Repetition.Text=   (arln == 0 ? "  تكرار  " : "  Repetition") ; ButReturn.Text=   (arln == 0 ? "  طلب  " : "  Request") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; /*buttonItem_Print.Text=   (arln == 0 ? "  طباعة  " : "  Print") ;*/ printersetting.Text=   (arln == 0 ? "  اعدادات الطابعه  " : "  printer settings") ; Button_Search.Text=   (arln == 0 ? "  بحث  " : "  Search") ; Button_Delete.Text=   (arln == 0 ? "  حذف  " : "  delete") ; Button_Save.Text=   (arln == 0 ? "  حفظ  " : "  save") ; Button_Add.Text=   (arln == 0 ? "  إضافة  " : "  addition") ;  superTabControl2.Text=   (arln == 0 ? "  superTabControl1  " : "  superTabControl1") ; Button_First.Text=   (arln == 0 ? "  الأول  " : "  the first") ; Button_Prev.Text=   (arln == 0 ? "  السابق  " : "  the previous") ; lable_Records.Text=   (arln == 0 ? "  ---  " : "  ---") ; Button_Next.Text=   (arln == 0 ? "  التالي  " : "  next one") ; Button_Last.Text=   (arln == 0 ? "  الأخير  " : "  the last one") ; ToolStripMenuItem_Rep.Text=   (arln == 0 ? "  إظهار التقرير  " : "  Show report") ; panelEx3.Text=   (arln == 0 ? "  Fill Panel  " : "  Fill Panel") ; DGV_Main.Text=   (arln == 0 ? "    " : "    ") ; DGV_Main.Text=   (arln == 0 ? "  جميــع السجــــلات  " : "  All records") ; DGV_Main.Text=   (arln == 0 ? "    " : "    ") ; superTabControl_DGV.Text=   (arln == 0 ? "  superTabControl1  " : "  superTabControl1") ; textBox_search.Text=   (arln == 0 ? "  ...  " : "  ...") ; Button_ExportTable2.Text=   (arln == 0 ? "  تصدير  " : "  Export") ; /*Button_PrintTable.Text=   (arln == 0 ? "  طباعة  " : "  Print") ; */Button_PrintTableMulti.Text=   (arln == 0 ? "  طباعة الفواتير المحددة  " : "  Print selected invoices") ; panelEx2.Text=   (arln == 0 ? "  Click to collapse  " : "  Click to collapse") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; superTabControl_Main2.Text=   (arln == 0 ? "  superTabControl1  " : "  superTabControl1") ; ToolStripMenuItem_Det.Text=   (arln == 0 ? "  إظهار التفاصيل  " : "  Show details") ; Menu_SendReapir.Text=   (arln == 0 ? "  إرسال الى شاشة صيانة المشتريات  " : "  Send to purchase maintenance screen") ; Text = "فاتورة مشتريات";this.Text=   (arln == 0 ? "  فاتورة مشتريات  " : "  Purchases bill") ;}
+        private void FlxInv_LeaveEdit(object sender, RowColEventArgs e)
+        {
+            kk = 0;
+            if (edit)
+            {
+                if (e.Col == 8 || e.Col == 38)
+                {
+                    if (beforeeditprice == 1)
+                    {
+                        fs = double.Parse(FlxInv.GetData(e.Row, 8).ToString()); without = fs;
+                        beforeeditprice = 0;
+                    }
+                    else
+                        if (beforeeditprice == 2)
+                    {
+                        enteredtotal = double.Parse(FlxInv.GetData(e.Row, 38).ToString());
+                        beforeeditprice = 0;
+                    }
+                }
+            }
+        }
+
+        double beforeeditprice = 0, enteredtotal = 0;
+        public double pricets = 0.0, t1 = 0, tot = 0;
+
+
+
+        bool keyisch = false;
+        private void FlxInv_KeyPressEdit(object sender, KeyPressEditEventArgs e)
+        {
+
+            keyisch = true;
+
+
+        }
+
+#pragma warning disable CS0414 // The field 'FrmInvSalesReturn.keychtax' is assigned but its value is never used
+        bool keychtax = false;
+#pragma warning restore CS0414 // The field 'FrmInvSalesReturn.keychtax' is assigned but its value is never used
+#pragma warning disable CS0414 // The field 'FrmInvSalesReturn.keyishNo' is assigned but its value is never used
+        bool keyishNo = false;
+#pragma warning restore CS0414 // The field 'FrmInvSalesReturn.keyishNo' is assigned but its value is never used
+        private void FlxInv_ValidateEdit(object sender, ValidateEditEventArgs e)
+        {
+
+            if (e.Col == 8 && keyisch == true)
+            {
+                double ff = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString());
+
+                lastprice = 0;
+                // without = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString());
+                pricel = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString());
+                //  FlxInv_AfterEdit(null, new RowColEventArgs(e.Row, 8));
+            }
+            if (e.Col == 38 && keyisch == true)
+            {
+                enteredtotal = 0;
+                //  FlxInv_AfterEdit(null, new RowColEventArgs(e.Row, 8));
+            }
+            if (e.Col == 35 && keyisch == true)
+            {
+                keychtax = true;
+                //  FlxInv_AfterEdit(null, new RowColEventArgs(e.Row, 8));
+            }
+            if (e.Col == 35 && keyisch == true)
+            {
+                keychtax = true;
+                //  FlxInv_AfterEdit(null, new RowColEventArgs(e.Row, 8));
+            }
+            if (e.Col == 1 && keyisch == true)
+                keyishNo = true;
+            keyisch = false;
+        }
+
+        void avs(int arln)
+
+        {
+            button_opendraft.Text = (arln == 0 ? "  الفواتير المعلقة  " : "  Pending invoices"); button_Draft.Text = (arln == 0 ? "  تعليق الفاتورة  " : "  Invoice comment"); label43.Text = (arln == 0 ? "  الجوال :  " : "  cell phone :"); label_Pay.Text = (arln == 0 ? "  صرّف  " : "  Cashing"); c1BarCode1.Text = (arln == 0 ? "  1225  " : "  1225"); label32.Text = (arln == 0 ? "  السيريال  " : "  serial السي"); label25.Text = (arln == 0 ? "  الوحدة  " : "  Unit"); label22.Text = (arln == 0 ? "  سعر اخر شراء  " : "  last purchase price"); label23.Text = (arln == 0 ? "  أخر تكلفة  " : "  latest cost"); label24.Text = (arln == 0 ? "  متوسط التكلفة  " : "  average cost"); superTabItem_items.Text = (arln == 0 ? "  م.الصنف  " : "  M. Category"); superTabControl3.Text = (arln == 0 ? "  superTabControl3  " : "  superTabControl3"); labelD1.Text = (arln == 0 ? "  المـــدين :  " : "  Debtor:"); labelD2.Text = (arln == 0 ? "  المـــدين :  " : "  Debtor:"); labelC3.Text = (arln == 0 ? "  الدائـــن :  " : "  creditor:"); labelC2.Text = (arln == 0 ? "  الدائـــن :  " : "  creditor:"); labelD3.Text = (arln == 0 ? "  المـــدين :  " : "  Debtor:"); labelC1.Text = (arln == 0 ? "  الدائـــن :  " : "  creditor:"); label6.Text = (arln == 0 ? "  نقــداٌ :  " : "  cash:"); label14.Text = (arln == 0 ? "  شبكة :  " : "  Network :"); label11.Text = (arln == 0 ? "  آجــل :  " : "  deferred:"); superTabItem_Pay.Text = (arln == 0 ? "  الدفع  " : "  paying off"); label48.Text = (arln == 0 ? "  إجمالي القيمة  " : "  Total value"); label41.Text = (arln == 0 ? "  المديــــن :  " : "  Debtor:"); label49.Text = (arln == 0 ? "  بالريــــال  " : "  in riyals"); checkBox_GaidBankComm.Text = (arln == 0 ? "  سند محاسبي  " : "  accounting document"); superTabItem_LocalComm.Text = (arln == 0 ? "  عمولات بنكية  " : "  Bank commissions"); label37.Text = (arln == 0 ? "  إجمالي القيمة  " : "  Total value"); label38.Text = (arln == 0 ? "  الدائـــــن :  " : "  creditor:"); label39.Text = (arln == 0 ? "  المـــدين :  " : "  Debtor:"); label40.Text = (arln == 0 ? "  بالريــــال  " : "  in riyals"); checkBox_GaidDis.Text = (arln == 0 ? "  سند محاسبي  " : "  accounting document"); superTabItem_Dis.Text = (arln == 0 ? "  الخصـــــم  " : "  discount ال"); label34.Text = (arln == 0 ? "  الدائـــــن :  " : "  creditor:"); label35.Text = (arln == 0 ? "  المـــدين :  " : "  Debtor:"); checkBox_CostGaidTax.Text = (arln == 0 ? "  سند محاسبي  " : "  accounting document"); label36.Text = (arln == 0 ? "  بالريــــال  " : "  in riyals"); superTabItem_Tax.Text = (arln == 0 ? "  الضـــرائب  " : "  taxes"); labelItem_TaxByNetPer.Text = (arln == 0 ? "  %  " : "  %"); superTabItem_Gaids.Text = (arln == 0 ? "  القيود  " : "  limitations"); superTabControl_CostSts.Text = (arln == 0 ? "  superTabControl3  " : "  superTabControl3"); checkBox_CostLocal.Text = (arln == 0 ? "  يضاف الى صافي الفاتورة  " : "  Added to the net bill"); label29.Text = (arln == 0 ? "  إجمالي التكلفة المحلية  " : "  Total Domestic Cost"); label20.Text = (arln == 0 ? "  بالريــــال  " : "  in riyals"); superTabItem_LocalCosts.Text = (arln == 0 ? "  تكاليف محلية  " : "  local costs"); button_AutoCost.Text = (arln == 0 ? "  تقسيم تلقائي  " : "  Auto split"); label31.Text = (arln == 0 ? "  التكلفة الخارجية  " : "  External cost"); label21.Text = (arln == 0 ? "  الدائـــن :  " : "  creditor:"); label16.Text = (arln == 0 ? "  المـــدين :  " : "  Debtor:"); checkBox_CostGaid.Text = (arln == 0 ? "  سند محاسبي  " : "  accounting document"); label28.Text = (arln == 0 ? "  بالريــــال  " : "  in riyals"); superTabItem_ExtrnalCosts.Text = (arln == 0 ? "  تكاليف خارجية  " : "  External costs"); superTabItem_Costs.Text = (arln == 0 ? "  التكــاليف  " : "  costs"); label42.Text = (arln == 0 ? "  تاريخ الإستحقاق   " : "  due date"); superTabItem_Note.Text = (arln == 0 ? "  ملاحظات  " : "  Notes"); label_LockeName.Text = (arln == 0 ? "  --  " : "  --"); label27.Text = (arln == 0 ? "  المستخدم :  " : "  the user :"); label30.Text = (arln == 0 ? "  إجمالي الكمية :  " : "  Total Quantity:"); superTabItem_Detiles.Text = (arln == 0 ? "  تفاصيل  " : "  details"); label12.Text = (arln == 0 ? "  هاتف :  " : "  Telephone :"); checkBox_NetWork.Text = (arln == 0 ? "  شبكـــة  " : "Network"); checkBox_Credit.Text = (arln == 0 ? "  أجـــل  " : "Credit"); checkBox_Chash.Text = (arln == 0 ? "  نقـــدي  " : "Cach"); label10.Text = (arln == 0 ? "  اسم المــــــورد :  " : "  Supplier name:"); label4.Text = (arln == 0 ? "  حساب  المـــورد :  " : "  Supplier account:"); label13.Text = (arln == 0 ? "  عنوان المـــورد :  " : "  Supplier address:"); Label2.Text = (arln == 0 ? "  التاريــــــــخ :  " : "  date:"); Label1.Text = (arln == 0 ? "  رقم الفاتورة :  " : "  invoice number :"); label8.Text = (arln == 0 ? "  نسبة الخصم  " : "  discount percentage"); label33.Text = (arln == 0 ? "  الضريبة VAT:  " : "  VAT:"); Label26.Text = (arln == 0 ? "  قيمة الخصم  " : "  discount value"); label3.Text = (arln == 0 ? "  بالريــال  " : "  in riyals"); label9.Text = (arln == 0 ? "  صافي الفاتورة :  " : "  net bill:"); label17.Text = (arln == 0 ? "  قيمة الفاتـــورة :  " : "  Invoice value:"); label5.Text = (arln == 0 ? "  السعر المعتمــد :  " : "  Approved price:"); label19.Text = (arln == 0 ? "  العملــــــــة :  " : "  work:"); label18.Text = (arln == 0 ? "  المنـــــدوب :  " : "  The delegate:"); label7.Text = (arln == 0 ? "  رقم المرجع :  " : "  reference number :"); label15.Text = (arln == 0 ? "  مركز التكلفـــــة :  " : "  cost center:"); superTabControl1.Text = (arln == 0 ? "  superTabControl3  " : "  superTabControl3"); Button_BarcodPrint.Text = (arln == 0 ? "  BC  " : "  BC"); button_Repetition.Text = (arln == 0 ? "  تكرار  " : "  Repetition"); ButReturn.Text = (arln == 0 ? "  طلب  " : "  Request"); Button_Close.Text = (arln == 0 ? "  إغلاق  " : "  Close"); /*buttonItem_Print.Text=   (arln == 0 ? "  طباعة  " : "  Print") ;*/ printersetting.Text = (arln == 0 ? "  اعدادات الطابعه  " : "  printer settings"); Button_Search.Text = (arln == 0 ? "  بحث  " : "  Search"); Button_Delete.Text = (arln == 0 ? "  حذف  " : "  delete"); Button_Save.Text = (arln == 0 ? "  حفظ  " : "  save"); Button_Add.Text = (arln == 0 ? "  إضافة  " : "  addition"); superTabControl2.Text = (arln == 0 ? "  superTabControl1  " : "  superTabControl1"); Button_First.Text = (arln == 0 ? "  الأول  " : "  the first"); Button_Prev.Text = (arln == 0 ? "  السابق  " : "  the previous"); lable_Records.Text = (arln == 0 ? "  ---  " : "  ---"); Button_Next.Text = (arln == 0 ? "  التالي  " : "  next one"); Button_Last.Text = (arln == 0 ? "  الأخير  " : "  the last one"); ToolStripMenuItem_Rep.Text = (arln == 0 ? "  إظهار التقرير  " : "  Show report"); panelEx3.Text = (arln == 0 ? "  Fill Panel  " : "  Fill Panel"); DGV_Main.Text = (arln == 0 ? "    " : "    "); DGV_Main.Text = (arln == 0 ? "  جميــع السجــــلات  " : "  All records"); DGV_Main.Text = (arln == 0 ? "    " : "    "); superTabControl_DGV.Text = (arln == 0 ? "  superTabControl1  " : "  superTabControl1"); textBox_search.Text = (arln == 0 ? "  ...  " : "  ..."); Button_ExportTable2.Text = (arln == 0 ? "  تصدير  " : "  Export"); /*Button_PrintTable.Text=   (arln == 0 ? "  طباعة  " : "  Print") ; */Button_PrintTableMulti.Text = (arln == 0 ? "  طباعة الفواتير المحددة  " : "  Print selected invoices"); panelEx2.Text = (arln == 0 ? "  Click to collapse  " : "  Click to collapse"); superTabControl_Main1.Text = (arln == 0 ? "  superTabControl3  " : "  superTabControl3"); superTabControl_Main2.Text = (arln == 0 ? "  superTabControl1  " : "  superTabControl1"); ToolStripMenuItem_Det.Text = (arln == 0 ? "  إظهار التفاصيل  " : "  Show details"); Menu_SendReapir.Text = (arln == 0 ? "  إرسال الى شاشة صيانة المشتريات  " : "  Send to purchase maintenance screen"); Text = "فاتورة مشتريات"; this.Text = (arln == 0 ? "  فاتورة مشتريات  " : "  Purchases bill");
+        }
         private void langloads(object sender, EventArgs e)
         {
-              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
-          
+            avs(ProShared.GeneralM.VarGeneral.currentintlanguage); ;
+
         }
-   
+
         public class ColumnDictinary
         {
             public string AText = "";
@@ -61,7 +183,7 @@ namespace InvAcc.Forms
                 AQty = aQty;
             }
         }
-       // private IContainer components = null;
+        // private IContainer components = null;
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData.ToString().Contains("Control") && !keyData.ToString().ToLower().Contains("delete") && keyData.ToString().Contains("Alt"))
@@ -93,8 +215,14 @@ namespace InvAcc.Forms
                     VarGeneral.Print_set_Gen_Stat = false;
                 }
             }
+            try
+            {
+                if ((ActiveControl as RibbonBar).ActiveControl == FlxInv) edited = true;
+            }
+            catch { }
             return base.ProcessCmdKey(ref msg, keyData);
         }
+        bool edited = false;
         private void netResize1_AfterControlResize(object sender, Softgroup.NetResize.AfterControlResizeEventArgs e)
         {
             if (e.Control.Name.Contains("ribbonBar_Tasks"))
@@ -155,9 +283,9 @@ namespace InvAcc.Forms
         protected ContextMenuStrip contextMenuStrip1;
         protected ContextMenuStrip contextMenuStrip2;
         protected ToolStripMenuItem ToolStripMenuItem_Det;
-        private System.Windows.Forms. SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private Timer timerInfoBallon;
-        private System.Windows.Forms.OpenFileDialog  openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Bar barTaskList;
         private PanelDockContainer panelDockContainer1;
         private SuperTabControl superTabControl_Main1;
@@ -166,9 +294,6 @@ namespace InvAcc.Forms
         protected SuperGridControl DGV_Main;
         private RibbonBar ribbonBar_DGV;
         private SuperTabControl superTabControl_DGV;
-        private RibbonBar ribbonBar_Tasks;
-        private SuperTabControl superTabControl1;
-        private SuperTabControl superTabControl2;
         private TextBox txtItemName;
         private DoubleInput txtInvCost;
         private DoubleInput doubleInput_Rate;
@@ -244,7 +369,6 @@ namespace InvAcc.Forms
         internal Label label30;
         private TextBox textBox_Usr;
         private SuperTabItem superTabItem_Detiles;
-        private LabelItem lable_Records;
         private SuperTabControlPanel superTabControlPanel5;
         private SuperTabItem superTabItem_Costs;
         private SuperTabControl superTabControl_CostSts;
@@ -342,7 +466,6 @@ namespace InvAcc.Forms
         private SwitchButtonItem switchButton_TaxByNet;
         private TextBoxItem textBoxItem_TaxByNetValue;
         private LabelItem labelItem_TaxByNetPer;
-        private CheckBoxItem ChkA4Cahir;
         internal Label label42;
         private MaskedTextBox txtDueDate;
         internal Label label_Due;
@@ -368,7 +491,20 @@ namespace InvAcc.Forms
         private List<T_INVSETTING> listInvSetting = new List<T_INVSETTING>();
         private T_STKSQTY _StksQty = new T_STKSQTY();
         private List<T_STKSQTY> listStkQty = new List<T_STKSQTY>();
-        private T_GDHEAD _GdHead = new T_GDHEAD();
+        private T_GDHEAD _GdHead
+        {
+            get
+            {
+
+                return gds;
+
+            }
+            set
+            {
+                gds = value;
+            }
+        }
+        private T_GDHEAD gds = new T_GDHEAD();
         private T_GDHEAD _GdHeadCost = new T_GDHEAD();
         private T_GDHEAD _GdHeadCostTax = new T_GDHEAD();
         private List<T_GDHEAD> listGdHead = new List<T_GDHEAD>();
@@ -444,7 +580,6 @@ namespace InvAcc.Forms
         private SuperTabItem superTabItem_Pay;
         internal Label label43;
         private TextBox text_Mobile;
-        private ButtonItem printersetting;
         private ButtonX button_opendraft;
         private ButtonX button_Draft;
         private bool ifMultiPrint = false;
@@ -457,7 +592,41 @@ namespace InvAcc.Forms
             set
             {
                 data_this = value;
+                IsServiceBill = (value.IS_ServiceBill.HasValue ? (bool)value.IS_ServiceBill : false);
                 SetData(data_this);
+
+
+                
+                {
+                    if (value.IS_ServiceBill.HasValue)
+                    {
+                        if (value.IS_ServiceBill == true)
+                        {
+                            checkBox1.Checked = true;
+                            if (State != FormState.Edit)
+                                setServiceBill(value);
+                            if (!checkBox1.Enabled)
+                            {
+                                billUcontrolType31.Enabled = false;
+                            }
+                            else
+                            {
+                                billUcontrolType31.Enabled = true;
+
+                            }
+                        }
+                        else
+                        {
+                            ChkPriceIncludeTax.Value = false;
+                            checkBox1.Checked = false;
+                        }
+                    }
+                    else
+                    {
+                        ChkPriceIncludeTax.Value = false;
+                        checkBox1.Checked = false;
+                    }
+                }
             }
         }
         public T_STKSQTY DataThis_stkQ
@@ -513,6 +682,18 @@ namespace InvAcc.Forms
             set
             {
                 statex = value;
+                if (IsServiceBill)
+                {
+                    if (value == FormState.New)
+                        billUcontrolType31.setreadonly(false);
+                    else
+                    {
+                        if (VarGeneral.DeleteOption == 1) billUcontrolType31.setreadonly(true);
+                        else billUcontrolType31.setreadonly(false);
+                    }
+                }
+
+
             }
         }
         public string TableName
@@ -862,7 +1043,7 @@ namespace InvAcc.Forms
 #pragma warning restore CS0414 // The field 'FrmInvPuchaes.x' is assigned but its value is never used
         public void Button_Next_Click(object sender, EventArgs e)
         {
-           
+
             if (ContinueIfEditOrNew())
             {
                 int index = 0;
@@ -898,6 +1079,7 @@ namespace InvAcc.Forms
         }
         private void UpdateVcr()
         {
+
             int vCount = 0;
             int vPosition = 0;
             try
@@ -1089,13 +1271,38 @@ namespace InvAcc.Forms
         }
         public FrmInvPuchaes()
         {
-            InitializeComponent();this.Load += langloads;
+            InitializeComponent(); this.Load += langloads;
+
+            ChkPriceIncludeTax.Visible = false;
+
+             if (!InvAcc.Properties.Settings.Default.ServiceBill)
+            {
+                billUcontrolType31.Visible = false;
+                checkBox1.Enabled = false;
+            }
+            else
+            {
+                checkBox_Chash.CheckedChanged += checkBox_Chash_CheckedChanged_1;
+                txtPaymentLoc.ValueChanged += txtPaymentLoc_ValueChanged;
+                checkBox_Credit.CheckValueChanged += checkBox_Credit_CheckValueChanged;
+                doubleInput_NetWorkLoc.ValueChanged += doubleInput_NetWorkLoc_ValueChanged;
+                doubleInput_CreditLoc.ValueChanged += doubleInput_CreditLoc_ValueChanged;
+                txtHDate.TextChanged += txtHDate_TextChanged;
+                txtGDate.TextChanged += txtGDate_TextChanged;
+            }
             if (File.Exists(Application.StartupPath + "\\Script\\GLassSR.dll"))
             {
                 this.Load += GlassSR_Load;
             }
+            txtTotalAmLoc.TextChanged += kdasjf;
 
         }
+
+        private void kdasjf(object sender, EventArgs e)
+        {
+
+        }
+
         void load()
         {
             base.Activated += FrmInvices_CheckFouce;
@@ -1182,7 +1389,7 @@ namespace InvAcc.Forms
             Button_Search.Click += Button_Search_Click;
             Button_Delete.Click += Button_Delete_Click;
             Button_Save.Click += Button_Save_Click;
-            TextBox_Index.InputTextChanged += TextBox_Index_InputTextChanged;
+ 
             expandableSplitter1.Click += expandableSplitter1_Click;
             DGV_Main.PrimaryGrid.CheckBoxes = true;
             DGV_Main.PrimaryGrid.ShowCheckBox = true;
@@ -1224,6 +1431,7 @@ namespace InvAcc.Forms
             txtDiscountVal.Leave += txtDiscountVal_Leave;
             //	buttonItem_Print.Click += buttonItem_Print_Click;
             Button_PrintTable.Click += Button_Print_Click;
+            txtDebit5.TextChanged += Xhan;
             txtDueAmountLoc.ValueChanged += txtDueAmountLoc_ValueChanged;
             txtRemark.ButtonCustomClick += txtRemark_ButtonCustomClick;
             txtRemark.ButtonCustomClick += txtRemark_ButtonCustomClick;
@@ -1377,6 +1585,12 @@ namespace InvAcc.Forms
             {
             }
         }
+
+        private void Xhan(object sender, EventArgs e)
+        {
+            
+        }
+
         private void txtDebit6_ButtonCustomClick(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox_ID.Text))
@@ -1615,12 +1829,16 @@ namespace InvAcc.Forms
             return 25;
         }
         public void buttonItem_Print_Click(object sender, EventArgs e)
-        {
+        {if(IsServiceBill)
+            {
+                billUcontrolType31.print();
+                return;
+            }
             try
             {
                 if (textBox_ID.Text != "" && State == FormState.Saved)
                 {
-                if ((_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) != "2"))
+                    if ((_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) != "2"))
                     {
                         VarGeneral.Print_set_Gen_Stat = false;
                         RepShow _RepShow = new RepShow();
@@ -1631,6 +1849,7 @@ namespace InvAcc.Forms
                         VarGeneral.HeaderRep[1] = "";
                         VarGeneral.HeaderRep[2] = "";
                         _RepShow.Rule = " where T_INVHED.InvHed_ID = " + data_this.InvHed_ID;
+
                         if (!string.IsNullOrEmpty(Fields))
                         {
                             _RepShow.Fields = Fields;
@@ -1878,10 +2097,21 @@ namespace InvAcc.Forms
             {
                 return;
             }
+
+            text_Mobile.Text = "";
             State = FormState.New;
             data_this = new T_INVHED();
             data_thisRe = new T_INVHED();
+
             _GdHead = new T_GDHEAD();
+            if (IsServiceBill)
+            {
+                data_this.IS_ServiceBill = IsServiceBill;
+                data_this.IS_ServiceBill = true;
+                billUcontrolType31.CurrentBill = data_this;
+                billUcontrolType31.clear();
+
+            }
             _GdHeadCost = new T_GDHEAD();
             State = FormState.New;
             for (int i = 0; i < controls.Count; i++)
@@ -2324,16 +2554,22 @@ namespace InvAcc.Forms
         {
             if (e.KeyChar == '\r')
             {
-                SendKeys.Send("{Tab}");
+                if (this.ActiveControl.Name == "ribbonBar1")
+                    if ((ActiveControl as RibbonBar).ActiveControl != billUcontrolType31)
+                    {
+                        SendKeys.Send("{Tab}");
+                    }
             }
         }
         private void Frm_KeyDown(object sender, KeyEventArgs e)
         {
             if ((e.KeyCode == Keys.Enter && FlxInv.ColSel == 1) || (e.KeyCode == Keys.Enter && kk == 1))
             {
-                {
-                    SendKeys.Send("{Tab}");
-                }
+                if (this.ActiveControl.Name == "ribbonBar1")
+                    if ((ActiveControl as RibbonBar).ActiveControl != billUcontrolType31)
+                    {
+                        SendKeys.Send("{Tab}");
+                    }
             }
             if (e.KeyCode == Keys.F1 && Button_Add.Enabled && Button_Add.Visible)
             {
@@ -2372,7 +2608,7 @@ namespace InvAcc.Forms
                 {
                     PrintDocument prnt_doc = new PrintDocument();
                     T_INVSETTING _InvSetting = new T_INVSETTING();
-                    _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+                    _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
                     string _PrinterName = prnt_doc.PrinterSettings.PrinterName;
                     try
                     {
@@ -2579,7 +2815,7 @@ namespace InvAcc.Forms
                     return;
                 }
             }
-            data_this = db.StockInvHead(VarGeneral.InvTyp, DataThis.InvNo);
+            data_this = db.StockInvHead((IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp), DataThis.InvNo);
             IDatabase db_ = Database.GetDatabase(VarGeneral.BranchCS);
             try
             {
@@ -2622,12 +2858,12 @@ namespace InvAcc.Forms
             }
             catch (SqlException)
             {
-                data_this = db.StockInvHead(VarGeneral.InvTyp, DataThis.InvNo);
+                data_this = db.StockInvHead((IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp), DataThis.InvNo);
                 return;
             }
             catch (Exception)
             {
-                data_this = db.StockInvHead(VarGeneral.InvTyp, DataThis.InvNo);
+                data_this = db.StockInvHead((IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp), DataThis.InvNo);
                 return;
             }
             Clear();
@@ -2646,7 +2882,13 @@ namespace InvAcc.Forms
                 {
                     return;
                 }
+              //  ChkPriceIncludeTax.Value = VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 83);
+                if (sender != null)
+                {if(InvAcc.Properties.Settings.Default.ServiceBill)
+                    checkBox1.Checked = VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 89);
+                }
                 Clear();
+               // ChkPriceIncludeTax_ValueChanged(null, null);
                 button_Draft.Enabled = true;
                 GetInvSetting();
                 textBox_ID.Text = db.MaxInvheadNo.ToString();
@@ -2902,7 +3144,7 @@ namespace InvAcc.Forms
             PKeys.Clear();
             try
             {
-                PKeys = db.ExecuteQuery<string>("select InvNo from T_INVHED where InvTyp =" + VarGeneral.InvTyp + " and IfDel = 0 ", new object[0]).ToList();
+                PKeys = db.ExecuteQuery<string>("select InvNo from T_INVHED where (InvTyp =" + VarGeneral.InvTyp + "or InvTyp= " + VarGeneral.ServiceBillId + ") and IfDel = 0 ", new object[0]).ToList();
             }
             catch
             {
@@ -2917,7 +3159,7 @@ namespace InvAcc.Forms
         {
             DGV_Main.PrimaryGrid.VirtualMode = true;
             Stock_DataDataContext db = new Stock_DataDataContext(VarGeneral.BranchCS);
-            List<T_INVHED> list = db.FillInvHead_2(VarGeneral.InvTyp, textBox_search.TextBox.Text).ToList();
+            List<T_INVHED> list = db.FillInvHead_2((IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp), textBox_search.TextBox.Text).ToList();
             DGV_Main.PrimaryGrid.VirtualRowCount = list.Count;
             if (DGV_Main.PrimaryGrid.Columns.Count == 0)
             {
@@ -3169,6 +3411,91 @@ namespace InvAcc.Forms
                 switchButton_TaxByNet.OffText = "Inv Net";
             }
         }
+        bool _IsServiceBill;
+        bool IsServiceBill
+        {
+            get { return _IsServiceBill; }
+            set
+            {
+                _IsServiceBill = value;
+                displayServiceBill();
+                if(value)
+                {
+                    if (button_Repetition.Visible)
+                    {
+                        ButReturn.Visible = false;
+                        button_Repetition.Visible = false;
+                        Button_BarcodPrint.Visible = false;
+                        ribbonBar_Tasks.Refresh();
+                        superTabControl1.Refresh();
+                    }
+                }
+                else
+                {
+                    if (!button_Repetition.Visible)
+                    {
+                        ButReturn.Visible = true;
+                        button_Repetition.Visible = true;
+                        Button_BarcodPrint.Visible = true;
+                        ribbonBar_Tasks.Refresh();
+
+                        superTabControl1.Refresh();
+                    }
+                }
+               
+            }
+
+        }
+        void displayServiceBill()
+        {
+            if (IsServiceBill)
+            {
+                ChkPriceIncludeTax.Value = true;
+                checkBox_CostGaidTax.Checked = true;
+            }
+            checkBox_Credit.Visible = !IsServiceBill; ;
+            checkBox_NetWork.Visible = !IsServiceBill; ;
+            button_SrchCustADD.Visible = !IsServiceBill;
+            button_SrchCustNo.Visible = !IsServiceBill;
+            txtCustNo.Visible = !IsServiceBill;
+            txtCustName.Visible = !IsServiceBill;
+            label4.Visible = !IsServiceBill;
+            label10.Visible = !IsServiceBill;
+
+            billUcontrolType31.doubleInput_CreditLoc = doubleInput_CreditLoc;
+            billUcontrolType31.doubleInput_NetWorkLoc = doubleInput_NetWorkLoc;
+            billUcontrolType31.txtPaymentLoc = txtPaymentLoc;
+            ChkPriceIncludeTax.Enabled = !IsServiceBill;
+            billUcontrolType31.switchButton_TaxLines = switchButton_TaxLines;
+            billUcontrolType31.switchButton_TaxByTotal = switchButton_TaxByTotal;
+            billUcontrolType31.switchButton_TaxByNet = switchButton_TaxByNet;
+            billUcontrolType31.textBoxItem_TaxByNetValue = textBoxItem_TaxByNetValue;
+            billUcontrolType31.CmbLegate = CmbLegate;
+            billUcontrolType31.txtHDate = txtHDate;
+            billUcontrolType31.txtGDate = txtGDate;
+            billUcontrolType31.CmbCostC = CmbCostC;
+            billUcontrolType31.txtTotalAmLoc = txtTotalAmLoc;
+            billUcontrolType31.txtDueAmountLoc = txtDueAmountLoc;
+            billUcontrolType31.txtTotTax = txtTotTax;
+            billUcontrolType31.checkBox_CostGaidTax = checkBox_CostGaidTax;
+            billUcontrolType31.CmbCurr = CmbCurr;
+            billUcontrolType31.switchButton_Lock = switchButton_Lock;
+            //  groupBox5.Visible = !IsServiceBill;
+
+            if (IsServiceBill)
+            {
+                billUcontrolType31.init();
+                billUcontrolType31.Visible = IsServiceBill;
+
+
+            }
+            else
+            {
+                billUcontrolType31.Visible = IsServiceBill;
+            }
+
+
+        }
         private void textBox_ID_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsNumber(e.KeyChar) & (e.KeyChar != '\b'))
@@ -3177,7 +3504,7 @@ namespace InvAcc.Forms
             }
         }
 #pragma warning disable CS1998 // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
-        private async  void  FrmInvPuchaes_Load(object sender, EventArgs e)
+        private async void FrmInvPuchaes_Load(object sender, EventArgs e)
 #pragma warning restore CS1998 // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
         {
             try
@@ -3185,9 +3512,9 @@ namespace InvAcc.Forms
                 load();
                 button_Draft.Enabled = false; Location = Frm_Main.loc;
                 if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 85))
-            {
-                switchButton_Lock.Visible = false;
-            }
+                {
+                    switchButton_Lock.Visible = false;
+                }
                 ComponentResourceManager resources = new ComponentResourceManager(typeof(FrmInvPuchaes));
                 if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
                 {
@@ -3429,6 +3756,15 @@ namespace InvAcc.Forms
             }
             FlxInv.DrawMode = DrawModeEnum.OwnerDraw;
             FlxInv.OwnerDrawCell += _ownerDraw;
+
+            if (InvAcc.Properties.Settings.Default.ServiceBill)
+            {
+                billUcontrolType31.showpanel += showpanels;
+                billUcontrolType31.settotals += getdetails;
+                billUcontrolType31.getDetails += GetDetails;
+                billUcontrolType31.SetAccountBoxNumber += dfa; ;
+                showpanels(null, null);
+            }
             if (File.Exists(Application.StartupPath + "\\Script\\SecriptMaintenanceCars.dll"))
             {
                 label18.Visible = false;
@@ -3458,7 +3794,60 @@ namespace InvAcc.Forms
             {
                 switchButton_Lock.Visible = false;
             }
+            //   billUcontrolType31.init();
         }
+
+        private void dfa(object sender, EventHandler e)
+        {
+            try
+            {
+                txtDebit1.Tag = billUcontrolType31.lookUpEditWithDataSource1.EditValue.ToString();
+                txtDebit1.Text = billUcontrolType31.lookUpEditWithDataSource1.Text.ToString();
+            }
+            catch { }
+        }
+
+        private void GetDetails(object sender, EventHandler e)
+        {
+            billUcontrolType31.CmbCurrSelectedValue = CmbCurr.SelectedValue.ToString();
+            billUcontrolType31.CmbCostCSelectedValue = CmbCostC.SelectedValue.ToString();
+        }
+
+        private void getdetails(object sender, EventHandler e)
+        {
+
+         
+          
+            txtDueAmountLoc = billUcontrolType31.txtDueAmountLoc;
+            txtTotTax = billUcontrolType31.txtTotTax;
+            txtTotalAmLoc = billUcontrolType31.txtTotalAmLoc;
+
+            GetInvTot();
+        }
+
+        private void shdsowsdfa(object sender, EventHandler e)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Panel teepanel;
+        private void showpanels(object sender, EventHandler e)
+        {
+            if (teepanel == null)
+            {
+                teepanel = billUcontrolType31.getPanel();
+
+            }
+            if (!Controls.Contains(teepanel)) Controls.Add(teepanel);
+            else
+            {
+                teepanel.Show();
+                teepanel.Visible = true;
+                teepanel.BringToFront();
+            }
+
+        }
+
         private void TegnicalCollage()
         {
             label18.Visible = false;
@@ -3511,7 +3900,7 @@ namespace InvAcc.Forms
             if (crow != null && crow.Checked)
             {
                 GridPanel panel = new GridPanel();
-                var q = db.StockInvHead(VarGeneral.InvTyp, crow.Cells["InvNo"].Value.ToString()).T_INVDETs.Select((T_INVDET item) => new
+                var q = db.StockInvHead((IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp), crow.Cells["InvNo"].Value.ToString()).T_INVDETs.Select((T_INVDET item) => new
                 {
                     item.ItmNo,
                     item.ItmDes,
@@ -3639,18 +4028,11 @@ namespace InvAcc.Forms
             {
                 t = false;
                 textBox_ID.Focus();
+
                 if (SaveData())
                 {
                     State = FormState.Saved;
-                    if (savingoccure == 1)
-                    {
-                        dbInstance = null;
-
-                        DataThis = db.StockInvHead((int)data_this.InvTyp, data_this.InvNo);
-                        Utilites.addhashfunction(data_this);
-
-                        savingoccure = 0;
-                    }
+                   
 
                     RefreshPKeys();
                     TextBox_Index.TextBox.Text = string.Concat(PKeys.IndexOf(data_this.InvNo ?? "") + 1);
@@ -3689,14 +4071,17 @@ namespace InvAcc.Forms
             _InvSetting = new T_INVSETTING();
             _SysSetting = new T_SYSSETTING();
             _GdAuto = new T_GdAuto();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+            _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
+            if (IsServiceBill) billUcontrolType31._InvSetting = _InvSetting;
             _SysSetting = db.SystemSettingStock();
             _GdAuto = db.GdAutoStock();
             _Company = db.StockCompanyList().FirstOrDefault();
-            _InvSettingBarCod = db.StockInvSetting(VarGeneral.UserID, 22);
+            _InvSettingBarCod = db.StockInvSetting( 22);
         }
         private void textBox_ID_TextChanged(object sender, EventArgs e)
         {
+            if (textBox_ID.Text == "")
+            { }
             string no = "";
             try
             {
@@ -3712,7 +4097,7 @@ namespace InvAcc.Forms
                     return;
                 }
                 FlxPrice.Visible = false;
-                T_INVHED newData = db.StockInvHead(VarGeneral.InvTyp, no);
+                T_INVHED newData = db.StockInvHeadPus(VarGeneral.ServiceBillId, VarGeneral.InvTyp, no);
                 if (newData == null || string.IsNullOrEmpty(newData.InvNo))
                 {
                     if (!Button_Add.Visible || !Button_Add.Enabled)
@@ -3721,6 +4106,7 @@ namespace InvAcc.Forms
                         return;
                     }
                     Clear();
+
                     txtGDate.Text = n.FormatGreg(VarGeneral.Gdate, "yyyy/MM/dd");
                     txtHDate.Text = n.FormatHijri(VarGeneral.Hdate, "yyyy/MM/dd");
                     txtTime.Text = DateTime.Now.ToString("HH:mm");
@@ -3869,55 +4255,64 @@ namespace InvAcc.Forms
             }
             InvDis = double.Parse(VarGeneral.TString.TEmpty(txtDiscountVal.Text));
             InvAddLocak = double.Parse(VarGeneral.TString.TEmpty(txtTotCost.Text));
-            for (int iiCnt = 1; iiCnt < FlxInv.Rows.Count; iiCnt++)
+            if (!IsServiceBill)
             {
-                try
+                for (int iiCnt = 1; iiCnt < FlxInv.Rows.Count; iiCnt++)
                 {
-                    InvTot += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38))));
-                    InvAdd += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 31))));
-                    InvCost += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 10)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 12))));
-                    InvQty += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7))));
-                    if (switchButton_TaxByTotal.Value)
+                    try
                     {
-                        double DisVal = 0.0;
+                        InvTot += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38))));
+                        InvAdd += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 31))));
+                        InvCost += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 10)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 12))));
+                        InvQty += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7))));
+                        if (switchButton_TaxByTotal.Value)
+                        {
+                            double DisVal = 0.0;
+                            try
+                            {
+                                DisVal = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))) / 100.0);
+                            }
+                            catch
+                            {
+                            }
+                            InvTax += (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) - DisVal) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 35)))) / 100.0);
+                        }
+                        else
+                        {
+                            InvTax += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 35)))) / 100.0);
+                        }
+                        ItmDisCount += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))) / 100.0);
                         try
                         {
-                            DisVal = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))) / 100.0);
+                            if ((File.Exists(Application.StartupPath + "\\Script\\SecriptColDisPurchaes.dll") || (VarGeneral.gUserName == "runsetting" && File.Exists(Application.StartupPath + "\\Script\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\SecriptColDisPurchaes.dll"))) && double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 37)))) > 0.0)
+                            {
+                                ItmDisCount += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 37)))) / 100.0);
+                            }
                         }
                         catch
                         {
                         }
-                        InvTax += (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) - DisVal) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 35)))) / 100.0);
-                    }
-                    else
-                    {
-                        InvTax += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 35)))) / 100.0);
-                    }
-                    ItmDisCount += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))) / 100.0);
-                    try
-                    {
-                        if ((File.Exists(Application.StartupPath + "\\Script\\SecriptColDisPurchaes.dll") || (VarGeneral.gUserName == "runsetting" && File.Exists(Application.StartupPath + "\\Script\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\SecriptColDisPurchaes.dll"))) && double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 37)))) > 0.0)
+                        try
                         {
-                            ItmDisCount += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 37)))) / 100.0);
+                            if (File.Exists(Application.StartupPath + "\\Script\\SecriptColDisPurchaesValue.dll") || (VarGeneral.gUserName == "runsetting" && File.Exists(Application.StartupPath + "\\Script\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\SecriptColDisPurchaesValue.dll")))
+                            {
+                                ItmDisCount += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 37))));
+                            }
                         }
-                    }
-                    catch
-                    {
-                    }
-                    try
-                    {
-                        if (File.Exists(Application.StartupPath + "\\Script\\SecriptColDisPurchaesValue.dll") || (VarGeneral.gUserName == "runsetting" && File.Exists(Application.StartupPath + "\\Script\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\SecriptColDisPurchaesValue.dll")))
+                        catch
                         {
-                            ItmDisCount += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 37))));
                         }
                     }
                     catch
                     {
                     }
                 }
-                catch
-                {
-                }
+            }
+            else
+            {
+                InvTot = billUcontrolType31.InvTot;
+                InvTax = billUcontrolType31.InvTax;
+                InvQty = billUcontrolType31.InvQty;
             }
             txtTotalQ.Text = VarGeneral.TString.TEmpty(InvQty.ToString());
             txtInvCost.Text = VarGeneral.TString.TEmpty(Math.Round(InvCost, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
@@ -3941,6 +4336,7 @@ namespace InvAcc.Forms
                 txtDueAmountLoc.Text = VarGeneral.TString.TEmpty(Math.Round(InvTot - InvAdd - InvDis, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
             }
             double Tax_Per = 0.0;
+
             try
             {
                 Tax_Per = double.Parse(textBoxItem_TaxByNetValue.Text);
@@ -3949,10 +4345,10 @@ namespace InvAcc.Forms
             {
                 Tax_Per = 0.0;
             }
-            if (switchButton_TaxByNet.Value)
-            {
-                InvTax = ((!(Tax_Per <= 0.0) && !(txtDueAmountLoc.Value <= 0.0)) ? Math.Round(txtDueAmountLoc.Value * Tax_Per / 100.0, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2) : 0.0);
-            }
+            if (!IsServiceBill) if (switchButton_TaxByNet.Value)
+                {
+                    if (!IsServiceBill) InvTax = ((!(Tax_Per <= 0.0) && !(txtDueAmountLoc.Value <= 0.0)) ? Math.Round(txtDueAmountLoc.Value * Tax_Per / 100.0, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2) : 0.0);
+                }
             txtTotTax.Text = VarGeneral.TString.TEmpty(Math.Round(InvTax, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
             txtTotTaxLoc.Text = VarGeneral.TString.TEmpty(Math.Round(InvTax * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
             if (switchButton_TaxLines.Value)
@@ -4048,6 +4444,7 @@ namespace InvAcc.Forms
         }
         private void CmbCurr_SelectedIndexChanged(object sender, EventArgs e)
         {
+            billUcontrolType31.CmbCurr = CmbCurr;
             try
             {
                 if (CmbCurr.SelectedIndex == -1)
@@ -4343,8 +4740,20 @@ namespace InvAcc.Forms
             }
             CmbCostC.SelectedIndex = _CmbIndex;
         }
+        void setServiceBill(T_INVHED value)
+        {
+            checkBox1.CheckedChanged -= checkBox1_CheckedChanged;
+            checkBox1.Checked = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+
+            displayServiceBill();
+            billUcontrolType31.setBill(value);
+
+        }
         public void SetData(T_INVHED value)
         {
+       //     ChkPriceIncludeTax.Value = (value.PriceIncludTax == true ? true : false);
+
             vRemming = 0.0;
 #pragma warning disable CS0472 // The result of the expression is always 'false' since a value of type 'double' is never equal to 'null' of type 'double?'
             if (value.InvDisVal == null || value.InvDisValLocCur.Value == null)
@@ -4352,8 +4761,8 @@ namespace InvAcc.Forms
             {
             }
             switchButton_Lock.ValueChanged -= switchButton_Lock_ValueChanged;
-           if(value.CusVenMob!=null)
- text_Mobile.Text = value.CusVenMob.ToString();
+            if (value.CusVenMob != null)
+                text_Mobile.Text = value.CusVenMob.ToString();
             try
             {
                 if (!RepetitionSts && !ReverseSts)
@@ -4560,7 +4969,7 @@ namespace InvAcc.Forms
                     int? invCashPay = value.InvCashPay;
                     if (invCashPay.Value == 0 && invCashPay.HasValue)
                     {
-                        if (value.InvCash.Contains("شب"))checkBox_NetWork.Checked = true; else checkBox_Chash.Checked = true;
+                        if (value.InvCash.Contains("شب")) checkBox_NetWork.Checked = true; else checkBox_Chash.Checked = true;
                     }
                     else if (value.InvCashPay == 1)
                     {
@@ -4575,12 +4984,16 @@ namespace InvAcc.Forms
                 doubleInput_NetWorkLoc.Value = value.NetworkPayLocCur.GetValueOrDefault();
                 doubleInput_CreditLoc.Value = value.CreditPayLocCur.GetValueOrDefault();
                 LDataThis = new BindingList<T_INVDET>(value.T_INVDETs).ToList();
-                txtDebit1.Text = "";
-                txtDebit2.Text = "";
-                txtDebit3.Text = "";
-                txtCredit1.Text = "";
-                txtCredit2.Text = "";
-                txtCredit3.Text = "";
+                if (!IsServiceBill)
+                {
+                    txtDebit1.Text = "";
+                    txtDebit2.Text = "";
+                    txtDebit3.Text = "";
+                    txtCredit1.Text = "";
+                    txtCredit2.Text = "";
+                    txtCredit3.Text = "";
+                }
+                
                 if (value.GadeId.HasValue)
                 {
                     listGdHead = db.StockGdHeadid((int)value.GadeId.GetValueOrDefault());
@@ -4643,6 +5056,7 @@ namespace InvAcc.Forms
                     Fields = ((LangArEn != 0) ? (" distinct T_InvHed.InvNo,T_INVSETTING.InvNamE as InvTypNm,T_InvHed.GDat,T_InvHed.HDat,T_InvHed.InvCash ,T_CstTbl.Eng_Des as CostCenteNm,T_Mndob.Eng_Des as MndNm,T_InvHed.CashPayLocCur,T_InvHed.NetworkPayLocCur,T_InvHed.CreditPayLocCur,T_InvHed.InvNetLocCur,(Round(T_InvHed.InvCost," + (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2) + ")) as  InvCost,(Round(T_InvHed.InvNetLocCur - T_InvHed.InvCost," + (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2) + ")) as InvProfit,T_InvHed.GadeNo,T_InvHed.CusVenNo,T_InvHed.CusVenNm,T_InvHed.Remark,T_SYSSETTING.LogImg ") : (" distinct T_InvHed.InvNo, T_INVSETTING.InvNamA as InvTypNm,T_InvHed.GDat,T_InvHed.HDat,T_InvHed.InvCash ,T_CstTbl.Arb_Des as CostCenteNm, T_Mndob.Arb_Des as MndNm,T_InvHed.CashPayLocCur,T_InvHed.NetworkPayLocCur,T_InvHed.CreditPayLocCur,T_InvHed.InvNetLocCur,(Round(T_InvHed.InvCost," + (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2) + ")) as  InvCost,(Round(T_InvHed.InvNetLocCur - T_InvHed.InvCost," + (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2) + ")) as InvProfit, T_InvHed.GadeNo ,T_InvHed.CusVenNo,T_InvHed.CusVenNm,T_SYSSETTING.LogImg, " + _GdInv));
                     _RepShow.Rule = "Where T_InvHed.InvCashPay =1 and T_InvHed.CreditPay > 0  and T_InvHed.InvTyp = 2 and InvHed_ID=" + data_this.InvHed_ID;
                     _RepShow.Fields = Fields;
+
                     try
                     {
                         _RepShow = _RepShow.Save();
@@ -4800,7 +5214,7 @@ namespace InvAcc.Forms
                 switchButton_BankComm.ValueChanged -= switchButton_BankComm_ValueChanged;
                 if (value.IsCommUse.GetValueOrDefault())
                 {
-                    switchButton_BankComm.Value = true;
+                    switchButton_BankComm.Value = true;// txtTotCostLocExtrnal.
                 }
                 else
                 {
@@ -4844,11 +5258,13 @@ namespace InvAcc.Forms
                 MessageBox.Show(error.Message);
             }
             switchButton_Lock.ValueChanged += switchButton_Lock_ValueChanged;
+
         }
         public void SetLines(List<T_INVDET> listDet)
         {
             try
             {
+                if (IsServiceBill) return;
                 if (!RepetitionSts && !ReverseSts)
                 {
                     FlxInv.Rows.Count = listDet.Count + 1;
@@ -4949,12 +5365,13 @@ namespace InvAcc.Forms
                 textBox_ID.Focus();
                 return false;
             }
-            if (checkBox_Credit.Checked && txtCustNo.Text == "" && VarGeneral.SSSLev != "M")
-            {
-                MessageBox.Show((LangArEn == 0) ? "لا يمكن حفظ فاتورة آجلة بدون رقم حساب المورد" : "Can not save without the Supplier's account number.", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                txtCustNo.Focus();
-                return false;
-            }
+            if (!IsServiceBill)
+                if (checkBox_Credit.Checked && txtCustNo.Text == "" && VarGeneral.SSSLev != "M")
+                {
+                    MessageBox.Show((LangArEn == 0) ? "لا يمكن حفظ فاتورة آجلة بدون رقم حساب المورد" : "Can not save without the Supplier's account number.", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    txtCustNo.Focus();
+                    return false;
+                }
             if (!VarGeneral.TString.ChkStatShow(VarGeneral.UserPassQty, 9) && (txtDueAmountLoc.Value == 0.0 || txtDueAmountLoc.Value == 0.0))
             {
                 MessageBox.Show((LangArEn == 0) ? "لا يمكن الحفظ والصافي يساوي صفر" : "Can not save, and the total is equal to zero", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
@@ -4962,8 +5379,12 @@ namespace InvAcc.Forms
             }
             if (txtTotalQ.Value <= 0.0)
             {
-                MessageBox.Show((LangArEn == 0) ? "يجب ان لا يكون الكمية فارغة .. يرجى التأكد من وجود الأصناف في الفاتورة" : "We must not be empty value .. Please make sure there are items in the bill.", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                return false;
+                if (!IsServiceBill)
+                {
+                    MessageBox.Show((LangArEn == 0) ? "يجب ان لا يكون الكمية فارغة .. يرجى التأكد من وجود الأصناف في الفاتورة" : "We must not be empty value .. Please make sure there are items in the bill.", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+
+                    return false;
+                }
             }
             if (txtPaymentLoc.Value + doubleInput_NetWorkLoc.Value + doubleInput_CreditLoc.Value != (checkBox_CostGaidTax.Checked ? (txtDueAmountLoc.Value - txtTotTax.Value) : txtDueAmountLoc.Value))
             {
@@ -4988,7 +5409,7 @@ namespace InvAcc.Forms
             }
             if (State == FormState.Edit)
             {
-                T_INVHED newData = db.StockInvHead(VarGeneral.InvTyp, textBox_ID.Text);
+                T_INVHED newData = db.StockInvHeadPus(VarGeneral.ServiceBillId, VarGeneral.InvTyp, textBox_ID.Text);
                 if ((!string.IsNullOrEmpty(newData.InvNo) || newData.InvHed_ID > 0) && newData.InvHed_ID != data_this.InvHed_ID)
                 {
                     MessageBox.Show((LangArEn == 0) ? " رقم الفاتورة مكرر يرجى تغييره" : "Employee No It's a existing", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
@@ -4996,103 +5417,105 @@ namespace InvAcc.Forms
                     return false;
                 }
             }
-            for (int iiCnt = 1; iiCnt < FlxInv.Rows.Count; iiCnt++)
-            {
-                if (!(string.Concat(FlxInv.GetData(iiCnt, 1)) != ""))
+            if (IsServiceBill == false)
+                for (int iiCnt = 1; iiCnt < FlxInv.Rows.Count; iiCnt++)
                 {
-                    continue;
-                }
-                for (int i = 1; i < 7; i++)
-                {
-                    if (string.Concat(FlxInv.GetData(iiCnt, i)) == "")
+                    if (!(string.Concat(FlxInv.GetData(iiCnt, 1)) != ""))
                     {
-                        MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من تعبئة جميع البيانات المطلوبة" : "We must not be empty value .. Please make sure there are items in the bill.", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        continue;
+                    }
+                    for (int i = 1; i < 7; i++)
+                    {
+                        if (string.Concat(FlxInv.GetData(iiCnt, i)) == "")
+                        {
+                            MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من تعبئة جميع البيانات المطلوبة" : "We must not be empty value .. Please make sure there are items in the bill.", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                            FlxInv.Row = iiCnt;
+                            FlxInv.Col = i;
+                            FlxInv.Focus();
+                            return false;
+                        }
+                    }
+                    if (VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7))) == "0")
+                    {
+                        MessageBox.Show((LangArEn == 0) ? "يجب ان لا يكون الكمية فارغة .. يرجى التأكد من وجود الأصناف في الفاتورة" : "We must not be empty value .. Please make sure there are items in the bill.", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
                         FlxInv.Row = iiCnt;
-                        FlxInv.Col = i;
+                        FlxInv.Col = 7;
                         FlxInv.Focus();
                         return false;
                     }
-                }
-                if (VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7))) == "0")
-                {
-                    MessageBox.Show((LangArEn == 0) ? "يجب ان لا يكون الكمية فارغة .. يرجى التأكد من وجود الأصناف في الفاتورة" : "We must not be empty value .. Please make sure there are items in the bill.", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    FlxInv.Row = iiCnt;
-                    FlxInv.Col = 7;
-                    FlxInv.Focus();
-                    return false;
-                }
-                if (_StorePr.Contains(VarGeneral.TString.TEmpty(FlxInv.GetData(iiCnt, 6).ToString() ?? "")) && State == FormState.New)
-                {
-                    MessageBox.Show((LangArEn == 0) ? ("تم حظر استخدام المستودع رقم  [ " + VarGeneral.TString.TEmpty(FlxInv.GetData(iiCnt, 6).ToString() ?? "") + " ] عن هذا المستخدم .. يرجى مراجعة الصلاحيات  ") : (" The use of the repository has been blocked [" + VarGeneral.TString.TEmpty(FlxInv.GetData(iiCnt, 6).ToString() ?? "") + "] .. please see User Permissions"), VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    FlxInv.Row = iiCnt;
-                    FlxInv.Col = 6;
-                    FlxInv.Focus();
-                    return false;
-                }
-                if (FlxInv.Cols[27].Visible)
-                {
-                    if (!VarGeneral.TString.ChkStatShow(VarGeneral.UserPassQty, 7) && VarGeneral.CheckDate(string.Concat(FlxInv.GetData(iiCnt, 27))) && string.Concat(FlxInv.GetData(iiCnt, 36)) == "")
+                    if (_StorePr.Contains(VarGeneral.TString.TEmpty(FlxInv.GetData(iiCnt, 6).ToString() ?? "")) && State == FormState.New)
                     {
-                        MessageBox.Show((LangArEn == 0) ? "لا يمكن حفظ تاريخ الصلاحية بدون رقم التصنيع .. الرجاء مراجعة صلاحيات المستخدم" : "Can not save the expiration date without Make No .. please see User Permissions", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        MessageBox.Show((LangArEn == 0) ? ("تم حظر استخدام المستودع رقم  [ " + VarGeneral.TString.TEmpty(FlxInv.GetData(iiCnt, 6).ToString() ?? "") + " ] عن هذا المستخدم .. يرجى مراجعة الصلاحيات  ") : (" The use of the repository has been blocked [" + VarGeneral.TString.TEmpty(FlxInv.GetData(iiCnt, 6).ToString() ?? "") + "] .. please see User Permissions"), VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
                         FlxInv.Row = iiCnt;
-                        FlxInv.Col = 36;
+                        FlxInv.Col = 6;
                         FlxInv.Focus();
                         return false;
                     }
-                    if (!VarGeneral.TString.ChkStatShow(VarGeneral.UserPassQty, 8) && !VarGeneral.CheckDate(string.Concat(FlxInv.GetData(iiCnt, 27))) && string.Concat(FlxInv.GetData(iiCnt, 36)) != "")
+                    if (FlxInv.Cols[27].Visible)
                     {
-                        MessageBox.Show((LangArEn == 0) ? "لا يمكن حفظ رقم التصنيع بدون تاريخ الصلاحية .. الرجاء مراجعة صلاحيات المستخدم" : "Can not save the Make No without expiration date .. please see User Permissions", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                        FlxInv.Row = iiCnt;
-                        FlxInv.Col = 27;
-                        FlxInv.Focus();
+                        if (!VarGeneral.TString.ChkStatShow(VarGeneral.UserPassQty, 7) && VarGeneral.CheckDate(string.Concat(FlxInv.GetData(iiCnt, 27))) && string.Concat(FlxInv.GetData(iiCnt, 36)) == "")
+                        {
+                            MessageBox.Show((LangArEn == 0) ? "لا يمكن حفظ تاريخ الصلاحية بدون رقم التصنيع .. الرجاء مراجعة صلاحيات المستخدم" : "Can not save the expiration date without Make No .. please see User Permissions", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                            FlxInv.Row = iiCnt;
+                            FlxInv.Col = 36;
+                            FlxInv.Focus();
+                            return false;
+                        }
+                        if (!VarGeneral.TString.ChkStatShow(VarGeneral.UserPassQty, 8) && !VarGeneral.CheckDate(string.Concat(FlxInv.GetData(iiCnt, 27))) && string.Concat(FlxInv.GetData(iiCnt, 36)) != "")
+                        {
+                            MessageBox.Show((LangArEn == 0) ? "لا يمكن حفظ رقم التصنيع بدون تاريخ الصلاحية .. الرجاء مراجعة صلاحيات المستخدم" : "Can not save the Make No without expiration date .. please see User Permissions", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                            FlxInv.Row = iiCnt;
+                            FlxInv.Col = 27;
+                            FlxInv.Focus();
+                            return false;
+                        }
+                    }
+                }
+            if (!IsServiceBill)
+                if (checkBox_Credit.Checked && VarGeneral.SSSLev != "M")
+                {
+                    List<T_AccDef> listAccDef = (from er in db.T_AccDefs
+                                                 where er.Lev == (int?)4
+                                                 where er.Sts == (int?)0
+                                                 where er.AccDef_No == txtCustNo.Text
+                                                 orderby er.AccDef_No
+                                                 select er).ToList();
+                    if (listAccDef.Count() <= 0)
+                    {
+                        MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. وذلك لأن حساب المدين لا يعمل - موقوف " : "You can not complete the operation .. This is because the debtor's account does not work - Suspended", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        return false;
+                    }
+                    try
+                    {
+                        listAccDef.First().Debit = db.ExecuteQuery<double>(" select sum(T_GDDET.gdValue) from T_GDDET INNER JOIN  T_GDHEAD ON T_GDDET.gdID = T_GDHEAD.gdhead_ID where T_GDHEAD.gdLok = 0 and T_GDDET.gdValue > 0 and T_GDDET.AccNo ='" + listAccDef.First().AccDef_No + "'", new object[0]).FirstOrDefault();
+                    }
+                    catch
+                    {
+                        listAccDef.First().Debit = 0.0;
+                    }
+                    try
+                    {
+                        listAccDef.First().Credit = Math.Abs(db.ExecuteQuery<double>(" select sum(T_GDDET.gdValue) from T_GDDET INNER JOIN  T_GDHEAD ON T_GDDET.gdID = T_GDHEAD.gdhead_ID where T_GDHEAD.gdLok = 0 and T_GDDET.gdValue < 0 and T_GDDET.AccNo ='" + listAccDef.First().AccDef_No + "'", new object[0]).FirstOrDefault());
+                    }
+                    catch
+                    {
+                        listAccDef.First().Credit = 0.0;
+                    }
+                    try
+                    {
+                        listAccDef.First().Balance = db.ExecuteQuery<double>(" select sum(T_GDDET.gdValue) from T_GDDET INNER JOIN  T_GDHEAD ON T_GDDET.gdID = T_GDHEAD.gdhead_ID where T_GDHEAD.gdLok = 0 and T_GDDET.AccNo ='" + listAccDef.First().AccDef_No + "'", new object[0]).FirstOrDefault();
+                    }
+                    catch
+                    {
+                        listAccDef.First().Balance = 0.0;
+                    }
+                    T_AccDef _AccDef = listAccDef[0];
+                    if (_AccDef.Balance.Value + doubleInput_CreditLoc.Value >= _AccDef.MaxLemt.Value && (_AccDef.MaxLemt.Value != 0.0 || _AccDef.MaxLemt.Value != 0.0 || _AccDef.MaxLemt.Value != 0.0))
+                    {
+                        MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. وذلك لأن حساب العميل / المورد تخطى الحد الأعلى " : "You can not complete the operation .. This is because the upper limit of the customer's / Supplier's account", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
                         return false;
                     }
                 }
-            }
-            if (checkBox_Credit.Checked && VarGeneral.SSSLev != "M")
-            {
-                List<T_AccDef> listAccDef = (from er in db.T_AccDefs
-                                             where er.Lev == (int?)4
-                                             where er.Sts == (int?)0
-                                             where er.AccDef_No == txtCustNo.Text
-                                             orderby er.AccDef_No
-                                             select er).ToList();
-                if (listAccDef.Count() <= 0)
-                {
-                    MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. وذلك لأن حساب المدين لا يعمل - موقوف " : "You can not complete the operation .. This is because the debtor's account does not work - Suspended", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    return false;
-                }
-                try
-                {
-                    listAccDef.First().Debit = db.ExecuteQuery<double>(" select sum(T_GDDET.gdValue) from T_GDDET INNER JOIN  T_GDHEAD ON T_GDDET.gdID = T_GDHEAD.gdhead_ID where T_GDHEAD.gdLok = 0 and T_GDDET.gdValue > 0 and T_GDDET.AccNo ='" + listAccDef.First().AccDef_No + "'", new object[0]).FirstOrDefault();
-                }
-                catch
-                {
-                    listAccDef.First().Debit = 0.0;
-                }
-                try
-                {
-                    listAccDef.First().Credit = Math.Abs(db.ExecuteQuery<double>(" select sum(T_GDDET.gdValue) from T_GDDET INNER JOIN  T_GDHEAD ON T_GDDET.gdID = T_GDHEAD.gdhead_ID where T_GDHEAD.gdLok = 0 and T_GDDET.gdValue < 0 and T_GDDET.AccNo ='" + listAccDef.First().AccDef_No + "'", new object[0]).FirstOrDefault());
-                }
-                catch
-                {
-                    listAccDef.First().Credit = 0.0;
-                }
-                try
-                {
-                    listAccDef.First().Balance = db.ExecuteQuery<double>(" select sum(T_GDDET.gdValue) from T_GDDET INNER JOIN  T_GDHEAD ON T_GDDET.gdID = T_GDHEAD.gdhead_ID where T_GDHEAD.gdLok = 0 and T_GDDET.AccNo ='" + listAccDef.First().AccDef_No + "'", new object[0]).FirstOrDefault();
-                }
-                catch
-                {
-                    listAccDef.First().Balance = 0.0;
-                }
-                T_AccDef _AccDef = listAccDef[0];
-                if (_AccDef.Balance.Value + doubleInput_CreditLoc.Value >= _AccDef.MaxLemt.Value && (_AccDef.MaxLemt.Value != 0.0 || _AccDef.MaxLemt.Value != 0.0 || _AccDef.MaxLemt.Value != 0.0))
-                {
-                    MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. وذلك لأن حساب العميل / المورد تخطى الحد الأعلى " : "You can not complete the operation .. This is because the upper limit of the customer's / Supplier's account", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    return false;
-                }
-            }
             if (_InvSetting.InvSetting.Substring(1, 1) == "1" && VarGeneral.SSSTyp != 0)
             {
                 if (txtPaymentLoc.Value > 0.0 && string.IsNullOrEmpty(txtCredit1.Text))
@@ -5107,6 +5530,7 @@ namespace InvAcc.Forms
                     superTabControl_Info.SelectedTabIndex = 1;
                     return false;
                 }
+                if (IsServiceBill) return true;
                 if (doubleInput_CreditLoc.Value > 0.0 && string.IsNullOrEmpty(txtCredit2.Text))
                 {
                     MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة الطرف الدائن للقيد الآجل .. راجع تهيئة النظام " : "You can not complete the operation .. Make sure the creditor under the party .. see the system configuration", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
@@ -5461,7 +5885,7 @@ namespace InvAcc.Forms
             try
             {
 #pragma warning disable CS0162 // Unreachable code detected
-               return false; if (SystemInformation.TerminalServerSession)
+                return false; if (SystemInformation.TerminalServerSession)
 #pragma warning restore CS0162 // Unreachable code detected
                 {
                     return true;
@@ -5483,6 +5907,8 @@ namespace InvAcc.Forms
             {
                 return false;
             }
+            if (IsServiceBill) if (!billUcontrolType31.validate()) return false;
+
             string Acc0 = _GdAuto.Acc0.ToString();
             string AccCrdt = "";
             string AccDbt = "";
@@ -5680,13 +6106,15 @@ namespace InvAcc.Forms
             try
             {
                 GetData();
+                billUcontrolType31.AccCrdt_Credit = AccCrdt_Credit; billUcontrolType31.AccDbt_Credit = AccDbt_Credit; billUcontrolType31.AccDbt_NetWork = AccDbt_NetWork;
+                billUcontrolType31.AccCrdt_NewtWork = AccCrdt_NewtWork;
                 if (State == FormState.New)
                 {
                     try
                     {
                         GetInvSetting();
                         textBox_ID.TextChanged -= textBox_ID_TextChanged;
-                        T_INVHED newData = db.StockInvHead(VarGeneral.InvTyp, data_this.InvNo);
+                        T_INVHED newData = db.StockInvHeadPus(VarGeneral.ServiceBillId, VarGeneral.InvTyp, data_this.InvNo);
                         if (!string.IsNullOrEmpty(newData.InvNo) || newData.InvHed_ID > 0)
                         {
                             string max = "";
@@ -5703,115 +6131,8 @@ namespace InvAcc.Forms
                         data_this.UserNew = VarGeneral.UserNumber;
                         data_this.SalsManNam = "";
                         data_this.DeleteTime = "";
-                        IDatabase dbHead = Database.GetDatabase(VarGeneral.BranchCS);
-                        dbHead.ClearParameters();
-                        dbHead.AddOutParameter("InvHed_ID", DbType.Int32);
-                        dbHead.AddParameter("InvId", DbType.Double, data_this.InvId);
-                        dbHead.AddParameter("InvNo", DbType.String, data_this.InvNo);
-                        dbHead.AddParameter("InvTyp", DbType.Int32, data_this.InvTyp);
-                        dbHead.AddParameter("InvCashPay", DbType.Int32, data_this.InvCashPay);
-                        dbHead.AddParameter("CusVenNo", DbType.String, data_this.CusVenNo);
-                        dbHead.AddParameter("CusVenNm", DbType.String, data_this.CusVenNm);
-                        dbHead.AddParameter("CusVenAdd", DbType.String, data_this.CusVenAdd);
-                        dbHead.AddParameter("CusVenTel", DbType.String, data_this.CusVenTel);
-                        dbHead.AddParameter("Remark", DbType.String, data_this.Remark);
-                        dbHead.AddParameter("HDat", DbType.String, data_this.HDat);
-                        dbHead.AddParameter("GDat", DbType.String, data_this.GDat);
-                        dbHead.AddParameter("MndNo", DbType.Int32, data_this.MndNo);
-                        dbHead.AddParameter("SalsManNo", DbType.String, data_this.SalsManNo);
-                        dbHead.AddParameter("SalsManNam", DbType.String, data_this.SalsManNam);
-                        dbHead.AddParameter("InvTot", DbType.Double, data_this.InvTot);
-                        dbHead.AddParameter("InvTotLocCur", DbType.Double, data_this.InvTotLocCur);
-                        dbHead.AddParameter("InvDisPrs", DbType.Double, data_this.InvDisPrs);
-                        dbHead.AddParameter("InvDisVal", DbType.Double, data_this.InvDisVal);
-                        dbHead.AddParameter("InvDisValLocCur", DbType.Double, data_this.InvDisValLocCur);
-                        dbHead.AddParameter("InvNet", DbType.Double, data_this.InvNet);
-                        dbHead.AddParameter("InvNetLocCur", DbType.Double, data_this.InvNetLocCur);
-                        dbHead.AddParameter("CashPay", DbType.Double, data_this.CashPay);
-                        dbHead.AddParameter("CashPayLocCur", DbType.Double, data_this.CashPayLocCur);
-                        dbHead.AddParameter("IfRet", DbType.Int32, data_this.IfRet);
-                        dbHead.AddParameter("GadeNo", DbType.Double, data_this.GadeNo);
-                        dbHead.AddParameter("GadeId", DbType.Double, data_this.GadeId);
-                        dbHead.AddParameter("IfDel", DbType.Int32, data_this.IfDel);
-                        dbHead.AddParameter("RetNo", DbType.String, data_this.RetNo);
-                        dbHead.AddParameter("RetId", DbType.Double, data_this.RetId);
-                        dbHead.AddParameter("InvCstNo", DbType.Int32, data_this.InvCstNo);
-                        dbHead.AddParameter("InvCashPayNm", DbType.String, data_this.InvCashPayNm);
-                        dbHead.AddParameter("RefNo", DbType.String, data_this.RefNo);
-                        dbHead.AddParameter("InvCost", DbType.Int32, data_this.InvCost);
-                        dbHead.AddParameter("EstDat", DbType.String, data_this.EstDat);
-                        dbHead.AddParameter("CustPri", DbType.Int32, data_this.CustPri);
-                        dbHead.AddParameter("ArbTaf", DbType.String, data_this.ArbTaf);
-                        dbHead.AddParameter("CurTyp", DbType.Int32, data_this.CurTyp);
-                        dbHead.AddParameter("InvCash", DbType.String, data_this.InvCash);
-                        dbHead.AddParameter("ToStore", DbType.String, data_this.ToStore);
-                        dbHead.AddParameter("ToStoreNm", DbType.String, data_this.ToStoreNm);
-                        dbHead.AddParameter("InvQty", DbType.Double, data_this.InvQty);
-                        dbHead.AddParameter("EngTaf", DbType.String, data_this.EngTaf);
-                        dbHead.AddParameter("IfTrans", DbType.Int32, data_this.IfTrans);
-                        dbHead.AddParameter("CustRep", DbType.Double, data_this.CustRep);
-                        dbHead.AddParameter("CustNet", DbType.Double, data_this.CustNet);
-                        dbHead.AddParameter("InvWight_T", DbType.Double, data_this.InvWight_T);
-                        dbHead.AddParameter("IfPrint", DbType.Int32, data_this.IfPrint);
-                        dbHead.AddParameter("LTim", DbType.String, data_this.LTim);
-                        dbHead.AddParameter("CREATED_BY", DbType.String, data_this.CREATED_BY);
-                        dbHead.AddParameter("DATE_CREATED", DbType.DateTime, data_this.DATE_CREATED);
-                        dbHead.AddParameter("MODIFIED_BY", DbType.String, data_this.MODIFIED_BY);
-                        dbHead.AddParameter("DATE_MODIFIED", DbType.DateTime, data_this.DATE_MODIFIED);
-                        dbHead.AddParameter("CreditPay", DbType.Double, data_this.CreditPay);
-                        dbHead.AddParameter("CreditPayLocCur", DbType.Double, data_this.CreditPayLocCur);
-                        dbHead.AddParameter("NetworkPay", DbType.Double, data_this.NetworkPay);
-                        dbHead.AddParameter("NetworkPayLocCur", DbType.Double, data_this.NetworkPayLocCur);
-                        dbHead.AddParameter("CommMnd_Inv", DbType.Double, data_this.CommMnd_Inv);
-                        dbHead.AddParameter("MndExtrnal", DbType.Boolean, data_this.MndExtrnal);
-                        dbHead.AddParameter("CompanyID", DbType.Int32, data_this.CompanyID);
-                        dbHead.AddParameter("InvAddCost", DbType.Double, data_this.InvAddCost);
-                        dbHead.AddParameter("InvAddCostLoc", DbType.Double, data_this.InvAddCostLoc);
-                        dbHead.AddParameter("InvAddCostExtrnal", DbType.Double, data_this.InvAddCostExtrnal);
-                        dbHead.AddParameter("InvAddCostExtrnalLoc", DbType.Double, data_this.InvAddCostExtrnalLoc);
-                        dbHead.AddParameter("IsExtrnalGaid", DbType.Boolean, data_this.IsExtrnalGaid);
-                        dbHead.AddParameter("ExtrnalCostGaidID", DbType.Double, data_this.ExtrnalCostGaidID);
-                        dbHead.AddParameter("Puyaid", DbType.Double, data_this.Puyaid);
-                        dbHead.AddParameter("Remming", DbType.Double, data_this.Remming);
-                        dbHead.AddParameter("RoomNo", DbType.Int32, data_this.RoomNo);
-                        dbHead.AddParameter("OrderTyp", DbType.Int32, data_this.OrderTyp);
-                        dbHead.AddParameter("RoomSts", DbType.Boolean, data_this.RoomSts);
-                        dbHead.AddParameter("chauffeurNo", DbType.Int32, data_this.chauffeurNo);
-                        dbHead.AddParameter("RoomPerson", DbType.Int32, data_this.RoomPerson);
-                        dbHead.AddParameter("ServiceValue", DbType.Double, data_this.ServiceValue);
-                        dbHead.AddParameter("Sts", DbType.Boolean, data_this.Sts);
-                        dbHead.AddParameter("PaymentOrderTyp", DbType.Int32, data_this.PaymentOrderTyp);
-                        dbHead.AddParameter("AdminLock", DbType.Boolean, data_this.AdminLock);
-                        dbHead.AddParameter("DeleteDate", DbType.String, data_this.DeleteDate);
-                        dbHead.AddParameter("DeleteTime", DbType.String, data_this.DeleteTime);
-                        dbHead.AddParameter("UserNew", DbType.String, data_this.UserNew);
-                        dbHead.AddParameter("IfEnter", DbType.Int32, data_this.IfEnter);
-                        dbHead.AddParameter("InvAddTax", DbType.Double, data_this.InvAddTax);
-                        dbHead.AddParameter("InvAddTaxlLoc", DbType.Double, data_this.InvAddTaxlLoc);
-                        dbHead.AddParameter("IsTaxGaid", DbType.Boolean, data_this.IsTaxGaid);
-                        dbHead.AddParameter("TaxGaidID", DbType.Double, data_this.TaxGaidID);
-                        dbHead.AddParameter("IsTaxUse", DbType.Boolean, data_this.IsTaxUse);
-                        dbHead.AddParameter("InvValGaidDis", DbType.Double, data_this.InvValGaidDis);
-                        dbHead.AddParameter("InvValGaidDislLoc", DbType.Double, data_this.InvValGaidDislLoc);
-                        dbHead.AddParameter("IsDisGaid", DbType.Boolean, data_this.IsDisGaid);
-                        dbHead.AddParameter("DisGaidID1", DbType.Double, data_this.DisGaidID1);
-                        dbHead.AddParameter("IsDisUse1", DbType.Boolean, data_this.IsDisUse1);
-                        dbHead.AddParameter("InvComm", DbType.Double, data_this.InvComm);
-                        dbHead.AddParameter("InvCommLoc", DbType.Double, data_this.InvCommLoc);
-                        dbHead.AddParameter("IsCommGaid", DbType.Boolean, data_this.IsCommGaid);
-                        dbHead.AddParameter("CommGaidID", DbType.Double, data_this.CommGaidID);
-                        dbHead.AddParameter("IsCommUse", DbType.Boolean, data_this.IsCommUse);
-                        dbHead.AddParameter("IsTaxLines", DbType.Boolean, data_this.IsTaxLines);
-                        dbHead.AddParameter("IsTaxByTotal", DbType.Boolean, data_this.IsTaxByTotal);
-                        dbHead.AddParameter("IsTaxByNet", DbType.Boolean, data_this.IsTaxByNet);
-                        dbHead.AddParameter("TaxByNetValue", DbType.Double, data_this.TaxByNetValue);
-                        dbHead.AddParameter("DesPointsValue", DbType.Double, data_this.DesPointsValue);
-                        dbHead.AddParameter("DesPointsValueLocCur", DbType.Double, data_this.DesPointsValueLocCur);
-                        dbHead.AddParameter("PointsCount", DbType.Double, data_this.PointsCount);
-                        dbHead.AddParameter("IsPoints", DbType.Boolean, data_this.IsPoints);
-                        dbHead.AddParameter("tailor20", DbType.String, data_this.tailor20);
-                        dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_INSERT");
-                        data_this.InvHed_ID = int.Parse(dbHead.GetParameterValue("InvHed_ID").ToString());
+                        if (IsServiceBill) data_this.InvTyp = 1002;
+                        data_this.InvHed_ID = InvHelper.INVHED_INSERT(data_this);
                         t = true;
                         button_Draft.Enabled = false;
                         savingoccure = 1;
@@ -5851,204 +6172,70 @@ namespace InvAcc.Forms
                 else
                 {
                     data_this.SalsManNam = VarGeneral.UserNumber;
-                    IDatabase dbHead = Database.GetDatabase(VarGeneral.BranchCS);
-                    dbHead.ClearParameters();
-                    dbHead.AddParameter("InvHed_ID", DbType.Int32, data_this.InvHed_ID);
-                    dbHead.AddParameter("InvId", DbType.Double, data_this.InvId);
-                    dbHead.AddParameter("InvNo", DbType.String, data_this.InvNo);
-                    dbHead.AddParameter("InvTyp", DbType.Int32, data_this.InvTyp);
-                    dbHead.AddParameter("InvCashPay", DbType.Int32, data_this.InvCashPay);
-                    dbHead.AddParameter("CusVenNo", DbType.String, data_this.CusVenNo);
-                    dbHead.AddParameter("CusVenNm", DbType.String, data_this.CusVenNm);
-                    dbHead.AddParameter("CusVenAdd", DbType.String, data_this.CusVenAdd);
-                    dbHead.AddParameter("CusVenTel", DbType.String, data_this.CusVenTel);
-                    dbHead.AddParameter("Remark", DbType.String, data_this.Remark);
-                    dbHead.AddParameter("HDat", DbType.String, data_this.HDat);
-                    dbHead.AddParameter("GDat", DbType.String, data_this.GDat);
-                    dbHead.AddParameter("MndNo", DbType.Int32, data_this.MndNo);
-                    dbHead.AddParameter("SalsManNo", DbType.String, data_this.SalsManNo);
-                    dbHead.AddParameter("SalsManNam", DbType.String, data_this.SalsManNam);
-                    dbHead.AddParameter("InvTot", DbType.Double, data_this.InvTot);
-                    dbHead.AddParameter("InvTotLocCur", DbType.Double, data_this.InvTotLocCur);
-                    dbHead.AddParameter("InvDisPrs", DbType.Double, data_this.InvDisPrs);
-                    dbHead.AddParameter("InvDisVal", DbType.Double, data_this.InvDisVal);
-                    dbHead.AddParameter("InvDisValLocCur", DbType.Double, data_this.InvDisValLocCur);
-                    dbHead.AddParameter("InvNet", DbType.Double, data_this.InvNet);
-                    dbHead.AddParameter("InvNetLocCur", DbType.Double, data_this.InvNetLocCur);
-                    dbHead.AddParameter("CashPay", DbType.Double, data_this.CashPay);
-                    dbHead.AddParameter("CashPayLocCur", DbType.Double, data_this.CashPayLocCur);
-                    dbHead.AddParameter("IfRet", DbType.Int32, data_this.IfRet);
-                    dbHead.AddParameter("GadeNo", DbType.Double, data_this.GadeNo);
-                    dbHead.AddParameter("GadeId", DbType.Double, data_this.GadeId);
-                    dbHead.AddParameter("IfDel", DbType.Int32, data_this.IfDel);
-                    dbHead.AddParameter("RetNo", DbType.String, data_this.RetNo);
-                    dbHead.AddParameter("RetId", DbType.Double, data_this.RetId);
-                    dbHead.AddParameter("InvCstNo", DbType.Int32, data_this.InvCstNo);
-                    dbHead.AddParameter("InvCashPayNm", DbType.String, data_this.InvCashPayNm);
-                    dbHead.AddParameter("RefNo", DbType.String, data_this.RefNo);
-                    dbHead.AddParameter("InvCost", DbType.Int32, data_this.InvCost);
-                    dbHead.AddParameter("EstDat", DbType.String, data_this.EstDat);
-                    dbHead.AddParameter("CustPri", DbType.Int32, data_this.CustPri);
-                    dbHead.AddParameter("ArbTaf", DbType.String, data_this.ArbTaf);
-                    dbHead.AddParameter("CurTyp", DbType.Int32, data_this.CurTyp);
-                    dbHead.AddParameter("InvCash", DbType.String, data_this.InvCash);
-                    dbHead.AddParameter("ToStore", DbType.String, data_this.ToStore);
-                    dbHead.AddParameter("ToStoreNm", DbType.String, data_this.ToStoreNm);
-                    dbHead.AddParameter("InvQty", DbType.Double, data_this.InvQty);
-                    dbHead.AddParameter("EngTaf", DbType.String, data_this.EngTaf);
-                    dbHead.AddParameter("IfTrans", DbType.Int32, data_this.IfTrans);
-                    dbHead.AddParameter("CustRep", DbType.Double, data_this.CustRep);
-                    dbHead.AddParameter("CustNet", DbType.Double, data_this.CustNet);
-                    dbHead.AddParameter("InvWight_T", DbType.Double, data_this.InvWight_T);
-                    dbHead.AddParameter("IfPrint", DbType.Int32, data_this.IfPrint);
-                    dbHead.AddParameter("LTim", DbType.String, data_this.LTim);
-                    dbHead.AddParameter("CREATED_BY", DbType.String, data_this.CREATED_BY);
-                    dbHead.AddParameter("DATE_CREATED", DbType.DateTime, data_this.DATE_CREATED);
-                    dbHead.AddParameter("MODIFIED_BY", DbType.String, data_this.MODIFIED_BY);
-                    dbHead.AddParameter("DATE_MODIFIED", DbType.DateTime, data_this.DATE_MODIFIED);
-                    dbHead.AddParameter("CreditPay", DbType.Double, data_this.CreditPay);
-                    dbHead.AddParameter("CreditPayLocCur", DbType.Double, data_this.CreditPayLocCur);
-                    dbHead.AddParameter("NetworkPay", DbType.Double, data_this.NetworkPay);
-                    dbHead.AddParameter("NetworkPayLocCur", DbType.Double, data_this.NetworkPayLocCur);
-                    dbHead.AddParameter("CommMnd_Inv", DbType.Double, data_this.CommMnd_Inv);
-                    dbHead.AddParameter("MndExtrnal", DbType.Boolean, data_this.MndExtrnal);
-                    dbHead.AddParameter("CompanyID", DbType.Int32, data_this.CompanyID);
-                    dbHead.AddParameter("InvAddCost", DbType.Double, data_this.InvAddCost);
-                    dbHead.AddParameter("InvAddCostLoc", DbType.Double, data_this.InvAddCostLoc);
-                    dbHead.AddParameter("InvAddCostExtrnal", DbType.Double, data_this.InvAddCostExtrnal);
-                    dbHead.AddParameter("InvAddCostExtrnalLoc", DbType.Double, data_this.InvAddCostExtrnalLoc);
-                    dbHead.AddParameter("IsExtrnalGaid", DbType.Boolean, data_this.IsExtrnalGaid);
-                    dbHead.AddParameter("ExtrnalCostGaidID", DbType.Double, data_this.ExtrnalCostGaidID);
-                    dbHead.AddParameter("Puyaid", DbType.Double, data_this.Puyaid);
-                    dbHead.AddParameter("Remming", DbType.Double, data_this.Remming);
-                    dbHead.AddParameter("RoomNo", DbType.Int32, data_this.RoomNo);
-                    dbHead.AddParameter("OrderTyp", DbType.Int32, data_this.OrderTyp);
-                    dbHead.AddParameter("RoomSts", DbType.Boolean, data_this.RoomSts);
-                    dbHead.AddParameter("chauffeurNo", DbType.Int32, data_this.chauffeurNo);
-                    dbHead.AddParameter("RoomPerson", DbType.Int32, data_this.RoomPerson);
-                    dbHead.AddParameter("ServiceValue", DbType.Double, data_this.ServiceValue);
-                    dbHead.AddParameter("Sts", DbType.Boolean, data_this.Sts);
-                    dbHead.AddParameter("PaymentOrderTyp", DbType.Int32, data_this.PaymentOrderTyp);
-                    dbHead.AddParameter("AdminLock", DbType.Boolean, data_this.AdminLock);
-                    dbHead.AddParameter("DeleteDate", DbType.String, data_this.DeleteDate);
-                    dbHead.AddParameter("DeleteTime", DbType.String, data_this.DeleteTime);
-                    dbHead.AddParameter("UserNew", DbType.String, data_this.UserNew);
-                    dbHead.AddParameter("IfEnter", DbType.Int32, data_this.IfEnter);
-                    dbHead.AddParameter("InvAddTax", DbType.Double, data_this.InvAddTax);
-                    dbHead.AddParameter("InvAddTaxlLoc", DbType.Double, data_this.InvAddTaxlLoc);
-                    dbHead.AddParameter("IsTaxGaid", DbType.Boolean, data_this.IsTaxGaid);
-                    dbHead.AddParameter("TaxGaidID", DbType.Double, data_this.TaxGaidID);
-                    dbHead.AddParameter("IsTaxUse", DbType.Boolean, data_this.IsTaxUse);
-                    dbHead.AddParameter("InvValGaidDis", DbType.Double, data_this.InvValGaidDis);
-                    dbHead.AddParameter("InvValGaidDislLoc", DbType.Double, data_this.InvValGaidDislLoc);
-                    dbHead.AddParameter("IsDisGaid", DbType.Boolean, data_this.IsDisGaid);
-                    dbHead.AddParameter("DisGaidID1", DbType.Double, data_this.DisGaidID1);
-                    dbHead.AddParameter("IsDisUse1", DbType.Boolean, data_this.IsDisUse1);
-                    dbHead.AddParameter("InvComm", DbType.Double, data_this.InvComm);
-                    dbHead.AddParameter("InvCommLoc", DbType.Double, data_this.InvCommLoc);
-                    dbHead.AddParameter("IsCommGaid", DbType.Boolean, data_this.IsCommGaid);
-                    dbHead.AddParameter("CommGaidID", DbType.Double, data_this.CommGaidID);
-                    dbHead.AddParameter("IsCommUse", DbType.Boolean, data_this.IsCommUse);
-                    dbHead.AddParameter("IsTaxLines", DbType.Boolean, data_this.IsTaxLines);
-                    dbHead.AddParameter("IsTaxByTotal", DbType.Boolean, data_this.IsTaxByTotal);
-                    dbHead.AddParameter("IsTaxByNet", DbType.Boolean, data_this.IsTaxByNet);
-                    dbHead.AddParameter("TaxByNetValue", DbType.Double, data_this.TaxByNetValue);
-                    dbHead.AddParameter("DesPointsValue", DbType.Double, data_this.DesPointsValue);
-                    dbHead.AddParameter("DesPointsValueLocCur", DbType.Double, data_this.DesPointsValueLocCur);
-                    dbHead.AddParameter("PointsCount", DbType.Double, data_this.PointsCount);
-                    dbHead.AddParameter("IsPoints", DbType.Boolean, data_this.IsPoints);
-                    dbHead.AddParameter("tailor20", DbType.String, data_this.tailor20);
-                    dbHead.AddParameter("CusVenMob", DbType.String, data_this.CusVenMob);
-                    dbHead.AddParameter("PriceIncludeTax", DbType.Boolean, data_this.PriceIncludTax);
-                    dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_UPDATE");
+                    if (IsServiceBill) data_this.InvTyp = 1002;
+                    InvHelper.INVHED_Update(data_this);
                     for (int i = 0; i < data_this.T_INVDETs.Count; i++)
                     {
                         db_.ClearParameters();
                         db_.AddParameter("InvDet_ID", DbType.Int32, data_this.T_INVDETs[i].InvDet_ID);
                         db_.ExecuteNonQuery(storedProcedure: true, "S_T_INVDET_DELETE");
                     }
-                }
-                int iiCnt = 0;
-                try
-                {
-                    for (iiCnt = 1; iiCnt < FlxInv.Rows.Count; iiCnt++)
+                    if (IsServiceBill)
                     {
-                        if (FlxInv.GetData(iiCnt, 1) == null)
+
+
+                    }
+                }
+
+                int iiCnt = 0;
+                if (!IsServiceBill)
+                {
+                    try
+                    {
+                        for (iiCnt = 1; iiCnt < FlxInv.Rows.Count; iiCnt++)
                         {
-                            continue;
-                        }
-                        bool _St = true;
-                        if (State == FormState.New)
-                        {
-                            Stock_DataDataContext stock_DataDataContext = new Stock_DataDataContext(VarGeneral.BranchCS);
-                            List<T_Item> listSer = new List<T_Item>();
-                            listSer = (from t in stock_DataDataContext.T_Items
-                                       where t.Itm_No == "" + FlxInv.GetData(iiCnt, 1)
-                                       orderby t.Itm_No
-                                       select t).ToList();
-                            if (listSer.Count > 0)
+                            if (FlxInv.GetData(iiCnt, 1) == null)
                             {
-                                _Items = new T_Item();
-                                _Items = listSer[0];
-                                if (_Items.AvrageCost.Value != 0.0 && _Items.AvrageCost.Value != 0.0)
-                                {
-                                    double QtyCheck = 0.0;
-                                    try
-                                    {
-                                        QtyCheck = ((!(_Items.OpenQty.Value > 0.0)) ? 0.0 : _Items.OpenQty.Value);
-                                    }
-                                    catch
-                                    {
-                                        QtyCheck = 0.0;
-                                    }
-                                    double QtyT = QtyCheck + double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 12))));
-                                    double CostT = _Items.AvrageCost.Value * QtyCheck + double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38))));
-                                    if (QtyT > 0.0)
-                                    {
-                                        _Items.AvrageCost = CostT / QtyT;
-                                    }
-                                    _Items.LastCost = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11))));
-                                }
-                                else
-                                {
-                                    _Items.AvrageCost = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11))));
-                                    _Items.LastCost = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11))));
-                                    _Items.FirstCost = _Items.LastCost.Value;
-                                }
-                                try
-                                {
-                                    if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 45))
-                                    {
-                                        _Items.AvrageCost *= db.StockCurencyID(int.Parse(CmbCurr.SelectedValue.ToString())).Rate.Value;
-                                        _Items.LastCost *= db.StockCurencyID(int.Parse(CmbCurr.SelectedValue.ToString())).Rate.Value;
-                                        _Items.FirstCost *= db.StockCurencyID(int.Parse(CmbCurr.SelectedValue.ToString())).Rate.Value;
-                                        _Items.StartCost *= db.StockCurencyID(int.Parse(CmbCurr.SelectedValue.ToString())).Rate.Value;
-                                    }
-                                }
-                                catch
-                                {
-                                }
-                                stock_DataDataContext.Log = VarGeneral.DebugLog;
-                                stock_DataDataContext.SubmitChanges(ConflictMode.ContinueOnConflict);
+                                continue;
                             }
-                        }
-                        if (State == FormState.Edit)
-                        {
-                            Stock_DataDataContext stock_DataDataContext = new Stock_DataDataContext(VarGeneral.BranchCS);
-                            List<T_Item> listSer = new List<T_Item>();
-                            listSer = (from t in stock_DataDataContext.T_Items
-                                       where t.Itm_No == "" + FlxInv.GetData(iiCnt, 1)
-                                       orderby t.Itm_No
-                                       select t).ToList();
-                            if (listSer.Count > 0)
+                            bool _St = true;
+                            if (State == FormState.New)
                             {
-                                _Items = new T_Item();
-                                _Items = listSer[0];
-                                if (!db.CheckIsPurchasInvoic(_Items.Itm_No, data_this.InvHed_ID))
+                                Stock_DataDataContext stock_DataDataContext = new Stock_DataDataContext(VarGeneral.BranchCS);
+                                List<T_Item> listSer = new List<T_Item>();
+                                listSer = (from t in stock_DataDataContext.T_Items
+                                           where t.Itm_No == "" + FlxInv.GetData(iiCnt, 1)
+                                           orderby t.Itm_No
+                                           select t).ToList();
+                                if (listSer.Count > 0)
                                 {
-                                    _Items.AvrageCost = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11))));
-                                    _Items.LastCost = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11))));
-                                    _Items.FirstCost = _Items.LastCost.Value;
+                                    _Items = new T_Item();
+                                    _Items = listSer[0];
+                                    if (_Items.AvrageCost.Value != 0.0 && _Items.AvrageCost.Value != 0.0)
+                                    {
+                                        double QtyCheck = 0.0;
+                                        try
+                                        {
+                                            QtyCheck = ((!(_Items.OpenQty.Value > 0.0)) ? 0.0 : _Items.OpenQty.Value);
+                                        }
+                                        catch
+                                        {
+                                            QtyCheck = 0.0;
+                                        }
+                                        double QtyT = QtyCheck + double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 12))));
+                                        double CostT = _Items.AvrageCost.Value * QtyCheck + double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38))));
+                                        if (QtyT > 0.0)
+                                        {
+                                            _Items.AvrageCost = CostT / QtyT;
+                                        }
+                                        _Items.LastCost = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11))));
+                                    }
+                                    else
+                                    {
+                                        _Items.AvrageCost = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11))));
+                                        _Items.LastCost = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11))));
+                                        _Items.FirstCost = _Items.LastCost.Value;
+                                    }
                                     try
                                     {
                                         if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 45))
@@ -6064,81 +6251,132 @@ namespace InvAcc.Forms
                                     }
                                     stock_DataDataContext.Log = VarGeneral.DebugLog;
                                     stock_DataDataContext.SubmitChanges(ConflictMode.ContinueOnConflict);
-                                    _St = false;
                                 }
                             }
-                        }
-                        db_.ClearParameters();
-                        db_.AddParameter("InvDet_ID", DbType.Int32, 0);
-                        db_.AddParameter("InvNo", DbType.String, textBox_ID.Text.Trim());
-                        db_.AddParameter("InvId", DbType.Int32, data_this.InvHed_ID);
-                        db_.AddParameter("InvSer", DbType.Int32, iiCnt);
-                        db_.AddParameter("ItmNo", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 1)));
-                        db_.AddParameter("Cost", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 10)))));
-                        db_.AddParameter("Qty", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))));
-                        db_.AddParameter("ItmDes", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 2)));
-                        db_.AddParameter("ItmUnt", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 3)));
-                        db_.AddParameter("ItmDesE", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 4)));
-                        db_.AddParameter("ItmUntE", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 5)));
-                        db_.AddParameter("ItmUntPak", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11)))));
-                        db_.AddParameter("StoreNo", DbType.Int32, int.Parse(VarGeneral.TString.TEmpty(FlxInv.GetData(iiCnt, 6).ToString() ?? "")));
-                        db_.AddParameter("Price", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))));
-                        db_.AddParameter("Amount", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))));
-                        db_.AddParameter("RealQty", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 12)))));
-                        db_.AddParameter("itmInvDsc", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 13)))));
-                        if (VarGeneral.CheckDate(string.Concat(FlxInv.GetData(iiCnt, 27))))
-                        {
-                            db_.AddParameter("DatExper", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 27)));
-                        }
-                        else
-                        {
-                            db_.AddParameter("DatExper", DbType.String, "");
-                        }
-                        db_.AddParameter("ItmDis", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))));
-                        db_.AddParameter("ItmAddCost", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 31)))));
-                        db_.AddParameter("ItmTyp", DbType.Int32, int.Parse("0" + FlxInv.GetData(iiCnt, 32)));
-                        db_.AddParameter("ItmIndex", DbType.Int32, 0);
-                        try
-                        {
-                            db_.AddParameter("ItmWight", DbType.Double, ((bool)FlxInv.GetData(iiCnt, 33)) ? 1 : 0);
-                        }
-                        catch
-                        {
-                            db_.AddParameter("ItmWight", DbType.Double, 0);
-                        }
-                        db_.AddParameter("ItmWight_T", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 34)))));
-                        if (!string.IsNullOrEmpty(string.Concat(FlxInv.GetData(iiCnt, 36))))
-                        {
-                            db_.AddParameter("RunCod", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 36)));
-                        }
-                        else
-                        {
-                            db_.AddParameter("RunCod", DbType.String, "");
-                        }
-                        db_.AddParameter("LineDetails", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 37)));
-                        db_.AddParameter("ItmTax", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 35)))));
-                        db_.ExecuteNonQuery(storedProcedure: true, "S_T_INVDET_INSERT");
-                        if (State == FormState.Edit && _St)
-                        {
-                            UpdateCost(iiCnt);
+                            if (State == FormState.Edit)
+                            {
+                                Stock_DataDataContext stock_DataDataContext = new Stock_DataDataContext(VarGeneral.BranchCS);
+                                List<T_Item> listSer = new List<T_Item>();
+                                listSer = (from t in stock_DataDataContext.T_Items
+                                           where t.Itm_No == "" + FlxInv.GetData(iiCnt, 1)
+                                           orderby t.Itm_No
+                                           select t).ToList();
+                                if (listSer.Count > 0)
+                                {
+                                    _Items = new T_Item();
+                                    _Items = listSer[0];
+                                    if (!db.CheckIsPurchasInvoic(_Items.Itm_No, data_this.InvHed_ID))
+                                    {
+                                        _Items.AvrageCost = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11))));
+                                        _Items.LastCost = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) / double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11))));
+                                        _Items.FirstCost = _Items.LastCost.Value;
+                                        try
+                                        {
+                                            if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 45))
+                                            {
+                                                _Items.AvrageCost *= db.StockCurencyID(int.Parse(CmbCurr.SelectedValue.ToString())).Rate.Value;
+                                                _Items.LastCost *= db.StockCurencyID(int.Parse(CmbCurr.SelectedValue.ToString())).Rate.Value;
+                                                _Items.FirstCost *= db.StockCurencyID(int.Parse(CmbCurr.SelectedValue.ToString())).Rate.Value;
+                                                _Items.StartCost *= db.StockCurencyID(int.Parse(CmbCurr.SelectedValue.ToString())).Rate.Value;
+                                            }
+                                        }
+                                        catch
+                                        {
+                                        }
+                                        stock_DataDataContext.Log = VarGeneral.DebugLog;
+                                        stock_DataDataContext.SubmitChanges(ConflictMode.ContinueOnConflict);
+                                        _St = false;
+                                    }
+                                }
+                            }
+                            db_.ClearParameters();
+                            db_.AddParameter("InvDet_ID", DbType.Int32, 0);
+                            db_.AddParameter("InvNo", DbType.String, textBox_ID.Text.Trim());
+                            db_.AddParameter("InvId", DbType.Int32, data_this.InvHed_ID);
+                            db_.AddParameter("InvSer", DbType.Int32, iiCnt);
+                            db_.AddParameter("ItmNo", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 1)));
+                            db_.AddParameter("Cost", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 10)))));
+                            db_.AddParameter("Qty", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))));
+                            db_.AddParameter("ItmDes", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 2)));
+                            db_.AddParameter("ItmUnt", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 3)));
+                            db_.AddParameter("ItmDesE", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 4)));
+                            db_.AddParameter("ItmUntE", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 5)));
+                            db_.AddParameter("ItmUntPak", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11)))));
+                            db_.AddParameter("StoreNo", DbType.Int32, int.Parse(VarGeneral.TString.TEmpty(FlxInv.GetData(iiCnt, 6).ToString() ?? "")));
+                            db_.AddParameter("Price", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))));
+                            db_.AddParameter("Amount", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))));
+                            db_.AddParameter("RealQty", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 12)))));
+                            db_.AddParameter("itmInvDsc", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 13)))));
+                            if (VarGeneral.CheckDate(string.Concat(FlxInv.GetData(iiCnt, 27))))
+                            {
+                                db_.AddParameter("DatExper", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 27)));
+                            }
+                            else
+                            {
+                                db_.AddParameter("DatExper", DbType.String, "");
+                            }
+                            db_.AddParameter("ItmDis", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))));
+                            db_.AddParameter("ItmAddCost", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 31)))));
+                            db_.AddParameter("ItmTyp", DbType.Int32, int.Parse("0" + FlxInv.GetData(iiCnt, 32)));
+                            db_.AddParameter("ItmIndex", DbType.Int32, 0);
+                            try
+                            {
+                                db_.AddParameter("ItmWight", DbType.Double, ((bool)FlxInv.GetData(iiCnt, 33)) ? 1 : 0);
+                            }
+                            catch
+                            {
+                                db_.AddParameter("ItmWight", DbType.Double, 0);
+                            }
+                            db_.AddParameter("ItmWight_T", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 34)))));
+                            if (!string.IsNullOrEmpty(string.Concat(FlxInv.GetData(iiCnt, 36))))
+                            {
+                                db_.AddParameter("RunCod", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 36)));
+                            }
+                            else
+                            {
+                                db_.AddParameter("RunCod", DbType.String, "");
+                            }
+                            db_.AddParameter("LineDetails", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 37)));
+                            db_.AddParameter("ItmTax", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 35)))));
+                            db_.ExecuteNonQuery(storedProcedure: true, "S_T_INVDET_INSERT");
+                            if (State == FormState.Edit && _St)
+                            {
+                                UpdateCost(iiCnt);
+                            }
                         }
                     }
+
+                    catch (Exception ex4)
+                    {
+                        VarGeneral.DebLog.writeLog("LinesInv_Save_InvPurchaes:", ex4, enable: true);
+                        MessageBox.Show(ex4.Message);
+                        return false;
+                    }
                 }
-                catch (Exception ex4)
+                else
                 {
-                    VarGeneral.DebLog.writeLog("LinesInv_Save_InvPurchaes:", ex4, enable: true);
-                    MessageBox.Show(ex4.Message);
-                    return false;
+
                 }
+
                 if ((txtPaymentLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt) && !string.IsNullOrEmpty(AccDbt)) || (doubleInput_NetWorkLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt_NewtWork) && !string.IsNullOrEmpty(AccDbt_NetWork)) || (doubleInput_CreditLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt_Credit) && !string.IsNullOrEmpty(AccDbt_Credit)))
                 {
+                    if (IsServiceBill) BillUcontrolType3.UpdateInProgress = true;
                     Stock_DataDataContext stock_DataDataContext = new Stock_DataDataContext(VarGeneral.BranchCS);
                     if (State == FormState.New || _GdHead.gdhead_ID == 0)
                     {
                         GetDataGd();
                         _GdHead.DATE_CREATED = DateTime.Now;
+                        if (IsServiceBill) _GdHead.T_GDDETs.Clear();
                         stock_DataDataContext.T_GDHEADs.InsertOnSubmit(_GdHead);
                         stock_DataDataContext.SubmitChanges();
+                        if (IsServiceBill)
+                        {
+
+                            billUcontrolType31.AccCrdt_Cost = AccCrdt_Cost_Tax;
+                            billUcontrolType31.AccDbbt_Cost = AccDbt_Cost_Tax;
+                            billUcontrolType31.CurrentBill = data_this;
+                            billUcontrolType31.insertgaid(_GdHead, billUcontrolType31.getDetailsGaids());
+                        }
                     }
                     else
                     {
@@ -6147,8 +6385,10 @@ namespace InvAcc.Forms
                         {
                             _GdHead = new T_GDHEAD();
                         }
+
                         textBox_ID_TextChanged(null, null);
                         GetDataGd();
+                 
                         if (!data_this.GadeId.HasValue)
                         {
                             stock_DataDataContext.T_GDHEADs.InsertOnSubmit(_GdHead);
@@ -6159,120 +6399,137 @@ namespace InvAcc.Forms
                             db.Log = VarGeneral.DebugLog;
                             db.SubmitChanges(ConflictMode.ContinueOnConflict);
                         }
-                        for (int i = 0; i < _GdHead.T_GDDETs.Count; i++)
+                        for (int j = 0; j < _GdHead.T_GDDETs.Count; j++)
                         {
                             db_.StartTransaction();
                             db_.ClearParameters();
-                            db_.AddParameter("GDDET_ID", DbType.Int32, _GdHead.T_GDDETs[i].GDDET_ID);
+                            db_.AddParameter("GDDET_ID", DbType.Int32, _GdHead.T_GDDETs[j].GDDET_ID);
                             db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_DELETE");
                             db_.EndTransaction();
+
                         }
+                        if (IsServiceBill) _GdHead.T_GDDETs.Clear();
+                        if (IsServiceBill)
+                        {
+                           
+                            billUcontrolType31.AccCrdt_Cost = AccCrdt_Cost_Tax;
+                            billUcontrolType31.AccDbbt_Cost = AccDbt_Cost_Tax;
+                            billUcontrolType31.CurrentBill = data_this;
+                            billUcontrolType31.insertgaid(_GdHead, billUcontrolType31.getDetailsGaids(), true);
+
+                            
+                        }
+
+                        if (IsServiceBill) BillUcontrolType3.UpdateInProgress = false;
                     }
                     iiCnt = 0;
-                    if (txtPaymentLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt) && !string.IsNullOrEmpty(AccDbt))
+                    if (!IsServiceBill)
                     {
-                        db_.StartTransaction();
-                        db_.ClearParameters();
-                        db_.AddParameter("GDDET_ID", DbType.Int32, 0);
-                        db_.AddParameter("gdID", DbType.Int32, _GdHead.gdhead_ID);
-                        db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
-                        db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مشتريات رقم : " + textBox_ID.Text);
-                        db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Puchase Invoice No : " + textBox_ID.Text);
-                        db_.AddParameter("recptTyp", DbType.String, "1");
-                        db_.AddParameter("AccNo", DbType.String, AccCrdt);
-                        db_.AddParameter("AccName", DbType.String, "");
-                        db_.AddParameter("gdValue", DbType.Double, 0.0 - double.Parse(txtPaymentLoc.Text));
-                        db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
-                        db_.AddParameter("Lin", DbType.Int32, 1);
-                        db_.AddParameter("AccNoDestruction", DbType.String, null);
-                        db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
-                        db_.EndTransaction();
-                        db_.StartTransaction();
-                        db_.ClearParameters();
-                        db_.AddParameter("GDDET_ID", DbType.Int32, 0);
-                        db_.AddParameter("gdID", DbType.Int32, _GdHead.gdhead_ID);
-                        db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
-                        db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مشتريات رقم : " + textBox_ID.Text);
-                        db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Puchase Invoice No : " + textBox_ID.Text);
-                        db_.AddParameter("recptTyp", DbType.String, "1");
-                        db_.AddParameter("AccNo", DbType.String, AccDbt);
-                        db_.AddParameter("AccName", DbType.String, "");
-                        db_.AddParameter("gdValue", DbType.Double, double.Parse(txtPaymentLoc.Text));
-                        db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
-                        db_.AddParameter("Lin", DbType.Int32, 1);
-                        db_.AddParameter("AccNoDestruction", DbType.String, null);
-                        db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
-                        db_.EndTransaction();
-                    }
-                    if (doubleInput_NetWorkLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt_NewtWork) && !string.IsNullOrEmpty(AccDbt_NetWork))
-                    {
-                        db_.StartTransaction();
-                        db_.ClearParameters();
-                        db_.AddParameter("GDDET_ID", DbType.Int32, 0);
-                        db_.AddParameter("gdID", DbType.Int32, _GdHead.gdhead_ID);
-                        db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
-                        db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مشتريات رقم : " + textBox_ID.Text);
-                        db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Puchase Invoice No : " + textBox_ID.Text);
-                        db_.AddParameter("recptTyp", DbType.String, "1");
-                        db_.AddParameter("AccNo", DbType.String, AccCrdt_NewtWork);
-                        db_.AddParameter("AccName", DbType.String, "");
-                        db_.AddParameter("gdValue", DbType.Double, 0.0 - double.Parse(doubleInput_NetWorkLoc.Text));
-                        db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
-                        db_.AddParameter("Lin", DbType.Int32, 3);
-                        db_.AddParameter("AccNoDestruction", DbType.String, null);
-                        db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
-                        db_.EndTransaction();
-                        db_.StartTransaction();
-                        db_.ClearParameters();
-                        db_.AddParameter("GDDET_ID", DbType.Int32, 0);
-                        db_.AddParameter("gdID", DbType.Int32, _GdHead.gdhead_ID);
-                        db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
-                        db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مشتريات رقم : " + textBox_ID.Text);
-                        db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Puchase Invoice No : " + textBox_ID.Text);
-                        db_.AddParameter("recptTyp", DbType.String, "1");
-                        db_.AddParameter("AccNo", DbType.String, AccDbt_NetWork);
-                        db_.AddParameter("AccName", DbType.String, "");
-                        db_.AddParameter("gdValue", DbType.Double, double.Parse(doubleInput_NetWorkLoc.Text));
-                        db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
-                        db_.AddParameter("Lin", DbType.Int32, 3);
-                        db_.AddParameter("AccNoDestruction", DbType.String, null);
-                        db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
-                        db_.EndTransaction();
-                    }
-                    if (doubleInput_CreditLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt_Credit) && !string.IsNullOrEmpty(AccDbt_Credit))
-                    {
-                        db_.StartTransaction();
-                        db_.ClearParameters();
-                        db_.AddParameter("GDDET_ID", DbType.Int32, 0);
-                        db_.AddParameter("gdID", DbType.Int32, _GdHead.gdhead_ID);
-                        db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
-                        db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مشتريات رقم : " + textBox_ID.Text);
-                        db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Puchase Invoice No : " + textBox_ID.Text);
-                        db_.AddParameter("recptTyp", DbType.String, "1");
-                        db_.AddParameter("AccNo", DbType.String, AccCrdt_Credit);
-                        db_.AddParameter("AccName", DbType.String, "");
-                        db_.AddParameter("gdValue", DbType.Double, 0.0 - double.Parse(doubleInput_CreditLoc.Text));
-                        db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
-                        db_.AddParameter("Lin", DbType.Int32, 2);
-                        db_.AddParameter("AccNoDestruction", DbType.String, null);
-                        db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
-                        db_.EndTransaction();
-                        db_.StartTransaction();
-                        db_.ClearParameters();
-                        db_.AddParameter("GDDET_ID", DbType.Int32, 0);
-                        db_.AddParameter("gdID", DbType.Int32, _GdHead.gdhead_ID);
-                        db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
-                        db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مشتريات رقم : " + textBox_ID.Text);
-                        db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Puchase Invoice No : " + textBox_ID.Text);
-                        db_.AddParameter("recptTyp", DbType.String, "1");
-                        db_.AddParameter("AccNo", DbType.String, AccDbt_Credit);
-                        db_.AddParameter("AccName", DbType.String, "");
-                        db_.AddParameter("gdValue", DbType.Double, double.Parse(doubleInput_CreditLoc.Text));
-                        db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
-                        db_.AddParameter("Lin", DbType.Int32, 2);
-                        db_.AddParameter("AccNoDestruction", DbType.String, null);
-                        db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
-                        db_.EndTransaction();
+                        if (txtPaymentLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt) && !string.IsNullOrEmpty(AccDbt))
+                        {
+                            db_.StartTransaction();
+                            db_.ClearParameters();
+                            db_.AddParameter("GDDET_ID", DbType.Int32, 0);
+                            db_.AddParameter("gdID", DbType.Int32, _GdHead.gdhead_ID);
+                            db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
+                            db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مشتريات رقم : " + textBox_ID.Text);
+                            db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Puchase Invoice No : " + textBox_ID.Text);
+                            db_.AddParameter("recptTyp", DbType.String, "1");
+                            db_.AddParameter("AccNo", DbType.String, AccCrdt);
+                            db_.AddParameter("AccName", DbType.String, "");
+                            db_.AddParameter("gdValue", DbType.Double, 0.0 - double.Parse(txtPaymentLoc.Text));
+                            db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
+                            db_.AddParameter("Lin", DbType.Int32, 1);
+                            db_.AddParameter("AccNoDestruction", DbType.String, null);
+                            db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
+                            db_.EndTransaction();
+                            db_.StartTransaction();
+                            db_.ClearParameters();
+                            db_.AddParameter("GDDET_ID", DbType.Int32, 0);
+                            db_.AddParameter("gdID", DbType.Int32, _GdHead.gdhead_ID);
+                            db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
+                            db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مشتريات رقم : " + textBox_ID.Text);
+                            db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Puchase Invoice No : " + textBox_ID.Text);
+                            db_.AddParameter("recptTyp", DbType.String, "1");
+                            db_.AddParameter("AccNo", DbType.String, AccDbt);
+                            db_.AddParameter("AccName", DbType.String, "");
+                            db_.AddParameter("gdValue", DbType.Double, double.Parse(txtPaymentLoc.Text));
+                            db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
+                            db_.AddParameter("Lin", DbType.Int32, 1);
+                            db_.AddParameter("AccNoDestruction", DbType.String, null);
+                            db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
+                            db_.EndTransaction();
+                        }
+                        if (doubleInput_NetWorkLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt_NewtWork) && !string.IsNullOrEmpty(AccDbt_NetWork))
+                        {
+                            db_.StartTransaction();
+                            db_.ClearParameters();
+                            db_.AddParameter("GDDET_ID", DbType.Int32, 0);
+                            db_.AddParameter("gdID", DbType.Int32, _GdHead.gdhead_ID);
+                            db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
+                            db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مشتريات رقم : " + textBox_ID.Text);
+                            db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Puchase Invoice No : " + textBox_ID.Text);
+                            db_.AddParameter("recptTyp", DbType.String, "1");
+                            db_.AddParameter("AccNo", DbType.String, AccCrdt_NewtWork);
+                            db_.AddParameter("AccName", DbType.String, "");
+                            db_.AddParameter("gdValue", DbType.Double, 0.0 - double.Parse(doubleInput_NetWorkLoc.Text));
+                            db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
+                            db_.AddParameter("Lin", DbType.Int32, 3);
+                            db_.AddParameter("AccNoDestruction", DbType.String, null);
+                            db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
+                            db_.EndTransaction();
+                            db_.StartTransaction();
+                            db_.ClearParameters();
+                            db_.AddParameter("GDDET_ID", DbType.Int32, 0);
+                            db_.AddParameter("gdID", DbType.Int32, _GdHead.gdhead_ID);
+                            db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
+                            db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مشتريات رقم : " + textBox_ID.Text);
+                            db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Puchase Invoice No : " + textBox_ID.Text);
+                            db_.AddParameter("recptTyp", DbType.String, "1");
+                            db_.AddParameter("AccNo", DbType.String, AccDbt_NetWork);
+                            db_.AddParameter("AccName", DbType.String, "");
+                            db_.AddParameter("gdValue", DbType.Double, double.Parse(doubleInput_NetWorkLoc.Text));
+                            db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
+                            db_.AddParameter("Lin", DbType.Int32, 3);
+                            db_.AddParameter("AccNoDestruction", DbType.String, null);
+                            db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
+                            db_.EndTransaction();
+                        }
+                        if (doubleInput_CreditLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt_Credit) && !string.IsNullOrEmpty(AccDbt_Credit))
+                        {
+                            db_.StartTransaction();
+                            db_.ClearParameters();
+                            db_.AddParameter("GDDET_ID", DbType.Int32, 0);
+                            db_.AddParameter("gdID", DbType.Int32, _GdHead.gdhead_ID);
+                            db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
+                            db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مشتريات رقم : " + textBox_ID.Text);
+                            db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Puchase Invoice No : " + textBox_ID.Text);
+                            db_.AddParameter("recptTyp", DbType.String, "1");
+                            db_.AddParameter("AccNo", DbType.String, AccCrdt_Credit);
+                            db_.AddParameter("AccName", DbType.String, "");
+                            db_.AddParameter("gdValue", DbType.Double, 0.0 - double.Parse(doubleInput_CreditLoc.Text));
+                            db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
+                            db_.AddParameter("Lin", DbType.Int32, 2);
+                            db_.AddParameter("AccNoDestruction", DbType.String, null);
+                            db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
+                            db_.EndTransaction();
+                            db_.StartTransaction();
+                            db_.ClearParameters();
+                            db_.AddParameter("GDDET_ID", DbType.Int32, 0);
+                            db_.AddParameter("gdID", DbType.Int32, _GdHead.gdhead_ID);
+                            db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
+                            db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مشتريات رقم : " + textBox_ID.Text);
+                            db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Puchase Invoice No : " + textBox_ID.Text);
+                            db_.AddParameter("recptTyp", DbType.String, "1");
+                            db_.AddParameter("AccNo", DbType.String, AccDbt_Credit);
+                            db_.AddParameter("AccName", DbType.String, "");
+                            db_.AddParameter("gdValue", DbType.Double, double.Parse(doubleInput_CreditLoc.Text));
+                            db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
+                            db_.AddParameter("Lin", DbType.Int32, 2);
+                            db_.AddParameter("AccNoDestruction", DbType.String, null);
+                            db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
+                            db_.EndTransaction();
+                        }
                     }
                 }
                 else if (State == FormState.Edit && data_this.GadeId.HasValue)
@@ -6281,7 +6538,7 @@ namespace InvAcc.Forms
                 }
                 dbInstance = null;
                 textBox_ID_TextChanged(null, null);
-                if ((txtPaymentLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt) && !string.IsNullOrEmpty(AccDbt)) || (doubleInput_NetWorkLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt_NewtWork) && !string.IsNullOrEmpty(AccDbt_NetWork)) || (doubleInput_CreditLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt_Credit) && !string.IsNullOrEmpty(AccDbt_Credit)))
+                if (IsServiceBill || (txtPaymentLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt) && !string.IsNullOrEmpty(AccDbt)) || (doubleInput_NetWorkLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt_NewtWork) && !string.IsNullOrEmpty(AccDbt_NetWork)) || (doubleInput_CreditLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt_Credit) && !string.IsNullOrEmpty(AccDbt_Credit)))
                 {
                     data_this.GadeId = _GdHead.gdhead_ID;
                     data_this.GadeNo = int.Parse(textBox_ID.Text);
@@ -6295,21 +6552,25 @@ namespace InvAcc.Forms
                 db.SubmitChanges(ConflictMode.ContinueOnConflict);
                 MessageBox.Show((LangArEn == 0) ? "لقد تم اتمام العملية بنجاح .." : "This Opration Is Done", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 superTabControl_Info.SelectedTabIndex = 0;
-                if (checkBox_CostGaid.Checked && !string.IsNullOrEmpty(txtDebit4.Tag.ToString()) && !string.IsNullOrEmpty(txtCredit4.Tag.ToString()) && txtTotCostLocExtrnal.Value > 0.0)
-                {
-                    CreateCostGaid(AccCrdt_Cost, AccDbt_Cost);
-                }
-                if (checkBox_CostGaidTax.Checked && !string.IsNullOrEmpty(txtDebit5.Tag.ToString()) && !string.IsNullOrEmpty(txtCredit5.Tag.ToString()) && txtTotTax.Value > 0.0)
+                if (!IsServiceBill && (checkBox_CostGaidTax.Checked && !string.IsNullOrEmpty(txtDebit5.Tag.ToString()) && !string.IsNullOrEmpty(txtCredit5.Tag.ToString()) && txtTotTax.Value > 0.0))
                 {
                     CreateCostGaidTax(AccCrdt_Cost_Tax, AccDbt_Cost_Tax);
                 }
-                if (checkBox_GaidDis.Checked && !string.IsNullOrEmpty(txtDebit6.Tag.ToString()) && !string.IsNullOrEmpty(txtCredit6.Tag.ToString()) && txtTotDis.Value > 0.0)
+
+                if (!IsServiceBill)
                 {
-                    CreateCostGaidDis(AccCrdt_Cost_Dis, AccDbt_Cost_Dis);
-                }
-                if (checkBox_GaidBankComm.Checked && !string.IsNullOrEmpty(txtCredit3.Tag.ToString()) && !string.IsNullOrEmpty(txtDebit7.Tag.ToString()) && txtTotBankComm.Value > 0.0)
-                {
-                    CreateCostGaidComm(AccCrdt_Cost_Comm, AccDbt_Cost_Comm);
+                    if (checkBox_CostGaid.Checked && !string.IsNullOrEmpty(txtDebit4.Tag.ToString()) && !string.IsNullOrEmpty(txtCredit4.Tag.ToString()) && txtTotCostLocExtrnal.Value > 0.0)
+                    {
+                        CreateCostGaid(AccCrdt_Cost, AccDbt_Cost);
+                    }
+                    if (checkBox_GaidDis.Checked && !string.IsNullOrEmpty(txtDebit6.Tag.ToString()) && !string.IsNullOrEmpty(txtCredit6.Tag.ToString()) && txtTotDis.Value > 0.0)
+                    {
+                        CreateCostGaidDis(AccCrdt_Cost_Dis, AccDbt_Cost_Dis);
+                    }
+                    if (checkBox_GaidBankComm.Checked && !string.IsNullOrEmpty(txtCredit3.Tag.ToString()) && !string.IsNullOrEmpty(txtDebit7.Tag.ToString()) && txtTotBankComm.Value > 0.0)
+                    {
+                        CreateCostGaidComm(AccCrdt_Cost_Comm, AccDbt_Cost_Comm);
+                    }
                 }
             }
             catch (Exception ex4)
@@ -6351,10 +6612,10 @@ namespace InvAcc.Forms
                                                              where t.InvId == data_this.InvHed_ID
                                                              where t.ItmNo == string.Concat(FlxInv.GetData(iiCnt, 1))
                                                              select t).Where(delegate (T_INVDET t)
-                                                         {
-                                                             int? ifDel3 = t.T_INVHED.IfDel;
-                                                             return ifDel3.Value == 0 && ifDel3.HasValue;
-                                                         })
+                                                             {
+                                                                 int? ifDel3 = t.T_INVHED.IfDel;
+                                                                 return ifDel3.Value == 0 && ifDel3.HasValue;
+                                                             })
                                                   where t.T_INVHED.InvTyp == VarGeneral.InvTyp
                                                   select new
                                                   {
@@ -6372,10 +6633,10 @@ namespace InvAcc.Forms
                                                                where t.InvId == data_this.InvHed_ID
                                                                where t.ItmNo == string.Concat(FlxInv.GetData(iiCnt, 1))
                                                                select t).Where(delegate (T_INVDET t)
-                                                           {
-                                                               int? ifDel2 = t.T_INVHED.IfDel;
-                                                               return ifDel2.Value == 0 && ifDel2.HasValue;
-                                                           })
+                                                               {
+                                                                   int? ifDel2 = t.T_INVHED.IfDel;
+                                                                   return ifDel2.Value == 0 && ifDel2.HasValue;
+                                                               })
                                                     where t.T_INVHED.InvTyp == VarGeneral.InvTyp
                                                     select new
                                                     {
@@ -6396,10 +6657,10 @@ namespace InvAcc.Forms
                                                where t.Amount == vDataRapir.Amount_Repair
                                                where t.Cost == vDataRapir.Cost_Repair
                                                select t).Where(delegate (T_INVDET t)
-                                           {
-                                               int? ifDel = t.T_INVHED.IfDel;
-                                               return ifDel.Value == 0 && ifDel.HasValue;
-                                           })
+                                               {
+                                                   int? ifDel = t.T_INVHED.IfDel;
+                                                   return ifDel.Value == 0 && ifDel.HasValue;
+                                               })
                                     where t.T_INVHED.InvTyp == VarGeneral.InvTyp
                                     select t).ToList();
                 if (q.Count <= 0 || (DoReapir && VarGeneral.UserID == 1))
@@ -6547,7 +6808,7 @@ namespace InvAcc.Forms
             db.Log = VarGeneral.DebugLog;
             db.SubmitChanges(ConflictMode.ContinueOnConflict);
         }
-        private void CreateCostGaidTax(string AccCrdt_Cost, string AccDbt_Cost)
+        private void CreateCostGaidTax(string AccCrdt_Cost, string AccDbt_Cost, string sss = "سند بقيمة الضريبة لفاتورة مشتريات رقم : ")
         {
             IDatabase db_ = Database.GetDatabase(VarGeneral.BranchCS);
             using (Stock_DataDataContext dbc = new Stock_DataDataContext(VarGeneral.BranchCS))
@@ -6580,7 +6841,7 @@ namespace InvAcc.Forms
                 db_.AddParameter("GDDET_ID", DbType.Int32, 0);
                 db_.AddParameter("gdID", DbType.Int32, _GdHeadCostTax.gdhead_ID);
                 db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
-                db_.AddParameter("gdDes", DbType.String, "سند بقيمة الضريبة لفاتورة مشتريات رقم : " + textBox_ID.Text);
+                db_.AddParameter("gdDes", DbType.String, sss + textBox_ID.Text);
                 db_.AddParameter("gdDesE", DbType.String, "Tax Value To Puchase Invoice No : " + textBox_ID.Text);
                 db_.AddParameter("recptTyp", DbType.String, "1");
                 db_.AddParameter("AccNo", DbType.String, AccCrdt_Cost);
@@ -6596,7 +6857,7 @@ namespace InvAcc.Forms
                 db_.AddParameter("GDDET_ID", DbType.Int32, 0);
                 db_.AddParameter("gdID", DbType.Int32, _GdHeadCostTax.gdhead_ID);
                 db_.AddParameter("gdNo", DbType.String, textBox_ID.Text);
-                db_.AddParameter("gdDes", DbType.String, "سند بقيمة الضريبة لفاتورة مشتريات رقم : " + textBox_ID.Text);
+                db_.AddParameter("gdDes", DbType.String, sss + textBox_ID.Text);
                 db_.AddParameter("gdDesE", DbType.String, "Tax Value To Puchase Invoice No : " + textBox_ID.Text);
                 db_.AddParameter("recptTyp", DbType.String, "1");
                 db_.AddParameter("AccNo", DbType.String, AccDbt_Cost);
@@ -6683,7 +6944,9 @@ namespace InvAcc.Forms
         }
         private T_INVHED GetData()
         {
+            data_this.CusVenMob = text_Mobile.Text;
             txtDueAmountLoc.ValueChanged -= txtDueAmountLoc_ValueChanged;
+            if (IsServiceBill) data_this.InvTyp = 1002;
             try
             {
                 GetInvTot();
@@ -6707,6 +6970,7 @@ namespace InvAcc.Forms
             {
                 data_this.CustPri = 0;
             }
+            data_this.IS_ServiceBill = _IsServiceBill;
             data_this.CommMnd_Inv = 0.0;
             data_this.MndExtrnal = false;
             data_this.IfEnter = 0;
@@ -6718,6 +6982,7 @@ namespace InvAcc.Forms
             data_this.Remark = txtRemark.Text;
             data_this.InvNo = textBox_ID.Text;
             data_this.CashPay = txtPaymentLoc.Value;
+            data_this.PriceIncludTax = (ChkPriceIncludeTax.Value);
             if (State == FormState.New && VarGeneral.TString.ChkStatShow(VarGeneral.UserPassQty, 10))
             {
                 data_this.AdminLock = true;
@@ -6787,6 +7052,7 @@ namespace InvAcc.Forms
             {
                 data_this.InvCstNo = null;
             }
+            data_this.IS_ServiceBill = IsServiceBill;
             data_this.InvDisPrs = txtDiscountP.Value;
             data_this.InvDisVal = txtDiscountVal.Value;
             data_this.InvDisValLocCur = txtDiscountValLoc.Value;
@@ -6801,7 +7067,7 @@ namespace InvAcc.Forms
             data_this.InvQty = txtTotalQ.Value;
             data_this.InvTot = txtTotalAm.Value;
             data_this.InvTotLocCur = txtTotalAmLoc.Value;
-            data_this.InvTyp = VarGeneral.InvTyp;
+            data_this.InvTyp = (IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp);
             data_this.IfDel = 0;
             data_this.LTim = txtTime.Text;
             if (VarGeneral.CheckDate(txtDueDate.Text) && checkBox_Credit.Checked)
@@ -6954,8 +7220,14 @@ namespace InvAcc.Forms
             data_this.IsPoints = false;
             return data_this;
         }
+        int GeadType = 2;
         private T_GDHEAD GetDataGd()
         {
+            if (IsServiceBill) GeadType = VarGeneral.ServiceBillId;
+            else
+
+                GeadType = VarGeneral.InvTyp;
+
             _GdHead.gdHDate = txtHDate.Text;
             _GdHead.gdGDate = txtGDate.Text;
             _GdHead.gdNo = textBox_ID.Text;
@@ -6979,7 +7251,7 @@ namespace InvAcc.Forms
             _GdHead.gdRcptID = (_GdHead.gdRcptID.HasValue ? _GdHead.gdRcptID.Value : 0.0);
             _GdHead.gdTot = txtDueAmountLoc.Value;
             _GdHead.gdTp = (_GdHead.gdTp.HasValue ? _GdHead.gdTp.Value : 0);
-            _GdHead.gdTyp = VarGeneral.InvTyp;
+            _GdHead.gdTyp = GeadType;
             _GdHead.RefNo = txtRef.Text;
             _GdHead.AdminLock = switchButton_Lock.Value;
             _GdHead.DATE_MODIFIED = DateTime.Now;
@@ -6987,6 +7259,7 @@ namespace InvAcc.Forms
             _GdHead.gdUser = VarGeneral.UserNumber;
             _GdHead.gdUserNam = VarGeneral.UserNameA;
             _GdHead.CompanyID = 1;
+
             return _GdHead;
         }
         private T_GDHEAD GetDataGdCostDis()
@@ -7015,7 +7288,7 @@ namespace InvAcc.Forms
             _GdHeadCostDis.gdRcptID = (_GdHeadCostDis.gdRcptID.HasValue ? _GdHeadCostDis.gdRcptID.Value : 0.0);
             _GdHeadCostDis.gdTot = txtTotDis.Value;
             _GdHeadCostDis.gdTp = (_GdHeadCostDis.gdTp.HasValue ? _GdHeadCostDis.gdTp.Value : 0);
-            _GdHeadCostDis.gdTyp = VarGeneral.InvTyp;
+            _GdHeadCostDis.gdTyp = (IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp);
             _GdHeadCostDis.RefNo = txtRef.Text;
             _GdHeadCostDis.DATE_MODIFIED = DateTime.Now;
             _GdHeadCostDis.salMonth = "";
@@ -7050,7 +7323,7 @@ namespace InvAcc.Forms
             _GdHeadCostTax.gdRcptID = (_GdHeadCostTax.gdRcptID.HasValue ? _GdHeadCostTax.gdRcptID.Value : 0.0);
             _GdHeadCostTax.gdTot = txtTotTax.Value;
             _GdHeadCostTax.gdTp = (_GdHeadCostTax.gdTp.HasValue ? _GdHeadCostTax.gdTp.Value : 0);
-            _GdHeadCostTax.gdTyp = VarGeneral.InvTyp;
+            _GdHeadCostTax.gdTyp = (IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp);
             _GdHeadCostTax.RefNo = txtRef.Text;
             _GdHeadCostTax.DATE_MODIFIED = DateTime.Now;
             _GdHeadCostTax.salMonth = "";
@@ -7085,7 +7358,7 @@ namespace InvAcc.Forms
             _GdHeadCostComm.gdRcptID = (_GdHeadCostComm.gdRcptID.HasValue ? _GdHeadCostComm.gdRcptID.Value : 0.0);
             _GdHeadCostComm.gdTot = txtTotBankComm.Value;
             _GdHeadCostComm.gdTp = (_GdHeadCostComm.gdTp.HasValue ? _GdHeadCostComm.gdTp.Value : 0);
-            _GdHeadCostComm.gdTyp = VarGeneral.InvTyp;
+            _GdHeadCostComm.gdTyp = (IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp);
             _GdHeadCostComm.RefNo = txtRef.Text;
             _GdHeadCostComm.DATE_MODIFIED = DateTime.Now;
             _GdHeadCostComm.salMonth = "";
@@ -7120,7 +7393,7 @@ namespace InvAcc.Forms
             _GdHeadCost.gdRcptID = (_GdHeadCost.gdRcptID.HasValue ? _GdHeadCost.gdRcptID.Value : 0.0);
             _GdHeadCost.gdTot = txtTotCostLocExtrnal.Value;
             _GdHeadCost.gdTp = (_GdHeadCost.gdTp.HasValue ? _GdHeadCost.gdTp.Value : 0);
-            _GdHeadCost.gdTyp = VarGeneral.InvTyp;
+            _GdHeadCost.gdTyp = (IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp);
             _GdHeadCost.RefNo = txtRef.Text;
             _GdHeadCost.DATE_MODIFIED = DateTime.Now;
             _GdHeadCost.salMonth = "";
@@ -7866,6 +8139,8 @@ namespace InvAcc.Forms
             {
             }
         }
+
+
         private void FlxPrice_DoubleClick(object sender, EventArgs e)
         {
         }
@@ -8440,7 +8715,10 @@ namespace InvAcc.Forms
             {
             }
             PriceLoc = (double)FlxInv.GetData(FlxInv.Row, 8);
-            BindDataOfStkQty(_Items.Itm_No.Trim());
+            PriceLoc = (double)FlxInv.GetData(FlxInv.Row, 8);
+            BindDataOfStkQty(_Items.Itm_No.Trim()); without = PriceLoc; pricel = PriceLoc; lastprice = 0; ta = (double)FlxInv.GetData(FlxInv.Row, 35);
+
+
             if (Barcod)
             {
                 FlxInv.SetData(FlxInv.Row, 7, 1);
@@ -8488,6 +8766,18 @@ namespace InvAcc.Forms
             {
                 chekRept();
             }
+            try
+            {
+                PriceLoc = (double)FlxInv.GetData(FlxInv.Row, 8); without = PriceLoc; pricel = PriceLoc; lastprice = 0; ta = (double)FlxInv.GetData(FlxInv.Row, 35);
+                if (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 7)))) > 0.0 && !Barcod)
+                {
+                    FlxInv_AfterEdit(null, new RowColEventArgs(FlxInv.Row, 7));
+                }
+            }
+            catch
+            {
+            }
+
             VarGeneral.Flush();
         }
         private void BindDataOfStkQty(string ItmNo)
@@ -8639,7 +8929,7 @@ namespace InvAcc.Forms
         }
         public void SetDataRt(T_INVHED value)
         {
-            switchButton_Lock.ValueChanged -= switchButton_Lock_ValueChanged;
+       try{     switchButton_Lock.ValueChanged -= switchButton_Lock_ValueChanged;
             ButReturn.Tag = value.InvHed_ID.ToString();
             txtCustNo.Text = value.CusVenNo.ToString();
             try
@@ -9012,11 +9302,14 @@ namespace InvAcc.Forms
             LDataThisRe = new BindingList<T_INVDET>(value.T_INVDETs).ToList();
             SetLinesRt(LDataThisRe);
             switchButton_Lock.ValueChanged += switchButton_Lock_ValueChanged;
+        }        catch(Exception ex)
+            { }
         }
         public void SetLinesRt(List<T_INVDET> listDet)
         {
             try
             {
+                if (IsServiceBill) return;
                 FlxInv.Cols[27].Visible = false;
                 FlxInv.Cols[36].Visible = false;
                 for (int iiCnt = 1; iiCnt <= listDet.Count; iiCnt++)
@@ -9159,6 +9452,7 @@ namespace InvAcc.Forms
         }
         private void txtDueAmountLoc_ValueChanged(object sender, EventArgs e)
         {
+          
             if (State != 0)
             {
                 if (checkBox_Chash.Checked)
@@ -9179,6 +9473,7 @@ namespace InvAcc.Forms
                     txtPaymentLoc.Value = 0.0;
                     doubleInput_NetWorkLoc.Value = 0.0;
                 }
+          if(IsServiceBill)      billUcontrolType31.txtDueAmountLoc = txtDueAmountLoc;
             }
         }
         private void txtRemark_ButtonCustomClick(object sender, EventArgs e)
@@ -10289,7 +10584,7 @@ namespace InvAcc.Forms
                          }).ToList();
                 if (q.Count > 0)
                 {
-                    T_INVHED vInvH = db.StockInvHead(VarGeneral.InvTyp, q.First().InvNo);
+                    T_INVHED vInvH = db.StockInvHead((IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp), q.First().InvNo);
                     txtLPrice.Text = string.Concat(Math.Round(vInvH.T_INVDETs.Where((T_INVDET g) => g.ItmNo == vItm.Itm_No).Last().Price.Value / RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2));
                     txtUnit.Text = ((LangArEn == 0) ? vInvH.T_INVDETs.Last().ItmUnt : vInvH.T_INVDETs.Last().ItmUntE);
                 }
@@ -10534,7 +10829,7 @@ namespace InvAcc.Forms
                 {
                     Button_Add_Click(sender, e);
                     RepetitionSts = true;
-                    SetData(db.StockInvHead(VarGeneral.InvTyp, c));
+                    SetData(db.StockInvHead((IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp), c));
                     _GdHead = new T_GDHEAD();
                 }
             }
@@ -10576,7 +10871,7 @@ namespace InvAcc.Forms
             {
                 List<T_INVHED> q = (from t in db.T_INVHEDs
                                     where t.InvNo == vNewNo
-                                    where t.InvTyp == (int?)VarGeneral.InvTyp
+                                    where t.InvTyp == (int?)(IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp)
                                     where t.IfDel == (int?)0
                                     select t).ToList();
                 if (q.Count > 0)
@@ -11121,12 +11416,12 @@ namespace InvAcc.Forms
             }
             try
             {
-                string c = db.StockInvHeadID(VarGeneral.InvTyp, int.Parse(frm.SerachNo)).InvNo;
+                string c = db.StockInvHeadID((IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp), int.Parse(frm.SerachNo)).InvNo;
                 if (!string.IsNullOrEmpty(c))
                 {
                     Button_Add_Click(sender, e);
                     RepetitionSts = true;
-                    SetData(db.StockInvHeadID(VarGeneral.InvTyp, int.Parse(frm.SerachNo)));
+                    SetData(db.StockInvHeadID((IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp), int.Parse(frm.SerachNo)));
                     _GdHead = new T_GDHEAD();
                 }
             }
@@ -11223,6 +11518,7 @@ namespace InvAcc.Forms
         }
         private void checkBox_CostGaidTax_CheckedChanged(object sender, EventArgs e)
         {
+            billUcontrolType31.checkBox_CostGaidTax = checkBox_CostGaidTax;
             if (checkBox_CostGaidTax.Checked)
             {
                 txtDebit5.Enabled = true;
@@ -11631,7 +11927,7 @@ namespace InvAcc.Forms
                         {
                             ifMultiPrint = true;
                             data_this = new T_INVHED();
-                            data_this = db.StockInvHead(VarGeneral.InvTyp, DGV_Main.PrimaryGrid.GetCell(crow.Index, 0).Value.ToString());
+                            data_this = db.StockInvHead((IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp), DGV_Main.PrimaryGrid.GetCell(crow.Index, 0).Value.ToString());
                             buttonItem_Print_Click(sender, e);
                             ifMultiPrint = false;
                         }
@@ -11673,16 +11969,18 @@ namespace InvAcc.Forms
         }
         private void CmbCostC_SelectedIndexChanged(object sender, EventArgs e)
         {
+            billUcontrolType31.CmbCostC = CmbCostC;
         }
+
         private void CmbInvPrice_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
         private void printersetting_Click(object sender, EventArgs e)
         {
-             ProShared. DroBoxSync.Frm_PrinterShow f = new  ProShared. DroBoxSync.Frm_PrinterShow(VarGeneral.InvTyp);
+            ProShared.DroBoxSync.Frm_PrinterShow f = new ProShared.DroBoxSync.Frm_PrinterShow(VarGeneral.InvTyp);
             f.TopMost = true;
             f.ShowDialog();
-            _InvSetting.InvpRINTERInfo.nTyp =  ProShared. DroBoxSync.Frm_PrinterShow.PLSetting;
+            _InvSetting.InvpRINTERInfo.nTyp = ProShared.DroBoxSync.Frm_PrinterShow.PLSetting;
         }
         private void superTabControlPanel3_Click(object sender, EventArgs e)
         {
@@ -11694,17 +11992,21 @@ namespace InvAcc.Forms
                 button_Draft.Enabled = false;
             }
             string sa; try { sa = FlxInv.GetData(1, 1).ToString(); } catch { sa = ""; }
+            if(IsServiceBill)
+            {
+                if (billUcontrolType31.getDetailsGaids().Count() != 0) sa = "34";
+            }
             if (sa != "" && State == FormState.New)
             {
                 T_INVSETTING ts = null;
                 try
                 {
-                    ts = db.StockInvSetting(VarGeneral.UserID, VarGeneral.DraftBillId);
+                    ts = db.StockInvSetting( VarGeneral.DraftBillId);
                 }
                 catch { }
                 if (ts.InvSet_ID == 0)
                 {
-                   ProShared. DBUdate.DbUpdates.adddraft();
+                    ProShared.DBUdate.DbUpdates.adddraft();
                 }
                 //  draft = 1;
                 saveDraft();
@@ -11721,7 +12023,7 @@ namespace InvAcc.Forms
         }
         void checkoversaved()
         {
-            int i = db.StockInvHeadSaveover(VarGeneral.InvTyp, VarGeneral.UserNo);
+            int i = db.StockInvHeadSaveover((IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp), VarGeneral.UserNo);
             if (i > 0)
                 button_opendraft.Enabled = true;
             else
@@ -11759,14 +12061,50 @@ namespace InvAcc.Forms
                     frm.columns_Names_visible.Add(kvp.Key, new FrmSearch.SColumnDictinary(kvp.Value.AText, kvp.Value.EText, kvp.Value.IfDefault, ""));
                 }
                 VarGeneral.SFrmTyp = "T_Draft";
-                //  VarGeneral.InvTyp = 101;
+                // VarGeneral.InvTyp = 101;
                 frm.TopMost = true;
                 frm.ShowDialog();
                 if (frm.SerachNo != "")
                 {
                     T_INVHED newData = db.StockInvHeadID2(VarGeneral.DraftBillId, int.Parse(frm.SerachNo), VarGeneral.UserNo);
                     newData.InvNo = textBox_ID.Text.ToString();
-                    newData.InvTyp = oldTyp;
+               if(newData.IS_ServiceBill!=true)
+                  
+                        newData.InvTyp = oldTyp;
+                    if (InvAcc.Properties.Settings.Default.ServiceBill)
+                    if ((bool)newData.IS_ServiceBill)
+                    {
+                        IsServiceBill = (newData.IS_ServiceBill.HasValue ? (bool)newData.IS_ServiceBill : false);
+               
+                        if (newData.IS_ServiceBill.HasValue)
+                        {
+                            if (newData.IS_ServiceBill == true)
+                            {
+                               
+                                checkBox1.Checked = true;
+                                if (State != FormState.Edit)
+                                 DataThis=   newData;
+                                DataThis.InvTyp = VarGeneral.ServiceBillId;
+                                billUcontrolType31.CurrentBill = DataThis;
+                                checkBox_CostGaidTax.Checked = false;
+                                checkBox_CostGaidTax.Checked = true;
+                                checkBox_CostGaidTax_CheckedChanged(null, null);
+
+
+                            }
+                            else
+                            {
+                                checkBox1.Checked = false;
+                            }
+                          
+                          
+                        }
+                        else
+                        {
+                            checkBox1.Checked = false;
+                        }
+                    }
+                    else
                     SetData(newData);
                     State = FormState.New;
                     Button_Save.Enabled = true;
@@ -11782,10 +12120,21 @@ namespace InvAcc.Forms
                         checkBox_GaidDis.Checked = true;
                         checkBox_GaidDis_CheckedChanged(null, null);
                     }
-                    string dl = "DELETE FROM T_INVDET WHERE InvId=" + frm.SerachNo + " AND CInvType=" + VarGeneral.DraftBillId.ToString();
-                   ProShared. DBUdate.DbUpdates.executes(dl, VarGeneral.BranchCS);
+                    string dl = "";
+                    try
+                    {
+                        dl = "DELETE FROM T_INVDET WHERE InvId=" + frm.SerachNo + " AND CInvType=" + VarGeneral.DraftBillId.ToString();
+                        ProShared.DBUdate.DbUpdates.executes(dl, VarGeneral.BranchCS);
+                    }
+                    catch { }
+                    if (IsServiceBill)
+                    {
+                        dl = "DELETE FROM T_TempGDDET WHERE gdNo=" + frm.SerachNo;
+                        ProShared.DBUdate.DbUpdates.executes(dl, VarGeneral.BranchCS);
+
+                    }
                     dl = "Delete From T_INVHED where InvTyp=" + VarGeneral.DraftBillId.ToString() + " AND InvHed_ID=" + frm.SerachNo.ToString() + " and SalsManNo = " + VarGeneral.UserNo;
-                   ProShared. DBUdate.DbUpdates.executes(dl, VarGeneral.BranchCS);
+                    ProShared.DBUdate.DbUpdates.executes(dl, VarGeneral.BranchCS);
                     FlxInv.Rows.Count += VarGeneral.Settings_Sys.LineOfInvoices.Value;
                 }
             }
@@ -11803,15 +12152,16 @@ namespace InvAcc.Forms
         private void saveDraft()
         {
             GetData();
-            data_this.CInvType = VarGeneral.InvTyp;
+            data_this.CInvType = (IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp);
             data_this.InvTyp = VarGeneral.DraftBillId;
+            data_this.IS_ServiceBill = IsServiceBill;
             if (State == FormState.New)
             {
                 try
                 {
                     GetInvSetting();
                     textBox_ID.TextChanged -= textBox_ID_TextChanged;
-                    T_INVHED newData = db.StockInvHead(VarGeneral.InvTyp, data_this.InvNo);
+                    T_INVHED newData = db.StockInvHead((IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp), data_this.InvNo);
                     if (!string.IsNullOrEmpty(newData.InvNo) || newData.InvHed_ID > 0)
                     {
                         string max = "";
@@ -11827,124 +12177,23 @@ namespace InvAcc.Forms
                     data_this.SalsManNo = VarGeneral.UserNumber;
                     data_this.SalsManNam = "";
                     data_this.DeleteTime = "";
-                    IDatabase dbHead = Database.GetDatabase(VarGeneral.BranchCS);
-                    dbHead.ClearParameters();
-                    dbHead.AddOutParameter("InvHed_ID", DbType.Int32);
-                    dbHead.AddParameter("InvId", DbType.Double, data_this.InvId);
-                    dbHead.AddParameter("InvNo", DbType.String, data_this.InvNo);
-                    dbHead.AddParameter("InvTyp", DbType.Int32, data_this.InvTyp);
-                    dbHead.AddParameter("InvCashPay", DbType.Int32, data_this.InvCashPay);
-                    dbHead.AddParameter("CusVenNo", DbType.String, data_this.CusVenNo);
-                    dbHead.AddParameter("CusVenNm", DbType.String, data_this.CusVenNm);
-                    dbHead.AddParameter("CusVenAdd", DbType.String, data_this.CusVenAdd);
-                    dbHead.AddParameter("CusVenTel", DbType.String, data_this.CusVenTel);
-                    dbHead.AddParameter("Remark", DbType.String, data_this.Remark);
-                    dbHead.AddParameter("HDat", DbType.String, data_this.HDat);
-                    dbHead.AddParameter("GDat", DbType.String, data_this.GDat);
-                    dbHead.AddParameter("MndNo", DbType.Int32, data_this.MndNo);
-                    dbHead.AddParameter("SalsManNo", DbType.String, data_this.SalsManNo);
-                    dbHead.AddParameter("SalsManNam", DbType.String, data_this.SalsManNam);
-                    dbHead.AddParameter("InvTot", DbType.Double, data_this.InvTot);
-                    dbHead.AddParameter("InvTotLocCur", DbType.Double, data_this.InvTotLocCur);
-                    dbHead.AddParameter("InvDisPrs", DbType.Double, data_this.InvDisPrs);
-                    dbHead.AddParameter("InvDisVal", DbType.Double, data_this.InvDisVal);
-                    dbHead.AddParameter("CusVenMob", DbType.String, data_this.CusVenMob);
-                    dbHead.AddParameter("PriceIncludeTax", DbType.Boolean, data_this.PriceIncludTax);
-                    dbHead.AddParameter("InvDisValLocCur", DbType.Double, data_this.InvDisValLocCur);
-                    dbHead.AddParameter("InvNet", DbType.Double, data_this.InvNet);
-                    dbHead.AddParameter("InvNetLocCur", DbType.Double, data_this.InvNetLocCur);
-                    dbHead.AddParameter("CashPay", DbType.Double, data_this.CashPay);
-                    dbHead.AddParameter("CashPayLocCur", DbType.Double, data_this.CashPayLocCur);
-                    dbHead.AddParameter("IfRet", DbType.Int32, data_this.IfRet);
-                    dbHead.AddParameter("GadeNo", DbType.Double, data_this.GadeNo);
-                    dbHead.AddParameter("GadeId", DbType.Double, data_this.GadeId);
-                    dbHead.AddParameter("IfDel", DbType.Int32, data_this.IfDel);
-                    dbHead.AddParameter("RetNo", DbType.String, data_this.RetNo);
-                    dbHead.AddParameter("RetId", DbType.Double, data_this.RetId);
-                    dbHead.AddParameter("InvCstNo", DbType.Int32, data_this.InvCstNo);
-                    dbHead.AddParameter("InvCashPayNm", DbType.String, data_this.InvCashPayNm);
-                    dbHead.AddParameter("RefNo", DbType.String, data_this.RefNo);
-                    dbHead.AddParameter("InvCost", DbType.Int32, data_this.InvCost);
-                    dbHead.AddParameter("EstDat", DbType.String, data_this.EstDat);
-                    dbHead.AddParameter("CustPri", DbType.Int32, data_this.CustPri);
-                    dbHead.AddParameter("ArbTaf", DbType.String, data_this.ArbTaf);
-                    dbHead.AddParameter("CurTyp", DbType.Int32, data_this.CurTyp);
-                    dbHead.AddParameter("InvCash", DbType.String, data_this.InvCash);
-                    dbHead.AddParameter("ToStore", DbType.String, data_this.ToStore);
-                    dbHead.AddParameter("ToStoreNm", DbType.String, data_this.ToStoreNm);
-                    dbHead.AddParameter("InvQty", DbType.Double, data_this.InvQty);
-                    dbHead.AddParameter("EngTaf", DbType.String, data_this.EngTaf);
-                    dbHead.AddParameter("IfTrans", DbType.Int32, data_this.IfTrans);
-                    dbHead.AddParameter("CustRep", DbType.Double, data_this.CustRep);
-                    dbHead.AddParameter("CustNet", DbType.Double, data_this.CustNet);
-                    dbHead.AddParameter("InvWight_T", DbType.Double, data_this.InvWight_T);
-                    dbHead.AddParameter("IfPrint", DbType.Int32, data_this.IfPrint);
-                    dbHead.AddParameter("LTim", DbType.String, data_this.LTim);
-                    dbHead.AddParameter("CREATED_BY", DbType.String, data_this.CREATED_BY);
-                    dbHead.AddParameter("DATE_CREATED", DbType.DateTime, data_this.DATE_CREATED);
-                    dbHead.AddParameter("MODIFIED_BY", DbType.String, data_this.MODIFIED_BY);
-                    dbHead.AddParameter("DATE_MODIFIED", DbType.DateTime, data_this.DATE_MODIFIED);
-                    dbHead.AddParameter("CreditPay", DbType.Double, data_this.CreditPay);
-                    dbHead.AddParameter("CreditPayLocCur", DbType.Double, data_this.CreditPayLocCur);
-                    dbHead.AddParameter("NetworkPay", DbType.Double, data_this.NetworkPay);
-                    dbHead.AddParameter("NetworkPayLocCur", DbType.Double, data_this.NetworkPayLocCur);
-                    dbHead.AddParameter("CommMnd_Inv", DbType.Double, data_this.CommMnd_Inv);
-                    dbHead.AddParameter("MndExtrnal", DbType.Boolean, data_this.MndExtrnal);
-                    dbHead.AddParameter("CompanyID", DbType.Int32, data_this.CompanyID);
-                    dbHead.AddParameter("InvAddCost", DbType.Double, data_this.InvAddCost);
-                    dbHead.AddParameter("InvAddCostLoc", DbType.Double, data_this.InvAddCostLoc);
-                    dbHead.AddParameter("InvAddCostExtrnal", DbType.Double, data_this.InvAddCostExtrnal);
-                    dbHead.AddParameter("InvAddCostExtrnalLoc", DbType.Double, data_this.InvAddCostExtrnalLoc);
-                    dbHead.AddParameter("IsExtrnalGaid", DbType.Boolean, data_this.IsExtrnalGaid);
-                    dbHead.AddParameter("ExtrnalCostGaidID", DbType.Double, data_this.ExtrnalCostGaidID);
-                    dbHead.AddParameter("Puyaid", DbType.Double, data_this.Puyaid);
-                    dbHead.AddParameter("Remming", DbType.Double, data_this.Remming);
-                    dbHead.AddParameter("RoomNo", DbType.Int32, data_this.RoomNo);
-                    dbHead.AddParameter("OrderTyp", DbType.Int32, data_this.OrderTyp);
-                    dbHead.AddParameter("RoomSts", DbType.Boolean, data_this.RoomSts);
-                    dbHead.AddParameter("chauffeurNo", DbType.Int32, data_this.chauffeurNo);
-                    dbHead.AddParameter("RoomPerson", DbType.Int32, data_this.RoomPerson);
-                    dbHead.AddParameter("ServiceValue", DbType.Double, data_this.ServiceValue);
-                    dbHead.AddParameter("Sts", DbType.Boolean, data_this.Sts);
-                    dbHead.AddParameter("PaymentOrderTyp", DbType.Int32, data_this.PaymentOrderTyp);
-                    dbHead.AddParameter("AdminLock", DbType.Boolean, data_this.AdminLock);
-                    dbHead.AddParameter("DeleteDate", DbType.String, data_this.DeleteDate);
-                    dbHead.AddParameter("DeleteTime", DbType.String, data_this.DeleteTime);
-                    dbHead.AddParameter("UserNew", DbType.String, data_this.UserNew);
-                    dbHead.AddParameter("IfEnter", DbType.Int32, data_this.IfEnter);
-                    dbHead.AddParameter("InvAddTax", DbType.Double, data_this.InvAddTax);
-                    dbHead.AddParameter("InvAddTaxlLoc", DbType.Double, data_this.InvAddTaxlLoc);
-                    dbHead.AddParameter("IsTaxGaid", DbType.Boolean, data_this.IsTaxGaid);
-                    dbHead.AddParameter("TaxGaidID", DbType.Double, data_this.TaxGaidID);
-                    dbHead.AddParameter("IsTaxUse", DbType.Boolean, data_this.IsTaxUse);
-                    dbHead.AddParameter("InvValGaidDis", DbType.Double, data_this.InvValGaidDis);
-                    dbHead.AddParameter("InvValGaidDislLoc", DbType.Double, data_this.InvValGaidDislLoc);
-                    dbHead.AddParameter("IsDisGaid", DbType.Boolean, data_this.IsDisGaid);
-                    dbHead.AddParameter("DisGaidID1", DbType.Double, data_this.DisGaidID1);
-                    dbHead.AddParameter("IsDisUse1", DbType.Boolean, data_this.IsDisUse1);
-                    dbHead.AddParameter("InvComm", DbType.Double, data_this.InvComm);
-                    dbHead.AddParameter("InvCommLoc", DbType.Double, data_this.InvCommLoc);
-                    dbHead.AddParameter("IsCommGaid", DbType.Boolean, data_this.IsCommGaid);
-                    dbHead.AddParameter("CommGaidID", DbType.Double, data_this.CommGaidID);
-                    dbHead.AddParameter("IsCommUse", DbType.Boolean, data_this.IsCommUse);
-                    dbHead.AddParameter("IsTaxLines", DbType.Boolean, data_this.IsTaxLines);
-                    dbHead.AddParameter("IsTaxByTotal", DbType.Boolean, data_this.IsTaxByTotal);
-                    dbHead.AddParameter("IsTaxByNet", DbType.Boolean, data_this.IsTaxByNet);
-                    dbHead.AddParameter("TaxByNetValue", DbType.Double, data_this.TaxByNetValue);
-                    dbHead.AddParameter("DesPointsValue", DbType.Double, data_this.DesPointsValue);
-                    dbHead.AddParameter("DesPointsValueLocCur", DbType.Double, data_this.DesPointsValueLocCur);
-                    dbHead.AddParameter("PointsCount", DbType.Double, data_this.PointsCount);
-                    dbHead.AddParameter("IsPoints", DbType.Boolean, data_this.IsPoints);
-                    dbHead.AddParameter("tailor20", DbType.String, data_this.tailor20);
-                    dbHead.AddParameter("CINVType", DbType.Int32, data_this.CInvType);
-                    dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_INSERT");
-                    data_this.InvHed_ID = int.Parse(dbHead.GetParameterValue("InvHed_ID").ToString());
+
+                    data_this.CInvType = (IsServiceBill ? VarGeneral.ServiceBillId : VarGeneral.InvTyp);
+                    data_this.InvTyp = VarGeneral.DraftBillId;
+                    data_this.IS_ServiceBill = IsServiceBill;
+                    data_this.InvHed_ID = InvHelper.INVHED_INSERT(data_this);
                 }
 #pragma warning disable CS0168 // The variable 'ex7' is declared but never used
                 catch (SqlException ex7)
 #pragma warning restore CS0168 // The variable 'ex7' is declared but never used
                 {
                 }
+            }
+            if (IsServiceBill)
+            {
+                billUcontrolType31.CurrentBill = data_this;
+                billUcontrolType31.savedraft();
+                return;
             }
             IDatabase dbLines = Database.GetDatabase(VarGeneral.BranchCS);
             for (int iiCnt = 1; iiCnt < FlxInv.Rows.Count; iiCnt++)
@@ -12031,14 +12280,8 @@ namespace InvAcc.Forms
         int kk = 0;
         private int savingoccure = 0;
 
-        private void FlxInv_StartEdit(object sender, RowColEventArgs e)
-        {
-            kk = 1;
-        }
-        private void FlxInv_LeaveEdit(object sender, RowColEventArgs e)
-        {
-            kk = 0;
-        }
+
+
         private void Button_Prev_Click(object sender, EventArgs e)
         {
         }
@@ -12047,5 +12290,350 @@ namespace InvAcc.Forms
         {
 
         }
+
+        private void Button_Search_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRef_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void doubleInput_Rate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbCurr_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbLegate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (IsServiceBill) billUcontrolType31.CmbLegate = CmbLegate;
+
+        }
+
+        private void label43_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void text_Mobile_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!InvAcc.Properties.Settings.Default.ServiceBill)
+            {
+
+                VarGeneral.IsserviceBill = false;
+
+
+                checkBox1.CheckedChanged -= checkBox1_CheckedChanged;
+                checkBox1.Checked = false;
+                billUcontrolType31.Visible = false;
+
+                checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+                return;
+            }
+            if ((State == FormState.New && edited)|| (State == FormState.New && billUcontrolType31.edited))
+                State = FormState.Edit;
+
+            Button_Add_Click(null, null);
+
+            if (checkBox1.Checked)
+            {
+                VarGeneral.IsserviceBill = true;
+
+
+
+            }
+            else
+            {
+                VarGeneral.IsserviceBill = false;
+            }
+
+            IsServiceBill = checkBox1.Checked;
+
+
+
+            if (IsServiceBill)
+            {
+
+                displayServiceBill();
+                data_this.IS_ServiceBill = false;
+            }
+            edited = false;
+        }
+
+        private void txtTotTax_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void switchButton_TaxByNet_ValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void billUcontrolType31_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+        private void FlxInv_StartEdit(object sender, RowColEventArgs e)
+        {
+            kk = 1;
+            if (e.Col == 8)
+            {
+                beforeeditprice = 1;
+                //     double.Parse(FlxInv.GetData(e.Row, 8).ToString(), out beforeeditprice);
+            }
+            if (e.Col == 38)
+            {
+                if (edit) beforeeditprice = 2; else enteredtotal = 0;
+            }
+            else
+            { enteredtotal = 0; }
+
+        }
+        double getround(double value)
+        {
+            return Math.Round(value, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
+        }
+        double _without = 0;
+        public double
+            without
+        {
+            set
+            {
+                if (value < 1000)
+                { }
+                _without = value;
+            }
+            get
+            {
+                return _without;
+            }
+        }
+#pragma warning disable CS0414 // The field 'FrmInvSalesReturn.convertflag' is assigned but its value is never used
+        int convertflag = 0;
+        double caltax(double amount, double taxpercent)
+        {
+            without = amount;
+            if (switchButton_TaxByNet.Value)
+                if (textBoxItem_TaxByNetValue.Text.ToString() != string.Empty) taxpercent = double.Parse(textBoxItem_TaxByNetValue.Text);
+                else
+            if (switchButton_TaxByTotal.Value == false && switchButton_TaxLines.Value == false) taxpercent = 0;
+            if (taxpercent != 0)
+            {
+                taxpercent = taxpercent / 100;
+                taxpercent++;
+                return getround(amount / taxpercent);
+            }
+            else return getround(amount);
+        }
+
+        private void txtGDate_TextChanged(object sender, EventArgs e)
+        {
+            if (IsServiceBill)
+            {
+
+                billUcontrolType31.txtGDate = txtGDate;
+            }
+
+        }
+
+        private void txtHDate_TextChanged(object sender, EventArgs e)
+        {
+
+            if (IsServiceBill)
+            {
+                billUcontrolType31.txtHDate = txtHDate;
+
+            }
+
+        }
+
+        private void doubleInput_CreditLoc_ValueChanged(object sender, EventArgs e)
+        {
+            billUcontrolType31.doubleInput_CreditLoc = doubleInput_CreditLoc;
+
+        }
+
+        private void doubleInput_NetWorkLoc_ValueChanged(object sender, EventArgs e)
+        {
+            billUcontrolType31.doubleInput_NetWorkLoc = doubleInput_NetWorkLoc;
+
+        }
+
+        private void txtPaymentLoc_ValueChanged(object sender, EventArgs e)
+        {
+            billUcontrolType31.txtPaymentLoc = txtPaymentLoc;
+        }
+
+        private void checkBox_Credit_CheckValueChanged(object sender, EventArgs e)
+        {
+            if (checkBox_Credit.Checked == true)
+            {
+                billUcontrolType31.isCashe = false;
+            }
+        }
+
+        private void billUcontrolType31_Enter(object sender, EventArgs e)
+        {
+            Button_Edit_Click(null, null);
+        }
+
+        private void txtCredit1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDueAmountLoc_ValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDueAmountLoc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox_Chash_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkBox_Chash.Checked == true)
+            {
+                billUcontrolType31.isCashe = true;
+            }
+        }
+
+        double Rcaltax(double amount, double taxpercent)
+        {
+            if (switchButton_TaxByNet.Value)
+                if (textBoxItem_TaxByNetValue.Text.ToString() != string.Empty) taxpercent = double.Parse(textBoxItem_TaxByNetValue.Text);
+                else
+            if (switchButton_TaxByTotal.Value == false && switchButton_TaxLines.Value == false) taxpercent = 0;
+            if (taxpercent != 0)
+            {
+                taxpercent = taxpercent / 100;
+                taxpercent++;
+                without = getround(amount * taxpercent);
+                return getround(amount * taxpercent);
+            }
+            else return getround(amount);
+        }
+#pragma warning disable CS0414 // The field 'FrmInvSalesReturn.tl' is assigned but its value is never used
+        double ta = 0.0, tl = 0.0;
+#pragma warning restore CS0414 // The field 'FrmInvSalesReturn.tl' is assigned but its value is never used
+
+#pragma warning restore CS0414 // The field 'FrmInvSalesReturn.convertflag' is assigned but its value is never used
+#pragma warning disable CS0414 // The field 'FrmInvSalesReturn.fa' is assigned but its value is never used
+        bool newprice = false, fa = false;
+        private void ChkPriceIncludeTax_ValueChanged(object sender, EventArgs e)
+        {
+            return;
+            if (State != FormState.New)
+                Button_Edit_Click(null, null);
+            convertflag = 1;
+            if (ChkPriceIncludeTax.Value)
+            {
+                switchButton_TaxByNet.Value = false;
+                switchButton_TaxByTotal.Value = true;
+                switchButton_TaxLines.Value = true;
+                switchButton_TaxByNet.Enabled = false;
+                switchButton_TaxByTotal.Enabled = false;
+                switchButton_TaxLines.Enabled = false;
+                switchButton_TaxLines_ValueChanged(null, null);
+            }
+            else
+            {
+                switchButton_TaxByNet.Enabled = true;
+                switchButton_TaxByTotal.Enabled = true;
+                switchButton_TaxLines.Enabled = true;
+            }
+            pricel = 0.0; lastprice = 0.0;
+            if (ChkPriceIncludeTax.Value)
+            {
+                for (int iiCnt = 1; iiCnt < FlxInv.Rows.Count; iiCnt++)
+                {
+                    if (FlxInv.GetData(iiCnt, 1) == null)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        pricel = double.Parse(FlxInv.GetData(iiCnt, 8).ToString());
+                        without = getround(pricel);
+                        double t = 0;
+                        t = double.Parse(FlxInv.GetData(iiCnt, 31).ToString());
+                        pricel = getround(caltax(pricel, t));
+                        FlxInv.SetData(iiCnt, 8, pricel);
+                        FlxInv_AfterEdit(null, new RowColEventArgs(iiCnt, 8));//p
+                                                                              //   FlxInv_AfterEdit(null, new RowColEventArgs(iiCnt, 7));
+                    }
+                    GetInvTot();
+                }
+            }
+            else
+            {
+                for (int iiCnt = 1; iiCnt < FlxInv.Rows.Count; iiCnt++)
+                {
+                    if (FlxInv.GetData(iiCnt, 1) == null)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        double reprice = 0;
+                        reprice = double.Parse(FlxInv.GetData(iiCnt, 8).ToString());
+                        double taxx = 0.0;
+                        try
+                        {
+                            taxx = double.Parse(FlxInv.GetData(iiCnt, 31).ToString());
+                        }
+                        catch { }
+                        reprice = Rcaltax(reprice, taxx); without = reprice;
+                        lastprice = 0; pricel = reprice;
+                        reprice = getround(reprice);
+                        FlxInv.SetData(iiCnt, 8, reprice);
+                        FlxInv_AfterEdit(null, new RowColEventArgs(iiCnt, 8));//p
+                                                                              //   FlxInv_AfterEdit(null, new RowColEventArgs(iiCnt, 7));
+                        GetInvTot();
+                    }
+                }
+                GetInvTot();
+            }
+            convertflag = 0;
+        }
+
+#pragma warning restore CS0414 // The field 'FrmInvSalesReturn.fa' is assigned but its value is never used
+        public double pricel = 0.0, lastprice = 0.0;
+
     }
 }

@@ -34,8 +34,6 @@ namespace InvAcc.Controls.POS
             this.panel3 = new System.Windows.Forms.Panel();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.arrowButton2 = new ArrowButton.ArrowButton();
-            this.arrowButton1 = new ArrowButton.ArrowButton();
             this.ItemsGride = new InvAcc.Controls.POS.POS_ItemsGride();
             this.HeaderPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -85,8 +83,6 @@ namespace InvAcc.Controls.POS
             // 
             this.panel1.BackColor = System.Drawing.Color.IndianRed;
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.arrowButton2);
-            this.panel1.Controls.Add(this.arrowButton1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 229);
             this.panel1.Name = "panel1";
@@ -125,34 +121,6 @@ namespace InvAcc.Controls.POS
             this.simpleButton1.Size = new System.Drawing.Size(49, 31);
             this.simpleButton1.TabIndex = 0;
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // arrowButton2
-            // 
-            this.arrowButton2.ArrowEnabled = true;
-            this.arrowButton2.HoverEndColor = System.Drawing.Color.DarkRed;
-            this.arrowButton2.HoverStartColor = System.Drawing.Color.WhiteSmoke;
-            this.arrowButton2.Location = new System.Drawing.Point(575, 3);
-            this.arrowButton2.Name = "arrowButton2";
-            this.arrowButton2.NormalEndColor = System.Drawing.Color.Maroon;
-            this.arrowButton2.NormalStartColor = System.Drawing.Color.WhiteSmoke;
-            this.arrowButton2.Rotation = 270;
-            this.arrowButton2.Size = new System.Drawing.Size(37, 37);
-            this.arrowButton2.TabIndex = 3;
-            this.arrowButton2.Text = "التالي";
-            // 
-            // arrowButton1
-            // 
-            this.arrowButton1.ArrowEnabled = true;
-            this.arrowButton1.HoverEndColor = System.Drawing.Color.DarkRed;
-            this.arrowButton1.HoverStartColor = System.Drawing.Color.WhiteSmoke;
-            this.arrowButton1.Location = new System.Drawing.Point(618, 3);
-            this.arrowButton1.Name = "arrowButton1";
-            this.arrowButton1.NormalEndColor = System.Drawing.Color.Maroon;
-            this.arrowButton1.NormalStartColor = System.Drawing.Color.WhiteSmoke;
-            this.arrowButton1.Rotation = 90;
-            this.arrowButton1.Size = new System.Drawing.Size(37, 37);
-            this.arrowButton1.TabIndex = 2;
-            this.arrowButton1.Text = "السابق ";
             // 
             // ItemsGride
             // 
@@ -198,8 +166,6 @@ namespace InvAcc.Controls.POS
         
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private ArrowButton.ArrowButton arrowButton2;
-        private ArrowButton.ArrowButton arrowButton1;
         private System.Windows.Forms.Panel panel3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;

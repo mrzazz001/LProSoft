@@ -271,5 +271,29 @@ namespace InvAcc.Properties {
                 this["B3"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool PointeQrFeature {
+            get {
+                return ((bool)(this["PointeQrFeature"]));
+            }
+            set {
+                this["PointeQrFeature"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ServiceBill {
+            get {
+                return ((bool)(this["ServiceBill"]));
+            }
+            set {
+                this["ServiceBill"] = value;
+            }
+        }
     }
 }

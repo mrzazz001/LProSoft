@@ -896,6 +896,12 @@ namespace InvAcc.Forms
             WindowState = FormWindowState.Minimized;
             WindowState = FormWindowState.Maximized;
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void ButExit_MouseMove(object sender, MouseEventArgs e)
         {
             ButExit.BackgroundImage = Properties.Resources.howver;

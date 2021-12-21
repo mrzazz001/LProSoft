@@ -86,6 +86,7 @@ namespace InvAcc.Forms
             this.bubbleButton_BarcodSetting = new C1.Win.C1Ribbon.RibbonButton();
             this.bubbleButton_InvSetting = new C1.Win.C1Ribbon.RibbonButton();
             this.ribbonButton101 = new C1.Win.C1Ribbon.RibbonButton();
+            this.ribbonButton5 = new C1.Win.C1Ribbon.RibbonButton();
             this.ribbonGroup21 = new C1.Win.C1Ribbon.RibbonGroup();
             this.bubbleButton_ConvertDate = new C1.Win.C1Ribbon.RibbonButton();
             this.bubbleButton_ReportOnline = new C1.Win.C1Ribbon.RibbonButton();
@@ -126,6 +127,7 @@ namespace InvAcc.Forms
             this.radialMenuItem_OpenCloseTheYear2 = new C1.Win.C1Ribbon.RibbonButton();
             this.radialMenu_Lang_Item = new C1.Win.C1Ribbon.RibbonButton();
             this.ribbonCheckBox2 = new C1.Win.C1Ribbon.RibbonCheckBox();
+            this.ribbonButton4 = new C1.Win.C1Ribbon.RibbonButton();
             this.sideBarPanelItem_RepStocks = new C1.Win.C1Ribbon.RibbonTab();
             this.ribbonGroup8 = new C1.Win.C1Ribbon.RibbonGroup();
             this.buttonItem_ItemDataMain = new C1.Win.C1Ribbon.RibbonButton();
@@ -499,7 +501,7 @@ namespace InvAcc.Forms
             this.warningBox = new DevComponents.DotNetBar.Controls.WarningBox();
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.tabControl1 = new JacksiroKe.MdiTabCtrl.TabControl();
-            this.ribbonButton4 = new C1.Win.C1Ribbon.RibbonButton();
+            this.buttonItem35 = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.mainmenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
@@ -712,7 +714,8 @@ namespace InvAcc.Forms
             this.button_BrSetting,
             this.toolStripMenuItem_waitersActive,
             this.buttonItem_Megration,
-            this.buttonItem33});
+            this.buttonItem33,
+            this.buttonItem35});
             this.buttonItem_ImportExcels.Text = "عمليـــات آخرى";
             // 
             // buttonItem_ImporItems
@@ -881,7 +884,7 @@ namespace InvAcc.Forms
             this.mainmenu.Location = new System.Drawing.Point(0, 155);
             this.mainmenu.MenuBar = true;
             this.mainmenu.Name = "mainmenu";
-            this.mainmenu.Size = new System.Drawing.Size(1306, 26);
+            this.mainmenu.Size = new System.Drawing.Size(1306, 24);
             this.mainmenu.Stretch = true;
             this.mainmenu.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.mainmenu.TabIndex = 56;
@@ -988,6 +991,7 @@ namespace InvAcc.Forms
             this.ribbonGroup20.Items.Add(this.bubbleButton_TransData);
             this.ribbonGroup20.Items.Add(this.ribbonMenu7);
             this.ribbonGroup20.Items.Add(this.ribbonButton101);
+            this.ribbonGroup20.Items.Add(this.ribbonButton5);
             this.ribbonGroup20.Name = "ribbonGroup20";
             // 
             // bubbleButton_SelectBranch
@@ -1042,6 +1046,14 @@ namespace InvAcc.Forms
             this.ribbonButton101.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton101.SmallImage")));
             this.ribbonButton101.Text = "اعدادات الطابعات";
             this.ribbonButton101.Click += new System.EventHandler(this.ribbonButton101_Click);
+            // 
+            // ribbonButton5
+            // 
+            this.ribbonButton5.LargeImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.LargeImage")));
+            this.ribbonButton5.Name = "ribbonButton5";
+            this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
+            this.ribbonButton5.Text = "اعدادات طابعات الاقسام";
+            this.ribbonButton5.Click += new System.EventHandler(this.ribbonButton5_Click);
             // 
             // ribbonGroup21
             // 
@@ -1351,8 +1363,16 @@ namespace InvAcc.Forms
             // 
             this.ribbonCheckBox2.Name = "ribbonCheckBox2";
             this.ribbonCheckBox2.Text = "عدم تمكين الحذف والتعديل";
+            this.ribbonCheckBox2.Visible = false;
             this.ribbonCheckBox2.CheckedChanged += new System.EventHandler(this.ribbonCheckBox2_CheckedChanged);
             this.ribbonCheckBox2.Click += new System.EventHandler(this.ribbonCheckBox2_Click);
+            // 
+            // ribbonButton4
+            // 
+            this.ribbonButton4.Name = "ribbonButton4";
+            this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
+            this.ribbonButton4.Text = "Button";
+            this.ribbonButton4.Click += new System.EventHandler(this.ribbonButton4_Click);
             // 
             // sideBarPanelItem_RepStocks
             // 
@@ -3458,6 +3478,7 @@ namespace InvAcc.Forms
             this.textBoxItem_SrchDateTo.Name = "textBoxItem_SrchDateTo";
             this.textBoxItem_SrchDateTo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxItem_SrchDateTo.TextBoxHeight = 25;
+            this.textBoxItem_SrchDateTo.WatermarkColor = System.Drawing.SystemColors.GrayText;
             this.textBoxItem_SrchDateTo.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.textBoxItem_SrchDateTo.WatermarkText = "yyyy/MM/dd";
             // 
@@ -3469,6 +3490,7 @@ namespace InvAcc.Forms
             this.textBoxItem_SrchDateFrom.Name = "textBoxItem_SrchDateFrom";
             this.textBoxItem_SrchDateFrom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxItem_SrchDateFrom.TextBoxHeight = 25;
+            this.textBoxItem_SrchDateFrom.WatermarkColor = System.Drawing.SystemColors.GrayText;
             this.textBoxItem_SrchDateFrom.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.textBoxItem_SrchDateFrom.WatermarkText = "yyyy/MM/dd";
             // 
@@ -3574,12 +3596,12 @@ namespace InvAcc.Forms
             this.expandablePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.expandablePanel3.ExpandButtonVisible = false;
             this.expandablePanel3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.expandablePanel3.Location = new System.Drawing.Point(0, 179);
+            this.expandablePanel3.Location = new System.Drawing.Point(0, 0);
             this.expandablePanel3.Name = "expandablePanel3";
             this.expandablePanel3.Padding = new System.Windows.Forms.Padding(3);
             this.expandablePanel3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.expandablePanel3.RightToLeftLayout = true;
-            this.expandablePanel3.Size = new System.Drawing.Size(1306, 524);
+            this.expandablePanel3.Size = new System.Drawing.Size(1306, 749);
             this.expandablePanel3.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expandablePanel3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuSide;
             this.expandablePanel3.Style.BackgroundImagePosition = DevComponents.DotNetBar.eBackgroundImagePosition.Tile;
@@ -3615,7 +3637,7 @@ namespace InvAcc.Forms
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 149);
+            this.panel1.Location = new System.Drawing.Point(3, 188);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1300, 236);
             this.panel1.TabIndex = 3;
@@ -3887,7 +3909,7 @@ namespace InvAcc.Forms
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.ribbonTabItem1});
             this.ribbonControl1.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
-            this.ribbonControl1.Location = new System.Drawing.Point(3, 29);
+            this.ribbonControl1.Location = new System.Drawing.Point(3, 68);
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.ribbonControl1.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -3925,10 +3947,10 @@ namespace InvAcc.Forms
             this.ribbonPanel1.Controls.Add(this.ribbonBar3);
             this.ribbonPanel1.Controls.Add(this.ribbonBar1);
             this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel1.Location = new System.Drawing.Point(0, 32);
+            this.ribbonPanel1.Location = new System.Drawing.Point(0, 34);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(1300, 85);
+            this.ribbonPanel1.Size = new System.Drawing.Size(1300, 83);
             // 
             // 
             // 
@@ -3968,7 +3990,7 @@ namespace InvAcc.Forms
             this.circularProgressItem1});
             this.ribbonBar8.Location = new System.Drawing.Point(870, 0);
             this.ribbonBar8.Name = "ribbonBar8";
-            this.ribbonBar8.Size = new System.Drawing.Size(35, 82);
+            this.ribbonBar8.Size = new System.Drawing.Size(35, 80);
             this.ribbonBar8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar8.TabIndex = 7;
             this.ribbonBar8.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4010,7 +4032,7 @@ namespace InvAcc.Forms
             this.labelItem_TotPurReturn});
             this.ribbonBar4.Location = new System.Drawing.Point(725, 0);
             this.ribbonBar4.Name = "ribbonBar4";
-            this.ribbonBar4.Size = new System.Drawing.Size(145, 82);
+            this.ribbonBar4.Size = new System.Drawing.Size(145, 80);
             this.ribbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar4.TabIndex = 3;
             this.ribbonBar4.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4066,7 +4088,7 @@ namespace InvAcc.Forms
             this.labelItem_TotSalReturn});
             this.ribbonBar2.Location = new System.Drawing.Point(580, 0);
             this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(145, 82);
+            this.ribbonBar2.Size = new System.Drawing.Size(145, 80);
             this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar2.TabIndex = 1;
             this.ribbonBar2.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4121,7 +4143,7 @@ namespace InvAcc.Forms
             this.labelItem_PurchInvCount});
             this.ribbonBar7.Location = new System.Drawing.Point(435, 0);
             this.ribbonBar7.Name = "ribbonBar7";
-            this.ribbonBar7.Size = new System.Drawing.Size(145, 82);
+            this.ribbonBar7.Size = new System.Drawing.Size(145, 80);
             this.ribbonBar7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar7.TabIndex = 6;
             this.ribbonBar7.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4176,7 +4198,7 @@ namespace InvAcc.Forms
             this.labelItem_SalesInvCount});
             this.ribbonBar6.Location = new System.Drawing.Point(290, 0);
             this.ribbonBar6.Name = "ribbonBar6";
-            this.ribbonBar6.Size = new System.Drawing.Size(145, 82);
+            this.ribbonBar6.Size = new System.Drawing.Size(145, 80);
             this.ribbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar6.TabIndex = 5;
             this.ribbonBar6.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4231,7 +4253,7 @@ namespace InvAcc.Forms
             this.labelItem_TotPurch});
             this.ribbonBar3.Location = new System.Drawing.Point(145, 0);
             this.ribbonBar3.Name = "ribbonBar3";
-            this.ribbonBar3.Size = new System.Drawing.Size(145, 82);
+            this.ribbonBar3.Size = new System.Drawing.Size(145, 80);
             this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar3.TabIndex = 2;
             this.ribbonBar3.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4286,7 +4308,7 @@ namespace InvAcc.Forms
             this.labelItem_TotSales});
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(145, 82);
+            this.ribbonBar1.Size = new System.Drawing.Size(145, 80);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar1.TabIndex = 0;
             this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4668,6 +4690,7 @@ namespace InvAcc.Forms
             this.textBoxItem1.Name = "textBoxItem1";
             this.textBoxItem1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxItem1.TextBoxHeight = 25;
+            this.textBoxItem1.WatermarkColor = System.Drawing.SystemColors.GrayText;
             this.textBoxItem1.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.textBoxItem1.WatermarkText = "yyyy/MM/dd";
             // 
@@ -4679,6 +4702,7 @@ namespace InvAcc.Forms
             this.textBoxItem2.Name = "textBoxItem2";
             this.textBoxItem2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxItem2.TextBoxHeight = 25;
+            this.textBoxItem2.WatermarkColor = System.Drawing.SystemColors.GrayText;
             this.textBoxItem2.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.textBoxItem2.WatermarkText = "yyyy/MM/dd";
             // 
@@ -4968,10 +4992,10 @@ namespace InvAcc.Forms
             // tabControl1
             // 
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 181);
+            this.tabControl1.Location = new System.Drawing.Point(0, 179);
             this.tabControl1.MenuRenderer = null;
             this.tabControl1.Name = "tabControl1";
-            this.tabControl1.Size = new System.Drawing.Size(1306, 522);
+            this.tabControl1.Size = new System.Drawing.Size(1306, 524);
             this.tabControl1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
             this.tabControl1.TabCloseButtonImage = null;
             this.tabControl1.TabCloseButtonImageDisabled = null;
@@ -4987,12 +5011,11 @@ namespace InvAcc.Forms
             this.tabControl1.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.tabControl1_ControlRemoved);
             this.tabControl1.Validated += new System.EventHandler(this.tabControl1_Validated);
             // 
-            // ribbonButton4
+            // buttonItem35
             // 
-            this.ribbonButton4.Name = "ribbonButton4";
-            this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
-            this.ribbonButton4.Text = "Button";
-            this.ribbonButton4.Click += new System.EventHandler(this.ribbonButton4_Click);
+            this.buttonItem35.Name = "buttonItem35";
+            this.buttonItem35.Text = "معالج اعادة تسلسل الاصناف";
+            this.buttonItem35.Click += new System.EventHandler(this.buttonItem35_Click);
             // 
             // Frm_Main
             // 
@@ -5525,5 +5548,7 @@ namespace InvAcc.Forms
         private C1.Win.C1Ribbon.RibbonButton ribbonButton3;
         private C1.Win.C1Ribbon.RibbonCheckBox ribbonCheckBox2;
         private C1.Win.C1Ribbon.RibbonButton ribbonButton4;
+        private C1.Win.C1Ribbon.RibbonButton ribbonButton5;
+        private DevComponents.DotNetBar.ButtonItem buttonItem35;
     }
 }

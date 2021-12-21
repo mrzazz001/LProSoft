@@ -72,8 +72,10 @@
             this.Button_Export = new DevExpress.XtraBars.BarLargeButtonItem();
             this.buttonItem_Serials = new DevExpress.XtraBars.BarLargeButtonItem();
             this.buttonItem8 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.Binding = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Binding)).BeginInit();
             this.SuspendLayout();
             // 
             // Button_Close
@@ -197,6 +199,7 @@
             this.TextBox_Index.Edit = this.repositoryItemTextEdit1;
             this.TextBox_Index.Id = 10;
             this.TextBox_Index.Name = "TextBox_Index";
+            this.TextBox_Index.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.TextBox_Index.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.TextBox_Index_ItemClick);
             // 
             // repositoryItemTextEdit1
@@ -210,6 +213,7 @@
             this.Label_Count.Appearance.Options.UseBackColor = true;
             this.Label_Count.Id = 11;
             this.Label_Count.Name = "Label_Count";
+            this.Label_Count.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // lable_Records
             // 
@@ -478,6 +482,10 @@
             this.buttonItem8.Name = "buttonItem8";
             this.buttonItem8.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
+            // Binding
+            // 
+            this.Binding.PositionChanged += new System.EventHandler(this.Binding_PositionChanged);
+            // 
             // Ubar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,6 +498,7 @@
             this.Size = new System.Drawing.Size(922, 58);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Binding)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,5 +548,6 @@
         public DevExpress.XtraBars.BarLargeButtonItem Button_Export;
         public DevExpress.XtraBars.BarLargeButtonItem buttonItem_Serials;
         public DevExpress.XtraBars.BarLargeButtonItem buttonItem8;
+        public System.Windows.Forms.BindingSource Binding;
     }
 }

@@ -1366,7 +1366,7 @@ namespace InvAcc.Forms
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (!keyData.ToString().Contains("Control") &&
+            if (keyData.ToString().Contains("Control") &&
                 !keyData.ToString().ToLower().Contains("delete") &&
                 keyData.ToString().Contains("Alt"))
             {
@@ -1883,6 +1883,11 @@ namespace InvAcc.Forms
                 IfDefault = ifDefault;
                 Format = format;
             }
+        }
+
+        private void ribbonBar1_ItemClick(object sender, EventArgs e)
+        {
+
         }
     }
 }

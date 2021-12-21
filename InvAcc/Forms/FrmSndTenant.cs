@@ -978,7 +978,7 @@ namespace InvAcc.Forms
         private void GetInvSetting()
         {
             _InvSetting = new T_INVSETTING();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+            _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
         }
         private void RibunButtons()
         {
@@ -1296,11 +1296,12 @@ namespace InvAcc.Forms
             data_this.gdHDate = txtHDate.Text;
             data_this.gdGDate = txtGDate.Text;
             data_this.gdNo = textBox_ID.Text;
+            data_this.EngTaf = ScriptNumber1.TafEng(decimal.Parse("0" + txtValue.Text));
             data_this.ArbTaf = ScriptNumber1.ScriptNum(decimal.Parse("0" + txtValue.Text));
             data_this.BName = data_this.BName;
             data_this.ChekNo = data_this.ChekNo;
             data_this.CurTyp = int.Parse(CmbCurr.SelectedValue.ToString());
-            data_this.EngTaf = ScriptNumber1.TafEng(decimal.Parse("0" + txtValue.Text));
+           
             data_this.gdCstNo = 1;
             data_this.gdID = 0;
             data_this.gdLok = false;

@@ -2720,11 +2720,11 @@ namespace InvAcc.Forms
             _InvSetting = new T_INVSETTING();
             _SysSetting = new T_SYSSETTING();
             _GdAuto = new T_GdAuto();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+            _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
             _SysSetting = db.SystemSettingStock();
             _GdAuto = db.GdAutoStock();
             _Company = db.StockCompanyList().FirstOrDefault();
-            _InvSettingBarCod = db.StockInvSetting(VarGeneral.UserID, 22);
+            _InvSettingBarCod = db.StockInvSetting( 22);
         }
         private void textBox_ID_TextChanged(object sender, EventArgs e)
         {
@@ -4184,7 +4184,9 @@ namespace InvAcc.Forms
                         dbHead.AddParameter("PointsCount", DbType.Double, data_this.PointsCount);
                         dbHead.AddParameter("IsPoints", DbType.Boolean, data_this.IsPoints);
                         dbHead.AddParameter("tailor20", DbType.String, data_this.tailor20);
-                        dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_INSERT");
+                           dbHead.AddParameter("CusVenTaxNo", DbType.String, data_this.CusVenTaxNo);
+                     dbHead.AddParameter("IS_ServiceBill", DbType.Boolean, data_this.IS_ServiceBill);
+  dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_INSERT");
                         data_this.InvHed_ID = int.Parse(dbHead.GetParameterValue("InvHed_ID").ToString());
                     }
                     catch (SqlException ex3)
@@ -4329,8 +4331,10 @@ namespace InvAcc.Forms
                     dbHead.AddParameter("PointsCount", DbType.Double, data_this.PointsCount);
                     dbHead.AddParameter("IsPoints", DbType.Boolean, data_this.IsPoints);
                     dbHead.AddParameter("tailor20", DbType.String, data_this.tailor20);
-                    dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_UPDATE");
-                    for (int i = 0; i < data_this.T_INVDETs.Count; i++)
+                     dbHead.AddParameter("CusVenTaxNo", DbType.String, data_this.CusVenTaxNo);
+                        dbHead.AddParameter("IS_ServiceBill", DbType.Boolean, data_this.IS_ServiceBill);
+ dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_UPDATE");
+                                     for (int i = 0; i < data_this.T_INVDETs.Count; i++)
                     {
                         db_.ClearParameters();
                         db_.AddParameter("InvDet_ID", DbType.Int32, data_this.T_INVDETs[i].InvDet_ID);
@@ -4475,7 +4479,7 @@ namespace InvAcc.Forms
                         }
                         catch
                         {
-                            db_.AddParameter("ItmWight", DbType.Double, 0);
+                            db_.AddParameter("ItmWight", DbType.Double,(double) 0);
                         }
                         db_.AddParameter("ItmWight_T", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 34)))));
                         if (!string.IsNullOrEmpty(string.Concat(FlxInv.GetData(iiCnt, 35))))
@@ -4488,7 +4492,7 @@ namespace InvAcc.Forms
                         }
                         db_.AddParameter("LineDetails", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 36)));
                         db_.AddParameter("Serial_Key", DbType.String, "");
-                        db_.AddParameter("ItmTax", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 31)))));
+                          db_.AddParameter("ItmTax", DbType.Double,double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 31)))));
                         db_.ExecuteNonQuery(storedProcedure: true, "S_T_INVDET_INSERT");
                         if (State == FormState.Edit && _St)
                         {
@@ -4939,8 +4943,8 @@ namespace InvAcc.Forms
             {
                 _Curency = listCurency[0];
             }
-            data_this.ArbTaf = ScriptNumber1.ScriptNum(decimal.Parse(VarGeneral.TString.TEmpty(txtDueAmountLoc.Text ?? ""))) + " " + _Curency.Arb_Des + " " + "فقط لاغير ";
-            data_this.EngTaf = ScriptNumber1.TafEng(decimal.Parse(VarGeneral.TString.TEmpty(txtDueAmountLoc.Text ?? ""))) + " " + _Curency.Eng_Des;
+            data_this.ArbTaf = ScriptNumber1.ScriptNum(decimal.Parse(VarGeneral.TString.TEmpty(txtDueAmountLoc.Text ?? "")));;
+            data_this.EngTaf = ScriptNumber1.TafEng(decimal.Parse(VarGeneral.TString.TEmpty(txtDueAmountLoc.Text ?? "")));
             data_this.CreditPay = 0.0;
             data_this.NetworkPay = 0.0;
             data_this.CashPayLocCur = txtDueAmountLoc.Value;

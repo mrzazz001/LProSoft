@@ -430,7 +430,7 @@ string.Empty).Replace("' موديل السيارة'", "'Car Model'").Replace("' 
             }
         }
 
-        public DBMonitoring dbmonitor;
+        public ProShared.DBUdate.DBMonitoring dbmonitor;
         void exe(string cms)
         {
             sampleSqlConnection = new SqlConnection(VarGeneral.BranchCS);
@@ -448,7 +448,7 @@ string.Empty).Replace("' موديل السيارة'", "'Car Model'").Replace("' 
 
             sampleSqlConnection = new SqlConnection(VarGeneral.BranchCS);
 
-            DataTable tb = ProShared.DBUdate.DbUpdates.execute("SELECT is_broker_enabled FROM sys.databases WHERE name = 'Database_name';".Replace("Database_name", dbname), VarGeneral.BranchCS);
+            DataTable tb = DbUpdates.execute("SELECT is_broker_enabled FROM sys.databases WHERE name = 'Database_name';".Replace("Database_name", dbname), VarGeneral.BranchCS);
             if (tb.Rows.Count > 0)
             {
                 if (((bool)tb.Rows[0][0]) == false)
@@ -495,7 +495,7 @@ string.Empty).Replace("' موديل السيارة'", "'Car Model'").Replace("' 
 
         public static string getdatabasename()
         {
-            string db = VarGeneral.BranchCS;
+            string db = ProShared.GeneralM.VarGeneral.BranchCS;
             string name = string.Empty;
             int i = db.ToLower().IndexOf("database");
             int f = 0;

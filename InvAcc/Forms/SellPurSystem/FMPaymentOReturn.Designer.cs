@@ -249,7 +249,7 @@ private void InitializeComponent()
             this.panelDockContainer1 = new DevComponents.DotNetBar.PanelDockContainer();
             this.Panel_Navigate = new DevComponents.DotNetBar.DockContainerItem();
             this.txtItemName = new System.Windows.Forms.TextBox();
-            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);  this.netResize1.LabelsAutoEllipse = false;
+            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.PanelSpecialContainer.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FlxDat)).BeginInit();
@@ -368,12 +368,13 @@ private void InitializeComponent()
             this.ribbonBar1.Controls.Add(this.FlxInv);
             this.ribbonBar1.Controls.Add(this.groupBox1);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonBar1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
             this.ribbonBar1.Size = new System.Drawing.Size(1278, 463);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 867;
+            this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -439,10 +440,10 @@ private void InitializeComponent()
             this.CmbInvSide.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbInvSide.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbInvSide.FormattingEnabled = true;
-            this.CmbInvSide.ItemHeight = 14;
+            this.CmbInvSide.ItemHeight = 15;
             this.CmbInvSide.Location = new System.Drawing.Point(12, 109);
             this.CmbInvSide.Name = "CmbInvSide";
-            this.CmbInvSide.Size = new System.Drawing.Size(121, 20);
+            this.CmbInvSide.Size = new System.Drawing.Size(121, 21);
             this.CmbInvSide.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbInvSide.TabIndex = 1117;
             this.CmbInvSide.SelectedIndexChanged += new System.EventHandler(this.CmbInvSide_SelectedIndexChanged);
@@ -525,8 +526,8 @@ private void InitializeComponent()
             this.superTabControl_Info.ControlBox.MenuBox.Name = "";
             this.superTabControl_Info.ControlBox.Name = "";
             this.superTabControl_Info.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.superTabControl_Info.ControlBox.MenuBox,
-            this.superTabControl_Info.ControlBox.CloseBox});
+            this.superTabControl_Info.ControlBox.CloseBox,
+            this.superTabControl_Info.ControlBox.MenuBox});
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel3);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel1);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel2);
@@ -1080,7 +1081,7 @@ private void InitializeComponent()
             this.superTabControlPanel6.Controls.Add(this.checkBox_CostGaidTax);
             this.superTabControlPanel6.Controls.Add(this.label36);
             this.superTabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel6.Location = new System.Drawing.Point(0, 24);
+            this.superTabControlPanel6.Location = new System.Drawing.Point(0, 25);
             this.superTabControlPanel6.Name = "superTabControlPanel6";
             superTabLinearGradientColorTable8.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
@@ -1088,7 +1089,7 @@ private void InitializeComponent()
             superTabPanelItemColorTable4.Background = superTabLinearGradientColorTable8;
             superTabPanelColorTable4.Default = superTabPanelItemColorTable4;
             this.superTabControlPanel6.PanelColor = superTabPanelColorTable4;
-            this.superTabControlPanel6.Size = new System.Drawing.Size(993, 98);
+            this.superTabControlPanel6.Size = new System.Drawing.Size(993, 97);
             this.superTabControlPanel6.TabIndex = 1;
             this.superTabControlPanel6.TabItem = this.superTabItem_Tax;
             // 
@@ -1590,10 +1591,10 @@ private void InitializeComponent()
             this.CmbInvPrice.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbInvPrice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbInvPrice.FormattingEnabled = true;
-            this.CmbInvPrice.ItemHeight = 14;
+            this.CmbInvPrice.ItemHeight = 15;
             this.CmbInvPrice.Location = new System.Drawing.Point(225, 109);
             this.CmbInvPrice.Name = "CmbInvPrice";
-            this.CmbInvPrice.Size = new System.Drawing.Size(121, 20);
+            this.CmbInvPrice.Size = new System.Drawing.Size(121, 21);
             this.CmbInvPrice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbInvPrice.TabIndex = 13;
             // 
@@ -1604,10 +1605,10 @@ private void InitializeComponent()
             this.CmbCostC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbCostC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCostC.FormattingEnabled = true;
-            this.CmbCostC.ItemHeight = 14;
+            this.CmbCostC.ItemHeight = 15;
             this.CmbCostC.Location = new System.Drawing.Point(442, 109);
             this.CmbCostC.Name = "CmbCostC";
-            this.CmbCostC.Size = new System.Drawing.Size(116, 20);
+            this.CmbCostC.Size = new System.Drawing.Size(116, 21);
             this.CmbCostC.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbCostC.TabIndex = 12;
             // 
@@ -1618,10 +1619,10 @@ private void InitializeComponent()
             this.CmbCurr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbCurr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCurr.FormattingEnabled = true;
-            this.CmbCurr.ItemHeight = 14;
+            this.CmbCurr.ItemHeight = 15;
             this.CmbCurr.Location = new System.Drawing.Point(730, 85);
             this.CmbCurr.Name = "CmbCurr";
-            this.CmbCurr.Size = new System.Drawing.Size(474, 20);
+            this.CmbCurr.Size = new System.Drawing.Size(474, 21);
             this.CmbCurr.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbCurr.TabIndex = 5;
             // 
@@ -1633,10 +1634,10 @@ private void InitializeComponent()
             this.CmbLegate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbLegate.Enabled = false;
             this.CmbLegate.FormattingEnabled = true;
-            this.CmbLegate.ItemHeight = 14;
+            this.CmbLegate.ItemHeight = 15;
             this.CmbLegate.Location = new System.Drawing.Point(670, 109);
             this.CmbLegate.Name = "CmbLegate";
-            this.CmbLegate.Size = new System.Drawing.Size(534, 20);
+            this.CmbLegate.Size = new System.Drawing.Size(534, 21);
             this.CmbLegate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbLegate.TabIndex = 6;
             // 
@@ -2308,12 +2309,13 @@ private void InitializeComponent()
             this.ribbonBar_Tasks.Controls.Add(this.superTabControl_Main1);
             this.ribbonBar_Tasks.Controls.Add(this.superTabControl_Main2);
             this.ribbonBar_Tasks.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ribbonBar_Tasks.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar_Tasks.DragDropSupport = true;
             this.ribbonBar_Tasks.Location = new System.Drawing.Point(0, 463);
             this.ribbonBar_Tasks.Name = "ribbonBar_Tasks";
             this.ribbonBar_Tasks.Size = new System.Drawing.Size(1278, 51);
             this.ribbonBar_Tasks.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_Tasks.TabIndex = 872;
+            this.ribbonBar_Tasks.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -2748,7 +2750,6 @@ private void InitializeComponent()
             this.dotNetBarManager1.BottomDockSite = this.barBottomDockSite;
             this.dotNetBarManager1.Images = this.imageList1;
             this.dotNetBarManager1.LeftDockSite = this.barLeftDockSite;
-            //this.dotNetBarManager1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.dotNetBarManager1.MdiSystemItemVisible = false;
             this.dotNetBarManager1.ParentForm = null;
             this.dotNetBarManager1.RightDockSite = this.barRightDockSite;
@@ -2886,6 +2887,7 @@ private void InitializeComponent()
             // 
             this.panelEx3.Controls.Add(this.DGV_Main);
             this.panelEx3.Controls.Add(this.ribbonBar_DGV);
+            this.panelEx3.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx3.Location = new System.Drawing.Point(0, 0);
             this.panelEx3.Name = "panelEx3";
@@ -2916,11 +2918,16 @@ private void InitializeComponent()
             this.DGV_Main.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.DGV_Main.Font = new System.Drawing.Font("Tahoma", 9F);
             this.DGV_Main.ForeColor = System.Drawing.Color.Black;
-            this.DGV_Main.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.DGV_Main.Location = new System.Drawing.Point(0, 0);
             this.DGV_Main.Name = "DGV_Main";
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.ActiveRowIndicatorStyle = DevComponents.DotNetBar.SuperGrid.ActiveRowIndicatorStyle.Both;
             this.DGV_Main.PrimaryGrid.AllowEdit = false;
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.Caption.BackgroundImageLayout = DevComponents.DotNetBar.SuperGrid.GridBackgroundImageLayout.Center;
             this.DGV_Main.PrimaryGrid.Caption.Text = "";
             this.DGV_Main.PrimaryGrid.Caption.Visible = false;
@@ -2957,6 +2964,9 @@ private void InitializeComponent()
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.SquareTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle2;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.TextColor = System.Drawing.Color.White;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.TitleStyles.Default.RowHeaderStyle.TextAlignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.GroupByRow.RowHeaderVisibility = DevComponents.DotNetBar.SuperGrid.RowHeaderVisibility.Never;
             this.DGV_Main.PrimaryGrid.GroupByRow.Text = "جميــع السجــــلات";
             this.DGV_Main.PrimaryGrid.GroupByRow.Visible = true;
@@ -2965,6 +2975,9 @@ private void InitializeComponent()
             this.DGV_Main.PrimaryGrid.InitialSelection = DevComponents.DotNetBar.SuperGrid.RelativeSelection.None;
             this.DGV_Main.PrimaryGrid.MultiSelect = false;
             this.DGV_Main.PrimaryGrid.ShowRowGridIndex = true;
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.Title.AllowSelection = false;
             this.DGV_Main.PrimaryGrid.Title.Text = "";
             this.DGV_Main.PrimaryGrid.Title.Visible = false;
@@ -2972,6 +2985,7 @@ private void InitializeComponent()
             this.DGV_Main.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.DGV_Main.Size = new System.Drawing.Size(1278, 0);
             this.DGV_Main.TabIndex = 876;
+            this.DGV_Main.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // ribbonBar_DGV
             // 
@@ -2987,12 +3001,13 @@ private void InitializeComponent()
             this.ribbonBar_DGV.ContainerControlProcessDialogKey = true;
             this.ribbonBar_DGV.Controls.Add(this.superTabControl_DGV);
             this.ribbonBar_DGV.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ribbonBar_DGV.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar_DGV.DragDropSupport = true;
             this.ribbonBar_DGV.Location = new System.Drawing.Point(0, -51);
             this.ribbonBar_DGV.Name = "ribbonBar_DGV";
             this.ribbonBar_DGV.Size = new System.Drawing.Size(1278, 51);
             this.ribbonBar_DGV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_DGV.TabIndex = 877;
+            this.ribbonBar_DGV.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -3141,6 +3156,7 @@ private void InitializeComponent()
             // 
             // panelEx2
             // 
+            this.panelEx2.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelEx2.Location = new System.Drawing.Point(0, 0);
             this.panelEx2.MinimumSize = new System.Drawing.Size(824, 459);
@@ -3160,7 +3176,7 @@ private void InitializeComponent()
             // 
             this.barTaskList.AccessibleDescription = "DotNetBar Bar (barTaskList)";
             this.barTaskList.AccessibleName = "DotNetBar Bar";
-            this.barTaskList.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
+            this.barTaskList.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.barTaskList.AutoHideAnimationTime = 0;
             this.barTaskList.AutoSyncBarCaption = true;
             this.barTaskList.CanAutoHide = false;
@@ -3172,6 +3188,7 @@ private void InitializeComponent()
             this.barTaskList.DockSide = DevComponents.DotNetBar.eDockSide.Top;
             this.barTaskList.Font = new System.Drawing.Font("Tahoma", 8F);
             this.barTaskList.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.Caption;
+            this.barTaskList.IsMaximized = false;
             this.barTaskList.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.Panel_Navigate});
             this.barTaskList.ItemSpacing = 10;
@@ -3191,6 +3208,7 @@ private void InitializeComponent()
             // 
             // panelDockContainer1
             // 
+            this.panelDockContainer1.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelDockContainer1.Location = new System.Drawing.Point(5, 25);
             this.panelDockContainer1.Name = "panelDockContainer1";
             this.panelDockContainer1.Size = new System.Drawing.Size(814, 89);
@@ -3224,6 +3242,7 @@ private void InitializeComponent()
             // netResize1
             // 
             this.netResize1.AutoSaveLayout = true;
+            this.netResize1.LabelsAutoEllipse = false;
             this.netResize1.ParentControl = this;
             this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 

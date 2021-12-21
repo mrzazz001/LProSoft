@@ -355,7 +355,7 @@ namespace InvAcc.Forms
             }
             if (VarGeneral.Settings_Sys.IsCustomerDisplay.Value)
             {
-                CustomerDisplayData(txtDueAmount.Value, 0.0);
+                if (!Program.isdevelopermachine()) CustomerDisplayData(txtDueAmount.Value, 0.0);
             }
             base.ActiveControl = txtPayment;
         }

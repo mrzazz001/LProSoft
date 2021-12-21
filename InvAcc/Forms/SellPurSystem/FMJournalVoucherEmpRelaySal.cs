@@ -1723,7 +1723,7 @@ namespace InvAcc.Forms
             _InvSetting = new T_INVSETTING();
             _SysSetting = new T_SYSSETTING();
             listAccDef = new List<T_AccDef>();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+            _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
             _SysSetting = db.SystemSettingStock();
             listAccDef = db.StockAccDefList();
         }

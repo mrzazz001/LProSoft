@@ -305,7 +305,8 @@ namespace InvAcc.Forms
 
         private void PrintSet(FastReport.Report rpt, int vLines, PaperOrientation vType, string vPeaperNm, int vReplay, string _PrintNm, double _mergBottom, double _mergleft, double _mergRight, double _mergTop)
         {
-            if (x == 0) prep();
+            if (x == 0) 
+                prep();
             PrintDocument prnt_doc = new PrintDocument();
             string _PrinterName = prnt_doc.PrinterSettings.PrinterName;
             try
@@ -5907,18 +5908,18 @@ namespace InvAcc.Forms
                         }
                         if (repvalue == "InvoiceCachierWaiter")
                         {
-                            if ((!db.StockInvSetting(VarGeneral.UserID, 21).PrintCat.Value && !db.StockInvSetting(VarGeneral.UserID, 21).autoCommGaid.Value) || (VarGeneral.SSSLev != "R" && VarGeneral.SSSLev != "C" && VarGeneral.SSSLev != "H") || _GroupsIsPrint)
+                            if ((!db.StockInvSetting( 21).PrintCat.Value && !db.StockInvSetting( 21).autoCommGaid.Value) || (VarGeneral.SSSLev != "R" && VarGeneral.SSSLev != "C" && VarGeneral.SSSLev != "H") || _GroupsIsPrint)
                             {
                                 STEP_Cachier_1();
                             }
-                            else if (db.StockInvSetting(VarGeneral.UserID, 21).PrintCat.Value && !db.StockInvSetting(VarGeneral.UserID, 21).autoCommGaid.Value)
+                            else if (db.StockInvSetting( 21).PrintCat.Value && !db.StockInvSetting( 21).autoCommGaid.Value)
                             {
                                 STEP_Cachier_2();
                             }
                             else
                             {
                                 STEP_Cachier_1();
-                                if (db.StockInvSetting(VarGeneral.UserID, 21).nTyp.Substring(2, 1) == "1" || BarcodSts)
+                                if (db.StockInvSetting( 21).nTyp.Substring(2, 1) == "1" || BarcodSts)
                                 {
                                     STEP_Cachier_2();
                                 }
@@ -12346,7 +12347,7 @@ namespace InvAcc.Forms
                 //else
                 //{
                 //    STEP_1();
-                //    if (db.StockInvSetting(VarGeneral.UserID,1).nTyp.Substring(2, 1) == "1" || BarcodSts)
+                //    if (db.StockInvSetting(1).nTyp.Substring(2, 1) == "1" || BarcodSts)
                 //    {
                 //        STEP_2();
                 //    }
@@ -12362,7 +12363,7 @@ namespace InvAcc.Forms
                 //else
                 //{
                 //    STEP_Cachier_1();
-                //    if (db.StockInvSetting(VarGeneral.UserID,1).nTyp.Substring(2, 1) == "1" || BarcodSts)
+                //    if (db.StockInvSetting(1).nTyp.Substring(2, 1) == "1" || BarcodSts)
                 //    {
                 //        STEP_Cachier_2();
                 //    }
@@ -12402,7 +12403,7 @@ namespace InvAcc.Forms
                     if ((orientationSetting.GetValueOrDefault() != 1 ? 0 : ((orientationSetting.HasValue) == true ? 1 : 0)) == 0)
                     {
                         this.STEP_1();
-                        if ((this.db.StockInvSetting(VarGeneral.UserID, 1).nTyp.Substring(2, 1) == "1" ? true : this.BarcodSts))
+                        if ((this.db.StockInvSetting( 1).nTyp.Substring(2, 1) == "1" ? true : this.BarcodSts))
                         {
                             this.STEP_2();
                         }
@@ -13453,18 +13454,18 @@ namespace InvAcc.Forms
             }
             else if (repvalue == "InvSalWtr")
             {
-                if ((!db.StockInvSetting(VarGeneral.UserID, 21).PrintCat.Value && !db.StockInvSetting(VarGeneral.UserID, 21).autoCommGaid.Value) || (VarGeneral.SSSLev != "R" && VarGeneral.SSSLev != "C" && VarGeneral.SSSLev != "H") || _GroupsIsPrint)
+                if ((!db.StockInvSetting( 21).PrintCat.Value && !db.StockInvSetting( 21).autoCommGaid.Value) || (VarGeneral.SSSLev != "R" && VarGeneral.SSSLev != "C" && VarGeneral.SSSLev != "H") || _GroupsIsPrint)
                 {
                     STEP_1();
                 }
-                else if (db.StockInvSetting(VarGeneral.UserID, 21).PrintCat.Value && !db.StockInvSetting(VarGeneral.UserID, 21).autoCommGaid.Value)
+                else if (db.StockInvSetting( 21).PrintCat.Value && !db.StockInvSetting( 21).autoCommGaid.Value)
                 {
                     STEP_2();
                 }
                 else
                 {
                     STEP_1();
-                    if (db.StockInvSetting(VarGeneral.UserID, 21).nTyp.Substring(2, 1) == "1" || BarcodSts)
+                    if (db.StockInvSetting( 21).nTyp.Substring(2, 1) == "1" || BarcodSts)
                     {
                         STEP_2();
                     }
@@ -27155,7 +27156,7 @@ namespace InvAcc.Forms
                     catch
                     {
                     }
-                    if (db.StockInvSetting(VarGeneral.UserID, 1).nTyp.Substring(2, 1) == "1" || BarcodSts)
+                    if (db.StockInvSetting( 1).nTyp.Substring(2, 1) == "1" || BarcodSts)
                     {
                         PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                     }
@@ -27593,13 +27594,14 @@ namespace InvAcc.Forms
                         }
                     }
                 }
+                TopMost = false;
                 if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }
                 else
                 {
-                //ReportSource = rpt;
+              //   = rpt;
                 }
             }
         }
@@ -28607,7 +28609,7 @@ namespace InvAcc.Forms
                             }
                         }
                     }
-                    if (db.StockInvSetting(VarGeneral.UserID, 1).nTyp.Substring(2, 1) == "1" || BarcodSts)
+                    if (db.StockInvSetting( 1).nTyp.Substring(2, 1) == "1" || BarcodSts)
                     {
                         PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                     }

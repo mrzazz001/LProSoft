@@ -26,8 +26,6 @@ private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             this.PanelSpecialContainer = new System.Windows.Forms.Panel();
-
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSMS));
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
@@ -93,12 +91,8 @@ private void InitializeComponent()
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
-            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);  this.netResize1.LabelsAutoEllipse = false;
-            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
-            this.Shown += new System.EventHandler(this.FrmInvSale_Shown);
-            this.SizeChanged += new System.EventHandler(this.FrmInvSale_SizeChanged);
-            ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
-
+            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
+            this.PanelSpecialContainer.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -113,13 +107,17 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.smsTxtNo3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smsTxtNo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smsTxtNo1)).BeginInit();
-
+            ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // PanelSpecialContainer
+            // 
+            this.PanelSpecialContainer.Controls.Add(this.ribbonBar1);
             this.PanelSpecialContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelSpecialContainer.Location = new System.Drawing.Point(0, 0);
             this.PanelSpecialContainer.Name = "PanelSpecialContainer";
-            this.PanelSpecialContainer.Size = new System.Drawing.Size(1278, 514);
+            this.PanelSpecialContainer.Size = new System.Drawing.Size(580, 440);
             this.PanelSpecialContainer.TabIndex = 1220;
-            this.Controls.Add(this.PanelSpecialContainer);
             // 
             // ribbonBar1
             // 
@@ -135,12 +133,13 @@ private void InitializeComponent()
             this.ribbonBar1.ContainerControlProcessDialogKey = true;
             this.ribbonBar1.Controls.Add(this.superTabControl1);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonBar1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
             this.ribbonBar1.Size = new System.Drawing.Size(580, 440);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar1.TabIndex = 868;
+            this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -162,21 +161,18 @@ private void InitializeComponent()
             // 
             this.superTabControl1.ControlBox.CloseBox.Category = null;
             this.superTabControl1.ControlBox.CloseBox.Description = null;
-            this.superTabControl1.ControlBox.CloseBox.Name = string.Empty;
-            this.superTabControl1.ControlBox.CloseBox.Tag = null;
+            this.superTabControl1.ControlBox.CloseBox.Name = "";
             this.superTabControl1.ControlBox.Description = null;
             // 
             // 
             // 
             this.superTabControl1.ControlBox.MenuBox.Category = null;
             this.superTabControl1.ControlBox.MenuBox.Description = null;
-            this.superTabControl1.ControlBox.MenuBox.Name = string.Empty;
-            this.superTabControl1.ControlBox.MenuBox.Tag = null;
-            this.superTabControl1.ControlBox.Name = string.Empty;
+            this.superTabControl1.ControlBox.MenuBox.Name = "";
+            this.superTabControl1.ControlBox.Name = "";
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
-            this.superTabControl1.ControlBox.Tag = null;
             this.superTabControl1.ControlBox.Visible = false;
             this.superTabControl1.Controls.Add(this.superTabControlPanel5);
             this.superTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -241,7 +237,7 @@ private void InitializeComponent()
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(580, 3);
+            this.groupBox1.Size = new System.Drawing.Size(580, 368);
             this.groupBox1.TabIndex = 875;
             this.groupBox1.TabStop = false;
             // 
@@ -256,7 +252,7 @@ private void InitializeComponent()
             this.button_SrchMessage1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.button_SrchMessage1.SymbolSize = 12F;
             this.button_SrchMessage1.TabIndex = 10;
-            this.button_SrchMessage1.Tag = string.Empty;
+            this.button_SrchMessage1.Tag = "";
             this.button_SrchMessage1.Text = "ادراج نموذج";
             this.button_SrchMessage1.TextColor = System.Drawing.Color.SteelBlue;
             this.button_SrchMessage1.Click += new System.EventHandler(this.button_SrchMessage_Click);
@@ -397,6 +393,7 @@ private void InitializeComponent()
             this.txtMessage.Location = new System.Drawing.Point(66, 51);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
+            this.netResize1.SetResizeTextBoxMultiline(this.txtMessage, false);
             this.txtMessage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtMessage.Size = new System.Drawing.Size(370, 115);
             this.txtMessage.TabIndex = 2;
@@ -460,6 +457,7 @@ private void InitializeComponent()
             this.txtSender.Location = new System.Drawing.Point(235, 27);
             this.txtSender.Name = "txtSender";
             this.txtSender.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtSender, false);
             this.txtSender.Size = new System.Drawing.Size(201, 20);
             this.txtSender.TabIndex = 15;
             this.txtSender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -478,6 +476,7 @@ private void InitializeComponent()
             this.txtNumbers.Multiline = true;
             this.txtNumbers.Name = "txtNumbers";
             this.txtNumbers.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtNumbers, false);
             this.txtNumbers.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtNumbers.Size = new System.Drawing.Size(422, 48);
             this.txtNumbers.TabIndex = 4;
@@ -640,7 +639,7 @@ private void InitializeComponent()
             this.txtAddNumber.Size = new System.Drawing.Size(554, 22);
             this.txtAddNumber.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.txtAddNumber.TabIndex = 3;
-            this.txtAddNumber.Text = string.Empty;
+            this.txtAddNumber.Text = "";
             this.txtAddNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAddNumber.ButtonCustomClick += new System.EventHandler(this.txtAddNumber_ButtonCustomClick);
             // 
@@ -650,11 +649,14 @@ private void InitializeComponent()
             this.expandablePanel_SMS.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.expandablePanel_SMS.Controls.Add(this.groupPanel5);
             this.expandablePanel_SMS.Controls.Add(this.groupPanel3);
+            this.expandablePanel_SMS.DisabledBackColor = System.Drawing.Color.Empty;
             this.expandablePanel_SMS.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.expandablePanel_SMS.Expanded = false;
+            this.expandablePanel_SMS.ExpandedBounds = new System.Drawing.Rectangle(0, 3, 580, 391);
             this.expandablePanel_SMS.HideControlsWhenCollapsed = true;
-            this.expandablePanel_SMS.Location = new System.Drawing.Point(0, 3);
+            this.expandablePanel_SMS.Location = new System.Drawing.Point(0, 368);
             this.expandablePanel_SMS.Name = "expandablePanel_SMS";
-            this.expandablePanel_SMS.Size = new System.Drawing.Size(580, 391);
+            this.expandablePanel_SMS.Size = new System.Drawing.Size(580, 26);
             this.expandablePanel_SMS.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expandablePanel_SMS.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.expandablePanel_SMS.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -687,6 +689,7 @@ private void InitializeComponent()
             this.groupPanel5.Controls.Add(this.label1);
             this.groupPanel5.Controls.Add(this.smsTxtPass);
             this.groupPanel5.Controls.Add(this.smsTxtUserName);
+            this.groupPanel5.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel5.Location = new System.Drawing.Point(7, 288);
             this.groupPanel5.Name = "groupPanel5";
             this.groupPanel5.Size = new System.Drawing.Size(566, 98);
@@ -745,6 +748,7 @@ private void InitializeComponent()
             this.smsTxtSender.Location = new System.Drawing.Point(21, 21);
             this.smsTxtSender.MaxLength = 15;
             this.smsTxtSender.Name = "smsTxtSender";
+            this.netResize1.SetResizeTextBoxMultiline(this.smsTxtSender, false);
             this.smsTxtSender.Size = new System.Drawing.Size(101, 20);
             this.smsTxtSender.TabIndex = 18;
             this.smsTxtSender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -756,17 +760,18 @@ private void InitializeComponent()
             this.smsTxtBalance.Location = new System.Drawing.Point(21, 57);
             this.smsTxtBalance.Name = "smsTxtBalance";
             this.smsTxtBalance.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.smsTxtBalance, false);
             this.smsTxtBalance.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.smsTxtBalance.Size = new System.Drawing.Size(101, 20);
             this.smsTxtBalance.TabIndex = 19;
-            this.smsTxtBalance.Tag = string.Empty;
+            this.smsTxtBalance.Tag = "";
             this.smsTxtBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelErorr
             // 
             this.labelErorr.AutoSize = true;
             this.labelErorr.BackColor = System.Drawing.Color.Transparent;
-            this.labelErorr.Font = new System.Drawing.Font("Tahoma", 8F, ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline)));
+            this.labelErorr.Font = new System.Drawing.Font("Tahoma", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.labelErorr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.labelErorr.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelErorr.Location = new System.Drawing.Point(288, 63);
@@ -820,6 +825,7 @@ private void InitializeComponent()
             this.smsTxtPass.MaxLength = 12;
             this.smsTxtPass.Name = "smsTxtPass";
             this.smsTxtPass.PasswordChar = '*';
+            this.netResize1.SetResizeTextBoxMultiline(this.smsTxtPass, false);
             this.smsTxtPass.Size = new System.Drawing.Size(98, 20);
             this.smsTxtPass.TabIndex = 17;
             this.smsTxtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -833,9 +839,10 @@ private void InitializeComponent()
             this.smsTxtUserName.Location = new System.Drawing.Point(372, 21);
             this.smsTxtUserName.MaxLength = 20;
             this.smsTxtUserName.Name = "smsTxtUserName";
+            this.netResize1.SetResizeTextBoxMultiline(this.smsTxtUserName, false);
             this.smsTxtUserName.Size = new System.Drawing.Size(98, 20);
             this.smsTxtUserName.TabIndex = 16;
-            this.smsTxtUserName.Tag = string.Empty;
+            this.smsTxtUserName.Tag = "";
             this.smsTxtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.smsTxtUserName.Leave += new System.EventHandler(this.smsTxtUserName_Leave);
             // 
@@ -860,6 +867,7 @@ private void InitializeComponent()
             this.groupPanel3.Controls.Add(this.label7);
             this.groupPanel3.Controls.Add(this.label9);
             this.groupPanel3.Controls.Add(this.label4);
+            this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel3.Location = new System.Drawing.Point(7, 42);
             this.groupPanel3.Name = "groupPanel3";
             this.groupPanel3.Size = new System.Drawing.Size(566, 242);
@@ -974,6 +982,7 @@ private void InitializeComponent()
             this.smsTxt4.Location = new System.Drawing.Point(3, 113);
             this.smsTxt4.Multiline = true;
             this.smsTxt4.Name = "smsTxt4";
+            this.netResize1.SetResizeTextBoxMultiline(this.smsTxt4, false);
             this.smsTxt4.Size = new System.Drawing.Size(275, 76);
             this.smsTxt4.TabIndex = 23;
             this.smsTxt4.WatermarkText = "القالب الرابع";
@@ -1014,6 +1023,7 @@ private void InitializeComponent()
             this.smsTxt3.Location = new System.Drawing.Point(282, 114);
             this.smsTxt3.Multiline = true;
             this.smsTxt3.Name = "smsTxt3";
+            this.netResize1.SetResizeTextBoxMultiline(this.smsTxt3, false);
             this.smsTxt3.Size = new System.Drawing.Size(275, 76);
             this.smsTxt3.TabIndex = 22;
             this.smsTxt3.WatermarkColor = System.Drawing.Color.White;
@@ -1055,6 +1065,7 @@ private void InitializeComponent()
             this.smsTxt2.Location = new System.Drawing.Point(3, 9);
             this.smsTxt2.Multiline = true;
             this.smsTxt2.Name = "smsTxt2";
+            this.netResize1.SetResizeTextBoxMultiline(this.smsTxt2, false);
             this.smsTxt2.Size = new System.Drawing.Size(275, 76);
             this.smsTxt2.TabIndex = 21;
             this.smsTxt2.WatermarkColor = System.Drawing.Color.White;
@@ -1094,6 +1105,7 @@ private void InitializeComponent()
             this.smsTxt1.Location = new System.Drawing.Point(282, 10);
             this.smsTxt1.Multiline = true;
             this.smsTxt1.Name = "smsTxt1";
+            this.netResize1.SetResizeTextBoxMultiline(this.smsTxt1, false);
             this.smsTxt1.Size = new System.Drawing.Size(275, 76);
             this.smsTxt1.TabIndex = 20;
             this.smsTxt1.WatermarkText = "القالب الأول";
@@ -1209,27 +1221,32 @@ private void InitializeComponent()
             this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Blue;
             this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
             // 
+            // netResize1
+            // 
+            this.netResize1.AutoSaveLayout = true;
+            this.netResize1.LabelsAutoEllipse = false;
+            this.netResize1.ParentControl = this;
+            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
+            // 
             // FrmSMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 440);
-            this.PanelSpecialContainer.Controls.Add(this.ribbonBar1);
-            this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = (InvAcc.Properties.Resources.favicon);
+            this.Controls.Add(this.PanelSpecialContainer);
+            this.Icon = global::InvAcc.Properties.Resources.favicon;
             this.KeyPreview = true;
-            this.MaximizeBox = false;
             this.Name = "FrmSMS";
-            this.netResize1.AutoSaveLayout = true;
-            this.netResize1.ParentControl = this;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "الرســائل النصيـــة";
             this.Load += new System.EventHandler(this.FrmSMS_Load);
+            this.Shown += new System.EventHandler(this.FrmInvSale_Shown);
+            this.SizeChanged += new System.EventHandler(this.FrmInvSale_SizeChanged);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Frm_KeyPress);
+            this.PanelSpecialContainer.ResumeLayout(false);
             this.ribbonBar1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
@@ -1246,10 +1263,7 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.smsTxtNo3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smsTxtNo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smsTxtNo1)).EndInit();
-            this.Icon = (InvAcc.Properties.Resources.favicon);
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).EndInit();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-            this.MaximizeBox = true;
             this.ResumeLayout(false);
 
         }//###########&&&&&&&&&&

@@ -35,13 +35,10 @@ private void InitializeComponent()
             DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle2 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
             DevComponents.DotNetBar.SuperGrid.Style.Background background4 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
             this.PanelSpecialContainer = new System.Windows.Forms.Panel();
-            this.textBox_Note = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBox_NameE = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
+            this.textBox_Note = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBox_NameA = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
             this.textBox_ID = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
             this.ribbonBar_Tasks = new DevComponents.DotNetBar.RibbonBar();
             this.superTabControl_Main1 = new DevComponents.DotNetBar.SuperTabControl();
             this.Button_Close = new DevComponents.DotNetBar.ButtonItem();
@@ -59,6 +56,9 @@ private void InitializeComponent()
             this.lable_Records = new DevComponents.DotNetBar.LabelItem();
             this.Button_Next = new DevComponents.DotNetBar.ButtonItem();
             this.Button_Last = new DevComponents.DotNetBar.ButtonItem();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -88,8 +88,7 @@ private void InitializeComponent()
             this.Button_ExportTable2 = new DevComponents.DotNetBar.ButtonItem();
             this.Button_PrintTable = new DevComponents.DotNetBar.ButtonItem();
             this.labelItem3 = new DevComponents.DotNetBar.LabelItem();
-            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);  this.netResize1.LabelsAutoEllipse = false;
-            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
+            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.PanelSpecialContainer.SuspendLayout();
             this.ribbonBar_Tasks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main1)).BeginInit();
@@ -118,6 +117,19 @@ private void InitializeComponent()
             this.PanelSpecialContainer.Size = new System.Drawing.Size(649, 261);
             this.PanelSpecialContainer.TabIndex = 1220;
             // 
+            // textBox_NameE
+            // 
+            this.textBox_NameE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_NameE.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.textBox_NameE.ForeColor = System.Drawing.Color.Black;
+            this.textBox_NameE.Location = new System.Drawing.Point(120, 100);
+            this.textBox_NameE.MaxLength = 30;
+            this.textBox_NameE.Name = "textBox_NameE";
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_NameE, false);
+            this.textBox_NameE.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox_NameE.Size = new System.Drawing.Size(395, 20);
+            this.textBox_NameE.TabIndex = 3;
+            // 
             // textBox_Note
             // 
             this.textBox_Note.BackColor = System.Drawing.Color.AliceBlue;
@@ -139,31 +151,6 @@ private void InitializeComponent()
             this.textBox_Note.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.textBox_Note.WatermarkText = "ملاحظــــــــــــــات النـوع";
             // 
-            // textBox_NameE
-            // 
-            this.textBox_NameE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_NameE.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.textBox_NameE.ForeColor = System.Drawing.Color.Black;
-            this.textBox_NameE.Location = new System.Drawing.Point(120, 100);
-            this.textBox_NameE.MaxLength = 30;
-            this.textBox_NameE.Name = "textBox_NameE";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_NameE, false);
-            this.textBox_NameE.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox_NameE.Size = new System.Drawing.Size(395, 20);
-            this.textBox_NameE.TabIndex = 3;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label40.Location = new System.Drawing.Point(526, 100);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(107, 13);
-            this.label40.TabIndex = 85;
-            this.label40.Text = "إسم النوع - انجليزي :";
-            // 
             // textBox_NameA
             // 
             this.textBox_NameA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -175,18 +162,6 @@ private void InitializeComponent()
             this.netResize1.SetResizeTextBoxMultiline(this.textBox_NameA, false);
             this.textBox_NameA.Size = new System.Drawing.Size(395, 20);
             this.textBox_NameA.TabIndex = 2;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label36.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label36.Location = new System.Drawing.Point(521, 72);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(106, 13);
-            this.label36.TabIndex = 83;
-            this.label36.Text = "إسم النوع - عربـــي :";
             // 
             // textBox_ID
             // 
@@ -200,18 +175,6 @@ private void InitializeComponent()
             this.textBox_ID.TabIndex = 1;
             this.textBox_ID.TextChanged += new System.EventHandler(this.textBox_ID_TextChanged);
             this.textBox_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_ID_KeyPress);
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label38.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label38.Location = new System.Drawing.Point(526, 45);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(48, 13);
-            this.label38.TabIndex = 81;
-            this.label38.Text = "الرمــــز :";
             // 
             // ribbonBar_Tasks
             // 
@@ -228,12 +191,13 @@ private void InitializeComponent()
             this.ribbonBar_Tasks.Controls.Add(this.superTabControl_Main1);
             this.ribbonBar_Tasks.Controls.Add(this.superTabControl_Main2);
             this.ribbonBar_Tasks.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ribbonBar_Tasks.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar_Tasks.DragDropSupport = true;
             this.ribbonBar_Tasks.Location = new System.Drawing.Point(0, 210);
             this.ribbonBar_Tasks.Name = "ribbonBar_Tasks";
             this.ribbonBar_Tasks.Size = new System.Drawing.Size(649, 51);
             this.ribbonBar_Tasks.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_Tasks.TabIndex = 868;
+            this.ribbonBar_Tasks.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -544,12 +508,49 @@ private void InitializeComponent()
             this.Button_Last.Text = "الأخير";
             this.Button_Last.Tooltip = " السجل الاخير";
             // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label40.Location = new System.Drawing.Point(526, 100);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(107, 13);
+            this.label40.TabIndex = 85;
+            this.label40.Text = "إسم النوع - انجليزي :";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label38.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label38.Location = new System.Drawing.Point(526, 45);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(48, 13);
+            this.label38.TabIndex = 81;
+            this.label38.Text = "الرمــــز :";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label36.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label36.Location = new System.Drawing.Point(521, 72);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(106, 13);
+            this.label36.TabIndex = 83;
+            this.label36.Text = "إسم النوع - عربـــي :";
+            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             // 
             // panelEx2
             // 
+            this.panelEx2.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelEx2.Location = new System.Drawing.Point(0, 13);
             this.panelEx2.MinimumSize = new System.Drawing.Size(649, 248);
@@ -599,6 +600,7 @@ private void InitializeComponent()
             // 
             this.panelEx3.Controls.Add(this.DGV_Main);
             this.panelEx3.Controls.Add(this.ribbonBar_DGV);
+            this.panelEx3.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx3.Location = new System.Drawing.Point(0, 0);
             this.panelEx3.Name = "panelEx3";
@@ -629,11 +631,16 @@ private void InitializeComponent()
             this.DGV_Main.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.DGV_Main.Font = new System.Drawing.Font("Tahoma", 9F);
             this.DGV_Main.ForeColor = System.Drawing.Color.Black;
-            this.DGV_Main.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.DGV_Main.Location = new System.Drawing.Point(0, 0);
             this.DGV_Main.Name = "DGV_Main";
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.ActiveRowIndicatorStyle = DevComponents.DotNetBar.SuperGrid.ActiveRowIndicatorStyle.Both;
             this.DGV_Main.PrimaryGrid.AllowEdit = false;
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.Caption.BackgroundImageLayout = DevComponents.DotNetBar.SuperGrid.GridBackgroundImageLayout.Center;
             this.DGV_Main.PrimaryGrid.Caption.Text = "";
             this.DGV_Main.PrimaryGrid.Caption.Visible = false;
@@ -670,6 +677,9 @@ private void InitializeComponent()
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.SquareTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle2;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.TextColor = System.Drawing.Color.White;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.TitleStyles.Default.RowHeaderStyle.TextAlignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.GroupByRow.RowHeaderVisibility = DevComponents.DotNetBar.SuperGrid.RowHeaderVisibility.Never;
             this.DGV_Main.PrimaryGrid.GroupByRow.Text = "جميــع السجــــلات";
             this.DGV_Main.PrimaryGrid.GroupByRow.Visible = true;
@@ -678,6 +688,9 @@ private void InitializeComponent()
             this.DGV_Main.PrimaryGrid.InitialSelection = DevComponents.DotNetBar.SuperGrid.RelativeSelection.None;
             this.DGV_Main.PrimaryGrid.MultiSelect = false;
             this.DGV_Main.PrimaryGrid.ShowRowGridIndex = true;
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.Title.AllowSelection = false;
             this.DGV_Main.PrimaryGrid.Title.Text = "";
             this.DGV_Main.PrimaryGrid.Title.Visible = false;
@@ -685,6 +698,7 @@ private void InitializeComponent()
             this.DGV_Main.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.DGV_Main.Size = new System.Drawing.Size(649, 0);
             this.DGV_Main.TabIndex = 862;
+            this.DGV_Main.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // ribbonBar_DGV
             // 
@@ -700,12 +714,13 @@ private void InitializeComponent()
             this.ribbonBar_DGV.ContainerControlProcessDialogKey = true;
             this.ribbonBar_DGV.Controls.Add(this.superTabControl_DGV);
             this.ribbonBar_DGV.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ribbonBar_DGV.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar_DGV.DragDropSupport = true;
             this.ribbonBar_DGV.Location = new System.Drawing.Point(0, -51);
             this.ribbonBar_DGV.Name = "ribbonBar_DGV";
             this.ribbonBar_DGV.Size = new System.Drawing.Size(649, 51);
             this.ribbonBar_DGV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_DGV.TabIndex = 869;
+            this.ribbonBar_DGV.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -818,7 +833,6 @@ private void InitializeComponent()
             this.dotNetBarManager1.BottomDockSite = this.barBottomDockSite;
             this.dotNetBarManager1.Images = this.imageList1;
             this.dotNetBarManager1.LeftDockSite = this.barLeftDockSite;
-            //this.dotNetBarManager1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.dotNetBarManager1.MdiSystemItemVisible = false;
             this.dotNetBarManager1.ParentForm = null;
             this.dotNetBarManager1.RightDockSite = this.barRightDockSite;
@@ -998,7 +1012,9 @@ private void InitializeComponent()
             // netResize1
             // 
             this.netResize1.AutoSaveLayout = true;
+            this.netResize1.LabelsAutoEllipse = false;
             this.netResize1.ParentControl = this;
+            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 
             // FrmCarTypS
             // 
@@ -1037,6 +1053,7 @@ private void InitializeComponent()
             this.contextMenuStrip2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).EndInit();
             this.ResumeLayout(false);
+
         }//###########&&&&&&&&&&
 
 }

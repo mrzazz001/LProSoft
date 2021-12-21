@@ -126,6 +126,36 @@ private void InitializeComponent()
             this.labelItem4 = new System.Windows.Forms.Label();
             this.sideBarPanelItem_Unit1 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel12 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.radiobutton_RButDef3 = new System.Windows.Forms.RadioButton();
+            this.txtBarCode3 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelItem15 = new System.Windows.Forms.Label();
+            this.textbox_Cost3 = new System.Windows.Forms.TextBox();
+            this.labelItem18 = new System.Windows.Forms.Label();
+            this.textbox_Qty3 = new System.Windows.Forms.TextBox();
+            this.labelItem17 = new System.Windows.Forms.Label();
+            this.textbox_SelPri3 = new System.Windows.Forms.TextBox();
+            this.labelItem32 = new System.Windows.Forms.Label();
+            this.textbox_Pack3 = new System.Windows.Forms.TextBox();
+            this.comboboxItems_Unit3 = new System.Windows.Forms.ComboBox();
+            this.labelItem16 = new System.Windows.Forms.Label();
+            this.labelItem14 = new System.Windows.Forms.Label();
+            this.sideBarPanelItem_Unit3 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel6 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.radiobutton_RButDef4 = new System.Windows.Forms.RadioButton();
+            this.txtBarCode4 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelItem20 = new System.Windows.Forms.Label();
+            this.textbox_Cost4 = new System.Windows.Forms.TextBox();
+            this.labelItem23 = new System.Windows.Forms.Label();
+            this.textbox_Qty4 = new System.Windows.Forms.TextBox();
+            this.labelItem22 = new System.Windows.Forms.Label();
+            this.textbox_SelPri4 = new System.Windows.Forms.TextBox();
+            this.labelItem33 = new System.Windows.Forms.Label();
+            this.textbox_Pack4 = new System.Windows.Forms.TextBox();
+            this.comboboxItems_Unit4 = new System.Windows.Forms.ComboBox();
+            this.labelItem21 = new System.Windows.Forms.Label();
+            this.labelItem19 = new System.Windows.Forms.Label();
+            this.sideBarPanelItem_Unit4 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.radiobutton_RButDef2 = new System.Windows.Forms.RadioButton();
             this.txtBarCode2 = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -156,36 +186,6 @@ private void InitializeComponent()
             this.labelItem26 = new System.Windows.Forms.Label();
             this.labelItem24 = new System.Windows.Forms.Label();
             this.sideBarPanelItem_Unit5 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel6 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.radiobutton_RButDef4 = new System.Windows.Forms.RadioButton();
-            this.txtBarCode4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelItem20 = new System.Windows.Forms.Label();
-            this.textbox_Cost4 = new System.Windows.Forms.TextBox();
-            this.labelItem23 = new System.Windows.Forms.Label();
-            this.textbox_Qty4 = new System.Windows.Forms.TextBox();
-            this.labelItem22 = new System.Windows.Forms.Label();
-            this.textbox_SelPri4 = new System.Windows.Forms.TextBox();
-            this.labelItem33 = new System.Windows.Forms.Label();
-            this.textbox_Pack4 = new System.Windows.Forms.TextBox();
-            this.comboboxItems_Unit4 = new System.Windows.Forms.ComboBox();
-            this.labelItem21 = new System.Windows.Forms.Label();
-            this.labelItem19 = new System.Windows.Forms.Label();
-            this.sideBarPanelItem_Unit4 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.radiobutton_RButDef3 = new System.Windows.Forms.RadioButton();
-            this.txtBarCode3 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelItem15 = new System.Windows.Forms.Label();
-            this.textbox_Cost3 = new System.Windows.Forms.TextBox();
-            this.labelItem18 = new System.Windows.Forms.Label();
-            this.textbox_Qty3 = new System.Windows.Forms.TextBox();
-            this.labelItem17 = new System.Windows.Forms.Label();
-            this.textbox_SelPri3 = new System.Windows.Forms.TextBox();
-            this.labelItem32 = new System.Windows.Forms.Label();
-            this.textbox_Pack3 = new System.Windows.Forms.TextBox();
-            this.comboboxItems_Unit3 = new System.Windows.Forms.ComboBox();
-            this.labelItem16 = new System.Windows.Forms.Label();
-            this.labelItem14 = new System.Windows.Forms.Label();
-            this.sideBarPanelItem_Unit3 = new DevComponents.DotNetBar.SuperTabItem();
             this.label5 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox_DisItem = new DevComponents.Editors.DoubleInput();
@@ -206,7 +206,6 @@ private void InitializeComponent()
             this.txtCustNo = new System.Windows.Forms.TextBox();
             this.pictureBox_PicItem = new DevComponents.DotNetBar.Controls.ReflectionImage();
             this.combobox_ItmeGroup = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.textbox_MaxQty = new DevComponents.Editors.DoubleInput();
             this.label23 = new System.Windows.Forms.Label();
             this.textbox_Supreme = new DevComponents.Editors.DoubleInput();
             this.label3 = new System.Windows.Forms.Label();
@@ -225,13 +224,13 @@ private void InitializeComponent()
             this.label7 = new System.Windows.Forms.Label();
             this.doubleInput_DefPack = new System.Windows.Forms.TextBox();
             this.comboBox_DefPack = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.textbox_MaxQty = new DevComponents.Editors.DoubleInput();
             this.superTabItem_General = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.FlxInv = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.superTabItem_Details = new DevComponents.DotNetBar.SuperTabItem();
             this.label1 = new System.Windows.Forms.Label();
             this.textbox_DateNo = new DevComponents.Editors.IntegerInput();
-            this.combobox_DateTyp = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.checkBoxX_Points = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.checkBoxX_BarcodeBalance = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.expandablePanel_AnotherPrice = new DevComponents.DotNetBar.ExpandablePanel();
@@ -356,6 +355,7 @@ private void InitializeComponent()
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.PanelContainerSpatial = new System.Windows.Forms.Panel();
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
+            this.combobox_DateTyp = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.ribbonBar_Units.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -364,17 +364,17 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Info)).BeginInit();
             this.superTabControl_Info.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
+            this.superTabControlPanel5.SuspendLayout();
+            this.superTabControlPanel6.SuspendLayout();
             this.superTabControlPanel4.SuspendLayout();
             this.superTabControlPanel7.SuspendLayout();
-            this.superTabControlPanel6.SuspendLayout();
-            this.superTabControlPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_DisItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_TaxPurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_TaxSales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_CommItm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1FlexGrid_Items)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textbox_MaxQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textbox_Supreme)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textbox_MaxQty)).BeginInit();
             this.superTabControlPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FlxInv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textbox_DateNo)).BeginInit();
@@ -501,7 +501,6 @@ private void InitializeComponent()
             this.ribbonBar_Units.Controls.Add(this.superTabControl1);
             this.ribbonBar_Units.Controls.Add(this.label1);
             this.ribbonBar_Units.Controls.Add(this.textbox_DateNo);
-            this.ribbonBar_Units.Controls.Add(this.combobox_DateTyp);
             this.ribbonBar_Units.DragDropSupport = true;
             this.ribbonBar_Units.Location = new System.Drawing.Point(289, 0);
             this.ribbonBar_Units.Name = "ribbonBar_Units";
@@ -711,6 +710,7 @@ private void InitializeComponent()
             this.metroStatusBar_itemsType.Size = new System.Drawing.Size(993, 35);
             this.metroStatusBar_itemsType.TabIndex = 902;
             this.metroStatusBar_itemsType.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.metroStatusBar_itemsType.ItemClick += new System.EventHandler(this.metroStatusBar_itemsType_ItemClick);
             // 
             // labelItem29
             // 
@@ -780,10 +780,10 @@ private void InitializeComponent()
             this.superTabControl_Info.ControlBox.MenuBox});
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel3);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel12);
+            this.superTabControl_Info.Controls.Add(this.superTabControlPanel5);
+            this.superTabControl_Info.Controls.Add(this.superTabControlPanel6);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel4);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel7);
-            this.superTabControl_Info.Controls.Add(this.superTabControlPanel6);
-            this.superTabControl_Info.Controls.Add(this.superTabControlPanel5);
             this.superTabControl_Info.ForeColor = System.Drawing.Color.Black;
             this.superTabControl_Info.Location = new System.Drawing.Point(0, 36);
             this.superTabControl_Info.Name = "superTabControl_Info";
@@ -809,6 +809,7 @@ private void InitializeComponent()
             // 
             this.superTabControlPanel3.AutoSize = true;
             this.superTabControlPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.superTabControlPanel3.Controls.Add(this.combobox_DateTyp);
             this.superTabControlPanel3.Controls.Add(this.txtBarCode1);
             this.superTabControlPanel3.Controls.Add(this.radiobutton_RButDef1);
             this.superTabControlPanel3.Controls.Add(this.labelItem8);
@@ -856,7 +857,7 @@ private void InitializeComponent()
             // 
             this.radiobutton_RButDef1.AutoSize = true;
             this.radiobutton_RButDef1.BackColor = System.Drawing.Color.Transparent;
-            this.radiobutton_RButDef1.Location = new System.Drawing.Point(77, 32);
+            this.radiobutton_RButDef1.Location = new System.Drawing.Point(51, 28);
             this.radiobutton_RButDef1.Name = "radiobutton_RButDef1";
             this.radiobutton_RButDef1.Size = new System.Drawing.Size(103, 17);
             this.radiobutton_RButDef1.TabIndex = 11;
@@ -1000,6 +1001,350 @@ private void InitializeComponent()
             this.superTabControlPanel12.Size = new System.Drawing.Size(993, 74);
             this.superTabControlPanel12.TabIndex = 4;
             // 
+            // superTabControlPanel5
+            // 
+            this.superTabControlPanel5.Controls.Add(this.radiobutton_RButDef3);
+            this.superTabControlPanel5.Controls.Add(this.txtBarCode3);
+            this.superTabControlPanel5.Controls.Add(this.labelItem15);
+            this.superTabControlPanel5.Controls.Add(this.textbox_Cost3);
+            this.superTabControlPanel5.Controls.Add(this.labelItem18);
+            this.superTabControlPanel5.Controls.Add(this.textbox_Qty3);
+            this.superTabControlPanel5.Controls.Add(this.labelItem17);
+            this.superTabControlPanel5.Controls.Add(this.textbox_SelPri3);
+            this.superTabControlPanel5.Controls.Add(this.labelItem32);
+            this.superTabControlPanel5.Controls.Add(this.textbox_Pack3);
+            this.superTabControlPanel5.Controls.Add(this.comboboxItems_Unit3);
+            this.superTabControlPanel5.Controls.Add(this.labelItem16);
+            this.superTabControlPanel5.Controls.Add(this.labelItem14);
+            this.superTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel5.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel5.Name = "superTabControlPanel5";
+            superTabLinearGradientColorTable5.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.Gainsboro};
+            superTabPanelItemColorTable2.Background = superTabLinearGradientColorTable5;
+            superTabPanelColorTable2.Bottom = superTabPanelItemColorTable2;
+            this.superTabControlPanel5.PanelColor = superTabPanelColorTable2;
+            this.superTabControlPanel5.Size = new System.Drawing.Size(993, 74);
+            this.superTabControlPanel5.TabIndex = 0;
+            this.superTabControlPanel5.TabItem = this.sideBarPanelItem_Unit3;
+            this.superTabControlPanel5.Visible = false;
+            // 
+            // radiobutton_RButDef3
+            // 
+            this.radiobutton_RButDef3.AutoSize = true;
+            this.radiobutton_RButDef3.BackColor = System.Drawing.Color.Transparent;
+            this.radiobutton_RButDef3.Location = new System.Drawing.Point(28, 26);
+            this.radiobutton_RButDef3.Name = "radiobutton_RButDef3";
+            this.radiobutton_RButDef3.Size = new System.Drawing.Size(103, 17);
+            this.radiobutton_RButDef3.TabIndex = 1220;
+            this.radiobutton_RButDef3.TabStop = true;
+            this.radiobutton_RButDef3.Text = "الوحدة الافتراضية";
+            this.radiobutton_RButDef3.UseVisualStyleBackColor = false;
+            this.radiobutton_RButDef3.CheckedChanged += new System.EventHandler(this.radiobutton_RButDef3_CheckedChanged);
+            // 
+            // txtBarCode3
+            // 
+            // 
+            // 
+            // 
+            this.txtBarCode3.Border.Class = "TextBoxBorder";
+            this.txtBarCode3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtBarCode3.ButtonCustom.Visible = true;
+            this.txtBarCode3.Location = new System.Drawing.Point(142, 47);
+            this.txtBarCode3.Name = "txtBarCode3";
+            this.netResize1.SetResizeTextBoxMultiline(this.txtBarCode3, false);
+            this.txtBarCode3.Size = new System.Drawing.Size(177, 20);
+            this.txtBarCode3.TabIndex = 1219;
+            // 
+            // labelItem15
+            // 
+            this.labelItem15.AutoSize = true;
+            this.labelItem15.BackColor = System.Drawing.Color.Transparent;
+            this.labelItem15.Location = new System.Drawing.Point(339, 51);
+            this.labelItem15.Name = "labelItem15";
+            this.labelItem15.Size = new System.Drawing.Size(66, 13);
+            this.labelItem15.TabIndex = 1218;
+            this.labelItem15.Text = "رقم الباركود :";
+            this.labelItem15.Click += new System.EventHandler(this.labelItem15_Click);
+            // 
+            // textbox_Cost3
+            // 
+            this.textbox_Cost3.Location = new System.Drawing.Point(142, 26);
+            this.textbox_Cost3.Name = "textbox_Cost3";
+            this.textbox_Cost3.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textbox_Cost3, false);
+            this.textbox_Cost3.Size = new System.Drawing.Size(177, 20);
+            this.textbox_Cost3.TabIndex = 1217;
+            // 
+            // labelItem18
+            // 
+            this.labelItem18.AutoSize = true;
+            this.labelItem18.BackColor = System.Drawing.Color.Transparent;
+            this.labelItem18.Location = new System.Drawing.Point(338, 29);
+            this.labelItem18.Name = "labelItem18";
+            this.labelItem18.Size = new System.Drawing.Size(46, 13);
+            this.labelItem18.TabIndex = 1216;
+            this.labelItem18.Text = "التكلفة :";
+            // 
+            // textbox_Qty3
+            // 
+            this.textbox_Qty3.Location = new System.Drawing.Point(142, 5);
+            this.textbox_Qty3.Name = "textbox_Qty3";
+            this.textbox_Qty3.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textbox_Qty3, false);
+            this.textbox_Qty3.Size = new System.Drawing.Size(177, 20);
+            this.textbox_Qty3.TabIndex = 1215;
+            // 
+            // labelItem17
+            // 
+            this.labelItem17.AutoSize = true;
+            this.labelItem17.BackColor = System.Drawing.Color.Transparent;
+            this.labelItem17.Location = new System.Drawing.Point(337, 8);
+            this.labelItem17.Name = "labelItem17";
+            this.labelItem17.Size = new System.Drawing.Size(43, 13);
+            this.labelItem17.TabIndex = 1214;
+            this.labelItem17.Text = "الكمية :";
+            // 
+            // textbox_SelPri3
+            // 
+            this.textbox_SelPri3.Location = new System.Drawing.Point(509, 47);
+            this.textbox_SelPri3.Name = "textbox_SelPri3";
+            this.netResize1.SetResizeTextBoxMultiline(this.textbox_SelPri3, false);
+            this.textbox_SelPri3.Size = new System.Drawing.Size(153, 20);
+            this.textbox_SelPri3.TabIndex = 1213;
+            // 
+            // labelItem32
+            // 
+            this.labelItem32.AutoSize = true;
+            this.labelItem32.BackColor = System.Drawing.Color.Transparent;
+            this.labelItem32.Location = new System.Drawing.Point(668, 50);
+            this.labelItem32.Name = "labelItem32";
+            this.labelItem32.Size = new System.Drawing.Size(56, 13);
+            this.labelItem32.TabIndex = 1212;
+            this.labelItem32.Text = "سعر البيع:";
+            // 
+            // textbox_Pack3
+            // 
+            this.textbox_Pack3.Location = new System.Drawing.Point(509, 26);
+            this.textbox_Pack3.Name = "textbox_Pack3";
+            this.netResize1.SetResizeTextBoxMultiline(this.textbox_Pack3, false);
+            this.textbox_Pack3.Size = new System.Drawing.Size(153, 20);
+            this.textbox_Pack3.TabIndex = 1211;
+            // 
+            // comboboxItems_Unit3
+            // 
+            this.comboboxItems_Unit3.FormattingEnabled = true;
+            this.comboboxItems_Unit3.Location = new System.Drawing.Point(509, 4);
+            this.comboboxItems_Unit3.Name = "comboboxItems_Unit3";
+            this.comboboxItems_Unit3.Size = new System.Drawing.Size(153, 21);
+            this.comboboxItems_Unit3.TabIndex = 1210;
+            this.comboboxItems_Unit3.SelectedIndexChanged += new System.EventHandler(this.comboboxItems_Unit3_SelectedIndexChanged);
+            // 
+            // labelItem16
+            // 
+            this.labelItem16.AutoSize = true;
+            this.labelItem16.BackColor = System.Drawing.Color.Transparent;
+            this.labelItem16.Location = new System.Drawing.Point(667, 29);
+            this.labelItem16.Name = "labelItem16";
+            this.labelItem16.Size = new System.Drawing.Size(47, 13);
+            this.labelItem16.TabIndex = 1208;
+            this.labelItem16.Text = " التعبئة :";
+            // 
+            // labelItem14
+            // 
+            this.labelItem14.AutoSize = true;
+            this.labelItem14.BackColor = System.Drawing.Color.Transparent;
+            this.labelItem14.Location = new System.Drawing.Point(667, 12);
+            this.labelItem14.Name = "labelItem14";
+            this.labelItem14.Size = new System.Drawing.Size(43, 13);
+            this.labelItem14.TabIndex = 1209;
+            this.labelItem14.Text = "الوحدة :";
+            // 
+            // sideBarPanelItem_Unit3
+            // 
+            this.sideBarPanelItem_Unit3.AttachedControl = this.superTabControlPanel5;
+            this.sideBarPanelItem_Unit3.GlobalItem = false;
+            this.sideBarPanelItem_Unit3.Name = "sideBarPanelItem_Unit3";
+            superTabLinearGradientColorTable6.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.White};
+            superTabItemStateColorTable2.Background = superTabLinearGradientColorTable6;
+            superTabColorStates2.Normal = superTabItemStateColorTable2;
+            superTabItemColorTable2.Default = superTabColorStates2;
+            this.sideBarPanelItem_Unit3.TabColor = superTabItemColorTable2;
+            this.sideBarPanelItem_Unit3.Text = "الوحدة الثالثة";
+            // 
+            // superTabControlPanel6
+            // 
+            this.superTabControlPanel6.Controls.Add(this.radiobutton_RButDef4);
+            this.superTabControlPanel6.Controls.Add(this.txtBarCode4);
+            this.superTabControlPanel6.Controls.Add(this.labelItem20);
+            this.superTabControlPanel6.Controls.Add(this.textbox_Cost4);
+            this.superTabControlPanel6.Controls.Add(this.labelItem23);
+            this.superTabControlPanel6.Controls.Add(this.textbox_Qty4);
+            this.superTabControlPanel6.Controls.Add(this.labelItem22);
+            this.superTabControlPanel6.Controls.Add(this.textbox_SelPri4);
+            this.superTabControlPanel6.Controls.Add(this.labelItem33);
+            this.superTabControlPanel6.Controls.Add(this.textbox_Pack4);
+            this.superTabControlPanel6.Controls.Add(this.comboboxItems_Unit4);
+            this.superTabControlPanel6.Controls.Add(this.labelItem21);
+            this.superTabControlPanel6.Controls.Add(this.labelItem19);
+            this.superTabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel6.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel6.Name = "superTabControlPanel6";
+            superTabLinearGradientColorTable7.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.Gainsboro};
+            superTabPanelItemColorTable3.Background = superTabLinearGradientColorTable7;
+            superTabPanelColorTable3.Bottom = superTabPanelItemColorTable3;
+            this.superTabControlPanel6.PanelColor = superTabPanelColorTable3;
+            this.superTabControlPanel6.Size = new System.Drawing.Size(993, 74);
+            this.superTabControlPanel6.TabIndex = 0;
+            this.superTabControlPanel6.TabItem = this.sideBarPanelItem_Unit4;
+            this.superTabControlPanel6.Visible = false;
+            // 
+            // radiobutton_RButDef4
+            // 
+            this.radiobutton_RButDef4.AutoSize = true;
+            this.radiobutton_RButDef4.BackColor = System.Drawing.Color.Transparent;
+            this.radiobutton_RButDef4.Location = new System.Drawing.Point(13, 31);
+            this.radiobutton_RButDef4.Name = "radiobutton_RButDef4";
+            this.radiobutton_RButDef4.Size = new System.Drawing.Size(103, 17);
+            this.radiobutton_RButDef4.TabIndex = 1220;
+            this.radiobutton_RButDef4.TabStop = true;
+            this.radiobutton_RButDef4.Text = "الوحدة الإفتراضية";
+            this.radiobutton_RButDef4.UseVisualStyleBackColor = false;
+            this.radiobutton_RButDef4.CheckedChanged += new System.EventHandler(this.radiobutton_RButDef4_CheckedChanged);
+            // 
+            // txtBarCode4
+            // 
+            // 
+            // 
+            // 
+            this.txtBarCode4.Border.Class = "TextBoxBorder";
+            this.txtBarCode4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtBarCode4.ButtonCustom.Visible = true;
+            this.txtBarCode4.Location = new System.Drawing.Point(138, 47);
+            this.txtBarCode4.Name = "txtBarCode4";
+            this.netResize1.SetResizeTextBoxMultiline(this.txtBarCode4, false);
+            this.txtBarCode4.Size = new System.Drawing.Size(135, 20);
+            this.txtBarCode4.TabIndex = 1219;
+            // 
+            // labelItem20
+            // 
+            this.labelItem20.AutoSize = true;
+            this.labelItem20.BackColor = System.Drawing.Color.Transparent;
+            this.labelItem20.Location = new System.Drawing.Point(291, 51);
+            this.labelItem20.Name = "labelItem20";
+            this.labelItem20.Size = new System.Drawing.Size(66, 13);
+            this.labelItem20.TabIndex = 1218;
+            this.labelItem20.Text = "رقم الباركود :";
+            // 
+            // textbox_Cost4
+            // 
+            this.textbox_Cost4.Location = new System.Drawing.Point(138, 26);
+            this.textbox_Cost4.Name = "textbox_Cost4";
+            this.textbox_Cost4.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textbox_Cost4, false);
+            this.textbox_Cost4.Size = new System.Drawing.Size(135, 20);
+            this.textbox_Cost4.TabIndex = 1217;
+            // 
+            // labelItem23
+            // 
+            this.labelItem23.AutoSize = true;
+            this.labelItem23.BackColor = System.Drawing.Color.Transparent;
+            this.labelItem23.Location = new System.Drawing.Point(290, 29);
+            this.labelItem23.Name = "labelItem23";
+            this.labelItem23.Size = new System.Drawing.Size(46, 13);
+            this.labelItem23.TabIndex = 1216;
+            this.labelItem23.Text = "التكلفة :";
+            // 
+            // textbox_Qty4
+            // 
+            this.textbox_Qty4.Location = new System.Drawing.Point(138, 5);
+            this.textbox_Qty4.Name = "textbox_Qty4";
+            this.textbox_Qty4.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textbox_Qty4, false);
+            this.textbox_Qty4.Size = new System.Drawing.Size(135, 20);
+            this.textbox_Qty4.TabIndex = 1215;
+            // 
+            // labelItem22
+            // 
+            this.labelItem22.AutoSize = true;
+            this.labelItem22.BackColor = System.Drawing.Color.Transparent;
+            this.labelItem22.Location = new System.Drawing.Point(289, 8);
+            this.labelItem22.Name = "labelItem22";
+            this.labelItem22.Size = new System.Drawing.Size(43, 13);
+            this.labelItem22.TabIndex = 1214;
+            this.labelItem22.Text = "الكمية :";
+            // 
+            // textbox_SelPri4
+            // 
+            this.textbox_SelPri4.Location = new System.Drawing.Point(505, 47);
+            this.textbox_SelPri4.Name = "textbox_SelPri4";
+            this.netResize1.SetResizeTextBoxMultiline(this.textbox_SelPri4, false);
+            this.textbox_SelPri4.Size = new System.Drawing.Size(118, 20);
+            this.textbox_SelPri4.TabIndex = 1213;
+            // 
+            // labelItem33
+            // 
+            this.labelItem33.AutoSize = true;
+            this.labelItem33.BackColor = System.Drawing.Color.Transparent;
+            this.labelItem33.Location = new System.Drawing.Point(637, 50);
+            this.labelItem33.Name = "labelItem33";
+            this.labelItem33.Size = new System.Drawing.Size(56, 13);
+            this.labelItem33.TabIndex = 1212;
+            this.labelItem33.Text = "سعر البيع:";
+            // 
+            // textbox_Pack4
+            // 
+            this.textbox_Pack4.Location = new System.Drawing.Point(505, 26);
+            this.textbox_Pack4.Name = "textbox_Pack4";
+            this.netResize1.SetResizeTextBoxMultiline(this.textbox_Pack4, false);
+            this.textbox_Pack4.Size = new System.Drawing.Size(118, 20);
+            this.textbox_Pack4.TabIndex = 1211;
+            this.textbox_Pack4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox_Pack4_KeyDown);
+            // 
+            // comboboxItems_Unit4
+            // 
+            this.comboboxItems_Unit4.FormattingEnabled = true;
+            this.comboboxItems_Unit4.Location = new System.Drawing.Point(505, 4);
+            this.comboboxItems_Unit4.Name = "comboboxItems_Unit4";
+            this.comboboxItems_Unit4.Size = new System.Drawing.Size(118, 21);
+            this.comboboxItems_Unit4.TabIndex = 1210;
+            this.comboboxItems_Unit4.SelectedIndexChanged += new System.EventHandler(this.comboboxItems_Unit4_SelectedIndexChanged);
+            // 
+            // labelItem21
+            // 
+            this.labelItem21.AutoSize = true;
+            this.labelItem21.BackColor = System.Drawing.Color.Transparent;
+            this.labelItem21.Location = new System.Drawing.Point(636, 29);
+            this.labelItem21.Name = "labelItem21";
+            this.labelItem21.Size = new System.Drawing.Size(47, 13);
+            this.labelItem21.TabIndex = 1208;
+            this.labelItem21.Text = " التعبئة :";
+            // 
+            // labelItem19
+            // 
+            this.labelItem19.AutoSize = true;
+            this.labelItem19.BackColor = System.Drawing.Color.Transparent;
+            this.labelItem19.Location = new System.Drawing.Point(636, 12);
+            this.labelItem19.Name = "labelItem19";
+            this.labelItem19.Size = new System.Drawing.Size(43, 13);
+            this.labelItem19.TabIndex = 1209;
+            this.labelItem19.Text = "الوحدة :";
+            // 
+            // sideBarPanelItem_Unit4
+            // 
+            this.sideBarPanelItem_Unit4.AttachedControl = this.superTabControlPanel6;
+            this.sideBarPanelItem_Unit4.GlobalItem = false;
+            this.sideBarPanelItem_Unit4.Name = "sideBarPanelItem_Unit4";
+            superTabLinearGradientColorTable8.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.White};
+            superTabItemStateColorTable3.Background = superTabLinearGradientColorTable8;
+            superTabColorStates3.Normal = superTabItemStateColorTable3;
+            superTabItemColorTable3.Default = superTabColorStates3;
+            this.sideBarPanelItem_Unit4.TabColor = superTabItemColorTable3;
+            this.sideBarPanelItem_Unit4.Text = "الوحدة الرابعة";
+            // 
             // superTabControlPanel4
             // 
             this.superTabControlPanel4.Controls.Add(this.radiobutton_RButDef2);
@@ -1018,12 +1363,12 @@ private void InitializeComponent()
             this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel4.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel4.Name = "superTabControlPanel4";
-            superTabLinearGradientColorTable5.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable9.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gainsboro};
-            superTabLinearGradientColorTable5.GradientAngle = 80;
-            superTabPanelItemColorTable2.Background = superTabLinearGradientColorTable5;
-            superTabPanelColorTable2.Bottom = superTabPanelItemColorTable2;
-            this.superTabControlPanel4.PanelColor = superTabPanelColorTable2;
+            superTabLinearGradientColorTable9.GradientAngle = 80;
+            superTabPanelItemColorTable4.Background = superTabLinearGradientColorTable9;
+            superTabPanelColorTable4.Bottom = superTabPanelItemColorTable4;
+            this.superTabControlPanel4.PanelColor = superTabPanelColorTable4;
             this.superTabControlPanel4.Size = new System.Drawing.Size(993, 74);
             this.superTabControlPanel4.TabIndex = 0;
             this.superTabControlPanel4.TabItem = this.sideBarPanelItem_Unit2;
@@ -1166,12 +1511,12 @@ private void InitializeComponent()
             this.sideBarPanelItem_Unit2.AttachedControl = this.superTabControlPanel4;
             this.sideBarPanelItem_Unit2.GlobalItem = false;
             this.sideBarPanelItem_Unit2.Name = "sideBarPanelItem_Unit2";
-            superTabLinearGradientColorTable6.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable10.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.White};
-            superTabItemStateColorTable2.Background = superTabLinearGradientColorTable6;
-            superTabColorStates2.Normal = superTabItemStateColorTable2;
-            superTabItemColorTable2.Default = superTabColorStates2;
-            this.sideBarPanelItem_Unit2.TabColor = superTabItemColorTable2;
+            superTabItemStateColorTable4.Background = superTabLinearGradientColorTable10;
+            superTabColorStates4.Normal = superTabItemStateColorTable4;
+            superTabItemColorTable4.Default = superTabColorStates4;
+            this.sideBarPanelItem_Unit2.TabColor = superTabItemColorTable4;
             this.sideBarPanelItem_Unit2.Text = "الوحدة الثانية";
             // 
             // superTabControlPanel7
@@ -1192,12 +1537,12 @@ private void InitializeComponent()
             this.superTabControlPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel7.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel7.Name = "superTabControlPanel7";
-            superTabLinearGradientColorTable7.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable11.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gainsboro};
-            superTabLinearGradientColorTable7.GradientAngle = 80;
-            superTabPanelItemColorTable3.Background = superTabLinearGradientColorTable7;
-            superTabPanelColorTable3.Bottom = superTabPanelItemColorTable3;
-            this.superTabControlPanel7.PanelColor = superTabPanelColorTable3;
+            superTabLinearGradientColorTable11.GradientAngle = 80;
+            superTabPanelItemColorTable5.Background = superTabLinearGradientColorTable11;
+            superTabPanelColorTable5.Bottom = superTabPanelItemColorTable5;
+            this.superTabControlPanel7.PanelColor = superTabPanelColorTable5;
             this.superTabControlPanel7.Size = new System.Drawing.Size(993, 74);
             this.superTabControlPanel7.TabIndex = 0;
             this.superTabControlPanel7.TabItem = this.sideBarPanelItem_Unit5;
@@ -1339,357 +1684,13 @@ private void InitializeComponent()
             this.sideBarPanelItem_Unit5.AttachedControl = this.superTabControlPanel7;
             this.sideBarPanelItem_Unit5.GlobalItem = false;
             this.sideBarPanelItem_Unit5.Name = "sideBarPanelItem_Unit5";
-            superTabLinearGradientColorTable8.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.White};
-            superTabItemStateColorTable3.Background = superTabLinearGradientColorTable8;
-            superTabColorStates3.Normal = superTabItemStateColorTable3;
-            superTabItemColorTable3.Default = superTabColorStates3;
-            this.sideBarPanelItem_Unit5.TabColor = superTabItemColorTable3;
-            this.sideBarPanelItem_Unit5.Text = "الوحدة الخامسة";
-            // 
-            // superTabControlPanel6
-            // 
-            this.superTabControlPanel6.Controls.Add(this.radiobutton_RButDef4);
-            this.superTabControlPanel6.Controls.Add(this.txtBarCode4);
-            this.superTabControlPanel6.Controls.Add(this.labelItem20);
-            this.superTabControlPanel6.Controls.Add(this.textbox_Cost4);
-            this.superTabControlPanel6.Controls.Add(this.labelItem23);
-            this.superTabControlPanel6.Controls.Add(this.textbox_Qty4);
-            this.superTabControlPanel6.Controls.Add(this.labelItem22);
-            this.superTabControlPanel6.Controls.Add(this.textbox_SelPri4);
-            this.superTabControlPanel6.Controls.Add(this.labelItem33);
-            this.superTabControlPanel6.Controls.Add(this.textbox_Pack4);
-            this.superTabControlPanel6.Controls.Add(this.comboboxItems_Unit4);
-            this.superTabControlPanel6.Controls.Add(this.labelItem21);
-            this.superTabControlPanel6.Controls.Add(this.labelItem19);
-            this.superTabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel6.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel6.Name = "superTabControlPanel6";
-            superTabLinearGradientColorTable9.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.Gainsboro};
-            superTabPanelItemColorTable4.Background = superTabLinearGradientColorTable9;
-            superTabPanelColorTable4.Bottom = superTabPanelItemColorTable4;
-            this.superTabControlPanel6.PanelColor = superTabPanelColorTable4;
-            this.superTabControlPanel6.Size = new System.Drawing.Size(993, 74);
-            this.superTabControlPanel6.TabIndex = 0;
-            this.superTabControlPanel6.TabItem = this.sideBarPanelItem_Unit4;
-            this.superTabControlPanel6.Visible = false;
-            // 
-            // radiobutton_RButDef4
-            // 
-            this.radiobutton_RButDef4.AutoSize = true;
-            this.radiobutton_RButDef4.BackColor = System.Drawing.Color.Transparent;
-            this.radiobutton_RButDef4.Location = new System.Drawing.Point(13, 31);
-            this.radiobutton_RButDef4.Name = "radiobutton_RButDef4";
-            this.radiobutton_RButDef4.Size = new System.Drawing.Size(103, 17);
-            this.radiobutton_RButDef4.TabIndex = 1220;
-            this.radiobutton_RButDef4.TabStop = true;
-            this.radiobutton_RButDef4.Text = "الوحدة الإفتراضية";
-            this.radiobutton_RButDef4.UseVisualStyleBackColor = false;
-            this.radiobutton_RButDef4.CheckedChanged += new System.EventHandler(this.radiobutton_RButDef4_CheckedChanged);
-            // 
-            // txtBarCode4
-            // 
-            // 
-            // 
-            // 
-            this.txtBarCode4.Border.Class = "TextBoxBorder";
-            this.txtBarCode4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtBarCode4.ButtonCustom.Visible = true;
-            this.txtBarCode4.Location = new System.Drawing.Point(138, 47);
-            this.txtBarCode4.Name = "txtBarCode4";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtBarCode4, false);
-            this.txtBarCode4.Size = new System.Drawing.Size(135, 20);
-            this.txtBarCode4.TabIndex = 1219;
-            // 
-            // labelItem20
-            // 
-            this.labelItem20.AutoSize = true;
-            this.labelItem20.BackColor = System.Drawing.Color.Transparent;
-            this.labelItem20.Location = new System.Drawing.Point(291, 51);
-            this.labelItem20.Name = "labelItem20";
-            this.labelItem20.Size = new System.Drawing.Size(66, 13);
-            this.labelItem20.TabIndex = 1218;
-            this.labelItem20.Text = "رقم الباركود :";
-            // 
-            // textbox_Cost4
-            // 
-            this.textbox_Cost4.Location = new System.Drawing.Point(138, 26);
-            this.textbox_Cost4.Name = "textbox_Cost4";
-            this.textbox_Cost4.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.textbox_Cost4, false);
-            this.textbox_Cost4.Size = new System.Drawing.Size(135, 20);
-            this.textbox_Cost4.TabIndex = 1217;
-            // 
-            // labelItem23
-            // 
-            this.labelItem23.AutoSize = true;
-            this.labelItem23.BackColor = System.Drawing.Color.Transparent;
-            this.labelItem23.Location = new System.Drawing.Point(290, 29);
-            this.labelItem23.Name = "labelItem23";
-            this.labelItem23.Size = new System.Drawing.Size(46, 13);
-            this.labelItem23.TabIndex = 1216;
-            this.labelItem23.Text = "التكلفة :";
-            // 
-            // textbox_Qty4
-            // 
-            this.textbox_Qty4.Location = new System.Drawing.Point(138, 5);
-            this.textbox_Qty4.Name = "textbox_Qty4";
-            this.textbox_Qty4.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.textbox_Qty4, false);
-            this.textbox_Qty4.Size = new System.Drawing.Size(135, 20);
-            this.textbox_Qty4.TabIndex = 1215;
-            // 
-            // labelItem22
-            // 
-            this.labelItem22.AutoSize = true;
-            this.labelItem22.BackColor = System.Drawing.Color.Transparent;
-            this.labelItem22.Location = new System.Drawing.Point(289, 8);
-            this.labelItem22.Name = "labelItem22";
-            this.labelItem22.Size = new System.Drawing.Size(43, 13);
-            this.labelItem22.TabIndex = 1214;
-            this.labelItem22.Text = "الكمية :";
-            // 
-            // textbox_SelPri4
-            // 
-            this.textbox_SelPri4.Location = new System.Drawing.Point(505, 47);
-            this.textbox_SelPri4.Name = "textbox_SelPri4";
-            this.netResize1.SetResizeTextBoxMultiline(this.textbox_SelPri4, false);
-            this.textbox_SelPri4.Size = new System.Drawing.Size(118, 20);
-            this.textbox_SelPri4.TabIndex = 1213;
-            // 
-            // labelItem33
-            // 
-            this.labelItem33.AutoSize = true;
-            this.labelItem33.BackColor = System.Drawing.Color.Transparent;
-            this.labelItem33.Location = new System.Drawing.Point(637, 50);
-            this.labelItem33.Name = "labelItem33";
-            this.labelItem33.Size = new System.Drawing.Size(56, 13);
-            this.labelItem33.TabIndex = 1212;
-            this.labelItem33.Text = "سعر البيع:";
-            // 
-            // textbox_Pack4
-            // 
-            this.textbox_Pack4.Location = new System.Drawing.Point(505, 26);
-            this.textbox_Pack4.Name = "textbox_Pack4";
-            this.netResize1.SetResizeTextBoxMultiline(this.textbox_Pack4, false);
-            this.textbox_Pack4.Size = new System.Drawing.Size(118, 20);
-            this.textbox_Pack4.TabIndex = 1211;
-            this.textbox_Pack4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox_Pack4_KeyDown);
-            // 
-            // comboboxItems_Unit4
-            // 
-            this.comboboxItems_Unit4.FormattingEnabled = true;
-            this.comboboxItems_Unit4.Location = new System.Drawing.Point(505, 4);
-            this.comboboxItems_Unit4.Name = "comboboxItems_Unit4";
-            this.comboboxItems_Unit4.Size = new System.Drawing.Size(118, 21);
-            this.comboboxItems_Unit4.TabIndex = 1210;
-            this.comboboxItems_Unit4.SelectedIndexChanged += new System.EventHandler(this.comboboxItems_Unit4_SelectedIndexChanged);
-            // 
-            // labelItem21
-            // 
-            this.labelItem21.AutoSize = true;
-            this.labelItem21.BackColor = System.Drawing.Color.Transparent;
-            this.labelItem21.Location = new System.Drawing.Point(636, 29);
-            this.labelItem21.Name = "labelItem21";
-            this.labelItem21.Size = new System.Drawing.Size(47, 13);
-            this.labelItem21.TabIndex = 1208;
-            this.labelItem21.Text = " التعبئة :";
-            // 
-            // labelItem19
-            // 
-            this.labelItem19.AutoSize = true;
-            this.labelItem19.BackColor = System.Drawing.Color.Transparent;
-            this.labelItem19.Location = new System.Drawing.Point(636, 12);
-            this.labelItem19.Name = "labelItem19";
-            this.labelItem19.Size = new System.Drawing.Size(43, 13);
-            this.labelItem19.TabIndex = 1209;
-            this.labelItem19.Text = "الوحدة :";
-            // 
-            // sideBarPanelItem_Unit4
-            // 
-            this.sideBarPanelItem_Unit4.AttachedControl = this.superTabControlPanel6;
-            this.sideBarPanelItem_Unit4.GlobalItem = false;
-            this.sideBarPanelItem_Unit4.Name = "sideBarPanelItem_Unit4";
-            superTabLinearGradientColorTable10.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.White};
-            superTabItemStateColorTable4.Background = superTabLinearGradientColorTable10;
-            superTabColorStates4.Normal = superTabItemStateColorTable4;
-            superTabItemColorTable4.Default = superTabColorStates4;
-            this.sideBarPanelItem_Unit4.TabColor = superTabItemColorTable4;
-            this.sideBarPanelItem_Unit4.Text = "الوحدة الرابعة";
-            // 
-            // superTabControlPanel5
-            // 
-            this.superTabControlPanel5.Controls.Add(this.radiobutton_RButDef3);
-            this.superTabControlPanel5.Controls.Add(this.txtBarCode3);
-            this.superTabControlPanel5.Controls.Add(this.labelItem15);
-            this.superTabControlPanel5.Controls.Add(this.textbox_Cost3);
-            this.superTabControlPanel5.Controls.Add(this.labelItem18);
-            this.superTabControlPanel5.Controls.Add(this.textbox_Qty3);
-            this.superTabControlPanel5.Controls.Add(this.labelItem17);
-            this.superTabControlPanel5.Controls.Add(this.textbox_SelPri3);
-            this.superTabControlPanel5.Controls.Add(this.labelItem32);
-            this.superTabControlPanel5.Controls.Add(this.textbox_Pack3);
-            this.superTabControlPanel5.Controls.Add(this.comboboxItems_Unit3);
-            this.superTabControlPanel5.Controls.Add(this.labelItem16);
-            this.superTabControlPanel5.Controls.Add(this.labelItem14);
-            this.superTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel5.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel5.Name = "superTabControlPanel5";
-            superTabLinearGradientColorTable11.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.Gainsboro};
-            superTabPanelItemColorTable5.Background = superTabLinearGradientColorTable11;
-            superTabPanelColorTable5.Bottom = superTabPanelItemColorTable5;
-            this.superTabControlPanel5.PanelColor = superTabPanelColorTable5;
-            this.superTabControlPanel5.Size = new System.Drawing.Size(993, 74);
-            this.superTabControlPanel5.TabIndex = 0;
-            this.superTabControlPanel5.TabItem = this.sideBarPanelItem_Unit3;
-            this.superTabControlPanel5.Visible = false;
-            // 
-            // radiobutton_RButDef3
-            // 
-            this.radiobutton_RButDef3.AutoSize = true;
-            this.radiobutton_RButDef3.BackColor = System.Drawing.Color.Transparent;
-            this.radiobutton_RButDef3.Location = new System.Drawing.Point(28, 26);
-            this.radiobutton_RButDef3.Name = "radiobutton_RButDef3";
-            this.radiobutton_RButDef3.Size = new System.Drawing.Size(103, 17);
-            this.radiobutton_RButDef3.TabIndex = 1220;
-            this.radiobutton_RButDef3.TabStop = true;
-            this.radiobutton_RButDef3.Text = "الوحدة الافتراضية";
-            this.radiobutton_RButDef3.UseVisualStyleBackColor = false;
-            this.radiobutton_RButDef3.CheckedChanged += new System.EventHandler(this.radiobutton_RButDef3_CheckedChanged);
-            // 
-            // txtBarCode3
-            // 
-            // 
-            // 
-            // 
-            this.txtBarCode3.Border.Class = "TextBoxBorder";
-            this.txtBarCode3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtBarCode3.ButtonCustom.Visible = true;
-            this.txtBarCode3.Location = new System.Drawing.Point(142, 47);
-            this.txtBarCode3.Name = "txtBarCode3";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtBarCode3, false);
-            this.txtBarCode3.Size = new System.Drawing.Size(177, 20);
-            this.txtBarCode3.TabIndex = 1219;
-            // 
-            // labelItem15
-            // 
-            this.labelItem15.AutoSize = true;
-            this.labelItem15.BackColor = System.Drawing.Color.Transparent;
-            this.labelItem15.Location = new System.Drawing.Point(339, 51);
-            this.labelItem15.Name = "labelItem15";
-            this.labelItem15.Size = new System.Drawing.Size(66, 13);
-            this.labelItem15.TabIndex = 1218;
-            this.labelItem15.Text = "رقم الباركود :";
-            this.labelItem15.Click += new System.EventHandler(this.labelItem15_Click);
-            // 
-            // textbox_Cost3
-            // 
-            this.textbox_Cost3.Location = new System.Drawing.Point(142, 26);
-            this.textbox_Cost3.Name = "textbox_Cost3";
-            this.textbox_Cost3.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.textbox_Cost3, false);
-            this.textbox_Cost3.Size = new System.Drawing.Size(177, 20);
-            this.textbox_Cost3.TabIndex = 1217;
-            // 
-            // labelItem18
-            // 
-            this.labelItem18.AutoSize = true;
-            this.labelItem18.BackColor = System.Drawing.Color.Transparent;
-            this.labelItem18.Location = new System.Drawing.Point(338, 29);
-            this.labelItem18.Name = "labelItem18";
-            this.labelItem18.Size = new System.Drawing.Size(46, 13);
-            this.labelItem18.TabIndex = 1216;
-            this.labelItem18.Text = "التكلفة :";
-            // 
-            // textbox_Qty3
-            // 
-            this.textbox_Qty3.Location = new System.Drawing.Point(142, 5);
-            this.textbox_Qty3.Name = "textbox_Qty3";
-            this.textbox_Qty3.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.textbox_Qty3, false);
-            this.textbox_Qty3.Size = new System.Drawing.Size(177, 20);
-            this.textbox_Qty3.TabIndex = 1215;
-            // 
-            // labelItem17
-            // 
-            this.labelItem17.AutoSize = true;
-            this.labelItem17.BackColor = System.Drawing.Color.Transparent;
-            this.labelItem17.Location = new System.Drawing.Point(337, 8);
-            this.labelItem17.Name = "labelItem17";
-            this.labelItem17.Size = new System.Drawing.Size(43, 13);
-            this.labelItem17.TabIndex = 1214;
-            this.labelItem17.Text = "الكمية :";
-            // 
-            // textbox_SelPri3
-            // 
-            this.textbox_SelPri3.Location = new System.Drawing.Point(509, 47);
-            this.textbox_SelPri3.Name = "textbox_SelPri3";
-            this.netResize1.SetResizeTextBoxMultiline(this.textbox_SelPri3, false);
-            this.textbox_SelPri3.Size = new System.Drawing.Size(153, 20);
-            this.textbox_SelPri3.TabIndex = 1213;
-            // 
-            // labelItem32
-            // 
-            this.labelItem32.AutoSize = true;
-            this.labelItem32.BackColor = System.Drawing.Color.Transparent;
-            this.labelItem32.Location = new System.Drawing.Point(668, 50);
-            this.labelItem32.Name = "labelItem32";
-            this.labelItem32.Size = new System.Drawing.Size(56, 13);
-            this.labelItem32.TabIndex = 1212;
-            this.labelItem32.Text = "سعر البيع:";
-            // 
-            // textbox_Pack3
-            // 
-            this.textbox_Pack3.Location = new System.Drawing.Point(509, 26);
-            this.textbox_Pack3.Name = "textbox_Pack3";
-            this.netResize1.SetResizeTextBoxMultiline(this.textbox_Pack3, false);
-            this.textbox_Pack3.Size = new System.Drawing.Size(153, 20);
-            this.textbox_Pack3.TabIndex = 1211;
-            // 
-            // comboboxItems_Unit3
-            // 
-            this.comboboxItems_Unit3.FormattingEnabled = true;
-            this.comboboxItems_Unit3.Location = new System.Drawing.Point(509, 4);
-            this.comboboxItems_Unit3.Name = "comboboxItems_Unit3";
-            this.comboboxItems_Unit3.Size = new System.Drawing.Size(153, 21);
-            this.comboboxItems_Unit3.TabIndex = 1210;
-            this.comboboxItems_Unit3.SelectedIndexChanged += new System.EventHandler(this.comboboxItems_Unit3_SelectedIndexChanged);
-            // 
-            // labelItem16
-            // 
-            this.labelItem16.AutoSize = true;
-            this.labelItem16.BackColor = System.Drawing.Color.Transparent;
-            this.labelItem16.Location = new System.Drawing.Point(667, 29);
-            this.labelItem16.Name = "labelItem16";
-            this.labelItem16.Size = new System.Drawing.Size(47, 13);
-            this.labelItem16.TabIndex = 1208;
-            this.labelItem16.Text = " التعبئة :";
-            // 
-            // labelItem14
-            // 
-            this.labelItem14.AutoSize = true;
-            this.labelItem14.BackColor = System.Drawing.Color.Transparent;
-            this.labelItem14.Location = new System.Drawing.Point(667, 12);
-            this.labelItem14.Name = "labelItem14";
-            this.labelItem14.Size = new System.Drawing.Size(43, 13);
-            this.labelItem14.TabIndex = 1209;
-            this.labelItem14.Text = "الوحدة :";
-            // 
-            // sideBarPanelItem_Unit3
-            // 
-            this.sideBarPanelItem_Unit3.AttachedControl = this.superTabControlPanel5;
-            this.sideBarPanelItem_Unit3.GlobalItem = false;
-            this.sideBarPanelItem_Unit3.Name = "sideBarPanelItem_Unit3";
             superTabLinearGradientColorTable12.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.White};
             superTabItemStateColorTable5.Background = superTabLinearGradientColorTable12;
             superTabColorStates5.Normal = superTabItemStateColorTable5;
             superTabItemColorTable5.Default = superTabColorStates5;
-            this.sideBarPanelItem_Unit3.TabColor = superTabItemColorTable5;
-            this.sideBarPanelItem_Unit3.Text = "الوحدة الثالثة";
+            this.sideBarPanelItem_Unit5.TabColor = superTabItemColorTable5;
+            this.sideBarPanelItem_Unit5.Text = "الوحدة الخامسة";
             // 
             // label5
             // 
@@ -1909,6 +1910,7 @@ private void InitializeComponent()
             this.c1FlexGrid_Items.StyleInfo = resources.GetString("c1FlexGrid_Items.StyleInfo");
             this.c1FlexGrid_Items.TabIndex = 1594;
             this.c1FlexGrid_Items.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2007Blue;
+            this.c1FlexGrid_Items.AfterEdit += new C1.Win.C1FlexGrid.RowColEventHandler(this.c1FlexGrid_Items_AfterEdit);
             this.c1FlexGrid_Items.Click += new System.EventHandler(this.c1FlexGrid_Items_Click);
             // 
             // labelX1
@@ -2002,7 +2004,6 @@ private void InitializeComponent()
             this.combobox_ItmeGroup.DisplayMember = "Text";
             this.combobox_ItmeGroup.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.combobox_ItmeGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combobox_ItmeGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.combobox_ItmeGroup.FormattingEnabled = true;
             this.combobox_ItmeGroup.ItemHeight = 15;
             this.combobox_ItmeGroup.Location = new System.Drawing.Point(138, 6);
@@ -2010,25 +2011,6 @@ private void InitializeComponent()
             this.combobox_ItmeGroup.Size = new System.Drawing.Size(361, 21);
             this.combobox_ItmeGroup.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.combobox_ItmeGroup.TabIndex = 2;
-            // 
-            // textbox_MaxQty
-            // 
-            this.textbox_MaxQty.AllowEmptyState = false;
-            // 
-            // 
-            // 
-            this.textbox_MaxQty.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.textbox_MaxQty.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textbox_MaxQty.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.textbox_MaxQty.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.textbox_MaxQty.Increment = 1D;
-            this.textbox_MaxQty.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.textbox_MaxQty.Location = new System.Drawing.Point(31, 222);
-            this.textbox_MaxQty.MinValue = 0D;
-            this.textbox_MaxQty.Name = "textbox_MaxQty";
-            this.textbox_MaxQty.ShowUpDown = true;
-            this.textbox_MaxQty.TabIndex = 7;
-            this.textbox_MaxQty.Visible = false;
             // 
             // label23
             // 
@@ -2255,7 +2237,6 @@ private void InitializeComponent()
             this.comboBox_DefPack.DisplayMember = "Text";
             this.comboBox_DefPack.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox_DefPack.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_DefPack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_DefPack.FormattingEnabled = true;
             this.comboBox_DefPack.ItemHeight = 15;
             this.comboBox_DefPack.Location = new System.Drawing.Point(313, 189);
@@ -2264,6 +2245,26 @@ private void InitializeComponent()
             this.comboBox_DefPack.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboBox_DefPack.TabIndex = 1615;
             this.comboBox_DefPack.Visible = false;
+            // 
+            // textbox_MaxQty
+            // 
+            this.textbox_MaxQty.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.textbox_MaxQty.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.textbox_MaxQty.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textbox_MaxQty.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.textbox_MaxQty.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.textbox_MaxQty.Increment = 1D;
+            this.textbox_MaxQty.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.textbox_MaxQty.Location = new System.Drawing.Point(31, 222);
+            this.textbox_MaxQty.MinValue = 0D;
+            this.textbox_MaxQty.Name = "textbox_MaxQty";
+            this.textbox_MaxQty.ShowUpDown = true;
+            this.textbox_MaxQty.Size = new System.Drawing.Size(80, 20);
+            this.textbox_MaxQty.TabIndex = 7;
+            this.textbox_MaxQty.Visible = false;
             // 
             // superTabItem_General
             // 
@@ -2352,22 +2353,6 @@ private void InitializeComponent()
             this.textbox_DateNo.Size = new System.Drawing.Size(78, 21);
             this.textbox_DateNo.TabIndex = 905;
             this.textbox_DateNo.Value = 1;
-            // 
-            // combobox_DateTyp
-            // 
-            this.combobox_DateTyp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combobox_DateTyp.DisplayMember = "Text";
-            this.combobox_DateTyp.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combobox_DateTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combobox_DateTyp.Enabled = false;
-            this.combobox_DateTyp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.combobox_DateTyp.FormattingEnabled = true;
-            this.combobox_DateTyp.ItemHeight = 15;
-            this.combobox_DateTyp.Location = new System.Drawing.Point(616, 473);
-            this.combobox_DateTyp.Name = "combobox_DateTyp";
-            this.combobox_DateTyp.Size = new System.Drawing.Size(141, 21);
-            this.combobox_DateTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.combobox_DateTyp.TabIndex = 920;
             // 
             // checkBoxX_Points
             // 
@@ -3021,6 +3006,7 @@ private void InitializeComponent()
             this.textBox_search.Name = "textBox_search";
             this.textBox_search.TextBoxHeight = 44;
             this.textBox_search.TextBoxWidth = 150;
+            this.textBox_search.WatermarkColor = System.Drawing.SystemColors.GrayText;
             // 
             // Button_ExportTable2
             // 
@@ -4156,6 +4142,7 @@ private void InitializeComponent()
             this.TextBox_Index.Name = "TextBox_Index";
             this.TextBox_Index.TextBoxWidth = 50;
             this.TextBox_Index.Visible = false;
+            this.TextBox_Index.WatermarkColor = System.Drawing.SystemColors.GrayText;
             // 
             // Label_Count
             // 
@@ -4368,6 +4355,21 @@ private void InitializeComponent()
             this.netResize1.ParentControl = this;
             this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 
+            // combobox_DateTyp
+            // 
+            this.combobox_DateTyp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combobox_DateTyp.DisplayMember = "Text";
+            this.combobox_DateTyp.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combobox_DateTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_DateTyp.Enabled = false;
+            this.combobox_DateTyp.FormattingEnabled = true;
+            this.combobox_DateTyp.ItemHeight = 15;
+            this.combobox_DateTyp.Location = new System.Drawing.Point(735, 5);
+            this.combobox_DateTyp.Name = "combobox_DateTyp";
+            this.combobox_DateTyp.Size = new System.Drawing.Size(140, 21);
+            this.combobox_DateTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.combobox_DateTyp.TabIndex = 1621;
+            // 
             // FrmItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4410,21 +4412,21 @@ private void InitializeComponent()
             this.superTabControl_Info.PerformLayout();
             this.superTabControlPanel3.ResumeLayout(false);
             this.superTabControlPanel3.PerformLayout();
+            this.superTabControlPanel5.ResumeLayout(false);
+            this.superTabControlPanel5.PerformLayout();
+            this.superTabControlPanel6.ResumeLayout(false);
+            this.superTabControlPanel6.PerformLayout();
             this.superTabControlPanel4.ResumeLayout(false);
             this.superTabControlPanel4.PerformLayout();
             this.superTabControlPanel7.ResumeLayout(false);
             this.superTabControlPanel7.PerformLayout();
-            this.superTabControlPanel6.ResumeLayout(false);
-            this.superTabControlPanel6.PerformLayout();
-            this.superTabControlPanel5.ResumeLayout(false);
-            this.superTabControlPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_DisItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_TaxPurchase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_TaxSales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_CommItm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1FlexGrid_Items)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textbox_MaxQty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textbox_Supreme)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textbox_MaxQty)).EndInit();
             this.superTabControlPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FlxInv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textbox_DateNo)).EndInit();
@@ -4499,5 +4501,6 @@ private void InitializeComponent()
         public DevComponents.DotNetBar.ButtonItem buttonItem_Serials;
         private DevComponents.DotNetBar.ButtonItem buttonItem_x;
         private DevComponents.DotNetBar.ButtonItem buttonItem8;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx combobox_DateTyp;
     }
 }

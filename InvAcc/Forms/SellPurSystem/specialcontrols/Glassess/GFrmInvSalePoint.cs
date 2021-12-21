@@ -17,7 +17,7 @@ namespace InvAcc.Forms
         {
             this.FlxInv.RowValidated += new C1.Win.C1FlexGrid.RowColEventHandler(this.GFlxInv_RowValidated);
             this.FlxInv.AfterRowColChange += new C1.Win.C1FlexGrid.RangeEventHandler(this.GFlxInv_AfterRowColChange);
-            xGmesures1.Visible = true;
+         //   xGmesures1.Visible = true;
             this.FlxInv.CellChanged += cellcontent_change;
             int i = FlxInv.Cols.Count - 1;
             FlxInv.Cols.Add(10);
@@ -63,7 +63,7 @@ namespace InvAcc.Forms
 
             FlxInv.Cols[i].Caption = "LIPD";
             FlxInv.Cols[i++].Visible = false;
-            xGmesures1.Leave += Leav_XGmeSures1;
+            //xGmesures1.Leave += Leav_XGmeSures1;
 
         }
 
@@ -82,6 +82,7 @@ namespace InvAcc.Forms
 
         public void addDetParameters(IDatabase dbLines, int iiCnt)
         {
+            return;
 
             dbLines.AddParameter("RSph", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, "RSPH")))));
             dbLines.AddParameter("RCyl", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, "RCYL")))));
@@ -97,7 +98,7 @@ namespace InvAcc.Forms
             dbLines.AddParameter("LLOption", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, "LIPD")))));
 
         }
-        string Version = "GSR";
+        string Version = "";
         private void GFlxInv_AfterRowColChange(object sender, RangeEventArgs e)
         {
             if (e.OldRange.r1 != e.NewRange.r1)
@@ -199,16 +200,16 @@ namespace InvAcc.Forms
 
                     try
                     {
-                        xGmesures1.setvalues(t);
+                        //xGmesures1.setvalues(t);
                     }
                     catch { }
                 }
-                else
-                    xGmesures1.clear();
+                //else
+                //    xGmesures1.clear();
 
             }
-            else
-                xGmesures1.clear();
+            //else
+            //    xGmesures1.clear();
 
         }
         private void GFlxInv_RowValidated(object sender, RowColEventArgs e)
@@ -217,7 +218,7 @@ namespace InvAcc.Forms
             {
                 T_INVDET t = new
                        T_INVDET();
-                xGmesures1.getValues(t);
+                //xGmesures1.getValues(t);
                 try
                 {
 

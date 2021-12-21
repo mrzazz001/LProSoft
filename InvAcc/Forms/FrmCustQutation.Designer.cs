@@ -1213,6 +1213,7 @@ private void InitializeComponent()
             this.textBoxItem_TaxByNetValue.Name = "textBoxItem_TaxByNetValue";
             this.textBoxItem_TaxByNetValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxItem_TaxByNetValue.Visible = false;
+            this.textBoxItem_TaxByNetValue.WatermarkColor = System.Drawing.SystemColors.GrayText;
             this.textBoxItem_TaxByNetValue.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelItem_TaxByNetPer
@@ -1711,7 +1712,6 @@ private void InitializeComponent()
             this.CmbInvPrice.DisplayMember = "Text";
             this.CmbInvPrice.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbInvPrice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbInvPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmbInvPrice.FormattingEnabled = true;
             this.CmbInvPrice.ItemHeight = 15;
             this.CmbInvPrice.Location = new System.Drawing.Point(247, 109);
@@ -1726,7 +1726,6 @@ private void InitializeComponent()
             this.CmbCostC.DisplayMember = "Text";
             this.CmbCostC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbCostC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbCostC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmbCostC.FormattingEnabled = true;
             this.CmbCostC.ItemHeight = 15;
             this.CmbCostC.Location = new System.Drawing.Point(514, 108);
@@ -1741,7 +1740,6 @@ private void InitializeComponent()
             this.CmbCurr.DisplayMember = "Text";
             this.CmbCurr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbCurr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbCurr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmbCurr.FormattingEnabled = true;
             this.CmbCurr.ItemHeight = 15;
             this.CmbCurr.Location = new System.Drawing.Point(830, 85);
@@ -1756,7 +1754,6 @@ private void InitializeComponent()
             this.CmbLegate.DisplayMember = "Text";
             this.CmbLegate.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbLegate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbLegate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmbLegate.FormattingEnabled = true;
             this.CmbLegate.ItemHeight = 15;
             this.CmbLegate.Location = new System.Drawing.Point(770, 109);
@@ -2789,6 +2786,7 @@ private void InitializeComponent()
             this.TextBox_Index.Name = "TextBox_Index";
             this.TextBox_Index.TextBoxWidth = 50;
             this.TextBox_Index.Visible = false;
+            this.TextBox_Index.WatermarkColor = System.Drawing.SystemColors.GrayText;
             // 
             // Label_Count
             // 
@@ -3082,6 +3080,7 @@ private void InitializeComponent()
             this.textBox_search.Name = "textBox_search";
             this.textBox_search.TextBoxHeight = 44;
             this.textBox_search.TextBoxWidth = 150;
+            this.textBox_search.WatermarkColor = System.Drawing.SystemColors.GrayText;
             // 
             // Button_ExportTable2
             // 
@@ -3218,7 +3217,6 @@ private void InitializeComponent()
             this.panelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
             this.panelDockContainer1.Style.GradientAngle = 90;
             this.panelDockContainer1.TabIndex = 1;
-            this.panelDockContainer1.Visible = true;
             // 
             // Panel_Navigate
             // 

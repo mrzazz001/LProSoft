@@ -3,16 +3,19 @@ using ProShared.GeneralM;using ProShared;
 using ProShared.Stock_Data;
 using System;
 using System.Windows.Forms;
+using InvAcc.Forms.Shared;
+
 namespace InvAcc.Forms
 {
-    public partial  class FrmPOSREP : Form
-    { void avs(int arln)
+    public partial class FrmPOSREP : DevExpress.XtraEditors.XtraForm
+    {
+        void avs(int arln)
 
 { 
- buttonItem_MoveTables.Text=   (arln == 0 ? "  تحويل الطلبات بين الطاولات  " : "  Transfer orders between tables") ; buttonItem_TableInfo.Text=   (arln == 0 ? "  حول الطاولات  " : "  around the tables") ; buttonX2.Text=   (arln == 0 ? "  خروج  " : "  Exit") ; buttonItem_AlarmLocalOrder.Text=   (arln == 0 ? "  الطلبات المحلية  " : "  local orders") ; label5.Text=   (arln == 0 ? "  إقفال الصندوق  " : "  close the box") ; Lmovment.Text=   (arln == 0 ? "  حركة صنف  " : "  class movement") ; LSRPL.Text=   (arln == 0 ? "  تقرير فواتير البائع  " : "  Vendor billing report") ; LRenum.Text=   (arln == 0 ? "  اعادة تسلسل فواتير الصندوق  " : "  Re-sequencing the fund's bills") ; label9.Text=   (arln == 0 ? "  حول الطاولات  " : "  around the tables") ; cButton1.Text=   (arln == 0 ? "    " : "    ") ; buttonItem_RepItemMovement.Text=   (arln == 0 ? "    " : "    ") ; buttonItem_RepInvoices.Text=   (arln == 0 ? "    " : "    ") ; bubbleButton_RelayInvPoint.Text=   (arln == 0 ? "    " : "    ") ; buttonItem_RelayBox.Text=   (arln == 0 ? "    " : "    ") ; label1.Text=   (arln == 0 ? "  نقاط البيع  " : "  POS") ; LCLOSE.Text=   (arln == 0 ? "  اقفال الصندوق  " : "  close the fund") ; Text = "FrmPOSREP";this.Text=   (arln == 0 ? "  FrmPOSREP  " : "  FrmPOSREP") ;}
+ buttonItem_MoveTables.Text=   (arln == 0 ? "  تحويل الطلبات بين الطاولات  " : "  Transfer orders between tables") ; buttonItem_TableInfo.Text=   (arln == 0 ? "  حول الطاولات  " : "  around the tables") ; buttonX2.Text=   (arln == 0 ? "  خروج  " : "  Exit") ; buttonItem_AlarmLocalOrder.Text=   (arln == 0 ? "  الطلبات المحلية  " : "  local orders") ; label5.Text=   (arln == 0 ? "  إقفال الصندوق  " : "  close the box") ; Lmovment.Text=   (arln == 0 ? "  حركة صنف  " : "  class movement") ; LSRPL.Text=   (arln == 0 ? "  تقرير فواتير البائع  " : "  Vendor billing report") ; LRenum.Text=   (arln == 0 ? "  اعادة تسلسل فواتير الصندوق  " : "  Re-sequencing the fund's bills") ; label9.Text=   (arln == 0 ? "  حول الطاولات  " : "  around the tables") ; cButton1.Text=   (arln == 0 ? "    " : "    ") ; buttonItem_RepItemMovement.Text=   (arln == 0 ? "    " : "    ") ; buttonItem_RepInvoices.Text=   (arln == 0 ? "    " : "    ") ; bubbleButton_RelayInvPoint.Text=   (arln == 0 ? "    " : "    ") ; buttonItem_RelayBox.Text=   (arln == 0 ? "    " : "    ") ;  LCLOSE.Text=   (arln == 0 ? "  اقفال الصندوق  " : "  close the fund") ; Text = "FrmPOSREP";this.Text=   (arln == 0 ? "  FrmPOSREP  " : "  FrmPOSREP") ;}
         private void langloads(object sender, EventArgs e)
         {
-              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
+           //  avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public FrmPOSREP()
@@ -22,6 +25,7 @@ namespace InvAcc.Forms
             {
                 this.Enabled = false;
             }
+            cButton1.Text = "اضافة صنف";
         }
         int retrun = 0;
         public void setreturn()
@@ -58,12 +62,12 @@ namespace InvAcc.Forms
         private void FrmPOSREP_Load(object sender, EventArgs e)
         {
             int ln = VarGeneral.UserLang;
-            label1.Text = (ln == 0 ? "الدخول الى نقطة البيع " : "Enter POS");
+          
             VarGeneral.InvTyp = 1;
             VarGeneral._IsPOS = true;
             FrmPos = new FrmInvSalePoint();
             FrmPos.Tag = LangArEn;
-            FrmPos.TopMost = true;
+          //  FrmPos.TopMost = true;
             FrmPos.frmRepOps = this;
             if (retrun == 1) FrmPos.switchButtonItem_IsReturn.IsReadOnly = true;
             if (VarGeneral.SSSLev == "R" || VarGeneral.SSSLev == "C" || VarGeneral.SSSLev == "H")
@@ -287,23 +291,7 @@ namespace InvAcc.Forms
         }
         private void cButton1_ClickButtonArea(object Sender, MouseEventArgs e)
         {
-            Hide();
-            VarGeneral._IsPOS = true;
-          
-            ///Program.min();
-            FrmPos.Tag = LangArEn;
-            FrmPos.switchButtonItem_IsReturn.IsReadOnly = (retrun == 0 ? false : true);
-            FrmPos.DateSync = true;
-            FrmPos.TopMost = true;
-            FrmPos.ShowDialog();
-            Show();
-            FrmPos.Dispose();
-             FrmPos = new FrmInvSalePoint();
-            FrmPos.Tag = LangArEn;
-            FrmPos.TopMost = true;
-            FrmPos.frmRepOps = this;
-            if (retrun == 1) FrmPos.switchButtonItem_IsReturn.IsReadOnly = true;
-            FrmPos.loadsss();
+
         }
         private void tableLayoutPanel3_Paint_1(object sender, PaintEventArgs e)
         {
@@ -336,6 +324,77 @@ namespace InvAcc.Forms
             FRInvTotals frm = new FRInvTotals();
             frm.TopMost = true;
             frm.ShowDialog();
+
+        }
+
+        private void cButton1_Click(object sender, EventArgs e)
+        {
+            this.TopMost = false;
+            XFrmItems frm = new XFrmItems();
+            frm.BringToFront();
+
+            frm.ShowDialog();
+        }
+
+        private void cButton1_Click(object Sender, MouseEventArgs e)
+        {
+       //     cButton1_Click(null, null);
+        }
+
+        private void cButton3_ClickButtonArea(object Sender, MouseEventArgs e)
+        {
+            //Hide();
+            //VarGeneral._IsPOS = true;
+
+           
+            //FrmPos.Tag = LangArEn;
+            //FrmPos.switchButtonItem_IsReturn.IsReadOnly = (retrun == 0 ? false : true);
+            //FrmPos.DateSync = true;
+            //FrmPos.TopMost = true;
+            //FrmPos.ShowDialog();
+        
+            //Show();
+            //FrmPos.Dispose();
+            //FrmPos = new FrmInvSalePoint();
+            //FrmPos.Tag = LangArEn;
+            //FrmPos.TopMost = true;
+            //FrmPos.frmRepOps = this;
+            //if (retrun == 1) FrmPos.switchButtonItem_IsReturn.IsReadOnly = true;
+            //FrmPos.loadsss();
+
+        }
+
+        private void cButton3_Click(object sender, EventArgs e)
+        {
+            Hide();
+            VarGeneral._IsPOS = true;
+ 
+                ///Program.min();
+            FrmPos.Tag = LangArEn;
+            FrmPos.switchButtonItem_IsReturn.IsReadOnly = (retrun == 0 ? false : true);
+            FrmPos.DateSync = true;
+            FrmPos.TopMost = true;
+            FrmPos.ShowDialog();
+            Show();
+            FrmPos.Dispose();
+            FrmPos = new FrmInvSalePoint();
+            FrmPos.Tag = LangArEn;
+            FrmPos.TopMost = true;
+            FrmPos.frmRepOps = this;
+            if (retrun == 1) FrmPos.switchButtonItem_IsReturn.IsReadOnly = true;
+            FrmPos.loadsss();
+             
+
+        }
+
+        private void cButton4_Click(object sender, EventArgs e)
+        {
+            FrmPrinters frm = new
+               FrmPrinters();
+            TopMost = false;
+
+            frm.ShowDialog();
+            TopMost = true;
 
         }
     }

@@ -1,5 +1,5 @@
 using InvAcc.Forms;
-using InvAcc.Forms.Eqr_Version.New;
+ 
 using InvAcc.Forms.Shared;
 using ProShared.GeneralM;using ProShared;
 using Microsoft.VisualBasic;
@@ -12,6 +12,10 @@ using System.IO;
 using System.Runtime;
 using System.Threading;
 using System.Windows.Forms;
+using InvAcc.Forms.Eqr_Version.New;
+using ProShared.DBUdate;
+using InvAcc.Forms.Cards;
+using ProShared.Stock_Data;
 
 namespace InvAcc
 {
@@ -22,10 +26,44 @@ namespace InvAcc
 #pragma warning restore CS0414 // The field 'Program.workerThread' is assigned but its value is never used
         public static int runtimeex1 = 0;
         public static int runtimeex2 = 0;
+        static int ks = 0;
         public static bool isdevelopermachine()
         {
-            if (Environment.MachineName.ToLower() == "instance-3"||Environment.MachineName== "DESKTOP-320H5U2") 
+
+            if (Environment.MachineName.ToLower() == "instance-3" || Environment.MachineName == "DESKTOP-320H5U2")
+            {
+                VarGeneral.SSSLev = "Q";
+                if (ks == 0)
+                {
+                    try
+                    {
+                        ks = 1;
+
+                        new FrmMain(null, null, "1", 0);
+                        Rate_DataDataContext db = new Rate_DataDataContext();
+                        T_User permission = db.Get_PermissionID(int.Parse("1"));
+                        new Stock_DataDataContext().getdate = "";
+                        VarGeneral.UserID = permission.Usr_ID;
+                        VarGeneral.UserNo = permission.UsrNo;
+                        VarGeneral.InvTyp = 2;
+                        VarGeneral.UserFilStr = permission.FilStr;
+                        VarGeneral.UserSndStr = permission.SndStr;
+                        VarGeneral.UserInvStr = permission.InvStr;
+                        VarGeneral.UserStkRep = permission.StkRep;
+                        VarGeneral.UserAccRep = permission.AccRep;
+                        VarGeneral.UserSetStr = permission.SetStr;
+                        VarGeneral.UserPassQty = permission.PassQty;
+                        VarGeneral.UserNameA = permission.UsrNamA;
+                        VarGeneral.UserNameE = permission.UsrNamE;
+                        VarGeneral.UserNumber = permission.UsrNo;
+                        VarGeneral.UserLang = permission.ProLng.Value;
+                        VarGeneral.Settings_Sys = new Stock_DataDataContext().SystemSettingStock();
+
+                    }
+                    catch { }
+                }
                 return true;
+            }
             else return false;
         }
         private static void applicatdin_thread_expcion(object sender, UnhandledExceptionEventArgs e)
@@ -51,16 +89,23 @@ namespace InvAcc
         [STAThread]
         static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+            Application.ThreadException += applicatin_thread_expcion;
+            Application.ThreadException += new ThreadExceptionEventHandler(applicatin_thread_expcion);
+            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(applicatdin_thread_expcion);
+            Application.ApplicationExit += closing;
+            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+            VarGeneral.ProdectNo = getversion();
             try { isdevelopermachine(); } catch { }
             try
             {
+            
                 if ((ApplicationDeployment.IsNetworkDeployed && ApplicationDeployment.CurrentDeployment.IsFirstRun) || File.Exists(Application.StartupPath + "\\install.txt"))
 
                 {
-                    RegistryKey hKey = Registry.CurrentUser.OpenSubKey("Software\\PRS AND PR Settings\\WinSystemOperation", true); //setactivation();
-                    hKey.SetValue("Lev", "G");
-                    hKey.SetValue("Typ", "2");
-
                     string appPath = Application.StartupPath;
                     string winPath = Environment.GetEnvironmentVariable("WINDIR");
 
@@ -94,40 +139,46 @@ namespace InvAcc
 
             if (iscarversion())
             {
-                setnewviersion("CarVersion.CR.400.5" +
+                setnewviersion("CarVersion.CR.400.22" +
                     "");  
-                setdbver("CarVersion.CR.400.5");
+                setdbver("CarVersion.CR.400.22");
             }
             else
             {
-                setnewviersion(".CR.400.5");
-                setdbver(".CR.400.5");
+                setnewviersion(".CR.400.22");
+                setdbver(".CR.400.22");
 
             }
             FrmReportsViewer.TypeOfReporting = isfastversion();
 
-            ProShared.DBUdate.DbUpdates fd = new ProShared.DBUdate.DbUpdates();
-         
+            DbUpdates f = new DbUpdates();
+
             //InvAcc.Properties.Settings.Default.B4 = k
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
-            Application.ThreadException += applicatin_thread_expcion;
-            Application.ThreadException += new ThreadExceptionEventHandler(applicatin_thread_expcion);
-            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
-            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(applicatdin_thread_expcion);
-            Application.ApplicationExit += closing;
-            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
-            // new Check_Data.Forms.FrmMain(null, null, "1", 0);
+           
+            // 
             setserve();
             //  Application.Run(new Forms.formstest("13"));
             //Application.Run(new FrmCarChecking("4"));
-      
+            try
+            {
+                File.Delete(Application.StartupPath +"\\flxgridD.txt");
+            }
+            catch
+            {}
             Application.Run(new FrmLog());
             closing(null, null);
         }
-      static  void setserve()
+        public static string getversion()
+        {
+            Version version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            DateTime buildDate = new DateTime(2000, 1, 1)
+                                    .AddDays(version.Build).AddSeconds(version.Revision * 2);
+            string displayableVersion = $"{version}";
+            return "GR." + displayableVersion;
+
+        }
+        static  void setserve()
         {
             {
 if(!(Environment.MachineName== "EC2AMAZ-SI4ASSC"))
@@ -209,7 +260,17 @@ if(!(Environment.MachineName== "EC2AMAZ-SI4ASSC"))
         public static void min()
         {
             foreach (Form i in Application.OpenForms)
-            {if (isdevelopermachine())
+            {
+                if (isdevelopermachine())
+                    i.TopMost = false;
+            }
+
+        }
+        public static void min3()
+        {
+            foreach (Form i in Application.OpenForms)
+            {
+               
                     i.TopMost = false;
             }
         }

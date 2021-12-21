@@ -1335,7 +1335,7 @@ namespace InvAcc.Forms
         }
         private void GetInvSetting()
         {
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, 22);
+            _InvSetting = db.StockInvSetting( 22);
             _Company = db.StockCompanyList().FirstOrDefault();
         }
         private void textBox_ID_TextChanged(object sender, EventArgs e)
@@ -2563,7 +2563,7 @@ namespace InvAcc.Forms
             PrintDialog PrintDialog1 = new PrintDialog();
             printDialog1.Document = prnt_doc;
             T_INVSETTING _InvSetting = new T_INVSETTING();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, 22);
+            _InvSetting = db.StockInvSetting( 22);
             try
             {
                 if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)

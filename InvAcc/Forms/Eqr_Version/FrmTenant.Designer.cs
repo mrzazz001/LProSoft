@@ -433,6 +433,7 @@ private void InitializeComponent()
             this.FlxContracts.StyleInfo = resources.GetString("FlxContracts.StyleInfo");
             this.FlxContracts.TabIndex = 20;
             this.FlxContracts.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.System;
+            this.FlxContracts.Click += new System.EventHandler(this.FlxContracts_Click);
             this.FlxContracts.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FlxContracts_MouseDown);
             this.FlxContracts.MouseLeave += new System.EventHandler(this.FlxContracts_MouseLeave);
             this.FlxContracts.MouseHover += new System.EventHandler(this.FlxContracts_MouseHover);

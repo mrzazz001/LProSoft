@@ -539,5 +539,10 @@ namespace InvAcc.Forms
             this.WindowState = FormWindowState.Minimized;
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void ribbonBar1_ItemClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

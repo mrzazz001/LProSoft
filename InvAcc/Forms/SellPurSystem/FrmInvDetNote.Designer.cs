@@ -26,14 +26,14 @@ private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvDetNote));
-            DevComponents.DotNetBar.SuperGrid.Style.Background background5 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
-            DevComponents.DotNetBar.SuperGrid.Style.Background background6 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
-            DevComponents.DotNetBar.SuperGrid.Style.Background background7 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
-            DevComponents.DotNetBar.SuperGrid.Style.BorderColor borderColor3 = new DevComponents.DotNetBar.SuperGrid.Style.BorderColor();
-            DevComponents.DotNetBar.SuperGrid.Style.BorderColor borderColor4 = new DevComponents.DotNetBar.SuperGrid.Style.BorderColor();
-            DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle3 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
-            DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle4 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
-            DevComponents.DotNetBar.SuperGrid.Style.Background background8 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background1 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background2 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background3 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            DevComponents.DotNetBar.SuperGrid.Style.BorderColor borderColor1 = new DevComponents.DotNetBar.SuperGrid.Style.BorderColor();
+            DevComponents.DotNetBar.SuperGrid.Style.BorderColor borderColor2 = new DevComponents.DotNetBar.SuperGrid.Style.BorderColor();
+            DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle1 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
+            DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle2 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background4 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.expandableSplitter1 = new DevComponents.DotNetBar.ExpandableSplitter();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
@@ -87,9 +87,8 @@ private void InitializeComponent()
             this.ToolStripMenuItem_Rep = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Det = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);  this.netResize1.LabelsAutoEllipse = false;
+            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             this.ribbonBar1.SuspendLayout();
             this.ribbonBar_Tasks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main1)).BeginInit();
@@ -138,12 +137,13 @@ private void InitializeComponent()
             this.expandableSplitter1.HotGripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.expandableSplitter1.Location = new System.Drawing.Point(0, 0);
             this.expandableSplitter1.Name = "expandableSplitter1";
-            this.expandableSplitter1.Size = new System.Drawing.Size(649, 14);
+            this.expandableSplitter1.Size = new System.Drawing.Size(611, 14);
             this.expandableSplitter1.TabIndex = 1;
             this.expandableSplitter1.TabStop = false;
             // 
             // panelEx2
             // 
+            this.panelEx2.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelEx2.Location = new System.Drawing.Point(0, 14);
             this.panelEx2.MinimumSize = new System.Drawing.Size(659, 228);
@@ -180,12 +180,13 @@ private void InitializeComponent()
             this.ribbonBar1.Controls.Add(this.textBox_ID);
             this.ribbonBar1.Controls.Add(this.label38);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonBar1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(649, 191);
+            this.ribbonBar1.Size = new System.Drawing.Size(611, 191);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 867;
+            this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -291,12 +292,13 @@ private void InitializeComponent()
             this.ribbonBar_Tasks.Controls.Add(this.superTabControl_Main1);
             this.ribbonBar_Tasks.Controls.Add(this.superTabControl_Main2);
             this.ribbonBar_Tasks.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ribbonBar_Tasks.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar_Tasks.DragDropSupport = true;
             this.ribbonBar_Tasks.Location = new System.Drawing.Point(0, 191);
             this.ribbonBar_Tasks.Name = "ribbonBar_Tasks";
-            this.ribbonBar_Tasks.Size = new System.Drawing.Size(649, 51);
+            this.ribbonBar_Tasks.Size = new System.Drawing.Size(611, 51);
             this.ribbonBar_Tasks.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_Tasks.TabIndex = 868;
+            this.ribbonBar_Tasks.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -338,7 +340,7 @@ private void InitializeComponent()
             this.superTabControl_Main1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.superTabControl_Main1.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.superTabControl_Main1.SelectedTabIndex = -1;
-            this.superTabControl_Main1.Size = new System.Drawing.Size(239, 51);
+            this.superTabControl_Main1.Size = new System.Drawing.Size(201, 51);
             this.superTabControl_Main1.TabFont = new System.Drawing.Font("Tahoma", 8F);
             this.superTabControl_Main1.TabIndex = 10;
             this.superTabControl_Main1.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -481,7 +483,7 @@ private void InitializeComponent()
             this.superTabControl_Main2.ItemPadding.Left = 4;
             this.superTabControl_Main2.ItemPadding.Right = 4;
             this.superTabControl_Main2.ItemPadding.Top = 4;
-            this.superTabControl_Main2.Location = new System.Drawing.Point(239, 0);
+            this.superTabControl_Main2.Location = new System.Drawing.Point(201, 0);
             this.superTabControl_Main2.Name = "superTabControl_Main2";
             this.superTabControl_Main2.ReorderTabsEnabled = true;
             this.superTabControl_Main2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -620,24 +622,29 @@ private void InitializeComponent()
             // DGV_Main
             // 
             this.DGV_Main.BackColor = System.Drawing.Color.Transparent;
-            background5.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.VerticalCenter;
-            background5.Color1 = System.Drawing.Color.Silver;
-            background5.Color2 = System.Drawing.Color.White;
-            this.DGV_Main.DefaultVisualStyles.GroupByStyles.Default.Background = background5;
-            background6.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.Center;
-            background6.Color1 = System.Drawing.Color.LightSteelBlue;
-            this.DGV_Main.DefaultVisualStyles.RowStyles.Default.Background = background6;
-            background7.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.DGV_Main.DefaultVisualStyles.RowStyles.MouseOver.Background = background7;
+            background1.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.VerticalCenter;
+            background1.Color1 = System.Drawing.Color.Silver;
+            background1.Color2 = System.Drawing.Color.White;
+            this.DGV_Main.DefaultVisualStyles.GroupByStyles.Default.Background = background1;
+            background2.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.Center;
+            background2.Color1 = System.Drawing.Color.LightSteelBlue;
+            this.DGV_Main.DefaultVisualStyles.RowStyles.Default.Background = background2;
+            background3.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.DGV_Main.DefaultVisualStyles.RowStyles.MouseOver.Background = background3;
             this.DGV_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGV_Main.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.DGV_Main.Font = new System.Drawing.Font("Tahoma", 9F);
             this.DGV_Main.ForeColor = System.Drawing.Color.Black;
-            this.DGV_Main.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.DGV_Main.Location = new System.Drawing.Point(0, 0);
             this.DGV_Main.Name = "DGV_Main";
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.ActiveRowIndicatorStyle = DevComponents.DotNetBar.SuperGrid.ActiveRowIndicatorStyle.Both;
             this.DGV_Main.PrimaryGrid.AllowEdit = false;
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.Caption.BackgroundImageLayout = DevComponents.DotNetBar.SuperGrid.GridBackgroundImageLayout.Center;
             this.DGV_Main.PrimaryGrid.Caption.Text = "";
             this.DGV_Main.PrimaryGrid.Caption.Visible = false;
@@ -650,30 +657,33 @@ private void InitializeComponent()
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CaptionStyles.ReadOnly.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CellStyles.Selected.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderRowStyles.Default.RowHeader.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.True;
-            borderColor3.Bottom = System.Drawing.Color.Black;
-            borderColor3.Left = System.Drawing.Color.Black;
-            borderColor3.Right = System.Drawing.Color.Black;
-            borderColor3.Top = System.Drawing.Color.Black;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.BorderColor = borderColor3;
+            borderColor1.Bottom = System.Drawing.Color.Black;
+            borderColor1.Left = System.Drawing.Color.Black;
+            borderColor1.Right = System.Drawing.Color.Black;
+            borderColor1.Top = System.Drawing.Color.Black;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.BorderColor = borderColor1;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.TextColor = System.Drawing.Color.SteelBlue;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.FilterColumnHeaderStyles.Default.TextColor = System.Drawing.Color.White;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.FooterStyles.Default.TextColor = System.Drawing.Color.White;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.False;
-            borderColor4.Bottom = System.Drawing.Color.Black;
-            borderColor4.Left = System.Drawing.Color.Black;
-            borderColor4.Right = System.Drawing.Color.Black;
-            borderColor4.Top = System.Drawing.Color.Black;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.BorderColor = borderColor4;
-            baseTreeButtonVisualStyle3.BorderColor = System.Drawing.Color.White;
-            baseTreeButtonVisualStyle3.LineColor = System.Drawing.Color.White;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.CircleTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle3;
+            borderColor2.Bottom = System.Drawing.Color.Black;
+            borderColor2.Left = System.Drawing.Color.Black;
+            borderColor2.Right = System.Drawing.Color.Black;
+            borderColor2.Top = System.Drawing.Color.Black;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.BorderColor = borderColor2;
+            baseTreeButtonVisualStyle1.BorderColor = System.Drawing.Color.White;
+            baseTreeButtonVisualStyle1.LineColor = System.Drawing.Color.White;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.CircleTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle1;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.HeaderHLinePattern = DevComponents.DotNetBar.SuperGrid.Style.LinePattern.None;
-            background8.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            baseTreeButtonVisualStyle4.Background = background8;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.SquareTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle4;
+            background4.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            baseTreeButtonVisualStyle2.Background = background4;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.SquareTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle2;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.TextColor = System.Drawing.Color.White;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.TitleStyles.Default.RowHeaderStyle.TextAlignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.GroupByRow.RowHeaderVisibility = DevComponents.DotNetBar.SuperGrid.RowHeaderVisibility.Never;
             this.DGV_Main.PrimaryGrid.GroupByRow.Text = "جميــع السجــــلات";
             this.DGV_Main.PrimaryGrid.GroupByRow.Visible = true;
@@ -682,22 +692,27 @@ private void InitializeComponent()
             this.DGV_Main.PrimaryGrid.InitialSelection = DevComponents.DotNetBar.SuperGrid.RelativeSelection.None;
             this.DGV_Main.PrimaryGrid.MultiSelect = false;
             this.DGV_Main.PrimaryGrid.ShowRowGridIndex = true;
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.Title.AllowSelection = false;
             this.DGV_Main.PrimaryGrid.Title.Text = "";
             this.DGV_Main.PrimaryGrid.Title.Visible = false;
             this.DGV_Main.PrimaryGrid.Visible = false;
             this.DGV_Main.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DGV_Main.Size = new System.Drawing.Size(649, 0);
+            this.DGV_Main.Size = new System.Drawing.Size(611, 0);
             this.DGV_Main.TabIndex = 862;
+            this.DGV_Main.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // panelEx3
             // 
             this.panelEx3.Controls.Add(this.DGV_Main);
             this.panelEx3.Controls.Add(this.ribbonBar_DGV);
+            this.panelEx3.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx3.Location = new System.Drawing.Point(0, 0);
             this.panelEx3.Name = "panelEx3";
-            this.panelEx3.Size = new System.Drawing.Size(649, 0);
+            this.panelEx3.Size = new System.Drawing.Size(611, 0);
             this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelEx3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -722,12 +737,13 @@ private void InitializeComponent()
             this.ribbonBar_DGV.ContainerControlProcessDialogKey = true;
             this.ribbonBar_DGV.Controls.Add(this.superTabControl_DGV);
             this.ribbonBar_DGV.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ribbonBar_DGV.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar_DGV.DragDropSupport = true;
             this.ribbonBar_DGV.Location = new System.Drawing.Point(0, -51);
             this.ribbonBar_DGV.Name = "ribbonBar_DGV";
-            this.ribbonBar_DGV.Size = new System.Drawing.Size(649, 51);
+            this.ribbonBar_DGV.Size = new System.Drawing.Size(611, 51);
             this.ribbonBar_DGV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_DGV.TabIndex = 869;
+            this.ribbonBar_DGV.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -770,7 +786,7 @@ private void InitializeComponent()
             this.superTabControl_DGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.superTabControl_DGV.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.superTabControl_DGV.SelectedTabIndex = -1;
-            this.superTabControl_DGV.Size = new System.Drawing.Size(649, 51);
+            this.superTabControl_DGV.Size = new System.Drawing.Size(611, 51);
             this.superTabControl_DGV.TabFont = new System.Drawing.Font("Tahoma", 8F);
             this.superTabControl_DGV.TabIndex = 12;
             this.superTabControl_DGV.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -847,7 +863,7 @@ private void InitializeComponent()
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(649, 242);
+            this.panel1.Size = new System.Drawing.Size(611, 242);
             this.panel1.TabIndex = 897;
             // 
             // barTopDockSite
@@ -857,7 +873,7 @@ private void InitializeComponent()
             this.barTopDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.barTopDockSite.Location = new System.Drawing.Point(0, 0);
             this.barTopDockSite.Name = "barTopDockSite";
-            this.barTopDockSite.Size = new System.Drawing.Size(649, 0);
+            this.barTopDockSite.Size = new System.Drawing.Size(611, 0);
             this.barTopDockSite.TabIndex = 889;
             this.barTopDockSite.TabStop = false;
             // 
@@ -868,7 +884,7 @@ private void InitializeComponent()
             this.barBottomDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.barBottomDockSite.Location = new System.Drawing.Point(0, 242);
             this.barBottomDockSite.Name = "barBottomDockSite";
-            this.barBottomDockSite.Size = new System.Drawing.Size(649, 0);
+            this.barBottomDockSite.Size = new System.Drawing.Size(611, 0);
             this.barBottomDockSite.TabIndex = 890;
             this.barBottomDockSite.TabStop = false;
             // 
@@ -877,7 +893,6 @@ private void InitializeComponent()
             this.dotNetBarManager1.BottomDockSite = this.barBottomDockSite;
             this.dotNetBarManager1.Images = this.imageList1;
             this.dotNetBarManager1.LeftDockSite = this.barLeftDockSite;
-            //this.dotNetBarManager1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.dotNetBarManager1.MdiSystemItemVisible = false;
             this.dotNetBarManager1.ParentForm = null;
             this.dotNetBarManager1.RightDockSite = this.barRightDockSite;
@@ -933,7 +948,7 @@ private void InitializeComponent()
             this.barRightDockSite.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.barRightDockSite.Dock = System.Windows.Forms.DockStyle.Right;
             this.barRightDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.barRightDockSite.Location = new System.Drawing.Point(649, 0);
+            this.barRightDockSite.Location = new System.Drawing.Point(611, 0);
             this.barRightDockSite.Name = "barRightDockSite";
             this.barRightDockSite.Size = new System.Drawing.Size(0, 242);
             this.barRightDockSite.TabIndex = 892;
@@ -945,7 +960,7 @@ private void InitializeComponent()
             this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dockSite4.Location = new System.Drawing.Point(0, 242);
             this.dockSite4.Name = "dockSite4";
-            this.dockSite4.Size = new System.Drawing.Size(649, 0);
+            this.dockSite4.Size = new System.Drawing.Size(611, 0);
             this.dockSite4.TabIndex = 896;
             this.dockSite4.TabStop = false;
             // 
@@ -963,7 +978,7 @@ private void InitializeComponent()
             // 
             this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockSite2.Location = new System.Drawing.Point(649, 0);
+            this.dockSite2.Location = new System.Drawing.Point(611, 0);
             this.dockSite2.Name = "dockSite2";
             this.dockSite2.Size = new System.Drawing.Size(0, 242);
             this.dockSite2.TabIndex = 894;
@@ -975,7 +990,7 @@ private void InitializeComponent()
             this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
             this.dockSite3.Location = new System.Drawing.Point(0, 0);
             this.dockSite3.Name = "dockSite3";
-            this.dockSite3.Size = new System.Drawing.Size(649, 0);
+            this.dockSite3.Size = new System.Drawing.Size(611, 0);
             this.dockSite3.TabIndex = 895;
             this.dockSite3.TabStop = false;
             // 
@@ -1010,7 +1025,9 @@ private void InitializeComponent()
             // 
             // netResize1
             // 
+            this.netResize1.LabelsAutoEllipse = false;
             this.netResize1.ParentControl = this;
+            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 
             // panel2
             // 
@@ -1020,12 +1037,12 @@ private void InitializeComponent()
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(649, 242);
+            this.panel2.Size = new System.Drawing.Size(611, 242);
             this.panel2.TabIndex = 898;
             // 
             // FrmInvDetNote
             // 
-            this.ClientSize = new System.Drawing.Size(649, 242);
+            this.ClientSize = new System.Drawing.Size(611, 242);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.barTopDockSite);
@@ -1063,6 +1080,7 @@ private void InitializeComponent()
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }//###########&&&&&&&&&&
 
 }

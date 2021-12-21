@@ -1,5 +1,6 @@
 ﻿using InvAcc.Forms;
-using ProShared.GeneralM;using ProShared;
+using ProShared.GeneralM;
+using ProShared;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

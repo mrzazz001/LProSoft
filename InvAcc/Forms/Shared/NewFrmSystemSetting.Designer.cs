@@ -590,7 +590,7 @@
             this.tileBar.AppearanceGroupText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.tileBar.AppearanceGroupText.Options.UseForeColor = true;
             this.tileBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.tileBar.BackgroundImage = global::InvAcc.Properties.Resources.bebo;
+            this.tileBar.BackgroundImage = global::InvAcc.Properties.Resources._4ec99ded_c34a_484d_a024_b8bdf36d4e2e;
             this.tileBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.tileBar.DropDownButtonWidth = 30;
             this.tileBar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
@@ -611,7 +611,7 @@
             this.tileBar.SelectionBorderWidth = 2;
             this.tileBar.SelectionColorMode = DevExpress.XtraBars.Navigation.SelectionColorMode.UseItemBackColor;
             this.tileBar.ShowGroupText = false;
-            this.tileBar.Size = new System.Drawing.Size(1075, 110);
+            this.tileBar.Size = new System.Drawing.Size(1085, 110);
             this.tileBar.TabIndex = 1;
             this.tileBar.Text = "tileBar";
             this.tileBar.WideTileWidth = 150;
@@ -821,7 +821,7 @@
             this.navigationPage8,
             this.navigationPage9});
             this.navigationFrame.SelectedPage = this.employeesNavigationPage;
-            this.navigationFrame.Size = new System.Drawing.Size(1075, 445);
+            this.navigationFrame.Size = new System.Drawing.Size(1085, 451);
             this.navigationFrame.TabIndex = 0;
             this.navigationFrame.Text = "navigationFrame";
             // 
@@ -838,7 +838,7 @@
             this.employeesNavigationPage.Controls.Add(this.employeesLabelControl);
             this.employeesNavigationPage.Controls.Add(this.picture_SSS);
             this.employeesNavigationPage.Name = "employeesNavigationPage";
-            this.employeesNavigationPage.Size = new System.Drawing.Size(1075, 445);
+            this.employeesNavigationPage.Size = new System.Drawing.Size(1085, 451);
             // 
             // groupPanel4
             // 
@@ -1448,6 +1448,7 @@
             this.textBox_BackupPath.Size = new System.Drawing.Size(518, 19);
             this.textBox_BackupPath.TabIndex = 927;
             this.textBox_BackupPath.WatermarkColor = System.Drawing.Color.White;
+            this.textBox_BackupPath.ButtonCustomClick += new System.EventHandler(this.textBox_BackupPath_ButtonCustomClick_1);
             // 
             // label25
             // 
@@ -1548,6 +1549,7 @@
             this.CmbCalendar.Size = new System.Drawing.Size(555, 21);
             this.CmbCalendar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbCalendar.TabIndex = 966;
+            this.CmbCalendar.SelectedIndexChanged += new System.EventHandler(this.CmbCalendar_SelectedIndexChanged);
             // 
             // txtGregDate
             // 
@@ -1839,7 +1841,7 @@
             this.employeesLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeesLabelControl.Location = new System.Drawing.Point(0, 0);
             this.employeesLabelControl.Name = "employeesLabelControl";
-            this.employeesLabelControl.Size = new System.Drawing.Size(1075, 445);
+            this.employeesLabelControl.Size = new System.Drawing.Size(1085, 451);
             this.employeesLabelControl.TabIndex = 2;
             this.employeesLabelControl.Text = "الاعدادات العامه ";
             this.employeesLabelControl.Click += new System.EventHandler(this.employeesLabelControl_Click);
@@ -1868,7 +1870,7 @@
             this.customersNavigationPage.Controls.Add(this.groupPanel3);
             this.customersNavigationPage.Controls.Add(this.customersLabelControl);
             this.customersNavigationPage.Name = "customersNavigationPage";
-            this.customersNavigationPage.Size = new System.Drawing.Size(1075, 445);
+            this.customersNavigationPage.Size = new System.Drawing.Size(1085, 451);
             // 
             // button_EnterImg
             // 
@@ -1883,6 +1885,7 @@
             this.button_EnterImg.TabIndex = 927;
             this.button_EnterImg.TextColor = System.Drawing.Color.SteelBlue;
             this.button_EnterImg.Tooltip = "إضافة صورة للصنف";
+            this.button_EnterImg.Click += new System.EventHandler(this.button_EnterImg_Click_1);
             // 
             // button_ClearPic
             // 
@@ -1910,7 +1913,7 @@
             this.PicItemImg.InitialImage = global::InvAcc.Properties.Resources.NOIMAGE;
             this.PicItemImg.Location = new System.Drawing.Point(0, 0);
             this.PicItemImg.Name = "PicItemImg";
-            this.PicItemImg.Size = new System.Drawing.Size(246, 445);
+            this.PicItemImg.Size = new System.Drawing.Size(246, 451);
             this.PicItemImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicItemImg.TabIndex = 928;
             this.PicItemImg.TabStop = false;
@@ -2303,7 +2306,7 @@
             this.customersLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
             this.customersLabelControl.Name = "customersLabelControl";
-            this.customersLabelControl.Size = new System.Drawing.Size(1075, 445);
+            this.customersLabelControl.Size = new System.Drawing.Size(1085, 451);
             this.customersLabelControl.TabIndex = 2;
             this.customersLabelControl.Text = "Customers";
             // 
@@ -2355,7 +2358,7 @@
             this.navigationPage1.Controls.Add(this.streetline1);
             this.navigationPage1.Controls.Add(this.txtAct);
             this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(1075, 445);
+            this.navigationPage1.Size = new System.Drawing.Size(1085, 451);
             // 
             // TXtVatNumbber
             // 
@@ -2381,7 +2384,7 @@
             this.txtAddr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddr.BackColor = System.Drawing.Color.White;
             this.txtAddr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddr.Location = new System.Drawing.Point(6, 86);
+            this.txtAddr.Location = new System.Drawing.Point(16, 86);
             this.txtAddr.MaxLength = 50;
             this.txtAddr.Name = "txtAddr";
             this.netResize1.SetResizeTextBoxMultiline(this.txtAddr, false);
@@ -2395,7 +2398,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label16.Location = new System.Drawing.Point(971, 85);
+            this.label16.Location = new System.Drawing.Point(976, 88);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(42, 13);
             this.label16.TabIndex = 1317;
@@ -2407,7 +2410,7 @@
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label21.Location = new System.Drawing.Point(968, 273);
+            this.label21.Location = new System.Drawing.Point(978, 273);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(87, 13);
             this.label21.TabIndex = 104;
@@ -2417,7 +2420,7 @@
             // 
             this.txtFax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFax.Location = new System.Drawing.Point(6, 190);
+            this.txtFax.Location = new System.Drawing.Point(16, 190);
             this.txtFax.MaxLength = 20;
             this.txtFax.Name = "txtFax";
             this.netResize1.SetResizeTextBoxMultiline(this.txtFax, false);
@@ -2438,7 +2441,7 @@
             // 
             this.txtPOBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPOBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPOBox.Location = new System.Drawing.Point(577, 271);
+            this.txtPOBox.Location = new System.Drawing.Point(587, 271);
             this.txtPOBox.MaxLength = 20;
             this.txtPOBox.Name = "txtPOBox";
             this.netResize1.SetResizeTextBoxMultiline(this.txtPOBox, false);
@@ -2463,7 +2466,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label18.Location = new System.Drawing.Point(504, 194);
+            this.label18.Location = new System.Drawing.Point(514, 194);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(59, 13);
             this.label18.TabIndex = 103;
@@ -2483,7 +2486,7 @@
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label22.Location = new System.Drawing.Point(504, 275);
+            this.label22.Location = new System.Drawing.Point(514, 275);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(73, 13);
             this.label22.TabIndex = 105;
@@ -2497,7 +2500,7 @@
             this.label56.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label56.ForeColor = System.Drawing.Color.Red;
             this.label56.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label56.Location = new System.Drawing.Point(959, 297);
+            this.label56.Location = new System.Drawing.Point(969, 297);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(79, 13);
             this.label56.TabIndex = 971;
@@ -2507,7 +2510,7 @@
             // 
             this.txtMobile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMobile.Location = new System.Drawing.Point(6, 217);
+            this.txtMobile.Location = new System.Drawing.Point(16, 217);
             this.txtMobile.MaxLength = 15;
             this.txtMobile.Name = "txtMobile";
             this.netResize1.SetResizeTextBoxMultiline(this.txtMobile, false);
@@ -2529,7 +2532,7 @@
             // 
             this.txtMailCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMailCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMailCode.Location = new System.Drawing.Point(6, 271);
+            this.txtMailCode.Location = new System.Drawing.Point(16, 271);
             this.txtMailCode.MaxLength = 20;
             this.txtMailCode.Name = "txtMailCode";
             this.netResize1.SetResizeTextBoxMultiline(this.txtMailCode, false);
@@ -2544,7 +2547,7 @@
             this.txtEmailPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmailPass.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.txtEmailPass.ForeColor = System.Drawing.Color.White;
-            this.txtEmailPass.Location = new System.Drawing.Point(6, 294);
+            this.txtEmailPass.Location = new System.Drawing.Point(16, 294);
             this.txtEmailPass.MaxLength = 100;
             this.txtEmailPass.Name = "txtEmailPass";
             this.txtEmailPass.PasswordChar = '*';
@@ -2559,7 +2562,7 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label19.Location = new System.Drawing.Point(504, 221);
+            this.label19.Location = new System.Drawing.Point(514, 221);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(63, 13);
             this.label19.TabIndex = 102;
@@ -2580,7 +2583,7 @@
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label23.Location = new System.Drawing.Point(968, 336);
+            this.label23.Location = new System.Drawing.Point(978, 336);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(89, 13);
             this.label23.TabIndex = 106;
@@ -2596,7 +2599,7 @@
             this.CmbMail.FocusHighlightColor = System.Drawing.Color.Empty;
             this.CmbMail.FormattingEnabled = true;
             this.CmbMail.ItemHeight = 15;
-            this.CmbMail.Location = new System.Drawing.Point(577, 293);
+            this.CmbMail.Location = new System.Drawing.Point(587, 293);
             this.CmbMail.Name = "CmbMail";
             this.CmbMail.Size = new System.Drawing.Size(380, 21);
             this.CmbMail.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -2606,7 +2609,7 @@
             // 
             this.txtTel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTel1.Location = new System.Drawing.Point(577, 190);
+            this.txtTel1.Location = new System.Drawing.Point(587, 190);
             this.txtTel1.MaxLength = 20;
             this.txtTel1.Name = "txtTel1";
             this.netResize1.SetResizeTextBoxMultiline(this.txtTel1, false);
@@ -2640,7 +2643,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label14.Location = new System.Drawing.Point(965, 12);
+            this.label14.Location = new System.Drawing.Point(975, 12);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(91, 13);
             this.label14.TabIndex = 98;
@@ -2652,7 +2655,7 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label20.Location = new System.Drawing.Point(968, 246);
+            this.label20.Location = new System.Drawing.Point(978, 246);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(94, 13);
             this.label20.TabIndex = 107;
@@ -2680,7 +2683,7 @@
             // 
             this.txtEmailBoss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmailBoss.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmailBoss.Location = new System.Drawing.Point(577, 219);
+            this.txtEmailBoss.Location = new System.Drawing.Point(587, 219);
             this.txtEmailBoss.MaxLength = 50;
             this.txtEmailBoss.Name = "txtEmailBoss";
             this.netResize1.SetResizeTextBoxMultiline(this.txtEmailBoss, false);
@@ -2694,7 +2697,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label17.Location = new System.Drawing.Point(968, 192);
+            this.label17.Location = new System.Drawing.Point(978, 192);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(96, 13);
             this.label17.TabIndex = 101;
@@ -2733,7 +2736,7 @@
             this.txtCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCompany.BackColor = System.Drawing.Color.White;
             this.txtCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCompany.Location = new System.Drawing.Point(669, 8);
+            this.txtCompany.Location = new System.Drawing.Point(679, 8);
             this.txtCompany.MaxLength = 50;
             this.txtCompany.Name = "txtCompany";
             this.netResize1.SetResizeTextBoxMultiline(this.txtCompany, false);
@@ -2745,7 +2748,7 @@
             // 
             this.txtTel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTel2.Location = new System.Drawing.Point(577, 244);
+            this.txtTel2.Location = new System.Drawing.Point(587, 244);
             this.txtTel2.MaxLength = 50;
             this.txtTel2.Name = "txtTel2";
             this.netResize1.SetResizeTextBoxMultiline(this.txtTel2, false);
@@ -2781,7 +2784,7 @@
             this.label52.BackColor = System.Drawing.Color.Transparent;
             this.label52.Font = new System.Drawing.Font("Tahoma", 8F);
             this.label52.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label52.Location = new System.Drawing.Point(968, 221);
+            this.label52.Location = new System.Drawing.Point(978, 221);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(93, 13);
             this.label52.TabIndex = 887;
@@ -2791,7 +2794,7 @@
             // 
             this.txtRemark.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRemark.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRemark.Location = new System.Drawing.Point(6, 320);
+            this.txtRemark.Location = new System.Drawing.Point(16, 320);
             this.txtRemark.MaxLength = 100;
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
@@ -2827,7 +2830,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label15.Location = new System.Drawing.Point(556, 12);
+            this.label15.Location = new System.Drawing.Point(566, 12);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 13);
             this.label15.TabIndex = 99;
@@ -2839,7 +2842,7 @@
             this.label54.AutoSize = true;
             this.label54.BackColor = System.Drawing.Color.Transparent;
             this.label54.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label54.Location = new System.Drawing.Point(507, 296);
+            this.label54.Location = new System.Drawing.Point(517, 296);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(64, 13);
             this.label54.TabIndex = 109;
@@ -2865,7 +2868,7 @@
             // 
             this.txtAct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAct.Location = new System.Drawing.Point(6, 10);
+            this.txtAct.Location = new System.Drawing.Point(16, 10);
             this.txtAct.MaxLength = 20;
             this.txtAct.Name = "txtAct";
             this.netResize1.SetResizeTextBoxMultiline(this.txtAct, false);
@@ -2878,7 +2881,7 @@
             this.navigationPage2.Controls.Add(this.flowLayoutPanel3);
             this.navigationPage2.Controls.Add(this.expandablePanel_AutoAcc);
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(1075, 445);
+            this.navigationPage2.Size = new System.Drawing.Size(1085, 451);
             // 
             // c1FlexGrid1
             // 
@@ -2890,7 +2893,7 @@
             this.c1FlexGrid1.Rows.Count = 37;
             this.c1FlexGrid1.Rows.DefaultSize = 19;
             this.c1FlexGrid1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.c1FlexGrid1.Size = new System.Drawing.Size(875, 421);
+            this.c1FlexGrid1.Size = new System.Drawing.Size(885, 427);
             this.c1FlexGrid1.StyleInfo = resources.GetString("c1FlexGrid1.StyleInfo");
             this.c1FlexGrid1.TabIndex = 22;
             this.c1FlexGrid1.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2007Black;
@@ -2908,7 +2911,7 @@
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(200, 421);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(200, 427);
             this.flowLayoutPanel3.TabIndex = 890;
             // 
             // label10
@@ -3034,9 +3037,9 @@
             this.expandablePanel_AutoAcc.Expanded = false;
             this.expandablePanel_AutoAcc.ExpandedBounds = new System.Drawing.Rectangle(0, 0, 691, 474);
             this.expandablePanel_AutoAcc.HideControlsWhenCollapsed = true;
-            this.expandablePanel_AutoAcc.Location = new System.Drawing.Point(0, 421);
+            this.expandablePanel_AutoAcc.Location = new System.Drawing.Point(0, 427);
             this.expandablePanel_AutoAcc.Name = "expandablePanel_AutoAcc";
-            this.expandablePanel_AutoAcc.Size = new System.Drawing.Size(1075, 24);
+            this.expandablePanel_AutoAcc.Size = new System.Drawing.Size(1085, 24);
             this.expandablePanel_AutoAcc.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expandablePanel_AutoAcc.Style.BackColor1.Color = System.Drawing.Color.Gainsboro;
             this.expandablePanel_AutoAcc.Style.BackColor2.Color = System.Drawing.Color.Gainsboro;
@@ -3072,7 +3075,7 @@
             // 
             this.navigationPage3.Controls.Add(this.groupPanel12);
             this.navigationPage3.Name = "navigationPage3";
-            this.navigationPage3.Size = new System.Drawing.Size(1075, 445);
+            this.navigationPage3.Size = new System.Drawing.Size(1085, 451);
             // 
             // groupPanel12
             // 
@@ -3137,7 +3140,7 @@
             this.navigationPage4.Controls.Add(this.expandablePanel_NewColumn);
             this.navigationPage4.Controls.Add(this.flowLayoutPanel1);
             this.navigationPage4.Name = "navigationPage4";
-            this.navigationPage4.Size = new System.Drawing.Size(1075, 445);
+            this.navigationPage4.Size = new System.Drawing.Size(1085, 451);
             // 
             // c1FlexGrid2
             // 
@@ -3150,7 +3153,7 @@
             this.c1FlexGrid2.Rows.Count = 64;
             this.c1FlexGrid2.Rows.DefaultSize = 19;
             this.c1FlexGrid2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.c1FlexGrid2.Size = new System.Drawing.Size(835, 392);
+            this.c1FlexGrid2.Size = new System.Drawing.Size(845, 398);
             this.c1FlexGrid2.StyleInfo = resources.GetString("c1FlexGrid2.StyleInfo");
             this.c1FlexGrid2.TabIndex = 26;
             this.c1FlexGrid2.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2007Black;
@@ -3163,7 +3166,7 @@
             this.textBox1.Location = new System.Drawing.Point(240, 0);
             this.textBox1.Name = "textBox1";
             this.netResize1.SetResizeTextBoxMultiline(this.textBox1, false);
-            this.textBox1.Size = new System.Drawing.Size(835, 27);
+            this.textBox1.Size = new System.Drawing.Size(845, 27);
             this.textBox1.TabIndex = 25;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -3177,10 +3180,10 @@
             this.expandablePanel_NewColumn.Expanded = false;
             this.expandablePanel_NewColumn.ExpandedBounds = new System.Drawing.Rectangle(0, -12, 999, 441);
             this.expandablePanel_NewColumn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.expandablePanel_NewColumn.Location = new System.Drawing.Point(240, 419);
+            this.expandablePanel_NewColumn.Location = new System.Drawing.Point(240, 425);
             this.expandablePanel_NewColumn.Name = "expandablePanel_NewColumn";
             this.expandablePanel_NewColumn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.expandablePanel_NewColumn.Size = new System.Drawing.Size(835, 26);
+            this.expandablePanel_NewColumn.Size = new System.Drawing.Size(845, 26);
             this.expandablePanel_NewColumn.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expandablePanel_NewColumn.Style.BackColor1.Color = System.Drawing.Color.White;
             this.expandablePanel_NewColumn.Style.BackColor2.Color = System.Drawing.Color.White;
@@ -3236,7 +3239,7 @@
             this.Tree_NewCol.PathSeparator = ";";
             this.Tree_NewCol.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Tree_NewCol.ScrollBarAppearance = DevComponents.DotNetBar.eScrollBarAppearance.ApplicationScroll;
-            this.Tree_NewCol.Size = new System.Drawing.Size(835, 360);
+            this.Tree_NewCol.Size = new System.Drawing.Size(845, 360);
             this.Tree_NewCol.Styles.Add(this.elementStyle3);
             this.Tree_NewCol.Styles.Add(this.elementStyle4);
             this.Tree_NewCol.TabIndex = 105;
@@ -3593,7 +3596,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 26);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panel1.Size = new System.Drawing.Size(835, 38);
+            this.panel1.Size = new System.Drawing.Size(845, 38);
             this.panel1.TabIndex = 102;
             // 
             // switchButton_NewColumnName
@@ -3690,7 +3693,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(240, 445);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(240, 451);
             this.flowLayoutPanel1.TabIndex = 1124;
             // 
             // label48
@@ -4007,7 +4010,7 @@
             this.navigationPage5.Controls.Add(this.c1FlexGriadTax);
             this.navigationPage5.Controls.Add(this.flowLayoutPanel2);
             this.navigationPage5.Name = "navigationPage5";
-            this.navigationPage5.Size = new System.Drawing.Size(1075, 445);
+            this.navigationPage5.Size = new System.Drawing.Size(1085, 451);
             // 
             // c1FlexGriadTax
             // 
@@ -4018,7 +4021,7 @@
             this.c1FlexGriadTax.Name = "c1FlexGriadTax";
             this.c1FlexGriadTax.Rows.Count = 15;
             this.c1FlexGriadTax.Rows.DefaultSize = 19;
-            this.c1FlexGriadTax.Size = new System.Drawing.Size(875, 445);
+            this.c1FlexGriadTax.Size = new System.Drawing.Size(885, 451);
             this.c1FlexGriadTax.StyleInfo = resources.GetString("c1FlexGriadTax.StyleInfo");
             this.c1FlexGriadTax.TabIndex = 6800;
             this.c1FlexGriadTax.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2007Black;
@@ -4044,7 +4047,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 445);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 451);
             this.flowLayoutPanel2.TabIndex = 6822;
             // 
             // label3Tax
@@ -4272,7 +4275,7 @@
             this.navigationPage6.Controls.Add(this.groupPanel14);
             this.navigationPage6.Controls.Add(this.button_PointOfCust);
             this.navigationPage6.Name = "navigationPage6";
-            this.navigationPage6.Size = new System.Drawing.Size(1075, 445);
+            this.navigationPage6.Size = new System.Drawing.Size(1085, 451);
             // 
             // groupPanel15
             // 
@@ -5249,9 +5252,9 @@
             this.button_PointOfCust.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.button_PointOfCust.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button_PointOfCust.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
-            this.button_PointOfCust.Location = new System.Drawing.Point(0, 392);
+            this.button_PointOfCust.Location = new System.Drawing.Point(0, 398);
             this.button_PointOfCust.Name = "button_PointOfCust";
-            this.button_PointOfCust.Size = new System.Drawing.Size(1075, 53);
+            this.button_PointOfCust.Size = new System.Drawing.Size(1085, 53);
             this.button_PointOfCust.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.button_PointOfCust.Symbol = "";
             this.button_PointOfCust.SymbolSize = 16F;
@@ -5264,7 +5267,7 @@
             this.navigationPage7.Controls.Add(this.groupPanel13);
             this.navigationPage7.Controls.Add(this.pictureBox1);
             this.navigationPage7.Name = "navigationPage7";
-            this.navigationPage7.Size = new System.Drawing.Size(1075, 445);
+            this.navigationPage7.Size = new System.Drawing.Size(1085, 451);
             // 
             // groupPanel13
             // 
@@ -5291,7 +5294,7 @@
             this.groupPanel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanel13.Location = new System.Drawing.Point(0, 0);
             this.groupPanel13.Name = "groupPanel13";
-            this.groupPanel13.Size = new System.Drawing.Size(1075, 185);
+            this.groupPanel13.Size = new System.Drawing.Size(1085, 185);
             // 
             // 
             // 
@@ -5582,9 +5585,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox1.Image = global::InvAcc.Properties.Resources.Untitled_2_copy;
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 169);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 175);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1075, 276);
+            this.pictureBox1.Size = new System.Drawing.Size(1085, 276);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 972;
             this.pictureBox1.TabStop = false;
@@ -5596,7 +5599,7 @@
             this.navigationPage8.Controls.Add(this.groupPanel11);
             this.navigationPage8.Controls.Add(this.groupPanel10);
             this.navigationPage8.Name = "navigationPage8";
-            this.navigationPage8.Size = new System.Drawing.Size(1075, 445);
+            this.navigationPage8.Size = new System.Drawing.Size(1085, 451);
             // 
             // groupPanel11
             // 
@@ -5631,9 +5634,9 @@
             this.groupPanel11.Controls.Add(this.button_B2);
             this.groupPanel11.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupPanel11.Location = new System.Drawing.Point(0, 261);
+            this.groupPanel11.Location = new System.Drawing.Point(0, 267);
             this.groupPanel11.Name = "groupPanel11";
-            this.groupPanel11.Size = new System.Drawing.Size(1075, 184);
+            this.groupPanel11.Size = new System.Drawing.Size(1085, 184);
             // 
             // 
             // 
@@ -6066,7 +6069,7 @@
             this.groupPanel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanel10.Location = new System.Drawing.Point(0, 0);
             this.groupPanel10.Name = "groupPanel10";
-            this.groupPanel10.Size = new System.Drawing.Size(1075, 269);
+            this.groupPanel10.Size = new System.Drawing.Size(1085, 269);
             // 
             // 
             // 
@@ -6773,7 +6776,7 @@
             this.navigationPage9.Controls.Add(this.panel11);
             this.navigationPage9.Controls.Add(this.groupPanel7);
             this.navigationPage9.Name = "navigationPage9";
-            this.navigationPage9.Size = new System.Drawing.Size(1075, 445);
+            this.navigationPage9.Size = new System.Drawing.Size(1085, 451);
             // 
             // expandablePanel_Alarm
             // 
@@ -6785,9 +6788,9 @@
             this.expandablePanel_Alarm.Expanded = false;
             this.expandablePanel_Alarm.ExpandedBounds = new System.Drawing.Rectangle(0, 12, 1013, 471);
             this.expandablePanel_Alarm.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.expandablePanel_Alarm.Location = new System.Drawing.Point(0, 419);
+            this.expandablePanel_Alarm.Location = new System.Drawing.Point(0, 425);
             this.expandablePanel_Alarm.Name = "expandablePanel_Alarm";
-            this.expandablePanel_Alarm.Size = new System.Drawing.Size(1075, 26);
+            this.expandablePanel_Alarm.Size = new System.Drawing.Size(1085, 26);
             this.expandablePanel_Alarm.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expandablePanel_Alarm.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.expandablePanel_Alarm.Style.BackgroundImagePosition = DevComponents.DotNetBar.eBackgroundImagePosition.Tile;
@@ -7735,7 +7738,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1075, 555);
+            this.ClientSize = new System.Drawing.Size(1085, 561);
             this.Controls.Add(this.navigationFrame);
             this.Controls.Add(this.tileBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;

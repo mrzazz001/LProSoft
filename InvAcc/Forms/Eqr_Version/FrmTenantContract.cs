@@ -127,7 +127,7 @@ namespace InvAcc.Forms
         public int ProcessTyp = 0;
         public string TenantNo_ = "";
         public string TenantNm_ = "";
-        public string TenantID_ = "";
+        public string TenantID_ = "1";
         protected bool ifOkDelete;
         public bool CanEdit = true;
         protected bool CanInsert = true;
@@ -825,7 +825,7 @@ namespace InvAcc.Forms
             }
             try
             {
-                T_TenantContract newData = db.StockTenantContractData(no, int.Parse(TenantID_));
+                 T_TenantContract newData = db.StockTenantContractData(no, int.Parse(TenantID_));
                 if (newData == null || newData.ContractNo == 0)
                 {
                     Clear();
@@ -1205,7 +1205,9 @@ namespace InvAcc.Forms
                         return;
                     }
                 }
-                else if (State == FormState.Edit)
+                else 
+                
+                if (State == FormState.Edit)
                 {
                     oldData = new T_TenantContract();
                     oldData = data_this;
@@ -1947,6 +1949,16 @@ namespace InvAcc.Forms
                 {
                 }
             }
+        }
+
+        private void ribbonBar1_ItemClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_Save_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

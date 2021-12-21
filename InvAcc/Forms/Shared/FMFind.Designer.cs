@@ -34,15 +34,20 @@ private void InitializeComponent()
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonItem_Exit = new C1.Win.C1Input.C1Button();
             this.ButOK = new C1.Win.C1Input.C1Button();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.buttonItem_Exit = new C1.Win.C1Input.C1Button();
             this.c1Button1 = new C1.Win.C1Input.C1Button();
             ((System.ComponentModel.ISupportInitialize)(this.c1TrueDBGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.groupBoxTxtSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonItem_Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButOK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonItem_Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1Button1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,9 +55,10 @@ private void InitializeComponent()
             // 
             this.c1TrueDBGrid1.AllowUpdate = false;
             this.c1TrueDBGrid1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.c1TrueDBGrid1.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.c1TrueDBGrid1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.c1TrueDBGrid1.CaptionHeight = 2220;
-            this.c1TrueDBGrid1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.c1TrueDBGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.c1TrueDBGrid1.FetchRowStyles = true;
             this.c1TrueDBGrid1.FilterBar = true;
             this.c1TrueDBGrid1.FlatStyle = C1.Win.C1TrueDBGrid.FlatModeEnum.Flat;
@@ -61,20 +67,22 @@ private void InitializeComponent()
             this.c1TrueDBGrid1.GroupByCaption = "Drag a column header here to group by that column";
             this.c1TrueDBGrid1.Images.Add(((System.Drawing.Image)(resources.GetObject("c1TrueDBGrid1.Images"))));
             this.c1TrueDBGrid1.LinesPerRow = 1;
-            this.c1TrueDBGrid1.Location = new System.Drawing.Point(0, 74);
+            this.c1TrueDBGrid1.Location = new System.Drawing.Point(0, 0);
             this.c1TrueDBGrid1.Name = "c1TrueDBGrid1";
             this.c1TrueDBGrid1.PreviewInfo.Location = new System.Drawing.Point(0, 0);
             this.c1TrueDBGrid1.PreviewInfo.Size = new System.Drawing.Size(0, 0);
             this.c1TrueDBGrid1.PreviewInfo.ZoomFactor = 75D;
             this.c1TrueDBGrid1.PrintInfo.PageSettings = ((System.Drawing.Printing.PageSettings)(resources.GetObject("c1TrueDBGrid1.PrintInfo.PageSettings")));
             this.c1TrueDBGrid1.RowHeight = 20;
-            this.c1TrueDBGrid1.Size = new System.Drawing.Size(721, 320);
+            this.c1TrueDBGrid1.Size = new System.Drawing.Size(721, 305);
             this.c1TrueDBGrid1.TabAction = C1.Win.C1TrueDBGrid.TabActionEnum.ColumnNavigation;
             this.c1TrueDBGrid1.TabIndex = 0;
             this.c1TrueDBGrid1.Text = "c1TrueDBGrid1";
+            this.c1TrueDBGrid1.UseCompatibleTextRendering = false;
             this.c1TrueDBGrid1.VisualStyle = C1.Win.C1TrueDBGrid.VisualStyle.Office2007Blue;
             this.c1TrueDBGrid1.RowColChange += new C1.Win.C1TrueDBGrid.RowColChangeEventHandler(this.c1TrueDBGrid1_RowColChange);
             this.c1TrueDBGrid1.FilterChange += new System.EventHandler(this.c1TrueDBGrid1_FilterChange);
+            this.c1TrueDBGrid1.Click += new System.EventHandler(this.c1TrueDBGrid1_Click);
             this.c1TrueDBGrid1.DoubleClick += new System.EventHandler(this.c1TrueDBGrid1_DoubleClick);
             this.c1TrueDBGrid1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.c1TrueDBGrid1_KeyDown);
             this.c1TrueDBGrid1.PropBag = resources.GetString("c1TrueDBGrid1.PropBag");
@@ -132,7 +140,6 @@ private void InitializeComponent()
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(715, 22);
             this.txtSearch.TabIndex = 990;
-            this.txtSearch.Text = "";
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSearch.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.txtSearch.WatermarkText = "Enter text to search...";
@@ -176,6 +183,44 @@ private void InitializeComponent()
             // 
             this.categoryBindingSource.DataSource = typeof(ProShared.Stock_Data.T_CATEGORY);
             // 
+            // ButOK
+            // 
+            this.ButOK.BackgroundImage = global::InvAcc.Properties.Resources.GREEN;
+            this.ButOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ButOK.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButOK.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.ButOK.Location = new System.Drawing.Point(185, 0);
+            this.ButOK.Name = "ButOK";
+            this.ButOK.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ButOK.Size = new System.Drawing.Size(433, 56);
+            this.ButOK.TabIndex = 1189;
+            this.ButOK.Text = "موافق | OK";
+            this.ButOK.UseVisualStyleBackColor = true;
+            this.ButOK.Click += new System.EventHandler(this.ButOK_Click);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 74);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.c1TrueDBGrid1);
+            this.splitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.ButOK);
+            this.splitContainer1.Panel2.Controls.Add(this.buttonItem_Exit);
+            this.splitContainer1.Panel2.Controls.Add(this.c1Button1);
+            this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.splitContainer1.Size = new System.Drawing.Size(721, 365);
+            this.splitContainer1.SplitterDistance = 305;
+            this.splitContainer1.TabIndex = 1190;
+            // 
             // buttonItem_Exit
             // 
             this.buttonItem_Exit.BackgroundImage = global::InvAcc.Properties.Resources.YALO2;
@@ -183,29 +228,14 @@ private void InitializeComponent()
             this.buttonItem_Exit.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonItem_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItem_Exit.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.buttonItem_Exit.Location = new System.Drawing.Point(618, 394);
+            this.buttonItem_Exit.Location = new System.Drawing.Point(618, 0);
             this.buttonItem_Exit.Name = "buttonItem_Exit";
             this.buttonItem_Exit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.buttonItem_Exit.Size = new System.Drawing.Size(103, 45);
-            this.buttonItem_Exit.TabIndex = 1189;
+            this.buttonItem_Exit.Size = new System.Drawing.Size(103, 56);
+            this.buttonItem_Exit.TabIndex = 1191;
             this.buttonItem_Exit.Text = "خروج | ESC";
             this.buttonItem_Exit.UseVisualStyleBackColor = true;
-            this.buttonItem_Exit.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // ButOK
-            // 
-            this.ButOK.BackgroundImage = global::InvAcc.Properties.Resources.GREEN;
-            this.ButOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ButOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButOK.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.ButOK.Location = new System.Drawing.Point(182, 394);
-            this.ButOK.Name = "ButOK";
-            this.ButOK.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ButOK.Size = new System.Drawing.Size(438, 45);
-            this.ButOK.TabIndex = 1189;
-            this.ButOK.Text = "موافق | OK";
-            this.ButOK.UseVisualStyleBackColor = true;
-            this.ButOK.Click += new System.EventHandler(this.ButOK_Click);
+            this.buttonItem_Exit.Click += new System.EventHandler(this.buttonItem_Exit_Click);
             // 
             // c1Button1
             // 
@@ -214,14 +244,14 @@ private void InitializeComponent()
             this.c1Button1.Dock = System.Windows.Forms.DockStyle.Left;
             this.c1Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.c1Button1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.c1Button1.Location = new System.Drawing.Point(0, 394);
+            this.c1Button1.Location = new System.Drawing.Point(0, 0);
             this.c1Button1.Name = "c1Button1";
             this.c1Button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.c1Button1.Size = new System.Drawing.Size(185, 45);
-            this.c1Button1.TabIndex = 1189;
+            this.c1Button1.Size = new System.Drawing.Size(185, 56);
+            this.c1Button1.TabIndex = 1190;
             this.c1Button1.Text = "مسح | CLEAR";
             this.c1Button1.UseVisualStyleBackColor = true;
-            this.c1Button1.Click += new System.EventHandler(this.ButClear_Click);
+            this.c1Button1.Click += new System.EventHandler(this.c1Button1_Click);
             // 
             // FMFind
             // 
@@ -231,14 +261,11 @@ private void InitializeComponent()
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(721, 439);
             this.ControlBox = false;
-            this.Controls.Add(this.c1Button1);
-            this.Controls.Add(this.ButOK);
-            this.Controls.Add(this.buttonItem_Exit);
-            this.Controls.Add(this.c1TrueDBGrid1);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.groupBoxTxtSearch);
             this.Controls.Add(this.labelX1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(InvAcc.Properties.Resources.favicon));
+            this.Icon = global::InvAcc.Properties.Resources.favicon;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
@@ -256,12 +283,19 @@ private void InitializeComponent()
             this.groupBoxTxtSearch.ResumeLayout(false);
             this.groupBoxTxtSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonItem_Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButOK)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.buttonItem_Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1Button1)).EndInit();
-            this.Icon = ((System.Drawing.Icon)(InvAcc.Properties.Resources.favicon));
             this.ResumeLayout(false);
+
         }//###########&&&&&&&&&&
 
-}
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private C1.Win.C1Input.C1Button buttonItem_Exit;
+        private C1.Win.C1Input.C1Button c1Button1;
+    }
 }

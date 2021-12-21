@@ -39,6 +39,8 @@ using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
 using ProShared;
+using ProShared.Forms;
+using InvAcc.Forms.Cards;
 
 namespace InvAcc.Forms
 {
@@ -2873,6 +2875,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             }
         }
         BackupAlarm f;
+        int autbackupstatus = 0;
 #pragma warning disable CS0169 // The field 'Frm_Main.t' is never used
         FrmMn t;
 #pragma warning restore CS0169 // The field 'Frm_Main.t' is never used
@@ -2880,6 +2883,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         private void DBBackup(bool vMsg)
         {
             int b = 0;
+            autbackupstatus = 1;
             string ServiceNm = "";
             try
             {
@@ -3053,7 +3057,8 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             {
                 VarGeneral.DebLog.writeLog("ButBackUp_Click:", error2, enable: true);
             //    MessageBox.Show(error2.Message);
-               MessageBox.Show ((LangArEn == 0) ? "يرحى التأكد من المسار من تهيئة النظام\n لم تتم عملية النسخ الاحتياطي بنجاح..  " : "Is not the backup process successfully .. Check Path");
+               
+                MessageBox.Show ((LangArEn == 0) ? "يرحى التأكد من المسار من تهيئة النظام\n لم تتم عملية النسخ الاحتياطي بنجاح..  " : "Is not the backup process successfully .. Check Path");
                 //    label_AlarmBackup.Visible = true;
                 //    button_AlarmBackupClose.Visible = true;
                 //    label_AlarmBackup.BringToFront();
@@ -3608,19 +3613,25 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
 
         public Frm_Main()
         {
-            
+
             try
             {
                 CheckForIllegalCrossThreadCalls = false;
                 InitializeComponent();//
-            int kk=    VarGeneral.DeleteOption;
-            if(kk==1)
+                int kk = VarGeneral.DeleteOption;
+                ribbonCheckBox2.Visible = false;
+                if (VarGeneral.UserID==1)
+                {
+                    ribbonCheckBox2.Visible = true;
+
+                }
+                if (kk==1)
                 {
                     ribbonCheckBox2.Checked = true; ;
                 }
                 txtCount.ValueChanged += setcount;
                 this.FormClosing += dsafas;
-
+                if (Program.isdevelopermachine()) ;
                 PreJitControls();
                 loadLayOut();
                 flwowmessag = new MarqueeLabel();
@@ -5676,12 +5687,14 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             }
             return bno;
         }
+       
         string BranchFlag;
         // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
         private void Frm_Main_Load(object sender, EventArgs e)
         // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
         {
             n = VarGeneral.n;
+            VarGeneral.loginoccures = 1;
             LangArEn = 0;
             //Program.min();
             loc = new Point(35, c1Ribbon1.Height + 15);
@@ -7255,10 +7268,15 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                                                     vLogicalName = vRecPath2[0].Replace("DBPROSOFT", "PROSOFT") + "_" + vBranchCount[i].Branch_no;
                                                     vLogicalNameLog = vRecPath2[1].Replace("_log", "").Replace("DBPROSOFT", "PROSOFT") + "_" + vBranchCount[i].Branch_no + "_log";
                                                 }
+                                                //if (vRecPath2[0].Contains("APPSOFT"))
+                                                //{
+                                                //    vLogicalName = vRecPath2[0].Replace("DBAPPSOFT", "PROSOFT") + "_" + vBranchCount[i].Branch_no;
+                                                //    vLogicalNameLog = vRecPath2[1].Replace("_log", "").Replace("DBAPPSOFT", "PROSOFT") + "_" + vBranchCount[i].Branch_no + "_log";
+                                                //}
                                                 vWITH = "";
-                                                vWITH = " Move '" + vLogicalName + "' TO '" + vMDF_File + "',Move '" + vLogicalNameLog + "' TO '" + vLDB_File + "'";
-                                                vWITH += ",REPLACE";
-                                                using (Stock_DataDataContext _dbx = new Stock_DataDataContext(VarGeneral.BranchCS + ";Connect Timeout=120"))
+                                                vWITH = " Move N'" + vLogicalName + "' TO '" + vMDF_File + "',Move N'" + vLogicalNameLog + "' TO '" + vLDB_File + "'";
+                                                vWITH += ",NOUNLOAD,REPLACE,  STATS = 5";
+                                                using (Stock_DataDataContext _dbx = new Stock_DataDataContext(VarGeneral.BranchCS + ""))
                                                 {
                                                     int _LoopDB = 0;
                                                     while (true)
@@ -7274,7 +7292,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                                                                 _dbx.ExecuteCommand("USE [master] ALTER DATABASE [" + VarGeneral.DBNo.Replace("DBPROSOFT", "PROSOFT") + "_" + vBranchCount[i].Branch_no + "] SET MULTI_USER");
                                                             }
                                                         }
-                                                        catch
+                                                        catch(Exception ex)
                                                         {
                                                             try
                                                             {
@@ -7705,24 +7723,36 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 frm.TopMost = true;
                 //frm.MdiParent = this;
                 //childmin();
-                showChild(frm);
+                try
+                {
+                    showChild(frm);
+                }
+                catch(Exception ex)
+                {
+
+                }
             }
         }
         public static Point loc = new Point();
         private void buttonItem_PurchaseInv_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmInvPuchaes()))
+         // if(  InvAcc.Properties.Settings.Default.ServiceBill)
+            //if(!IsFormOpen(new FrmInvPuchaes()))
             {
-                VarGeneral.InvTyp = 2;
-                FrmInvPuchaes frm = new FrmInvPuchaes();
-                frm.Tag = LangArEn;
-                frm.Text = buttonItem_PurchaseInv.Text.Replace("  Ctrl+F3", "");
-                frm.TopMost = true;
-                //frm.MdiParent = this;
-                //childmin();
-                showChild(frm);
-                CheckInvReapir();
+                
+                {
+                    VarGeneral.InvTyp = 2;
+                    FrmInvPuchaes frm = new FrmInvPuchaes();
+                    frm.Tag = LangArEn;
+                    frm.Text = buttonItem_PurchaseInv.Text.Replace("  Ctrl+F3", "");
+                    frm.TopMost = true;
+                    //frm.MdiParent = this;
+                    //childmin();
+                    showChild(frm);
+                    CheckInvReapir();
+                }
             }
+        
         }
         private void buttonItem_PurchaseReturn_Click(object sender, EventArgs e)
         {
@@ -7884,6 +7914,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 FrmInvOffer frm = new FrmInvOffer();
                 frm.Tag = LangArEn;
                 frm.TopMost = true;
+                VarGeneral.InvTyp = 0;
                 //frm.MdiParent = this;
                 //childmin();
                 showChild(frm);
@@ -8467,7 +8498,8 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepGeneralDaily_Click(object sender, EventArgs e)
         {
-           
+
+
         }
         private void buttonItem_RepReviewBalanceOfMovement_Click(object sender, EventArgs e)
         {
@@ -13435,7 +13467,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             }
             try
             {
-                string ckhStatString = db.StockInvSetting(VarGeneral.UserID, 1).TaxOptions.Substring(4, 1);
+                string ckhStatString = db.StockInvSetting( 1).TaxOptions.Substring(4, 1);
             }
             catch
             {
@@ -14434,7 +14466,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                                              where item.gdLok == false
                                              where (double?)(double)item.gdhead_ID == vData4.TaxGaidID
                                              select item).ToList().FirstOrDefault();
-                        T_INVSETTING _InvSettingTax = db.StockInvSetting(VarGeneral.UserID, 1);
+                        T_INVSETTING _InvSettingTax = db.StockInvSetting( 1);
                         string TaxCredit = ((_InvSettingTax.TaxCredit.Trim() != "***") ? _InvSettingTax.TaxCredit.Trim() : vData4.CusVenNo);
                         if (string.IsNullOrEmpty(TaxCredit))
                         {
@@ -14680,7 +14712,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                                              where item.gdLok == false
                                              where (double?)(double)item.gdhead_ID == vData3.TaxGaidID
                                              select item).ToList().FirstOrDefault();
-                        T_INVSETTING _InvSettingTax = db.StockInvSetting(VarGeneral.UserID, 3);
+                        T_INVSETTING _InvSettingTax = db.StockInvSetting( 3);
                         string TaxCredit = ((_InvSettingTax.TaxCredit.Trim() != "***") ? _InvSettingTax.TaxCredit.Trim() : vData3.CusVenNo);
                         if (string.IsNullOrEmpty(TaxCredit))
                         {
@@ -14931,7 +14963,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                                              where item.gdLok == false
                                              where (double?)(double)item.gdhead_ID == vData2.TaxGaidID
                                              select item).ToList().FirstOrDefault();
-                        T_INVSETTING _InvSettingTax = db.StockInvSetting(VarGeneral.UserID, 2);
+                        T_INVSETTING _InvSettingTax = db.StockInvSetting( 2);
                         string TaxCredit = ((_InvSettingTax.TaxCredit.Trim() != "***") ? _InvSettingTax.TaxCredit.Trim() : vData2.CusVenNo);
                         if (string.IsNullOrEmpty(TaxCredit))
                         {
@@ -15182,7 +15214,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                                              where item.gdLok == false
                                              where (double?)(double)item.gdhead_ID == vData.TaxGaidID
                                              select item).ToList().FirstOrDefault();
-                        T_INVSETTING _InvSettingTax = db.StockInvSetting(VarGeneral.UserID, 4);
+                        T_INVSETTING _InvSettingTax = db.StockInvSetting( 4);
                         string TaxCredit = ((_InvSettingTax.TaxCredit.Trim() != "***") ? _InvSettingTax.TaxCredit.Trim() : vData.CusVenNo);
                         if (string.IsNullOrEmpty(TaxCredit))
                         {
@@ -17415,9 +17447,9 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 {
                     if (VarGeneral.CheckDate(VarGeneral.Settings_Sys.AutoBackupDate))
                     {
-                        if (Convert.ToDateTime(n.FormatGreg(VarGeneral.Gdate, "yyyy/MM/dd")) > Convert.ToDateTime(n.FormatGreg(VarGeneral.Settings_Sys.AutoBackupDate, "yyyy/MM/dd")))
+                        if (Convert.ToDateTime(n.FormatGreg(VarGeneral.Gdate, "yyyy/MM/dd")) >= Convert.ToDateTime(n.FormatGreg(VarGeneral.Settings_Sys.AutoBackupDate, "yyyy/MM/dd")))
                         {
-                            DBBackup(vMsg: false);
+                         if(autbackupstatus==0)   DBBackup(vMsg: false);
                         }
                     }
                     else
@@ -20025,14 +20057,14 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             {
                 {     File.WriteAllText(Application.StartupPath + "\\Script\\deloption.dll", "Delete On");
 
-                    int k = VarGeneral.DeleteOption;
+                  
                 }
             }
             else
             {
              
                 File.Delete(Application.StartupPath + "\\Script\\deloption.dll");
-                int k = VarGeneral.DeleteOption;
+         
             }
 
 
@@ -20041,6 +20073,20 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         private void ribbonButton4_Click(object sender, EventArgs e)
         {
             FormInvoicesDataViewre frm = new FormInvoicesDataViewre();
+            frm.ShowDialog();
+        }
+
+        private void ribbonButton5_Click(object sender, EventArgs e)
+        {
+            FMInvPrintSetup frm = new FMInvPrintSetup(1);
+            frm.Tag = LangArEn;
+            frm.TopMost = true;
+            frm.ShowDialog();
+        }
+
+        private void buttonItem35_Click(object sender, EventArgs e)
+        {
+            frmItemNoWizard frm = new frmItemNoWizard();
             frm.ShowDialog();
         }
     }

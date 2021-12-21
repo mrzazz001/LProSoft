@@ -1498,5 +1498,10 @@ namespace InvAcc.Forms
         {
             superTabControl_Main1.Font = new System.Drawing.Font("Tahoma", 8F);
         }
+
+        private void ribbonBar1_ItemClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

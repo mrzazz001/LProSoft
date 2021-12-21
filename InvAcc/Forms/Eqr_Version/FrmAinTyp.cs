@@ -1273,6 +1273,7 @@ namespace InvAcc.Forms
                 e.Handled = true;
             }
         }
+
         public void Button_Print_Click(object sender, EventArgs e)
         {
             if (ViewState != 0)

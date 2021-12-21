@@ -117,6 +117,142 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button8.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AN5D9P9GmRus+qEsEwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="FlxInv.ColumnInfo" xml:space="preserve">
     <value>40,1,0,0,0,95,Columns:0{Visible:False;}	1{Width:79;Caption:"Item Code";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	2{Width:193;Caption:"الوصف";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	3{Width:64;Caption:"الوحدة";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	4{Width:150;Caption:"Item Name";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	5{Width:64;Caption:"Unit";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	6{Width:45;Caption:"S";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	7{Width:60;Caption:"Quantity";Style:"DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	8{Width:60;Caption:"Price";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	9{Width:45;Caption:"Discount %";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	10{Caption:"AvrageCost";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	11{Caption:"Pack";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	12{Caption:"relQty";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	13{Caption:"itmIvDsc";Visible:False;}	14{Caption:"dfUCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	15{Caption:"ItmDesE";Visible:False;}	16{Visible:False;}	17{Width:66;Visible:False;}	18{Caption:"DefUNum";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	19{Visible:False;}	20{Visible:False;}	21{Visible:False;}	22{Visible:False;}	23{Visible:False;}	24{Caption:"stkQty";Visible:False;Style:"DataType:System.Double;TextAlign:CenterCenter;";}	25{Visible:False;}	26{Visible:False;}	27{Width:83;Caption:"Date Exp";Visible:False;Style:"DataType:System.String;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	28{Caption:"Lot";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	29{Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	30{Caption:"LastCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	31{Width:70;Caption:"Net Amount";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;ImageAlign:CenterCenter;";}	32{Caption:"ItmTyp";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	33{Width:40;Caption:"هدية";Visible:False;Style:"DataType:System.Boolean;TextAlign:CenterCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	34{Caption:"Wight _T";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	35{Width:60;Caption:"MakeNo";Visible:False;Style:"TextAlign:GeneralCenter;";StyleFixed:"TextAlign:CenterCenter;";}	36{Caption:"Other Details";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	37{Width:30;AllowSorting:False;Caption:"*";Visible:False;AllowResizing:False;AllowEditing:False;Style:"DataType:System.Boolean;TextAlign:LeftCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	38{Width:154;Caption:"Tax";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	39{Caption:"حالة العرض";Visible:False;}	</value>
   </data>
@@ -127,9 +263,8 @@
     <value>17, 758</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>147</value>
+    <value>25</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox_Cash.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEBLAEsAAD/4RUIRXhpZgAATU0AKgAAAAgACQEOAAIAAAAQAAAAegESAAMAAAAB
@@ -958,73 +1093,11 @@
         AqssCAgqgICAgICAgICAgICAgICAgIKIKoCAgICAgICAg//Z
 </value>
   </data>
-  <data name="textBox_Barcode.ButtonCustom.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
+  <data name="FlxInvToCopy.ColumnInfo" xml:space="preserve">
+    <value>40,1,0,0,0,95,Columns:1{Width:79;Caption:"Item Code";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	2{Width:165;Caption:"الوصف";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	3{Width:64;Caption:"الوحدة";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	4{Width:165;Caption:"Item Name";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	5{Width:64;Caption:"Unit";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	6{Width:55;Caption:"S";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	7{Width:60;Caption:"Quantity";Style:"DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	8{Width:71;Caption:"Price";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	9{Width:60;Caption:"Discount %";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	10{Caption:"AvrageCost";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	11{Caption:"Pack";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	12{Caption:"relQty";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	13{Caption:"itmIvDsc";Visible:False;}	14{Caption:"dfUCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	15{Caption:"ItmDesE";Visible:False;}	16{Visible:False;}	17{Width:66;Visible:False;}	18{Caption:"DefUNum";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	19{Visible:False;}	20{Visible:False;}	21{Visible:False;}	22{Visible:False;}	23{Visible:False;}	24{Caption:"stkQty";Visible:False;Style:"DataType:System.Double;TextAlign:CenterCenter;";}	25{Visible:False;}	26{Visible:False;}	27{Width:83;Caption:"Date Exp";Visible:False;Style:"DataType:System.String;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	28{Caption:"Lot";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	29{Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	30{Caption:"LastCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	31{Caption:"Net Amount";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;ImageAlign:CenterCenter;";}	32{Caption:"ItmTyp";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	33{Width:40;Caption:"هدية";Visible:False;Style:"DataType:System.Boolean;TextAlign:CenterCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	34{Caption:"Wight _T";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	35{Width:60;Caption:"MakeNo";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	36{Caption:"تفاصيل أخرى";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	37{Width:80;Caption:"Serial";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	38{Width:71;Caption:"Tax";Style:"Format:""N2"";TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	39{Caption:"حالة العرض";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	</value>
   </data>
-  <data name="textBox_Barcode.ButtonCustom2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
+  <data name="FlxInvToCopy.StyleInfo" xml:space="preserve">
+    <value>Normal{Font:Tahoma, 8pt;}	Alternate{BackColor:Gainsboro;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	FrozenAlternate{}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	</value>
   </data>
   <data name="buttonItem_RemoveInvWaiter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2022,12 +2095,6 @@
         jfyh/w1p2vaOHX/o9yWtO//Q70dad/6h34tI8f+4ilW+VoKdvwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="FlxInvToCopy.ColumnInfo" xml:space="preserve">
-    <value>40,1,0,0,0,95,Columns:1{Width:79;Caption:"Item Code";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	2{Width:165;Caption:"الوصف";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	3{Width:64;Caption:"الوحدة";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	4{Width:165;Caption:"Item Name";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	5{Width:64;Caption:"Unit";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	6{Width:55;Caption:"S";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	7{Width:60;Caption:"Quantity";Style:"DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	8{Width:71;Caption:"Price";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	9{Width:60;Caption:"Discount %";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	10{Caption:"AvrageCost";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	11{Caption:"Pack";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	12{Caption:"relQty";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	13{Caption:"itmIvDsc";Visible:False;}	14{Caption:"dfUCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	15{Caption:"ItmDesE";Visible:False;}	16{Visible:False;}	17{Width:66;Visible:False;}	18{Caption:"DefUNum";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	19{Visible:False;}	20{Visible:False;}	21{Visible:False;}	22{Visible:False;}	23{Visible:False;}	24{Caption:"stkQty";Visible:False;Style:"DataType:System.Double;TextAlign:CenterCenter;";}	25{Visible:False;}	26{Visible:False;}	27{Width:83;Caption:"Date Exp";Visible:False;Style:"DataType:System.String;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	28{Caption:"Lot";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	29{Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	30{Caption:"LastCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	31{Caption:"Net Amount";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;ImageAlign:CenterCenter;";}	32{Caption:"ItmTyp";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	33{Width:40;Caption:"هدية";Visible:False;Style:"DataType:System.Boolean;TextAlign:CenterCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	34{Caption:"Wight _T";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	35{Width:60;Caption:"MakeNo";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	36{Caption:"تفاصيل أخرى";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	37{Width:80;Caption:"Serial";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	38{Width:71;Caption:"Tax";Style:"Format:""N2"";TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	39{Caption:"حالة العرض";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	</value>
-  </data>
-  <data name="FlxInvToCopy.StyleInfo" xml:space="preserve">
-    <value>Normal{Font:Tahoma, 8pt;}	Alternate{BackColor:Gainsboro;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	FrozenAlternate{}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	</value>
-  </data>
   <data name="dataGridView_ItemDet.ColumnInfo" xml:space="preserve">
     <value>35,1,0,0,0,100,Columns:0{Visible:False;}	1{Width:60;Caption:"Item Code";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	2{Width:100;Caption:"الوصف";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	3{Width:60;Caption:"الوحدة";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	4{Width:100;Caption:"Item Name";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	5{Width:60;Caption:"Unit";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	6{Width:50;Caption:"S";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	7{Width:50;Caption:"Quantity";Style:"DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	8{Width:50;Caption:"Price";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	9{Width:77;Caption:"Discount %";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	10{Caption:"AvrageCost";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	11{Caption:"Pack";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	12{Caption:"relQty";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	13{Caption:"itmIvDsc";Visible:False;}	14{Caption:"dfUCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	15{Caption:"ItmDesE";Visible:False;}	16{Visible:False;}	17{Width:66;Visible:False;}	18{Caption:"DefUNum";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	19{Visible:False;}	20{Visible:False;}	21{Visible:False;}	22{Visible:False;}	23{Visible:False;}	24{Caption:"stkQty";Visible:False;Style:"DataType:System.Double;TextAlign:CenterCenter;";}	25{Visible:False;}	26{Visible:False;}	27{Width:83;Caption:"Date Exp";Visible:False;Style:"DataType:System.String;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	28{Caption:"Lot";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	29{Width:77;Visible:False;}	30{Caption:"LastCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	31{Caption:"Net Amount";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;ImageAlign:CenterCenter;";}	32{Caption:"ItmTyp";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	33{Caption:"Wight";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	34{Caption:"Wight _T";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	</value>
   </data>
@@ -2090,7 +2157,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAD+
-        GAAAAk1TRnQBSQFMAgEBGAEAAbQBTQG0AU0BEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GAAAAk1TRnQBSQFMAgEBGAEAATwBTwE8AU8BEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAAXADAAEBAQABCAYAARwYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA

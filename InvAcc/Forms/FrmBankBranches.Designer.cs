@@ -25,14 +25,14 @@ partial class FrmBankBranches
 private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevComponents.DotNetBar.SuperGrid.Style.Background background1 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
-            DevComponents.DotNetBar.SuperGrid.Style.Background background2 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
-            DevComponents.DotNetBar.SuperGrid.Style.Background background3 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
-            DevComponents.DotNetBar.SuperGrid.Style.BorderColor borderColor1 = new DevComponents.DotNetBar.SuperGrid.Style.BorderColor();
-            DevComponents.DotNetBar.SuperGrid.Style.BorderColor borderColor2 = new DevComponents.DotNetBar.SuperGrid.Style.BorderColor();
-            DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle1 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
-            DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle2 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
-            DevComponents.DotNetBar.SuperGrid.Style.Background background4 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background5 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background6 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background7 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            DevComponents.DotNetBar.SuperGrid.Style.BorderColor borderColor3 = new DevComponents.DotNetBar.SuperGrid.Style.BorderColor();
+            DevComponents.DotNetBar.SuperGrid.Style.BorderColor borderColor4 = new DevComponents.DotNetBar.SuperGrid.Style.BorderColor();
+            DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle3 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
+            DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle4 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background8 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBankBranches));
             this.PanelSpecialContainer = new System.Windows.Forms.Panel();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
@@ -244,6 +244,7 @@ private void InitializeComponent()
             // 
             // 
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar1.ItemClick += new System.EventHandler(this.ribbonBar1_ItemClick);
             // 
             // txtTaxNo
             // 
@@ -293,7 +294,7 @@ private void InitializeComponent()
             this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label21.Location = new System.Drawing.Point(127, 92);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(92, 13);
+            this.label21.Size = new System.Drawing.Size(95, 13);
             this.label21.TabIndex = 909;
             this.label21.Text = "العمــولة البنكيـــة :";
             // 
@@ -324,7 +325,7 @@ private void InitializeComponent()
             this.label20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label20.Location = new System.Drawing.Point(358, 222);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(71, 13);
+            this.label20.Size = new System.Drawing.Size(73, 13);
             this.label20.TabIndex = 906;
             this.label20.Text = "الرمز البريدي :";
             // 
@@ -352,7 +353,7 @@ private void InitializeComponent()
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label7.Location = new System.Drawing.Point(194, 222);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 13);
+            this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 903;
             this.label7.Text = "الإيميل :";
             // 
@@ -370,7 +371,7 @@ private void InitializeComponent()
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label8.Location = new System.Drawing.Point(194, 170);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.Size = new System.Drawing.Size(34, 13);
             this.label8.TabIndex = 902;
             this.label8.Text = "البلد :";
             // 
@@ -392,7 +393,7 @@ private void InitializeComponent()
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label12.Location = new System.Drawing.Point(358, 196);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 13);
+            this.label12.Size = new System.Drawing.Size(48, 13);
             this.label12.TabIndex = 898;
             this.label12.Text = "الفاكس :";
             // 
@@ -454,7 +455,7 @@ private void InitializeComponent()
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label11.Location = new System.Drawing.Point(559, 222);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.Size = new System.Drawing.Size(46, 13);
             this.label11.TabIndex = 895;
             this.label11.Text = "ص . ب :";
             // 
@@ -464,7 +465,7 @@ private void InitializeComponent()
             this.label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label18.Location = new System.Drawing.Point(127, 118);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(88, 13);
+            this.label18.Size = new System.Drawing.Size(93, 13);
             this.label18.TabIndex = 890;
             this.label18.Text = "السعر الإفتراضي :";
             this.label18.Visible = false;
@@ -495,7 +496,7 @@ private void InitializeComponent()
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label10.Location = new System.Drawing.Point(358, 118);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.Size = new System.Drawing.Size(59, 13);
             this.label10.TabIndex = 887;
             this.label10.Text = "عمر الدين :";
             this.label10.Visible = false;
@@ -506,7 +507,7 @@ private void InitializeComponent()
             this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label16.Location = new System.Drawing.Point(559, 118);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(67, 13);
+            this.label16.Size = new System.Drawing.Size(70, 13);
             this.label16.TabIndex = 886;
             this.label16.Text = "حد المديونية :";
             // 
@@ -535,7 +536,7 @@ private void InitializeComponent()
             this.label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label15.Location = new System.Drawing.Point(127, 144);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 13);
+            this.label15.Size = new System.Drawing.Size(77, 13);
             this.label15.TabIndex = 883;
             this.label15.Text = "الرصيد الحالي :";
             // 
@@ -563,7 +564,7 @@ private void InitializeComponent()
             this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label14.Location = new System.Drawing.Point(358, 144);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(32, 13);
+            this.label14.Size = new System.Drawing.Size(33, 13);
             this.label14.TabIndex = 881;
             this.label14.Text = "دائن :";
             // 
@@ -591,7 +592,7 @@ private void InitializeComponent()
             this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label17.Location = new System.Drawing.Point(559, 144);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(34, 13);
+            this.label17.Size = new System.Drawing.Size(37, 13);
             this.label17.TabIndex = 879;
             this.label17.Text = "مدين :";
             // 
@@ -609,7 +610,7 @@ private void InitializeComponent()
             this.label19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label19.Location = new System.Drawing.Point(559, 92);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(73, 13);
+            this.label19.Size = new System.Drawing.Size(81, 13);
             this.label19.TabIndex = 96;
             this.label19.Text = "إسم المسؤول :";
             // 
@@ -633,7 +634,7 @@ private void InitializeComponent()
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(334, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 90;
             this.label3.Text = "البنك الرئيسي :";
             // 
@@ -656,7 +657,7 @@ private void InitializeComponent()
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label4.Location = new System.Drawing.Point(559, 14);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 88;
             this.label4.Text = "حساب الفرع :";
             // 
@@ -678,7 +679,7 @@ private void InitializeComponent()
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(559, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
+            this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 87;
             this.label2.Text = "الإسم الإنجليزي :";
             // 
@@ -700,7 +701,7 @@ private void InitializeComponent()
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(559, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 86;
             this.label1.Text = "الإسم العربي :";
             // 
@@ -764,7 +765,7 @@ private void InitializeComponent()
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label5.Location = new System.Drawing.Point(358, 247);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 94;
             this.label5.Text = "الســـبب :";
             // 
@@ -777,7 +778,7 @@ private void InitializeComponent()
             this.checkBoxX_Stoped.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.checkBoxX_Stoped.Location = new System.Drawing.Point(442, 244);
             this.checkBoxX_Stoped.Name = "checkBoxX_Stoped";
-            this.checkBoxX_Stoped.Size = new System.Drawing.Size(65, 15);
+            this.checkBoxX_Stoped.Size = new System.Drawing.Size(71, 15);
             this.checkBoxX_Stoped.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBoxX_Stoped.TabIndex = 92;
             this.checkBoxX_Stoped.Text = "إيقاف الفرع ";
@@ -1380,15 +1381,15 @@ private void InitializeComponent()
             // DGV_Main
             // 
             this.DGV_Main.BackColor = System.Drawing.Color.Transparent;
-            background1.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.VerticalCenter;
-            background1.Color1 = System.Drawing.Color.Silver;
-            background1.Color2 = System.Drawing.Color.White;
-            this.DGV_Main.DefaultVisualStyles.GroupByStyles.Default.Background = background1;
-            background2.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.Center;
-            background2.Color1 = System.Drawing.Color.LightSteelBlue;
-            this.DGV_Main.DefaultVisualStyles.RowStyles.Default.Background = background2;
-            background3.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.DGV_Main.DefaultVisualStyles.RowStyles.MouseOver.Background = background3;
+            background5.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.VerticalCenter;
+            background5.Color1 = System.Drawing.Color.Silver;
+            background5.Color2 = System.Drawing.Color.White;
+            this.DGV_Main.DefaultVisualStyles.GroupByStyles.Default.Background = background5;
+            background6.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.Center;
+            background6.Color1 = System.Drawing.Color.LightSteelBlue;
+            this.DGV_Main.DefaultVisualStyles.RowStyles.Default.Background = background6;
+            background7.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.DGV_Main.DefaultVisualStyles.RowStyles.MouseOver.Background = background7;
             this.DGV_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGV_Main.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.DGV_Main.Font = new System.Drawing.Font("Tahoma", 9F);
@@ -1415,28 +1416,28 @@ private void InitializeComponent()
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CaptionStyles.ReadOnly.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CellStyles.Selected.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderRowStyles.Default.RowHeader.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.True;
-            borderColor1.Bottom = System.Drawing.Color.Black;
-            borderColor1.Left = System.Drawing.Color.Black;
-            borderColor1.Right = System.Drawing.Color.Black;
-            borderColor1.Top = System.Drawing.Color.Black;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.BorderColor = borderColor1;
+            borderColor3.Bottom = System.Drawing.Color.Black;
+            borderColor3.Left = System.Drawing.Color.Black;
+            borderColor3.Right = System.Drawing.Color.Black;
+            borderColor3.Top = System.Drawing.Color.Black;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.BorderColor = borderColor3;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.TextColor = System.Drawing.Color.SteelBlue;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.FilterColumnHeaderStyles.Default.TextColor = System.Drawing.Color.White;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.FooterStyles.Default.TextColor = System.Drawing.Color.White;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.False;
-            borderColor2.Bottom = System.Drawing.Color.Black;
-            borderColor2.Left = System.Drawing.Color.Black;
-            borderColor2.Right = System.Drawing.Color.Black;
-            borderColor2.Top = System.Drawing.Color.Black;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.BorderColor = borderColor2;
-            baseTreeButtonVisualStyle1.BorderColor = System.Drawing.Color.White;
-            baseTreeButtonVisualStyle1.LineColor = System.Drawing.Color.White;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.CircleTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle1;
+            borderColor4.Bottom = System.Drawing.Color.Black;
+            borderColor4.Left = System.Drawing.Color.Black;
+            borderColor4.Right = System.Drawing.Color.Black;
+            borderColor4.Top = System.Drawing.Color.Black;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.BorderColor = borderColor4;
+            baseTreeButtonVisualStyle3.BorderColor = System.Drawing.Color.White;
+            baseTreeButtonVisualStyle3.LineColor = System.Drawing.Color.White;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.CircleTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle3;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.HeaderHLinePattern = DevComponents.DotNetBar.SuperGrid.Style.LinePattern.None;
-            background4.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            baseTreeButtonVisualStyle2.Background = background4;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.SquareTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle2;
+            background8.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            baseTreeButtonVisualStyle4.Background = background8;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.SquareTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle4;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.TextColor = System.Drawing.Color.White;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.TitleStyles.Default.RowHeaderStyle.TextAlignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
             // 

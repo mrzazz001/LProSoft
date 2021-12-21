@@ -112,33 +112,18 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="ribbonBar1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="netResize1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="netResize1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>136, 368</value>
   </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>107</value>
   </metadata>
-  <metadata name="panelEx3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>894, 95</value>
-  </metadata>
-  <metadata name="DGV_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
-  </metadata>
-  <metadata name="ribbonBar_DGV.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>126, 134</value>
-  </metadata>
-  <metadata name="superTabControl_DGV.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>261, 134</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Button_ExportTable2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAASURJREFUeF7t
@@ -499,96 +484,24 @@
         icl/AW2jiWSLoTnWAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="expandableSplitter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>433, 134</value>
-  </metadata>
-  <metadata name="panelEx2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>593, 134</value>
-  </metadata>
-  <metadata name="textBox_ID.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>584, 173</value>
-  </metadata>
-  <metadata name="switchButton_Lock.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>693, 173</value>
-  </metadata>
   <data name="FlxDat.ColumnInfo" xml:space="preserve">
     <value>3,0,0,0,0,95,Columns:0{Width:70;Caption:"تاريخ الصلاحية";Style:"DataType:System.String;BackColor:ControlLight;Margins:1, 0, 0, 0;TextAlign:CenterCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;Border:Flat,1,ButtonShadow,Both;";StyleFixed:"TextAlign:CenterCenter;";}	1{Width:71;Caption:"الكمية";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	2{Width:70;Caption:"رقم التعريف";AllowEditing:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	</value>
   </data>
   <data name="FlxDat.StyleInfo" xml:space="preserve">
-    <value>Normal{Font:Tahoma, 8pt;}	Alternate{BackColor:Gainsboro;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;BackgroundImageLayout:Hide;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:Control;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	FrozenAlternate{}	</value>
+    <value>Normal{Font:Tahoma, 8pt;}	Alternate{BackColor:Gainsboro;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;BackgroundImageLayout:Hide;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	FrozenAlternate{}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:Control;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	</value>
   </data>
-  <metadata name="superTabControl_Info.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>845, 173</value>
-  </metadata>
-  <metadata name="superTabControlPanel3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>663, 329</value>
-  </metadata>
   <data name="FlxStkQty.ColumnInfo" xml:space="preserve">
     <value>3,1,0,0,0,95,Columns:0{Width:76;Caption:"المستودع";Visible:False;Style:"BackColor:Gainsboro;Margins:1, 0, 0, 0;TextAlign:CenterCenter;TextEffect:Flat;TextDirection:Normal;ImageAlign:CenterCenter;Trimming:None;Border:Flat,1,ControlDark,Both;";StyleFixed:"BackColor:Control;Margins:1, 0, 0, 0;TextAlign:CenterCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";}	1{Width:109;Caption:"الكمية المتاحة";Style:"Format:""N2"";DataType:System.Double;Margins:1, 0, 0, 0;TextAlign:CenterCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;Border:Flat,1,ControlDark,Both;";StyleFixed:"TextAlign:CenterCenter;";}	2{Width:80;Caption:"المستودع";Style:"Format:""N2"";Margins:1, 0, 0, 0;TextAlign:CenterCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;Border:Flat,1,ControlDark,Both;";StyleFixed:"TextAlign:CenterCenter;";}	</value>
   </data>
   <data name="FlxStkQty.StyleInfo" xml:space="preserve">
-    <value>Normal{Font:Tahoma, 8pt;BackColor:Transparent;BackgroundImageLayout:Hide;}	Alternate{}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;BackgroundImageLayout:Hide;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:Control;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	FrozenAlternate{}	</value>
+    <value>Normal{Font:Tahoma, 8pt;BackColor:Transparent;BackgroundImageLayout:Hide;}	Alternate{}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;BackgroundImageLayout:Hide;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	FrozenAlternate{}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:Control;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	</value>
   </data>
   <data name="dataGridView_ItemDet.ColumnInfo" xml:space="preserve">
     <value>35,1,0,0,0,95,Columns:0{Visible:False;}	1{Width:60;Caption:"Item Code";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	2{Width:100;Caption:"الوصف";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	3{Width:60;Caption:"الوحدة";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	4{Width:100;Caption:"Item Name";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	5{Width:60;Caption:"Unit";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	6{Width:50;Caption:"S";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	7{Width:50;Caption:"Quantity";Style:"DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	8{Width:50;Caption:"Price";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	9{Width:77;Caption:"Discount %";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	10{Caption:"AvrageCost";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	11{Caption:"Pack";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	12{Caption:"relQty";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	13{Caption:"itmIvDsc";Visible:False;}	14{Caption:"dfUCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	15{Caption:"ItmDesE";Visible:False;}	16{Visible:False;}	17{Width:66;Visible:False;}	18{Caption:"DefUNum";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	19{Visible:False;}	20{Visible:False;}	21{Visible:False;}	22{Visible:False;}	23{Visible:False;}	24{Caption:"stkQty";Visible:False;Style:"DataType:System.Double;TextAlign:CenterCenter;";}	25{Visible:False;}	26{Visible:False;}	27{Width:83;Caption:"Date Exp";Visible:False;Style:"DataType:System.String;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	28{Caption:"Lot";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	29{Width:77;Visible:False;}	30{Caption:"LastCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	31{Caption:"Net Amount";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;ImageAlign:CenterCenter;";}	32{Caption:"ItmTyp";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	33{Caption:"Wight";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	34{Caption:"Wight _T";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	</value>
   </data>
   <data name="dataGridView_ItemDet.StyleInfo" xml:space="preserve">
-    <value>Normal{Font:Tahoma, 8pt;}	Alternate{BackColor:Gainsboro;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	FrozenAlternate{}	</value>
+    <value>Normal{Font:Tahoma, 8pt;}	Alternate{BackColor:Gainsboro;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	FrozenAlternate{}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	</value>
   </data>
-  <metadata name="superTabControlPanel5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 212</value>
-  </metadata>
-  <metadata name="superTabControl_CostSts.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>196, 212</value>
-  </metadata>
-  <metadata name="superTabControlPanel6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>384, 212</value>
-  </metadata>
-  <metadata name="switchButton_Tax.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>563, 212</value>
-  </metadata>
-  <metadata name="button_CustC5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>709, 212</value>
-  </metadata>
-  <metadata name="txtCredit5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>841, 212</value>
-  </metadata>
-  <metadata name="button_CustD5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 251</value>
-  </metadata>
-  <metadata name="txtDebit5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>911, 251</value>
-  </metadata>
-  <metadata name="checkBox_CostGaidTax.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>308, 251</value>
-  </metadata>
-  <metadata name="superTabControlPanel7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>483, 251</value>
-  </metadata>
-  <metadata name="switchButton_Dis.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>662, 251</value>
-  </metadata>
-  <metadata name="txtCredit6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>806, 251</value>
-  </metadata>
-  <metadata name="txtDebit6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>324, 290</value>
-  </metadata>
-  <metadata name="txtTotDis.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 290</value>
-  </metadata>
-  <metadata name="txtTotDisLoc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 368</value>
-  </metadata>
-  <metadata name="checkBox_GaidDis.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>842, 329</value>
-  </metadata>
-  <metadata name="superTabControlPanel4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>303, 329</value>
-  </metadata>
-  <metadata name="txtRemark.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>196, 329</value>
-  </metadata>
   <data name="txtRemark.ButtonCustom.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAb9JREFUOE+N
@@ -622,60 +535,6 @@
         5R9+7JGmPgNM6AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="superTabControlPanel2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 329</value>
-  </metadata>
-  <metadata name="doubleInput_LostOrWin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>482, 329</value>
-  </metadata>
-  <metadata name="txtTotalQ.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>737, 290</value>
-  </metadata>
-  <metadata name="superTabControlPanel1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>558, 290</value>
-  </metadata>
-  <metadata name="button_CustC1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>426, 290</value>
-  </metadata>
-  <metadata name="button_CustD1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>839, 290</value>
-  </metadata>
-  <metadata name="txtCredit1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>219, 290</value>
-  </metadata>
-  <metadata name="txtDebit1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>117, 290</value>
-  </metadata>
-  <metadata name="txtPaymentLoc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>452, 173</value>
-  </metadata>
-  <metadata name="button_SrchCustNo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>150, 251</value>
-  </metadata>
-  <metadata name="doubleInput_Rate.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>147, 173</value>
-  </metadata>
-  <metadata name="CmbInvPrice.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>710, 56</value>
-  </metadata>
-  <metadata name="CmbCostC.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>129, 17</value>
-  </metadata>
-  <metadata name="CmbCurr.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>238, 17</value>
-  </metadata>
-  <metadata name="CmbLegate.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>338, 17</value>
-  </metadata>
-  <metadata name="checkBox_NetWork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>295, 173</value>
-  </metadata>
-  <metadata name="checkBox_Credit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>452, 17</value>
-  </metadata>
-  <metadata name="checkBox_Chash.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>593, 17</value>
-  </metadata>
   <data name="pictureBox_Credit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkK
@@ -3536,26 +3395,11 @@
         gCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgP/2Q==
 </value>
   </data>
-  <metadata name="txtInvCost.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>734, 17</value>
-  </metadata>
-  <metadata name="txtCustNet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>840, 17</value>
-  </metadata>
-  <metadata name="txtCustRep.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>950, 17</value>
-  </metadata>
-  <metadata name="textBox2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="textBox1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>116, 56</value>
-  </metadata>
   <data name="FlxInv.ColumnInfo" xml:space="preserve">
     <value>39,1,0,0,0,95,Columns:1{Width:79;Caption:"Item Code";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	2{Width:165;Caption:"الوصف";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	3{Width:64;Caption:"الوحدة";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	4{Width:165;Caption:"Item Name";Style:"Margins:1, 0, 0, 0;TextAlign:GeneralCenter;TextEffect:Flat;TextDirection:Normal;Trimming:None;";StyleFixed:"TextAlign:CenterCenter;";}	5{Width:64;Caption:"Unit";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	6{Width:55;Caption:"S";Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	7{Width:60;Caption:"Quantity";Style:"DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	8{Width:71;Caption:"Price";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	9{Width:60;Caption:"Discount %";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	10{Caption:"AvrageCost";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	11{Caption:"Pack";Visible:False;Style:"Format:""N2"";DataType:System.Double;TextAlign:GeneralCenter;";}	12{Caption:"relQty";Visible:False;Style:"Format:""N2"";DataType:System.Int32;TextAlign:GeneralCenter;";}	13{Caption:"itmIvDsc";Visible:False;}	14{Caption:"dfUCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	15{Caption:"ItmDesE";Visible:False;}	16{Visible:False;}	17{Visible:False;}	18{Caption:"DefUNum";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	19{Visible:False;}	20{Visible:False;}	21{Visible:False;}	22{Visible:False;}	23{Visible:False;}	24{Caption:"stkQty";Visible:False;Style:"DataType:System.Double;TextAlign:CenterCenter;";}	25{Visible:False;}	26{Visible:False;}	27{Width:83;Caption:"Date Exp";Visible:False;Style:"DataType:System.String;TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	28{Caption:"Lot";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	29{Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	30{Caption:"LastCost";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	31{Caption:"Net Amount";Style:"Format:""N2"";DataType:System.Double;TextAlign:CenterCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;ImageAlign:CenterCenter;";}	32{Caption:"ItmTyp";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	33{Width:40;Caption:"هدية";Visible:False;Style:"DataType:System.Boolean;TextAlign:CenterCenter;ImageAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	34{Caption:"Wight _T";Visible:False;Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	35{Width:60;Caption:"MakeNo";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	36{Caption:"Other Details";Visible:False;Style:"TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	37{Caption:"Serial";Visible:False;}	38{Width:71;Caption:"Tax";Style:"Format:""N2"";TextAlign:CenterCenter;";StyleFixed:"TextAlign:CenterCenter;";}	</value>
   </data>
   <data name="FlxInv.StyleInfo" xml:space="preserve">
-    <value>Normal{Font:Tahoma, 8pt;}	Alternate{BackColor:Gainsboro;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	FrozenAlternate{}	</value>
+    <value>Normal{Font:Tahoma, 8pt;}	Alternate{BackColor:Gainsboro;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	FrozenAlternate{}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	FirstCustomStyle{}	</value>
   </data>
   <data name="pictureBox_NetWord.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3847,39 +3691,6 @@
         IgCIiAIiIAiIgCIiA//Z
 </value>
   </data>
-  <metadata name="txtDueAmount.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>215, 56</value>
-  </metadata>
-  <metadata name="txtTotalAm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>347, 56</value>
-  </metadata>
-  <metadata name="txtDiscountVal.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>458, 56</value>
-  </metadata>
-  <metadata name="txtDiscountP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>589, 56</value>
-  </metadata>
-  <metadata name="txtDiscountValLoc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>830, 56</value>
-  </metadata>
-  <metadata name="txtTotalAmLoc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 173</value>
-  </metadata>
-  <metadata name="txtDueAmountLoc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
-  </metadata>
-  <metadata name="txtTotTax.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>167, 95</value>
-  </metadata>
-  <metadata name="txtTotTaxLoc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>269, 95</value>
-  </metadata>
-  <metadata name="ribbonBar_Tasks.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>390, 95</value>
-  </metadata>
-  <metadata name="superTabControl_Main1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>530, 95</value>
-  </metadata>
   <data name="button_Repetition.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -4132,9 +3943,6 @@
         j01OfjklJWUu/T2d4kkKJcW9FP8VDBnyG0adZLZRXIKdAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="superTabControl_Main2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>712, 95</value>
-  </metadata>
   <data name="Button_First.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -4279,12 +4087,6 @@
         WGFksi5BAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="barTaskList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>693, 134</value>
-  </metadata>
-  <metadata name="panelDockContainer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>805, 134</value>
-  </metadata>
   <data name="Panel_Navigate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -4294,10 +4096,10 @@
         yaZJUQJGRtKK4JvxYFl2iAPsMFTdoxEAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="prnt_prev.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="prnt_prev.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>246, 368</value>
   </metadata>
-  <metadata name="prnt_doc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="prnt_doc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>349, 368</value>
   </metadata>
   <data name="prnt_prev.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -4473,18 +4275,18 @@
         wf+0BQAAgAUAAIAFAACAAQAAgAHB/4ABAACAAQAAgAEAALwBAAC8AQAAvAHB/4ABbP///5H/
 </value>
   </data>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>449, 368</value>
   </metadata>
-  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>536, 368</value>
   </metadata>
   <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAD+
-        GAAAAk1TRnQBSQFMAgEBGAEAAYQBCQGEAQkBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GAAAAk1TRnQBSQFMAgEBGAEAAYwBCQGMAQkBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAAXADAAEBAQABCAYAARwYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -4593,22 +4395,22 @@
         AeABBwH8AQEBAwEfBP8B/gEBAYcBHwL/AYABAQH/AQEB/wFJB/8B4wj/Cw==
 </value>
   </data>
-  <metadata name="dotNetBarManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="dotNetBarManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>646, 368</value>
   </metadata>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>809, 368</value>
   </metadata>
-  <metadata name="contextMenuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="contextMenuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 407</value>
   </metadata>
-  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 407</value>
   </metadata>
-  <metadata name="timerInfoBallon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="timerInfoBallon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>308, 407</value>
   </metadata>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>443, 407</value>
   </metadata>
 </root>

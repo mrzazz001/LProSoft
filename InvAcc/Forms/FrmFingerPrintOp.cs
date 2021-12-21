@@ -189,8 +189,9 @@ namespace InvAcc.Forms
 
 		private Stock_DataDataContext dbs = new Stock_DataDataContext(VarGeneral.BranchCS);
         private System.Windows.Forms.CheckBox checkBox1;
+		private System.Windows.Forms.CheckBox checkBox2;
 #pragma warning disable CS0414 // The field 'FrmFingerPrintOp.tx' is assigned but its value is never used
-        private string tx = "SELECT   [tbl_Items].[ItemID] ,[ItemDisplayID],[Arb_Des]\r\n      ,[Eng_Des]\r\n ,[Unit]\r\n      ,[UnitPrice]\r\n      ,[UnitBaracod]\r\n      FROM[tbl_Items]\r\ninner join[tbl_ItemUnits] on[tbl_ItemUnits].[ItemID]=[tbl_Items].[ItemID]\r\n        inner join[tbl_ItemsPricessAndCosts] on[tbl_ItemsPricessAndCosts].[ItemID]=[tbl_Items].[ItemID]\r\n        WHERE[TyppeName]='التكلفة'";
+		private string tx = "SELECT   [tbl_Items].[ItemID] ,[ItemDisplayID],[Arb_Des]\r\n      ,[Eng_Des]\r\n ,[Unit]\r\n      ,[UnitPrice]\r\n      ,[UnitBaracod]\r\n      FROM[tbl_Items]\r\ninner join[tbl_ItemUnits] on[tbl_ItemUnits].[ItemID]=[tbl_Items].[ItemID]\r\n        inner join[tbl_ItemsPricessAndCosts] on[tbl_ItemsPricessAndCosts].[ItemID]=[tbl_Items].[ItemID]\r\n        WHERE[TyppeName]='التكلفة'";
 #pragma warning restore CS0414 // The field 'FrmFingerPrintOp.tx' is assigned but its value is never used
 
 		public T_Item Datathis_Itm
@@ -288,6 +289,31 @@ namespace InvAcc.Forms
 			base.Close();
 		}
 
+		void clearemptyrows()
+			 
+		{
+			for (int i = ExcelGridView.Rows.Count - 1; i > -1; i--)
+			{
+				DataGridViewRow row = ExcelGridView.Rows[i];
+
+				
+				bool f = false;
+				for (int j=0;j<row.Cells.Count;j++)
+				{	
+				if(row.Cells[j].Value!=null)
+					{
+						if (row.Cells[j].Value != "")
+						{
+							f = true;
+							break;
+						}
+					}
+				}
+				if(!f)
+					ExcelGridView.Rows.RemoveAt(i);
+
+			}
+		}
 		private void button_OK_Click(object sender, EventArgs e)
 		{
 			try
@@ -378,10 +404,9 @@ namespace InvAcc.Forms
 							this.Data_this_Itm.BarCod4 = "";
 							this.Data_this_Itm.BarCod5 = "";
 							this.State = FormState.New;
-							this.Data_this_Itm.Itm_No = num.ToString();
-							num++;
 							this.Data_this_Itm.Arb_Des = this.ExcelGridView.Rows[i].Cells[this.textBox_NameA.Text].Value.ToString().Trim();
 							this.Data_this_Itm.Eng_Des = this.ExcelGridView.Rows[i].Cells[this.textBox_NameE.Text].Value.ToString().Trim();
+							if (Data_this_Itm.Arb_Des == "" && Data_this_Itm.Eng_Des == "") continue;
 							string s=this.ExcelGridView.Rows[i].Cells[this.txtUnit1.Text].Value.ToString().Trim();
 							if (s == "")
 							{
@@ -398,8 +423,24 @@ namespace InvAcc.Forms
 							{
 								this.Data_this_Itm.ItmCat = new int?(1);
 							}
+							try
+							{
+								if (this.textBox_ItmNo.Text.Trim() != "")
+								{
+									this.Data_this_Itm.Itm_No = this.ExcelGridView.Rows[i].Cells[this.textBox_ItmNo.Text].Value.ToString().Trim();
+								}
+								else
+								{
+									this.Data_this_Itm.Itm_No = db.MaxItemNo.ToString();
+									num++;
 
-
+								}
+							}
+							catch
+							{
+								this.Data_this_Itm.Itm_No = db.MaxItemNo.ToString();
+								num++;
+							}
 							try
 							{
 								if (this.txtPrice1.Text.Trim() != "")
@@ -679,7 +720,11 @@ namespace InvAcc.Forms
 									this.Data_this_Itm.Price5 = new double?(0);
 								}
 							}
-					
+
+						if(checkBox2.Checked)
+
+								this.Data_this_Itm.Lot = new int?(1);
+
 							this.Data_this_Itm.CompanyID = new int?(1);
 							this.Data_this_Itm.ItmImg = null;
 							this.Data_this_Itm.IsPoints = new bool?(true);
@@ -697,8 +742,16 @@ namespace InvAcc.Forms
 							}
 							else
 							{
-								this.dbs.T_Items.InsertOnSubmit(this.Data_this_Itm);
-								
+								try
+								{
+									this.dbs.T_Items.InsertOnSubmit(this.Data_this_Itm);
+									this.dbs.Log = VarGeneral.DebugLog;
+									this.dbs.SubmitChanges(ConflictMode.ContinueOnConflict);
+								}
+								catch
+								{
+									//MessageBox.Show("Test");
+								}
 							}
 							try
 							{
@@ -922,9 +975,14 @@ namespace InvAcc.Forms
 
 		private void ExcelGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
+			try
+			{
 				Activcontrol.Text = ExcelGridView.Columns[e.ColumnIndex].Name.ToString();
-			Activcontrol.Focus();
-						SendKeys.Send("{Tab}");
+				Activcontrol.Focus();
+				SendKeys.Send("{Tab}");
+			}
+			catch { }
+
 		}
 
 		private void ExcelGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -1231,14 +1289,15 @@ namespace InvAcc.Forms
 
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonX_ImportFile = new DevComponents.DotNetBar.ButtonX();
             this.textBox_SearchFilePath = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox_Cat = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.txtDistributors = new System.Windows.Forms.TextBox();
@@ -1303,7 +1362,7 @@ namespace InvAcc.Forms
             this.button_OK = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExcelGridView)).BeginInit();
@@ -1365,6 +1424,7 @@ namespace InvAcc.Forms
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.textBox_Cat);
             this.groupBox1.Controls.Add(this.label29);
@@ -1427,10 +1487,22 @@ namespace InvAcc.Forms
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(172, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(576, 248);
+            this.groupBox1.Size = new System.Drawing.Size(576, 272);
             this.groupBox1.TabIndex = 867;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "تخصيص";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(7, 220);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(41, 17);
+            this.checkBox1.TabIndex = 920;
+            this.checkBox1.Text = "R1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // textBox_Cat
             // 
@@ -2168,37 +2240,37 @@ namespace InvAcc.Forms
             this.ExcelGridView.AllowUserToDeleteRows = false;
             this.ExcelGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.ExcelGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ExcelGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ExcelGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.ExcelGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ExcelGridView.DefaultCellStyle = dataGridViewCellStyle8;
-            this.ExcelGridView.Location = new System.Drawing.Point(4, 277);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ExcelGridView.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ExcelGridView.Location = new System.Drawing.Point(4, 301);
             this.ExcelGridView.MultiSelect = false;
             this.ExcelGridView.Name = "ExcelGridView";
             this.ExcelGridView.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ExcelGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ExcelGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.ExcelGridView.RowHeadersVisible = false;
-            this.ExcelGridView.Size = new System.Drawing.Size(747, 224);
+            this.ExcelGridView.Size = new System.Drawing.Size(747, 200);
             this.ExcelGridView.TabIndex = 854;
             this.ExcelGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExcelGridView_CellContentClick);
             this.ExcelGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExcelGridView_CellContentDoubleClick);
@@ -2256,17 +2328,15 @@ namespace InvAcc.Forms
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // checkBox1
+            // checkBox2
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(7, 220);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(41, 17);
-            this.checkBox1.TabIndex = 920;
-            this.checkBox1.Text = "R1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(342, 244);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(210, 17);
+            this.checkBox2.TabIndex = 921;
+            this.checkBox2.Text = "تفعيل تاريخ الصلاحية لجميع الاصناف";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // FrmFingerPrintOp
             // 

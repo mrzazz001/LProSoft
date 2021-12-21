@@ -56,8 +56,7 @@ private void InitializeComponent()
             this.button_SrchUsrNo = new DevComponents.DotNetBar.ButtonX();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtUserNo = new System.Windows.Forms.TextBox();
-            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);  this.netResize1.LabelsAutoEllipse = false;
-            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
+            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.ribbonBar1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox_Date.SuspendLayout();
@@ -104,12 +103,13 @@ private void InitializeComponent()
             this.ribbonBar1.Controls.Add(this.txtUserName);
             this.ribbonBar1.Controls.Add(this.txtUserNo);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonBar1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
             this.ribbonBar1.Size = new System.Drawing.Size(562, 313);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 1099;
+            this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -120,6 +120,7 @@ private void InitializeComponent()
             // 
             // 
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar1.ItemClick += new System.EventHandler(this.ribbonBar1_ItemClick);
             // 
             // ButExit
             // 
@@ -490,7 +491,9 @@ private void InitializeComponent()
             // 
             // netResize1
             // 
+            this.netResize1.LabelsAutoEllipse = false;
             this.netResize1.ParentControl = this;
+            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 
             // FrmGEDCommMnd
             // 
@@ -520,6 +523,7 @@ private void InitializeComponent()
             this.CmbDeleted.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).EndInit();
             this.ResumeLayout(false);
+
         }//###########&&&&&&&&&&
 
 }

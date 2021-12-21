@@ -2,10 +2,12 @@ using CrystalDecisions.Shared;
 using DevComponents.DotNetBar;
 using Framework.Date;
 using Framework.UI;
-using InvAcc.GeneralM;
-using InvAcc.Stock_Data;
+ 
 using Library.RepShow;
 using Microsoft.Win32;
+using ProShared;
+using ProShared.GeneralM;
+using ProShared.Stock_Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +24,7 @@ namespace InvAcc.Forms
         {
         }    private void langloads(object sender, EventArgs e)
         {
-             avs(GeneralM.VarGeneral.currentintlanguage);
+             avs(ProShared.GeneralM.VarGeneral.currentintlanguage);
         }
    
         public class ColumnDictinary
@@ -168,7 +170,7 @@ namespace InvAcc.Forms
                 VarGeneral.DebLog.writeLog("Load:", error, enable: true);
                 MessageBox.Show(error.Message);
             }
-            avs(GeneralM.VarGeneral.currentintlanguage);
+            avs(ProShared.GeneralM.VarGeneral.currentintlanguage);
         }
         protected override void OnParentRightToLeftChanged(EventArgs e)
         {
@@ -359,8 +361,8 @@ string where = "dbo.T_INVHED.InvTyp =1 or dbo.T_INVHED.InvTyp=2 or dbo.T_INVHED.
                 scc = scc.Replace("ffffffffffffffffff", "");
 
 
-                DataTable tb =     DBUdate.DbUpdates.execute(scc, VarGeneral.BranchCS);
-           DataTable tb2 = DBUdate.DbUpdates.execute(sccmd, VarGeneral.BranchCS);
+                DataTable tb = ProShared.DBUdate.DbUpdates.execute(scc, VarGeneral.BranchCS);
+           DataTable tb2 = ProShared.DBUdate. DbUpdates.execute(sccmd, VarGeneral.BranchCS);
                 if (tb.Rows.Count != 0)
                 {
 

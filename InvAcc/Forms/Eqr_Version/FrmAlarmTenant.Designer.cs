@@ -183,6 +183,7 @@ private void InitializeComponent()
             // 
             // 
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar1.ItemClick += new System.EventHandler(this.ribbonBar1_ItemClick);
             // 
             // txtGDate
             // 
@@ -863,6 +864,7 @@ private void InitializeComponent()
             this.Button_Search.SymbolSize = 15F;
             this.Button_Search.Text = "بحث";
             this.Button_Search.Tooltip = "البحث عن سجل ما";
+            this.Button_Search.Click += new System.EventHandler(this.Button_Search_Click_1);
             // 
             // buttonItem_Print
             // 

@@ -1044,7 +1044,7 @@ namespace InvAcc.Forms
         {
             this._InvSetting = new T_INVSETTING();
             this._SysSetting = new T_SYSSETTING();
-            this._InvSetting = this.db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+            this._InvSetting = this.db.StockInvSetting( VarGeneral.InvTyp);
             this._SysSetting = this.db.SystemSettingStock();
         }
         private void RelayInv()

@@ -317,7 +317,7 @@ namespace InvAcc.Controls
                 chk_Stoped.OffText = ((LangArEn == 0) ? "إيقاف الطباعة" : "Printing Stoped");
                 checkBox_previewPrint.Visible = false;
                 chk_Stoped.Visible = true;
-                if (db.StockInvSetting(VarGeneral.UserID, 1).nTyp.Substring(2, 1) == "1")
+                if (db.StockInvSetting( 1).nTyp.Substring(2, 1) == "1")
                 {
                     groupBox_PrintType.Visible = false;
                     picture_SSS.Visible = true;

@@ -5,8 +5,8 @@ using DevComponents.DotNetBar.Controls;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.DotNetBar.SuperGrid.Style;
 using DevComponents.Editors;
-using ProShared.GeneralM;using ProShared;
-using ProShared.Stock_Data;
+using ProShared.GeneralM; using ProShared.Stock_Data;
+//
 using Library.RepShow;
 using SSSDateTime.Date;
 using System;
@@ -26,7 +26,6 @@ namespace InvAcc.Forms
 }
         private void langloads(object sender, EventArgs e)
         {
-              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public class ColumnDictinary
@@ -56,7 +55,7 @@ namespace InvAcc.Forms
         private FormState statex;
         public List<Control> controls;
         public Control codeControl = new Control();
-        private T_INVSETTING _InvSetting = new T_INVSETTING();
+        private  T_INVSETTING _InvSetting = new  T_INVSETTING();
         private T_Company _Company = new T_Company();
         private T_AinsData _AinDet = new T_AinsData();
         private List<T_AinTyp> listAinTyp = new List<T_AinTyp>();
@@ -69,7 +68,7 @@ namespace InvAcc.Forms
         private Stock_DataDataContext dbInstance;
         private List<string> pkeys = new List<string>();
         private Rate_DataDataContext dbInstanceRate;
-        private T_User permission = new T_User();
+        private T_User  permission = new T_User();
        // private IContainer components = null;
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -295,7 +294,7 @@ namespace InvAcc.Forms
                 return dbInstanceRate;
             }
         }
-        public T_User Permmission
+        public T_User  Permmission
         {
             get
             {
@@ -401,21 +400,7 @@ namespace InvAcc.Forms
         }
         public void RefreshPKeys()
         {
-            PKeys.Clear();
-            var qkeys = from item in db.T_EqarsDatas
-                        orderby item.EqarNo
-                        select new
-                        {
-                            Code = item.EqarNo + string.Empty
-                        };
-            int count = 0;
-            foreach (var item2 in qkeys)
-            {
-                count++;
-                PKeys.Add(item2.Code);
-            }
-            Label_Count.Text = string.Concat(count);
-            UpdateVcr();
+          
         }
         protected bool ContinueIfEditOrNew()
         {
@@ -975,26 +960,11 @@ namespace InvAcc.Forms
         }
         private void FillCombo()
         {
-            List<T_City> listCity = new List<T_City>(db.T_Cities.Select((T_City item) => item).ToList());
-            CmbCity.DataSource = null;
-            CmbCity.DataSource = listCity;
-            CmbCity.DisplayMember = ((LangArEn == 0) ? "NameA" : "NameE");
-            CmbCity.ValueMember = "City_No";
-            CmbCity.SelectedIndex = 0;
-            List<T_EqarTyp> listEqarTyp = new List<T_EqarTyp>(db.T_EqarTyps.Select((T_EqarTyp item) => item).ToList());
-            CmbEqarTyp.DataSource = listEqarTyp;
-            CmbEqarTyp.DisplayMember = ((LangArEn == 0) ? "NameA" : "NameE");
-            CmbEqarTyp.ValueMember = "EqarTyp_No";
-            CmbEqarTyp.SelectedIndex = 0;
-            List<T_EqarNatural> listEqarNature = new List<T_EqarNatural>(db.T_EqarNaturals.Select((T_EqarNatural item) => item).ToList());
-            CmbEqarNature.DataSource = listEqarNature;
-            CmbEqarNature.DisplayMember = ((LangArEn == 0) ? "NameA" : "NameE");
-            CmbEqarNature.ValueMember = "EqarNatural_No";
-            CmbEqarNature.SelectedIndex = 0;
+           
         }
         private void GetInvSetting()
         {
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, 22);
+            _InvSetting = db.StockInvSetting( 22);
             _Company = db.StockCompanyList().FirstOrDefault();
         }
         private void textBox_ID_TextChanged(object sender, EventArgs e)
@@ -1198,8 +1168,6 @@ namespace InvAcc.Forms
                 txtRentContractValue.Value = value.ContractRentValue.Value;
                 txtStreet.Text = value.Street;
                 txtTotSpace.Text = value.Space;
-                LDataThis = new BindingList<T_AinsData>(value.T_AinsDatas).OrderBy((T_AinsData g) => g.AinNo).ToList();
-                SetLines(LDataThis);
             }
             catch (Exception error)
             {
@@ -1540,7 +1508,7 @@ namespace InvAcc.Forms
                                     return;
                                 }
                                 data_this.AccNo = txtEqarAccNo.Text;
-                                db.ExecuteCommand("INSERT [dbo].[T_AccDef] ([AccDef_No], [Arb_Des], [Eng_Des], [ParAcc], [Lev], [Typ], [AccCat], [DC], [Sts], [Debit], [Credit], [Balance], [Trn], [City], [Email], [Telphone1], [Telphone2], [Fax], [Mobile], [MaxLemt], [DesPers], [StrAm], [Adders], [Mnd], [Price], [zipCod], [PersonalNm], [RessonStoped], [StopedState], [CompanyID], [StopInvTyp], [DateAppointment], [ID_Date], [ID_DateEnd], [Passport_Date], [Insurance_Date], [Passport_DateEnd], [Insurance_DateEnd], [ID_No], [Passport_No], [Insurance_No], [ID_From], [Passport_From], [Insurance_From], [MainSal], [DepreciationPercent], [ProofAcc], [RelayAcc],[MaxDisCust],[vColNum1],[vColNum2],[vColStr1],[vColStr2],[vColStr3]) VALUES (N'" + txtEqarAccNo.Text + "', N'" + txtArbDes.Text + "', N'" + txtEngDes.Text + "', N'" + VarGeneral.Settings_Sys.EqarAcc + "', 4, NULL, 1, 0, 0, 0, 0, 0, 3, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL,0,0,0,'','','')");
+                          //    db.Database.ExecuteSqlCommand("INSERT [dbo].[T_AccDef] ([AccDef_No], [Arb_Des], [Eng_Des], [ParAcc], [Lev], [Typ], [AccCat], [DC], [Sts], [Debit], [Credit], [Balance], [Trn], [City], [Email], [Telphone1], [Telphone2], [Fax], [Mobile], [MaxLemt], [DesPers], [StrAm], [Adders], [Mnd], [Price], [zipCod], [PersonalNm], [RessonStoped], [StopedState], [CompanyID], [StopInvTyp], [DateAppointment], [ID_Date], [ID_DateEnd], [Passport_Date], [Insurance_Date], [Passport_DateEnd], [Insurance_DateEnd], [ID_No], [Passport_No], [Insurance_No], [ID_From], [Passport_From], [Insurance_From], [MainSal], [DepreciationPercent], [ProofAcc], [RelayAcc],[MaxDisCust],[vColNum1],[vColNum2],[vColStr1],[vColStr2],[vColStr3]) VALUES (N'" + txtEqarAccNo.Text + "', N'" + txtArbDes.Text + "', N'" + txtEngDes.Text + "', N'" + VarGeneral.Settings_Sys.EqarAcc + "', 4, NULL, 1, 0, 0, 0, 0, 0, 3, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL,0,0,0,'','','')");
                             }
                             else
                             {
@@ -1548,8 +1516,7 @@ namespace InvAcc.Forms
                             }
                         }
                         data_this.EqarStatus = 0;
-                        db.T_EqarsDatas.InsertOnSubmit(data_this);
-                        db.SubmitChanges();
+                      
                     }
                     catch (SqlException ex4)
                     {
@@ -1571,19 +1538,7 @@ namespace InvAcc.Forms
                 {
                     try
                     {
-                        for (int i = 0; i < LData_This.ToList().Count; i++)
-                        {
-                            int? ainStatus = LData_This[i].AinStatus;
-                            if (ainStatus.Value == 0 && ainStatus.HasValue)
-                            {
-                                db.T_AinsDatas.DeleteOnSubmit(LData_This[i]);
-                                db.SubmitChanges();
-                            }
-                        }
-                        db.ExecuteCommand("update [dbo].[T_AccDef] Set [Arb_Des] = '" + txtArbDes.Text + "' , [Eng_Des] = '" + txtEngDes.Text + "' where AccDef_No = '" + txtEqarAccNo.Text + "'");
-                        db.Log = VarGeneral.DebugLog;
-                        db.SubmitChanges(ConflictMode.ContinueOnConflict);
-                    }
+                         }
                     catch (SqlException)
                     {
                         return;
@@ -1623,7 +1578,7 @@ namespace InvAcc.Forms
                     IL_07a6:
                     try
                     {
-                        _AinDet.AinNature = db.T_AinNaturals.Where((T_AinNatural t) => t.NameA == FlxAinDet.GetData(ii, 3).ToString() || t.NameE == FlxAinDet.GetData(ii, 3).ToString()).FirstOrDefault().AinNatural_No;
+                 //       _AinDet.AinNature = db.T_AinNatural.Where((T_AinNatural t) => t.NameA == FlxAinDet.GetData(ii, 3).ToString() || t.NameE == FlxAinDet.GetData(ii, 3).ToString()).FirstOrDefault().AinNatural_No;
                     }
                     catch (Exception error3)
                     {
@@ -1631,13 +1586,7 @@ namespace InvAcc.Forms
                         continue;
                     }
                     try
-                    {
-#pragma warning disable CS0253 // Possible unintended reference comparison; to get a value comparison, cast the right hand side to type 'string'
-#pragma warning disable CS0253 // Possible unintended reference comparison; to get a value comparison, cast the right hand side to type 'string'
-                        _AinDet.AinTyp = db.T_AinTyps.Where((T_AinTyp t) => t.NameA == FlxAinDet.GetData(ii, 2) || t.NameE == FlxAinDet.GetData(ii, 2)).FirstOrDefault().AinTyp_No;
-#pragma warning restore CS0253 // Possible unintended reference comparison; to get a value comparison, cast the right hand side to type 'string'
-#pragma warning restore CS0253 // Possible unintended reference comparison; to get a value comparison, cast the right hand side to type 'string'
-                    }
+                    {      }
                     catch (Exception error3)
                     {
                         VarGeneral.DebLog.writeLog("Save AinTyp:", error3, enable: true);
@@ -1669,22 +1618,10 @@ namespace InvAcc.Forms
                     }
                     try
                     {
-                        if (int.Parse(FlxAinDet.GetData(ii, 7).ToString()) == 0)
-                        {
-                            db.T_AinsDatas.InsertOnSubmit(_AinDet);
-                            db.SubmitChanges();
-                        }
-                        else
-                        {
-                            db.Log = VarGeneral.DebugLog;
-                            db.SubmitChanges(ConflictMode.ContinueOnConflict);
-                        }
                     }
                     catch
                     {
-                        db.T_AinsDatas.InsertOnSubmit(_AinDet);
-                        db.SubmitChanges();
-                    }
+                      }
                     continue;
                     IL_06e6:
                     _AinDet.AinNo = FlxAinDet.GetData(ii, 1).ToString();
@@ -1747,29 +1684,9 @@ namespace InvAcc.Forms
                 MessageBox.Show((LangArEn == 0) ? "لا يمكنك حذف هذا العقار لانه مأجر او مباع في الوقت الحالي" : "You can't delete this Record because it's rented or sold right now", VarGeneral.ProdectNam);
                 return;
             }
-            for (int i = 0; i < data_this.T_AinsDatas.Count; i++)
-            {
-                try
-                {
-                    if (data_this.T_AinsDatas[i].AinStatus.Value > 0)
-                    {
-                        MessageBox.Show((LangArEn == 0) ? "لا يمكنك حذف هذا العقار لانه مأجر او مباع في الوقت الحالي" : "You can't delete this Record because it's rented or sold right now", VarGeneral.ProdectNam);
-                        return;
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show((LangArEn == 0) ? "لا يمكنك حذف هذا العقار لانه مأجر او مباع في الوقت الحالي" : "You can't delete this Record because it's rented or sold right now", VarGeneral.ProdectNam);
-                    return;
-                }
-            }
             data_this = db.StockEqarData(DataThis.EqarNo);
             try
-            {
-                db.T_AinsDatas.DeleteAllOnSubmit(data_this.T_AinsDatas);
-                db.SubmitChanges();
-                db.T_EqarsDatas.DeleteOnSubmit(DataThis);
-                db.SubmitChanges();
+            { 
             }
             catch (SqlException)
             {
@@ -2075,6 +1992,16 @@ namespace InvAcc.Forms
             catch
             {
             }
+        }
+
+        private void ribbonBar1_ItemClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_Save_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

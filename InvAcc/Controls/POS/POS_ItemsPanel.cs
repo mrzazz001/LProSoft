@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 
 using System.Windows.Forms;
+using InvAcc.Forms;
 
 namespace InvAcc.Controls.POS
 {
@@ -22,7 +23,8 @@ namespace InvAcc.Controls.POS
             try
             {
                 InitializeComponent();
-                if (VarGeneral.ISPOSPagesVisable == true)
+             
+                 if (FrmInvSalePoint.PagesButtons == true)
                 {
 
                     panel1.Visible = true;
@@ -54,10 +56,12 @@ namespace InvAcc.Controls.POS
         {
             try
             {
+             
                 
                 //if (LicenseUsageMode.Designtime != LicenseManager.UsageMode)
-                {if (ppp == -1) ppp = (VarGeneral.IsBackPOSButtonOn ? 1 : 0);
-                    if (ppp == 0)
+                {
+                    
+                    if (!FrmInvSalePoint.ShowBackButtons)
                     {
                         CategoryGride.Visible = true;
                         panel2.Visible = true;
@@ -92,7 +96,7 @@ namespace InvAcc.Controls.POS
         private void ItmClick(object sender, ItemEventArg e)
         {
             ItemsGride.CAT_ID = int.Parse(e.item_No);
-            ItemsGride.fillcat(ItemsGride.CAT_ID);
+            ItemsGride.fill(ItemsGride.CAT_ID, false);
         }
 
         private void orientedButton2_Click(object sender, EventArgs e)

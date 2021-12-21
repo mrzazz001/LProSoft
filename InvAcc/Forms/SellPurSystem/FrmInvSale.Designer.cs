@@ -25,7 +25,6 @@ partial class FrmInvSale
 private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvSale));
             DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabControlBoxStateColorTable superTabControlBoxStateColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabControlBoxStateColorTable();
@@ -36,6 +35,20 @@ private void InitializeComponent()
             DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates1 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
             DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates2 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
+            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates3 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
+            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates4 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
             DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
@@ -43,20 +56,6 @@ private void InitializeComponent()
             DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable9 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates3 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
-            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates2 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
-            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable10 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
@@ -69,12 +68,15 @@ private void InitializeComponent()
             DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle1 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
             DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle2 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
             DevComponents.DotNetBar.SuperGrid.Style.Background background4 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvSale));
             this.PanelSpecialContainer = new System.Windows.Forms.Panel();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
-            this.FlxPrice = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panelBalance = new System.Windows.Forms.Panel();
             this.textBox_AccBalance = new System.Windows.Forms.TextBox();
             this.labelBalance = new System.Windows.Forms.Label();
+            this.text_CusTaxNo = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.FlxPrice = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.text_Mobile = new System.Windows.Forms.TextBox();
             this.button_SrchInvNoBarcod = new DevComponents.DotNetBar.ButtonX();
             this.switchButton_PointActiv = new DevComponents.DotNetBar.Controls.SwitchButton();
@@ -250,8 +252,17 @@ private void InitializeComponent()
             this.labelItem_TaxByNetPer = new DevComponents.DotNetBar.LabelItem();
             this.ChkPriceIncludeTax = new DevComponents.DotNetBar.SwitchButtonItem();
             this.superTabItem_Gaids = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.superTabControlPanel9 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtDueDate = new System.Windows.Forms.MaskedTextBox();
+            this.labelPharmcy4 = new System.Windows.Forms.Label();
+            this.label_Pharmacy5 = new System.Windows.Forms.Label();
+            this.txtRemark = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtAllExchanged = new DevComponents.Editors.DoubleInput();
+            this.label_Due = new System.Windows.Forms.Label();
+            this.superTabItem_Note = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.txtSteel = new DevComponents.Editors.DoubleInput();
             this.txtPayment = new DevComponents.Editors.DoubleInput();
@@ -266,17 +277,8 @@ private void InitializeComponent()
             this.textBox_Usr = new System.Windows.Forms.TextBox();
             this.label_Curr = new System.Windows.Forms.Label();
             this.superTabItem_Detiles = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtDueDate = new System.Windows.Forms.MaskedTextBox();
-            this.labelPharmcy4 = new System.Windows.Forms.Label();
-            this.label_Pharmacy5 = new System.Windows.Forms.Label();
-            this.txtRemark = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtAllExchanged = new DevComponents.Editors.DoubleInput();
-            this.label_Due = new System.Windows.Forms.Label();
-            this.superTabItem_Note = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.superTabControlPanel9 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.checkBoxItem_BarCode = new DevComponents.DotNetBar.CheckBoxItem();
             this.CmbInvSide = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.label5 = new System.Windows.Forms.Label();
@@ -344,8 +346,8 @@ private void InitializeComponent()
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.PanelSpecialContainer.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FlxPrice)).BeginInit();
             this.panelBalance.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FlxPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiscoundPointsLoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiscoundPoints)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlxSerial)).BeginInit();
@@ -395,13 +397,13 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.txtTotBankComm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotBankCommLoc)).BeginInit();
             this.superTabControlPanel10.SuspendLayout();
+            this.superTabControlPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAllExchanged)).BeginInit();
             this.superTabControlPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSteel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPayment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput_LostOrWin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).BeginInit();
-            this.superTabControlPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAllExchanged)).BeginInit();
             this.ribbonBar_Tasks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main2)).BeginInit();
@@ -436,12 +438,12 @@ private void InitializeComponent()
             // 
             // 
             // 
-            this.ribbonBar1.BackgroundStyle.BackColor = System.Drawing.Color.Gainsboro;
-            this.ribbonBar1.BackgroundStyle.BackColor2 = System.Drawing.Color.Gainsboro;
             this.ribbonBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonBar1.ContainerControlProcessDialogKey = true;
-            this.ribbonBar1.Controls.Add(this.FlxPrice);
             this.ribbonBar1.Controls.Add(this.panelBalance);
+            this.ribbonBar1.Controls.Add(this.text_CusTaxNo);
+            this.ribbonBar1.Controls.Add(this.label42);
+            this.ribbonBar1.Controls.Add(this.FlxPrice);
             this.ribbonBar1.Controls.Add(this.text_Mobile);
             this.ribbonBar1.Controls.Add(this.button_SrchInvNoBarcod);
             this.ribbonBar1.Controls.Add(this.switchButton_PointActiv);
@@ -528,30 +530,12 @@ private void InitializeComponent()
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonBar1.ItemClick += new System.EventHandler(this.ribbonBar1_ItemClick);
             // 
-            // FlxPrice
-            // 
-            this.FlxPrice.AllowEditing = false;
-            this.FlxPrice.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.None;
-            this.FlxPrice.ColumnInfo = resources.GetString("FlxPrice.ColumnInfo");
-            this.FlxPrice.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.FlxPrice.Location = new System.Drawing.Point(17, 151);
-            this.FlxPrice.Name = "FlxPrice";
-            this.FlxPrice.Rows.Count = 6;
-            this.FlxPrice.Rows.DefaultSize = 19;
-            this.FlxPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.FlxPrice.Size = new System.Drawing.Size(176, 118);
-            this.FlxPrice.StyleInfo = resources.GetString("FlxPrice.StyleInfo");
-            this.FlxPrice.TabIndex = 1224;
-            this.FlxPrice.Visible = false;
-            this.FlxPrice.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2007Black;
-            this.FlxPrice.ChangeEdit += new System.EventHandler(this.FlxPrice_ChangeEdit);
-            // 
             // panelBalance
             // 
             this.panelBalance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelBalance.Controls.Add(this.textBox_AccBalance);
             this.panelBalance.Controls.Add(this.labelBalance);
-            this.panelBalance.Location = new System.Drawing.Point(350, 56);
+            this.panelBalance.Location = new System.Drawing.Point(350, 36);
             this.panelBalance.Name = "panelBalance";
             this.panelBalance.Size = new System.Drawing.Size(388, 51);
             this.panelBalance.TabIndex = 1223;
@@ -590,12 +574,54 @@ private void InitializeComponent()
             this.labelBalance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelBalance.Click += new System.EventHandler(this.labelBalance_Click);
             // 
+            // text_CusTaxNo
+            // 
+            this.text_CusTaxNo.BackColor = System.Drawing.Color.White;
+            this.text_CusTaxNo.Location = new System.Drawing.Point(350, 60);
+            this.text_CusTaxNo.MaxLength = 100;
+            this.text_CusTaxNo.Name = "text_CusTaxNo";
+            this.netResize1.SetResizeTextBoxMultiline(this.text_CusTaxNo, false);
+            this.text_CusTaxNo.Size = new System.Drawing.Size(102, 20);
+            this.text_CusTaxNo.TabIndex = 1229;
+            // 
+            // label42
+            // 
+            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Transparent;
+            this.label42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label42.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label42.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label42.Location = new System.Drawing.Point(458, 63);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(99, 13);
+            this.label42.TabIndex = 1228;
+            this.label42.Text = "رقم العميل الضريبي";
+            // 
+            // FlxPrice
+            // 
+            this.FlxPrice.AllowEditing = false;
+            this.FlxPrice.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.None;
+            this.FlxPrice.ColumnInfo = resources.GetString("FlxPrice.ColumnInfo");
+            this.FlxPrice.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.FlxPrice.Location = new System.Drawing.Point(17, 151);
+            this.FlxPrice.Name = "FlxPrice";
+            this.FlxPrice.Rows.Count = 6;
+            this.FlxPrice.Rows.DefaultSize = 19;
+            this.FlxPrice.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.FlxPrice.Size = new System.Drawing.Size(176, 118);
+            this.FlxPrice.StyleInfo = resources.GetString("FlxPrice.StyleInfo");
+            this.FlxPrice.TabIndex = 1224;
+            this.FlxPrice.Visible = false;
+            this.FlxPrice.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2007Black;
+            this.FlxPrice.ChangeEdit += new System.EventHandler(this.FlxPrice_ChangeEdit);
+            // 
             // text_Mobile
             // 
-            this.text_Mobile.Location = new System.Drawing.Point(535, 85);
+            this.text_Mobile.Location = new System.Drawing.Point(563, 85);
             this.text_Mobile.Name = "text_Mobile";
             this.netResize1.SetResizeTextBoxMultiline(this.text_Mobile, false);
-            this.text_Mobile.Size = new System.Drawing.Size(204, 20);
+            this.text_Mobile.Size = new System.Drawing.Size(176, 20);
             this.text_Mobile.TabIndex = 1227;
             this.text_Mobile.TextChanged += new System.EventHandler(this.text_Mobile_TextChanged);
             // 
@@ -893,6 +919,7 @@ private void InitializeComponent()
             this.netResize1.SetResizeTextBoxMultiline(this.textBox_ID, false);
             this.textBox_ID.Size = new System.Drawing.Size(226, 20);
             this.textBox_ID.TabIndex = 1206;
+            this.textBox_ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox_ID.ButtonCustomClick += new System.EventHandler(this.textBox_ID_ButtonCustomClick);
             this.textBox_ID.TextChanged += new System.EventHandler(this.textBox_ID_TextChanged_1);
             // 
@@ -1256,11 +1283,11 @@ private void InitializeComponent()
             // txtAddress
             // 
             this.txtAddress.BackColor = System.Drawing.Color.White;
-            this.txtAddress.Location = new System.Drawing.Point(352, 60);
+            this.txtAddress.Location = new System.Drawing.Point(563, 60);
             this.txtAddress.MaxLength = 100;
             this.txtAddress.Name = "txtAddress";
             this.netResize1.SetResizeTextBoxMultiline(this.txtAddress, false);
-            this.txtAddress.Size = new System.Drawing.Size(387, 20);
+            this.txtAddress.Size = new System.Drawing.Size(176, 20);
             this.txtAddress.TabIndex = 11;
             this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
@@ -1283,7 +1310,7 @@ private void InitializeComponent()
             this.FlxDat.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.None;
             this.FlxDat.ColumnInfo = resources.GetString("FlxDat.ColumnInfo");
             this.FlxDat.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.FlxDat.Location = new System.Drawing.Point(418, 154);
+            this.FlxDat.Location = new System.Drawing.Point(391, 168);
             this.FlxDat.Name = "FlxDat";
             this.FlxDat.Rows.DefaultSize = 19;
             this.FlxDat.Size = new System.Drawing.Size(229, 96);
@@ -1917,9 +1944,9 @@ private void InitializeComponent()
             this.superTabControl_Info.ControlBox.CloseBox,
             this.superTabControl_Info.ControlBox.MenuBox});
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel3);
+            this.superTabControl_Info.Controls.Add(this.superTabControlPanel5);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel4);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel2);
-            this.superTabControl_Info.Controls.Add(this.superTabControlPanel5);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel1);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel9);
             this.superTabControl_Info.ForeColor = System.Drawing.Color.Black;
@@ -3418,35 +3445,187 @@ private void InitializeComponent()
             this.superTabItem_Gaids.AttachedControl = this.superTabControlPanel5;
             this.superTabItem_Gaids.GlobalItem = false;
             this.superTabItem_Gaids.Name = "superTabItem_Gaids";
-            superTabLinearGradientColorTable8.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable4.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.White};
-            superTabItemStateColorTable4.Background = superTabLinearGradientColorTable8;
-            superTabColorStates4.Normal = superTabItemStateColorTable4;
-            superTabItemColorTable4.Bottom = superTabColorStates4;
-            this.superTabItem_Gaids.TabColor = superTabItemColorTable4;
+            superTabItemStateColorTable2.Background = superTabLinearGradientColorTable4;
+            superTabColorStates2.Normal = superTabItemStateColorTable2;
+            superTabItemColorTable2.Bottom = superTabColorStates2;
+            this.superTabItem_Gaids.TabColor = superTabItemColorTable2;
             this.superTabItem_Gaids.Text = "القيود";
             // 
-            // superTabControlPanel1
+            // superTabControlPanel4
             // 
-            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            superTabLinearGradientColorTable9.Colors = new System.Drawing.Color[] {
+            this.superTabControlPanel4.Controls.Add(this.txtDescription);
+            this.superTabControlPanel4.Controls.Add(this.label29);
+            this.superTabControlPanel4.Controls.Add(this.label21);
+            this.superTabControlPanel4.Controls.Add(this.txtDueDate);
+            this.superTabControlPanel4.Controls.Add(this.labelPharmcy4);
+            this.superTabControlPanel4.Controls.Add(this.label_Pharmacy5);
+            this.superTabControlPanel4.Controls.Add(this.txtRemark);
+            this.superTabControlPanel4.Controls.Add(this.txtAllExchanged);
+            this.superTabControlPanel4.Controls.Add(this.label_Due);
+            this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel4.Name = "superTabControlPanel4";
+            superTabLinearGradientColorTable5.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable4.Background = superTabLinearGradientColorTable9;
-            superTabPanelColorTable4.Bottom = superTabPanelItemColorTable4;
-            this.superTabControlPanel1.PanelColor = superTabPanelColorTable4;
-            this.superTabControlPanel1.Size = new System.Drawing.Size(968, 106);
-            this.superTabControlPanel1.TabIndex = 1;
+            superTabPanelItemColorTable2.Background = superTabLinearGradientColorTable5;
+            superTabPanelColorTable2.Bottom = superTabPanelItemColorTable2;
+            this.superTabControlPanel4.PanelColor = superTabPanelColorTable2;
+            this.superTabControlPanel4.Size = new System.Drawing.Size(968, 106);
+            this.superTabControlPanel4.TabIndex = 2;
+            this.superTabControlPanel4.TabItem = this.superTabItem_Note;
+            this.superTabControlPanel4.Visible = false;
             // 
-            // superTabControlPanel9
+            // txtDescription
             // 
-            this.superTabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel9.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel9.Name = "superTabControlPanel9";
-            this.superTabControlPanel9.Size = new System.Drawing.Size(968, 106);
-            this.superTabControlPanel9.TabIndex = 4;
+            this.txtDescription.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtDescription.Location = new System.Drawing.Point(388, 75);
+            this.txtDescription.MaxLength = 100;
+            this.txtDescription.Name = "txtDescription";
+            this.netResize1.SetResizeTextBoxMultiline(this.txtDescription, false);
+            this.txtDescription.Size = new System.Drawing.Size(84, 20);
+            this.txtDescription.TabIndex = 1125;
+            // 
+            // label29
+            // 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label29.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label29.Location = new System.Drawing.Point(899, 79);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(64, 13);
+            this.label29.TabIndex = 1126;
+            this.label29.Text = "رقم الحاوية :";
+            // 
+            // label21
+            // 
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label21.Location = new System.Drawing.Point(99, 73);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(88, 22);
+            this.label21.TabIndex = 482;
+            this.label21.Text = "تاريخ الإستحقاق ";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtDueDate
+            // 
+            this.txtDueDate.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtDueDate.Enabled = false;
+            this.txtDueDate.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.txtDueDate.Location = new System.Drawing.Point(5, 73);
+            this.txtDueDate.Mask = "0000/00/00";
+            this.txtDueDate.Name = "txtDueDate";
+            this.txtDueDate.Size = new System.Drawing.Size(90, 21);
+            this.txtDueDate.TabIndex = 481;
+            this.txtDueDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDueDate.Click += new System.EventHandler(this.txtDueDate_Click);
+            this.txtDueDate.Leave += new System.EventHandler(this.txtDueDate_Leave);
+            // 
+            // labelPharmcy4
+            // 
+            this.labelPharmcy4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPharmcy4.AutoSize = true;
+            this.labelPharmcy4.BackColor = System.Drawing.Color.Transparent;
+            this.labelPharmcy4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelPharmcy4.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.labelPharmcy4.ForeColor = System.Drawing.Color.Black;
+            this.labelPharmcy4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelPharmcy4.Location = new System.Drawing.Point(674, 209);
+            this.labelPharmcy4.Name = "labelPharmcy4";
+            this.labelPharmcy4.Size = new System.Drawing.Size(103, 15);
+            this.labelPharmcy4.TabIndex = 1121;
+            this.labelPharmcy4.Text = "المدفوع من العميل :";
+            this.labelPharmcy4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_Pharmacy5
+            // 
+            this.label_Pharmacy5.BackColor = System.Drawing.Color.Transparent;
+            this.label_Pharmacy5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label_Pharmacy5.ForeColor = System.Drawing.Color.Black;
+            this.label_Pharmacy5.Location = new System.Drawing.Point(622, 56);
+            this.label_Pharmacy5.Name = "label_Pharmacy5";
+            this.label_Pharmacy5.Size = new System.Drawing.Size(100, 23);
+            this.label_Pharmacy5.TabIndex = 1124;
+            // 
+            // txtRemark
+            // 
+            this.txtRemark.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtRemark.Border.Class = "TextBoxBorder";
+            this.txtRemark.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtRemark.ButtonCustom.Image = ((System.Drawing.Image)(resources.GetObject("txtRemark.ButtonCustom.Image")));
+            this.txtRemark.ButtonCustom.Visible = true;
+            this.txtRemark.ButtonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("txtRemark.ButtonCustom2.Image")));
+            this.txtRemark.ButtonCustom2.Visible = true;
+            this.txtRemark.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtRemark.ForeColor = System.Drawing.Color.Black;
+            this.txtRemark.Location = new System.Drawing.Point(0, 0);
+            this.txtRemark.Multiline = true;
+            this.txtRemark.Name = "txtRemark";
+            this.netResize1.SetResizeTextBoxMultiline(this.txtRemark, false);
+            this.txtRemark.Size = new System.Drawing.Size(968, 69);
+            this.txtRemark.TabIndex = 480;
+            this.txtRemark.WatermarkText = "ملاحظات الفاتورة";
+            this.txtRemark.ButtonCustom2Click += new System.EventHandler(this.txtRemark_ButtonCustom2Click);
+            // 
+            // txtAllExchanged
+            // 
+            this.txtAllExchanged.AllowEmptyState = false;
+            this.txtAllExchanged.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.txtAllExchanged.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtAllExchanged.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAllExchanged.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtAllExchanged.DisplayFormat = "0.00";
+            this.txtAllExchanged.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.txtAllExchanged.Increment = 0D;
+            this.txtAllExchanged.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtAllExchanged.Location = new System.Drawing.Point(619, 202);
+            this.txtAllExchanged.MinValue = 0D;
+            this.txtAllExchanged.Name = "txtAllExchanged";
+            this.txtAllExchanged.Size = new System.Drawing.Size(53, 21);
+            this.txtAllExchanged.TabIndex = 1122;
+            // 
+            // label_Due
+            // 
+            this.label_Due.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_Due.BackColor = System.Drawing.Color.Transparent;
+            this.label_Due.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_Due.Font = new System.Drawing.Font("Tahoma", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.label_Due.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label_Due.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label_Due.Location = new System.Drawing.Point(619, 73);
+            this.label_Due.Name = "label_Due";
+            this.label_Due.Size = new System.Drawing.Size(188, 22);
+            this.label_Due.TabIndex = 483;
+            this.label_Due.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // superTabItem_Note
+            // 
+            this.superTabItem_Note.AttachedControl = this.superTabControlPanel4;
+            this.superTabItem_Note.GlobalItem = false;
+            this.superTabItem_Note.Name = "superTabItem_Note";
+            superTabLinearGradientColorTable6.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.White};
+            superTabItemStateColorTable3.Background = superTabLinearGradientColorTable6;
+            superTabColorStates3.Normal = superTabItemStateColorTable3;
+            superTabItemColorTable3.Bottom = superTabColorStates3;
+            this.superTabItem_Note.TabColor = superTabItemColorTable3;
+            this.superTabItem_Note.Text = "ملاحظات";
             // 
             // superTabControlPanel2
             // 
@@ -3465,10 +3644,10 @@ private void InitializeComponent()
             this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel2.Name = "superTabControlPanel2";
-            superTabLinearGradientColorTable6.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable7.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable3.Background = superTabLinearGradientColorTable6;
+            superTabPanelItemColorTable3.Background = superTabLinearGradientColorTable7;
             superTabPanelColorTable3.Bottom = superTabPanelItemColorTable3;
             this.superTabControlPanel2.PanelColor = superTabPanelColorTable3;
             this.superTabControlPanel2.Size = new System.Drawing.Size(968, 106);
@@ -3684,187 +3863,35 @@ private void InitializeComponent()
             this.superTabItem_Detiles.AttachedControl = this.superTabControlPanel2;
             this.superTabItem_Detiles.GlobalItem = false;
             this.superTabItem_Detiles.Name = "superTabItem_Detiles";
-            superTabLinearGradientColorTable7.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable8.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.White};
-            superTabItemStateColorTable3.Background = superTabLinearGradientColorTable7;
-            superTabColorStates3.Normal = superTabItemStateColorTable3;
-            superTabItemColorTable3.Bottom = superTabColorStates3;
-            this.superTabItem_Detiles.TabColor = superTabItemColorTable3;
+            superTabItemStateColorTable4.Background = superTabLinearGradientColorTable8;
+            superTabColorStates4.Normal = superTabItemStateColorTable4;
+            superTabItemColorTable4.Bottom = superTabColorStates4;
+            this.superTabItem_Detiles.TabColor = superTabItemColorTable4;
             this.superTabItem_Detiles.Text = "تفاصيل";
             // 
-            // superTabControlPanel4
+            // superTabControlPanel1
             // 
-            this.superTabControlPanel4.Controls.Add(this.txtDescription);
-            this.superTabControlPanel4.Controls.Add(this.label29);
-            this.superTabControlPanel4.Controls.Add(this.label21);
-            this.superTabControlPanel4.Controls.Add(this.txtDueDate);
-            this.superTabControlPanel4.Controls.Add(this.labelPharmcy4);
-            this.superTabControlPanel4.Controls.Add(this.label_Pharmacy5);
-            this.superTabControlPanel4.Controls.Add(this.txtRemark);
-            this.superTabControlPanel4.Controls.Add(this.txtAllExchanged);
-            this.superTabControlPanel4.Controls.Add(this.label_Due);
-            this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel4.Name = "superTabControlPanel4";
-            superTabLinearGradientColorTable4.Colors = new System.Drawing.Color[] {
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            superTabLinearGradientColorTable9.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable2.Background = superTabLinearGradientColorTable4;
-            superTabPanelColorTable2.Bottom = superTabPanelItemColorTable2;
-            this.superTabControlPanel4.PanelColor = superTabPanelColorTable2;
-            this.superTabControlPanel4.Size = new System.Drawing.Size(968, 106);
-            this.superTabControlPanel4.TabIndex = 2;
-            this.superTabControlPanel4.TabItem = this.superTabItem_Note;
-            this.superTabControlPanel4.Visible = false;
+            superTabPanelItemColorTable4.Background = superTabLinearGradientColorTable9;
+            superTabPanelColorTable4.Bottom = superTabPanelItemColorTable4;
+            this.superTabControlPanel1.PanelColor = superTabPanelColorTable4;
+            this.superTabControlPanel1.Size = new System.Drawing.Size(968, 106);
+            this.superTabControlPanel1.TabIndex = 1;
             // 
-            // txtDescription
+            // superTabControlPanel9
             // 
-            this.txtDescription.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtDescription.Location = new System.Drawing.Point(388, 75);
-            this.txtDescription.MaxLength = 100;
-            this.txtDescription.Name = "txtDescription";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtDescription, false);
-            this.txtDescription.Size = new System.Drawing.Size(84, 20);
-            this.txtDescription.TabIndex = 1125;
-            // 
-            // label29
-            // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label29.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label29.Location = new System.Drawing.Point(899, 79);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(64, 13);
-            this.label29.TabIndex = 1126;
-            this.label29.Text = "رقم الحاوية :";
-            // 
-            // label21
-            // 
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label21.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label21.Location = new System.Drawing.Point(99, 73);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(88, 22);
-            this.label21.TabIndex = 482;
-            this.label21.Text = "تاريخ الإستحقاق ";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtDueDate
-            // 
-            this.txtDueDate.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtDueDate.Enabled = false;
-            this.txtDueDate.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.txtDueDate.Location = new System.Drawing.Point(5, 73);
-            this.txtDueDate.Mask = "0000/00/00";
-            this.txtDueDate.Name = "txtDueDate";
-            this.txtDueDate.Size = new System.Drawing.Size(90, 21);
-            this.txtDueDate.TabIndex = 481;
-            this.txtDueDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtDueDate.Click += new System.EventHandler(this.txtDueDate_Click);
-            this.txtDueDate.Leave += new System.EventHandler(this.txtDueDate_Leave);
-            // 
-            // labelPharmcy4
-            // 
-            this.labelPharmcy4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPharmcy4.AutoSize = true;
-            this.labelPharmcy4.BackColor = System.Drawing.Color.Transparent;
-            this.labelPharmcy4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelPharmcy4.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.labelPharmcy4.ForeColor = System.Drawing.Color.Black;
-            this.labelPharmcy4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelPharmcy4.Location = new System.Drawing.Point(674, 209);
-            this.labelPharmcy4.Name = "labelPharmcy4";
-            this.labelPharmcy4.Size = new System.Drawing.Size(103, 15);
-            this.labelPharmcy4.TabIndex = 1121;
-            this.labelPharmcy4.Text = "المدفوع من العميل :";
-            this.labelPharmcy4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_Pharmacy5
-            // 
-            this.label_Pharmacy5.BackColor = System.Drawing.Color.Transparent;
-            this.label_Pharmacy5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label_Pharmacy5.ForeColor = System.Drawing.Color.Black;
-            this.label_Pharmacy5.Location = new System.Drawing.Point(622, 56);
-            this.label_Pharmacy5.Name = "label_Pharmacy5";
-            this.label_Pharmacy5.Size = new System.Drawing.Size(100, 23);
-            this.label_Pharmacy5.TabIndex = 1124;
-            // 
-            // txtRemark
-            // 
-            this.txtRemark.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtRemark.Border.Class = "TextBoxBorder";
-            this.txtRemark.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtRemark.ButtonCustom.Image = ((System.Drawing.Image)(resources.GetObject("txtRemark.ButtonCustom.Image")));
-            this.txtRemark.ButtonCustom.Visible = true;
-            this.txtRemark.ButtonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("txtRemark.ButtonCustom2.Image")));
-            this.txtRemark.ButtonCustom2.Visible = true;
-            this.txtRemark.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtRemark.ForeColor = System.Drawing.Color.Black;
-            this.txtRemark.Location = new System.Drawing.Point(0, 0);
-            this.txtRemark.Multiline = true;
-            this.txtRemark.Name = "txtRemark";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtRemark, false);
-            this.txtRemark.Size = new System.Drawing.Size(968, 69);
-            this.txtRemark.TabIndex = 480;
-            this.txtRemark.WatermarkText = "ملاحظات الفاتورة";
-            this.txtRemark.ButtonCustom2Click += new System.EventHandler(this.txtRemark_ButtonCustom2Click);
-            // 
-            // txtAllExchanged
-            // 
-            this.txtAllExchanged.AllowEmptyState = false;
-            this.txtAllExchanged.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.txtAllExchanged.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtAllExchanged.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtAllExchanged.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtAllExchanged.DisplayFormat = "0.00";
-            this.txtAllExchanged.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.txtAllExchanged.Increment = 0D;
-            this.txtAllExchanged.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtAllExchanged.Location = new System.Drawing.Point(619, 202);
-            this.txtAllExchanged.MinValue = 0D;
-            this.txtAllExchanged.Name = "txtAllExchanged";
-            this.txtAllExchanged.Size = new System.Drawing.Size(53, 21);
-            this.txtAllExchanged.TabIndex = 1122;
-            // 
-            // label_Due
-            // 
-            this.label_Due.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_Due.BackColor = System.Drawing.Color.Transparent;
-            this.label_Due.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_Due.Font = new System.Drawing.Font("Tahoma", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label_Due.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label_Due.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label_Due.Location = new System.Drawing.Point(619, 73);
-            this.label_Due.Name = "label_Due";
-            this.label_Due.Size = new System.Drawing.Size(188, 22);
-            this.label_Due.TabIndex = 483;
-            this.label_Due.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // superTabItem_Note
-            // 
-            this.superTabItem_Note.AttachedControl = this.superTabControlPanel4;
-            this.superTabItem_Note.GlobalItem = false;
-            this.superTabItem_Note.Name = "superTabItem_Note";
-            superTabLinearGradientColorTable5.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.White};
-            superTabItemStateColorTable2.Background = superTabLinearGradientColorTable5;
-            superTabColorStates2.Normal = superTabItemStateColorTable2;
-            superTabItemColorTable2.Bottom = superTabColorStates2;
-            this.superTabItem_Note.TabColor = superTabItemColorTable2;
-            this.superTabItem_Note.Text = "ملاحظات";
+            this.superTabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel9.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel9.Name = "superTabControlPanel9";
+            this.superTabControlPanel9.Size = new System.Drawing.Size(968, 106);
+            this.superTabControlPanel9.TabIndex = 4;
             // 
             // checkBoxItem_BarCode
             // 
@@ -4211,6 +4238,7 @@ private void InitializeComponent()
             this.Button_Close.SymbolSize = 15F;
             this.Button_Close.Text = "إغلاق";
             this.Button_Close.Tooltip = "إغلاق النافذة الحالية";
+            this.Button_Close.Click += new System.EventHandler(this.Button_Close_Click_1);
             // 
             // buttonItem_Print
             // 
@@ -4411,6 +4439,7 @@ private void InitializeComponent()
             // Button_Prev
             // 
             this.Button_Prev.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.Button_Prev.ClickRepeatInterval = 200;
             this.Button_Prev.FontBold = true;
             this.Button_Prev.FontItalic = true;
             this.Button_Prev.ForeColor = System.Drawing.Color.SteelBlue;
@@ -4427,6 +4456,7 @@ private void InitializeComponent()
             this.Button_Prev.SymbolSize = 15F;
             this.Button_Prev.Text = "السابق";
             this.Button_Prev.Tooltip = "السجل السابق";
+            this.Button_Prev.Click += new System.EventHandler(this.Button_Prev_Click);
             // 
             // TextBox_Index
             // 
@@ -4975,9 +5005,9 @@ private void InitializeComponent()
             this.PanelSpecialContainer.ResumeLayout(false);
             this.ribbonBar1.ResumeLayout(false);
             this.ribbonBar1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FlxPrice)).EndInit();
             this.panelBalance.ResumeLayout(false);
             this.panelBalance.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FlxPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiscoundPointsLoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiscoundPoints)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlxSerial)).EndInit();
@@ -5036,15 +5066,15 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.txtTotBankCommLoc)).EndInit();
             this.superTabControlPanel10.ResumeLayout(false);
             this.superTabControlPanel10.PerformLayout();
+            this.superTabControlPanel4.ResumeLayout(false);
+            this.superTabControlPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAllExchanged)).EndInit();
             this.superTabControlPanel2.ResumeLayout(false);
             this.superTabControlPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSteel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPayment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput_LostOrWin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).EndInit();
-            this.superTabControlPanel4.ResumeLayout(false);
-            this.superTabControlPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAllExchanged)).EndInit();
             this.ribbonBar_Tasks.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main2)).EndInit();
@@ -5082,5 +5112,7 @@ private void InitializeComponent()
         private DevComponents.DotNetBar.ButtonItem Button_PrintTableMulti;
         private SellPurSystem.specialcontrols.XGmesures xGmesures1;
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem6;
+        private System.Windows.Forms.TextBox text_CusTaxNo;
+        internal System.Windows.Forms.Label label42;
     }
 }

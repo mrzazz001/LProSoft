@@ -1539,7 +1539,7 @@ namespace InvAcc.Forms
                     }
                     FlxSetups.Rows[13].Visible = false;
                     FlxSetups.Rows[18].Visible = false;
-                    FlxSetups.Rows[19].Visible = false;
+                           FlxSetups.Rows[19].Visible = false;
                     FlxSetups.Rows[20].Visible = false;
                     FlxSetups.Rows[21].Visible = false;
                     FlxSetups.Rows[22].Visible = false;

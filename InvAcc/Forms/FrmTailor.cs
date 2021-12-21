@@ -312,7 +312,7 @@ namespace InvAcc.Forms
             InitializeComponent();this.Load += langloads;
             _InvSetting = new T_INVSETTING();
             _SysSetting = new T_SYSSETTING();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+            _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
             _SysSetting = db.SystemSettingStock();
             buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "طباعة" : "عــرض");
             buttonItem_Print.Tooltip = "F5";

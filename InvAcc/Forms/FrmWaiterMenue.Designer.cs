@@ -3284,6 +3284,7 @@ private void InitializeComponent()
             this.labelTableTyp.ShowSubItems = false;
             this.labelTableTyp.Symbol = "";
             this.labelTableTyp.SymbolColor = System.Drawing.Color.Maroon;
+            this.labelTableTyp.Click += new System.EventHandler(this.labelTableTyp_Click);
             // 
             // DGV_Main
             // 

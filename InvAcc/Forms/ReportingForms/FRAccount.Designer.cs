@@ -69,8 +69,7 @@ private void InitializeComponent()
             this.RButShort = new System.Windows.Forms.RadioButton();
             this.RButDet = new System.Windows.Forms.RadioButton();
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
-            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);  this.netResize1.LabelsAutoEllipse = false;
-            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
+            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.PanelSpecialContainer.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ButOk)).BeginInit();
@@ -137,14 +136,15 @@ private void InitializeComponent()
             this.ribbonBar1.Controls.Add(this.button_SrchCostNo);
             this.ribbonBar1.Controls.Add(this.groupBox2);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.controlContainerItem1});
-            this.ribbonBar1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
             this.ribbonBar1.Size = new System.Drawing.Size(427, 401);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 1102;
+            this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -251,6 +251,7 @@ private void InitializeComponent()
             this.label11.Size = new System.Drawing.Size(77, 13);
             this.label11.TabIndex = 6742;
             this.label11.Text = "حسب البيان :";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // checkBox_BalanceMove
             // 
@@ -324,10 +325,10 @@ private void InitializeComponent()
             this.CmbCurr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCurr.Font = new System.Drawing.Font("Tahoma", 8F);
             this.CmbCurr.FormattingEnabled = true;
-            this.CmbCurr.ItemHeight = 14;
+            this.CmbCurr.ItemHeight = 15;
             this.CmbCurr.Location = new System.Drawing.Point(146, 284);
             this.CmbCurr.Name = "CmbCurr";
-            this.CmbCurr.Size = new System.Drawing.Size(198, 20);
+            this.CmbCurr.Size = new System.Drawing.Size(198, 21);
             this.CmbCurr.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbCurr.TabIndex = 6731;
             // 
@@ -351,10 +352,10 @@ private void InitializeComponent()
             this.combobox_SortTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combobox_SortTyp.Font = new System.Drawing.Font("Tahoma", 8F);
             this.combobox_SortTyp.FormattingEnabled = true;
-            this.combobox_SortTyp.ItemHeight = 14;
+            this.combobox_SortTyp.ItemHeight = 15;
             this.combobox_SortTyp.Location = new System.Drawing.Point(146, 260);
             this.combobox_SortTyp.Name = "combobox_SortTyp";
-            this.combobox_SortTyp.Size = new System.Drawing.Size(198, 20);
+            this.combobox_SortTyp.Size = new System.Drawing.Size(198, 21);
             this.combobox_SortTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.combobox_SortTyp.TabIndex = 6721;
             // 
@@ -759,7 +760,9 @@ private void InitializeComponent()
             // netResize1
             // 
             this.netResize1.AutoSaveLayout = true;
+            this.netResize1.LabelsAutoEllipse = false;
             this.netResize1.ParentControl = this;
+            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 
             // FRAccount
             // 
@@ -793,6 +796,7 @@ private void InitializeComponent()
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).EndInit();
             this.ResumeLayout(false);
+
         }//###########&&&&&&&&&&
 
 }

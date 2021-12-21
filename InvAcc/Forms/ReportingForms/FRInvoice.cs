@@ -374,7 +374,8 @@ namespace InvAcc.Forms
             }
             if (FlexType.Rows.Count == 3)
             {
-                RuleInvType = "(" + RuleInvType + ")";
+            if(  !string.IsNullOrEmpty(RuleInvType))
+                    RuleInvType = "(" + RuleInvType + ")";
                 if ((bool)this.FlexType.GetData(2, 0))
                 {
                     if (string.IsNullOrEmpty(RuleInvType))
@@ -856,7 +857,17 @@ namespace InvAcc.Forms
                     }
                     try
                     {
+                        if (CmbInvType.SelectedIndex == 1)
+                        {
+                       //     _RepShow.Fields = _RepShow.Fields.Replace("T_INVSETTING.InvNamA as InvTypNm", "(CASE when (T_INVHED.IS_ServiceBill=1 and T_INVHED.InvTyp=2) then 'مصروفات مشتريات' else    T_INVSETTING.InvNamA end) as InvTypNm");
+                            if (checkBox1.Checked)
+                            {
+                                if (_RepShow.Rule.Contains("Where T_INVHED.InvTyp = 2 "))
+                                    _RepShow.Rule = _RepShow.Rule.Replace("Where T_INVHED.InvTyp = 2 ", "Where (T_INVHED.InvTyp = 2 or T_INVHED.InvTyp=1002 )");
+                            }
+                        }
                         _RepShow = _RepShow.Save();
+                 
                         VarGeneral.RepData = _RepShow.RepData;
                     }
                     catch (Exception exception)
@@ -1310,6 +1321,15 @@ namespace InvAcc.Forms
         {
             try
             {
+                if (CmbInvType.SelectedIndex == 1)
+                {
+                    checkBox1.Visible = true;
+                   
+                }else
+                {
+                    checkBox1.Checked = true;
+                    checkBox1.Visible = false;
+                }
                 if (this.combobox_RepType.SelectedIndex <= 0)
                 {
                     VarGeneral.InvTyp = int.Parse(this.CmbInvType.SelectedValue.ToString());
@@ -2384,6 +2404,11 @@ namespace InvAcc.Forms
         }
 
         private void groupBox_Date_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbInvType_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -42,6 +42,8 @@ using System.Windows.Forms;
 namespace InvAcc.Forms
 {
     using ProShared;
+    using ProShared.Forms;
+
     public partial class FrmMn : Form
     {
         private IContainer components = null;
@@ -26723,7 +26725,7 @@ namespace InvAcc.Forms
             }
             try
             {
-                string ckhStatString = db.StockInvSetting(VarGeneral.UserID, 1).TaxOptions.Substring(4, 1);
+                string ckhStatString = db.StockInvSetting( 1).TaxOptions.Substring(4, 1);
             }
             catch
             {
@@ -27903,7 +27905,7 @@ namespace InvAcc.Forms
                                              where item.gdLok == false
                                              where (double?)(double)item.gdhead_ID == vData4.TaxGaidID
                                              select item).ToList().FirstOrDefault();
-                        T_INVSETTING _InvSettingTax = db.StockInvSetting(VarGeneral.UserID, 1);
+                        T_INVSETTING _InvSettingTax = db.StockInvSetting( 1);
                         string TaxCredit = ((_InvSettingTax.TaxCredit.Trim() != "***") ? _InvSettingTax.TaxCredit.Trim() : vData4.CusVenNo);
                         if (string.IsNullOrEmpty(TaxCredit))
                         {
@@ -28149,7 +28151,7 @@ namespace InvAcc.Forms
                                              where item.gdLok == false
                                              where (double?)(double)item.gdhead_ID == vData3.TaxGaidID
                                              select item).ToList().FirstOrDefault();
-                        T_INVSETTING _InvSettingTax = db.StockInvSetting(VarGeneral.UserID, 3);
+                        T_INVSETTING _InvSettingTax = db.StockInvSetting( 3);
                         string TaxCredit = ((_InvSettingTax.TaxCredit.Trim() != "***") ? _InvSettingTax.TaxCredit.Trim() : vData3.CusVenNo);
                         if (string.IsNullOrEmpty(TaxCredit))
                         {
@@ -28400,7 +28402,7 @@ namespace InvAcc.Forms
                                              where item.gdLok == false
                                              where (double?)(double)item.gdhead_ID == vData2.TaxGaidID
                                              select item).ToList().FirstOrDefault();
-                        T_INVSETTING _InvSettingTax = db.StockInvSetting(VarGeneral.UserID, 2);
+                        T_INVSETTING _InvSettingTax = db.StockInvSetting( 2);
                         string TaxCredit = ((_InvSettingTax.TaxCredit.Trim() != "***") ? _InvSettingTax.TaxCredit.Trim() : vData2.CusVenNo);
                         if (string.IsNullOrEmpty(TaxCredit))
                         {
@@ -28651,7 +28653,7 @@ namespace InvAcc.Forms
                                              where item.gdLok == false
                                              where (double?)(double)item.gdhead_ID == vData.TaxGaidID
                                              select item).ToList().FirstOrDefault();
-                        T_INVSETTING _InvSettingTax = db.StockInvSetting(VarGeneral.UserID, 4);
+                        T_INVSETTING _InvSettingTax = db.StockInvSetting( 4);
                         string TaxCredit = ((_InvSettingTax.TaxCredit.Trim() != "***") ? _InvSettingTax.TaxCredit.Trim() : vData.CusVenNo);
                         if (string.IsNullOrEmpty(TaxCredit))
                         {

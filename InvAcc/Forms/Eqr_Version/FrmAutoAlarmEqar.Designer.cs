@@ -274,6 +274,7 @@ private void InitializeComponent()
             this.superGridControl_Contracts.Size = new System.Drawing.Size(741, 333);
             this.superGridControl_Contracts.TabIndex = 485;
             this.superGridControl_Contracts.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.superGridControl_Contracts.Click += new System.EventHandler(this.superGridControl_Contracts_Click);
             // 
             // gridColumn1
             // 

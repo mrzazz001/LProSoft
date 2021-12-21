@@ -39,7 +39,7 @@ namespace InvAcc.Forms
 
         public void addDetParameters(IDatabase dbLines,int iiCnt)
         {
-
+            return;
             dbLines.AddParameter("RSph", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, "RSPH")))));
             dbLines.AddParameter("RCyl", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, "RCYL")))));
             dbLines.AddParameter("RAxis", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, "RAXIS")))));
@@ -54,7 +54,7 @@ namespace InvAcc.Forms
             dbLines.AddParameter("LLOption", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, "LIPD")))));
 
         }
-        string Version = "GSR";
+        string Version = "";
         private void GFlxInv_AfterRowColChange(object sender, RangeEventArgs e)
         {
             if (e.OldRange.r1 != e.NewRange.r1)

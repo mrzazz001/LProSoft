@@ -1,5 +1,6 @@
 ﻿using CrystalDecisions.Shared;
 using InvAcc.Forms;
+using ProShared;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -13,7 +14,25 @@ namespace InvAcc.Forms
 {
     public class FrmReportsViewer 
     {
-        public object Tag;
+        object tg;
+        public object Tag
+        {
+            get { return tt; }
+            set
+            {
+                tg = value;
+                if (TypeOfReporting == 0)
+                { CrFrm.Tag = value; CrFrm.BringToFront(); }
+                else
+                {
+                    FastFrm.Tag = value;
+
+                    FastFrm.BringToFront();
+                }
+
+
+            }
+        }
         public bool tt = false;
 
         public bool TopMost
@@ -228,15 +247,26 @@ namespace InvAcc.Forms
                 sqlWhere = value;
             }
         }
-
-        public static string QRCodeData { get; internal set; }
-
+        static string _f;
+        public static string QRCodeData {
+            get
+            {
+                return _f;
+            }
+            set
+            {
+                _f = value;
+                Utilites.FrmReportsViewerQRCodeData = value;
+            }
+        
+        }
         private string repvalue;
         private string sqlWhere;
         public static int TypeOfReporting = 0;
 
       public   FrmReportsViewer()
         {
+            Program.min3();
             if (TypeOfReporting == 0)
             {
                 CrFrm = new RFrmReportsViewer();

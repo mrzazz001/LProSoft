@@ -198,6 +198,14 @@ namespace InvAcc.Forms
             CmbPaperSize.Click += Button_Edit_Click;
             CmbPrinter.Click += Button_Edit_Click;
             listInvSetting = db.StockInvSettingList(VarGeneral.UserID);
+            Rate_DataDataContext dbc = new Rate_DataDataContext(VarGeneral.BranchRt);
+
+     List< T_User>      Users = (from i in dbc.T_Users
+                     select i).ToList<T_User>();
+            comboBox1.DataSource = Users;
+            comboBox1.DisplayMember = "UsrNamA";
+            comboBox1.ValueMember = "Usr_ID";
+
             if (File.Exists(Application.StartupPath + "\\Script\\SecriptInvitationCards.dll"))
             {
                 listInvSetting = db.T_INVSETTINGs.Where((T_INVSETTING t) => t.InvID == 1 || t.InvID == 8).ToList();
@@ -287,16 +295,14 @@ namespace InvAcc.Forms
                 State = FormState.Saved;
                 ButWithSave.Enabled = false;
                 _item = (Item)CmbInvType.SelectedItem;
-                for (int iiCnt = 0; iiCnt < listInvSetting.Count; iiCnt++)
+              //  for (int iiCnt = 0; iiCnt < listInvSetting.Count; iiCnt++)
                 {
-                    _InvSetting = listInvSetting[iiCnt];
-                    if (_item.Value != _InvSetting.InvID)
-                    {
-                        continue;
-                    }
+                    T_Printer p = db.StockPrinterSetting(VarGeneral.UserID, _item.Value);
+
+                    _InvSetting = p.InvInfo;
                     chk_Stoped.Value = false;
                     checkBox_WaiterAll.Checked = false;
-                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(0, 1) == "0")
+                    if (p.nTyp.Substring(0, 1) == "0")
                     {
                         ChkPTable.Checked = false;
                     }
@@ -304,7 +310,7 @@ namespace InvAcc.Forms
                     {
                         ChkPTable.Checked = true;
                     }
-                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "0")
+                    if (p.nTyp.Substring(1, 1) == "0")
                     {
                         RedButPaperA4.Checked = false;
                         RedButCasher.Checked = true;
@@ -314,17 +320,17 @@ namespace InvAcc.Forms
                         RedButPaperA4.Checked = true;
                         RedButCasher.Checked = false;
                     }
-                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
-                    {
-                        checkBox_previewPrint.Checked = false;
-                    }
-                    else
+                    if (p.nTyp.Substring(2, 1) == "1")
                     {
                         checkBox_previewPrint.Checked = true;
                     }
-                    txtBottM.Text = _InvSetting.InvpRINTERInfo.hAs.ToString();
-                    txtLeftM.Text = _InvSetting.InvpRINTERInfo.hYs.ToString();
-                    txtLinePage.Value = (int)_InvSetting.InvpRINTERInfo.lnPg.Value;
+                    else
+                    {
+                        checkBox_previewPrint.Checked = false;
+                    }
+                    txtBottM.Text = p.hAs.ToString();
+                    txtLeftM.Text = p.hYs.ToString();
+                    txtLinePage.Value = (int)p.lnPg.Value;
                     if (txtLinePage.Value <= 0)
                     {
                         txtLinePage.LockUpdateChecked = false;
@@ -333,25 +339,25 @@ namespace InvAcc.Forms
                     {
                         txtLinePage.LockUpdateChecked = true;
                     }
-                    txtRight.Text = _InvSetting.InvpRINTERInfo.hYm.ToString();
-                    txtTopM.Text = _InvSetting.InvpRINTERInfo.hAl.ToString();
-                    txtDistance.Text = _InvSetting.InvpRINTERInfo.lnSpc.ToString();
+                    txtRight.Text = p.hYm.ToString();
+                    txtTopM.Text = p.hAl.ToString();
+                    txtDistance.Text = p.lnSpc.ToString();
                     textBox_CachierTxtA.Text = _InvSetting.invGdADesc;
                     textBox_CachierTxtE.Text = _InvSetting.invGdEDesc;
-                    CmbPrinter.Text = _InvSetting.defPrn;
-                    txtpageCount.Value = _InvSetting.InvpRINTERInfo.DefLines.Value;
+                    CmbPrinter.Text = p.defPrn;
+                    txtpageCount.Value = p.DefLines.Value;
                     try
-                    {
+                    { 
                         chk_Stoped.Value = _InvSetting.PrintCat.Value;
                     }
                     catch
                     {
                         chk_Stoped.Value = true;
                     }
-                    if (!string.IsNullOrEmpty(_InvSetting.defSizePaper))
+                    if (!string.IsNullOrEmpty(p.defSizePaper))
                     {
                         CmbPaperSize.Items.Clear();
-                        CmbPaperSize.Items.Add(_InvSetting.defSizePaper);
+                        CmbPaperSize.Items.Add(p.defSizePaper);
                         CmbPaperSize.SelectedIndex = 0;
                     }
                     else
@@ -393,7 +399,7 @@ namespace InvAcc.Forms
                         chk_Stoped.Visible = false;
                         checkBox_WaiterAll.Visible = false;
                     }
-                    break;
+                
                 }
             }
             catch (Exception error)
@@ -406,12 +412,12 @@ namespace InvAcc.Forms
                 label8.Text = ((LangArEn == 0) ? "التصنيفات :" : "Categories :");
                 chk_Stoped.OnText = ((LangArEn == 0) ? "إيقاف الطباعة" : "Printing Stoped");
                 chk_Stoped.OffText = ((LangArEn == 0) ? "إيقاف الطباعة" : "Printing Stoped");
-                checkBox_previewPrint.Visible = false;
+                checkBox_previewPrint.Visible = true;
                 chk_Stoped.Visible = true;
-                if (db.StockInvSetting(VarGeneral.UserID, 1).nTyp.Substring(2, 1) == "1")
+                if (db.StockInvSetting( 1).nTyp.Substring(2, 1) == "1")
                 {
-                    groupBox_PrintType.Visible = false;
-                    picture_SSS.Visible = true;
+                    groupBox_PrintType.Visible = true;
+                  //  picture_SSS.Visible = true;
                 }
             }
         }
@@ -506,17 +512,90 @@ namespace InvAcc.Forms
                 ntyp = (ChkPTable.Checked ? "1" : "0");
                 ntyp = (RedButPaperA4.Checked ? (ntyp + "1") : (ntyp + "0"));
                 ntyp = (checkBox_previewPrint.Checked ? (ntyp + "1") : (ntyp + "0"));
-                _InvSetting.InvpRINTERInfo.nTyp = ntyp;
-                _InvSetting.InvpRINTERInfo.hAs = double.Parse(VarGeneral.TString.TEmpty(txtBottM.Text ?? ""));
-                _InvSetting.InvpRINTERInfo.hYs = double.Parse(VarGeneral.TString.TEmpty(txtLeftM.Text ?? ""));
-                _InvSetting.InvpRINTERInfo.lnPg = double.Parse(VarGeneral.TString.TEmpty(txtLinePage.Text ?? ""));
-                _InvSetting.InvpRINTERInfo.hYm = double.Parse(VarGeneral.TString.TEmpty(txtRight.Text ?? ""));
-                _InvSetting.InvpRINTERInfo.hAl = double.Parse(VarGeneral.TString.TEmpty(txtTopM.Text ?? ""));
-                _InvSetting.InvpRINTERInfo.lnSpc = double.Parse(VarGeneral.TString.TEmpty(txtDistance.Text ?? ""));
+                T_Printer p = new T_Printer();
+                p = db.StockPrinterSetting(VarGeneral.UserID,_InvSetting.InvID);
+                if(p==null)
+                {
+                    p = new T_Printer();
+                }
+                p.nTyp = ntyp;
+                p.hAs = double.Parse(VarGeneral.TString.TEmpty(txtBottM.Text ?? ""));
+                p.hYs = double.Parse(VarGeneral.TString.TEmpty(txtLeftM.Text ?? ""));
+                p.lnPg = double.Parse(VarGeneral.TString.TEmpty(txtLinePage.Text ?? ""));
+                p.hYm = double.Parse(VarGeneral.TString.TEmpty(txtRight.Text ?? ""));
+                p.hAl = double.Parse(VarGeneral.TString.TEmpty(txtTopM.Text ?? ""));
+                p.lnSpc = double.Parse(VarGeneral.TString.TEmpty(txtDistance.Text ?? ""));
+                p.invGdADesc = textBox_CachierTxtA.Text;
+                p.invGdEDesc = textBox_CachierTxtE.Text;
+                p.defPrn = CmbPrinter.Text ?? "";
+                p.DefLines = txtpageCount.Value;
+                _InvSetting.PrintCat = chk_Stoped.Value;
+                if (RButPortrait.Checked)
+                {
+                    p.Orientation = 1;
+                }
+                else
+                {
+                    p.Orientation = 2;
+                }
+                try
+                {
+                    if (checkBox_WaiterAll.Visible && _InvSetting.InvID == 21)
+                    {
+                        _InvSetting.autoCommGaid = checkBox_WaiterAll.Checked;
+                    }
+                }
+                catch
+                {
+                }
+                if (CmbPaperSize.Items.Count > 0)
+                {
+                    if (!string.IsNullOrEmpty(CmbPrinter.Text))
+                    {
+                        if (CmbPaperSize.SelectedIndex > 0)
+                        {
+                            p.defSizePaper = CmbPaperSize.Text;
+                        }
+                        else
+                        {
+                            p.defSizePaper = "";
+                        }
+                    }
+                    else
+                    {
+                        p.defSizePaper = "";
+                    }
+                }
+                else
+                {
+                    p.defSizePaper = "";
+                }
+                int r = 0;
+               if(_InvSetting.InvpRINTERInfo==null)
+                {
+                    r = 1;
+                    p.Branch_ID =(VarGeneral.BranchNumber);
+                    p.User_ID = VarGeneral.UserID;
+
+                    p.InvID = _InvSetting.InvID;
+                    db.T_Printers.InsertOnSubmit(p);
+           
+                }
+               else
+                {
+                    db.SubmitChanges();
+                }
+                _InvSetting.nTyp = ntyp;
+                _InvSetting.hAs = double.Parse(VarGeneral.TString.TEmpty(txtBottM.Text ?? ""));
+                _InvSetting.hYs = double.Parse(VarGeneral.TString.TEmpty(txtLeftM.Text ?? ""));
+                _InvSetting.lnPg = double.Parse(VarGeneral.TString.TEmpty(txtLinePage.Text ?? ""));
+                _InvSetting.hYm = double.Parse(VarGeneral.TString.TEmpty(txtRight.Text ?? ""));
+                _InvSetting.hAl = double.Parse(VarGeneral.TString.TEmpty(txtTopM.Text ?? ""));
+                _InvSetting.lnSpc = double.Parse(VarGeneral.TString.TEmpty(txtDistance.Text ?? ""));
                 _InvSetting.invGdADesc = textBox_CachierTxtA.Text;
                 _InvSetting.invGdEDesc = textBox_CachierTxtE.Text;
                 _InvSetting.defPrn = CmbPrinter.Text ?? "";
-                _InvSetting.InvpRINTERInfo.DefLines = txtpageCount.Value;
+                _InvSetting.DefLines = txtpageCount.Value;
                 _InvSetting.PrintCat = chk_Stoped.Value;
                 if (RButPortrait.Checked)
                 {
@@ -561,6 +640,11 @@ namespace InvAcc.Forms
                 db.Log = VarGeneral.DebugLog;
                 db.SubmitChanges(ConflictMode.ContinueOnConflict);
                 MessageBox.Show((LangArEn == 0) ? "لقد تم اتمام العملية بنجاح .." : "This Opration Is Done", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+         if(r==1)
+                {
+                    dbInstance = null;
+                    listInvSetting = db.StockInvSettingList(VarGeneral.UserID);
+                }
             }
             catch (Exception error)
             {
@@ -720,6 +804,15 @@ namespace InvAcc.Forms
             {
                 chk_Stoped.Enabled = true;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            VarGeneral.UserID = ((T_User)comboBox1.SelectedItem).Usr_ID;
+            listInvSetting = db.StockInvSettingList(VarGeneral.UserID);
+            FMInvPrintSetup_Load(null, null);
+            OnLoad(null);
+            Refresh();
         }
     }
 }

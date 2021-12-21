@@ -602,6 +602,8 @@ namespace InvAcc.Forms
         {
             try
             {
+                Program.min
+                       ();
                 if (VarGeneral.CheckDate(txtMFromDate.Text))
                 {
                     txtMFromDate.Text = Convert.ToDateTime(txtMFromDate.Text).ToString("yyyy/MM/dd");
@@ -618,6 +620,8 @@ namespace InvAcc.Forms
         }
         private void txtMToDate_Leave(object sender, EventArgs e)
         {
+            Program.min
+                   ();
             try
             {
                 if (VarGeneral.CheckDate(txtMToDate.Text))
@@ -936,6 +940,11 @@ namespace InvAcc.Forms
         {
             ButOk.BackgroundImage = Properties.Resources.print;
             ButOk.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+
+        private void txtMToDate_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

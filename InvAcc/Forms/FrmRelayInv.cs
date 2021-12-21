@@ -203,7 +203,7 @@ namespace InvAcc.Forms
         {
             _InvSetting = new T_INVSETTING();
             _SysSetting = new T_SYSSETTING();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+            _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
             _SysSetting = db.SystemSettingStock();
         }
         private void ButOk_Click(object sender, EventArgs e)

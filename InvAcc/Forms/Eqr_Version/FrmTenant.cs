@@ -213,7 +213,7 @@ namespace InvAcc.Forms
         {
             set
             {
-                Button_Add.Visible = value;
+            //    Button_Add.Visible = value;
             }
         }
         public bool IfDelete
@@ -969,7 +969,7 @@ namespace InvAcc.Forms
         }
         private void GetInvSetting()
         {
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, 22);
+            _InvSetting = db.StockInvSetting( 22);
             _Company = db.StockCompanyList().FirstOrDefault();
         }
         private void textBox_ID_TextChanged(object sender, EventArgs e)
@@ -2058,6 +2058,11 @@ namespace InvAcc.Forms
         private void FlxContracts_MouseLeave(object sender, EventArgs e)
         {
             label_Option.Visible = false;
+        }
+
+        private void FlxContracts_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

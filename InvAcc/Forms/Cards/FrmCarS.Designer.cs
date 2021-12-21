@@ -82,7 +82,7 @@ private void InitializeComponent()
             this.ToolStripMenuItem_Rep = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Det = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);  this.netResize1.LabelsAutoEllipse = false;
+            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.netResize2 = new Softgroup.NetResize.NetResize(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.ribbonBar1.SuspendLayout();
@@ -923,6 +923,7 @@ private void InitializeComponent()
             // 
             // netResize1
             // 
+            this.netResize1.LabelsAutoEllipse = false;
             this.netResize1.ParentControl = this;
             this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 

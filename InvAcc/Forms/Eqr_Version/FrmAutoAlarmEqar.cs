@@ -130,6 +130,46 @@ namespace InvAcc.Forms
         }
         private void FrmAutoAlarmEqar_Load(object sender, EventArgs e)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             try
             {
                 ComponentResourceManager resources = new ComponentResourceManager(typeof(FrmAutoAlarmEqar));
@@ -294,6 +334,11 @@ namespace InvAcc.Forms
         private void toolStripButton_Close_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void superGridControl_Contracts_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

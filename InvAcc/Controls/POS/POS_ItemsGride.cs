@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using ProShared.Stock_Data;
-using ProShared.GeneralM;using ProShared;
+using ProShared.GeneralM;
+using ProShared;
+using InvAcc.Forms;
 
 namespace InvAcc.Controls.POS
 {
@@ -23,7 +25,9 @@ namespace InvAcc.Controls.POS
         public int CAT_ID
         {
             get { return xx; }
-            set { xx = value;
+            set
+            {
+                xx = value;
 
             }
         }
@@ -71,7 +75,8 @@ namespace InvAcc.Controls.POS
 
                               select t).ToList();
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
 #pragma warning restore CS0168 // The variable 'ex' is declared but never used
             { }
             CurrentPageIndex = 1;
@@ -94,10 +99,10 @@ namespace InvAcc.Controls.POS
 
             currentcolumn = 0;
             curentrow = 0;
-       
+
             setinitial();
             fill(CAT_ID, false);
-           
+
         }
         public string filtertext = "";
         public void sedfilter(string txt)
@@ -108,26 +113,28 @@ namespace InvAcc.Controls.POS
             curentrow = 0;
             ItemsGride.Controls.Clear();
             setinitial();
+
             if (string.IsNullOrEmpty(filtertext))
             {
                 sql = _sql;
-                maxcount = db.ExecuteQuery<T_Item>("Select * From T_Items where ItmCat='" + CAT_ID.ToString()+"'" ).Count();
+                maxcount = db.ExecuteQuery<T_Item>("Select * From T_Items where ItmCat='" + CAT_ID.ToString() + "'").Count();
                 like = "";
             }
             else
             {
+                T_Item t = new T_Item();
 
                 like = filtertext;
-                sql = _sql.Replace("Test", "Test  WHERE Arb_Des LIKE '%xxxxxxxx%'".Replace("xxxxxxxx", like));
-                maxcount = db.ExecuteQuery<T_Item>("Select * From T_Items where ItmCat='"+CAT_ID.ToString()+"' and" +" Arb_Des LIKE '%xxxx%'".Replace("xxxx", like)).Count();
+                sql = _sql.Replace("Test", "Test  WHERE Arb_Des LIKE '%xxxxxxxx%' Or  Eng_Des LIKE '%xxxxxxxx%' OR  BarCod1 LIKE '%xxxxxxxx%' OR  BarCod2 LIKE '%xxxxxxxx%' OR  BarCod3 LIKE '%xxxxxxxx%' OR  BarCod3 LIKE '%xxxxxxxx%' OR  BarCod4 LIKE '%xxxxxxxx%' OR  BarCod5 LIKE '%xxxxxxxx%'".Replace("xxxxxxxx", like));
+                maxcount = db.ExecuteQuery<T_Item>("Select * From T_Items where ItmCat='" + CAT_ID.ToString() + "' and" + " Arb_Des LIKE '%xxxx%'  Or  Eng_Des LIKE '%xxxxxxxx%' OR  BarCod1 LIKE '%xxxxxxxx%' OR  BarCod2 LIKE '%xxxxxxxx%' OR  BarCod3 LIKE '%xxxxxxxx%' OR  BarCod3 LIKE '%xxxxxxxx%' OR  BarCod4 LIKE '%xxxxxxxx%' OR  BarCod5 LIKE '%xxxxxxxx%'".Replace("xxxx", like)).Count();
                 setinitial();
 
 
 
             }
-         
+
             fill(CAT_ID, false);
-          
+
         }
         public void TextBoxFilter_TextChanged(object sender, EventArgs e)
         {
@@ -135,7 +142,7 @@ namespace InvAcc.Controls.POS
 
             currentcolumn = 0;
             curentrow = 0;
-         
+
             setinitial();
             if (string.IsNullOrEmpty(filtertext))
             {
@@ -150,24 +157,23 @@ namespace InvAcc.Controls.POS
                 sql = _sql.Replace("Test", "Test  WHERE Arb_Des LIKE '%xxxxxxxx%'".Replace("xxxxxxxx", like)); maxcount = db.ExecuteQuery<T_Item>("Select * From T_Items where  Arb_Des LIKE '%xxxx%'".Replace("xxxx", like)).Count();
                 maxcount = db.ExecuteQuery<T_Item>("Select * From T_Items where  Arb_Des LIKE '%xxxx%'".Replace("xxxx", like)).Count();
                 setinitial();
-                
+
 
 
             }
             //TexBoxFilter.Invalidate();
             fill(0, false);
-            
+
 
         }
-     public static    int IsBackButtonOn = -1;
+
 
         public POS_ItemsGride()
         {
             InitializeComponent();
             try
             {
-                if (IsBackButtonOn == -1)
-                    IsBackButtonOn = (VarGeneral.IsBackPOSButtonOn ? 1 : 0);
+
 
                 maxcount = db.MaxItemNo;
                 _sql = sql;
@@ -178,8 +184,8 @@ namespace InvAcc.Controls.POS
 
                 gridwidth = this.Width;
                 gridheight = this.Height;
-                if(ItemWidth!=0)
-                ItemsGride.ColumnCount = (gridwidth / ItemWidth);
+                if (ItemWidth != 0)
+                    ItemsGride.ColumnCount = (gridwidth / ItemWidth);
                 if (ItemHieght != 0)
                     ItemsGride.RowCount = (gridheight / ItemHieght);
                 if (ItemWidth != 0)
@@ -207,7 +213,7 @@ namespace InvAcc.Controls.POS
 
         }
         List<T_CATEGORY> t_CATEGORYes;
-    public     Stock_DataDataContext _db;
+        public Stock_DataDataContext _db;
         Stock_DataDataContext db
         {
             get
@@ -253,6 +259,8 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 
                 }
                 List<T_Item> dt = new List<T_Item>();
+                int pd = PageSize;
+                if (FrmInvSalePoint.ShowBackButtons) PageSize--;
                 if (!vBestSaller)
                 {
                     if (page == 1)
@@ -278,15 +286,16 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
                 if (like == "")
                     sqll = sql.Replace("PageSize", PageSize.ToString()).Replace("PageNumber", CurrentPageIndex.ToString()).Replace("Test", "T_Items where ItmCat='" + CAT_ID.ToString() + "'");
                 else
-                { sqll = sql.Replace("PageSize", PageSize.ToString()).Replace("PageNumber", CurrentPageIndex.ToString()).Replace("Test", "T_Items");
-                    sqll=sqll.Replace("WHERE", "where ItmCat='" + CAT_ID.ToString() + "' and ");
+                {
+                    sqll = sql.Replace("PageSize", PageSize.ToString()).Replace("PageNumber", CurrentPageIndex.ToString()).Replace("Test", "T_Items");
+                    sqll = sqll.Replace("WHERE", "where ItmCat='" + CAT_ID.ToString() + "' and ");
 
 
                 }
                 dt = db.ExecuteQuery<T_Item>(sqll, new object[0]).ToList();
                 if (like != "")
                 {
-                    maxcount = db.ExecuteQuery<T_Item>("Select * From T_Items where "+ "ItmCat='" + CAT_ID.ToString() + "'"+" and  Arb_Des LIKE '%xxxx%'".Replace("xxxx", like)).Count();
+                    maxcount = db.ExecuteQuery<T_Item>("Select * From T_Items where " + "ItmCat='" + CAT_ID.ToString() + "'" + " and  Arb_Des LIKE '%xxxx%'  Or  Eng_Des LIKE '%xxxxxxxx%' OR  BarCod1 LIKE '%xxxxxxxx%' OR  BarCod2 LIKE '%xxxxxxxx%' OR  BarCod3 LIKE '%xxxxxxxx%' OR  BarCod3 LIKE '%xxxxxxxx%' OR  BarCod4 LIKE '%xxxxxxxx%' OR  BarCod5 LIKE '%xxxxxxxx%'".Replace("xxxx", like)).Count();
                 }
                 int iicnt = 0;
 
@@ -303,20 +312,21 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 
                 List<T_Item> g = null;
 
-                if (like == "")
-                    g = (from isa in dt
-                         where isa.ItmCat == CAT_ID
-                         select isa).ToList<T_Item>();
-                else
-                    g = (from isa in dt
-                         where isa.ItmCat == CAT_ID && (VarGeneral.currentintlanguage == 0 ? isa.Arb_Des.Contains(like) : isa.Eng_Des.Contains(like))
-                         select isa).ToList<T_Item>();
+                //   if (like == "")
+                g = (from isa in dt
+                     where isa.ItmCat == CAT_ID
+                     select isa).ToList<T_Item>();
+                //else
+                //    g = (from isa in dt
+                //         where isa.ItmCat == CAT_ID && (VarGeneral.currentintlanguage == 0 ? isa.Arb_Des.Contains(like) : isa.Eng_Des.Contains(like))
+                //         select isa).ToList<T_Item>();
                 dt = g;
 #pragma warning disable CS0219 // The variable 'irowTeplate' is assigned but its value is never used
                 int irowTeplate = 5;
 #pragma warning restore CS0219 // The variable 'irowTeplate' is assigned but its value is never used
 #pragma warning disable CS0219 // The variable 'irow' is assigned but its value is never used
                 int irow = 0;
+
 #pragma warning restore CS0219 // The variable 'irow' is assigned but its value is never used
 
                 {
@@ -354,7 +364,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
                     //  else
                     //rowCell.Visible = false;
                 }
-
+                PageSize = pd;
             }
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
@@ -406,17 +416,17 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
                 int iicnt = 0;
                 maxcount = db.MaxCatNo;
                 string sqll = "";
-               
-                    sqll = sql.Replace("PageSize", PageSize.ToString()).Replace("PageNumber", CurrentPageIndex.ToString()).Replace("Itm_ID", "CAT_ID").Replace("Test", "T_CATEGORY");
-             
-              
+                if (PageSize == 0) PageSize = 1;
+                sqll = sql.Replace("PageSize", PageSize.ToString()).Replace("PageNumber", CurrentPageIndex.ToString()).Replace("Itm_ID", "CAT_ID").Replace("Test", "T_CATEGORY");
+
+
                 dt = db.ExecuteQuery<T_CATEGORY>(sqll, new object[0]).ToList();
                 if (like != "")
                 {
                     maxcount = db.ExecuteQuery<T_Item>("Select * From T_CATEGORY WHERE  Arb_Des LIKE '%xxxx%'".Replace("xxxx", like)).Count();
                 }
 
-               
+
 
                 Size newSize = default(Size);
                 try
@@ -432,7 +442,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 #pragma warning disable CS0219 // The variable 'g' is assigned but its value is never used
                 List<T_CATEGORY> g = null;
 #pragma warning restore CS0219 // The variable 'g' is assigned but its value is never used
-              
+
 #pragma warning disable CS0219 // The variable 'irowTeplate' is assigned but its value is never used
                 int irowTeplate = 5;
 #pragma warning restore CS0219 // The variable 'irowTeplate' is assigned but its value is never used
@@ -443,7 +453,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 
 
 
-                    if(dt.Count>4)
+                    if (dt.Count > 4)
                     { }
                     {
                         for (int i = 0; i < dt.Count; i++)
@@ -504,7 +514,9 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
         public string selectStatement
         {
             get { return _selectStatement; }
-            set { _selectStatement = value;
+            set
+            {
+                _selectStatement = value;
                 _SelectS = value;
             }
         }
@@ -569,7 +581,9 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
         bool isPageBackOn = false;
         private void clickitem(object sender, ItemEventArg e)
         {
-            if (IsBackButtonOn == 0||mode==0)
+            Program.min();
+
+            if (mode == 0 || !FrmInvSalePoint.ShowBackButtons)
             {
                 if (itemClick != null)
                     itemClick(this, e);
@@ -579,7 +593,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
                 mode = 0;
                 CAT_ID = int.Parse(e.item_No.ToString());
                 fill(CAT_ID, false);
-            }  
+            }
         }
 
         int col = 0;
@@ -592,7 +606,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
             try
             {
                 int rowCount = cc;
-                TotalPage = rowCount / PageSize;
+                TotalPage = calc(rowCount, PageSize);
                 if (rowCount % PageSize > 0)
                 {
                     TotalPage++;
@@ -612,7 +626,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
             try
             {
                 int rowCount = vItemsMain.ToList().Count;
-               if(PageSize!=0) TotalPage = rowCount / PageSize;
+                if (PageSize != 0) TotalPage = calc(rowCount, PageSize);
                 if (rowCount % PageSize > 0)
                 {
                     TotalPage++;
@@ -638,10 +652,10 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
             col = ItemsGride.ColumnCount;
             row = ItemsGride.RowCount;
             //  PageSize = Math.Abs(col * row);
-            
+
             int rowCount = ItemsGride.RowCount;
-            if(PageSize!=0)
-            TotalPage = rowCount / PageSize;
+            if (PageSize != 0)
+                TotalPage = calc(rowCount, PageSize);
             if (rowCount % PageSize > 0)
             {
                 TotalPage++;
@@ -667,7 +681,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 
         private void Pos_ItemPanel_Load(object sender, EventArgs e)
         {
-          
+
         }
 
         private void arrowButton2_Click(object sender, EventArgs e)
@@ -772,13 +786,13 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
         int gridwidth = 0, gridheight = 0;
         private void SizeChadnged(object sender, EventArgs e)
         {
-        
+
 
         }
         void calcolsm()
         {
-          int  col = ((this.Width / ItemWidth));
-         
+            int col = ((this.Width / ItemWidth));
+
         }
 
         void setinitial()
@@ -787,14 +801,18 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 
             try
             {
-                maxcount = db.ExecuteQuery<T_Item>("Select * From T_Items where  ItmCat ='" + CAT_ID.ToString() + "'").Count();
+                if (mode == 0)
+                    maxcount = db.ExecuteQuery<T_Item>("Select * From T_Items where  ItmCat ='" + CAT_ID.ToString() + "'").Count();
+                else
+                    maxcount = db.ExecuteQuery<T_CATEGORY>("Select * From T_CATEGORY ").Count();
+
                 CalculateTotalPages(maxcount);
                 curentrow = 0;
                 currentcolumn = 0;
                 CurrentPageIndex = 1;
                 gridwidth = this.Width;
 
-                gridheight = this.Height - getPanelSize() ;
+                gridheight = this.Height - getPanelSize();
                 {
                     if (ItemWidth == 0) return;
                     if (ItemHieght == 0) return;
@@ -806,8 +824,10 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
                     ItemsGride.ColumnCount = (gridwidth / ItemWidth);
                     ItemsGride.RowCount = (gridheight / ItemHieght);
                     ItemsGride.Controls.Clear();
+
                     col = (gridwidth / ItemWidth);
                     row = (gridheight / ItemHieght);
+                    row = (row == 0 ? 1 : row);
                     ItemsGride.RowStyles.Clear();
                     for (int i = 0; i < row; i++)
                     {
@@ -829,14 +849,28 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
                     }
                     PageSize = Math.Abs(col * row);
                     setbackButton();
+
                     if (PageSize != 0)
 
-                        numberofpages = maxcount / PageSize;
+                    {
+                        numberofpages = calc(maxcount, PageSize);
+
+
+                    }
+
                 }
             }
             catch { }
         }
+        int calc(int m, int p)
+        {
+            int d = m / p;
+            float v = (float)m / p;
+            int kk = (int)v;
+            if (v - kk > 0) d++;
+            return d;
 
+        }
         private int getPanelSize()
         {
             return 0;
@@ -844,7 +878,8 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 
         private void setbackButton()
         {
-            if (IsBackButtonOn == 1)
+
+            if (FrmInvSalePoint.ShowBackButtons)
             {
                 if (mode == 0)
                 {
@@ -858,13 +893,13 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
         {
             if (PageSize == 0) return;
 
-            numberofpages = maxcount / PageSize;
-            if (CurrentPageIndex <numberofpages)
+            numberofpages = calc(maxcount, PageSize);
+            if (CurrentPageIndex < numberofpages)
             {
-              
+
                 CurrentPageIndex++;
-             if(mode==0)   GetCurrentRecords(CurrentPageIndex, vBestSaller: false);
-             else
+                if (mode == 0) GetCurrentRecords(CurrentPageIndex, vBestSaller: false);
+                else
 
                     GetCurrentRecordscats(CurrentPageIndex, vBestSaller: false);
             }
@@ -874,7 +909,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
         {
             if (CurrentPageIndex > 1)
             {
-               
+
 
                 CurrentPageIndex--;
                 GetCurrentRecords(CurrentPageIndex, vBestSaller: false);
@@ -883,7 +918,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 
         private void POS_ItemsGride_SizeChanged(object sender, EventArgs e)
         {
-           
+
             try
             {
 
@@ -929,7 +964,7 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 
                 this.vScrollBar1.Maximum = this.ItemsGride.Size.Height - ItemsGride.ClientSize.Height; //step 1
 
-              
+
 
                 this.vScrollBar1.Maximum += this.vScrollBar1.LargeChange; //step 3
             }
@@ -937,22 +972,22 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
 
         private void ItemsGride_SizeChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void ItemsGride_ControlRemoved(object sender, ControlEventArgs e)
         {
-            
+
         }
 
         private void But_Back_Click(object sender, EventArgs e)
         {
-            if(mode==0)
+            if (mode == 0)
             { mode = 1; }
             else
             { mode = 0; }
             fill(0, false);
-           
+
         }
 
         int numberofpages = 1;
@@ -964,18 +999,18 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
                 But_NextPage_Click(null, null);
             }
 
-         
-            
+
+
         }
 
 #pragma warning disable CS1998 // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
         public async void fill(int cAT_ID, bool v)
-         {
+        {
             ItemsGride.RowStyles.Clear();
             setinitial();
             CAT_ID = cAT_ID;
 
-        
+
             for (int i = 0; i < ItemsGride.RowCount; i++)
             {
                 RowStyle c = new RowStyle();
@@ -1003,8 +1038,8 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
                         GetCurrentRecords(CurrentPageIndex, false);
                     else
                         GetCurrentRecordscats(CurrentPageIndex, false);
-                 if(PageSize!=0)
-                    numberofpages = maxcount / PageSize;
+                    if (PageSize != 0)
+                        numberofpages = calc(maxcount, PageSize);
                     if (CurrentPageIndex < numberofpages)
                     {
                         //CurrentPageIndex++;
@@ -1017,10 +1052,11 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
                     }
                 }
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
 #pragma warning restore CS0168 // The variable 'ex' is declared but never used
             { }
- 
+
         }
         private void ssss(int page, bool vBestSaller)
         {
@@ -1087,10 +1123,10 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
                 {
 
 
-
-
+                    int i = 0;
+                    if (FrmInvSalePoint.ShowBackButtons && j == 0) i = 1;
                     {
-                        for (int i = 0; i < ItemsGride.ColumnCount; i++)
+                        for (; i < ItemsGride.ColumnCount; i++)
                         {
                             if (iicnt < dt.Count)
                             {
@@ -1147,28 +1183,38 @@ WHERE RowNum BETWEEN 1+(@recsPerPage)* (@page-1) AND @recsPerPage*(@page)";
                 currentcolumn = 0;
                 curentrow = 0;
                 ItemsGride.Controls.Clear();
-
+                setbackButton();
                 pageindex++;
-                ssss(pageindex, vBestSaller: false);
+                CurrentPageIndex = pageindex;
+                if (mode == 0)
+                    ssss(pageindex, vBestSaller: false);
+                else
+                    GetCurrentRecordscats(CurrentPageIndex, false);
             }
         }
-     
+
         public void PreivousPage()
         {
-            Program.min();
-            if (pageindex >1)
+
+            if (pageindex > 1)
             {
                 currentcolumn = 0;
                 curentrow = 0;
                 ItemsGride.Controls.Clear();
-
+                setbackButton();
                 pageindex--;
-                ssss(pageindex, vBestSaller: false);
+
+                CurrentPageIndex = pageindex;
+                if (mode == 0)
+                    ssss(pageindex, vBestSaller: false);
+                else
+                    GetCurrentRecordscats(CurrentPageIndex, false);
+              
             }
         }
         private void ItemsGride_Paint(object sender, PaintEventArgs e)
         {
-    
+
 
         }
     }

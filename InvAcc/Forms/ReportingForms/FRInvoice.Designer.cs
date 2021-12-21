@@ -95,6 +95,7 @@ private void InitializeComponent()
             this.radioButton_ِReturn0 = new System.Windows.Forms.RadioButton();
             this.checkBox_DatePay = new System.Windows.Forms.CheckBox();
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.PanelSpecialContainer.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ButOk)).BeginInit();
@@ -112,11 +113,12 @@ private void InitializeComponent()
             // 
             // PanelSpecialContainer
             // 
+            this.PanelSpecialContainer.Controls.Add(this.checkBox1);
             this.PanelSpecialContainer.Controls.Add(this.ribbonBar1);
             this.PanelSpecialContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelSpecialContainer.Location = new System.Drawing.Point(0, 0);
             this.PanelSpecialContainer.Name = "PanelSpecialContainer";
-            this.PanelSpecialContainer.Size = new System.Drawing.Size(562, 479);
+            this.PanelSpecialContainer.Size = new System.Drawing.Size(582, 479);
             this.PanelSpecialContainer.TabIndex = 1220;
             // 
             // ribbonBar1
@@ -181,7 +183,7 @@ private void InitializeComponent()
             this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(562, 479);
+            this.ribbonBar1.Size = new System.Drawing.Size(582, 479);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 1099;
             this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -422,6 +424,7 @@ private void InitializeComponent()
             this.CmbInvType.Size = new System.Drawing.Size(159, 21);
             this.CmbInvType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbInvType.TabIndex = 1175;
+            this.CmbInvType.SelectedIndexChanged += new System.EventHandler(this.CmbInvType_SelectedIndexChanged);
             this.CmbInvType.SelectedValueChanged += new System.EventHandler(this.CmbInvType_SelectedValueChanged);
             // 
             // label9
@@ -993,9 +996,9 @@ private void InitializeComponent()
             this.CmbDeleted.Controls.Add(this.radioButton_Del1);
             this.CmbDeleted.Controls.Add(this.radioButton_Del2);
             this.CmbDeleted.Controls.Add(this.radioButton_Del0);
-            this.CmbDeleted.Location = new System.Drawing.Point(304, 282);
+            this.CmbDeleted.Location = new System.Drawing.Point(280, 282);
             this.CmbDeleted.Name = "CmbDeleted";
-            this.CmbDeleted.Size = new System.Drawing.Size(254, 40);
+            this.CmbDeleted.Size = new System.Drawing.Size(296, 40);
             this.CmbDeleted.TabIndex = 6730;
             this.CmbDeleted.TabStop = false;
             this.CmbDeleted.Tag = " T_INVHED.IfDel ";
@@ -1016,7 +1019,7 @@ private void InitializeComponent()
             // 
             this.radioButton_Del2.AutoSize = true;
             this.radioButton_Del2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radioButton_Del2.Location = new System.Drawing.Point(67, 15);
+            this.radioButton_Del2.Location = new System.Drawing.Point(98, 15);
             this.radioButton_Del2.Name = "radioButton_Del2";
             this.radioButton_Del2.Size = new System.Drawing.Size(89, 17);
             this.radioButton_Del2.TabIndex = 27;
@@ -1028,7 +1031,7 @@ private void InitializeComponent()
             this.radioButton_Del0.AutoSize = true;
             this.radioButton_Del0.Checked = true;
             this.radioButton_Del0.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radioButton_Del0.Location = new System.Drawing.Point(163, 15);
+            this.radioButton_Del0.Location = new System.Drawing.Point(194, 15);
             this.radioButton_Del0.Name = "radioButton_Del0";
             this.radioButton_Del0.Size = new System.Drawing.Size(84, 17);
             this.radioButton_Del0.TabIndex = 26;
@@ -1101,12 +1104,25 @@ private void InitializeComponent()
             this.netResize1.ParentControl = this;
             this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(304, 310);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(103, 17);
+            this.checkBox1.TabIndex = 1100;
+            this.checkBox1.Text = "فواتير المصروفات";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
+            // 
             // FRInvoice
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(562, 479);
+            this.ClientSize = new System.Drawing.Size(582, 479);
             this.Controls.Add(this.PanelSpecialContainer);
             this.Icon = global::InvAcc.Properties.Resources.favicon;
             this.KeyPreview = true;
@@ -1121,6 +1137,7 @@ private void InitializeComponent()
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Frm_KeyPress);
             this.PanelSpecialContainer.ResumeLayout(false);
+            this.PanelSpecialContainer.PerformLayout();
             this.ribbonBar1.ResumeLayout(false);
             this.ribbonBar1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ButOk)).EndInit();
@@ -1144,5 +1161,6 @@ private void InitializeComponent()
 
         }//###########&&&&&&&&&&
 
-}
+        private System.Windows.Forms.CheckBox checkBox1;
+    }
 }

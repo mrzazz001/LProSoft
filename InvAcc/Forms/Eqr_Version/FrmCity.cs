@@ -1431,5 +1431,10 @@ namespace InvAcc.Forms
         {
             textBox_Note.SelectAll();
         }
+
+        private void ribbonBar1_ItemClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -280,6 +280,7 @@ private void InitializeComponent()
             this.c1BarCode1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.c1BarCode1.TabIndex = 1124;
             this.c1BarCode1.Text = "1225";
+            this.c1BarCode1.Visible = false;
             // 
             // expandableSplitter2
             // 
@@ -360,7 +361,9 @@ private void InitializeComponent()
             this.FlxInvDet.RowColChange += new System.EventHandler(this.FlxInvDet_RowColChange);
             this.FlxInvDet.SelChange += new System.EventHandler(this.FlxInvDet_SelChange);
             this.FlxInvDet.BeforeEdit += new C1.Win.C1FlexGrid.RowColEventHandler(this.FlxInvDet_BeforeEdit);
+            this.FlxInvDet.StartEdit += new C1.Win.C1FlexGrid.RowColEventHandler(this.FlxInv_StartEdit);
             this.FlxInvDet.AfterEdit += new C1.Win.C1FlexGrid.RowColEventHandler(this.FlxInvDet_AfterEdit);
+            this.FlxInvDet.LeaveEdit += new C1.Win.C1FlexGrid.RowColEventHandler(this.FlxInvDet_LeaveEdit);
             this.FlxInvDet.Click += new System.EventHandler(this.FlxInv_Click);
             this.FlxInvDet.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FlxInvDet_KeyDown);
             this.FlxInvDet.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FlxInvDet_MouseDown);
@@ -1547,5 +1550,6 @@ private void InitializeComponent()
 
         }//###########&&&&&&&&&&
 
-}
+        private C1.Win.C1FlexGrid.C1FlexGrid FlxInvDet;
+    }
 }

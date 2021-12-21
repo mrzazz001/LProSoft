@@ -37,7 +37,9 @@ private void InitializeComponent()
             this.checkBox_previewPrint = new System.Windows.Forms.CheckBox();
             this.CmbInvType = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.textBox_CachierTxtA = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox_CachierTxtE = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.RButLandscape = new System.Windows.Forms.RadioButton();
@@ -67,7 +69,7 @@ private void InitializeComponent()
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.ButWithoutSave = new DevComponents.DotNetBar.ButtonX();
             this.ButWithSave = new DevComponents.DotNetBar.ButtonX();
-            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);  this.netResize1.LabelsAutoEllipse = false;
+            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.PanelSpecialContainer.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -112,12 +114,13 @@ private void InitializeComponent()
             this.ribbonBar1.ContainerControlProcessDialogKey = true;
             this.ribbonBar1.Controls.Add(this.panel1);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonBar1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
             this.ribbonBar1.Size = new System.Drawing.Size(466, 407);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 870;
+            this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.ribbonBar1.ThemeAware = true;
             // 
             // 
@@ -241,7 +244,7 @@ private void InitializeComponent()
             this.checkBox_previewPrint.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.checkBox_previewPrint.ForeColor = System.Drawing.Color.Blue;
             this.checkBox_previewPrint.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox_previewPrint.Location = new System.Drawing.Point(259, 130);
+            this.checkBox_previewPrint.Location = new System.Drawing.Point(259, 120);
             this.checkBox_previewPrint.Name = "checkBox_previewPrint";
             this.checkBox_previewPrint.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox_previewPrint.Size = new System.Drawing.Size(177, 17);
@@ -257,10 +260,10 @@ private void InitializeComponent()
             this.CmbInvType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbInvType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbInvType.FormattingEnabled = true;
-            this.CmbInvType.ItemHeight = 14;
+            this.CmbInvType.ItemHeight = 15;
             this.CmbInvType.Location = new System.Drawing.Point(252, 60);
             this.CmbInvType.Name = "CmbInvType";
-            this.CmbInvType.Size = new System.Drawing.Size(198, 20);
+            this.CmbInvType.Size = new System.Drawing.Size(198, 21);
             this.CmbInvType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbInvType.TabIndex = 1;
             this.CmbInvType.SelectedIndexChanged += new System.EventHandler(this.CmbInvType_SelectedIndexChanged);
@@ -268,7 +271,9 @@ private void InitializeComponent()
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.textBox_CachierTxtA);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox_CachierTxtE);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.CmbPaperSize);
@@ -294,6 +299,16 @@ private void InitializeComponent()
             this.groupBox1.Size = new System.Drawing.Size(435, 255);
             this.groupBox1.TabIndex = 90;
             this.groupBox1.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(140, 1);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 23);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "تحميل الاعدادات";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox_CachierTxtA
             // 
@@ -326,6 +341,14 @@ private void InitializeComponent()
             this.textBox_CachierTxtA.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.textBox_CachierTxtA.WatermarkText = "ذيل فاتورة الكاشيير";
             this.textBox_CachierTxtA.ButtonCustomClick += new System.EventHandler(this.textBox_CachierTxtA_ButtonCustomClick);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(0, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(134, 21);
+            this.comboBox1.TabIndex = 2;
             // 
             // textBox_CachierTxtE
             // 
@@ -409,10 +432,10 @@ private void InitializeComponent()
             this.CmbPaperSize.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbPaperSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbPaperSize.FormattingEnabled = true;
-            this.CmbPaperSize.ItemHeight = 14;
+            this.CmbPaperSize.ItemHeight = 15;
             this.CmbPaperSize.Location = new System.Drawing.Point(173, 152);
             this.CmbPaperSize.Name = "CmbPaperSize";
-            this.CmbPaperSize.Size = new System.Drawing.Size(152, 20);
+            this.CmbPaperSize.Size = new System.Drawing.Size(152, 21);
             this.CmbPaperSize.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbPaperSize.TabIndex = 1011;
             this.CmbPaperSize.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CmbPaperSize_MouseClick);
@@ -513,10 +536,10 @@ private void InitializeComponent()
             this.CmbPrinter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbPrinter.FormattingEnabled = true;
-            this.CmbPrinter.ItemHeight = 14;
+            this.CmbPrinter.ItemHeight = 15;
             this.CmbPrinter.Location = new System.Drawing.Point(21, 26);
             this.CmbPrinter.Name = "CmbPrinter";
-            this.CmbPrinter.Size = new System.Drawing.Size(283, 20);
+            this.CmbPrinter.Size = new System.Drawing.Size(283, 21);
             this.CmbPrinter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbPrinter.TabIndex = 3;
             this.CmbPrinter.SelectedIndexChanged += new System.EventHandler(this.CmbPrinter_SelectedIndexChanged);
@@ -772,6 +795,7 @@ private void InitializeComponent()
             // netResize1
             // 
             this.netResize1.AutoSaveLayout = true;
+            this.netResize1.LabelsAutoEllipse = false;
             this.netResize1.ParentControl = this;
             this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 
@@ -818,5 +842,7 @@ private void InitializeComponent()
 
         }//###########&&&&&&&&&&
 
-}
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox comboBox1;
+    }
 }

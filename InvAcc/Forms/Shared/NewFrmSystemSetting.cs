@@ -48,6 +48,7 @@ namespace InvAcc.Forms.Shared
         {
             try
             {
+                openFileDialog1 = new OpenFileDialog();
                 openFileDialog1.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif|TIFF Files (*.tiff)|*.tiff|BMP Files (*.bmp)|*.bmp";
                 try
                 {
@@ -869,7 +870,7 @@ namespace InvAcc.Forms.Shared
         {
             if (Environment.MachineName.Contains("DESKTOP-320H5U2"))
             {
-                this.Text = nn[c1FlexGrid2.RowSel - 1].ToString();
+             //   this.Text = nn[c1FlexGrid2.RowSel - 1].ToString();
             }
         }
 
@@ -2573,7 +2574,8 @@ namespace InvAcc.Forms.Shared
             c1FlexGrid2.SetData(60, 1, "عدم السماح بارجاع بضاعة بدون تحديد فاتورة المبيعات  ");
             c1FlexGrid2.SetData(61, 1, "استخدام حقل البار كود لفلترة الاصناف في نقاط البيع  ");
             c1FlexGrid2.SetData(62, 1, "اضهار مفاتيح التنقل بين الاصناف  والتصنيفات في نقاط البيع  ");
-            c1FlexGrid2.SetData(63, 1, "خاصية الصفحات في الاصناف في نقاط البيع   ");
+            c1FlexGrid2.SetData(63, 1, "الافتراضي عند اضافة فاتورة مشتريات جديده الفاتورة الخدمية  ");
+
 
             //c1FlexGrid2.SetData(59, 1, "");
             //c1FlexGrid2.SetData(60, 1, "");
@@ -2642,7 +2644,15 @@ namespace InvAcc.Forms.Shared
             setbilloption(60, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 86));
             setbilloption(61, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 87));
             setbilloption(62, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 88));
-            setbilloption(62, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 89));
+            setbilloption(63, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 89));
+            if(init)
+            {
+                setbilloption(57, true);
+                setbilloption(31, true);
+                setbilloption(24, true);
+                setbilloption(7, true);
+            }
+
             optionflag = 0;
         }
         public class ColumnDictinaryBankopp
@@ -3095,7 +3105,8 @@ namespace InvAcc.Forms.Shared
                 try
                 {
                     BindData();
-                    filloptions();
+                    if (ProShared.Properties.Settings.Default.B3 == "32") init = true;
+                        filloptions();
                 }
                 catch
                 {
@@ -3154,7 +3165,8 @@ namespace InvAcc.Forms.Shared
                     catch
                     {
                     }
-                    if (Convert.ToDateTime(VarGeneral.Hdate) > Convert.ToDateTime(n.FormatHijri(DT_H, "yyyy/MM/dd")))
+                   
+                    if (Convert.ToDateTime(VarGeneral.Hdate) >Convert.ToDateTime(n.FormatHijri(DT_H, "yyyy/MM/dd")))
                     {
                         dateTimeInput_DT.Text = ((LangArEn == 0) ? "الخدمة موقوفة حاليا" : "Service is Stoped");
                     }
@@ -3214,19 +3226,21 @@ namespace InvAcc.Forms.Shared
                 txtHeadingL1.Text = txtHeadingL1.Text.Replace("Application Software Solutions", "           ");
                 txtHeadingR1.Text = txtHeadingR1.Text.Replace("مؤسسة برو سوفت", "مؤسسة           ");
 
-                if (InvAcc.Properties.Settings.Default.B3 == "32")
+                if (ProShared.Properties.Settings.Default.B3 == "32")
                 {
+
                     txtCompany.Text = "مؤسسة ";
-                    InvAcc.Properties.Settings.Default.B3 = "";
-                    InvAcc.Properties.Settings.Default.Save();
+                    ProShared.Properties.Settings.Default.B3 = "";
+                    ProShared.Properties.Settings.Default.Save();
                     for (int i = 1; i < c1FlexGriadTax.Rows.Count; i++)
                         c1FlexGriadTax.SetData(i, 14, false);
                     c1FlexGrid1.SetData(3, 4, 1031001);
                     c1FlexGrid1.SetData(7, 5, 1031001);
                     c1FlexGrid1.SetData(11, 5, 1031001);
                     c1FlexGrid1.SetData(15, 4, 1031001);
+                    
                     // c1FlexGrid1.SetData(3, 3, 1031001);
-                    ksa = 1; pictureBox_EnterPic.Image = InvAcc.Properties.Resources.appbackground;
+                    ksa = 1;// pictureBox_EnterPic.Image = InvAcc.Properties.Resources.appbackground;
                     Button_Edit_Click(null, null);
                     ButWithSave_Click(null, null);
                 }
@@ -3237,6 +3251,7 @@ namespace InvAcc.Forms.Shared
             catch { }
 
         }
+        bool init = false;
         public static Image resizeImage(Image imgToResize, Size size)
         {
             return new Bitmap(imgToResize, size);
@@ -3429,8 +3444,10 @@ namespace InvAcc.Forms.Shared
 
 
                 setting += VarGeneral.TString.ChkStatSave((bool)c1FlexGrid2.GetData(62, 2));
-                setting += VarGeneral.TString.ChkStatSave((bool)c1FlexGrid2.GetData(63, 2));
+                if (c1FlexGrid2.GetData(63, 2) == null) c1FlexGrid2.SetData(63, 2, false);
 
+
+                setting += VarGeneral.TString.ChkStatSave((bool)c1FlexGrid2.GetData(63, 2));
 
                 _SysSetting.Seting = setting;
                 _SysSetting.LineOfInvoices = txtLinesInv.Value;
@@ -5816,10 +5833,10 @@ namespace InvAcc.Forms.Shared
                 db.ExecuteCommand("update T_SYSSETTING set DefPurchaesTax = " + txtPurchaesTax.Value);
                 db.ExecuteCommand("update T_SYSSETTING set TaxAcc = '" + txtTaxNo.Text + "'");
                 db.ExecuteCommand("update T_SYSSETTING set TaxNoteInv = '" + txtTaxNote.Text + "'");
-                using (Stock_DataDataContext dbc = new Stock_DataDataContext(VarGeneral.BranchCS))
+           //     using (Stock_DataDataContext dbc = new Stock_DataDataContext(VarGeneral.BranchCS))
                 {
                     VarGeneral.Settings_Sys = new T_SYSSETTING();
-                    VarGeneral.Settings_Sys = dbc.SystemSettingStock();
+                    VarGeneral.Settings_Sys = db.SystemSettingStock();
                     VarGeneral._SysDirPath = VarGeneral.Settings_Sys.SysDir;
                     VarGeneral._BackPath = VarGeneral.Settings_Sys.BackPath;
                     try
@@ -6113,6 +6130,21 @@ namespace InvAcc.Forms.Shared
         private void ButWithoutSave_ItemClick(object sender, TileItemEventArgs e)
         {
             Close();
+        }
+
+        private void CmbCalendar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_EnterImg_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_BackupPath_ButtonCustomClick_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

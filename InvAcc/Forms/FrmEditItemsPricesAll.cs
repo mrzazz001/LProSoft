@@ -66,20 +66,7 @@ namespace InvAcc.Forms
         public FrmEditItemsPricesAll()
         {
             InitializeComponent();this.Load += langloads;
-            if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49))
-            {
-                try
-                {
-                    FlxItems.Cols[6].Format = VarGeneral.DicimalNN;
-                    FlxItems.Cols[8].Format = VarGeneral.DicimalNN;
-                    FlxItems.Cols[10].Format = VarGeneral.DicimalNN;
-                    FlxItems.Cols[12].Format = VarGeneral.DicimalNN;
-                    FlxItems.Cols[14].Format = VarGeneral.DicimalNN;
-                }
-                catch
-                {
-                }
-            }
+            
         }
         private void ArbEng()
         {
@@ -145,6 +132,23 @@ namespace InvAcc.Forms
             }
             catch
             {
+            }
+            if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49))
+            {
+                try
+                {
+                    FlxItems.Cols[6].Format = VarGeneral.DicimalNN;
+                    FlxItems.Cols[8].Format = VarGeneral.DicimalNN;
+                    FlxItems.Cols[10].Format = VarGeneral.DicimalNN;
+                    FlxItems.Cols[12].Format = VarGeneral.DicimalNN;
+                    FlxItems.Cols[14].Format = VarGeneral.DicimalNN;
+
+                    FlxItems.Cols[4].Format = VarGeneral.DicimalNN;
+
+                }
+                catch
+                {
+                }
             }
             FlxItems.Rows.Count = qkeys.Count + 1;
             for (int i = 0; i < qkeys.Count; i++)
@@ -214,6 +218,7 @@ namespace InvAcc.Forms
             {
                 try
                 {
+             
                     if (Convert.ToBoolean(FlxItems.Rows[iiCnt][1].ToString()))
                     {
                         if (!string.IsNullOrEmpty(FlxItems.Rows[iiCnt][5].ToString()) && double.Parse(FlxItems.Rows[iiCnt][6].ToString()) > 0.0)

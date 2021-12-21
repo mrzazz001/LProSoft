@@ -24,9 +24,9 @@ partial class FRStatementOfAccount
 
 private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRStatementOfAccount));
             this.PanelSpecialContainer = new System.Windows.Forms.Panel();
-            components = new System.ComponentModel.Container();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.label9 = new System.Windows.Forms.Label();
             this.CmbCurr = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -49,20 +49,21 @@ private void InitializeComponent()
             this.txtIntoAccName = new System.Windows.Forms.TextBox();
             this.txtFromAccName = new System.Windows.Forms.TextBox();
             this.txtCostCName = new System.Windows.Forms.TextBox();
-            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);  this.netResize1.LabelsAutoEllipse = false;
-            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
-            this.VisibleChanged += new System.EventHandler(this.FRInvoice_VisibleChanged);
-            this.Shown += new System.EventHandler(this.FrmInvSale_Shown);
-            this.SizeChanged += new System.EventHandler(this.FrmInvSale_SizeChanged);
-            ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
+            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
+            this.PanelSpecialContainer.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // PanelSpecialContainer
+            // 
+            this.PanelSpecialContainer.Controls.Add(this.ribbonBar1);
             this.PanelSpecialContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelSpecialContainer.Location = new System.Drawing.Point(0, 0);
             this.PanelSpecialContainer.Name = "PanelSpecialContainer";
-            this.PanelSpecialContainer.Size = new System.Drawing.Size(1278, 514);
+            this.PanelSpecialContainer.Size = new System.Drawing.Size(416, 243);
             this.PanelSpecialContainer.TabIndex = 1220;
-            this.Controls.Add(this.PanelSpecialContainer);
             // 
             // ribbonBar1
             // 
@@ -96,12 +97,13 @@ private void InitializeComponent()
             this.ribbonBar1.Controls.Add(this.txtFromAccName);
             this.ribbonBar1.Controls.Add(this.txtCostCName);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonBar1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
             this.ribbonBar1.Size = new System.Drawing.Size(416, 243);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 1102;
+            this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -132,10 +134,10 @@ private void InitializeComponent()
             this.CmbCurr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbCurr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCurr.FormattingEnabled = true;
-            this.CmbCurr.ItemHeight = 14;
+            this.CmbCurr.ItemHeight = 15;
             this.CmbCurr.Location = new System.Drawing.Point(12, 151);
             this.CmbCurr.Name = "CmbCurr";
-            this.CmbCurr.Size = new System.Drawing.Size(311, 20);
+            this.CmbCurr.Size = new System.Drawing.Size(311, 21);
             this.CmbCurr.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbCurr.TabIndex = 6733;
             // 
@@ -144,8 +146,8 @@ private void InitializeComponent()
             this.txtFromAccNo.BackColor = System.Drawing.Color.White;
             this.txtFromAccNo.Location = new System.Drawing.Point(244, 74);
             this.txtFromAccNo.Name = "txtFromAccNo";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtFromAccNo, false);
             this.txtFromAccNo.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtFromAccNo, false);
             this.txtFromAccNo.Size = new System.Drawing.Size(79, 20);
             this.txtFromAccNo.TabIndex = 3;
             this.txtFromAccNo.Tag = " T_GDDET.AccNo ";
@@ -156,8 +158,8 @@ private void InitializeComponent()
             this.txtIntoAccNo.BackColor = System.Drawing.Color.White;
             this.txtIntoAccNo.Location = new System.Drawing.Point(244, 99);
             this.txtIntoAccNo.Name = "txtIntoAccNo";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtIntoAccNo, false);
             this.txtIntoAccNo.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtIntoAccNo, false);
             this.txtIntoAccNo.Size = new System.Drawing.Size(79, 20);
             this.txtIntoAccNo.TabIndex = 6;
             this.txtIntoAccNo.Tag = " T_GDDET.AccNo ";
@@ -168,8 +170,8 @@ private void InitializeComponent()
             this.txtCostCNo.BackColor = System.Drawing.Color.White;
             this.txtCostCNo.Location = new System.Drawing.Point(244, 125);
             this.txtCostCNo.Name = "txtCostCNo";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtCostCNo, false);
             this.txtCostCNo.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtCostCNo, false);
             this.txtCostCNo.Size = new System.Drawing.Size(79, 20);
             this.txtCostCNo.TabIndex = 9;
             this.txtCostCNo.Tag = " T_GDHEAD.gdCstNo ";
@@ -357,8 +359,8 @@ private void InitializeComponent()
             this.txtIntoAccName.ForeColor = System.Drawing.Color.White;
             this.txtIntoAccName.Location = new System.Drawing.Point(12, 99);
             this.txtIntoAccName.Name = "txtIntoAccName";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtIntoAccName, false);
             this.txtIntoAccName.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtIntoAccName, false);
             this.txtIntoAccName.Size = new System.Drawing.Size(201, 20);
             this.txtIntoAccName.TabIndex = 8;
             this.txtIntoAccName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -369,8 +371,8 @@ private void InitializeComponent()
             this.txtFromAccName.ForeColor = System.Drawing.Color.White;
             this.txtFromAccName.Location = new System.Drawing.Point(12, 74);
             this.txtFromAccName.Name = "txtFromAccName";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtFromAccName, false);
             this.txtFromAccName.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtFromAccName, false);
             this.txtFromAccName.Size = new System.Drawing.Size(201, 20);
             this.txtFromAccName.TabIndex = 5;
             this.txtFromAccName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -381,41 +383,45 @@ private void InitializeComponent()
             this.txtCostCName.ForeColor = System.Drawing.Color.White;
             this.txtCostCName.Location = new System.Drawing.Point(12, 125);
             this.txtCostCName.Name = "txtCostCName";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtCostCName, false);
             this.txtCostCName.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtCostCName, false);
             this.txtCostCName.Size = new System.Drawing.Size(201, 20);
             this.txtCostCName.TabIndex = 11;
             this.txtCostCName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // netResize1
+            // 
+            this.netResize1.AutoSaveLayout = true;
+            this.netResize1.LabelsAutoEllipse = false;
+            this.netResize1.ParentControl = this;
+            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 
             // FRStatementOfAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 243);
-            this.PanelSpecialContainer.Controls.Add(this.ribbonBar1);
-            this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(InvAcc.Properties.Resources.favicon));
+            this.Controls.Add(this.PanelSpecialContainer);
+            this.Icon = global::InvAcc.Properties.Resources.favicon;
             this.KeyPreview = true;
-            this.MaximizeBox = false;
             this.Name = "FRStatementOfAccount";
-            this.netResize1.AutoSaveLayout = true;
-            this.netResize1.ParentControl = this;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FRStatementOfAccount_Load);
+            this.Shown += new System.EventHandler(this.FrmInvSale_Shown);
+            this.SizeChanged += new System.EventHandler(this.FrmInvSale_SizeChanged);
+            this.VisibleChanged += new System.EventHandler(this.FRInvoice_VisibleChanged);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FRStatementOfAccount_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FRStatementOfAccount_KeyPress);
+            this.PanelSpecialContainer.ResumeLayout(false);
             this.ribbonBar1.ResumeLayout(false);
             this.ribbonBar1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.Icon = ((System.Drawing.Icon)(InvAcc.Properties.Resources.favicon));
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).EndInit();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-            this.MaximizeBox = true;
             this.ResumeLayout(false);
+
         }//###########&&&&&&&&&&
 
 }

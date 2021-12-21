@@ -181,21 +181,6 @@ namespace InvAcc.Forms
             this.Button_Cridet = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.HP_CustDetails = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button_SrchCustNo = new DevComponents.DotNetBar.ButtonX();
-            this.label4 = new System.Windows.Forms.Label();
-            this.switchButton_PointActiv = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.button_SrchCustADD = new DevComponents.DotNetBar.ButtonX();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtCustName = new System.Windows.Forms.TextBox();
-            this.txtTele = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.txtCustNo = new System.Windows.Forms.TextBox();
-            this.text_Mobile = new System.Windows.Forms.TextBox();
             this.HP_Delegator = new System.Windows.Forms.Panel();
             this.button20 = new System.Windows.Forms.Button();
             this.label45 = new System.Windows.Forms.Label();
@@ -215,16 +200,26 @@ namespace InvAcc.Forms
             this.txtTable = new DevComponents.Editors.IntegerInput();
             this.button_SrchWaiter = new DevComponents.DotNetBar.ButtonX();
             this.button_AddToTable = new DevComponents.DotNetBar.ButtonX();
+            this.HP_CustDetails = new System.Windows.Forms.Panel();
+            this.text_CusTaxNo = new System.Windows.Forms.TextBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button_SrchCustNo = new DevComponents.DotNetBar.ButtonX();
+            this.label4 = new System.Windows.Forms.Label();
+            this.switchButton_PointActiv = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.button_SrchCustADD = new DevComponents.DotNetBar.ButtonX();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCustName = new System.Windows.Forms.TextBox();
+            this.txtTele = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.txtCustNo = new System.Windows.Forms.TextBox();
+            this.text_Mobile = new System.Windows.Forms.TextBox();
             this.RecordsPanelGroup = new System.Windows.Forms.Panel();
-            this.P_Menu = new System.Windows.Forms.Panel();
-            this.Glass_ButtonAccess = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.P_Main = new System.Windows.Forms.Panel();
+            this.checkBoxItem_BarCode = new System.Windows.Forms.CheckBox();
             this.button_openCasheir = new DevComponents.DotNetBar.ButtonX();
             this.button_AutoRead = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -251,6 +246,15 @@ namespace InvAcc.Forms
             this.labelItem_TaxByNetPer = new DevComponents.DotNetBar.LabelItem();
             this.superTabItem_Gaids = new DevComponents.DotNetBar.SuperTabItem();
             this.button25 = new System.Windows.Forms.Button();
+            this.P_Menu = new System.Windows.Forms.Panel();
+            this.SwitchBill = new System.Windows.Forms.Button();
+            this.Glass_ButtonAccess = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.P_BankCommession = new System.Windows.Forms.Panel();
             this.superTabControl2 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel8 = new DevComponents.DotNetBar.SuperTabControlPanel();
@@ -380,7 +384,6 @@ namespace InvAcc.Forms
             this.txtCredit1 = new DevComponents.DotNetBar.TextBoxItem();
             this.PG_Mesaure = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
-            this.xGmesures1 = new InvAcc.Forms.SellPurSystem.specialcontrols.XGmesures();
             this.panel11 = new System.Windows.Forms.Panel();
             this.ChkPriceIncludeTax = new System.Windows.Forms.CheckBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -389,13 +392,13 @@ namespace InvAcc.Forms
             this.Lab_Series = new System.Windows.Forms.Label();
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
-            this.button_SrchInvNoBarcod = new DevComponents.DotNetBar.ButtonX();
             this.textBox_Sequenc = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.txtGDate = new System.Windows.Forms.MaskedTextBox();
             this.txtTime = new System.Windows.Forms.MaskedTextBox();
             this.txtHDate = new System.Windows.Forms.MaskedTextBox();
+            this.button_SrchInvNoBarcod = new DevComponents.DotNetBar.ButtonX();
             this.panel10 = new System.Windows.Forms.Panel();
             this.Loc_TotTax = new System.Windows.Forms.Label();
             this.lab_NamDisc = new System.Windows.Forms.Label();
@@ -405,7 +408,6 @@ namespace InvAcc.Forms
             this.label47 = new System.Windows.Forms.Label();
             this.Lab_DueAmountLoc = new System.Windows.Forms.Label();
             this.Button_Search = new System.Windows.Forms.Button();
-            this.SwitchBill = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label43 = new System.Windows.Forms.Label();
             this.txtDiscoundPoints = new DevComponents.Editors.DoubleInput();
@@ -504,7 +506,6 @@ namespace InvAcc.Forms
             this.FlxInvToCopy = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
-            this.checkBoxItem_BarCode = new DevComponents.DotNetBar.CheckBoxItem();
             this.superTabItem11 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabItem10 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabItem8 = new DevComponents.DotNetBar.SuperTabItem();
@@ -534,13 +535,12 @@ namespace InvAcc.Forms
             this.P_ResturanStatusBar.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.HP_CustDetails.SuspendLayout();
             this.HP_Delegator.SuspendLayout();
             this.panel_Table.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPersons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTable)).BeginInit();
+            this.HP_CustDetails.SuspendLayout();
             this.RecordsPanelGroup.SuspendLayout();
-            this.P_Menu.SuspendLayout();
             this.P_Main.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.P_TaxPanel.SuspendLayout();
@@ -548,6 +548,7 @@ namespace InvAcc.Forms
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_CostSts)).BeginInit();
             this.superTabControl_CostSts.SuspendLayout();
             this.superTabControlPanel6.SuspendLayout();
+            this.P_Menu.SuspendLayout();
             this.P_BankCommession.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl2)).BeginInit();
             this.superTabControl2.SuspendLayout();
@@ -627,7 +628,7 @@ namespace InvAcc.Forms
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupBox1.Location = new System.Drawing.Point(488, 204);
+            this.groupBox1.Location = new System.Drawing.Point(488, 323);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox1.Size = new System.Drawing.Size(131, 52);
@@ -683,7 +684,7 @@ namespace InvAcc.Forms
             this.groupBox2.Controls.Add(this.txtTotTax);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtDiscountValLoc);
-            this.groupBox2.Location = new System.Drawing.Point(944, 157);
+            this.groupBox2.Location = new System.Drawing.Point(944, 276);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(450, 143);
             this.groupBox2.TabIndex = 1115;
@@ -841,9 +842,9 @@ namespace InvAcc.Forms
             this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label17.Location = new System.Drawing.Point(358, 66);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(91, 16);
+            this.label17.Size = new System.Drawing.Size(95, 16);
             this.label17.TabIndex = 1082;
-            this.label17.Text = "قيمة الفاتــورة :";
+            this.label17.Text = "قيمة  الفاتــورة :";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtTotalAm
@@ -1021,7 +1022,7 @@ namespace InvAcc.Forms
             this.txtDueAmountLoc.Increment = 0D;
             this.txtDueAmountLoc.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtDueAmountLoc.IsInputReadOnly = true;
-            this.txtDueAmountLoc.Location = new System.Drawing.Point(128, 18);
+            this.txtDueAmountLoc.Location = new System.Drawing.Point(124, 18);
             this.txtDueAmountLoc.Name = "txtDueAmountLoc";
             this.txtDueAmountLoc.Size = new System.Drawing.Size(84, 23);
             this.txtDueAmountLoc.TabIndex = 1089;
@@ -1082,7 +1083,7 @@ namespace InvAcc.Forms
             this.superTabControl_Main1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.superTabControl_Main1.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.superTabControl_Main1.SelectedTabIndex = -1;
-            this.superTabControl_Main1.Size = new System.Drawing.Size(1004, 10);
+            this.superTabControl_Main1.Size = new System.Drawing.Size(1386, 10);
             this.superTabControl_Main1.TabFont = new System.Drawing.Font("Tahoma", 8F);
             this.superTabControl_Main1.TabIndex = 10;
             superTabLinearGradientColorTable1.AdaptiveGradient = true;
@@ -1118,7 +1119,7 @@ namespace InvAcc.Forms
             this.txtTotalQ.Increment = 0D;
             this.txtTotalQ.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtTotalQ.IsInputReadOnly = true;
-            this.txtTotalQ.Location = new System.Drawing.Point(308, 636);
+            this.txtTotalQ.Location = new System.Drawing.Point(690, 636);
             this.txtTotalQ.Name = "txtTotalQ";
             this.txtTotalQ.Size = new System.Drawing.Size(53, 18);
             this.txtTotalQ.TabIndex = 1136;
@@ -1156,9 +1157,9 @@ namespace InvAcc.Forms
             this.ribbonBar_Tasks.Controls.Add(this.superTabControl_Main1);
             this.ribbonBar_Tasks.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ribbonBar_Tasks.DragDropSupport = true;
-            this.ribbonBar_Tasks.Location = new System.Drawing.Point(0, 649);
+            this.ribbonBar_Tasks.Location = new System.Drawing.Point(0, 768);
             this.ribbonBar_Tasks.Name = "ribbonBar_Tasks";
-            this.ribbonBar_Tasks.Size = new System.Drawing.Size(1004, 10);
+            this.ribbonBar_Tasks.Size = new System.Drawing.Size(1386, 10);
             this.ribbonBar_Tasks.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_Tasks.TabIndex = 1136;
             this.ribbonBar_Tasks.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -1346,9 +1347,9 @@ namespace InvAcc.Forms
             this.buttonItem_Print.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonItem_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonItem_Print.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.buttonItem_Print.Location = new System.Drawing.Point(134, 0);
+            this.buttonItem_Print.Location = new System.Drawing.Point(134, -1);
             this.buttonItem_Print.Name = "buttonItem_Print";
-            this.buttonItem_Print.Size = new System.Drawing.Size(62, 54);
+            this.buttonItem_Print.Size = new System.Drawing.Size(62, 55);
             this.buttonItem_Print.TabIndex = 14;
             this.buttonItem_Print.Text = "طباعة الطلب";
             this.buttonItem_Print.UseVisualStyleBackColor = false;
@@ -1484,7 +1485,7 @@ namespace InvAcc.Forms
             // 
             this.button8.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.button8.BackColor = System.Drawing.Color.DarkOrange;
-            this.button8.BackgroundImage = global::InvAcc.Properties.Resources.menu;
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1511,7 +1512,7 @@ namespace InvAcc.Forms
             this.txtInvCost.Increment = 0D;
             this.txtInvCost.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtInvCost.IsInputReadOnly = true;
-            this.txtInvCost.Location = new System.Drawing.Point(508, 679);
+            this.txtInvCost.Location = new System.Drawing.Point(508, 798);
             this.txtInvCost.Name = "txtInvCost";
             this.txtInvCost.Size = new System.Drawing.Size(109, 21);
             this.txtInvCost.TabIndex = 1127;
@@ -1526,7 +1527,6 @@ namespace InvAcc.Forms
             this.DetailsPanel.Controls.Add(this.panel10);
             this.DetailsPanel.Controls.Add(this.panel9);
             this.DetailsPanel.Controls.Add(this.Button_Search);
-            this.DetailsPanel.Controls.Add(this.SwitchBill);
             this.DetailsPanel.Controls.Add(this.groupBox3);
             this.DetailsPanel.Controls.Add(this.FlxDat);
             this.DetailsPanel.Controls.Add(this.txtItemName);
@@ -1536,7 +1536,7 @@ namespace InvAcc.Forms
             this.DetailsPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.DetailsPanel.Location = new System.Drawing.Point(0, 0);
             this.DetailsPanel.Name = "DetailsPanel";
-            this.DetailsPanel.Size = new System.Drawing.Size(408, 615);
+            this.DetailsPanel.Size = new System.Drawing.Size(404, 734);
             this.DetailsPanel.TabIndex = 1148;
             this.DetailsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DetailsPanel_Paint);
             this.DetailsPanel.Enter += new System.EventHandler(this.groupBox5_Enter);
@@ -1553,16 +1553,16 @@ namespace InvAcc.Forms
             this.FlxInv.Font = new System.Drawing.Font("Tahoma", 8F);
             this.FlxInv.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.None;
             this.FlxInv.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
-            this.FlxInv.Location = new System.Drawing.Point(0, 214);
+            this.FlxInv.Location = new System.Drawing.Point(0, 229);
             this.FlxInv.Name = "FlxInv";
             this.FlxInv.Rows.Count = 1;
             this.FlxInv.Rows.DefaultSize = 19;
             this.FlxInv.Rows.MinSize = 36;
             this.FlxInv.ShowSortPosition = C1.Win.C1FlexGrid.ShowSortPositionEnum.None;
-            this.FlxInv.Size = new System.Drawing.Size(408, 74);
+            this.FlxInv.Size = new System.Drawing.Size(404, 178);
             this.FlxInv.StyleInfo = resources.GetString("FlxInv.StyleInfo");
             this.FlxInv.TabIndex = 1103;
-            this.FlxInv.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2010Black;
+            this.FlxInv.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2007Black;
             this.FlxInv.AfterSelChange += new C1.Win.C1FlexGrid.RangeEventHandler(this.FlxInv_AfterSelChange);
             this.FlxInv.LeaveCell += new System.EventHandler(this.FlxInv_LeaveCell);
             this.FlxInv.StartEdit += new C1.Win.C1FlexGrid.RowColEventHandler(this.FlxInv_StartEdit);
@@ -1579,13 +1579,13 @@ namespace InvAcc.Forms
             // 
             this.panel8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel8.Controls.Add(this.HP_Main);
-            this.panel8.Controls.Add(this.HP_CustDetails);
             this.panel8.Controls.Add(this.HP_Delegator);
             this.panel8.Controls.Add(this.panel_Table);
+            this.panel8.Controls.Add(this.HP_CustDetails);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 92);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(408, 122);
+            this.panel8.Size = new System.Drawing.Size(404, 137);
             this.panel8.TabIndex = 1253;
             // 
             // HP_Main
@@ -1597,7 +1597,7 @@ namespace InvAcc.Forms
             this.HP_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HP_Main.Location = new System.Drawing.Point(0, 0);
             this.HP_Main.Name = "HP_Main";
-            this.HP_Main.Size = new System.Drawing.Size(408, 122);
+            this.HP_Main.Size = new System.Drawing.Size(404, 137);
             this.HP_Main.TabIndex = 3;
             // 
             // P_ResturanStatusBar
@@ -1608,7 +1608,7 @@ namespace InvAcc.Forms
             this.P_ResturanStatusBar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.P_ResturanStatusBar.Location = new System.Drawing.Point(288, 0);
             this.P_ResturanStatusBar.Name = "P_ResturanStatusBar";
-            this.P_ResturanStatusBar.Size = new System.Drawing.Size(120, 122);
+            this.P_ResturanStatusBar.Size = new System.Drawing.Size(116, 137);
             this.P_ResturanStatusBar.TabIndex = 1200;
             // 
             // button21
@@ -1617,7 +1617,7 @@ namespace InvAcc.Forms
             this.button21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button21.Location = new System.Drawing.Point(0, 0);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(120, 57);
+            this.button21.Size = new System.Drawing.Size(116, 72);
             this.button21.TabIndex = 5;
             this.button21.Text = "الطاولات";
             this.button21.UseVisualStyleBackColor = false;
@@ -1626,9 +1626,9 @@ namespace InvAcc.Forms
             // label52
             // 
             this.label52.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label52.Location = new System.Drawing.Point(0, 57);
+            this.label52.Location = new System.Drawing.Point(0, 72);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(120, 44);
+            this.label52.Size = new System.Drawing.Size(116, 44);
             this.label52.TabIndex = 4;
             this.label52.Text = "نوع الطلب";
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1642,9 +1642,9 @@ namespace InvAcc.Forms
             "محلي",
             "سفري",
             "طلب توصيل"});
-            this.comboBox1.Location = new System.Drawing.Point(0, 101);
+            this.comboBox1.Location = new System.Drawing.Point(0, 116);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(120, 21);
+            this.comboBox1.Size = new System.Drawing.Size(116, 21);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -1654,7 +1654,7 @@ namespace InvAcc.Forms
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(150, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(138, 122);
+            this.panel7.Size = new System.Drawing.Size(138, 137);
             this.panel7.TabIndex = 1200;
             // 
             // tableLayoutPanel1
@@ -1671,7 +1671,7 @@ namespace InvAcc.Forms
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.8F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.02062F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.02062F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(138, 122);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(138, 137);
             this.tableLayoutPanel1.TabIndex = 1025;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -1682,7 +1682,7 @@ namespace InvAcc.Forms
             this.Button_Cashe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_Cashe.Location = new System.Drawing.Point(3, 3);
             this.Button_Cashe.Name = "Button_Cashe";
-            this.Button_Cashe.Size = new System.Drawing.Size(132, 33);
+            this.Button_Cashe.Size = new System.Drawing.Size(132, 38);
             this.Button_Cashe.TabIndex = 0;
             this.Button_Cashe.Text = "نقدي";
             this.Button_Cashe.UseVisualStyleBackColor = false;
@@ -1693,9 +1693,9 @@ namespace InvAcc.Forms
             this.Button_Network.BackColor = System.Drawing.Color.White;
             this.Button_Network.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_Network.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Network.Location = new System.Drawing.Point(3, 42);
+            this.Button_Network.Location = new System.Drawing.Point(3, 47);
             this.Button_Network.Name = "Button_Network";
-            this.Button_Network.Size = new System.Drawing.Size(132, 35);
+            this.Button_Network.Size = new System.Drawing.Size(132, 40);
             this.Button_Network.TabIndex = 0;
             this.Button_Network.Text = "شبكة";
             this.Button_Network.UseVisualStyleBackColor = false;
@@ -1706,9 +1706,9 @@ namespace InvAcc.Forms
             this.Button_Cridet.BackColor = System.Drawing.Color.White;
             this.Button_Cridet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_Cridet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Cridet.Location = new System.Drawing.Point(3, 83);
+            this.Button_Cridet.Location = new System.Drawing.Point(3, 93);
             this.Button_Cridet.Name = "Button_Cridet";
-            this.Button_Cridet.Size = new System.Drawing.Size(132, 36);
+            this.Button_Cridet.Size = new System.Drawing.Size(132, 41);
             this.Button_Cridet.TabIndex = 0;
             this.Button_Cridet.Text = "اجل";
             this.Button_Cridet.UseVisualStyleBackColor = false;
@@ -1716,11 +1716,11 @@ namespace InvAcc.Forms
             // 
             // button13
             // 
-            this.button13.BackColor = System.Drawing.Color.BlueViolet;
+            this.button13.BackColor = System.Drawing.Color.SlateBlue;
             this.button13.Dock = System.Windows.Forms.DockStyle.Left;
             this.button13.Location = new System.Drawing.Point(75, 0);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 122);
+            this.button13.Size = new System.Drawing.Size(75, 137);
             this.button13.TabIndex = 1201;
             this.button13.Text = "العملاء";
             this.button13.UseVisualStyleBackColor = false;
@@ -1732,229 +1732,11 @@ namespace InvAcc.Forms
             this.button14.Dock = System.Windows.Forms.DockStyle.Left;
             this.button14.Location = new System.Drawing.Point(0, 0);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 122);
+            this.button14.Size = new System.Drawing.Size(75, 137);
             this.button14.TabIndex = 1201;
             this.button14.Text = "المناديب";
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // HP_CustDetails
-            // 
-            this.HP_CustDetails.Controls.Add(this.button15);
-            this.HP_CustDetails.Controls.Add(this.button_SrchCustNo);
-            this.HP_CustDetails.Controls.Add(this.label4);
-            this.HP_CustDetails.Controls.Add(this.switchButton_PointActiv);
-            this.HP_CustDetails.Controls.Add(this.button_SrchCustADD);
-            this.HP_CustDetails.Controls.Add(this.label13);
-            this.HP_CustDetails.Controls.Add(this.label10);
-            this.HP_CustDetails.Controls.Add(this.txtCustName);
-            this.HP_CustDetails.Controls.Add(this.txtTele);
-            this.HP_CustDetails.Controls.Add(this.txtAddress);
-            this.HP_CustDetails.Controls.Add(this.label12);
-            this.HP_CustDetails.Controls.Add(this.label44);
-            this.HP_CustDetails.Controls.Add(this.txtCustNo);
-            this.HP_CustDetails.Controls.Add(this.text_Mobile);
-            this.HP_CustDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HP_CustDetails.Location = new System.Drawing.Point(0, 0);
-            this.HP_CustDetails.Name = "HP_CustDetails";
-            this.HP_CustDetails.Size = new System.Drawing.Size(408, 122);
-            this.HP_CustDetails.TabIndex = 1243;
-            this.HP_CustDetails.SizeChanged += new System.EventHandler(this.HP_CustDetails_SizeChanged);
-            this.HP_CustDetails.Paint += new System.Windows.Forms.PaintEventHandler(this.HP_CustDetails_Paint);
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.SkyBlue;
-            this.button15.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button15.Location = new System.Drawing.Point(0, 90);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(408, 32);
-            this.button15.TabIndex = 1245;
-            this.button15.Text = "رجوع";
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click_1);
-            // 
-            // button_SrchCustNo
-            // 
-            this.button_SrchCustNo.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.button_SrchCustNo.Checked = true;
-            this.button_SrchCustNo.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_SrchCustNo.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.button_SrchCustNo.Location = new System.Drawing.Point(103, 8);
-            this.button_SrchCustNo.Name = "button_SrchCustNo";
-            this.button_SrchCustNo.Size = new System.Drawing.Size(42, 23);
-            this.button_SrchCustNo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_SrchCustNo.Symbol = "";
-            this.button_SrchCustNo.SymbolSize = 12F;
-            this.button_SrchCustNo.TabIndex = 1120;
-            this.button_SrchCustNo.TextColor = System.Drawing.Color.SteelBlue;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(299, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 16);
-            this.label4.TabIndex = 1122;
-            this.label4.Text = "حساب العميــل :";
-            // 
-            // switchButton_PointActiv
-            // 
-            // 
-            // 
-            // 
-            this.switchButton_PointActiv.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.switchButton_PointActiv.Font = new System.Drawing.Font("Tahoma", 7F);
-            this.switchButton_PointActiv.Location = new System.Drawing.Point(12, 9);
-            this.switchButton_PointActiv.Name = "switchButton_PointActiv";
-            this.switchButton_PointActiv.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(80)))), ((int)(((byte)(77)))));
-            this.switchButton_PointActiv.OffText = "النقاط";
-            this.switchButton_PointActiv.OffTextColor = System.Drawing.Color.White;
-            this.switchButton_PointActiv.OnText = "النقاط";
-            this.switchButton_PointActiv.Size = new System.Drawing.Size(41, 23);
-            this.switchButton_PointActiv.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switchButton_PointActiv.SwitchWidth = 10;
-            this.switchButton_PointActiv.TabIndex = 1223;
-            // 
-            // button_SrchCustADD
-            // 
-            this.button_SrchCustADD.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.button_SrchCustADD.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_SrchCustADD.Location = new System.Drawing.Point(59, 8);
-            this.button_SrchCustADD.Name = "button_SrchCustADD";
-            this.button_SrchCustADD.Size = new System.Drawing.Size(42, 23);
-            this.button_SrchCustADD.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_SrchCustADD.Symbol = "";
-            this.button_SrchCustADD.SymbolSize = 12F;
-            this.button_SrchCustADD.TabIndex = 1215;
-            this.button_SrchCustADD.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_SrchCustADD.Tooltip = "إضافة عميل";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label13.Location = new System.Drawing.Point(299, 59);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(96, 16);
-            this.label13.TabIndex = 1111;
-            this.label13.Text = "عنوان العميـــل :";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(295, 35);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 16);
-            this.label10.TabIndex = 1123;
-            this.label10.Text = "اسم العميـــــل :";
-            // 
-            // txtCustName
-            // 
-            this.txtCustName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCustName.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.txtCustName.Location = new System.Drawing.Point(151, 35);
-            this.txtCustName.Name = "txtCustName";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtCustName, false);
-            this.txtCustName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtCustName.Size = new System.Drawing.Size(143, 23);
-            this.txtCustName.TabIndex = 1121;
-            this.txtCustName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtTele
-            // 
-            // 
-            // 
-            // 
-            this.txtTele.Border.Class = "TextBoxBorder";
-            this.txtTele.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTele.ButtonCustom.Text = ".";
-            this.txtTele.ButtonCustom.Visible = true;
-            this.txtTele.FocusHighlightEnabled = true;
-            this.txtTele.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.txtTele.Location = new System.Drawing.Point(11, 61);
-            this.txtTele.Name = "txtTele";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtTele, false);
-            this.txtTele.Size = new System.Drawing.Size(96, 23);
-            this.txtTele.TabIndex = 1187;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAddress.BackColor = System.Drawing.Color.White;
-            this.txtAddress.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.txtAddress.Location = new System.Drawing.Point(151, 60);
-            this.txtAddress.MaxLength = 100;
-            this.txtAddress.Name = "txtAddress";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtAddress, false);
-            this.txtAddress.Size = new System.Drawing.Size(143, 23);
-            this.txtAddress.TabIndex = 1099;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(99, 65);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 16);
-            this.label12.TabIndex = 1112;
-            this.label12.Text = "هاتف :";
-            // 
-            // label44
-            // 
-            this.label44.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Transparent;
-            this.label44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label44.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label44.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label44.Location = new System.Drawing.Point(106, 40);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(42, 13);
-            this.label44.TabIndex = 1243;
-            this.label44.Text = "الجوال :";
-            // 
-            // txtCustNo
-            // 
-            this.txtCustNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCustNo.BackColor = System.Drawing.Color.White;
-            this.txtCustNo.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.txtCustNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtCustNo.Location = new System.Drawing.Point(153, 8);
-            this.txtCustNo.MaxLength = 30;
-            this.txtCustNo.Name = "txtCustNo";
-            this.txtCustNo.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.txtCustNo, false);
-            this.txtCustNo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtCustNo.Size = new System.Drawing.Size(137, 23);
-            this.txtCustNo.TabIndex = 1119;
-            this.txtCustNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // text_Mobile
-            // 
-            this.text_Mobile.Location = new System.Drawing.Point(26, 37);
-            this.text_Mobile.Name = "text_Mobile";
-            this.netResize1.SetResizeTextBoxMultiline(this.text_Mobile, false);
-            this.text_Mobile.Size = new System.Drawing.Size(70, 20);
-            this.text_Mobile.TabIndex = 1244;
             // 
             // HP_Delegator
             // 
@@ -1965,16 +1747,16 @@ namespace InvAcc.Forms
             this.HP_Delegator.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HP_Delegator.Location = new System.Drawing.Point(0, 0);
             this.HP_Delegator.Name = "HP_Delegator";
-            this.HP_Delegator.Size = new System.Drawing.Size(408, 122);
+            this.HP_Delegator.Size = new System.Drawing.Size(404, 137);
             this.HP_Delegator.TabIndex = 1199;
             // 
             // button20
             // 
             this.button20.BackColor = System.Drawing.Color.SkyBlue;
             this.button20.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button20.Location = new System.Drawing.Point(0, 89);
+            this.button20.Location = new System.Drawing.Point(0, 104);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(408, 33);
+            this.button20.Size = new System.Drawing.Size(404, 33);
             this.button20.TabIndex = 1246;
             this.button20.Text = "رجوع";
             this.button20.UseVisualStyleBackColor = false;
@@ -1987,7 +1769,7 @@ namespace InvAcc.Forms
             this.label45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label45.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label45.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label45.Location = new System.Drawing.Point(290, 4);
+            this.label45.Location = new System.Drawing.Point(286, 4);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(44, 13);
             this.label45.TabIndex = 1243;
@@ -1999,7 +1781,7 @@ namespace InvAcc.Forms
             this.button_SrchMnd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_SrchMnd.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.button_SrchMnd.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.button_SrchMnd.Location = new System.Drawing.Point(203, 25);
+            this.button_SrchMnd.Location = new System.Drawing.Point(199, 25);
             this.button_SrchMnd.Name = "button_SrchMnd";
             this.button_SrchMnd.Size = new System.Drawing.Size(41, 23);
             this.button_SrchMnd.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -2024,7 +1806,7 @@ namespace InvAcc.Forms
             this.CmbLegate.ItemHeight = 18;
             this.CmbLegate.Location = new System.Drawing.Point(250, 25);
             this.CmbLegate.Name = "CmbLegate";
-            this.CmbLegate.Size = new System.Drawing.Size(153, 24);
+            this.CmbLegate.Size = new System.Drawing.Size(149, 24);
             this.CmbLegate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbLegate.TabIndex = 1098;
             // 
@@ -2046,7 +1828,7 @@ namespace InvAcc.Forms
             this.panel_Table.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Table.Location = new System.Drawing.Point(0, 0);
             this.panel_Table.Name = "panel_Table";
-            this.panel_Table.Size = new System.Drawing.Size(408, 122);
+            this.panel_Table.Size = new System.Drawing.Size(404, 137);
             this.panel_Table.TabIndex = 1195;
             this.panel_Table.Visible = false;
             // 
@@ -2054,9 +1836,9 @@ namespace InvAcc.Forms
             // 
             this.button19.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button19.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button19.Location = new System.Drawing.Point(0, 91);
+            this.button19.Location = new System.Drawing.Point(0, 106);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(408, 31);
+            this.button19.Size = new System.Drawing.Size(404, 31);
             this.button19.TabIndex = 1192;
             this.button19.Text = "رجوع";
             this.button19.UseVisualStyleBackColor = false;
@@ -2069,9 +1851,9 @@ namespace InvAcc.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button_SrchDriv.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.button_SrchDriv.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.button_SrchDriv.Location = new System.Drawing.Point(11, 34);
+            this.button_SrchDriv.Location = new System.Drawing.Point(7, 34);
             this.button_SrchDriv.Name = "button_SrchDriv";
-            this.button_SrchDriv.Size = new System.Drawing.Size(49, 3);
+            this.button_SrchDriv.Size = new System.Drawing.Size(49, 18);
             this.button_SrchDriv.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.button_SrchDriv.Symbol = "";
             this.button_SrchDriv.SymbolSize = 12F;
@@ -2098,7 +1880,7 @@ namespace InvAcc.Forms
             this.textBox_Driver.BackColor = System.Drawing.Color.White;
             this.textBox_Driver.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.textBox_Driver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox_Driver.Location = new System.Drawing.Point(66, 34);
+            this.textBox_Driver.Location = new System.Drawing.Point(62, 34);
             this.textBox_Driver.MaxLength = 30;
             this.textBox_Driver.Name = "textBox_Driver";
             this.textBox_Driver.ReadOnly = true;
@@ -2136,7 +1918,7 @@ namespace InvAcc.Forms
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label21.Font = new System.Drawing.Font("Tahoma", 9F);
             this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label21.Location = new System.Drawing.Point(184, 36);
+            this.label21.Location = new System.Drawing.Point(180, 36);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(60, 14);
             this.label21.TabIndex = 1128;
@@ -2251,11 +2033,256 @@ namespace InvAcc.Forms
             this.button_AddToTable.TextColor = System.Drawing.Color.Black;
             this.button_AddToTable.Visible = false;
             // 
+            // HP_CustDetails
+            // 
+            this.HP_CustDetails.Controls.Add(this.text_CusTaxNo);
+            this.HP_CustDetails.Controls.Add(this.label58);
+            this.HP_CustDetails.Controls.Add(this.button15);
+            this.HP_CustDetails.Controls.Add(this.button_SrchCustNo);
+            this.HP_CustDetails.Controls.Add(this.label4);
+            this.HP_CustDetails.Controls.Add(this.switchButton_PointActiv);
+            this.HP_CustDetails.Controls.Add(this.button_SrchCustADD);
+            this.HP_CustDetails.Controls.Add(this.label13);
+            this.HP_CustDetails.Controls.Add(this.label10);
+            this.HP_CustDetails.Controls.Add(this.txtCustName);
+            this.HP_CustDetails.Controls.Add(this.txtTele);
+            this.HP_CustDetails.Controls.Add(this.txtAddress);
+            this.HP_CustDetails.Controls.Add(this.label12);
+            this.HP_CustDetails.Controls.Add(this.label44);
+            this.HP_CustDetails.Controls.Add(this.txtCustNo);
+            this.HP_CustDetails.Controls.Add(this.text_Mobile);
+            this.HP_CustDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HP_CustDetails.Location = new System.Drawing.Point(0, 0);
+            this.HP_CustDetails.Name = "HP_CustDetails";
+            this.HP_CustDetails.Size = new System.Drawing.Size(404, 137);
+            this.HP_CustDetails.TabIndex = 1243;
+            this.HP_CustDetails.SizeChanged += new System.EventHandler(this.HP_CustDetails_SizeChanged);
+            this.HP_CustDetails.Paint += new System.Windows.Forms.PaintEventHandler(this.HP_CustDetails_Paint);
+            // 
+            // text_CusTaxNo
+            // 
+            this.text_CusTaxNo.BackColor = System.Drawing.Color.White;
+            this.text_CusTaxNo.Location = new System.Drawing.Point(150, 85);
+            this.text_CusTaxNo.MaxLength = 100;
+            this.text_CusTaxNo.Name = "text_CusTaxNo";
+            this.netResize1.SetResizeTextBoxMultiline(this.text_CusTaxNo, false);
+            this.text_CusTaxNo.Size = new System.Drawing.Size(143, 20);
+            this.text_CusTaxNo.TabIndex = 1247;
+            // 
+            // label58
+            // 
+            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label58.AutoSize = true;
+            this.label58.BackColor = System.Drawing.Color.Transparent;
+            this.label58.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label58.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label58.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label58.Location = new System.Drawing.Point(299, 88);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(99, 13);
+            this.label58.TabIndex = 1246;
+            this.label58.Text = "رقم العميل الضريبي";
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.SkyBlue;
+            this.button15.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button15.Location = new System.Drawing.Point(0, 105);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(404, 32);
+            this.button15.TabIndex = 1245;
+            this.button15.Text = "رجوع";
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click_1);
+            // 
+            // button_SrchCustNo
+            // 
+            this.button_SrchCustNo.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.button_SrchCustNo.Checked = true;
+            this.button_SrchCustNo.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_SrchCustNo.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.button_SrchCustNo.Location = new System.Drawing.Point(103, 8);
+            this.button_SrchCustNo.Name = "button_SrchCustNo";
+            this.button_SrchCustNo.Size = new System.Drawing.Size(42, 23);
+            this.button_SrchCustNo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_SrchCustNo.Symbol = "";
+            this.button_SrchCustNo.SymbolSize = 12F;
+            this.button_SrchCustNo.TabIndex = 1120;
+            this.button_SrchCustNo.TextColor = System.Drawing.Color.SteelBlue;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label4.Location = new System.Drawing.Point(295, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 16);
+            this.label4.TabIndex = 1122;
+            this.label4.Text = "حساب العميــل :";
+            // 
+            // switchButton_PointActiv
+            // 
+            // 
+            // 
+            // 
+            this.switchButton_PointActiv.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switchButton_PointActiv.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.switchButton_PointActiv.Location = new System.Drawing.Point(12, 9);
+            this.switchButton_PointActiv.Name = "switchButton_PointActiv";
+            this.switchButton_PointActiv.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(80)))), ((int)(((byte)(77)))));
+            this.switchButton_PointActiv.OffText = "النقاط";
+            this.switchButton_PointActiv.OffTextColor = System.Drawing.Color.White;
+            this.switchButton_PointActiv.OnText = "النقاط";
+            this.switchButton_PointActiv.Size = new System.Drawing.Size(41, 23);
+            this.switchButton_PointActiv.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switchButton_PointActiv.SwitchWidth = 10;
+            this.switchButton_PointActiv.TabIndex = 1223;
+            // 
+            // button_SrchCustADD
+            // 
+            this.button_SrchCustADD.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.button_SrchCustADD.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_SrchCustADD.Location = new System.Drawing.Point(59, 8);
+            this.button_SrchCustADD.Name = "button_SrchCustADD";
+            this.button_SrchCustADD.Size = new System.Drawing.Size(42, 23);
+            this.button_SrchCustADD.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_SrchCustADD.Symbol = "";
+            this.button_SrchCustADD.SymbolSize = 12F;
+            this.button_SrchCustADD.TabIndex = 1215;
+            this.button_SrchCustADD.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_SrchCustADD.Tooltip = "إضافة عميل";
+            this.button_SrchCustADD.Click += new System.EventHandler(this.button_SrchCustADD_Click_1);
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label13.Location = new System.Drawing.Point(296, 59);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(96, 16);
+            this.label13.TabIndex = 1111;
+            this.label13.Text = "عنوان العميـــل :";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label10.Location = new System.Drawing.Point(296, 36);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 16);
+            this.label10.TabIndex = 1123;
+            this.label10.Text = "اسم العميـــــل :";
+            // 
+            // txtCustName
+            // 
+            this.txtCustName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCustName.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.txtCustName.Location = new System.Drawing.Point(150, 33);
+            this.txtCustName.Name = "txtCustName";
+            this.netResize1.SetResizeTextBoxMultiline(this.txtCustName, false);
+            this.txtCustName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtCustName.Size = new System.Drawing.Size(143, 23);
+            this.txtCustName.TabIndex = 1121;
+            this.txtCustName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtTele
+            // 
+            // 
+            // 
+            // 
+            this.txtTele.Border.Class = "TextBoxBorder";
+            this.txtTele.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTele.ButtonCustom.Text = ".";
+            this.txtTele.ButtonCustom.Visible = true;
+            this.txtTele.FocusHighlightEnabled = true;
+            this.txtTele.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.txtTele.Location = new System.Drawing.Point(11, 57);
+            this.txtTele.Name = "txtTele";
+            this.netResize1.SetResizeTextBoxMultiline(this.txtTele, false);
+            this.txtTele.Size = new System.Drawing.Size(96, 23);
+            this.txtTele.TabIndex = 1187;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAddress.BackColor = System.Drawing.Color.White;
+            this.txtAddress.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.txtAddress.Location = new System.Drawing.Point(150, 58);
+            this.txtAddress.MaxLength = 100;
+            this.txtAddress.Name = "txtAddress";
+            this.netResize1.SetResizeTextBoxMultiline(this.txtAddress, false);
+            this.txtAddress.Size = new System.Drawing.Size(143, 23);
+            this.txtAddress.TabIndex = 1099;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label12.Location = new System.Drawing.Point(99, 61);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 16);
+            this.label12.TabIndex = 1112;
+            this.label12.Text = "هاتف :";
+            // 
+            // label44
+            // 
+            this.label44.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.Transparent;
+            this.label44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label44.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label44.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label44.Location = new System.Drawing.Point(104, 36);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(42, 13);
+            this.label44.TabIndex = 1243;
+            this.label44.Text = "الجوال :";
+            // 
+            // txtCustNo
+            // 
+            this.txtCustNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCustNo.BackColor = System.Drawing.Color.White;
+            this.txtCustNo.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.txtCustNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtCustNo.Location = new System.Drawing.Point(151, 8);
+            this.txtCustNo.MaxLength = 30;
+            this.txtCustNo.Name = "txtCustNo";
+            this.txtCustNo.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtCustNo, false);
+            this.txtCustNo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtCustNo.Size = new System.Drawing.Size(142, 23);
+            this.txtCustNo.TabIndex = 1119;
+            this.txtCustNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // text_Mobile
+            // 
+            this.text_Mobile.Location = new System.Drawing.Point(26, 33);
+            this.text_Mobile.Name = "text_Mobile";
+            this.netResize1.SetResizeTextBoxMultiline(this.text_Mobile, false);
+            this.text_Mobile.Size = new System.Drawing.Size(70, 20);
+            this.text_Mobile.TabIndex = 1244;
+            // 
             // RecordsPanelGroup
             // 
-            this.RecordsPanelGroup.Controls.Add(this.P_Menu);
             this.RecordsPanelGroup.Controls.Add(this.P_Main);
             this.RecordsPanelGroup.Controls.Add(this.P_TaxPanel);
+            this.RecordsPanelGroup.Controls.Add(this.P_Menu);
             this.RecordsPanelGroup.Controls.Add(this.P_BankCommession);
             this.RecordsPanelGroup.Controls.Add(this.P_DissCountRecord);
             this.RecordsPanelGroup.Controls.Add(this.P_Records);
@@ -2263,128 +2290,14 @@ namespace InvAcc.Forms
             this.RecordsPanelGroup.Controls.Add(this.P_PayementPanel);
             this.RecordsPanelGroup.Controls.Add(this.PG_Mesaure);
             this.RecordsPanelGroup.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.RecordsPanelGroup.Location = new System.Drawing.Point(0, 288);
+            this.RecordsPanelGroup.Location = new System.Drawing.Point(0, 407);
             this.RecordsPanelGroup.Name = "RecordsPanelGroup";
-            this.RecordsPanelGroup.Size = new System.Drawing.Size(408, 218);
+            this.RecordsPanelGroup.Size = new System.Drawing.Size(404, 218);
             this.RecordsPanelGroup.TabIndex = 1245;
-            // 
-            // P_Menu
-            // 
-            this.P_Menu.Controls.Add(this.Glass_ButtonAccess);
-            this.P_Menu.Controls.Add(this.button28);
-            this.P_Menu.Controls.Add(this.button3);
-            this.P_Menu.Controls.Add(this.button10);
-            this.P_Menu.Controls.Add(this.button9);
-            this.P_Menu.Controls.Add(this.button7);
-            this.P_Menu.Controls.Add(this.button12);
-            this.P_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.P_Menu.Location = new System.Drawing.Point(0, 0);
-            this.P_Menu.Name = "P_Menu";
-            this.P_Menu.Size = new System.Drawing.Size(408, 218);
-            this.P_Menu.TabIndex = 1199;
-            // 
-            // Glass_ButtonAccess
-            // 
-            this.Glass_ButtonAccess.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.Glass_ButtonAccess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Glass_ButtonAccess.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Glass_ButtonAccess.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.Glass_ButtonAccess.Location = new System.Drawing.Point(327, 0);
-            this.Glass_ButtonAccess.Name = "Glass_ButtonAccess";
-            this.Glass_ButtonAccess.Size = new System.Drawing.Size(71, 176);
-            this.Glass_ButtonAccess.TabIndex = 1187;
-            this.Glass_ButtonAccess.Text = "قياسات النظارات";
-            this.Glass_ButtonAccess.UseVisualStyleBackColor = false;
-            this.Glass_ButtonAccess.Visible = false;
-            this.Glass_ButtonAccess.Click += new System.EventHandler(this.Glass_ButtonAccess_Click);
-            // 
-            // button28
-            // 
-            this.button28.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button28.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button28.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button28.Location = new System.Drawing.Point(255, 0);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(72, 176);
-            this.button28.TabIndex = 1186;
-            this.button28.Text = "العمولات البنكية";
-            this.button28.UseVisualStyleBackColor = false;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
-            // 
-            // button3
-            // 
-            this.button3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(195, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 176);
-            this.button3.TabIndex = 1185;
-            this.button3.Text = "الضريبة";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.Button_Tax);
-            // 
-            // button10
-            // 
-            this.button10.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button10.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button10.Location = new System.Drawing.Point(144, 0);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(51, 176);
-            this.button10.TabIndex = 18;
-            this.button10.Text = "الخصم";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button9
-            // 
-            this.button9.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button9.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button9.Location = new System.Drawing.Point(72, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(72, 176);
-            this.button9.TabIndex = 17;
-            this.button9.Text = "الدفع";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button7
-            // 
-            this.button7.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button7.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(72, 176);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "الرئيسية";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button12
-            // 
-            this.button12.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button12.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(0, 176);
-            this.button12.Margin = new System.Windows.Forms.Padding(0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(408, 42);
-            this.button12.TabIndex = 1184;
-            this.button12.Text = "رجوع";
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // P_Main
             // 
+            this.P_Main.Controls.Add(this.checkBoxItem_BarCode);
             this.P_Main.Controls.Add(this.button_openCasheir);
             this.P_Main.Controls.Add(this.button_AutoRead);
             this.P_Main.Controls.Add(this.button5);
@@ -2397,8 +2310,19 @@ namespace InvAcc.Forms
             this.P_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.P_Main.Location = new System.Drawing.Point(0, 0);
             this.P_Main.Name = "P_Main";
-            this.P_Main.Size = new System.Drawing.Size(408, 218);
+            this.P_Main.Size = new System.Drawing.Size(404, 218);
             this.P_Main.TabIndex = 1247;
+            // 
+            // checkBoxItem_BarCode
+            // 
+            this.checkBoxItem_BarCode.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxItem_BarCode.Checked = true;
+            this.checkBoxItem_BarCode.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxItem_BarCode.Location = new System.Drawing.Point(134, 109);
+            this.checkBoxItem_BarCode.Name = "checkBoxItem_BarCode";
+            this.checkBoxItem_BarCode.Size = new System.Drawing.Size(58, 48);
+            this.checkBoxItem_BarCode.TabIndex = 1252;
+            this.checkBoxItem_BarCode.CheckedChanged += new System.EventHandler(this.checkBoxItem_BarCode_CheckedChanged);
             // 
             // button_openCasheir
             // 
@@ -2409,7 +2333,7 @@ namespace InvAcc.Forms
             this.button_openCasheir.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.button_openCasheir.Location = new System.Drawing.Point(0, 163);
             this.button_openCasheir.Name = "button_openCasheir";
-            this.button_openCasheir.Size = new System.Drawing.Size(197, 55);
+            this.button_openCasheir.Size = new System.Drawing.Size(193, 55);
             this.button_openCasheir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.button_openCasheir.Symbol = "";
             this.button_openCasheir.TabIndex = 1198;
@@ -2423,10 +2347,11 @@ namespace InvAcc.Forms
             this.button_AutoRead.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.button_AutoRead.Location = new System.Drawing.Point(134, 107);
             this.button_AutoRead.Name = "button_AutoRead";
-            this.button_AutoRead.Size = new System.Drawing.Size(62, 54);
+            this.button_AutoRead.Size = new System.Drawing.Size(62, 18);
             this.button_AutoRead.TabIndex = 20;
             this.button_AutoRead.Text = "ايقاف القرائة التلقائية";
             this.button_AutoRead.UseVisualStyleBackColor = false;
+            this.button_AutoRead.Visible = false;
             this.button_AutoRead.Click += new System.EventHandler(this.button_AutoRead_Click);
             // 
             // tableLayoutPanel2
@@ -2436,7 +2361,7 @@ namespace InvAcc.Forms
             this.tableLayoutPanel2.Controls.Add(this.button_DeleteLine, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(197, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(193, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.84663F));
@@ -2464,7 +2389,7 @@ namespace InvAcc.Forms
             this.P_TaxPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.P_TaxPanel.Location = new System.Drawing.Point(0, 0);
             this.P_TaxPanel.Name = "P_TaxPanel";
-            this.P_TaxPanel.Size = new System.Drawing.Size(408, 218);
+            this.P_TaxPanel.Size = new System.Drawing.Size(404, 218);
             this.P_TaxPanel.TabIndex = 1254;
             // 
             // superTabControlPanel5
@@ -2473,7 +2398,7 @@ namespace InvAcc.Forms
             this.superTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel5.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel5.Name = "superTabControlPanel5";
-            this.superTabControlPanel5.Size = new System.Drawing.Size(408, 176);
+            this.superTabControlPanel5.Size = new System.Drawing.Size(404, 176);
             this.superTabControlPanel5.TabIndex = 1184;
             this.superTabControlPanel5.TabItem = this.superTabItem_Gaids;
             // 
@@ -2502,7 +2427,7 @@ namespace InvAcc.Forms
             this.superTabControl_CostSts.ReorderTabsEnabled = true;
             this.superTabControl_CostSts.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.superTabControl_CostSts.SelectedTabIndex = 0;
-            this.superTabControl_CostSts.Size = new System.Drawing.Size(408, 176);
+            this.superTabControl_CostSts.Size = new System.Drawing.Size(404, 176);
             this.superTabControl_CostSts.TabFont = new System.Drawing.Font("Tahoma", 8F);
             this.superTabControl_CostSts.TabIndex = 1024;
             this.superTabControl_CostSts.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -2537,7 +2462,7 @@ namespace InvAcc.Forms
             superTabPanelItemColorTable1.Background = superTabLinearGradientColorTable2;
             superTabPanelColorTable1.Default = superTabPanelItemColorTable1;
             this.superTabControlPanel6.PanelColor = superTabPanelColorTable1;
-            this.superTabControlPanel6.Size = new System.Drawing.Size(408, 152);
+            this.superTabControlPanel6.Size = new System.Drawing.Size(404, 152);
             this.superTabControlPanel6.TabIndex = 1;
             this.superTabControlPanel6.TabItem = this.superTabItem_Tax;
             this.superTabControlPanel6.Click += new System.EventHandler(this.superTabControlPanel6_Click);
@@ -2557,7 +2482,7 @@ namespace InvAcc.Forms
             this.switchButton_Tax.OffText = "غير معتمد";
             this.switchButton_Tax.OffTextColor = System.Drawing.Color.White;
             this.switchButton_Tax.OnText = "معتمد";
-            this.switchButton_Tax.Size = new System.Drawing.Size(96, 21);
+            this.switchButton_Tax.Size = new System.Drawing.Size(92, 21);
             this.switchButton_Tax.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.switchButton_Tax.TabIndex = 1152;
             this.switchButton_Tax.Value = true;
@@ -2571,7 +2496,7 @@ namespace InvAcc.Forms
             this.label36.Font = new System.Drawing.Font("Tahoma", 9F);
             this.label36.ForeColor = System.Drawing.Color.Navy;
             this.label36.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label36.Location = new System.Drawing.Point(342, 19);
+            this.label36.Location = new System.Drawing.Point(338, 19);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(60, 21);
             this.label36.TabIndex = 1151;
@@ -2586,7 +2511,7 @@ namespace InvAcc.Forms
             this.label37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label37.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label37.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label37.Location = new System.Drawing.Point(222, 46);
+            this.label37.Location = new System.Drawing.Point(218, 46);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(55, 13);
             this.label37.TabIndex = 1150;
@@ -2600,7 +2525,7 @@ namespace InvAcc.Forms
             this.label38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label38.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label38.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label38.Location = new System.Drawing.Point(222, 23);
+            this.label38.Location = new System.Drawing.Point(218, 23);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(53, 13);
             this.label38.TabIndex = 1149;
@@ -2618,7 +2543,7 @@ namespace InvAcc.Forms
             this.txtCredit5.Enabled = false;
             this.txtCredit5.Font = new System.Drawing.Font("Tahoma", 8F);
             this.txtCredit5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCredit5.Location = new System.Drawing.Point(124, 45);
+            this.txtCredit5.Location = new System.Drawing.Point(120, 45);
             this.txtCredit5.Name = "txtCredit5";
             this.txtCredit5.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtCredit5, false);
@@ -2638,7 +2563,7 @@ namespace InvAcc.Forms
             this.txtDebit5.Enabled = false;
             this.txtDebit5.Font = new System.Drawing.Font("Tahoma", 8F);
             this.txtDebit5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtDebit5.Location = new System.Drawing.Point(124, 22);
+            this.txtDebit5.Location = new System.Drawing.Point(120, 22);
             this.txtDebit5.Name = "txtDebit5";
             this.txtDebit5.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtDebit5, false);
@@ -2653,7 +2578,7 @@ namespace InvAcc.Forms
             this.button_CustC5.Checked = true;
             this.button_CustC5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.button_CustC5.Enabled = false;
-            this.button_CustC5.Location = new System.Drawing.Point(106, 45);
+            this.button_CustC5.Location = new System.Drawing.Point(102, 45);
             this.button_CustC5.Name = "button_CustC5";
             this.button_CustC5.Size = new System.Drawing.Size(15, 15);
             this.button_CustC5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -2670,7 +2595,7 @@ namespace InvAcc.Forms
             this.button_CustD5.Checked = true;
             this.button_CustD5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.button_CustD5.Enabled = false;
-            this.button_CustD5.Location = new System.Drawing.Point(106, 22);
+            this.button_CustD5.Location = new System.Drawing.Point(102, 22);
             this.button_CustD5.Name = "button_CustD5";
             this.button_CustD5.Size = new System.Drawing.Size(15, 15);
             this.button_CustD5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -2709,7 +2634,7 @@ namespace InvAcc.Forms
             this.label39.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.label39.ForeColor = System.Drawing.Color.White;
             this.label39.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label39.Location = new System.Drawing.Point(280, 19);
+            this.label39.Location = new System.Drawing.Point(276, 19);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(60, 21);
             this.label39.TabIndex = 1143;
@@ -2791,11 +2716,141 @@ namespace InvAcc.Forms
             this.button25.Location = new System.Drawing.Point(0, 176);
             this.button25.Margin = new System.Windows.Forms.Padding(0);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(408, 42);
+            this.button25.Size = new System.Drawing.Size(404, 42);
             this.button25.TabIndex = 1183;
             this.button25.Text = "رجوع";
             this.button25.UseVisualStyleBackColor = false;
             this.button25.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // P_Menu
+            // 
+            this.P_Menu.Controls.Add(this.SwitchBill);
+            this.P_Menu.Controls.Add(this.Glass_ButtonAccess);
+            this.P_Menu.Controls.Add(this.button28);
+            this.P_Menu.Controls.Add(this.button3);
+            this.P_Menu.Controls.Add(this.button10);
+            this.P_Menu.Controls.Add(this.button9);
+            this.P_Menu.Controls.Add(this.button7);
+            this.P_Menu.Controls.Add(this.button12);
+            this.P_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.P_Menu.Location = new System.Drawing.Point(0, 0);
+            this.P_Menu.Name = "P_Menu";
+            this.P_Menu.Size = new System.Drawing.Size(404, 218);
+            this.P_Menu.TabIndex = 1199;
+            // 
+            // SwitchBill
+            // 
+            this.SwitchBill.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.SwitchBill.BackColor = System.Drawing.Color.Teal;
+            this.SwitchBill.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SwitchBill.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.SwitchBill.Location = new System.Drawing.Point(356, 0);
+            this.SwitchBill.Name = "SwitchBill";
+            this.SwitchBill.Size = new System.Drawing.Size(65, 176);
+            this.SwitchBill.TabIndex = 1253;
+            this.SwitchBill.Text = "مرتجع مبيعات";
+            this.SwitchBill.UseVisualStyleBackColor = false;
+            this.SwitchBill.Click += new System.EventHandler(this.SwitchBill_Click);
+            // 
+            // Glass_ButtonAccess
+            // 
+            this.Glass_ButtonAccess.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.Glass_ButtonAccess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Glass_ButtonAccess.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Glass_ButtonAccess.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.Glass_ButtonAccess.Location = new System.Drawing.Point(331, 0);
+            this.Glass_ButtonAccess.Name = "Glass_ButtonAccess";
+            this.Glass_ButtonAccess.Size = new System.Drawing.Size(25, 176);
+            this.Glass_ButtonAccess.TabIndex = 1187;
+            this.Glass_ButtonAccess.Text = "قياسات النظارات";
+            this.Glass_ButtonAccess.UseVisualStyleBackColor = false;
+            this.Glass_ButtonAccess.Visible = false;
+            this.Glass_ButtonAccess.Click += new System.EventHandler(this.Glass_ButtonAccess_Click);
+            // 
+            // button28
+            // 
+            this.button28.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button28.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button28.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.button28.Location = new System.Drawing.Point(259, 0);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(72, 176);
+            this.button28.TabIndex = 1186;
+            this.button28.Text = "العمولات البنكية";
+            this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
+            // 
+            // button3
+            // 
+            this.button3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(199, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(60, 176);
+            this.button3.TabIndex = 1185;
+            this.button3.Text = "الضريبة";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.Button_Tax);
+            // 
+            // button10
+            // 
+            this.button10.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button10.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.button10.Location = new System.Drawing.Point(148, 0);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(51, 176);
+            this.button10.TabIndex = 18;
+            this.button10.Text = "الخصم";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button9
+            // 
+            this.button9.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button9.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.button9.Location = new System.Drawing.Point(76, 0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(72, 176);
+            this.button9.TabIndex = 17;
+            this.button9.Text = "الدفع";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button7
+            // 
+            this.button7.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button7.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.button7.Location = new System.Drawing.Point(0, 0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(76, 176);
+            this.button7.TabIndex = 16;
+            this.button7.Text = "الرئيسية";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button12
+            // 
+            this.button12.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button12.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(0, 176);
+            this.button12.Margin = new System.Windows.Forms.Padding(0);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(404, 42);
+            this.button12.TabIndex = 1184;
+            this.button12.Text = "رجوع";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // P_BankCommession
             // 
@@ -2804,7 +2859,7 @@ namespace InvAcc.Forms
             this.P_BankCommession.Dock = System.Windows.Forms.DockStyle.Fill;
             this.P_BankCommession.Location = new System.Drawing.Point(0, 0);
             this.P_BankCommession.Name = "P_BankCommession";
-            this.P_BankCommession.Size = new System.Drawing.Size(408, 218);
+            this.P_BankCommession.Size = new System.Drawing.Size(404, 218);
             this.P_BankCommession.TabIndex = 1252;
             // 
             // superTabControl2
@@ -2832,7 +2887,7 @@ namespace InvAcc.Forms
             this.superTabControl2.ReorderTabsEnabled = true;
             this.superTabControl2.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.superTabControl2.SelectedTabIndex = 0;
-            this.superTabControl2.Size = new System.Drawing.Size(408, 176);
+            this.superTabControl2.Size = new System.Drawing.Size(404, 176);
             this.superTabControl2.TabFont = new System.Drawing.Font("Tahoma", 8F);
             this.superTabControl2.TabIndex = 1184;
             this.superTabControl2.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -2864,7 +2919,7 @@ namespace InvAcc.Forms
             superTabPanelItemColorTable3.Background = superTabLinearGradientColorTable5;
             superTabPanelColorTable2.Default = superTabPanelItemColorTable3;
             this.superTabControlPanel8.PanelColor = superTabPanelColorTable2;
-            this.superTabControlPanel8.Size = new System.Drawing.Size(408, 153);
+            this.superTabControlPanel8.Size = new System.Drawing.Size(404, 153);
             this.superTabControlPanel8.TabIndex = 3;
             this.superTabControlPanel8.TabItem = this.superTabItem12;
             // 
@@ -2876,7 +2931,7 @@ namespace InvAcc.Forms
             this.label49.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label49.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label49.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label49.Location = new System.Drawing.Point(236, 45);
+            this.label49.Location = new System.Drawing.Point(232, 45);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(40, 13);
             this.label49.TabIndex = 1162;
@@ -2894,7 +2949,7 @@ namespace InvAcc.Forms
             this.txtCredit7.Enabled = false;
             this.txtCredit7.Font = new System.Drawing.Font("Tahoma", 8F);
             this.txtCredit7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCredit7.Location = new System.Drawing.Point(122, 44);
+            this.txtCredit7.Location = new System.Drawing.Point(118, 44);
             this.txtCredit7.Name = "txtCredit7";
             this.txtCredit7.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtCredit7, false);
@@ -2915,7 +2970,7 @@ namespace InvAcc.Forms
             this.checkBox_GaidBankComm.BackgroundStyle.TextShadowOffset = new System.Drawing.Point(3, 3);
             this.checkBox_GaidBankComm.CheckSignSize = new System.Drawing.Size(14, 14);
             this.checkBox_GaidBankComm.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.checkBox_GaidBankComm.Location = new System.Drawing.Point(-129, 43);
+            this.checkBox_GaidBankComm.Location = new System.Drawing.Point(-133, 43);
             this.checkBox_GaidBankComm.Name = "checkBox_GaidBankComm";
             this.checkBox_GaidBankComm.Size = new System.Drawing.Size(97, 16);
             this.checkBox_GaidBankComm.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -2937,7 +2992,7 @@ namespace InvAcc.Forms
             this.switchButton_BankComm.OffText = "عدم احتساب";
             this.switchButton_BankComm.OffTextColor = System.Drawing.Color.White;
             this.switchButton_BankComm.OnText = "احتساب";
-            this.switchButton_BankComm.Size = new System.Drawing.Size(96, 21);
+            this.switchButton_BankComm.Size = new System.Drawing.Size(92, 21);
             this.switchButton_BankComm.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.switchButton_BankComm.SwitchWidth = 20;
             this.switchButton_BankComm.TabIndex = 1165;
@@ -2950,7 +3005,7 @@ namespace InvAcc.Forms
             this.label55.Font = new System.Drawing.Font("Tahoma", 9F);
             this.label55.ForeColor = System.Drawing.Color.Navy;
             this.label55.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label55.Location = new System.Drawing.Point(343, 18);
+            this.label55.Location = new System.Drawing.Point(339, 18);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(60, 21);
             this.label55.TabIndex = 1163;
@@ -2965,7 +3020,7 @@ namespace InvAcc.Forms
             this.label56.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.label56.ForeColor = System.Drawing.Color.White;
             this.label56.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label56.Location = new System.Drawing.Point(280, 18);
+            this.label56.Location = new System.Drawing.Point(276, 18);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(60, 21);
             this.label56.TabIndex = 1155;
@@ -2987,7 +3042,7 @@ namespace InvAcc.Forms
             this.txtTotBankComm.Increment = 0D;
             this.txtTotBankComm.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtTotBankComm.IsInputReadOnly = true;
-            this.txtTotBankComm.Location = new System.Drawing.Point(343, 41);
+            this.txtTotBankComm.Location = new System.Drawing.Point(339, 41);
             this.txtTotBankComm.MinValue = 0D;
             this.txtTotBankComm.Name = "txtTotBankComm";
             this.txtTotBankComm.Size = new System.Drawing.Size(60, 21);
@@ -3009,7 +3064,7 @@ namespace InvAcc.Forms
             this.txtTotBankCommLoc.Increment = 0D;
             this.txtTotBankCommLoc.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtTotBankCommLoc.IsInputReadOnly = true;
-            this.txtTotBankCommLoc.Location = new System.Drawing.Point(280, 41);
+            this.txtTotBankCommLoc.Location = new System.Drawing.Point(276, 41);
             this.txtTotBankCommLoc.MinValue = 0D;
             this.txtTotBankCommLoc.Name = "txtTotBankCommLoc";
             this.txtTotBankCommLoc.Size = new System.Drawing.Size(60, 21);
@@ -3031,7 +3086,7 @@ namespace InvAcc.Forms
             this.button26.Location = new System.Drawing.Point(0, 176);
             this.button26.Margin = new System.Windows.Forms.Padding(0);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(408, 42);
+            this.button26.Size = new System.Drawing.Size(404, 42);
             this.button26.TabIndex = 1183;
             this.button26.Text = "رجوع";
             this.button26.UseVisualStyleBackColor = false;
@@ -3044,7 +3099,7 @@ namespace InvAcc.Forms
             this.P_DissCountRecord.Dock = System.Windows.Forms.DockStyle.Fill;
             this.P_DissCountRecord.Location = new System.Drawing.Point(0, 0);
             this.P_DissCountRecord.Name = "P_DissCountRecord";
-            this.P_DissCountRecord.Size = new System.Drawing.Size(408, 218);
+            this.P_DissCountRecord.Size = new System.Drawing.Size(404, 218);
             this.P_DissCountRecord.TabIndex = 1253;
             // 
             // superTabControl1
@@ -3072,7 +3127,7 @@ namespace InvAcc.Forms
             this.superTabControl1.ReorderTabsEnabled = true;
             this.superTabControl1.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.superTabControl1.SelectedTabIndex = 0;
-            this.superTabControl1.Size = new System.Drawing.Size(408, 176);
+            this.superTabControl1.Size = new System.Drawing.Size(404, 176);
             this.superTabControl1.TabFont = new System.Drawing.Font("Tahoma", 8F);
             this.superTabControl1.TabIndex = 1185;
             this.superTabControl1.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -3100,7 +3155,7 @@ namespace InvAcc.Forms
             superTabPanelItemColorTable4.Background = superTabLinearGradientColorTable6;
             superTabPanelColorTable3.Default = superTabPanelItemColorTable4;
             this.superTabControlPanel7.PanelColor = superTabPanelColorTable3;
-            this.superTabControlPanel7.Size = new System.Drawing.Size(408, 153);
+            this.superTabControlPanel7.Size = new System.Drawing.Size(404, 153);
             this.superTabControlPanel7.TabIndex = 0;
             this.superTabControlPanel7.TabItem = this.superTabItem7;
             // 
@@ -3119,7 +3174,7 @@ namespace InvAcc.Forms
             this.switchButton_Dis.OffText = "+ السطــور";
             this.switchButton_Dis.OffTextColor = System.Drawing.Color.White;
             this.switchButton_Dis.OnText = "+ السطــور";
-            this.switchButton_Dis.Size = new System.Drawing.Size(96, 21);
+            this.switchButton_Dis.Size = new System.Drawing.Size(92, 21);
             this.switchButton_Dis.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.switchButton_Dis.TabIndex = 1165;
             // 
@@ -3131,7 +3186,7 @@ namespace InvAcc.Forms
             this.label40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label40.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label40.Location = new System.Drawing.Point(222, 44);
+            this.label40.Location = new System.Drawing.Point(218, 44);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(55, 13);
             this.label40.TabIndex = 1162;
@@ -3145,7 +3200,7 @@ namespace InvAcc.Forms
             this.label41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label41.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label41.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label41.Location = new System.Drawing.Point(222, 21);
+            this.label41.Location = new System.Drawing.Point(218, 21);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(53, 13);
             this.label41.TabIndex = 1161;
@@ -3163,7 +3218,7 @@ namespace InvAcc.Forms
             this.txtCredit6.Enabled = false;
             this.txtCredit6.Font = new System.Drawing.Font("Tahoma", 8F);
             this.txtCredit6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCredit6.Location = new System.Drawing.Point(108, 43);
+            this.txtCredit6.Location = new System.Drawing.Point(104, 43);
             this.txtCredit6.Name = "txtCredit6";
             this.txtCredit6.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtCredit6, false);
@@ -3183,7 +3238,7 @@ namespace InvAcc.Forms
             this.txtDebit6.Enabled = false;
             this.txtDebit6.Font = new System.Drawing.Font("Tahoma", 8F);
             this.txtDebit6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtDebit6.Location = new System.Drawing.Point(108, 20);
+            this.txtDebit6.Location = new System.Drawing.Point(104, 20);
             this.txtDebit6.Name = "txtDebit6";
             this.txtDebit6.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtDebit6, false);
@@ -3204,7 +3259,7 @@ namespace InvAcc.Forms
             this.checkBox_GaidDis.BackgroundStyle.TextShadowOffset = new System.Drawing.Point(3, 3);
             this.checkBox_GaidDis.CheckSignSize = new System.Drawing.Size(14, 14);
             this.checkBox_GaidDis.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.checkBox_GaidDis.Location = new System.Drawing.Point(-128, 42);
+            this.checkBox_GaidDis.Location = new System.Drawing.Point(-132, 42);
             this.checkBox_GaidDis.Name = "checkBox_GaidDis";
             this.checkBox_GaidDis.Size = new System.Drawing.Size(97, 16);
             this.checkBox_GaidDis.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -3219,7 +3274,7 @@ namespace InvAcc.Forms
             this.label42.Font = new System.Drawing.Font("Tahoma", 9F);
             this.label42.ForeColor = System.Drawing.Color.Navy;
             this.label42.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label42.Location = new System.Drawing.Point(344, 17);
+            this.label42.Location = new System.Drawing.Point(340, 17);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(60, 21);
             this.label42.TabIndex = 1163;
@@ -3234,7 +3289,7 @@ namespace InvAcc.Forms
             this.label48.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.label48.ForeColor = System.Drawing.Color.White;
             this.label48.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label48.Location = new System.Drawing.Point(282, 17);
+            this.label48.Location = new System.Drawing.Point(278, 17);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(60, 21);
             this.label48.TabIndex = 1155;
@@ -3256,7 +3311,7 @@ namespace InvAcc.Forms
             this.txtTotDis.Increment = 0D;
             this.txtTotDis.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtTotDis.IsInputReadOnly = true;
-            this.txtTotDis.Location = new System.Drawing.Point(344, 40);
+            this.txtTotDis.Location = new System.Drawing.Point(340, 40);
             this.txtTotDis.MinValue = 0D;
             this.txtTotDis.Name = "txtTotDis";
             this.txtTotDis.Size = new System.Drawing.Size(60, 21);
@@ -3278,7 +3333,7 @@ namespace InvAcc.Forms
             this.txtTotDisLoc.Increment = 0D;
             this.txtTotDisLoc.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtTotDisLoc.IsInputReadOnly = true;
-            this.txtTotDisLoc.Location = new System.Drawing.Point(282, 40);
+            this.txtTotDisLoc.Location = new System.Drawing.Point(278, 40);
             this.txtTotDisLoc.MinValue = 0D;
             this.txtTotDisLoc.Name = "txtTotDisLoc";
             this.txtTotDisLoc.Size = new System.Drawing.Size(60, 21);
@@ -3300,7 +3355,7 @@ namespace InvAcc.Forms
             this.button27.Location = new System.Drawing.Point(0, 176);
             this.button27.Margin = new System.Windows.Forms.Padding(0);
             this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(408, 42);
+            this.button27.Size = new System.Drawing.Size(404, 42);
             this.button27.TabIndex = 1184;
             this.button27.Text = "رجوع";
             this.button27.UseVisualStyleBackColor = false;
@@ -3313,7 +3368,7 @@ namespace InvAcc.Forms
             this.P_Records.Dock = System.Windows.Forms.DockStyle.Fill;
             this.P_Records.Location = new System.Drawing.Point(0, 0);
             this.P_Records.Name = "P_Records";
-            this.P_Records.Size = new System.Drawing.Size(408, 218);
+            this.P_Records.Size = new System.Drawing.Size(404, 218);
             this.P_Records.TabIndex = 1199;
             // 
             // superTabControl_Info
@@ -3355,7 +3410,7 @@ namespace InvAcc.Forms
             this.superTabControl_Info.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.superTabControl_Info.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.superTabControl_Info.SelectedTabIndex = 0;
-            this.superTabControl_Info.Size = new System.Drawing.Size(408, 176);
+            this.superTabControl_Info.Size = new System.Drawing.Size(404, 176);
             this.superTabControl_Info.TabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Bottom;
             this.superTabControl_Info.TabFont = new System.Drawing.Font("Tahoma", 8F);
             this.superTabControl_Info.TabHorizontalSpacing = 11;
@@ -3393,7 +3448,7 @@ namespace InvAcc.Forms
             superTabPanelItemColorTable5.Background = superTabLinearGradientColorTable7;
             superTabPanelColorTable4.Bottom = superTabPanelItemColorTable5;
             this.superTabControlPanel3.PanelColor = superTabPanelColorTable4;
-            this.superTabControlPanel3.Size = new System.Drawing.Size(408, 143);
+            this.superTabControlPanel3.Size = new System.Drawing.Size(404, 143);
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.superTabItem1;
             // 
@@ -3574,7 +3629,7 @@ namespace InvAcc.Forms
             this.dataGridView_ItemDet.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.dataGridView_ItemDet.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.None;
             this.dataGridView_ItemDet.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
-            this.dataGridView_ItemDet.Location = new System.Drawing.Point(80, 3);
+            this.dataGridView_ItemDet.Location = new System.Drawing.Point(76, 3);
             this.dataGridView_ItemDet.Name = "dataGridView_ItemDet";
             this.dataGridView_ItemDet.Rows.Count = 13;
             this.dataGridView_ItemDet.Rows.DefaultSize = 20;
@@ -3593,7 +3648,7 @@ namespace InvAcc.Forms
             this.FlxStkQty.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.FixedSingle;
             this.FlxStkQty.ColumnInfo = resources.GetString("FlxStkQty.ColumnInfo");
             this.FlxStkQty.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.FlxStkQty.Location = new System.Drawing.Point(198, 3);
+            this.FlxStkQty.Location = new System.Drawing.Point(194, 3);
             this.FlxStkQty.Name = "FlxStkQty";
             this.FlxStkQty.Rows.DefaultSize = 20;
             this.FlxStkQty.Size = new System.Drawing.Size(207, 93);
@@ -3633,7 +3688,7 @@ namespace InvAcc.Forms
             superTabPanelItemColorTable6.Background = superTabLinearGradientColorTable9;
             superTabPanelColorTable5.Default = superTabPanelItemColorTable6;
             this.superTabControlPanel1.PanelColor = superTabPanelColorTable5;
-            this.superTabControlPanel1.Size = new System.Drawing.Size(408, 143);
+            this.superTabControlPanel1.Size = new System.Drawing.Size(404, 143);
             this.superTabControlPanel1.TabIndex = 1;
             // 
             // label33
@@ -3643,7 +3698,7 @@ namespace InvAcc.Forms
             this.label33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label33.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label33.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label33.Location = new System.Drawing.Point(256, 5);
+            this.label33.Location = new System.Drawing.Point(252, 5);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(109, 27);
             this.label33.TabIndex = 1129;
@@ -3655,7 +3710,7 @@ namespace InvAcc.Forms
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonX2.AutoExpandOnClick = true;
-            this.buttonX2.Location = new System.Drawing.Point(141, 63);
+            this.buttonX2.Location = new System.Drawing.Point(137, 63);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.ShowSubItems = false;
             this.buttonX2.Size = new System.Drawing.Size(109, 30);
@@ -3747,7 +3802,7 @@ namespace InvAcc.Forms
             this.label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label34.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label34.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label34.Location = new System.Drawing.Point(141, 7);
+            this.label34.Location = new System.Drawing.Point(137, 7);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(109, 27);
             this.label34.TabIndex = 1124;
@@ -3769,7 +3824,7 @@ namespace InvAcc.Forms
             this.doubleInput2.Increment = 0D;
             this.doubleInput2.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.doubleInput2.IsInputReadOnly = true;
-            this.doubleInput2.Location = new System.Drawing.Point(141, 35);
+            this.doubleInput2.Location = new System.Drawing.Point(137, 35);
             this.doubleInput2.MinValue = 0D;
             this.doubleInput2.Name = "doubleInput2";
             this.doubleInput2.Size = new System.Drawing.Size(109, 27);
@@ -3780,7 +3835,7 @@ namespace InvAcc.Forms
             this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonX3.AutoExpandOnClick = true;
-            this.buttonX3.Location = new System.Drawing.Point(30, 63);
+            this.buttonX3.Location = new System.Drawing.Point(26, 63);
             this.buttonX3.Name = "buttonX3";
             this.buttonX3.ShowSubItems = false;
             this.buttonX3.Size = new System.Drawing.Size(109, 30);
@@ -3871,7 +3926,7 @@ namespace InvAcc.Forms
             this.buttonX4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonX4.AutoExpandOnClick = true;
             this.buttonX4.Checked = true;
-            this.buttonX4.Location = new System.Drawing.Point(252, 63);
+            this.buttonX4.Location = new System.Drawing.Point(248, 63);
             this.buttonX4.Name = "buttonX4";
             this.buttonX4.ShowSubItems = false;
             this.buttonX4.Size = new System.Drawing.Size(109, 30);
@@ -3971,7 +4026,7 @@ namespace InvAcc.Forms
             this.doubleInput3.Increment = 0D;
             this.doubleInput3.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.doubleInput3.IsInputReadOnly = true;
-            this.doubleInput3.Location = new System.Drawing.Point(252, 35);
+            this.doubleInput3.Location = new System.Drawing.Point(248, 35);
             this.doubleInput3.MinValue = 0D;
             this.doubleInput3.Name = "doubleInput3";
             this.doubleInput3.Size = new System.Drawing.Size(109, 27);
@@ -3984,7 +4039,7 @@ namespace InvAcc.Forms
             this.label35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label35.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label35.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label35.Location = new System.Drawing.Point(30, 7);
+            this.label35.Location = new System.Drawing.Point(26, 7);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(109, 27);
             this.label35.TabIndex = 1046;
@@ -4006,7 +4061,7 @@ namespace InvAcc.Forms
             this.doubleInput4.Increment = 0D;
             this.doubleInput4.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.doubleInput4.IsInputReadOnly = true;
-            this.doubleInput4.Location = new System.Drawing.Point(30, 35);
+            this.doubleInput4.Location = new System.Drawing.Point(26, 35);
             this.doubleInput4.MinValue = 0D;
             this.doubleInput4.Name = "doubleInput4";
             this.doubleInput4.Size = new System.Drawing.Size(109, 27);
@@ -4017,7 +4072,7 @@ namespace InvAcc.Forms
             this.superTabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel9.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel9.Name = "superTabControlPanel9";
-            this.superTabControlPanel9.Size = new System.Drawing.Size(408, 143);
+            this.superTabControlPanel9.Size = new System.Drawing.Size(404, 143);
             this.superTabControlPanel9.TabIndex = 5;
             // 
             // superTabControlPanel4
@@ -4352,7 +4407,7 @@ namespace InvAcc.Forms
             this.button2.Location = new System.Drawing.Point(0, 176);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(408, 42);
+            this.button2.Size = new System.Drawing.Size(404, 42);
             this.button2.TabIndex = 1182;
             this.button2.Text = "رجوع";
             this.button2.UseVisualStyleBackColor = false;
@@ -4401,7 +4456,7 @@ namespace InvAcc.Forms
             this.P_PayementPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.P_PayementPanel.Location = new System.Drawing.Point(0, 0);
             this.P_PayementPanel.Name = "P_PayementPanel";
-            this.P_PayementPanel.Size = new System.Drawing.Size(408, 218);
+            this.P_PayementPanel.Size = new System.Drawing.Size(404, 218);
             this.P_PayementPanel.TabIndex = 1199;
             // 
             // button6
@@ -4413,7 +4468,7 @@ namespace InvAcc.Forms
             this.button6.Location = new System.Drawing.Point(0, 176);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(408, 42);
+            this.button6.Size = new System.Drawing.Size(404, 42);
             this.button6.TabIndex = 1183;
             this.button6.Text = "رجوع";
             this.button6.UseVisualStyleBackColor = false;
@@ -4425,7 +4480,7 @@ namespace InvAcc.Forms
             this.buttonX_GaidCredit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonX_GaidCredit.AutoExpandOnClick = true;
             this.buttonX_GaidCredit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX_GaidCredit.Location = new System.Drawing.Point(137, 62);
+            this.buttonX_GaidCredit.Location = new System.Drawing.Point(133, 62);
             this.buttonX_GaidCredit.Name = "buttonX_GaidCredit";
             this.buttonX_GaidCredit.ShowSubItems = false;
             this.buttonX_GaidCredit.Size = new System.Drawing.Size(109, 30);
@@ -4517,7 +4572,7 @@ namespace InvAcc.Forms
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(248, 6);
+            this.label6.Location = new System.Drawing.Point(244, 6);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 28);
             this.label6.TabIndex = 1042;
@@ -4531,7 +4586,7 @@ namespace InvAcc.Forms
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(137, 6);
+            this.label11.Location = new System.Drawing.Point(133, 6);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(109, 27);
             this.label11.TabIndex = 1124;
@@ -4553,7 +4608,7 @@ namespace InvAcc.Forms
             this.doubleInput_NetWorkLoc.Increment = 0D;
             this.doubleInput_NetWorkLoc.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.doubleInput_NetWorkLoc.IsInputReadOnly = true;
-            this.doubleInput_NetWorkLoc.Location = new System.Drawing.Point(26, 34);
+            this.doubleInput_NetWorkLoc.Location = new System.Drawing.Point(22, 34);
             this.doubleInput_NetWorkLoc.MinValue = 0D;
             this.doubleInput_NetWorkLoc.Name = "doubleInput_NetWorkLoc";
             this.doubleInput_NetWorkLoc.Size = new System.Drawing.Size(109, 27);
@@ -4574,7 +4629,7 @@ namespace InvAcc.Forms
             this.doubleInput_CreditLoc.Increment = 0D;
             this.doubleInput_CreditLoc.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.doubleInput_CreditLoc.IsInputReadOnly = true;
-            this.doubleInput_CreditLoc.Location = new System.Drawing.Point(137, 34);
+            this.doubleInput_CreditLoc.Location = new System.Drawing.Point(133, 34);
             this.doubleInput_CreditLoc.MinValue = 0D;
             this.doubleInput_CreditLoc.Name = "doubleInput_CreditLoc";
             this.doubleInput_CreditLoc.Size = new System.Drawing.Size(109, 27);
@@ -4587,7 +4642,7 @@ namespace InvAcc.Forms
             this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label14.Location = new System.Drawing.Point(26, 6);
+            this.label14.Location = new System.Drawing.Point(22, 6);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(109, 27);
             this.label14.TabIndex = 1046;
@@ -4600,7 +4655,7 @@ namespace InvAcc.Forms
             this.buttonX_GaidNetwork.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonX_GaidNetwork.AutoExpandOnClick = true;
             this.buttonX_GaidNetwork.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX_GaidNetwork.Location = new System.Drawing.Point(26, 62);
+            this.buttonX_GaidNetwork.Location = new System.Drawing.Point(22, 62);
             this.buttonX_GaidNetwork.Name = "buttonX_GaidNetwork";
             this.buttonX_GaidNetwork.ShowSubItems = false;
             this.buttonX_GaidNetwork.Size = new System.Drawing.Size(109, 30);
@@ -4700,7 +4755,7 @@ namespace InvAcc.Forms
             this.txtPaymentLoc.Increment = 0D;
             this.txtPaymentLoc.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtPaymentLoc.IsInputReadOnly = true;
-            this.txtPaymentLoc.Location = new System.Drawing.Point(248, 34);
+            this.txtPaymentLoc.Location = new System.Drawing.Point(244, 34);
             this.txtPaymentLoc.MinValue = 0D;
             this.txtPaymentLoc.Name = "txtPaymentLoc";
             this.txtPaymentLoc.Size = new System.Drawing.Size(109, 27);
@@ -4713,7 +4768,7 @@ namespace InvAcc.Forms
             this.buttonX_GaidCash.AutoExpandOnClick = true;
             this.buttonX_GaidCash.Checked = true;
             this.buttonX_GaidCash.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX_GaidCash.Location = new System.Drawing.Point(248, 62);
+            this.buttonX_GaidCash.Location = new System.Drawing.Point(244, 62);
             this.buttonX_GaidCash.Name = "buttonX_GaidCash";
             this.buttonX_GaidCash.ShowSubItems = false;
             this.buttonX_GaidCash.Size = new System.Drawing.Size(109, 30);
@@ -4801,11 +4856,10 @@ namespace InvAcc.Forms
             // PG_Mesaure
             // 
             this.PG_Mesaure.Controls.Add(this.button11);
-            this.PG_Mesaure.Controls.Add(this.xGmesures1);
             this.PG_Mesaure.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PG_Mesaure.Location = new System.Drawing.Point(0, 0);
             this.PG_Mesaure.Name = "PG_Mesaure";
-            this.PG_Mesaure.Size = new System.Drawing.Size(408, 218);
+            this.PG_Mesaure.Size = new System.Drawing.Size(404, 218);
             this.PG_Mesaure.TabIndex = 1251;
             this.PG_Mesaure.Visible = false;
             // 
@@ -4815,26 +4869,15 @@ namespace InvAcc.Forms
             this.button11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button11.Location = new System.Drawing.Point(0, 185);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(408, 33);
+            this.button11.Size = new System.Drawing.Size(404, 33);
             this.button11.TabIndex = 1241;
             this.button11.Text = "رجوع";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click_2);
             // 
-            // xGmesures1
-            // 
-            this.xGmesures1.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.xGmesures1.Appearance.Options.UseBackColor = true;
-            this.xGmesures1.Location = new System.Drawing.Point(21, 13);
-            this.xGmesures1.Name = "xGmesures1";
-            this.xGmesures1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.xGmesures1.Size = new System.Drawing.Size(340, 91);
-            this.xGmesures1.TabIndex = 1240;
-            this.xGmesures1.Visible = false;
-            // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.Color.LightGray;
+            this.panel11.BackColor = System.Drawing.Color.LightYellow;
             this.panel11.Controls.Add(this.ChkPriceIncludeTax);
             this.panel11.Controls.Add(this.label29);
             this.panel11.Controls.Add(this.label54);
@@ -4842,19 +4885,20 @@ namespace InvAcc.Forms
             this.panel11.Controls.Add(this.Lab_Series);
             this.panel11.Controls.Add(this.textBox_ID);
             this.panel11.Controls.Add(this.Label1);
-            this.panel11.Controls.Add(this.button_SrchInvNoBarcod);
             this.panel11.Controls.Add(this.textBox_Sequenc);
             this.panel11.Controls.Add(this.label53);
             this.panel11.Controls.Add(this.Label2);
             this.panel11.Controls.Add(this.txtGDate);
             this.panel11.Controls.Add(this.txtTime);
             this.panel11.Controls.Add(this.txtHDate);
+            this.panel11.Controls.Add(this.button_SrchInvNoBarcod);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(408, 92);
+            this.panel11.Size = new System.Drawing.Size(404, 92);
             this.panel11.TabIndex = 1199;
             this.panel11.SizeChanged += new System.EventHandler(this.panel11_SizeChanged);
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
             // ChkPriceIncludeTax
             // 
@@ -4875,7 +4919,7 @@ namespace InvAcc.Forms
             this.label29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label29.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.label29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label29.Location = new System.Drawing.Point(554, 27);
+            this.label29.Location = new System.Drawing.Point(550, 27);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(63, 16);
             this.label29.TabIndex = 1194;
@@ -4927,8 +4971,9 @@ namespace InvAcc.Forms
             this.textBox_ID.Name = "textBox_ID";
             this.netResize1.SetResizeTextBoxMultiline(this.textBox_ID, false);
             this.textBox_ID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_ID.Size = new System.Drawing.Size(81, 23);
+            this.textBox_ID.Size = new System.Drawing.Size(77, 23);
             this.textBox_ID.TabIndex = 1093;
+            this.textBox_ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Label1
             // 
@@ -4945,25 +4990,6 @@ namespace InvAcc.Forms
             this.Label1.TabIndex = 1104;
             this.Label1.Text = "رقم فـاتورة :";
             // 
-            // button_SrchInvNoBarcod
-            // 
-            this.button_SrchInvNoBarcod.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.button_SrchInvNoBarcod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_SrchInvNoBarcod.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
-            this.button_SrchInvNoBarcod.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button_SrchInvNoBarcod.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.button_SrchInvNoBarcod.Location = new System.Drawing.Point(196, 9);
-            this.button_SrchInvNoBarcod.Name = "button_SrchInvNoBarcod";
-            this.button_SrchInvNoBarcod.PopupSide = DevComponents.DotNetBar.ePopupSide.Top;
-            this.button_SrchInvNoBarcod.Size = new System.Drawing.Size(41, 20);
-            this.button_SrchInvNoBarcod.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_SrchInvNoBarcod.Symbol = "";
-            this.button_SrchInvNoBarcod.SymbolSize = 8F;
-            this.button_SrchInvNoBarcod.TabIndex = 1228;
-            this.button_SrchInvNoBarcod.Text = "بحث";
-            this.button_SrchInvNoBarcod.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_SrchInvNoBarcod.Click += new System.EventHandler(this.button_SrchInvNoBarcod_Click);
-            // 
             // textBox_Sequenc
             // 
             this.textBox_Sequenc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -4975,7 +5001,7 @@ namespace InvAcc.Forms
             this.textBox_Sequenc.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.textBox_Sequenc, false);
             this.textBox_Sequenc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_Sequenc.Size = new System.Drawing.Size(83, 23);
+            this.textBox_Sequenc.Size = new System.Drawing.Size(79, 23);
             this.textBox_Sequenc.TabIndex = 1193;
             this.textBox_Sequenc.TextChanged += new System.EventHandler(this.textBox_Sequenc_TextChanged);
             // 
@@ -4987,11 +5013,12 @@ namespace InvAcc.Forms
             this.label53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label53.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.label53.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label53.Location = new System.Drawing.Point(150, 14);
+            this.label53.Location = new System.Drawing.Point(146, 14);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(42, 16);
             this.label53.TabIndex = 1105;
             this.label53.Text = "التاريخ";
+            this.label53.Click += new System.EventHandler(this.label53_Click);
             // 
             // Label2
             // 
@@ -5001,7 +5028,7 @@ namespace InvAcc.Forms
             this.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Label2.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label2.Location = new System.Drawing.Point(148, -19);
+            this.Label2.Location = new System.Drawing.Point(144, -19);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(42, 16);
             this.Label2.TabIndex = 1105;
@@ -5012,7 +5039,7 @@ namespace InvAcc.Forms
             this.txtGDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGDate.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtGDate.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.txtGDate.Location = new System.Drawing.Point(57, 10);
+            this.txtGDate.Location = new System.Drawing.Point(53, 10);
             this.txtGDate.Mask = "0000/00/00";
             this.txtGDate.Name = "txtGDate";
             this.txtGDate.Size = new System.Drawing.Size(85, 21);
@@ -5026,7 +5053,7 @@ namespace InvAcc.Forms
             this.txtTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTime.BackColor = System.Drawing.Color.White;
             this.txtTime.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.txtTime.Location = new System.Drawing.Point(3, 11);
+            this.txtTime.Location = new System.Drawing.Point(-1, 11);
             this.txtTime.Mask = "##:##";
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(51, 21);
@@ -5040,7 +5067,7 @@ namespace InvAcc.Forms
             this.txtHDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHDate.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtHDate.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.txtHDate.Location = new System.Drawing.Point(59, 33);
+            this.txtHDate.Location = new System.Drawing.Point(55, 33);
             this.txtHDate.Mask = "0000/00/00";
             this.txtHDate.Name = "txtHDate";
             this.txtHDate.Size = new System.Drawing.Size(83, 21);
@@ -5049,6 +5076,25 @@ namespace InvAcc.Forms
             this.txtHDate.Click += new System.EventHandler(this.txtHDate_Click);
             this.txtHDate.Enter += new System.EventHandler(this.txtHDate_Enter);
             // 
+            // button_SrchInvNoBarcod
+            // 
+            this.button_SrchInvNoBarcod.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.button_SrchInvNoBarcod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_SrchInvNoBarcod.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
+            this.button_SrchInvNoBarcod.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.button_SrchInvNoBarcod.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.button_SrchInvNoBarcod.Location = new System.Drawing.Point(192, 9);
+            this.button_SrchInvNoBarcod.Name = "button_SrchInvNoBarcod";
+            this.button_SrchInvNoBarcod.PopupSide = DevComponents.DotNetBar.ePopupSide.Top;
+            this.button_SrchInvNoBarcod.Size = new System.Drawing.Size(41, 20);
+            this.button_SrchInvNoBarcod.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_SrchInvNoBarcod.Symbol = "";
+            this.button_SrchInvNoBarcod.SymbolSize = 8F;
+            this.button_SrchInvNoBarcod.TabIndex = 1228;
+            this.button_SrchInvNoBarcod.Text = "بحث";
+            this.button_SrchInvNoBarcod.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_SrchInvNoBarcod.Click += new System.EventHandler(this.button_SrchInvNoBarcod_Click);
+            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.Loc_TotTax);
@@ -5056,9 +5102,9 @@ namespace InvAcc.Forms
             this.panel10.Controls.Add(this.Lab_Disc);
             this.panel10.Controls.Add(this.label51);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 506);
+            this.panel10.Location = new System.Drawing.Point(0, 625);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(408, 25);
+            this.panel10.Size = new System.Drawing.Size(404, 25);
             this.panel10.TabIndex = 1251;
             // 
             // Loc_TotTax
@@ -5070,7 +5116,7 @@ namespace InvAcc.Forms
             this.Loc_TotTax.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Loc_TotTax.Location = new System.Drawing.Point(191, 0);
             this.Loc_TotTax.Name = "Loc_TotTax";
-            this.Loc_TotTax.Size = new System.Drawing.Size(121, 25);
+            this.Loc_TotTax.Size = new System.Drawing.Size(117, 25);
             this.Loc_TotTax.TabIndex = 1093;
             this.Loc_TotTax.Text = "0.0 (SR)";
             this.Loc_TotTax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -5110,7 +5156,7 @@ namespace InvAcc.Forms
             this.label51.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.label51.ForeColor = System.Drawing.Color.Black;
             this.label51.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label51.Location = new System.Drawing.Point(312, 0);
+            this.label51.Location = new System.Drawing.Point(308, 0);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(96, 25);
             this.label51.TabIndex = 1092;
@@ -5125,19 +5171,19 @@ namespace InvAcc.Forms
             this.panel9.Controls.Add(this.txtDueAmountLoc);
             this.panel9.Controls.Add(this.label9);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 531);
+            this.panel9.Location = new System.Drawing.Point(0, 650);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(408, 35);
+            this.panel9.Size = new System.Drawing.Size(404, 35);
             this.panel9.TabIndex = 1249;
             // 
             // label47
             // 
             this.label47.BackColor = System.Drawing.Color.Black;
             this.label47.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label47.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label47.ForeColor = System.Drawing.Color.Lime;
+            this.label47.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label47.ForeColor = System.Drawing.Color.White;
             this.label47.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label47.Location = new System.Drawing.Point(246, 0);
+            this.label47.Location = new System.Drawing.Point(242, 0);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(160, 33);
             this.label47.TabIndex = 1094;
@@ -5148,12 +5194,12 @@ namespace InvAcc.Forms
             // 
             this.Lab_DueAmountLoc.BackColor = System.Drawing.Color.Black;
             this.Lab_DueAmountLoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Lab_DueAmountLoc.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.Lab_DueAmountLoc.ForeColor = System.Drawing.Color.Lime;
+            this.Lab_DueAmountLoc.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.Lab_DueAmountLoc.ForeColor = System.Drawing.Color.White;
             this.Lab_DueAmountLoc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Lab_DueAmountLoc.Location = new System.Drawing.Point(0, 0);
             this.Lab_DueAmountLoc.Name = "Lab_DueAmountLoc";
-            this.Lab_DueAmountLoc.Size = new System.Drawing.Size(406, 33);
+            this.Lab_DueAmountLoc.Size = new System.Drawing.Size(402, 33);
             this.Lab_DueAmountLoc.TabIndex = 1093;
             this.Lab_DueAmountLoc.Text = "0.0 (SR)";
             this.Lab_DueAmountLoc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -5171,19 +5217,6 @@ namespace InvAcc.Forms
             this.Button_Search.UseVisualStyleBackColor = false;
             this.Button_Search.Click += new System.EventHandler(this.Button_Search_Click_2);
             // 
-            // SwitchBill
-            // 
-            this.SwitchBill.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.SwitchBill.BackColor = System.Drawing.Color.Teal;
-            this.SwitchBill.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.SwitchBill.Location = new System.Drawing.Point(475, 214);
-            this.SwitchBill.Name = "SwitchBill";
-            this.SwitchBill.Size = new System.Drawing.Size(147, 39);
-            this.SwitchBill.TabIndex = 20;
-            this.SwitchBill.Text = "مرتجع مبيعات";
-            this.SwitchBill.UseVisualStyleBackColor = false;
-            this.SwitchBill.Click += new System.EventHandler(this.SwitchBill_Click);
-            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -5192,7 +5225,7 @@ namespace InvAcc.Forms
             this.groupBox3.Controls.Add(this.txtDiscoundPoints);
             this.groupBox3.Controls.Add(this.txtDiscoundPointsLoc);
             this.groupBox3.Controls.Add(this.button_SrchCustPoints);
-            this.groupBox3.Location = new System.Drawing.Point(524, 391);
+            this.groupBox3.Location = new System.Drawing.Point(524, 510);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(0, 34);
             this.groupBox3.TabIndex = 1240;
@@ -5290,7 +5323,7 @@ namespace InvAcc.Forms
             this.FlxDat.StyleInfo = resources.GetString("FlxDat.StyleInfo");
             this.FlxDat.TabIndex = 1182;
             this.FlxDat.Visible = false;
-            this.FlxDat.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2010Black;
+            this.FlxDat.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2007Black;
             // 
             // txtItemName
             // 
@@ -5312,7 +5345,7 @@ namespace InvAcc.Forms
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(792, 73);
+            this.label7.Location = new System.Drawing.Point(788, 73);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 16);
             this.label7.TabIndex = 1106;
@@ -5341,9 +5374,9 @@ namespace InvAcc.Forms
             this.panel12.Controls.Add(this.button24);
             this.panel12.Controls.Add(this.button22);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel12.Location = new System.Drawing.Point(0, 566);
+            this.panel12.Location = new System.Drawing.Point(0, 685);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(408, 49);
+            this.panel12.Size = new System.Drawing.Size(404, 49);
             this.panel12.TabIndex = 1200;
             // 
             // button23
@@ -5353,9 +5386,9 @@ namespace InvAcc.Forms
             this.button23.Font = new System.Drawing.Font("Tahoma", 13F);
             this.button23.Location = new System.Drawing.Point(141, 0);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(149, 49);
+            this.button23.Size = new System.Drawing.Size(145, 49);
             this.button23.TabIndex = 1254;
-            this.button23.Text = "اغلاق";
+            this.button23.Text = "رجوع";
             this.button23.UseVisualStyleBackColor = false;
             this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
@@ -5364,7 +5397,7 @@ namespace InvAcc.Forms
             this.button24.BackColor = System.Drawing.Color.LightCoral;
             this.button24.Dock = System.Windows.Forms.DockStyle.Right;
             this.button24.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.button24.Location = new System.Drawing.Point(290, 0);
+            this.button24.Location = new System.Drawing.Point(286, 0);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(118, 49);
             this.button24.TabIndex = 1255;
@@ -5530,7 +5563,7 @@ namespace InvAcc.Forms
             this.txtRef.ButtonCustom.Visible = true;
             this.txtRef.FocusHighlightEnabled = true;
             this.txtRef.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.txtRef.Location = new System.Drawing.Point(216, 78);
+            this.txtRef.Location = new System.Drawing.Point(598, 78);
             this.txtRef.Name = "txtRef";
             this.netResize1.SetResizeTextBoxMultiline(this.txtRef, false);
             this.txtRef.Size = new System.Drawing.Size(261, 23);
@@ -5595,17 +5628,22 @@ namespace InvAcc.Forms
             // 
             this.textBox_Barcode.Border.Class = "TextBoxBorder";
             this.textBox_Barcode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBox_Barcode.ButtonCustom.Image = ((System.Drawing.Image)(resources.GetObject("textBox_Barcode.ButtonCustom.Image")));
-            this.textBox_Barcode.ButtonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("textBox_Barcode.ButtonCustom2.Image")));
+            this.textBox_Barcode.ButtonCustom.Image = global::InvAcc.Properties.Resources.Barcode_32;
+            this.textBox_Barcode.ButtonCustom.Symbol = "";
+            this.textBox_Barcode.ButtonCustom.Visible = true;
+            this.textBox_Barcode.ButtonCustom2.Symbol = "59574";
+            this.textBox_Barcode.ButtonCustom2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.textBox_Barcode.ButtonCustom2.Visible = true;
             this.textBox_Barcode.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_Barcode.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.textBox_Barcode.ForeColor = System.Drawing.Color.Black;
+            this.textBox_Barcode.HideSelection = false;
             this.textBox_Barcode.Location = new System.Drawing.Point(0, 0);
             this.textBox_Barcode.MaximumSize = new System.Drawing.Size(0, 39);
             this.textBox_Barcode.MinimumSize = new System.Drawing.Size(39, 54);
             this.textBox_Barcode.Name = "textBox_Barcode";
             this.netResize1.SetResizeTextBoxMultiline(this.textBox_Barcode, false);
-            this.textBox_Barcode.Size = new System.Drawing.Size(596, 54);
+            this.textBox_Barcode.Size = new System.Drawing.Size(982, 54);
             this.textBox_Barcode.TabIndex = 1196;
             this.textBox_Barcode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox_Barcode.WatermarkColor = System.Drawing.Color.Black;
@@ -5616,14 +5654,15 @@ namespace InvAcc.Forms
             this.textBox_Barcode.TextChanged += new System.EventHandler(this.textBox_Barcode_TextChanged);
             this.textBox_Barcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_Barcode_KeyDown);
             this.textBox_Barcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Barcode_KeyPress);
+            this.textBox_Barcode.Leave += new System.EventHandler(this.textBox_Barcode_Leave_1);
             // 
             // Status_Bar
             // 
             this.Status_Bar.Controls.Add(this.puBar1);
             this.Status_Bar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Status_Bar.Location = new System.Drawing.Point(0, 615);
+            this.Status_Bar.Location = new System.Drawing.Point(0, 734);
             this.Status_Bar.Name = "Status_Bar";
-            this.Status_Bar.Size = new System.Drawing.Size(1004, 54);
+            this.Status_Bar.Size = new System.Drawing.Size(1386, 54);
             this.Status_Bar.TabIndex = 1249;
             this.Status_Bar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -5642,7 +5681,7 @@ namespace InvAcc.Forms
             this.puBar1.Location = new System.Drawing.Point(0, 0);
             this.puBar1.Name = "puBar1";
             this.puBar1.Other_Button_Items = false;
-            this.puBar1.Size = new System.Drawing.Size(1004, 54);
+            this.puBar1.Size = new System.Drawing.Size(1386, 54);
             this.puBar1.TabIndex = 1;
             this.puBar1.Visible = false;
             this.puBar1.Load += new System.EventHandler(this.puBar1_Load);
@@ -5731,7 +5770,7 @@ namespace InvAcc.Forms
             this.DGV_Main.PrimaryGrid.VirtualRowHeight = 50;
             this.DGV_Main.PrimaryGrid.Visible = false;
             this.DGV_Main.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DGV_Main.Size = new System.Drawing.Size(1004, 608);
+            this.DGV_Main.Size = new System.Drawing.Size(1386, 727);
             this.DGV_Main.TabIndex = 862;
             this.DGV_Main.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
@@ -5743,7 +5782,7 @@ namespace InvAcc.Forms
             this.panelEx3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx3.Location = new System.Drawing.Point(0, 10);
             this.panelEx3.Name = "panelEx3";
-            this.panelEx3.Size = new System.Drawing.Size(1004, 659);
+            this.panelEx3.Size = new System.Drawing.Size(1386, 778);
             this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelEx3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -5769,9 +5808,9 @@ namespace InvAcc.Forms
             this.ribbonBar_DGV.Controls.Add(this.superTabControl_DGV);
             this.ribbonBar_DGV.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ribbonBar_DGV.DragDropSupport = true;
-            this.ribbonBar_DGV.Location = new System.Drawing.Point(0, 608);
+            this.ribbonBar_DGV.Location = new System.Drawing.Point(0, 727);
             this.ribbonBar_DGV.Name = "ribbonBar_DGV";
-            this.ribbonBar_DGV.Size = new System.Drawing.Size(1004, 51);
+            this.ribbonBar_DGV.Size = new System.Drawing.Size(1386, 51);
             this.ribbonBar_DGV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_DGV.TabIndex = 869;
             this.ribbonBar_DGV.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -5823,7 +5862,7 @@ namespace InvAcc.Forms
             this.superTabControl_DGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.superTabControl_DGV.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.superTabControl_DGV.SelectedTabIndex = -1;
-            this.superTabControl_DGV.Size = new System.Drawing.Size(1004, 51);
+            this.superTabControl_DGV.Size = new System.Drawing.Size(1386, 51);
             this.superTabControl_DGV.TabFont = new System.Drawing.Font("Tahoma", 8F);
             this.superTabControl_DGV.TabIndex = 12;
             this.superTabControl_DGV.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -5935,7 +5974,7 @@ namespace InvAcc.Forms
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panel1.Size = new System.Drawing.Size(1004, 669);
+            this.panel1.Size = new System.Drawing.Size(1386, 788);
             this.panel1.TabIndex = 915;
             // 
             // panelEx2
@@ -5947,7 +5986,7 @@ namespace InvAcc.Forms
             this.panelEx2.Location = new System.Drawing.Point(0, 10);
             this.panelEx2.MinimumSize = new System.Drawing.Size(649, 304);
             this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(1004, 659);
+            this.panelEx2.Size = new System.Drawing.Size(1386, 778);
             this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx2.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -5981,7 +6020,7 @@ namespace InvAcc.Forms
             this.labelItem6});
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(1004, 649);
+            this.ribbonBar1.Size = new System.Drawing.Size(1386, 768);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 867;
             this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -6292,7 +6331,7 @@ namespace InvAcc.Forms
             this.expandableSplitter1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.expandableSplitter1.Location = new System.Drawing.Point(0, 0);
             this.expandableSplitter1.Name = "expandableSplitter1";
-            this.expandableSplitter1.Size = new System.Drawing.Size(1004, 10);
+            this.expandableSplitter1.Size = new System.Drawing.Size(1386, 10);
             this.expandableSplitter1.Style = DevComponents.DotNetBar.eSplitterStyle.Office2007;
             this.expandableSplitter1.TabIndex = 1;
             this.expandableSplitter1.TabStop = false;
@@ -6308,13 +6347,13 @@ namespace InvAcc.Forms
             this.PanelCOntainer.Controls.Add(this.groupBox2);
             this.PanelCOntainer.Controls.Add(this.DetailsPanel);
             this.PanelCOntainer.Controls.Add(this.txtInvCost);
+            this.PanelCOntainer.Controls.Add(this.txtRef);
             this.PanelCOntainer.Controls.Add(this.groupBox1);
             this.PanelCOntainer.Controls.Add(this.superTabStripORDER);
-            this.PanelCOntainer.Controls.Add(this.txtRef);
             this.PanelCOntainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelCOntainer.Location = new System.Drawing.Point(0, 0);
             this.PanelCOntainer.Name = "PanelCOntainer";
-            this.PanelCOntainer.Size = new System.Drawing.Size(1004, 615);
+            this.PanelCOntainer.Size = new System.Drawing.Size(1386, 734);
             this.PanelCOntainer.TabIndex = 1135;
             this.PanelCOntainer.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelCOntainer_Paint);
             // 
@@ -6323,9 +6362,9 @@ namespace InvAcc.Forms
             this.poS_ItemsPanel2.AutoSize = true;
             this.poS_ItemsPanel2.BackColor = System.Drawing.Color.White;
             this.poS_ItemsPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.poS_ItemsPanel2.Location = new System.Drawing.Point(408, 39);
+            this.poS_ItemsPanel2.Location = new System.Drawing.Point(404, 54);
             this.poS_ItemsPanel2.Name = "poS_ItemsPanel2";
-            this.poS_ItemsPanel2.Size = new System.Drawing.Size(596, 576);
+            this.poS_ItemsPanel2.Size = new System.Drawing.Size(982, 680);
             this.poS_ItemsPanel2.TabIndex = 1251;
             this.poS_ItemsPanel2.Load += new System.EventHandler(this.poS_ItemsPanel2_Load);
             // 
@@ -6334,9 +6373,9 @@ namespace InvAcc.Forms
             this.panel4.BackColor = System.Drawing.Color.Khaki;
             this.panel4.Controls.Add(this.textBox_Barcode);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(408, 0);
+            this.panel4.Location = new System.Drawing.Point(404, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(596, 39);
+            this.panel4.Size = new System.Drawing.Size(982, 54);
             this.panel4.TabIndex = 1198;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint_1);
             // 
@@ -6611,7 +6650,7 @@ namespace InvAcc.Forms
             this.textBox1.Increment = 0D;
             this.textBox1.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.textBox1.IsInputReadOnly = true;
-            this.textBox1.Location = new System.Drawing.Point(421, 701);
+            this.textBox1.Location = new System.Drawing.Point(32720, 701);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(109, 21);
             this.textBox1.TabIndex = 1057;
@@ -6632,7 +6671,7 @@ namespace InvAcc.Forms
             this.textBox2.Increment = 0D;
             this.textBox2.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.textBox2.IsInputReadOnly = true;
-            this.textBox2.Location = new System.Drawing.Point(429, 709);
+            this.textBox2.Location = new System.Drawing.Point(32720, 709);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(109, 21);
             this.textBox2.TabIndex = 1064;
@@ -6653,7 +6692,7 @@ namespace InvAcc.Forms
             this.txtCustRep.Increment = 0D;
             this.txtCustRep.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtCustRep.IsInputReadOnly = true;
-            this.txtCustRep.Location = new System.Drawing.Point(437, 717);
+            this.txtCustRep.Location = new System.Drawing.Point(32720, 717);
             this.txtCustRep.Name = "txtCustRep";
             this.txtCustRep.Size = new System.Drawing.Size(109, 21);
             this.txtCustRep.TabIndex = 1065;
@@ -6674,7 +6713,7 @@ namespace InvAcc.Forms
             this.txtCustNet.Increment = 0D;
             this.txtCustNet.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtCustNet.IsInputReadOnly = true;
-            this.txtCustNet.Location = new System.Drawing.Point(445, 725);
+            this.txtCustNet.Location = new System.Drawing.Point(32720, 725);
             this.txtCustNet.Name = "txtCustNet";
             this.txtCustNet.Size = new System.Drawing.Size(109, 21);
             this.txtCustNet.TabIndex = 1066;
@@ -6737,13 +6776,6 @@ namespace InvAcc.Forms
             this.netResize1.ParentControl = this;
             this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 
-            // checkBoxItem_BarCode
-            // 
-            this.checkBoxItem_BarCode.Checked = true;
-            this.checkBoxItem_BarCode.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxItem_BarCode.Name = "checkBoxItem_BarCode";
-            this.checkBoxItem_BarCode.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            // 
             // superTabItem11
             // 
             this.superTabItem11.GlobalItem = false;
@@ -6795,11 +6827,11 @@ namespace InvAcc.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 669);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.PanelCOntainer);
+            this.Controls.Add(this.FlxInvToCopy);
             this.Controls.Add(this.Status_Bar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.FlxInvToCopy);
             this.Controls.Add(this.txtCustNet);
             this.Controls.Add(this.txtCustRep);
             this.Controls.Add(this.textBox2);
@@ -6811,12 +6843,12 @@ namespace InvAcc.Forms
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Tag = "size = 1021; 740";
-            this.Text = "نقطة بيــع - POS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmInvSale_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmInvSalePoint_FormClosed);
             this.Load += new System.EventHandler(this.FrmInvSalePoint_Load);
             this.Shown += new System.EventHandler(this.FrmInvSalePoint_Shown);
+            this.CursorChanged += new System.EventHandler(this.FrmInvSalePoint_CursorChanged);
             this.SizeChanged += new System.EventHandler(this.FrmInvSalePoint_SizeChanged);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Frm_KeyPress);
@@ -6847,16 +6879,15 @@ namespace InvAcc.Forms
             this.P_ResturanStatusBar.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.HP_CustDetails.ResumeLayout(false);
-            this.HP_CustDetails.PerformLayout();
             this.HP_Delegator.ResumeLayout(false);
             this.HP_Delegator.PerformLayout();
             this.panel_Table.ResumeLayout(false);
             this.panel_Table.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPersons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTable)).EndInit();
+            this.HP_CustDetails.ResumeLayout(false);
+            this.HP_CustDetails.PerformLayout();
             this.RecordsPanelGroup.ResumeLayout(false);
-            this.P_Menu.ResumeLayout(false);
             this.P_Main.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.P_TaxPanel.ResumeLayout(false);
@@ -6865,6 +6896,7 @@ namespace InvAcc.Forms
             this.superTabControl_CostSts.ResumeLayout(false);
             this.superTabControlPanel6.ResumeLayout(false);
             this.superTabControlPanel6.PerformLayout();
+            this.P_Menu.ResumeLayout(false);
             this.P_BankCommession.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl2)).EndInit();
             this.superTabControl2.ResumeLayout(false);
@@ -6976,9 +7008,8 @@ namespace InvAcc.Forms
         private Panel RecordsPanelGroup;
         private Button button5;
         private Panel P_Main;
-        private Button SwitchBill;
         private Button Button_Search;
-       // private Controls.POS.POS_ItemsPanel poS_ItemsPanel1;
+        // private Controls.POS.POS_ItemsPanel poS_ItemsPanel1;
         private Panel DetailsPanel;
         private Panel Status_Bar;
         private ubar.puBar puBar1;
@@ -7101,7 +7132,6 @@ namespace InvAcc.Forms
         private DevComponents.DotNetBar.SuperTabItem superTabItem5;
         private DevComponents.DotNetBar.SuperTabItem superTabItem2;
         private DevComponents.DotNetBar.SuperTabItem superTabItem3;
-        private DevComponents.DotNetBar.CheckBoxItem checkBoxItem_BarCode;
         private DevComponents.DotNetBar.SuperTabControl superTabControl_Info;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel2;
         private DevComponents.Editors.DoubleInput txtSteel;
@@ -7199,7 +7229,6 @@ namespace InvAcc.Forms
         private DevComponents.DotNetBar.SwitchButtonItem switchButton_TaxLines;
         private DevComponents.DotNetBar.SwitchButtonItem switchButtonItem1;
         private DevComponents.DotNetBar.SwitchButtonItem switchButton_TaxByNet;
-        private DevComponents.DotNetBar.TextBoxItem textBoxItem_TaxByNetValue;
         private DevComponents.DotNetBar.LabelItem labelItem_TaxByNetPer;
         private DevComponents.DotNetBar.SuperTabControl superTabControl2;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel8;
@@ -7232,8 +7261,13 @@ namespace InvAcc.Forms
         private DevComponents.DotNetBar.ButtonItem buttonItem_RemoveInvWaiter;
         private DevComponents.DotNetBar.ButtonItem buttonItem_RefreshList;
         private Button Glass_ButtonAccess;
-        private SellPurSystem.specialcontrols.XGmesures xGmesures1;
+        //    private SellPurSystem.specialcontrols.XGmesures xGmesures1;
         private Button button11;
         private Controls.POS.POS_ItemsPanel poS_ItemsPanel2;
+        private Button SwitchBill;
+        private CheckBox checkBoxItem_BarCode;
+        public DevComponents.DotNetBar.TextBoxItem textBoxItem_TaxByNetValue;
+        private TextBox text_CusTaxNo;
+        internal Label label58;
     }
 }

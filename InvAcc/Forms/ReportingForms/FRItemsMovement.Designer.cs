@@ -349,6 +349,7 @@ private void InitializeComponent()
             this.txtMToDate.Size = new System.Drawing.Size(122, 20);
             this.txtMToDate.TabIndex = 4;
             this.txtMToDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMToDate.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtMToDate_MaskInputRejected);
             this.txtMToDate.Click += new System.EventHandler(this.txtMToDate_Click);
             this.txtMToDate.Leave += new System.EventHandler(this.txtMToDate_Leave);
             // 
@@ -544,12 +545,13 @@ private void InitializeComponent()
             this.ribbonBar1.Controls.Add(this.CmbReturn);
             this.ribbonBar1.Controls.Add(this.groupBox2);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonBar1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
             this.ribbonBar1.Size = new System.Drawing.Size(565, 431);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 1101;
+            this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -836,7 +838,7 @@ private void InitializeComponent()
             this.ClientSize = new System.Drawing.Size(565, 431);
             this.Controls.Add(this.ribbonBar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(InvAcc.Properties.Resources.favicon));
+            this.Icon = global::InvAcc.Properties.Resources.favicon;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "FRItemsMovement";
@@ -859,8 +861,8 @@ private void InitializeComponent()
             this.CmbReturn.ResumeLayout(false);
             this.CmbReturn.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.Icon = ((System.Drawing.Icon)(InvAcc.Properties.Resources.favicon));
             this.ResumeLayout(false);
+
         }//###########&&&&&&&&&&
 
 }

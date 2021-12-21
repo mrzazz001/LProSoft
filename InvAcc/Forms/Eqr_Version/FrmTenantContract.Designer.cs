@@ -17,14 +17,14 @@ partial class FrmTenantContract
 private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevComponents.DotNetBar.SuperGrid.Style.Background background1 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
-            DevComponents.DotNetBar.SuperGrid.Style.Background background2 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
-            DevComponents.DotNetBar.SuperGrid.Style.Background background3 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
-            DevComponents.DotNetBar.SuperGrid.Style.BorderColor borderColor1 = new DevComponents.DotNetBar.SuperGrid.Style.BorderColor();
-            DevComponents.DotNetBar.SuperGrid.Style.BorderColor borderColor2 = new DevComponents.DotNetBar.SuperGrid.Style.BorderColor();
-            DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle1 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
-            DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle2 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
-            DevComponents.DotNetBar.SuperGrid.Style.Background background4 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background5 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background6 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background7 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
+            DevComponents.DotNetBar.SuperGrid.Style.BorderColor borderColor3 = new DevComponents.DotNetBar.SuperGrid.Style.BorderColor();
+            DevComponents.DotNetBar.SuperGrid.Style.BorderColor borderColor4 = new DevComponents.DotNetBar.SuperGrid.Style.BorderColor();
+            DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle3 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
+            DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle4 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
+            DevComponents.DotNetBar.SuperGrid.Style.Background background8 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTenantContract));
             this.Rep_RecCount = new DevComponents.Editors.IntegerInput();
             this.ToolStripMenuItem_Rep = new System.Windows.Forms.ToolStripMenuItem();
@@ -187,6 +187,7 @@ private void InitializeComponent()
             // 
             // 
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar1.ItemClick += new System.EventHandler(this.ribbonBar1_ItemClick);
             // 
             // txtAinTyp
             // 
@@ -609,15 +610,15 @@ private void InitializeComponent()
             // DGV_Main
             // 
             this.DGV_Main.BackColor = System.Drawing.Color.Transparent;
-            background1.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.VerticalCenter;
-            background1.Color1 = System.Drawing.Color.Silver;
-            background1.Color2 = System.Drawing.Color.White;
-            this.DGV_Main.DefaultVisualStyles.GroupByStyles.Default.Background = background1;
-            background2.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.Center;
-            background2.Color1 = System.Drawing.Color.LightSteelBlue;
-            this.DGV_Main.DefaultVisualStyles.RowStyles.Default.Background = background2;
-            background3.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.DGV_Main.DefaultVisualStyles.RowStyles.MouseOver.Background = background3;
+            background5.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.VerticalCenter;
+            background5.Color1 = System.Drawing.Color.Silver;
+            background5.Color2 = System.Drawing.Color.White;
+            this.DGV_Main.DefaultVisualStyles.GroupByStyles.Default.Background = background5;
+            background6.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.Center;
+            background6.Color1 = System.Drawing.Color.LightSteelBlue;
+            this.DGV_Main.DefaultVisualStyles.RowStyles.Default.Background = background6;
+            background7.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.DGV_Main.DefaultVisualStyles.RowStyles.MouseOver.Background = background7;
             this.DGV_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGV_Main.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.DGV_Main.Font = new System.Drawing.Font("Tahoma", 9F);
@@ -644,28 +645,28 @@ private void InitializeComponent()
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CaptionStyles.ReadOnly.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CellStyles.Selected.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderRowStyles.Default.RowHeader.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.True;
-            borderColor1.Bottom = System.Drawing.Color.Black;
-            borderColor1.Left = System.Drawing.Color.Black;
-            borderColor1.Right = System.Drawing.Color.Black;
-            borderColor1.Top = System.Drawing.Color.Black;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.BorderColor = borderColor1;
+            borderColor3.Bottom = System.Drawing.Color.Black;
+            borderColor3.Left = System.Drawing.Color.Black;
+            borderColor3.Right = System.Drawing.Color.Black;
+            borderColor3.Top = System.Drawing.Color.Black;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.BorderColor = borderColor3;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.TextColor = System.Drawing.Color.SteelBlue;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.FilterColumnHeaderStyles.Default.TextColor = System.Drawing.Color.White;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.FooterStyles.Default.TextColor = System.Drawing.Color.White;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.False;
-            borderColor2.Bottom = System.Drawing.Color.Black;
-            borderColor2.Left = System.Drawing.Color.Black;
-            borderColor2.Right = System.Drawing.Color.Black;
-            borderColor2.Top = System.Drawing.Color.Black;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.BorderColor = borderColor2;
-            baseTreeButtonVisualStyle1.BorderColor = System.Drawing.Color.White;
-            baseTreeButtonVisualStyle1.LineColor = System.Drawing.Color.White;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.CircleTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle1;
+            borderColor4.Bottom = System.Drawing.Color.Black;
+            borderColor4.Left = System.Drawing.Color.Black;
+            borderColor4.Right = System.Drawing.Color.Black;
+            borderColor4.Top = System.Drawing.Color.Black;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.BorderColor = borderColor4;
+            baseTreeButtonVisualStyle3.BorderColor = System.Drawing.Color.White;
+            baseTreeButtonVisualStyle3.LineColor = System.Drawing.Color.White;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.CircleTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle3;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.HeaderHLinePattern = DevComponents.DotNetBar.SuperGrid.Style.LinePattern.None;
-            background4.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            baseTreeButtonVisualStyle2.Background = background4;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.SquareTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle2;
+            background8.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            baseTreeButtonVisualStyle4.Background = background8;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.SquareTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle4;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.TextColor = System.Drawing.Color.White;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.TitleStyles.Default.RowHeaderStyle.TextAlignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
             // 
@@ -989,6 +990,7 @@ private void InitializeComponent()
             this.Button_Save.SymbolSize = 15F;
             this.Button_Save.Text = "حفظ";
             this.Button_Save.Tooltip = "حفظ التغييرات";
+            this.Button_Save.Click += new System.EventHandler(this.Button_Save_Click_1);
             // 
             // Button_Add
             // 

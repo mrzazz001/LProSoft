@@ -101,6 +101,7 @@ namespace InvAcc.Forms
         {
             this.WindowState = FormWindowState.Minimized;
             this.WindowState = FormWindowState.Maximized;
+            ActiveControl = c1FlexGrid1;
         }
         private void FrmInvSale_SizeChanged(object sender, EventArgs e)
         {
@@ -683,7 +684,7 @@ namespace InvAcc.Forms
                 {
                     return;
                 }
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(0, 1) == "1")
+                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) != "1")
                 {
                     RepShow _RepShow = new RepShow();
                     _RepShow.Tables = "T_GDDET LEFT OUTER JOIN T_GDHEAD ON T_GDDET.gdID = T_GDHEAD.gdhead_ID LEFT OUTER JOIN T_INVSETTING ON T_GDHEAD.gdTyp = T_INVSETTING.InvID  LEFT OUTER JOIN T_Curency ON T_GDHEAD.CurTyp = T_Curency.Curency_ID LEFT OUTER JOIN T_CstTbl ON T_GDHEAD.gdCstNo = T_CstTbl.Cst_ID LEFT OUTER JOIN T_Mndob ON T_GDHEAD.gdMnd = T_Mndob.Mnd_ID LEFT OUTER JOIN T_AccDef ON T_GDDET.AccNo = T_AccDef.AccDef_No LEFT OUTER JOIN T_SYSSETTING ON T_GDHEAD.CompanyID = T_SYSSETTING.SYSSETTING_ID";
@@ -1949,7 +1950,7 @@ namespace InvAcc.Forms
             _InvSetting = new T_INVSETTING();
             _SysSetting = new T_SYSSETTING();
             listAccDef = new List<T_AccDef>();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+            _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
             _SysSetting = db.SystemSettingStock();
             listAccDef = db.StockAccDefList();
         }
@@ -2452,6 +2453,7 @@ namespace InvAcc.Forms
                     c1FlexGrid1.Rows.Count = 100;
                 }
                 List<T_AccDef> listAccDefSer = new List<T_AccDef>();
+                if (c1FlexGrid1.GetData(e.Row, e.Col) == null) c1FlexGrid1.SetData(e.Row, e.Col, "");
                 listAccDefSer = db.T_AccDefs.Where((T_AccDef t) => t.AccDef_ID == 0).ToList();
                 if (e.Col == 1 && !Utilites.isnollorempty(c1FlexGrid1.GetData(e.Row, e.Col)))
                 {
@@ -3397,7 +3399,7 @@ namespace InvAcc.Forms
                 }
                 if (State == FormState.Edit && !string.IsNullOrEmpty(data_this.BName))
                 {
-                    VarGeneral._GaidInv = dbx.ExecuteQuery<T_INVHED>("select T_INVHED.ArbTaf, T_INVHED.CashPay, T_INVHED.CashPayLocCur, T_INVHED.chauffeurNo, T_INVHED.CommMnd_Inv, T_INVHED.CompanyID, T_INVHED.CREATED_BY, T_INVHED.CreditPay, T_INVHED.CreditPayLocCur, T_INVHED.CurTyp, T_INVHED.CustNet, T_INVHED.CustPri, T_INVHED.CustRep, T_INVHED.CusVenAdd, T_INVHED.CusVenNo, T_INVHED.CusVenTel, T_INVHED.DATE_CREATED, T_INVHED.DATE_MODIFIED, T_INVHED.EstDat, T_INVHED.ExtrnalCostGaidID, T_INVHED.GadeId, T_INVHED.GadeNo, T_INVHED.GDat, T_INVHED.HDat, T_INVHED.IfDel, T_INVHED.IfPrint, T_INVHED.IfRet, T_INVHED.IfTrans, T_INVHED.InvAddCost, T_INVHED.InvAddCostExtrnal, T_INVHED.InvAddCostExtrnalLoc, T_INVHED.InvAddCostLoc, T_INVHED.InvCash, T_INVHED.InvCashPay, T_INVHED.InvCashPayNm, T_INVHED.InvCost, T_INVHED.InvCstNo, T_INVHED.InvDisPrs, ((case when IsDisUse1 = 1 then T_INVHED.InvValGaidDis else T_INVHED.InvDisVal end) + T_INVHED.DesPointsValue) as InvDisVal,T_INVHED.InvDisVal as InvDisValOnly,T_INVHED.DesPointsValue,T_INVHED.DesPointsValueLocCur,T_INVHED.PointsCount,T_INVHED.IsPoints, T_INVHED.InvDisValLocCur, T_INVHED.InvHed_ID, T_INVHED.InvId, T_INVHED.InvNet, T_INVHED.InvNetLocCur, T_INVHED.InvNo, T_INVHED.InvQty, T_INVHED.InvTot, T_INVHED.InvTotLocCur, T_INVHED.InvTyp, T_INVHED.InvWight_T, T_INVHED.IsExtrnalGaid, T_INVHED.LTim, T_INVHED.MndExtrnal, T_INVHED.MndNo, T_INVHED.MODIFIED_BY, T_INVHED.NetworkPay, T_INVHED.NetworkPayLocCur, T_INVHED.OrderTyp,Puyaid, T_INVHED.RefNo, T_INVHED.Remark,Remming, T_INVHED.RetId, T_INVHED.RetNo, T_INVHED.RoomNo, T_INVHED.RoomPerson, T_INVHED.RoomSts, T_INVHED.SalsManNam, T_INVHED.SalsManNo, T_INVHED.ServiceValue, T_INVHED.Sts, T_INVHED.ToStore, T_INVHED.ToStoreNm,case when T_INVHED.CusVenNo <> '' then (select " + ((LangArEn == 0) ? " T_AccDef.Arb_Des " : " T_AccDef.Eng_Des") + " from T_AccDef where T_AccDef.AccDef_No = T_INVHED.CusVenNo) else T_INVHED.CusVenNm end as CusVenNm,case when T_INVHED.CusVenNo <> '' then (select T_AccDef.Mobile from T_AccDef where T_AccDef.AccDef_No = T_INVHED.CusVenNo) else '' end as CusVenAdd from T_INVHED where (InvHed_ID = " + data_this.BName + " and CusVenNo ='" + c1FlexGrid1.GetData(1, 1).ToString() + "' and InvCashPay =1 and InvTyp=1) order by InvHed_ID", new object[0]).ToList();
+                    VarGeneral._GaidInv = dbx.ExecuteQuery<T_INVHED>("select T_INVHED.ArbTaf, T_INVHED.CashPay, T_INVHED.CashPayLocCur, T_INVHED.chauffeurNo, T_INVHED.CommMnd_Inv, T_INVHED.CompanyID, T_INVHED.CREATED_BY, T_INVHED.CreditPay, T_INVHED.CreditPayLocCur, T_INVHED.CurTyp, T_INVHED.CustNet, T_INVHED.CustPri, T_INVHED.CustRep, T_INVHED.CusVenAdd, T_INVHED.CusVenNo, T_INVHED.CusVenTel, T_INVHED.DATE_CREATED, T_INVHED.DATE_MODIFIED, T_INVHED.EstDat, T_INVHED.ExtrnalCostGaidID, T_INVHED.GadeId, T_INVHED.GadeNo, T_INVHED.GDat, T_INVHED.HDat, T_INVHED.IfDel, T_INVHED.IfPrint, T_INVHED.IfRet, T_INVHED.IfTrans, T_INVHED.InvAddCost, T_INVHED.InvAddCostExtrnal, T_INVHED.InvAddCostExtrnalLoc, T_INVHED.InvAddCostLoc, T_INVHED.InvCash, T_INVHED.InvCashPay, T_INVHED.InvCashPayNm, T_INVHED.InvCost, T_INVHED.InvCstNo, T_INVHED.InvDisPrs, ((case when IsDisUse1 = 1 then T_INVHED.InvValGaidDis else T_INVHED.InvDisVal end) + T_INVHED.DesPointsValue) as InvDisVal,T_INVHED.InvDisVal as InvDisValOnly,T_INVHED.DesPointsValue,T_INVHED.DesPointsValueLocCur,T_INVHED.PointsCount,T_INVHED.IsPoints, T_INVHED.InvDisValLocCur, T_INVHED.InvHed_ID, T_INVHED.InvId, T_INVHED.InvNet, T_INVHED.InvNetLocCur, T_INVHED.InvNo, T_INVHED.InvQty, T_INVHED.InvTot, T_INVHED.InvTotLocCur, T_INVHED.InvTyp, T_INVHED.InvWight_T, T_INVHED.IsExtrnalGaid, T_INVHED.LTim, T_INVHED.MndExtrnal, T_INVHED.MndNo, T_INVHED.MODIFIED_BY, T_INVHED.NetworkPay, T_INVHED.NetworkPayLocCur, T_INVHED.OrderTyp,Puyaid, T_INVHED.RefNo, T_INVHED.Remark,Remming, T_INVHED.RetId, T_INVHED.RetNo, T_INVHED.RoomNo, T_INVHED.RoomPerson, T_INVHED.RoomSts, T_INVHED.SalsManNam, T_INVHED.SalsManNo, T_INVHED.ServiceValue, T_INVHED.Sts, T_INVHED.ToStore, T_INVHED.ToStoreNm,case when T_INVHED.CusVenNo <> '' then (select " + ((LangArEn == 0) ? " T_AccDef.Arb_Des " : " T_AccDef.Eng_Des") + " from T_AccDef where T_AccDef.AccDef_No = T_INVHED.CusVenNo) else T_INVHED.CusVenNm end as CusVenNm,case when T_INVHED.CusVenNo <> '' then (select T_AccDef.Mobile from T_AccDef where T_AccDef.AccDef_No = T_INVHED.CusVenNo) else '' end as CusVenAdd from T_INVHED where (InvHed_ID = " + data_this.BName + " and CusVenNo ='" + c1FlexGrid1.GetData(1, 1).ToString() + "' and InvCashPay =1 and InvTyp=1) order by InvHed_ID", new object[0] ).ToList();
                     goto IL_01ea;
                 }
                 MessageBox.Show((LangArEn == 0) ? ("لا يوجد لـ " + c1FlexGrid1.GetData(1, 2).ToString() + " فواتير مبيعات آجلة غير مسد\u0651دة") : ("There is no" + c1FlexGrid1.GetData(1, 3).ToString() + "Outstanding unpaid bills"), VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
@@ -3410,8 +3412,8 @@ namespace InvAcc.Forms
                 double _totPaid = 0.0;
                 for (int i = 0; i < VarGeneral._GaidInv.ToList().Count; i++)
                 {
-                    VarGeneral._GaidInv.ToList()[i].GDat = db.StockInvSetting(VarGeneral.UserID, VarGeneral._GaidInv.ToList()[i].InvTyp.Value).InvNamA;
-                    VarGeneral._GaidInv.ToList()[i].HDat = db.StockInvSetting(VarGeneral.UserID, VarGeneral._GaidInv.ToList()[i].InvTyp.Value).InvNamE;
+                    VarGeneral._GaidInv.ToList()[i].GDat = db.StockInvSetting( VarGeneral._GaidInv.ToList()[i].InvTyp.Value).InvNamA;
+                    VarGeneral._GaidInv.ToList()[i].HDat = db.StockInvSetting( VarGeneral._GaidInv.ToList()[i].InvTyp.Value).InvNamE;
                     List<T_GDHEAD> _gd = dbx.ExecuteQuery<T_GDHEAD>("select * from T_GDHEAD where BName='" + VarGeneral._GaidInv.ToList()[i].InvHed_ID.ToString() + "' and gdLok =0 and gdTyp =" + VarGeneral.InvTyp, new object[0]).ToList();
                     _totPaid = 0.0;
                     try

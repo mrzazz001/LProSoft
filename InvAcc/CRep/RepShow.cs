@@ -59,7 +59,8 @@ namespace Library.RepShow
         {
             get => this._Fields;
             set
-            {
+            {if (value.Contains("(select defPrn from T_INVSETTING where CatID = (select ItmCat from T_Items where Itm_No = T_INVDET.ItmNo) ) as defPrn"))
+                    value = value.Replace("(select defPrn from T_INVSETTING where CatID = (select ItmCat from T_Items where Itm_No = T_INVDET.ItmNo) ) as defPrn", "(select defPrn from T_Printers where InvID=(select InvID From T_INVSETTING where CatID = (select ItmCat from T_Items where Itm_No = T_INVDET.ItmNo) ) and User_ID=" + VarGeneral.UserID.ToString() + ") as defPrn");
                 if (!(this._Fields != value))
                     return;
                 this._Fields = value;

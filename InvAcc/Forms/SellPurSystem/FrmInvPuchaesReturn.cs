@@ -24,6 +24,7 @@ using System.Linq;
 using System.Windows.Forms;
 using TFG;
 using ScriptNumber = ProShared.ScriptNumber;
+using InvAcc.Forms.SellPurSystem.specialcontrols;
 
 namespace InvAcc.Forms
 {
@@ -1084,7 +1085,6 @@ namespace InvAcc.Forms
             Button_Search.Click += Button_Search_Click;
             Button_Delete.Click += Button_Delete_Click;
             Button_Save.Click += Button_Save_Click;
-            TextBox_Index.InputTextChanged += TextBox_Index_InputTextChanged;
             expandableSplitter1.Click += expandableSplitter1_Click;
             DGV_Main.PrimaryGrid.CheckBoxes = true;
             DGV_Main.PrimaryGrid.ShowCheckBox = true;
@@ -3540,16 +3540,7 @@ namespace InvAcc.Forms
                     State = FormState.Saved;
                     RefreshPKeys();
                     TextBox_Index.TextBox.Text = string.Concat(PKeys.IndexOf(data_this.InvNo ?? string.Empty) + 1);
-                    dbInstance = null;
-                    if (savingoccure == 1)
-                    {
-                        dbInstance = null;
-
-                        DataThis = db.StockInvHead((int)data_this.InvTyp, data_this.InvNo);
-                        Utilites.addhashfunction(data_this);
-                      
-                        savingoccure = 0;
-                    }
+                 
                     textBox_ID_TextChanged(sender, e);
                     SetReadOnly = true;
                 }
@@ -3580,7 +3571,7 @@ namespace InvAcc.Forms
             _InvSetting = new T_INVSETTING();
             _SysSetting = new T_SYSSETTING();
             _GdAuto = new T_GdAuto();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+            _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
             _SysSetting = db.SystemSettingStock();
             _GdAuto = db.GdAutoStock();
         }
@@ -3799,7 +3790,7 @@ namespace InvAcc.Forms
                 {
                     PrintDocument prnt_doc = new PrintDocument();
                     T_INVSETTING _InvSetting = new T_INVSETTING();
-                    _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+                    _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
                     string _PrinterName = prnt_doc.PrinterSettings.PrinterName;
                     try
                     {
@@ -5726,115 +5717,8 @@ namespace InvAcc.Forms
                         data_this.SalsManNo = VarGeneral.UserNumber;
                         data_this.UserNew = VarGeneral.UserNumber;
                         data_this.SalsManNam = string.Empty;
-                        IDatabase dbHead = Database.GetDatabase(VarGeneral.BranchCS);
-                        dbHead.ClearParameters();
-                        dbHead.AddOutParameter("InvHed_ID", DbType.Int32);
-                        dbHead.AddParameter("InvId", DbType.Double, data_this.InvId);
-                        dbHead.AddParameter("InvNo", DbType.String, data_this.InvNo);
-                        dbHead.AddParameter("InvTyp", DbType.Int32, data_this.InvTyp);
-                        dbHead.AddParameter("InvCashPay", DbType.Int32, data_this.InvCashPay);
-                        dbHead.AddParameter("CusVenNo", DbType.String, data_this.CusVenNo);
-                        dbHead.AddParameter("CusVenNm", DbType.String, data_this.CusVenNm);
-                        dbHead.AddParameter("CusVenAdd", DbType.String, data_this.CusVenAdd);
-                        dbHead.AddParameter("CusVenTel", DbType.String, data_this.CusVenTel);
-                        dbHead.AddParameter("Remark", DbType.String, data_this.Remark);
-                        dbHead.AddParameter("HDat", DbType.String, data_this.HDat);
-                        dbHead.AddParameter("GDat", DbType.String, data_this.GDat);
-                        dbHead.AddParameter("MndNo", DbType.Int32, data_this.MndNo);
-                        dbHead.AddParameter("SalsManNo", DbType.String, data_this.SalsManNo);
-                        dbHead.AddParameter("SalsManNam", DbType.String, data_this.SalsManNam);
-                        dbHead.AddParameter("InvTot", DbType.Double, data_this.InvTot);
-                        dbHead.AddParameter("InvTotLocCur", DbType.Double, data_this.InvTotLocCur);
-                        dbHead.AddParameter("InvDisPrs", DbType.Double, data_this.InvDisPrs);
-                        dbHead.AddParameter("InvDisVal", DbType.Double, data_this.InvDisVal);
-                        dbHead.AddParameter("InvDisValLocCur", DbType.Double, data_this.InvDisValLocCur);
-                        dbHead.AddParameter("InvNet", DbType.Double, data_this.InvNet);
-                        dbHead.AddParameter("InvNetLocCur", DbType.Double, data_this.InvNetLocCur);
-                        dbHead.AddParameter("CashPay", DbType.Double, data_this.CashPay);
-                        dbHead.AddParameter("CashPayLocCur", DbType.Double, data_this.CashPayLocCur);
-                        dbHead.AddParameter("IfRet", DbType.Int32, data_this.IfRet);
-                        dbHead.AddParameter("GadeNo", DbType.Double, data_this.GadeNo);
-                        dbHead.AddParameter("GadeId", DbType.Double, data_this.GadeId);
-                        dbHead.AddParameter("IfDel", DbType.Int32, data_this.IfDel);
-                        dbHead.AddParameter("RetNo", DbType.String, data_this.RetNo);
-                        dbHead.AddParameter("RetId", DbType.Double, data_this.RetId);
-                        dbHead.AddParameter("InvCstNo", DbType.Int32, data_this.InvCstNo);
-                        dbHead.AddParameter("InvCashPayNm", DbType.String, data_this.InvCashPayNm);
-                        dbHead.AddParameter("RefNo", DbType.String, data_this.RefNo);
-                        dbHead.AddParameter("InvCost", DbType.Int32, data_this.InvCost);
-                        dbHead.AddParameter("EstDat", DbType.String, data_this.EstDat);
-                        dbHead.AddParameter("CustPri", DbType.Int32, data_this.CustPri);
-                        dbHead.AddParameter("ArbTaf", DbType.String, data_this.ArbTaf);
-                        dbHead.AddParameter("CurTyp", DbType.Int32, data_this.CurTyp);
-                        dbHead.AddParameter("InvCash", DbType.String, data_this.InvCash);
-                        dbHead.AddParameter("ToStore", DbType.String, data_this.ToStore);
-                        dbHead.AddParameter("ToStoreNm", DbType.String, data_this.ToStoreNm);
-                        dbHead.AddParameter("InvQty", DbType.Double, data_this.InvQty);
-                        dbHead.AddParameter("EngTaf", DbType.String, data_this.EngTaf);
-                        dbHead.AddParameter("IfTrans", DbType.Int32, data_this.IfTrans);
-                        dbHead.AddParameter("CustRep", DbType.Double, data_this.CustRep);
-                        dbHead.AddParameter("CustNet", DbType.Double, data_this.CustNet);
-                        dbHead.AddParameter("InvWight_T", DbType.Double, data_this.InvWight_T);
-                        dbHead.AddParameter("IfPrint", DbType.Int32, data_this.IfPrint);
-                        dbHead.AddParameter("LTim", DbType.String, data_this.LTim);
-                        dbHead.AddParameter("CREATED_BY", DbType.String, data_this.CREATED_BY);
-                        dbHead.AddParameter("DATE_CREATED", DbType.DateTime, data_this.DATE_CREATED);
-                        dbHead.AddParameter("MODIFIED_BY", DbType.String, data_this.MODIFIED_BY);
-                        dbHead.AddParameter("DATE_MODIFIED", DbType.DateTime, data_this.DATE_MODIFIED);
-                        dbHead.AddParameter("CreditPay", DbType.Double, data_this.CreditPay);
-                        dbHead.AddParameter("CreditPayLocCur", DbType.Double, data_this.CreditPayLocCur);
-                        dbHead.AddParameter("NetworkPay", DbType.Double, data_this.NetworkPay);
-                        dbHead.AddParameter("NetworkPayLocCur", DbType.Double, data_this.NetworkPayLocCur);
-                        dbHead.AddParameter("CommMnd_Inv", DbType.Double, data_this.CommMnd_Inv);
-                        dbHead.AddParameter("MndExtrnal", DbType.Boolean, data_this.MndExtrnal);
-                        dbHead.AddParameter("CompanyID", DbType.Int32, data_this.CompanyID);
-                        dbHead.AddParameter("InvAddCost", DbType.Double, data_this.InvAddCost);
-                        dbHead.AddParameter("InvAddCostLoc", DbType.Double, data_this.InvAddCostLoc);
-                        dbHead.AddParameter("InvAddCostExtrnal", DbType.Double, data_this.InvAddCostExtrnal);
-                        dbHead.AddParameter("InvAddCostExtrnalLoc", DbType.Double, data_this.InvAddCostExtrnalLoc);
-                        dbHead.AddParameter("IsExtrnalGaid", DbType.Boolean, data_this.IsExtrnalGaid);
-                        dbHead.AddParameter("ExtrnalCostGaidID", DbType.Double, data_this.ExtrnalCostGaidID);
-                        dbHead.AddParameter("Puyaid", DbType.Double, data_this.Puyaid);
-                        dbHead.AddParameter("Remming", DbType.Double, data_this.Remming);
-                        dbHead.AddParameter("RoomNo", DbType.Int32, data_this.RoomNo);
-                        dbHead.AddParameter("OrderTyp", DbType.Int32, data_this.OrderTyp);
-                        dbHead.AddParameter("RoomSts", DbType.Boolean, data_this.RoomSts);
-                        dbHead.AddParameter("chauffeurNo", DbType.Int32, data_this.chauffeurNo);
-                        dbHead.AddParameter("RoomPerson", DbType.Int32, data_this.RoomPerson);
-                        dbHead.AddParameter("ServiceValue", DbType.Double, data_this.ServiceValue);
-                        dbHead.AddParameter("Sts", DbType.Boolean, data_this.Sts);
-                        dbHead.AddParameter("PaymentOrderTyp", DbType.Int32, data_this.PaymentOrderTyp);
-                        dbHead.AddParameter("AdminLock", DbType.Boolean, data_this.AdminLock);
-                        dbHead.AddParameter("DeleteDate", DbType.String, data_this.DeleteDate);
-                        dbHead.AddParameter("DeleteTime", DbType.String, data_this.DeleteTime);
-                        dbHead.AddParameter("UserNew", DbType.String, data_this.UserNew);
-                        dbHead.AddParameter("IfEnter", DbType.Int32, data_this.IfEnter);
-                        dbHead.AddParameter("InvAddTax", DbType.Double, data_this.InvAddTax);
-                        dbHead.AddParameter("InvAddTaxlLoc", DbType.Double, data_this.InvAddTaxlLoc);
-                        dbHead.AddParameter("IsTaxGaid", DbType.Boolean, data_this.IsTaxGaid);
-                        dbHead.AddParameter("TaxGaidID", DbType.Double, data_this.TaxGaidID);
-                        dbHead.AddParameter("IsTaxUse", DbType.Boolean, data_this.IsTaxUse);
-                        dbHead.AddParameter("InvValGaidDis", DbType.Double, data_this.InvValGaidDis);
-                        dbHead.AddParameter("InvValGaidDislLoc", DbType.Double, data_this.InvValGaidDislLoc);
-                        dbHead.AddParameter("IsDisGaid", DbType.Boolean, data_this.IsDisGaid);
-                        dbHead.AddParameter("DisGaidID1", DbType.Double, data_this.DisGaidID1);
-                        dbHead.AddParameter("IsDisUse1", DbType.Boolean, data_this.IsDisUse1);
-                        dbHead.AddParameter("InvComm", DbType.Double, data_this.InvComm);
-                        dbHead.AddParameter("InvCommLoc", DbType.Double, data_this.InvCommLoc);
-                        dbHead.AddParameter("IsCommGaid", DbType.Boolean, data_this.IsCommGaid);
-                        dbHead.AddParameter("CommGaidID", DbType.Double, data_this.CommGaidID);
-                        dbHead.AddParameter("IsCommUse", DbType.Boolean, data_this.IsCommUse);
-                        dbHead.AddParameter("IsTaxLines", DbType.Boolean, data_this.IsTaxLines);
-                        dbHead.AddParameter("IsTaxByTotal", DbType.Boolean, data_this.IsTaxByTotal);
-                        dbHead.AddParameter("IsTaxByNet", DbType.Boolean, data_this.IsTaxByNet);
-                        dbHead.AddParameter("TaxByNetValue", DbType.Double, data_this.TaxByNetValue);
-                        dbHead.AddParameter("DesPointsValue", DbType.Double, data_this.DesPointsValue);
-                        dbHead.AddParameter("DesPointsValueLocCur", DbType.Double, data_this.DesPointsValueLocCur);
-                        dbHead.AddParameter("PointsCount", DbType.Double, data_this.PointsCount);
-                        dbHead.AddParameter("IsPoints", DbType.Boolean, data_this.IsPoints);
-                        dbHead.AddParameter("tailor20", DbType.String, data_this.tailor20);
-                        dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_INSERT");
-                        data_this.InvHed_ID = int.Parse(dbHead.GetParameterValue("InvHed_ID").ToString());
+
+                        data_this.InvHed_ID = InvHelper.INVHED_INSERT(data_this);
                         savingoccure = 1;
                     }
                     catch (SqlException ex4)
@@ -5872,117 +5756,9 @@ namespace InvAcc.Forms
                 else
                 {
                     data_this.SalsManNam = VarGeneral.UserNumber;
-                    IDatabase dbHead = Database.GetDatabase(VarGeneral.BranchCS);
-                    dbHead.ClearParameters();
-                    dbHead.AddParameter("InvHed_ID", DbType.Int32, data_this.InvHed_ID);
-                    dbHead.AddParameter("InvId", DbType.Double, data_this.InvId);
-                    dbHead.AddParameter("InvNo", DbType.String, data_this.InvNo);
-                    dbHead.AddParameter("InvTyp", DbType.Int32, data_this.InvTyp);
-                    dbHead.AddParameter("InvCashPay", DbType.Int32, data_this.InvCashPay);
-                    dbHead.AddParameter("CusVenNo", DbType.String, data_this.CusVenNo);
-                    dbHead.AddParameter("CusVenNm", DbType.String, data_this.CusVenNm);
-                    dbHead.AddParameter("CusVenAdd", DbType.String, data_this.CusVenAdd);
-                    dbHead.AddParameter("CusVenTel", DbType.String, data_this.CusVenTel);
-                    dbHead.AddParameter("Remark", DbType.String, data_this.Remark);
-                    dbHead.AddParameter("HDat", DbType.String, data_this.HDat);
-                    dbHead.AddParameter("GDat", DbType.String, data_this.GDat);
-                    dbHead.AddParameter("MndNo", DbType.Int32, data_this.MndNo);
-                    dbHead.AddParameter("SalsManNo", DbType.String, data_this.SalsManNo);
-                    dbHead.AddParameter("SalsManNam", DbType.String, data_this.SalsManNam);
-                    dbHead.AddParameter("InvTot", DbType.Double, data_this.InvTot);
-                    dbHead.AddParameter("InvTotLocCur", DbType.Double, data_this.InvTotLocCur);
-                    dbHead.AddParameter("InvDisPrs", DbType.Double, data_this.InvDisPrs);
-                    dbHead.AddParameter("InvDisVal", DbType.Double, data_this.InvDisVal);
-                    dbHead.AddParameter("InvDisValLocCur", DbType.Double, data_this.InvDisValLocCur);
-                    dbHead.AddParameter("InvNet", DbType.Double, data_this.InvNet);
-                    dbHead.AddParameter("InvNetLocCur", DbType.Double, data_this.InvNetLocCur);
-                    dbHead.AddParameter("CashPay", DbType.Double, data_this.CashPay);
-                    dbHead.AddParameter("CashPayLocCur", DbType.Double, data_this.CashPayLocCur);
-                    dbHead.AddParameter("IfRet", DbType.Int32, data_this.IfRet);
-                    dbHead.AddParameter("GadeNo", DbType.Double, data_this.GadeNo);
-                    dbHead.AddParameter("GadeId", DbType.Double, data_this.GadeId);
-                    dbHead.AddParameter("IfDel", DbType.Int32, data_this.IfDel);
-                    dbHead.AddParameter("RetNo", DbType.String, data_this.RetNo);
-                    dbHead.AddParameter("RetId", DbType.Double, data_this.RetId);
-                    dbHead.AddParameter("InvCstNo", DbType.Int32, data_this.InvCstNo);
-                    dbHead.AddParameter("InvCashPayNm", DbType.String, data_this.InvCashPayNm);
-                    dbHead.AddParameter("RefNo", DbType.String, data_this.RefNo);
-                    dbHead.AddParameter("InvCost", DbType.Int32, data_this.InvCost);
-                    dbHead.AddParameter("EstDat", DbType.String, data_this.EstDat);
-                    dbHead.AddParameter("CustPri", DbType.Int32, data_this.CustPri);
-                    dbHead.AddParameter("ArbTaf", DbType.String, data_this.ArbTaf);
-                    dbHead.AddParameter("CurTyp", DbType.Int32, data_this.CurTyp);
-                    dbHead.AddParameter("InvCash", DbType.String, data_this.InvCash);
-                    dbHead.AddParameter("ToStore", DbType.String, data_this.ToStore);
-                    dbHead.AddParameter("ToStoreNm", DbType.String, data_this.ToStoreNm);
-                    dbHead.AddParameter("InvQty", DbType.Double, data_this.InvQty);
-                    dbHead.AddParameter("EngTaf", DbType.String, data_this.EngTaf);
-                    dbHead.AddParameter("IfTrans", DbType.Int32, data_this.IfTrans);
-                    dbHead.AddParameter("CustRep", DbType.Double, data_this.CustRep);
-                    dbHead.AddParameter("CustNet", DbType.Double, data_this.CustNet);
-                    dbHead.AddParameter("InvWight_T", DbType.Double, data_this.InvWight_T);
-                    dbHead.AddParameter("IfPrint", DbType.Int32, data_this.IfPrint);
-                    dbHead.AddParameter("LTim", DbType.String, data_this.LTim);
-                    dbHead.AddParameter("CREATED_BY", DbType.String, data_this.CREATED_BY);
-                    dbHead.AddParameter("DATE_CREATED", DbType.DateTime, data_this.DATE_CREATED);
-                    dbHead.AddParameter("MODIFIED_BY", DbType.String, data_this.MODIFIED_BY);
-                    dbHead.AddParameter("DATE_MODIFIED", DbType.DateTime, data_this.DATE_MODIFIED);
-                    dbHead.AddParameter("CreditPay", DbType.Double, data_this.CreditPay);
-                    dbHead.AddParameter("CreditPayLocCur", DbType.Double, data_this.CreditPayLocCur);
-                    dbHead.AddParameter("NetworkPay", DbType.Double, data_this.NetworkPay);
-                    dbHead.AddParameter("NetworkPayLocCur", DbType.Double, data_this.NetworkPayLocCur);
-                    dbHead.AddParameter("CommMnd_Inv", DbType.Double, data_this.CommMnd_Inv);
-                    dbHead.AddParameter("MndExtrnal", DbType.Boolean, data_this.MndExtrnal);
-                    dbHead.AddParameter("CompanyID", DbType.Int32, data_this.CompanyID);
-                    dbHead.AddParameter("InvAddCost", DbType.Double, data_this.InvAddCost);
-                    dbHead.AddParameter("InvAddCostLoc", DbType.Double, data_this.InvAddCostLoc);
-                    dbHead.AddParameter("InvAddCostExtrnal", DbType.Double, data_this.InvAddCostExtrnal);
-                    dbHead.AddParameter("InvAddCostExtrnalLoc", DbType.Double, data_this.InvAddCostExtrnalLoc);
-                    dbHead.AddParameter("IsExtrnalGaid", DbType.Boolean, data_this.IsExtrnalGaid);
-                    dbHead.AddParameter("ExtrnalCostGaidID", DbType.Double, data_this.ExtrnalCostGaidID);
-                    dbHead.AddParameter("Puyaid", DbType.Double, data_this.Puyaid);
-                    dbHead.AddParameter("Remming", DbType.Double, data_this.Remming);
-                    dbHead.AddParameter("RoomNo", DbType.Int32, data_this.RoomNo);
-                    dbHead.AddParameter("OrderTyp", DbType.Int32, data_this.OrderTyp);
-                    dbHead.AddParameter("RoomSts", DbType.Boolean, data_this.RoomSts);
-                    dbHead.AddParameter("chauffeurNo", DbType.Int32, data_this.chauffeurNo);
-                    dbHead.AddParameter("RoomPerson", DbType.Int32, data_this.RoomPerson);
-                    dbHead.AddParameter("ServiceValue", DbType.Double, data_this.ServiceValue);
-                    dbHead.AddParameter("Sts", DbType.Boolean, data_this.Sts);
-                    dbHead.AddParameter("PaymentOrderTyp", DbType.Int32, data_this.PaymentOrderTyp);
-                    dbHead.AddParameter("AdminLock", DbType.Boolean, data_this.AdminLock);
-                    dbHead.AddParameter("DeleteDate", DbType.String, data_this.DeleteDate);
-                    dbHead.AddParameter("DeleteTime", DbType.String, data_this.DeleteTime);
-                    dbHead.AddParameter("UserNew", DbType.String, data_this.UserNew);
-                    dbHead.AddParameter("IfEnter", DbType.Int32, data_this.IfEnter);
-                    dbHead.AddParameter("InvAddTax", DbType.Double, data_this.InvAddTax);
-                    dbHead.AddParameter("InvAddTaxlLoc", DbType.Double, data_this.InvAddTaxlLoc);
-                    dbHead.AddParameter("IsTaxGaid", DbType.Boolean, data_this.IsTaxGaid);
-                    dbHead.AddParameter("TaxGaidID", DbType.Double, data_this.TaxGaidID);
-                    dbHead.AddParameter("IsTaxUse", DbType.Boolean, data_this.IsTaxUse);
-                    dbHead.AddParameter("InvValGaidDis", DbType.Double, data_this.InvValGaidDis);
-                    dbHead.AddParameter("InvValGaidDislLoc", DbType.Double, data_this.InvValGaidDislLoc);
-                    dbHead.AddParameter("IsDisGaid", DbType.Boolean, data_this.IsDisGaid);
-                    dbHead.AddParameter("DisGaidID1", DbType.Double, data_this.DisGaidID1);
-                    dbHead.AddParameter("IsDisUse1", DbType.Boolean, data_this.IsDisUse1);
-                    dbHead.AddParameter("InvComm", DbType.Double, data_this.InvComm);
-                    dbHead.AddParameter("InvCommLoc", DbType.Double, data_this.InvCommLoc);
-                    dbHead.AddParameter("IsCommGaid", DbType.Boolean, data_this.IsCommGaid);
-                    dbHead.AddParameter("CommGaidID", DbType.Double, data_this.CommGaidID);
-                    dbHead.AddParameter("IsCommUse", DbType.Boolean, data_this.IsCommUse);
-                    dbHead.AddParameter("IsTaxLines", DbType.Boolean, data_this.IsTaxLines);
-                    dbHead.AddParameter("IsTaxByTotal", DbType.Boolean, data_this.IsTaxByTotal);
-                    dbHead.AddParameter("IsTaxByNet", DbType.Boolean, data_this.IsTaxByNet);
-                    dbHead.AddParameter("TaxByNetValue", DbType.Double, data_this.TaxByNetValue);
-                    dbHead.AddParameter("DesPointsValue", DbType.Double, data_this.DesPointsValue);
-                    dbHead.AddParameter("DesPointsValueLocCur", DbType.Double, data_this.DesPointsValueLocCur);
-                    dbHead.AddParameter("PointsCount", DbType.Double, data_this.PointsCount);
-                    dbHead.AddParameter("IsPoints", DbType.Boolean, data_this.IsPoints);
-                    dbHead.AddParameter("tailor20", DbType.String, data_this.tailor20);
-                    dbHead.AddParameter("CusVenMob", DbType.String, data_this.CusVenMob);
-                    dbHead.AddParameter("PriceIncludeTax", DbType.Boolean, data_this.PriceIncludTax);
-                    dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_UPDATE");
-                    for (int i = 0; i < data_this.T_INVDETs.Count; i++)
+
+                    InvHelper.INVHED_Update(data_this);
+                                     for (int i = 0; i < data_this.T_INVDETs.Count; i++)
                     {
                         db_.ClearParameters();
                         db_.AddParameter("InvDet_ID", DbType.Int32, data_this.T_INVDETs[i].InvDet_ID);
@@ -5997,55 +5773,56 @@ namespace InvAcc.Forms
                         if (FlxInv.GetData(iiCnt, 1) != null)
                         {
                             db_.ClearParameters();
-                            db_.AddParameter("InvDet_ID", DbType.Int32, 0);
-                            db_.AddParameter("InvNo", DbType.String, textBox_ID.Text.Trim());
-                            db_.AddParameter("InvId", DbType.Int32, data_this.InvHed_ID);
-                            db_.AddParameter("InvSer", DbType.Int32, iiCnt);
-                            db_.AddParameter("ItmNo", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 1)));
-                            db_.AddParameter("Cost", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 10)))));
-                            db_.AddParameter("Qty", DbType.Double, 0.0 - double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))));
-                            db_.AddParameter("ItmDes", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 2)));
-                            db_.AddParameter("ItmUnt", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 3)));
-                            db_.AddParameter("ItmDesE", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 4)));
-                            db_.AddParameter("ItmUntE", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 5)));
-                            db_.AddParameter("ItmUntPak", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11)))));
-                            db_.AddParameter("StoreNo", DbType.Int32, int.Parse(VarGeneral.TString.TEmpty(FlxInv.GetData(iiCnt, 6).ToString() ?? string.Empty)));
-                            db_.AddParameter("Price", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))));
-                            db_.AddParameter("Amount", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))));
-                            db_.AddParameter("RealQty", DbType.Double, 0.0 - double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 12)))));
-                            db_.AddParameter("itmInvDsc", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 13)))));
+                        T_INVDET    dp=new T_INVDET();
+                            InvHelper.ConvertsetDbParameter(dp,"InvDet_ID", DbType.Int32, 0);
+                            InvHelper.ConvertsetDbParameter(dp,"InvNo", DbType.String, textBox_ID.Text.Trim());
+                            InvHelper.ConvertsetDbParameter(dp,"InvId", DbType.Int32, data_this.InvHed_ID);
+                            InvHelper.ConvertsetDbParameter(dp,"InvSer", DbType.Int32, iiCnt);
+                            InvHelper.ConvertsetDbParameter(dp,"ItmNo", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 1)));
+                            InvHelper.ConvertsetDbParameter(dp,"Cost", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 10)))));
+                            InvHelper.ConvertsetDbParameter(dp,"Qty", DbType.Double, 0.0 - double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))));
+                            InvHelper.ConvertsetDbParameter(dp,"ItmDes", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 2)));
+                            InvHelper.ConvertsetDbParameter(dp,"ItmUnt", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 3)));
+                            InvHelper.ConvertsetDbParameter(dp,"ItmDesE", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 4)));
+                            InvHelper.ConvertsetDbParameter(dp,"ItmUntE", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 5)));
+                            InvHelper.ConvertsetDbParameter(dp,"ItmUntPak", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11)))));
+                            InvHelper.ConvertsetDbParameter(dp,"StoreNo", DbType.Int32, int.Parse(VarGeneral.TString.TEmpty(FlxInv.GetData(iiCnt, 6).ToString() ?? string.Empty)));
+                            InvHelper.ConvertsetDbParameter(dp,"Price", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))));
+                            InvHelper.ConvertsetDbParameter(dp,"Amount", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))));
+                            InvHelper.ConvertsetDbParameter(dp,"RealQty", DbType.Double, 0.0 - double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 12)))));
+                            InvHelper.ConvertsetDbParameter(dp,"itmInvDsc", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 13)))));
                             if (VarGeneral.CheckDate(string.Concat(FlxInv.GetData(iiCnt, 27))))
                             {
-                                db_.AddParameter("DatExper", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 27)));
+                                InvHelper.ConvertsetDbParameter(dp,"DatExper", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 27)));
                             }
                             else
                             {
-                                db_.AddParameter("DatExper", DbType.String, string.Empty);
+                                InvHelper.ConvertsetDbParameter(dp,"DatExper", DbType.String, string.Empty);
                             }
-                            db_.AddParameter("ItmDis", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))));
-                            db_.AddParameter("ItmAddCost", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 31)))));
-                            db_.AddParameter("ItmTyp", DbType.Int32, int.Parse("0" + FlxInv.GetData(iiCnt, 32)));
-                            db_.AddParameter("ItmIndex", DbType.Int32, 0);
+                            InvHelper.ConvertsetDbParameter(dp,"ItmDis", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))));
+                            InvHelper.ConvertsetDbParameter(dp,"ItmAddCost", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 31)))));
+                            InvHelper.ConvertsetDbParameter(dp,"ItmTyp", DbType.Int32, int.Parse("0" + FlxInv.GetData(iiCnt, 32)));
+                            InvHelper.ConvertsetDbParameter(dp,"ItmIndex", DbType.Int32, 0);
                             try
                             {
-                                db_.AddParameter("ItmWight", DbType.Double, ((bool)FlxInv.GetData(iiCnt, 33)) ? 1 : 0);
+                                InvHelper.ConvertsetDbParameter(dp,"ItmWight", DbType.Double, ((bool)FlxInv.GetData(iiCnt, 33)) ? 1 : 0);
                             }
                             catch
                             {
-                                db_.AddParameter("ItmWight", DbType.Double, 0);
+                                InvHelper.ConvertsetDbParameter(dp,"ItmWight", DbType.Double,(double) 0);
                             }
-                            db_.AddParameter("ItmWight_T", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 34)))));
+                            InvHelper.ConvertsetDbParameter(dp,"ItmWight_T", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 34)))));
                             if (!string.IsNullOrEmpty(string.Concat(FlxInv.GetData(iiCnt, 36))))
                             {
-                                db_.AddParameter("RunCod", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 36)));
+                                InvHelper.ConvertsetDbParameter(dp,"RunCod", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 36)));
                             }
                             else
                             {
-                                db_.AddParameter("RunCod", DbType.String, string.Empty);
+                                InvHelper.ConvertsetDbParameter(dp,"RunCod", DbType.String, string.Empty);
                             }
-                            db_.AddParameter("LineDetails", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 37)));
-                            db_.AddParameter("ItmTax", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 35)))));
-                            db_.ExecuteNonQuery(storedProcedure: true, "S_T_INVDET_INSERT");
+                            InvHelper.ConvertsetDbParameter(dp,"LineDetails", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 37)));
+                              InvHelper.ConvertsetDbParameter(dp,"ItmTax", DbType.Double,double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 35)))));
+                            InvHelper.INVDET_INSERT(dp);
                         }
                     }
                 }
@@ -6612,7 +6389,7 @@ namespace InvAcc.Forms
             {
                 _Curency = listCurency[0];
             }
-            data_this.ArbTaf = ScriptNumber1.ScriptNum(decimal.Parse(VarGeneral.TString.TEmpty(txtDueAmountLoc.Text ?? string.Empty))) + " " + _Curency.Arb_Des + " " + "فقط لاغير ";
+            data_this.ArbTaf = ScriptNumber1.ScriptNum(decimal.Parse(VarGeneral.TString.TEmpty(txtDueAmountLoc.Text ?? string.Empty))) + " " +_Curency.Arb_Des;;
             data_this.EngTaf = ScriptNumber1.TafEng(decimal.Parse(VarGeneral.TString.TEmpty(txtDueAmountLoc.Text ?? string.Empty))) + " " + _Curency.Eng_Des;
             data_this.DATE_MODIFIED = DateTime.Now;
             data_this.CreditPay = doubleInput_CreditLoc.Value;
@@ -8613,7 +8390,21 @@ namespace InvAcc.Forms
                             FrmReportsViewer.QRCodeData = Utilites.GetWQRCodeData(DataThis);
                             //  if (VarGeneral.RepData.Tables[0].Rows[iiRnt][_mInvPrint.pField] != null)
                             {
-                                e.Graphics.DrawImage(byteArrayToImage(Utilites.qrcodeimage()), (int)_mInvPrint.vRow, (int)_mInvPrint.vCol, 50f, 50f);
+                                int xv = 50, y = 50;
+                                try
+                                {
+                                    e.Graphics.PageUnit = GraphicsUnit.Millimeter;
+                                    xv = (int)_mInvPrint.vSize.Value;
+                                    y = xv / 2;
+                                    xv = xv / 2;
+                                }
+                                catch
+                                {
+
+                                }
+
+                                e.Graphics.DrawImage(byteArrayToImage(Utilites.qrcodeimage()), (int)_mInvPrint.vRow, (int)_mInvPrint.vCol, xv, y);
+
 
                             }
                         }
@@ -10024,7 +9815,7 @@ namespace InvAcc.Forms
                 T_INVSETTING ts = null;
                 try
                 {
-                    ts = db.StockInvSetting(VarGeneral.UserID, VarGeneral.DraftBillId);
+                    ts = db.StockInvSetting( VarGeneral.DraftBillId);
                 }
                 catch { }
                 if (ts.InvSet_ID == 0)
@@ -10152,118 +9943,8 @@ namespace InvAcc.Forms
                     data_this.SalsManNo = VarGeneral.UserNumber;
                     data_this.SalsManNam = string.Empty;
                     data_this.DeleteTime = string.Empty;
-                    IDatabase dbHead = Database.GetDatabase(VarGeneral.BranchCS);
-                    dbHead.ClearParameters();
-                    dbHead.AddOutParameter("InvHed_ID", DbType.Int32);
-                    dbHead.AddParameter("InvId", DbType.Double, data_this.InvId);
-                    dbHead.AddParameter("InvNo", DbType.String, data_this.InvNo);
-                    dbHead.AddParameter("InvTyp", DbType.Int32, data_this.InvTyp);
-                    dbHead.AddParameter("InvCashPay", DbType.Int32, data_this.InvCashPay);
-                    dbHead.AddParameter("CusVenNo", DbType.String, data_this.CusVenNo);
-                    dbHead.AddParameter("CusVenNm", DbType.String, data_this.CusVenNm);
-                    dbHead.AddParameter("CusVenAdd", DbType.String, data_this.CusVenAdd);
-                    dbHead.AddParameter("CusVenTel", DbType.String, data_this.CusVenTel);
-                    dbHead.AddParameter("Remark", DbType.String, data_this.Remark);
-                    dbHead.AddParameter("HDat", DbType.String, data_this.HDat);
-                    dbHead.AddParameter("GDat", DbType.String, data_this.GDat);
-                    dbHead.AddParameter("MndNo", DbType.Int32, data_this.MndNo);
-                    dbHead.AddParameter("SalsManNo", DbType.String, data_this.SalsManNo);
-                    dbHead.AddParameter("SalsManNam", DbType.String, data_this.SalsManNam);
-                    dbHead.AddParameter("InvTot", DbType.Double, data_this.InvTot);
-                    dbHead.AddParameter("InvTotLocCur", DbType.Double, data_this.InvTotLocCur);
-                    dbHead.AddParameter("InvDisPrs", DbType.Double, data_this.InvDisPrs);
-                    dbHead.AddParameter("InvDisVal", DbType.Double, data_this.InvDisVal);
-                    dbHead.AddParameter("CusVenMob", DbType.String, data_this.CusVenMob);
-                    dbHead.AddParameter("PriceIncludeTax", DbType.Boolean, data_this.PriceIncludTax);
-                    dbHead.AddParameter("InvDisValLocCur", DbType.Double, data_this.InvDisValLocCur);
-                    dbHead.AddParameter("InvNet", DbType.Double, data_this.InvNet);
-                    dbHead.AddParameter("InvNetLocCur", DbType.Double, data_this.InvNetLocCur);
-                    dbHead.AddParameter("CashPay", DbType.Double, data_this.CashPay);
-                    dbHead.AddParameter("CashPayLocCur", DbType.Double, data_this.CashPayLocCur);
-                    dbHead.AddParameter("IfRet", DbType.Int32, data_this.IfRet);
-                    dbHead.AddParameter("GadeNo", DbType.Double, data_this.GadeNo);
-                    dbHead.AddParameter("GadeId", DbType.Double, data_this.GadeId);
-                    dbHead.AddParameter("IfDel", DbType.Int32, data_this.IfDel);
-                    dbHead.AddParameter("RetNo", DbType.String, data_this.RetNo);
-                    dbHead.AddParameter("RetId", DbType.Double, data_this.RetId);
-                    dbHead.AddParameter("InvCstNo", DbType.Int32, data_this.InvCstNo);
-                    dbHead.AddParameter("InvCashPayNm", DbType.String, data_this.InvCashPayNm);
-                    dbHead.AddParameter("RefNo", DbType.String, data_this.RefNo);
-                    dbHead.AddParameter("InvCost", DbType.Int32, data_this.InvCost);
-                    dbHead.AddParameter("EstDat", DbType.String, data_this.EstDat);
-                    dbHead.AddParameter("CustPri", DbType.Int32, data_this.CustPri);
-                    dbHead.AddParameter("ArbTaf", DbType.String, data_this.ArbTaf);
-                    dbHead.AddParameter("CurTyp", DbType.Int32, data_this.CurTyp);
-                    dbHead.AddParameter("InvCash", DbType.String, data_this.InvCash);
-                    dbHead.AddParameter("ToStore", DbType.String, data_this.ToStore);
-                    dbHead.AddParameter("ToStoreNm", DbType.String, data_this.ToStoreNm);
-                    dbHead.AddParameter("InvQty", DbType.Double, data_this.InvQty);
-                    dbHead.AddParameter("EngTaf", DbType.String, data_this.EngTaf);
-                    dbHead.AddParameter("IfTrans", DbType.Int32, data_this.IfTrans);
-                    dbHead.AddParameter("CustRep", DbType.Double, data_this.CustRep);
-                    dbHead.AddParameter("CustNet", DbType.Double, data_this.CustNet);
-                    dbHead.AddParameter("InvWight_T", DbType.Double, data_this.InvWight_T);
-                    dbHead.AddParameter("IfPrint", DbType.Int32, data_this.IfPrint);
-                    dbHead.AddParameter("LTim", DbType.String, data_this.LTim);
-                    dbHead.AddParameter("CREATED_BY", DbType.String, data_this.CREATED_BY);
-                    dbHead.AddParameter("DATE_CREATED", DbType.DateTime, data_this.DATE_CREATED);
-                    dbHead.AddParameter("MODIFIED_BY", DbType.String, data_this.MODIFIED_BY);
-                    dbHead.AddParameter("DATE_MODIFIED", DbType.DateTime, data_this.DATE_MODIFIED);
-                    dbHead.AddParameter("CreditPay", DbType.Double, data_this.CreditPay);
-                    dbHead.AddParameter("CreditPayLocCur", DbType.Double, data_this.CreditPayLocCur);
-                    dbHead.AddParameter("NetworkPay", DbType.Double, data_this.NetworkPay);
-                    dbHead.AddParameter("NetworkPayLocCur", DbType.Double, data_this.NetworkPayLocCur);
-                    dbHead.AddParameter("CommMnd_Inv", DbType.Double, data_this.CommMnd_Inv);
-                    dbHead.AddParameter("MndExtrnal", DbType.Boolean, data_this.MndExtrnal);
-                    dbHead.AddParameter("CompanyID", DbType.Int32, data_this.CompanyID);
-                    dbHead.AddParameter("InvAddCost", DbType.Double, data_this.InvAddCost);
-                    dbHead.AddParameter("InvAddCostLoc", DbType.Double, data_this.InvAddCostLoc);
-                    dbHead.AddParameter("InvAddCostExtrnal", DbType.Double, data_this.InvAddCostExtrnal);
-                    dbHead.AddParameter("InvAddCostExtrnalLoc", DbType.Double, data_this.InvAddCostExtrnalLoc);
-                    dbHead.AddParameter("IsExtrnalGaid", DbType.Boolean, data_this.IsExtrnalGaid);
-                    dbHead.AddParameter("ExtrnalCostGaidID", DbType.Double, data_this.ExtrnalCostGaidID);
-                    dbHead.AddParameter("Puyaid", DbType.Double, data_this.Puyaid);
-                    dbHead.AddParameter("Remming", DbType.Double, data_this.Remming);
-                    dbHead.AddParameter("RoomNo", DbType.Int32, data_this.RoomNo);
-                    dbHead.AddParameter("OrderTyp", DbType.Int32, data_this.OrderTyp);
-                    dbHead.AddParameter("RoomSts", DbType.Boolean, data_this.RoomSts);
-                    dbHead.AddParameter("chauffeurNo", DbType.Int32, data_this.chauffeurNo);
-                    dbHead.AddParameter("RoomPerson", DbType.Int32, data_this.RoomPerson);
-                    dbHead.AddParameter("ServiceValue", DbType.Double, data_this.ServiceValue);
-                    dbHead.AddParameter("Sts", DbType.Boolean, data_this.Sts);
-                    dbHead.AddParameter("PaymentOrderTyp", DbType.Int32, data_this.PaymentOrderTyp);
-                    dbHead.AddParameter("AdminLock", DbType.Boolean, data_this.AdminLock);
-                    dbHead.AddParameter("DeleteDate", DbType.String, data_this.DeleteDate);
-                    dbHead.AddParameter("DeleteTime", DbType.String, data_this.DeleteTime);
-                    dbHead.AddParameter("UserNew", DbType.String, data_this.UserNew);
-                    dbHead.AddParameter("IfEnter", DbType.Int32, data_this.IfEnter);
-                    dbHead.AddParameter("InvAddTax", DbType.Double, data_this.InvAddTax);
-                    dbHead.AddParameter("InvAddTaxlLoc", DbType.Double, data_this.InvAddTaxlLoc);
-                    dbHead.AddParameter("IsTaxGaid", DbType.Boolean, data_this.IsTaxGaid);
-                    dbHead.AddParameter("TaxGaidID", DbType.Double, data_this.TaxGaidID);
-                    dbHead.AddParameter("IsTaxUse", DbType.Boolean, data_this.IsTaxUse);
-                    dbHead.AddParameter("InvValGaidDis", DbType.Double, data_this.InvValGaidDis);
-                    dbHead.AddParameter("InvValGaidDislLoc", DbType.Double, data_this.InvValGaidDislLoc);
-                    dbHead.AddParameter("IsDisGaid", DbType.Boolean, data_this.IsDisGaid);
-                    dbHead.AddParameter("DisGaidID1", DbType.Double, data_this.DisGaidID1);
-                    dbHead.AddParameter("IsDisUse1", DbType.Boolean, data_this.IsDisUse1);
-                    dbHead.AddParameter("InvComm", DbType.Double, data_this.InvComm);
-                    dbHead.AddParameter("InvCommLoc", DbType.Double, data_this.InvCommLoc);
-                    dbHead.AddParameter("IsCommGaid", DbType.Boolean, data_this.IsCommGaid);
-                    dbHead.AddParameter("CommGaidID", DbType.Double, data_this.CommGaidID);
-                    dbHead.AddParameter("IsCommUse", DbType.Boolean, data_this.IsCommUse);
-                    dbHead.AddParameter("IsTaxLines", DbType.Boolean, data_this.IsTaxLines);
-                    dbHead.AddParameter("IsTaxByTotal", DbType.Boolean, data_this.IsTaxByTotal);
-                    dbHead.AddParameter("IsTaxByNet", DbType.Boolean, data_this.IsTaxByNet);
-                    dbHead.AddParameter("TaxByNetValue", DbType.Double, data_this.TaxByNetValue);
-                    dbHead.AddParameter("DesPointsValue", DbType.Double, data_this.DesPointsValue);
-                    dbHead.AddParameter("DesPointsValueLocCur", DbType.Double, data_this.DesPointsValueLocCur);
-                    dbHead.AddParameter("PointsCount", DbType.Double, data_this.PointsCount);
-                    dbHead.AddParameter("IsPoints", DbType.Boolean, data_this.IsPoints);
-                    dbHead.AddParameter("tailor20", DbType.String, data_this.tailor20);
-                    dbHead.AddParameter("CINVType", DbType.Int32, data_this.CInvType);
-                    dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_INSERT");
-                    data_this.InvHed_ID = int.Parse(dbHead.GetParameterValue("InvHed_ID").ToString());
+
+                    data_this.InvHed_ID = InvHelper.INVHED_INSERT(data_this);
                 }
 #pragma warning disable CS0168 // The variable 'ex7' is declared but never used
                 catch (SqlException ex7)
@@ -10279,66 +9960,55 @@ namespace InvAcc.Forms
                     continue;
                 }
                 dbLines.ClearParameters();
-                dbLines.AddParameter("InvDet_ID", DbType.Int32, 0);
-                dbLines.AddParameter("InvNo", DbType.String, textBox_ID.Text.Trim());
-                dbLines.AddParameter("InvId", DbType.Int32, data_this.InvHed_ID);
-                dbLines.AddParameter("InvSer", DbType.Int32, iiCnt);
-                dbLines.AddParameter("ItmNo", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 1)));
-                dbLines.AddParameter("Cost", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 10)))));
-                dbLines.AddParameter("Qty", DbType.Double, 0.0 - double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))));
-                dbLines.AddParameter("ItmDes", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 2)));
-                dbLines.AddParameter("ItmUnt", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 3)));
-                dbLines.AddParameter("ItmDesE", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 4)));
-                dbLines.AddParameter("ItmUntE", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 5)));
-                dbLines.AddParameter("ItmUntPak", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11)))));
-                dbLines.AddParameter("StoreNo", DbType.Int32, int.Parse(VarGeneral.TString.TEmpty(FlxInv.GetData(iiCnt, 6).ToString() ?? string.Empty)));
-                dbLines.AddParameter("Price", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))));
-                dbLines.AddParameter("Amount", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))));
-                dbLines.AddParameter("RealQty", DbType.Double, 0.0 - double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 12)))));
-                dbLines.AddParameter("itmInvDsc", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 13)))));
+                T_INVDET dp = new T_INVDET(); InvHelper.ConvertsetDbParameter(dp, "InvDet_ID", DbType.Int32, 0);
+                InvHelper.ConvertsetDbParameter(dp, "InvNo", DbType.String, textBox_ID.Text.Trim());
+                InvHelper.ConvertsetDbParameter(dp, "InvId", DbType.Int32, data_this.InvHed_ID);
+                InvHelper.ConvertsetDbParameter(dp, "InvSer", DbType.Int32, iiCnt);
+                InvHelper.ConvertsetDbParameter(dp, "ItmNo", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 1)));
+                InvHelper.ConvertsetDbParameter(dp, "Cost", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 10)))));
+                InvHelper.ConvertsetDbParameter(dp, "Qty", DbType.Double, 0.0 - double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))));
+                InvHelper.ConvertsetDbParameter(dp, "ItmDes", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 2)));
+                InvHelper.ConvertsetDbParameter(dp, "ItmUnt", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 3)));
+                InvHelper.ConvertsetDbParameter(dp, "ItmDesE", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 4)));
+                InvHelper.ConvertsetDbParameter(dp, "ItmUntE", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 5)));
+                InvHelper.ConvertsetDbParameter(dp, "ItmUntPak", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 11)))));
+                InvHelper.ConvertsetDbParameter(dp, "StoreNo", DbType.Int32, int.Parse(VarGeneral.TString.TEmpty(FlxInv.GetData(iiCnt, 6).ToString() ?? string.Empty)));
+                InvHelper.ConvertsetDbParameter(dp, "Price", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))));
+                InvHelper.ConvertsetDbParameter(dp, "Amount", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38)))));
+                InvHelper.ConvertsetDbParameter(dp, "RealQty", DbType.Double, 0.0 - double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 12)))));
+                InvHelper.ConvertsetDbParameter(dp, "itmInvDsc", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 13)))));
                 if (VarGeneral.CheckDate(string.Concat(FlxInv.GetData(iiCnt, 27))))
                 {
-                    dbLines.AddParameter("DatExper", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 27)));
+                    InvHelper.ConvertsetDbParameter(dp, "DatExper", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 27)));
                 }
                 else
                 {
-                    dbLines.AddParameter("DatExper", DbType.String, string.Empty);
+                    InvHelper.ConvertsetDbParameter(dp, "DatExper", DbType.String, string.Empty);
                 }
-                dbLines.AddParameter("CInvType", DbType.Int32, VarGeneral.DraftBillId);
-                dbLines.AddParameter("ItmDis", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))));
-                dbLines.AddParameter("ItmTyp", DbType.Int32, int.Parse("0" + FlxInv.GetData(iiCnt, 32)));
-                dbLines.AddParameter("ItmIndex", DbType.Int32, 0);
+                InvHelper.ConvertsetDbParameter(dp, "ItmDis", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))));
+                InvHelper.ConvertsetDbParameter(dp, "ItmAddCost", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 31)))));
+                InvHelper.ConvertsetDbParameter(dp, "ItmTyp", DbType.Int32, int.Parse("0" + FlxInv.GetData(iiCnt, 32)));
+                InvHelper.ConvertsetDbParameter(dp, "ItmIndex", DbType.Int32, 0);
                 try
                 {
-                    dbLines.AddParameter("ItmWight", DbType.Double, ((bool)FlxInv.GetData(iiCnt, 33)) ? 1 : 0);
+                    InvHelper.ConvertsetDbParameter(dp, "ItmWight", DbType.Double, ((bool)FlxInv.GetData(iiCnt, 33)) ? 1 : 0);
                 }
                 catch
                 {
-                    dbLines.AddParameter("ItmWight", DbType.Double, 0);
+                    InvHelper.ConvertsetDbParameter(dp, "ItmWight", DbType.Double, (double)0);
                 }
-                dbLines.AddParameter("ItmWight_T", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 34)))));
-                if (!string.IsNullOrEmpty(string.Concat(FlxInv.GetData(iiCnt, 35))))
+                InvHelper.ConvertsetDbParameter(dp, "ItmWight_T", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 34)))));
+                if (!string.IsNullOrEmpty(string.Concat(FlxInv.GetData(iiCnt, 36))))
                 {
-                    dbLines.AddParameter("RunCod", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 35)));
+                    InvHelper.ConvertsetDbParameter(dp, "RunCod", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 36)));
                 }
                 else
                 {
-                    dbLines.AddParameter("RunCod", DbType.String, string.Empty);
+                    InvHelper.ConvertsetDbParameter(dp, "RunCod", DbType.String, string.Empty);
                 }
-                dbLines.AddParameter("LineDetails", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 36)));
-                dbLines.AddParameter("Serial_Key", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 37)));
-                dbLines.AddParameter("ItmTax", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 31)))));
-                try
-                {
-                    if (!string.IsNullOrEmpty(FlxInv.GetData(iiCnt, 39).ToString()))
-                    {
-                        dbLines.AddParameter("OfferTyp", DbType.Int32, int.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 39)))));
-                    }
-                }
-                catch
-                {
-                }
-                addDetParameters(dbLines, iiCnt); dbLines.ExecuteNonQuery(storedProcedure: true, "S_T_INVDET_INSERT");
+                InvHelper.ConvertsetDbParameter(dp, "LineDetails", DbType.String, string.Concat(FlxInv.GetData(iiCnt, 37)));
+                InvHelper.ConvertsetDbParameter(dp, "ItmTax", DbType.Double, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 35)))));
+                InvHelper.INVDET_INSERT(dp);
             }
         }
         private void ribbonBar1_ItemClick(object sender, EventArgs e)

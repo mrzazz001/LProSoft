@@ -461,6 +461,7 @@ namespace InvAcc.Forms
                 _RepShow.Fields = " T_EqarsData.EqarID,T_EqarsData.EqarNo , T_EqarsData.NameA as EqarNameA, T_EqarsData.NameE as EqarNameE, T_EqarTyp.NameA AS EqarTypNameA, T_EqarTyp.NameE AS EqarTypNameE,T_EqarNatural.NameA as EqarNatureNameA,T_EqarNatural.NameE as EqarNatureNameE, T_Owner.NameA AS OwnerNameA, \r\n                                   T_Owner.NameE AS OwnerNameE, T_City.NameA AS CityNameA, T_City.NameE AS CityNameE,T_EqarsData.EqarStatus,T_EqarsData.ContractRentValue,T_EqarsData.ContractValue ";
                 try
                 {
+                    Program.min();
                     _RepShow = _RepShow.Save();
                     VarGeneral.RepData = _RepShow.RepData;
                 }

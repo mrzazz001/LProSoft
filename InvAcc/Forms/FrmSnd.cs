@@ -987,7 +987,7 @@ namespace InvAcc.Forms
         private void GetInvSetting()
         {
             _InvSetting = new T_INVSETTING();
-            _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+            _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
         }
         private void RibunButtons()
         {

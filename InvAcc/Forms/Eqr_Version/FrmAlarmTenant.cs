@@ -1658,5 +1658,15 @@ namespace InvAcc.Forms
                 txtTenantNo.Tag = "";
             }
         }
+
+        private void ribbonBar1_ItemClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_Search_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -92,7 +92,7 @@ namespace InvAcc.Forms
             try
             {
                 VarGeneral.InvTyp = int.Parse(CmbInvType.SelectedValue.ToString());
-                T_INVSETTING _InvSetting = db.StockInvSetting(VarGeneral.UserID, VarGeneral.InvTyp);
+                T_INVSETTING _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
                 List<T_INVHED> _Data = (from t in db.T_INVHEDs
                                         where t.InvTyp == (int?)VarGeneral.InvTyp
                                         where t.IfDel.Value == 0

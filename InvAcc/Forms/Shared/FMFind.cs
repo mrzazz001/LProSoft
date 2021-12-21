@@ -16,7 +16,7 @@ namespace InvAcc.Forms
  c1TrueDBGrid1.Text=   (arln == 0 ? "  c1TrueDBGrid1  " : "  c1TrueDBGrid1") ; labelX1.Text=   (arln == 0 ? "  البحث الســريع - Quick Search  " : "  Quick Search - Quick Search") ; txtSearch.Text=   (arln == 0 ? "  F10  " : "  F10") ; txtSearch.Text=   (arln == 0 ? "    " : "    ") ; radioButton1.Text=   (arln == 0 ? "  بحث محتوى  " : "  content search") ; radioButton2.Text=   (arln == 0 ? "  بحث مطابق  " : "  matching search") ; buttonItem_Exit.Text=   (arln == 0 ? "  خروج | ESC  " : "  exit | ESC") ; ButOK.Text=   (arln == 0 ? "  موافق | OK  " : "  ok | OK") ; c1Button1.Text=   (arln == 0 ? "  مسح | CLEAR  " : "  scan | CLEAR") ; Text =    (arln == 0 ? "  .  " : "  .") ;}
         private void langloads(object sender, EventArgs e)
         {
-              avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
+             // avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
         }
    
         public string Serach_No = "";
@@ -28,9 +28,7 @@ namespace InvAcc.Forms
         private GroupBox groupBoxTxtSearch;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
-        private C1.Win.C1Input.C1Button buttonItem_Exit;
         private C1.Win.C1Input.C1Button ButOK;
-        private C1.Win.C1Input.C1Button c1Button1;
         private TextBoxX txtSearch;
         public string SerachNo
         {
@@ -108,6 +106,26 @@ namespace InvAcc.Forms
         }
         private void DataSetFill()
         {
+            try
+            {
+                foreach(DataRow  r in VarGeneral.RepData.Tables[0].Rows)
+                {
+                    if(r["الكمية"]!=null)
+                    {
+                        try
+                        {
+                            r["الكمية"] = double.Parse(r["الكمية"].ToString());
+                        }catch
+                        { }
+                    }
+
+
+                }
+            }
+            catch
+            {
+
+            }
             try
             {
                 dataSet1 = VarGeneral.RepData;
@@ -254,6 +272,21 @@ namespace InvAcc.Forms
         private void txtSearch_ButtonCustom2Click(object sender, EventArgs e)
         {
             txtSearch.Focus();
+        }
+
+        private void c1TrueDBGrid1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonItem_Exit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void c1Button1_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
         }
     }
 }
