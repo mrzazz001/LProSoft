@@ -25,6 +25,13 @@ partial class FrmInvSalesReturn
 private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates1 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
+            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
@@ -38,13 +45,6 @@ private void InitializeComponent()
             DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates2 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
             DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates1 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
-            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
@@ -91,6 +91,22 @@ private void InitializeComponent()
             this.txtHDate = new System.Windows.Forms.MaskedTextBox();
             this.FlxDat = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.superTabControl_Info = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.xGmesures1 = new InvAcc.Forms.SellPurSystem.specialcontrols.XGmesures();
+            this.txtPointCount = new DevComponents.Editors.DoubleInput();
+            this.FlxStkQty = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtVSerial = new System.Windows.Forms.TextBox();
+            this.txtUnit = new System.Windows.Forms.TextBox();
+            this.txtLPrice = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtLCost = new System.Windows.Forms.TextBox();
+            this.txtVCost = new System.Windows.Forms.TextBox();
+            this.dataGridView_ItemDet = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.superTabItem_items = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabControl_CostSts = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel8 = new DevComponents.DotNetBar.SuperTabControlPanel();
@@ -149,22 +165,6 @@ private void InitializeComponent()
             this.labelItem_TaxByNetPer = new DevComponents.DotNetBar.LabelItem();
             this.ChkPriceIncludeTax = new DevComponents.DotNetBar.SwitchButtonItem();
             this.superTabItem_Gaids = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.xGmesures1 = new InvAcc.Forms.SellPurSystem.specialcontrols.XGmesures();
-            this.txtPointCount = new DevComponents.Editors.DoubleInput();
-            this.FlxStkQty = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.label32 = new System.Windows.Forms.Label();
-            this.txtVSerial = new System.Windows.Forms.TextBox();
-            this.txtUnit = new System.Windows.Forms.TextBox();
-            this.txtLPrice = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txtLCost = new System.Windows.Forms.TextBox();
-            this.txtVCost = new System.Windows.Forms.TextBox();
-            this.dataGridView_ItemDet = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.superTabItem_items = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.label_LockeName = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -302,6 +302,10 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.FlxDat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Info)).BeginInit();
             this.superTabControl_Info.SuspendLayout();
+            this.superTabControlPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPointCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlxStkQty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ItemDet)).BeginInit();
             this.superTabControlPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_CostSts)).BeginInit();
             this.superTabControl_CostSts.SuspendLayout();
@@ -313,10 +317,6 @@ private void InitializeComponent()
             this.superTabControlPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotDis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotDisLoc)).BeginInit();
-            this.superTabControlPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPointCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FlxStkQty)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ItemDet)).BeginInit();
             this.superTabControlPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).BeginInit();
             this.superTabControlPanel4.SuspendLayout();
@@ -733,6 +733,254 @@ private void InitializeComponent()
             this.superTabItem_Gaids});
             this.superTabControl_Info.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.VisualStudio2008Document;
             this.superTabControl_Info.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Far;
+            // 
+            // superTabControlPanel3
+            // 
+            this.superTabControlPanel3.Controls.Add(this.xGmesures1);
+            this.superTabControlPanel3.Controls.Add(this.txtPointCount);
+            this.superTabControlPanel3.Controls.Add(this.FlxStkQty);
+            this.superTabControlPanel3.Controls.Add(this.label32);
+            this.superTabControlPanel3.Controls.Add(this.txtVSerial);
+            this.superTabControlPanel3.Controls.Add(this.txtUnit);
+            this.superTabControlPanel3.Controls.Add(this.txtLPrice);
+            this.superTabControlPanel3.Controls.Add(this.label25);
+            this.superTabControlPanel3.Controls.Add(this.label22);
+            this.superTabControlPanel3.Controls.Add(this.label23);
+            this.superTabControlPanel3.Controls.Add(this.label24);
+            this.superTabControlPanel3.Controls.Add(this.txtLCost);
+            this.superTabControlPanel3.Controls.Add(this.txtVCost);
+            this.superTabControlPanel3.Controls.Add(this.dataGridView_ItemDet);
+            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel3.Name = "superTabControlPanel3";
+            superTabLinearGradientColorTable1.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.Gray,
+        System.Drawing.Color.White};
+            superTabPanelItemColorTable1.Background = superTabLinearGradientColorTable1;
+            superTabPanelColorTable1.Default = superTabPanelItemColorTable1;
+            this.superTabControlPanel3.PanelColor = superTabPanelColorTable1;
+            this.superTabControlPanel3.Size = new System.Drawing.Size(997, 104);
+            this.superTabControlPanel3.TabIndex = 0;
+            this.superTabControlPanel3.TabItem = this.superTabItem_items;
+            // 
+            // xGmesures1
+            // 
+            this.xGmesures1.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.xGmesures1.Appearance.Options.UseBackColor = true;
+            this.xGmesures1.Location = new System.Drawing.Point(440, 3);
+            this.xGmesures1.Name = "xGmesures1";
+            this.xGmesures1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.xGmesures1.Size = new System.Drawing.Size(340, 91);
+            this.xGmesures1.TabIndex = 1240;
+            this.xGmesures1.Visible = false;
+            // 
+            // txtPointCount
+            // 
+            this.txtPointCount.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.txtPointCount.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtPointCount.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPointCount.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtPointCount.DisplayFormat = "0.00";
+            this.txtPointCount.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtPointCount.Increment = 0D;
+            this.txtPointCount.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtPointCount.IsInputReadOnly = true;
+            this.txtPointCount.Location = new System.Drawing.Point(651, 21);
+            this.txtPointCount.Name = "txtPointCount";
+            this.txtPointCount.Size = new System.Drawing.Size(85, 21);
+            this.txtPointCount.TabIndex = 1224;
+            this.txtPointCount.Visible = false;
+            // 
+            // FlxStkQty
+            // 
+            this.FlxStkQty.AllowEditing = false;
+            this.FlxStkQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.FlxStkQty.BackColor = System.Drawing.Color.Transparent;
+            this.FlxStkQty.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.FixedSingle;
+            this.FlxStkQty.ColumnInfo = resources.GetString("FlxStkQty.ColumnInfo");
+            this.FlxStkQty.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.FlxStkQty.Location = new System.Drawing.Point(786, 3);
+            this.FlxStkQty.Name = "FlxStkQty";
+            this.FlxStkQty.Rows.DefaultSize = 19;
+            this.FlxStkQty.Size = new System.Drawing.Size(207, 96);
+            this.FlxStkQty.StyleInfo = resources.GetString("FlxStkQty.StyleInfo");
+            this.FlxStkQty.TabIndex = 1084;
+            this.FlxStkQty.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2007Black;
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.label32.ForeColor = System.Drawing.Color.Black;
+            this.label32.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label32.Location = new System.Drawing.Point(726, 81);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(41, 12);
+            this.label32.TabIndex = 1083;
+            this.label32.Text = "السيريال";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label32.Visible = false;
+            // 
+            // txtVSerial
+            // 
+            this.txtVSerial.BackColor = System.Drawing.Color.AliceBlue;
+            this.txtVSerial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtVSerial.Location = new System.Drawing.Point(597, 81);
+            this.txtVSerial.Name = "txtVSerial";
+            this.txtVSerial.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtVSerial, false);
+            this.txtVSerial.Size = new System.Drawing.Size(123, 13);
+            this.txtVSerial.TabIndex = 1082;
+            this.txtVSerial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVSerial.Visible = false;
+            // 
+            // txtUnit
+            // 
+            this.txtUnit.BackColor = System.Drawing.Color.AliceBlue;
+            this.txtUnit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUnit.Location = new System.Drawing.Point(462, 80);
+            this.txtUnit.Name = "txtUnit";
+            this.txtUnit.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtUnit, false);
+            this.txtUnit.Size = new System.Drawing.Size(68, 13);
+            this.txtUnit.TabIndex = 60;
+            this.txtUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtLPrice
+            // 
+            this.txtLPrice.BackColor = System.Drawing.Color.AliceBlue;
+            this.txtLPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLPrice.Location = new System.Drawing.Point(462, 60);
+            this.txtLPrice.Name = "txtLPrice";
+            this.txtLPrice.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtLPrice, false);
+            this.txtLPrice.Size = new System.Drawing.Size(68, 13);
+            this.txtLPrice.TabIndex = 4;
+            this.txtLPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label25.Location = new System.Drawing.Point(536, 81);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(31, 12);
+            this.label25.TabIndex = 1078;
+            this.label25.Text = "الوحدة";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label22.Location = new System.Drawing.Point(536, 61);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(84, 12);
+            this.label22.TabIndex = 1077;
+            this.label22.Text = "سعر اخر مرتجع بيع";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label23.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label23.Location = new System.Drawing.Point(536, 41);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(44, 12);
+            this.label23.TabIndex = 1076;
+            this.label23.Text = "أخر تكلفة";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.label24.ForeColor = System.Drawing.Color.Maroon;
+            this.label24.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label24.Location = new System.Drawing.Point(536, 21);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(67, 12);
+            this.label24.TabIndex = 1075;
+            this.label24.Text = "متوسط التكلفة";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtLCost
+            // 
+            this.txtLCost.BackColor = System.Drawing.Color.AliceBlue;
+            this.txtLCost.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLCost.Location = new System.Drawing.Point(462, 40);
+            this.txtLCost.Name = "txtLCost";
+            this.txtLCost.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtLCost, false);
+            this.txtLCost.Size = new System.Drawing.Size(68, 13);
+            this.txtLCost.TabIndex = 59;
+            this.txtLCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtVCost
+            // 
+            this.txtVCost.BackColor = System.Drawing.Color.AliceBlue;
+            this.txtVCost.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtVCost.Location = new System.Drawing.Point(462, 20);
+            this.txtVCost.Name = "txtVCost";
+            this.txtVCost.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtVCost, false);
+            this.txtVCost.Size = new System.Drawing.Size(68, 13);
+            this.txtVCost.TabIndex = 57;
+            this.txtVCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dataGridView_ItemDet
+            // 
+            this.dataGridView_ItemDet.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None;
+            this.dataGridView_ItemDet.AllowEditing = false;
+            this.dataGridView_ItemDet.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.XpThemes;
+            this.dataGridView_ItemDet.ColumnInfo = resources.GetString("dataGridView_ItemDet.ColumnInfo");
+            this.dataGridView_ItemDet.ExtendLastCol = true;
+            this.dataGridView_ItemDet.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.dataGridView_ItemDet.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.None;
+            this.dataGridView_ItemDet.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
+            this.dataGridView_ItemDet.Location = new System.Drawing.Point(4, 3);
+            this.dataGridView_ItemDet.Name = "dataGridView_ItemDet";
+            this.dataGridView_ItemDet.Rows.Count = 13;
+            this.dataGridView_ItemDet.Rows.DefaultSize = 19;
+            this.dataGridView_ItemDet.ShowSortPosition = C1.Win.C1FlexGrid.ShowSortPositionEnum.None;
+            this.dataGridView_ItemDet.Size = new System.Drawing.Size(776, 96);
+            this.dataGridView_ItemDet.StyleInfo = resources.GetString("dataGridView_ItemDet.StyleInfo");
+            this.dataGridView_ItemDet.TabIndex = 1079;
+            this.dataGridView_ItemDet.Visible = false;
+            this.dataGridView_ItemDet.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.System;
+            this.dataGridView_ItemDet.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView_ItemDet_MouseDown);
+            // 
+            // superTabItem_items
+            // 
+            this.superTabItem_items.AttachedControl = this.superTabControlPanel3;
+            this.superTabItem_items.GlobalItem = false;
+            this.superTabItem_items.Name = "superTabItem_items";
+            superTabLinearGradientColorTable2.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.White};
+            superTabItemStateColorTable1.Background = superTabLinearGradientColorTable2;
+            superTabColorStates1.Normal = superTabItemStateColorTable1;
+            superTabItemColorTable1.Default = superTabColorStates1;
+            this.superTabItem_items.TabColor = superTabItemColorTable1;
+            this.superTabItem_items.Text = "م.الصنف";
             // 
             // superTabControlPanel5
             // 
@@ -1671,254 +1919,6 @@ private void InitializeComponent()
             superTabItemColorTable2.Default = superTabColorStates2;
             this.superTabItem_Gaids.TabColor = superTabItemColorTable2;
             this.superTabItem_Gaids.Text = "القيود";
-            // 
-            // superTabControlPanel3
-            // 
-            this.superTabControlPanel3.Controls.Add(this.xGmesures1);
-            this.superTabControlPanel3.Controls.Add(this.txtPointCount);
-            this.superTabControlPanel3.Controls.Add(this.FlxStkQty);
-            this.superTabControlPanel3.Controls.Add(this.label32);
-            this.superTabControlPanel3.Controls.Add(this.txtVSerial);
-            this.superTabControlPanel3.Controls.Add(this.txtUnit);
-            this.superTabControlPanel3.Controls.Add(this.txtLPrice);
-            this.superTabControlPanel3.Controls.Add(this.label25);
-            this.superTabControlPanel3.Controls.Add(this.label22);
-            this.superTabControlPanel3.Controls.Add(this.label23);
-            this.superTabControlPanel3.Controls.Add(this.label24);
-            this.superTabControlPanel3.Controls.Add(this.txtLCost);
-            this.superTabControlPanel3.Controls.Add(this.txtVCost);
-            this.superTabControlPanel3.Controls.Add(this.dataGridView_ItemDet);
-            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel3.Name = "superTabControlPanel3";
-            superTabLinearGradientColorTable1.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.Gray,
-        System.Drawing.Color.White};
-            superTabPanelItemColorTable1.Background = superTabLinearGradientColorTable1;
-            superTabPanelColorTable1.Default = superTabPanelItemColorTable1;
-            this.superTabControlPanel3.PanelColor = superTabPanelColorTable1;
-            this.superTabControlPanel3.Size = new System.Drawing.Size(997, 104);
-            this.superTabControlPanel3.TabIndex = 0;
-            this.superTabControlPanel3.TabItem = this.superTabItem_items;
-            // 
-            // xGmesures1
-            // 
-            this.xGmesures1.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.xGmesures1.Appearance.Options.UseBackColor = true;
-            this.xGmesures1.Location = new System.Drawing.Point(440, 3);
-            this.xGmesures1.Name = "xGmesures1";
-            this.xGmesures1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.xGmesures1.Size = new System.Drawing.Size(340, 91);
-            this.xGmesures1.TabIndex = 1240;
-            this.xGmesures1.Visible = false;
-            // 
-            // txtPointCount
-            // 
-            this.txtPointCount.AllowEmptyState = false;
-            // 
-            // 
-            // 
-            this.txtPointCount.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtPointCount.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPointCount.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtPointCount.DisplayFormat = "0.00";
-            this.txtPointCount.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtPointCount.Increment = 0D;
-            this.txtPointCount.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtPointCount.IsInputReadOnly = true;
-            this.txtPointCount.Location = new System.Drawing.Point(651, 21);
-            this.txtPointCount.Name = "txtPointCount";
-            this.txtPointCount.Size = new System.Drawing.Size(85, 21);
-            this.txtPointCount.TabIndex = 1224;
-            this.txtPointCount.Visible = false;
-            // 
-            // FlxStkQty
-            // 
-            this.FlxStkQty.AllowEditing = false;
-            this.FlxStkQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FlxStkQty.BackColor = System.Drawing.Color.Transparent;
-            this.FlxStkQty.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.FixedSingle;
-            this.FlxStkQty.ColumnInfo = resources.GetString("FlxStkQty.ColumnInfo");
-            this.FlxStkQty.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.FlxStkQty.Location = new System.Drawing.Point(786, 3);
-            this.FlxStkQty.Name = "FlxStkQty";
-            this.FlxStkQty.Rows.DefaultSize = 19;
-            this.FlxStkQty.Size = new System.Drawing.Size(207, 96);
-            this.FlxStkQty.StyleInfo = resources.GetString("FlxStkQty.StyleInfo");
-            this.FlxStkQty.TabIndex = 1084;
-            this.FlxStkQty.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2007Black;
-            // 
-            // label32
-            // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Font = new System.Drawing.Font("Tahoma", 7F);
-            this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label32.Location = new System.Drawing.Point(726, 81);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(41, 12);
-            this.label32.TabIndex = 1083;
-            this.label32.Text = "السيريال";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label32.Visible = false;
-            // 
-            // txtVSerial
-            // 
-            this.txtVSerial.BackColor = System.Drawing.Color.AliceBlue;
-            this.txtVSerial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVSerial.Location = new System.Drawing.Point(597, 81);
-            this.txtVSerial.Name = "txtVSerial";
-            this.txtVSerial.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.txtVSerial, false);
-            this.txtVSerial.Size = new System.Drawing.Size(123, 13);
-            this.txtVSerial.TabIndex = 1082;
-            this.txtVSerial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtVSerial.Visible = false;
-            // 
-            // txtUnit
-            // 
-            this.txtUnit.BackColor = System.Drawing.Color.AliceBlue;
-            this.txtUnit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUnit.Location = new System.Drawing.Point(462, 80);
-            this.txtUnit.Name = "txtUnit";
-            this.txtUnit.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.txtUnit, false);
-            this.txtUnit.Size = new System.Drawing.Size(68, 13);
-            this.txtUnit.TabIndex = 60;
-            this.txtUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtLPrice
-            // 
-            this.txtLPrice.BackColor = System.Drawing.Color.AliceBlue;
-            this.txtLPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLPrice.Location = new System.Drawing.Point(462, 60);
-            this.txtLPrice.Name = "txtLPrice";
-            this.txtLPrice.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.txtLPrice, false);
-            this.txtLPrice.Size = new System.Drawing.Size(68, 13);
-            this.txtLPrice.TabIndex = 4;
-            this.txtLPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Tahoma", 7F);
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label25.Location = new System.Drawing.Point(536, 81);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(31, 12);
-            this.label25.TabIndex = 1078;
-            this.label25.Text = "الوحدة";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Tahoma", 7F);
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label22.Location = new System.Drawing.Point(536, 61);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(84, 12);
-            this.label22.TabIndex = 1077;
-            this.label22.Text = "سعر اخر مرتجع بيع";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Tahoma", 7F);
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label23.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label23.Location = new System.Drawing.Point(536, 41);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(44, 12);
-            this.label23.TabIndex = 1076;
-            this.label23.Text = "أخر تكلفة";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Tahoma", 7F);
-            this.label24.ForeColor = System.Drawing.Color.Maroon;
-            this.label24.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label24.Location = new System.Drawing.Point(536, 21);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(67, 12);
-            this.label24.TabIndex = 1075;
-            this.label24.Text = "متوسط التكلفة";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtLCost
-            // 
-            this.txtLCost.BackColor = System.Drawing.Color.AliceBlue;
-            this.txtLCost.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLCost.Location = new System.Drawing.Point(462, 40);
-            this.txtLCost.Name = "txtLCost";
-            this.txtLCost.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.txtLCost, false);
-            this.txtLCost.Size = new System.Drawing.Size(68, 13);
-            this.txtLCost.TabIndex = 59;
-            this.txtLCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtVCost
-            // 
-            this.txtVCost.BackColor = System.Drawing.Color.AliceBlue;
-            this.txtVCost.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVCost.Location = new System.Drawing.Point(462, 20);
-            this.txtVCost.Name = "txtVCost";
-            this.txtVCost.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.txtVCost, false);
-            this.txtVCost.Size = new System.Drawing.Size(68, 13);
-            this.txtVCost.TabIndex = 57;
-            this.txtVCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dataGridView_ItemDet
-            // 
-            this.dataGridView_ItemDet.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.None;
-            this.dataGridView_ItemDet.AllowEditing = false;
-            this.dataGridView_ItemDet.BorderStyle = C1.Win.C1FlexGrid.Util.BaseControls.BorderStyleEnum.XpThemes;
-            this.dataGridView_ItemDet.ColumnInfo = resources.GetString("dataGridView_ItemDet.ColumnInfo");
-            this.dataGridView_ItemDet.ExtendLastCol = true;
-            this.dataGridView_ItemDet.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.dataGridView_ItemDet.KeyActionEnter = C1.Win.C1FlexGrid.KeyActionEnum.None;
-            this.dataGridView_ItemDet.KeyActionTab = C1.Win.C1FlexGrid.KeyActionEnum.MoveAcross;
-            this.dataGridView_ItemDet.Location = new System.Drawing.Point(4, 3);
-            this.dataGridView_ItemDet.Name = "dataGridView_ItemDet";
-            this.dataGridView_ItemDet.Rows.Count = 13;
-            this.dataGridView_ItemDet.Rows.DefaultSize = 19;
-            this.dataGridView_ItemDet.ShowSortPosition = C1.Win.C1FlexGrid.ShowSortPositionEnum.None;
-            this.dataGridView_ItemDet.Size = new System.Drawing.Size(776, 96);
-            this.dataGridView_ItemDet.StyleInfo = resources.GetString("dataGridView_ItemDet.StyleInfo");
-            this.dataGridView_ItemDet.TabIndex = 1079;
-            this.dataGridView_ItemDet.Visible = false;
-            this.dataGridView_ItemDet.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.System;
-            this.dataGridView_ItemDet.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView_ItemDet_MouseDown);
-            // 
-            // superTabItem_items
-            // 
-            this.superTabItem_items.AttachedControl = this.superTabControlPanel3;
-            this.superTabItem_items.GlobalItem = false;
-            this.superTabItem_items.Name = "superTabItem_items";
-            superTabLinearGradientColorTable2.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.White};
-            superTabItemStateColorTable1.Background = superTabLinearGradientColorTable2;
-            superTabColorStates1.Normal = superTabItemStateColorTable1;
-            superTabItemColorTable1.Default = superTabColorStates1;
-            this.superTabItem_items.TabColor = superTabItemColorTable1;
-            this.superTabItem_items.Text = "م.الصنف";
             // 
             // superTabControlPanel2
             // 
@@ -4146,6 +4146,11 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.FlxDat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Info)).EndInit();
             this.superTabControl_Info.ResumeLayout(false);
+            this.superTabControlPanel3.ResumeLayout(false);
+            this.superTabControlPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPointCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlxStkQty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ItemDet)).EndInit();
             this.superTabControlPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_CostSts)).EndInit();
             this.superTabControl_CostSts.ResumeLayout(false);
@@ -4160,11 +4165,6 @@ private void InitializeComponent()
             this.superTabControlPanel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotDis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotDisLoc)).EndInit();
-            this.superTabControlPanel3.ResumeLayout(false);
-            this.superTabControlPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPointCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FlxStkQty)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ItemDet)).EndInit();
             this.superTabControlPanel2.ResumeLayout(false);
             this.superTabControlPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).EndInit();

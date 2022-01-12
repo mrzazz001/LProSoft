@@ -502,7 +502,7 @@ namespace InvAcc.Forms
             if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
             {
                 ButExit.Text = "خــــروج Esc";
-                ButOk.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "طبـــاعة F5" : "عــــرض F5");
+                ButOk.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "طبـــاعة F5" : "عــــرض F5");
                 groupBox3.Text = "حسب رقم السند";
                 groupBox_Date.Text = "حسب تاريخ السند";
                 label1.Text = "مـــــن :";
@@ -519,7 +519,7 @@ namespace InvAcc.Forms
             else
             {
                 ButExit.Text = "Exit Esc";
-                ButOk.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "Print F5" : "Show F5");
+                ButOk.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "Print F5" : "Show F5");
                 groupBox3.Text = "Quantity";
                 groupBox_Date.Text = "Date of inactivity";
                 label1.Text = "From :";

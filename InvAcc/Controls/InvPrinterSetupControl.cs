@@ -213,7 +213,7 @@ namespace InvAcc.Controls
                     {
                         ChkPTable.Checked = true;
                     }
-                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "0")
+                    if (_InvSetting.InvpRINTERInfo.ISCashierType)
                     {
                         RedButPaperA4.Checked = false;
                         RedButCasher.Checked = true;
@@ -223,7 +223,7 @@ namespace InvAcc.Controls
                         RedButPaperA4.Checked = true;
                         RedButCasher.Checked = false;
                     }
-                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
+                    if (_InvSetting.ISdirectPrinting)
                     {
                         checkBox_previewPrint.Checked = false;
                     }
@@ -317,7 +317,7 @@ namespace InvAcc.Controls
                 chk_Stoped.OffText = ((LangArEn == 0) ? "إيقاف الطباعة" : "Printing Stoped");
                 checkBox_previewPrint.Visible = false;
                 chk_Stoped.Visible = true;
-                if (db.StockInvSetting( 1).nTyp.Substring(2, 1) == "1")
+                if (db.StockInvSetting( 1).ISdirectPrinting)
                 {
                     groupBox_PrintType.Visible = false;
                     picture_SSS.Visible = true;

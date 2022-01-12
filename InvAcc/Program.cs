@@ -16,6 +16,7 @@ using InvAcc.Forms.Eqr_Version.New;
 using ProShared.DBUdate;
 using InvAcc.Forms.Cards;
 using ProShared.Stock_Data;
+using InvAcc.Controls;
 
 namespace InvAcc
 {
@@ -32,7 +33,7 @@ namespace InvAcc
 
             if (Environment.MachineName.ToLower() == "instance-3" || Environment.MachineName == "DESKTOP-320H5U2")
             {
-                VarGeneral.SSSLev = "Q";
+               // VarGeneral.SSSLev = "Q";
                 if (ks == 0)
                 {
                     try
@@ -166,7 +167,7 @@ namespace InvAcc
             }
             catch
             {}
-            Application.Run(new FrmLog());
+            ; Application.Run(new FrmLog());
             closing(null, null);
         }
         public static string getversion()
@@ -181,11 +182,6 @@ namespace InvAcc
         static  void setserve()
         {
             {
-if(!(Environment.MachineName== "EC2AMAZ-SI4ASSC"))
-                { VarGeneral.Qut = ' ';
-                    InvAcc.Properties.Settings.Default.SPassword = InvAcc.Properties.Settings.Default.SPassword.Replace('"',' ');
-                }
-                else VarGeneral.Qut = '"';
             }
         }
 

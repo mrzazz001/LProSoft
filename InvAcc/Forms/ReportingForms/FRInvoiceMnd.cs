@@ -1310,7 +1310,7 @@ namespace InvAcc.Forms
             if (this.LangArEn != 0)
             {
                 this.ButExit.Text = "Exit Esc";
-                this.ButOk.Text = (VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0" ? "Print F5" : "Show F5");
+                this.ButOk.Text = (VarGeneral.GeneralPrinter.ISdirectPrinting ? "Print F5" : "Show F5");
                 this.groupBox3.Text = "Quantity";
                 this.groupBox_Date.Text = "Date of inactivity";
                 this.label1.Text = "From :";
@@ -1328,7 +1328,7 @@ namespace InvAcc.Forms
             else
             {
                 this.ButExit.Text = "خــــروج Esc";
-                this.ButOk.Text = (VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0" ? "طبـــاعة F5" : "عــــرض F5");
+                this.ButOk.Text = (VarGeneral.GeneralPrinter.ISdirectPrinting ? "طبـــاعة F5" : "عــــرض F5");
                 this.groupBox3.Text = "حسب رقم الفاتورة";
                 this.groupBox_Date.Text = "حسب تاريخ الفاتورة";
                 this.label1.Text = "مـــــن :";

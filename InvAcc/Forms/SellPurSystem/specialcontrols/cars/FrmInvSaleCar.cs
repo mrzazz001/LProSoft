@@ -1494,7 +1494,7 @@ namespace InvAcc.Forms
                         {
                             frm.BarcodSts = false;
                         }
-                        if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                        if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                         {
                             frm.Repvalue = "InvSal";
                         }
@@ -1529,7 +1529,7 @@ namespace InvAcc.Forms
                         VarGeneral.CostCenterlbl = label15.Text.Replace(" :", "");
                         VarGeneral.Mndoblbl = label18.Text.Replace(" :", "");
                         VarGeneral.vTitle = Text;
-                        if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1" ||frm.Repvalue=="InvSal")
+                        if (_InvSetting.InvpRINTERInfo.ISA4PaperType ||frm.Repvalue=="InvSal")
                         {
                            // if (Program.iscarversion())
                             {
@@ -1552,7 +1552,7 @@ namespace InvAcc.Forms
                             }
                         }
                         frm.iscar = true;
-                        if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1" || checkBoxItem_BarCode.Checked || ifMultiPrint)
+                        if (_InvSetting.ISdirectPrinting || checkBoxItem_BarCode.Checked || ifMultiPrint)
                         {
                             frm._Proceess();
                             return;
@@ -2004,8 +2004,9 @@ namespace InvAcc.Forms
              ProShared. DroBoxSync.Frm_PrinterShow f = new  ProShared. DroBoxSync.Frm_PrinterShow(VarGeneral.InvTyp);
             f.TopMost = true;
             f.ShowDialog();
-            _InvSetting.InvpRINTERInfo.nTyp =  ProShared. DroBoxSync.Frm_PrinterShow.PLSetting;
-        }
+                dbInstance = null;
+            _InvSetting = db.StockPrinterSetting(VarGeneral.UserID, VarGeneral.InvTyp).InvInfo;
+            buttonItem_Print.Text = (_InvSetting.ISdirectPrinting ? (LangArEn == 0 ? "طباعة" : "Print") : (LangArEn == 0 ? "عرض" : "Preview"));}
         private void tableLayoutPanel5_Resize(object sender, EventArgs e)
         {
             TableLayoutOFALLControls.RowStyles[0].Height = th1;
@@ -4757,7 +4758,7 @@ namespace InvAcc.Forms
                 Button_PrintTable.Text = "عــرض";
                 Button_PrintTable.Tooltip = "F5";
                 Button_PrintTableMulti.Text = "طباعة الفواتير المحددة";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "طباعة" : "عــرض");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "طباعة" : "عــرض");
                 buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "تصدير";
                 Button_ExportTable2.Tooltip = "F10";
@@ -4865,7 +4866,7 @@ namespace InvAcc.Forms
                 Button_PrintTable.Text = "Show";
                 Button_PrintTable.Tooltip = "F5";
                 Button_PrintTableMulti.Text = "Print of the invoices selected";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "Print" : "Show");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "Print" : "Show");
                 buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "Export";
                 Button_ExportTable2.Tooltip = "F10";
@@ -5278,7 +5279,7 @@ namespace InvAcc.Forms
             }
             try
             {
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                 {
                     ChkA4Cahir.Text = "Csh";
                 }
@@ -16972,7 +16973,7 @@ namespace InvAcc.Forms
         {
             try
             {
-            if ((_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) != "2"))
+            if ((_InvSetting.InvpRINTERInfo.ISPOINTERType!=true))
                 {
                     orderNo_activate = _OrderTyp;
                     T_INVHED newData = new T_INVHED();
@@ -17408,7 +17409,7 @@ namespace InvAcc.Forms
                             frm.Tag = LangArEn;
                             VarGeneral.itmDes = "HOLD";
                             frm.BarcodSts = true;
-                            if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                            if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                             {
                                 frm.Repvalue = "InvSal";
                             }
@@ -17538,7 +17539,7 @@ namespace InvAcc.Forms
                         continue;
                     }
                     vRowBarcode = iiCnt;
-                    for (int i = 0; (double)i < ((VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 32) && _InvSettingBarCod.nTyp.Substring(2, 1) == "1") ? double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(vRowBarcode, 7)))) : 1.0); i++)
+                    for (int i = 0; (double)i < ((VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 32) && _InvSettingBarCod.ISdirectPrinting) ? double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(vRowBarcode, 7)))) : 1.0); i++)
                     {
                         PrintSet2();
                         prnt_prev = new PrintPreviewDialog();
@@ -17576,7 +17577,7 @@ namespace InvAcc.Forms
                         }
                         try
                         {
-                            if (_InvSettingBarCod.nTyp.Substring(2, 1) == "1")
+                            if (_InvSettingBarCod.ISdirectPrinting)
                             {
                                 prnt_doc2.Print();
                                 continue;
@@ -19534,8 +19535,9 @@ namespace InvAcc.Forms
              ProShared. DroBoxSync.Frm_PrinterShow f = new  ProShared. DroBoxSync.Frm_PrinterShow(VarGeneral.InvTyp);
             f.TopMost = true;
             f.ShowDialog();
-            _InvSetting.InvpRINTERInfo.nTyp =  ProShared. DroBoxSync.Frm_PrinterShow.PLSetting;
-        }
+                dbInstance = null;
+            _InvSetting = db.StockPrinterSetting(VarGeneral.UserID, VarGeneral.InvTyp).InvInfo;
+            buttonItem_Print.Text = (_InvSetting.ISdirectPrinting ? (LangArEn == 0 ? "طباعة" : "Print") : (LangArEn == 0 ? "عرض" : "Preview"));}
         private void ChkPriceIncludeTax_ValueChanged(object sender, EventArgs e)
         {
             if (State != FormState.New)

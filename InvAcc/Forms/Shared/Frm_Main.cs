@@ -6,18 +6,20 @@ using Framework;
 using Framework.Data;
 using Framework.Date;
 using InputKey;
-using ProShared.DBUdate;
- 
+using InvAcc.Forms.Cards;
 using InvAcc.Forms.Shared;
-using ProShared.GeneralM;using ProShared;
 using InvAcc.Properties;
-using ProShared.Stock_Data;
 //using InvAcc.Reports;
 //using InvAcc.Reports;
 using Library.RepShow;
 using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 using Microsoft.Win32;
+using ProShared;
+using ProShared.DBUdate;
+using ProShared.Forms;
+using ProShared.GeneralM;
+using ProShared.Stock_Data;
 using ShamelSynch;
 using SSSDateTime.Date;
 using System;
@@ -38,13 +40,10 @@ using System.Net.Mail;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
-using ProShared;
-using ProShared.Forms;
-using InvAcc.Forms.Cards;
 
 namespace InvAcc.Forms
 {
-    public partial  class Frm_Main : Form
+    public partial class Frm_Main : Form
     {
         public bool DateSync = false;
         private bool sTimer = true;
@@ -1527,9 +1526,9 @@ namespace InvAcc.Forms
         void showChild(Form f)
         {
             if (IsFormOpen(f)) { f.Dispose(); return; }
-            VarGeneral.UserLang =LangArEn;
+            VarGeneral.UserLang = LangArEn;
             VarGeneral.GeneralPrinter = null;
-           // Stock_DataDataContext.sp = 1;
+            // Stock_DataDataContext.sp = 1;
             f.Name += runtimefrno.ToString(); runtimefrno++;
             f.TopLevel = false;
             f.TopMost = false;
@@ -1558,7 +1557,7 @@ namespace InvAcc.Forms
                 expandablePanel3.SendToBack();
                 tabControl1.BringToFront();
             }
-         Stock_DataDataContext.sp = 0;
+            Stock_DataDataContext.sp = 0;
         }
         IDictionary<string, int> indexinv = new Dictionary<string, int>();
         private void formclosing(object sender, FormClosedEventArgs e)
@@ -1574,7 +1573,7 @@ namespace InvAcc.Forms
                     expandablePanel3.BringToFront();
                 }
 
-            }  (sender as Form).Dispose();
+            } (sender as Form).Dispose();
         }
         void childmin()
         {
@@ -1608,11 +1607,13 @@ namespace InvAcc.Forms
         }
         private void LangChange(int LangVal)
         {
-            try {    VarGeneral.UserLang = LangVal;
+            try
+            {
+                VarGeneral.UserLang = LangVal;
                 ProShared.GeneralM.VarGeneral.currentintlanguage = LangVal;
                 LangArEn = LangVal;
                 button_RepInvNetTot.Text = (LangArEn == 0 ? "تقرير اجماليات الفواتير" : "Net Totals of Invoices");
-            try
+                try
                 {
                     //SqlConnection conn = new SqlConnection(VarGeneral.BranchCS);
                     //Server server = new Server(new ServerConnection(conn));
@@ -2191,7 +2192,7 @@ namespace InvAcc.Forms
                     buttonItem_RepAccOther.Text = "Others Account Reports";
                     ribbonMenu4.Text = "Cridet Bills";
                     ribbonMenu3.Text = "Delegates";
-                   
+
                     ribbonMenu2.Text = "Item Movment IN";
                     VarGeneral.Settings_Sys.BackgroundPic = im;
                     ribbonButton101.Text = "Printers settings";
@@ -2827,7 +2828,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         {
             try
             {
-                
+
                 string _pth = dbc.ExecuteQuery<string>("SELECT physical_name FROM sys.master_files where physical_name Like '%" + DBNm + ".mdf'", new object[0]).FirstOrDefault();
                 if (!File.Exists(_pth))
                 {
@@ -2891,7 +2892,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 {
                     return;
                 }
-                 if (VarGeneral.vDemo && VarGeneral.UserID != 1)
+                if (VarGeneral.vDemo && VarGeneral.UserID != 1)
                 {
                     MessageBox.Show((LangArEn == 0) ? "يرجى تفعيل نسختك التجريبة للإستفادة من هذه الخدمة\n لم تتم عملية النسخ الاحتياطي بنجاح..  " : "Please activate your free trial to take advantage of this service \n backup process has not been successfully ..", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly);
                     return;
@@ -3019,7 +3020,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                     BackupPath = string.Concat(obj6, "\\", VarGeneral.DBNo, "_", VarGeneral.Gdate.Substring(0, 4), "_", VarGeneral.Gdate.Substring(5, 2), "_", VarGeneral.Gdate.Substring(8, 2), "_", DateTime.Now.Hour, "_", DateTime.Now.Minute, "_", DateTime.Now.Second, ".bak");
                 }
                 else
-          
+
                 {
                     object obj6 = BackupPath;
                     BackupPath = string.Concat(obj6, "\\", VarGeneral.DBNo, "_", VarGeneral.Hdate.Substring(0, 4), "_", VarGeneral.Hdate.Substring(5, 2), "_", VarGeneral.Hdate.Substring(8, 2), "_", DateTime.Now.Hour, "_", DateTime.Now.Minute, "_", DateTime.Now.Second, ".bak");
@@ -3056,9 +3057,9 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             catch (Exception error2)
             {
                 VarGeneral.DebLog.writeLog("ButBackUp_Click:", error2, enable: true);
-            //    MessageBox.Show(error2.Message);
-               
-                MessageBox.Show ((LangArEn == 0) ? "يرحى التأكد من المسار من تهيئة النظام\n لم تتم عملية النسخ الاحتياطي بنجاح..  " : "Is not the backup process successfully .. Check Path");
+                //    MessageBox.Show(error2.Message);
+
+                MessageBox.Show((LangArEn == 0) ? "يرحى التأكد من المسار من تهيئة النظام\n لم تتم عملية النسخ الاحتياطي بنجاح..  " : "Is not the backup process successfully .. Check Path");
                 //    label_AlarmBackup.Visible = true;
                 //    button_AlarmBackupClose.Visible = true;
                 //    label_AlarmBackup.BringToFront();
@@ -3482,7 +3483,8 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             ks++;
         }
         public static void setinitaliaiztion()
-        {if (Environment.MachineName != "EC2AMAZ-SI4ASSC")
+        {
+            if (Environment.MachineName != "EC2AMAZ-SI4ASSC")
                 VarGeneral.RepServerConn = ".";
             else VarGeneral.RepServerConn = "EC2AMAZ-SI4ASSC";
 
@@ -3535,7 +3537,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             VarGeneral._SysDirPath = VarGeneral.Settings_Sys.SysDir;
             VarGeneral._BackPath = VarGeneral.Settings_Sys.BackPath;
         }
-     
+
         private void flfinshed(object sender, EventArgs e)
         {
             MsQuee.Clear();
@@ -3620,12 +3622,12 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 InitializeComponent();//
                 int kk = VarGeneral.DeleteOption;
                 ribbonCheckBox2.Visible = false;
-                if (VarGeneral.UserID==1)
+                if (VarGeneral.UserID == 1)
                 {
                     ribbonCheckBox2.Visible = true;
 
                 }
-                if (kk==1)
+                if (kk == 1)
                 {
                     ribbonCheckBox2.Checked = true; ;
                 }
@@ -3664,7 +3666,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
 
         private void dsafas(object sender, FormClosingEventArgs e)
         {
-          
+
         }
 
         void LoadVersionLoaut()
@@ -5687,7 +5689,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             }
             return bno;
         }
-       
+
         string BranchFlag;
         // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
         private void Frm_Main_Load(object sender, EventArgs e)
@@ -5713,7 +5715,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             //listSysSetting = new List<T_SYSSETTING>();
             permission = new T_User();
             //  metroToolbar_main.RightToLeft = RightToLeft.Yes;
-          
+
             onlineworning2.Visible = false;
             onlineworning2.Location = new Point(381, 251);
             f = new BackupAlarm(this);
@@ -5728,9 +5730,9 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                         fileSystemWatcher1.Path = pa;
                     bubbleButton_ReportOnline.Enabled = true;
                     c1FlexGrid2.Visible = true;
-                 //   sync.setcaller(this);
+                    //   sync.setcaller(this);
                     label6.Visible = true;
-                 //   syninfo();
+                    //   syninfo();
                 }
             }
             else
@@ -6149,7 +6151,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             {
             }
             VarGeneral.UserLang = (int)dbc.Get_PermissionID(VarGeneral.UserID).ProLng;
-           ProShared. GeneralM.VarGeneral.currentintlanguage = (int)dbc.Get_PermissionID(VarGeneral.UserID).ProLng;
+            ProShared.GeneralM.VarGeneral.currentintlanguage = (int)dbc.Get_PermissionID(VarGeneral.UserID).ProLng;
             try
             {
                 //buttonItem5_Click(sender, e);
@@ -6638,7 +6640,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         private int LangArEn = 0;
         private void buttonItem_itmeCat_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmItmGroup()))
+            //if(!IsFormOpen(new FrmItmGroup()))
             {
                 FrmItmGroup frm = new FrmItmGroup();
                 frm.Tag = LangArEn;
@@ -6649,7 +6651,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_items_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmItems()))
+            //if(!IsFormOpen(new FrmItems()))
             {
                 FrmItems frm = new FrmItems();
                 frm.Tag = LangArEn;
@@ -6658,7 +6660,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_unit_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmUnit()))
+            //if(!IsFormOpen(new FrmUnit()))
             {
                 FrmUnit frm = new FrmUnit();
                 frm.Tag = LangArEn;
@@ -6669,7 +6671,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Curncy_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmCurrncy()))
+            //if(!IsFormOpen(new FrmCurrncy()))
             {
                 FrmCurrncy frm = new FrmCurrncy();
                 frm.Tag = LangArEn;
@@ -6680,7 +6682,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Mndob_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmMndob()))
+            //if(!IsFormOpen(new FrmMndob()))
             {
                 FrmMndob frm = new FrmMndob();
                 frm.Tag = LangArEn;
@@ -6692,7 +6694,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Vender_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmCustomer()))
+            //if(!IsFormOpen(new FrmCustomer()))
             {
                 FrmCustomer frm = new FrmCustomer();
                 frm.Tag = LangArEn;
@@ -6702,7 +6704,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Supp_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmSuppliers()))
+            //if(!IsFormOpen(new FrmSuppliers()))
             {
                 FrmSuppliers frm = new FrmSuppliers();
                 frm.Tag = LangArEn;
@@ -6714,7 +6716,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_CenterCost_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmCostCenter()))
+            //if(!IsFormOpen(new FrmCostCenter()))
             {
                 FrmCostCenter frm = new FrmCostCenter();
                 frm.Tag = LangArEn;
@@ -6726,7 +6728,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Store_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmStore()))
+            //if(!IsFormOpen(new FrmStore()))
             {
                 FrmStore frm = new FrmStore();
                 frm.Tag = LangArEn;
@@ -6738,7 +6740,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Branch_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmBranch()))
+            //if(!IsFormOpen(new FrmBranch()))
             {
                 FrmBranch frm = new FrmBranch();
                 frm.Tag = LangArEn;
@@ -6750,7 +6752,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_SpicialAddition_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmInvDetNote()))
+            //if(!IsFormOpen(new FrmInvDetNote()))
             {
                 FrmInvDetNote frm = new FrmInvDetNote();
                 frm.Tag = LangArEn;
@@ -6763,7 +6765,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Employee_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmEmployees()))
+            //if(!IsFormOpen(new FrmEmployees()))
             {
                 FrmEmployees frm = new FrmEmployees();
                 frm.Tag = LangArEn;
@@ -6775,7 +6777,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_CalcSalary_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmCalacSalary()))
+            //if(!IsFormOpen(new FrmCalacSalary()))
             {
                 VarGeneral.InvTyp = 11;
                 FrmCalacSalary frm = new FrmCalacSalary();
@@ -6788,7 +6790,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RelaySalary_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRelaySalaries()))
+            //if(!IsFormOpen(new FrmRelaySalaries()))
             {
                 VarGeneral.InvTyp = 13;
                 FrmRelaySalaries frm = new FrmRelaySalaries();
@@ -6801,7 +6803,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_UnRealy_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmOpenRelaySalaries()))
+            //if(!IsFormOpen(new FrmOpenRelaySalaries()))
             {
                 FrmOpenRelaySalaries frm = new FrmOpenRelaySalaries();
                 frm.Tag = LangArEn;
@@ -6814,7 +6816,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         //    private T_User permission = new T_User();
         private void buttonItem_EmployeeSalaryRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmPrintTrajectorySal(0)))
+            //if(!IsFormOpen(new FrmPrintTrajectorySal(0)))
             {
                 FrmPrintTrajectorySal frm = new FrmPrintTrajectorySal(0);
                 frm.Tag = LangArEn;
@@ -6826,7 +6828,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Waiter_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new Frmwaiter()))
+            //if(!IsFormOpen(new Frmwaiter()))
             {
                 Frmwaiter frm = new Frmwaiter();
                 frm.Tag = LangArEn;
@@ -6838,7 +6840,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Driver_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmDriv()))
+            //if(!IsFormOpen(new FrmDriv()))
             {
                 FrmDriv frm = new FrmDriv();
                 frm.Tag = LangArEn;
@@ -6859,7 +6861,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_ReportEmployee_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepEmployees(0)))
+            //if(!IsFormOpen(new FrmRepEmployees(0)))
             {
                 FrmRepEmployees frm = new FrmRepEmployees(0);
                 frm.Tag = LangArEn;
@@ -6871,7 +6873,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_EmployeeDocRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepEmployees(1)))
+            //if(!IsFormOpen(new FrmRepEmployees(1)))
             {
                 FrmRepEmployees frm = new FrmRepEmployees(1);
                 frm.Tag = LangArEn;
@@ -6883,7 +6885,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_PrintSalIssus_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmPrintTrajectorySal(1)))
+            //if(!IsFormOpen(new FrmPrintTrajectorySal(1)))
             {
                 FrmPrintTrajectorySal frm = new FrmPrintTrajectorySal(1);
                 frm.Tag = LangArEn;
@@ -6895,7 +6897,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_PrintSalRelay_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmPrintTrajectorySal(2)))
+            //if(!IsFormOpen(new FrmPrintTrajectorySal(2)))
             {
                 FrmPrintTrajectorySal frm = new FrmPrintTrajectorySal(2);
                 frm.Tag = LangArEn;
@@ -6907,7 +6909,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_AlarmDoc_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmAutoAlarmEmployee()))
+            //if(!IsFormOpen(new FrmAutoAlarmEmployee()))
             {
                 FrmAutoAlarmEmployee frm = new FrmAutoAlarmEmployee();
                 frm.Tag = LangArEn;
@@ -7062,7 +7064,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                     string vLogicalName = "";
                     string vLogicalNameLog = "";
                     string filename = "";
-               System.Windows.Forms. OpenFileDialog  openFileDialog = new System.Windows.Forms. OpenFileDialog (); 
+                    System.Windows.Forms.OpenFileDialog openFileDialog = new System.Windows.Forms.OpenFileDialog();
                     openFileDialog.Filter = "Data|*.bak";
                     try
                     {
@@ -7292,7 +7294,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                                                                 _dbx.ExecuteCommand("USE [master] ALTER DATABASE [" + VarGeneral.DBNo.Replace("DBPROSOFT", "PROSOFT") + "_" + vBranchCount[i].Branch_no + "] SET MULTI_USER");
                                                             }
                                                         }
-                                                        catch(Exception ex)
+                                                        catch (Exception ex)
                                                         {
                                                             try
                                                             {
@@ -7366,7 +7368,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 else if (item.Name == "radialMenuItem_Attachment")
                 {
                     string filename = "";
-               System.Windows.Forms. OpenFileDialog  openFileDialog = new System.Windows.Forms. OpenFileDialog (); 
+                    System.Windows.Forms.OpenFileDialog openFileDialog = new System.Windows.Forms.OpenFileDialog();
                     openFileDialog.Filter = "DataBase|*.mdf";
                     try
                     {
@@ -7398,7 +7400,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                                 MessageBox.Show((LangArEn == 0) ? "خطأ .. لايمكن الاتصال بقاعدة البيانات المحددة ! لان السيرفر الحالي يحتوي على قاعدة بيانات بنفس الاسم " : "Error .. can not connect to the database specified! Because the current server contains a database with the same name", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly);
                                 return;
                             }
-                            using (Stock_DataDataContext dbc = new Stock_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.Qut+ VarGeneral.UsrPass+ VarGeneral.Qut))
+                            using (Stock_DataDataContext dbc = new Stock_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.UsrPass ))
                             {
                                 dbc.ExecuteCommand("EXEC sp_attach_db @dbname = N'" + Path.GetFileName(openFileDialog.FileName).Replace(".mdf", "") + "', \r\n                                                                                          @filename1 = \r\n                                                                                      N'" + filename + "', \r\n                                                                                          @filename2 = \r\n                                                                                      N'" + filename.Replace(".mdf", "_log.ldf") + "';");
                             }
@@ -7598,7 +7600,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                     frm7.Tag = LangArEn;
                     //frm7.MdiParent = this;
                     //childmin();
-                    showChild(frm7);
+                    frm7.ShowDialog();
                     try
                     {
                         string a = "";
@@ -7699,7 +7701,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 else
                 {
                     FrmInvSale frm = new FrmInvSale();
-                   //if(!IsFormOpen(frm))
+                    //if(!IsFormOpen(frm))
                     {
 
                         frm.Tag = LangArEn;
@@ -7708,13 +7710,13 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                         //childmin();
                         showChild(frm);
                     }
-                   
+
                 }
             }
         }
         private void buttonItem_SalesReturn_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmInvSalesReturn()))
+            //if(!IsFormOpen(new FrmInvSalesReturn()))
             {
                 VarGeneral.InvTyp = 3;
                 FrmInvSalesReturn frm = new FrmInvSalesReturn();
@@ -7727,7 +7729,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 {
                     showChild(frm);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
 
                 }
@@ -7736,10 +7738,10 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         public static Point loc = new Point();
         private void buttonItem_PurchaseInv_Click(object sender, EventArgs e)
         {
-         // if(  InvAcc.Properties.Settings.Default.ServiceBill)
+            // if(  InvAcc.Properties.Settings.Default.ServiceBill)
             //if(!IsFormOpen(new FrmInvPuchaes()))
             {
-                
+
                 {
                     VarGeneral.InvTyp = 2;
                     FrmInvPuchaes frm = new FrmInvPuchaes();
@@ -7752,11 +7754,11 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                     CheckInvReapir();
                 }
             }
-        
+
         }
         private void buttonItem_PurchaseReturn_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmInvPuchaesReturn()))
+            //if(!IsFormOpen(new FrmInvPuchaesReturn()))
             {
                 VarGeneral.InvTyp = 4;
                 FrmInvPuchaesReturn frm = new FrmInvPuchaesReturn();
@@ -7772,7 +7774,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         {
             if (Program.iscarversion())
             {
-               //if(!IsFormOpen(new FrmCarFixingOrder()))
+                //if(!IsFormOpen(new FrmCarFixingOrder()))
                 {
                     VarGeneral.InvTyp = 7;
                     FrmCarFixingOrder frm = new FrmCarFixingOrder();
@@ -7785,7 +7787,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             }
             else
             {
-               //if(!IsFormOpen(new FrmCustQutation()))
+                //if(!IsFormOpen(new FrmCustQutation()))
                 {
                     VarGeneral.InvTyp = 7;
                     FrmCustQutation frm = new FrmCustQutation();
@@ -7800,7 +7802,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_SuppQutation_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmSuppQutation()))
+            //if(!IsFormOpen(new FrmSuppQutation()))
             {
                 VarGeneral.InvTyp = 8;
                 FrmSuppQutation frm = new FrmSuppQutation();
@@ -7814,7 +7816,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_PurchaseOrder_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FMPurchaseOrder()))
+            //if(!IsFormOpen(new FMPurchaseOrder()))
             {
                 VarGeneral.InvTyp = 9;
                 FMPurchaseOrder frm = new FMPurchaseOrder();
@@ -7828,7 +7830,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_OpenQuantities_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FMOpenQuantities()))
+            //if(!IsFormOpen(new FMOpenQuantities()))
             {
                 VarGeneral.InvTyp = 14;
                 FMOpenQuantities frm = new FMOpenQuantities();
@@ -7843,7 +7845,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_TransferIn_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmTransferIn()))
+            //if(!IsFormOpen(new FrmTransferIn()))
             {
                 VarGeneral.InvTyp = 5;
                 FrmTransferIn frm = new FrmTransferIn();
@@ -7857,7 +7859,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_TransferOut_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmTransferOut()))
+            //if(!IsFormOpen(new FrmTransferOut()))
             {
                 VarGeneral.InvTyp = 6;
                 FrmTransferOut frm = new FrmTransferOut();
@@ -7871,7 +7873,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_PaymentOReturn_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FMPaymentOReturn()))
+            //if(!IsFormOpen(new FMPaymentOReturn()))
             {
                 VarGeneral.InvTyp = 20;
                 FMPaymentOReturn frm = new FMPaymentOReturn();
@@ -7895,7 +7897,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_StockAdjustment_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FMStockAdjustment()))
+            //if(!IsFormOpen(new FMStockAdjustment()))
             {
                 VarGeneral.InvTyp = 10;
                 FMStockAdjustment frm = new FMStockAdjustment();
@@ -7909,7 +7911,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Offer_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmInvOffer()))
+            //if(!IsFormOpen(new FrmInvOffer()))
             {
                 FrmInvOffer frm = new FrmInvOffer();
                 frm.Tag = LangArEn;
@@ -7922,7 +7924,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Banks_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmBankBranches()))
+            //if(!IsFormOpen(new FrmBankBranches()))
             {
                 FrmBankBranches frm = new FrmBankBranches();
                 frm.Tag = LangArEn;
@@ -7934,7 +7936,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_BankBranch_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmBankBranches()))
+            //if(!IsFormOpen(new FrmBankBranches()))
             {
                 FrmBankBranches frm = new FrmBankBranches();
                 frm.Tag = LangArEn;
@@ -7946,7 +7948,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Boxes_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmBoxes()))
+            //if(!IsFormOpen(new FrmBoxes()))
             {
                 FrmBoxes frm = new FrmBoxes();
                 frm.Tag = LangArEn;
@@ -7958,7 +7960,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_CatchAndPay_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmCheck()))
+            //if(!IsFormOpen(new FrmCheck()))
             {
                 VarGeneral.InvTyp = 23;
                 FrmCheck frm = new FrmCheck();
@@ -7971,7 +7973,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_GetAndSetMoney_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmGetSetMoney()))
+            //if(!IsFormOpen(new FrmGetSetMoney()))
             {
                 VarGeneral.InvTyp = 25;
                 FrmGetSetMoney frm = new FrmGetSetMoney();
@@ -8040,7 +8042,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         {
             try
             {
-               //if(!IsFormOpen(new FMReceiptVoucherCustSupp()))
+                //if(!IsFormOpen(new FMReceiptVoucherCustSupp()))
                 {
                     VarGeneral.InvTyp = 11;
                     FMReceiptVoucherCustSupp frm = new FMReceiptVoucherCustSupp();
@@ -8064,7 +8066,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_SupplierBalance_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRSuppBalance()))
+            //if(!IsFormOpen(new FRSuppBalance()))
             {
                 VarGeneral.InvType = 1;
                 FRSuppBalance from1 = new FRSuppBalance();
@@ -8077,7 +8079,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_SupplierAge_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRSuppBalance()))
+            //if(!IsFormOpen(new FRSuppBalance()))
             {
                 VarGeneral.InvType = 4;
                 FRSuppBalance from1 = new FRSuppBalance();
@@ -8090,7 +8092,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_SupplierSleep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRSuppBalance()))
+            //if(!IsFormOpen(new FRSuppBalance()))
             {
                 VarGeneral.InvType = 2;
                 FRSuppBalance from1 = new FRSuppBalance();
@@ -8105,7 +8107,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         {
             try
             {
-               //if(!IsFormOpen(new FMReceiptVoucherCustSupp()))
+                //if(!IsFormOpen(new FMReceiptVoucherCustSupp()))
                 {
                     VarGeneral.InvTyp = 11;
                     FMReceiptVoucherCustSupp frm = new FMReceiptVoucherCustSupp();
@@ -8129,7 +8131,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_ClientBalance_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRCustBalance()))
+            //if(!IsFormOpen(new FRCustBalance()))
             {
                 VarGeneral.InvType = 1;
                 FRCustBalance from1 = new FRCustBalance();
@@ -8142,7 +8144,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_ClientAge_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRCustBalance()))
+            //if(!IsFormOpen(new FRCustBalance()))
             {
                 VarGeneral.InvType = 4;
                 FRCustBalance from1 = new FRCustBalance();
@@ -8155,7 +8157,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_ClientSleep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRCustBalance()))
+            //if(!IsFormOpen(new FRCustBalance()))
             {
                 VarGeneral.InvType = 2;
                 FRCustBalance from1 = new FRCustBalance();
@@ -8168,7 +8170,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_AccCat_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmAccCat()))
+            //if(!IsFormOpen(new FrmAccCat()))
             {
                 FrmAccCat frm = new FrmAccCat();
                 frm.Tag = LangArEn;
@@ -8180,7 +8182,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_AccTree_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmAccDef_()))
+            //if(!IsFormOpen(new FrmAccDef_()))
             {
                 FrmAccDef_ frm = new FrmAccDef_();
                 frm.Tag = LangArEn;
@@ -8192,7 +8194,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_SndGaid_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FMJournalVoucher()))
+            //if(!IsFormOpen(new FMJournalVoucher()))
             {
                 VarGeneral.InvTyp = 11;
                 FMJournalVoucher frm = new FMJournalVoucher();
@@ -8207,7 +8209,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         {
             try
             {
-               //if(!IsFormOpen(new FMReceiptVoucher()))
+                //if(!IsFormOpen(new FMReceiptVoucher()))
                 {
                     VarGeneral.InvTyp = 12;
                     FMReceiptVoucher frm = new FMReceiptVoucher();
@@ -8232,7 +8234,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         {
             try
             {
-               //if(!IsFormOpen(new FMPaymentVoucher()))
+                //if(!IsFormOpen(new FMPaymentVoucher()))
                 {
                     VarGeneral.InvTyp = 13;
                     FMPaymentVoucher frm = new FMPaymentVoucher();
@@ -8254,7 +8256,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_OpenAcc_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmOpenAcc()))
+            //if(!IsFormOpen(new FrmOpenAcc()))
             {
                 VarGeneral.InvTyp = 11;
                 FrmOpenAcc frm = new FrmOpenAcc();
@@ -8267,7 +8269,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_ItemDataMain_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsData()))
+            //if(!IsFormOpen(new FRItemsData()))
             {
                 VarGeneral.InvType = 1;
                 FRItemsData form1 = new FRItemsData();
@@ -8281,7 +8283,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_ItemDataQty_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsData()))
+            //if(!IsFormOpen(new FRItemsData()))
             {
                 VarGeneral.InvType = 2;
                 FRItemsData form1 = new FRItemsData();
@@ -8295,7 +8297,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_ItemDataCost_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsData()))
+            //if(!IsFormOpen(new FRItemsData()))
             {
                 VarGeneral.InvType = 3;
                 FRItemsData form1 = new FRItemsData();
@@ -8307,7 +8309,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_ItemDataMove_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsMovement()))
+            //if(!IsFormOpen(new FRItemsMovement()))
             {
                 FRItemsMovement form1 = new FRItemsMovement();
                 form1.Tag = LangArEn;
@@ -8315,13 +8317,13 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 form1.TopMost = true;
                 //form1.MdiParent = this;
                 //childmin();
-            //    form1.ShowDialog();
-               showChild(form1);
+                //    form1.ShowDialog();
+                showChild(form1);
             }
         }
         private void buttonItem_FilesItemsWithDateExp_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsDataExpir()))
+            //if(!IsFormOpen(new FRItemsDataExpir()))
             {
                 VarGeneral.InvType = 999;
                 FRItemsDataExpir form1 = new FRItemsDataExpir();
@@ -8336,7 +8338,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MovementItemsWithDateExp_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransfDatExpir()))
+            //if(!IsFormOpen(new FRItemsTransfDatExpir()))
             {
                 VarGeneral.InvType = 1;
                 FRItemsTransfDatExpir form1 = new FRItemsTransfDatExpir();
@@ -8350,7 +8352,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_ItemDataImport_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsData()))
+            //if(!IsFormOpen(new FRItemsData()))
             {
                 VarGeneral.InvType = 4;
                 FRItemsData form1 = new FRItemsData();
@@ -8364,7 +8366,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_ItemDataSleep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsData()))
+            //if(!IsFormOpen(new FRItemsData()))
             {
                 VarGeneral.InvType = 5;
                 FRItemsData form1 = new FRItemsData();
@@ -8378,7 +8380,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_ItemDataMoreSale_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsDataMoreSale()))
+            //if(!IsFormOpen(new FRItemsDataMoreSale()))
             {
                 FRItemsDataMoreSale form1 = new FRItemsDataMoreSale();
                 form1.Tag = LangArEn;
@@ -8391,7 +8393,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_ItemDataPrintMove_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsMovementPrint("", "")))
+            //if(!IsFormOpen(new FRItemsMovementPrint("", "")))
             {
                 FRItemsMovementPrint from1 = new FRItemsMovementPrint("", "");
                 from1.Tag = LangArEn;
@@ -8456,7 +8458,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepAccRecords_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRAccount()))
+            //if(!IsFormOpen(new FRAccount()))
             {
                 VarGeneral.InvType = 1;
                 FRAccount from1 = new FRAccount();
@@ -8470,7 +8472,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepPrintAccRecords_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRStatementOfAccount("", "")))
+            //if(!IsFormOpen(new FRStatementOfAccount("", "")))
             {
                 FRStatementOfAccount form1 = new FRStatementOfAccount("", "");
                 //                form1.Tag = LangArEn; form1.MdiParent = this;
@@ -8481,7 +8483,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepGeneralLed_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRAccountTranc()))
+            //if(!IsFormOpen(new FRAccountTranc()))
             {
                 VarGeneral.InvType = 1;
                 FRAccountTranc from1 = new FRAccountTranc();
@@ -8503,7 +8505,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepReviewBalanceOfMovement_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRAccountTrans()))
+            //if(!IsFormOpen(new FRAccountTrans()))
             {
                 VarGeneral.InvType = 1;
                 FRAccountTrans from1 = new FRAccountTrans();
@@ -8516,7 +8518,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepReviewBalance_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRAccountTrans()))
+            //if(!IsFormOpen(new FRAccountTrans()))
             {
                 VarGeneral.InvType = 2;
                 FRAccountTrans from1 = new FRAccountTrans();
@@ -8529,7 +8531,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepReviewTotaly_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRAccountTrans()))
+            //if(!IsFormOpen(new FRAccountTrans()))
             {
                 VarGeneral.InvType = 3;
                 FRAccountTrans from1 = new FRAccountTrans();
@@ -8542,7 +8544,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepReviewBalanceOfTotaly_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRAccountTrans()))
+            //if(!IsFormOpen(new FRAccountTrans()))
             {
                 VarGeneral.InvType = 4;
                 FRAccountTrans from1 = new FRAccountTrans();
@@ -8555,7 +8557,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepOutlay_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRAccountExpense()))
+            //if(!IsFormOpen(new FRAccountExpense()))
             {
                 FRAccountExpense from1 = new FRAccountExpense();
                 from1.Tag = LangArEn;
@@ -8569,7 +8571,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         {
             try
             {
-                 
+
                 foreach (Form ChildForm in Application.OpenForms)
                 {
                     if (ChildForm.GetType() != typeof(FrmLog))
@@ -8610,7 +8612,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem30_Click(object sender, EventArgs e)
         {
-           // sync.syncAll();
+            // sync.syncAll();
         }
         private void buttonItem32_Click(object sender, EventArgs e)
         {
@@ -8831,7 +8833,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void bubbleButton_InvSetting_Click(object sender, EventArgs e)
         {
-            FMInvPrintSetup frm = new FMInvPrintSetup(0);
+            FrmPrinters frm = new FrmPrinters();
             frm.Tag = LangArEn;
             frm.TopMost = true;
             //frm.MdiParent = this;
@@ -8857,7 +8859,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_InvoiceReport_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRInvoice(0, LangArEn)))
+            //if(!IsFormOpen(new FRInvoice(0, LangArEn)))
             {
                 VarGeneral.InvType = 1;
                 FRInvoice form1 = new FRInvoice(0, LangArEn);
@@ -8870,7 +8872,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_StoreCust_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsDataExtrnalMdn(1)))
+            //if(!IsFormOpen(new FRItemsDataExtrnalMdn(1)))
             {
                 FRItemsDataExtrnalMdn frm = new FRItemsDataExtrnalMdn(1);
                 frm.Tag = LangArEn;
@@ -8882,7 +8884,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_StoreSupp_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsDataExtrnalMdn(2)))
+            //if(!IsFormOpen(new FRItemsDataExtrnalMdn(2)))
             {
                 FRItemsDataExtrnalMdn frm = new FRItemsDataExtrnalMdn(2);
                 frm.Tag = LangArEn;
@@ -8894,7 +8896,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MoveSalse_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransf()))
+            //if(!IsFormOpen(new FRItemsTransf()))
             {
                 VarGeneral.InvType = 1;
                 FRItemsTransf form1 = new FRItemsTransf();
@@ -8908,7 +8910,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MoveSalesReturn_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransf()))
+            //if(!IsFormOpen(new FRItemsTransf()))
             {
                 VarGeneral.InvType = 3;
                 FRItemsTransf form1 = new FRItemsTransf();
@@ -8922,7 +8924,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MovePurchaseInv_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransf()))
+            //if(!IsFormOpen(new FRItemsTransf()))
             {
                 VarGeneral.InvType = 2;
                 FRItemsTransf form1 = new FRItemsTransf();
@@ -8936,7 +8938,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MovePurchaseReturn_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransf()))
+            //if(!IsFormOpen(new FRItemsTransf()))
             {
                 VarGeneral.InvType = 4;
                 FRItemsTransf form1 = new FRItemsTransf();
@@ -8950,7 +8952,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MoveCustQutation_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransf()))
+            //if(!IsFormOpen(new FRItemsTransf()))
             {
                 VarGeneral.InvType = 7;
                 FRItemsTransf form1 = new FRItemsTransf();
@@ -8964,7 +8966,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MoveSuppQutation_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransf()))
+            //if(!IsFormOpen(new FRItemsTransf()))
             {
                 VarGeneral.InvType = 8;
                 FRItemsTransf form1 = new FRItemsTransf();
@@ -8978,7 +8980,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MovePurchaseOrder_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransf()))
+            //if(!IsFormOpen(new FRItemsTransf()))
             {
                 VarGeneral.InvType = 9;
                 FRItemsTransf form1 = new FRItemsTransf();
@@ -8992,7 +8994,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MoveOpenQuantities_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransf()))
+            //if(!IsFormOpen(new FRItemsTransf()))
             {
                 VarGeneral.InvType = 14;
                 FRItemsTransf form1 = new FRItemsTransf();
@@ -9006,7 +9008,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MoveTransferIn_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransf()))
+            //if(!IsFormOpen(new FRItemsTransf()))
             {
                 VarGeneral.InvType = 5;
                 FRItemsTransf form1 = new FRItemsTransf();
@@ -9020,7 +9022,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MoveTransferOut_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransf()))
+            //if(!IsFormOpen(new FRItemsTransf()))
             {
                 VarGeneral.InvType = 6;
                 FRItemsTransf form1 = new FRItemsTransf();
@@ -9034,7 +9036,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MovePaymentOrder_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransf()))
+            //if(!IsFormOpen(new FRItemsTransf()))
             {
                 VarGeneral.InvType = 17;
                 FRItemsTransf form1 = new FRItemsTransf();
@@ -9048,7 +9050,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MovePaymentOReturn_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransf()))
+            //if(!IsFormOpen(new FRItemsTransf()))
             {
                 VarGeneral.InvType = 20;
                 FRItemsTransf form1 = new FRItemsTransf();
@@ -9062,7 +9064,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MoveStockAdjustment_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsTransf()))
+            //if(!IsFormOpen(new FRItemsTransf()))
             {
                 VarGeneral.InvType = 10;
                 FRItemsTransf form1 = new FRItemsTransf();
@@ -9076,7 +9078,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void button_InvComm_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmInvCommMnd(0)))
+            //if(!IsFormOpen(new FrmInvCommMnd(0)))
             {
                 FrmInvCommMnd frm = new FrmInvCommMnd(0);
                 frm.Tag = LangArEn;
@@ -9089,7 +9091,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void button_GaidComm_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmGEDCommMnd(0)))
+            //if(!IsFormOpen(new FrmGEDCommMnd(0)))
             {
                 FrmGEDCommMnd frm = new FrmGEDCommMnd(0);
                 frm.Tag = LangArEn;
@@ -9101,7 +9103,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_StoreMnd_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRItemsDataExtrnalMdn(0)))
+            //if(!IsFormOpen(new FRItemsDataExtrnalMdn(0)))
             {
                 FRItemsDataExtrnalMdn frm = new FRItemsDataExtrnalMdn(0);
                 frm.Tag = LangArEn;
@@ -9123,7 +9125,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepSalesGaid_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRInvoiceGaid(1, LangArEn)))
+            //if(!IsFormOpen(new FRInvoiceGaid(1, LangArEn)))
             {
                 FRInvoiceGaid form1 = new FRInvoiceGaid(1, LangArEn);
                 form1.Tag = LangArEn.ToString();
@@ -9135,7 +9137,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepPurchaseGaid_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRInvoiceGaid(2, LangArEn)))
+            //if(!IsFormOpen(new FRInvoiceGaid(2, LangArEn)))
             {
                 FRInvoiceGaid form1 = new FRInvoiceGaid(2, LangArEn);
                 form1.Tag = LangArEn.ToString();
@@ -9147,7 +9149,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepTradingAcc_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRAccountTrans()))
+            //if(!IsFormOpen(new FRAccountTrans()))
             {
                 VarGeneral.InvType = 5;
                 FRAccountTrans from1 = new FRAccountTrans();
@@ -9160,7 +9162,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepProfitAndLossAcc_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRAccountTrans()))
+            //if(!IsFormOpen(new FRAccountTrans()))
             {
                 VarGeneral.InvType = 6;
                 FRAccountTrans from1 = new FRAccountTrans();
@@ -9173,7 +9175,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepBalanceSheet_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FRAccountTrans()))
+            //if(!IsFormOpen(new FRAccountTrans()))
             {
                 VarGeneral.InvType = 7;
                 FRAccountTrans from1 = new FRAccountTrans();
@@ -9774,7 +9776,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                             }
                             MessageBox.Show((LangArEn == 0) ? "لايمكن حذف الصنف .. لانه مرتبط بصنف تجميعي " : "You can not delete Item .. because it is tied to a Bills", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly);
                             goto end_IL_0698;
-                        IL_0afd:
+                            IL_0afd:
                             try
                             {
                                 try
@@ -9829,7 +9831,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                             {
                                 newData = DBj.StockItem(VarGeneral.RepData.Tables[0].Rows[i]["Itm_No"].ToString());
                             }
-                        end_IL_0698:;
+                            end_IL_0698:;
                         }
                         catch
                         {
@@ -13467,7 +13469,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             }
             try
             {
-                string ckhStatString = db.StockInvSetting( 1).TaxOptions.Substring(4, 1);
+                string ckhStatString = db.StockInvSetting(1).TaxOptions.Substring(4, 1);
             }
             catch
             {
@@ -14466,7 +14468,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                                              where item.gdLok == false
                                              where (double?)(double)item.gdhead_ID == vData4.TaxGaidID
                                              select item).ToList().FirstOrDefault();
-                        T_INVSETTING _InvSettingTax = db.StockInvSetting( 1);
+                        T_INVSETTING _InvSettingTax = db.StockInvSetting(1);
                         string TaxCredit = ((_InvSettingTax.TaxCredit.Trim() != "***") ? _InvSettingTax.TaxCredit.Trim() : vData4.CusVenNo);
                         if (string.IsNullOrEmpty(TaxCredit))
                         {
@@ -14712,7 +14714,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                                              where item.gdLok == false
                                              where (double?)(double)item.gdhead_ID == vData3.TaxGaidID
                                              select item).ToList().FirstOrDefault();
-                        T_INVSETTING _InvSettingTax = db.StockInvSetting( 3);
+                        T_INVSETTING _InvSettingTax = db.StockInvSetting(3);
                         string TaxCredit = ((_InvSettingTax.TaxCredit.Trim() != "***") ? _InvSettingTax.TaxCredit.Trim() : vData3.CusVenNo);
                         if (string.IsNullOrEmpty(TaxCredit))
                         {
@@ -14963,7 +14965,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                                              where item.gdLok == false
                                              where (double?)(double)item.gdhead_ID == vData2.TaxGaidID
                                              select item).ToList().FirstOrDefault();
-                        T_INVSETTING _InvSettingTax = db.StockInvSetting( 2);
+                        T_INVSETTING _InvSettingTax = db.StockInvSetting(2);
                         string TaxCredit = ((_InvSettingTax.TaxCredit.Trim() != "***") ? _InvSettingTax.TaxCredit.Trim() : vData2.CusVenNo);
                         if (string.IsNullOrEmpty(TaxCredit))
                         {
@@ -15214,7 +15216,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                                              where item.gdLok == false
                                              where (double?)(double)item.gdhead_ID == vData.TaxGaidID
                                              select item).ToList().FirstOrDefault();
-                        T_INVSETTING _InvSettingTax = db.StockInvSetting( 4);
+                        T_INVSETTING _InvSettingTax = db.StockInvSetting(4);
                         string TaxCredit = ((_InvSettingTax.TaxCredit.Trim() != "***") ? _InvSettingTax.TaxCredit.Trim() : vData.CusVenNo);
                         if (string.IsNullOrEmpty(TaxCredit))
                         {
@@ -15454,7 +15456,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             //childmin();
             showChild(f);
         }
-        
+
         private void toolStripMenuItem_waitersActive_Click(object sender, EventArgs e)
         {
             if (VarGeneral.vDemo)
@@ -15481,7 +15483,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             {
                 string sssPass = InputDialog.mostrar(" ادخل رقم تفعيل العملية ", "الدعم الفني");
                 if (sssPass == "Um056027954488" && (Control.ModifierKeys & Keys.Control) == Keys.Control)
-                
+
                 {
                     return true;
                 }
@@ -15787,9 +15789,9 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 showChild(frm);
             }
         }
-        
+
 #pragma warning disable CS0108 // 'Frm_Main.FormClosed()' hides inherited member 'Form.FormClosed'. Use the new keyword if hiding was intended.
-     
+
         private void switchButtonItem_Exit_ValueChanged(object sender, EventArgs e)
         {
             if (switchButtonItem_Exit.Value)
@@ -15814,7 +15816,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void DBBackupElectronic(bool vMsg, int sts)
         {
-           
+
             string _oldDBNo = VarGeneral.DBNo;
             int b = 0;
             string ServiceNm = "";
@@ -15867,7 +15869,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 {
                 }
                 List<string> _DBNo = new List<string>();
-                using (Rate_DataDataContext _db = new Rate_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.Qut+ VarGeneral.UsrPass+ VarGeneral.Qut))
+                using (Rate_DataDataContext _db = new Rate_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.UsrPass ))
                 {
                     _DBNo = _db.ExecuteQuery<string>("select name From master..sysdatabases Where name like 'DBPROSOFT_%' and name not like '%_Endsyr_%' order by name ", new object[0]).ToList();
                 }
@@ -16037,7 +16039,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void Frm_Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+
             {
                 //Close();
             }
@@ -16132,7 +16134,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void bubbleButton_InvSetting_Click_1(object sender, EventArgs e)
         {
-            FMInvPrintSetup frm = new FMInvPrintSetup(0);
+            FrmPrinters frm = new FrmPrinters();
             frm.Tag = LangArEn;
             frm.TopMost = true;
             //frm.MdiParent = this;
@@ -16228,7 +16230,319 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             }
             return "NO OWNER";
         }
-        private void _OpenData(string filename)
+        private void _OpenDataappsoft(string filename)
+        {
+            if (VarGeneral.gUserName == "runsetting" && GetTotalFreeSpace("C:\\") < 20.0)
+            {
+                MessageBox.Show((LangArEn == 0) ? "لا توجد مساحة كافية لقراء البيانات .. يرجى المحاولة في وقت لاحق" : "There is not enough room for data readers ... please try later", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly);
+                return;
+            }
+            string DBName = "";
+            string DBNameLog = "";
+            string vPathDB = "";
+            int b = 0;
+            string ServiceNm = "";
+            for (b = 0; b < VarGeneral.gServerName.Length && !(VarGeneral.gServerName.Substring(b, 1) == "\\"); b++)
+            {
+            }
+            try
+            {
+                ServiceNm = VarGeneral.gServerName.Substring(b + 1);
+            }
+            catch
+            {
+                ServiceNm = "";
+            }
+            if (string.IsNullOrEmpty(ServiceNm))
+            {
+                ServiceNm = VarGeneral.DBNo.Replace("DBAPPSOFT_", null);
+            }
+            try
+            {
+                if (!Directory.Exists(Application.StartupPath + "\\" + ServiceNm))
+                {
+                    Directory.CreateDirectory(Application.StartupPath + "\\" + ServiceNm);
+                }
+            }
+            catch
+            {
+            }
+            try
+            {
+                if (!File.Exists(Application.StartupPath + "\\" + ServiceNm + "\\Ending.txt"))
+                {
+                    File.CreateText(Application.StartupPath + "\\" + ServiceNm + "\\Ending.txt");
+                }
+            }
+            catch
+            {
+            }
+            try
+            {
+                StreamReader streamReader = new StreamReader(Application.StartupPath + "\\" + ServiceNm + "\\Ending.txt");
+                string[] lines = streamReader.ReadToEnd().Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                vPathDB = lines[0];
+            }
+            catch
+            {
+                vPathDB = "";
+            }
+            if (string.IsNullOrEmpty(vPathDB))
+            {
+                vPathDB = Application.StartupPath + "\\" + ServiceNm;
+            }
+            if (VarGeneral.gUserName == "runsetting")
+            {
+                vPathDB = "C:\\Program Files\\Microsoft SQL Server\\MSSQL10_50.var_Ser_Nm\\MSSQL\\DATA".Replace("var_Ser_Nm", ServiceNm.ToUpper());
+            }
+            System.Windows.Forms.OpenFileDialog ofd = new System.Windows.Forms.OpenFileDialog();
+            List<string> vDB = new List<string>();
+            List<string> vDBc = new List<string>();
+            ofd.FileName = filename;
+            if (string.IsNullOrEmpty(filename) || !File.Exists(filename))
+            {
+                return;
+            }
+            try
+            {
+                List<string> c2 = db.ExecuteQuery<string>(" SELECT db.name \r\n                                                                    FROM   sys.master_files mf INNER JOIN sys.databases db ON db.database_id = mf.database_id\r\n                                                                    where db.name like '%_Endsyr_%'", new object[0]).ToList();
+                for (int i = 0; i < c2.Count; i++)
+                {
+                    db.ExecuteCommand("ALTER DATABASE " + c2[i] + " SET SINGLE_USER WITH ROLLBACK IMMEDIATE;\r\n                                                DROP DATABASE [ " + c2[i] + " ]");
+                }
+            }
+            catch
+            {
+            }
+            List<string> vLogicalName = new List<string>();
+            List<string> vLogicalNameLog = new List<string>();
+            try
+            {
+                List<string> newDb = db.ExecuteQuery<string>("  SELECT DB_NAME(database_id) AS DatabaseName\r\n                                                                        FROM sys.master_files AS mf\r\n                                                                        Where DB_NAME(database_id) like '%_Endsyr_%'", new object[0]).ToList();
+                for (int i = 0; i < newDb.Count; i++)
+                {
+                    try
+                    {
+                        db.ExecuteCommand("DROP DATABASE [" + newDb[i] + "]");
+                    }
+                    catch
+                    {
+                    }
+                }
+            }
+            catch
+            {
+            }
+            for (int i = 1; i < 100; i++)
+            {
+                try
+                {
+                    List<string> vRecPath = db.ExecuteQuery<string>("RESTORE FILELISTONLY FROM DISK = '" + filename + "' with file = " + i, new object[0]).ToList();
+                    if (vRecPath.Count > 0 && (vRecPath[0].StartsWith("DBAPPSOFT_") || vRecPath[0].StartsWith("APPSOFT_")))
+                    {
+                        vLogicalName.Add(vRecPath[0]);
+                        vLogicalNameLog.Add(vRecPath[1]);
+                    }
+                }
+                catch
+                {
+                    break;
+                }
+            }
+            vLogicalName = vLogicalName.Distinct().ToList();
+            vLogicalNameLog = vLogicalNameLog.Distinct().ToList();
+            if (vLogicalName.Count > 1)
+            {
+                for (int c = 0; c < vLogicalName.Count; c++)
+                {
+                    if (vLogicalName[c].StartsWith("DBAPPSOFT_"))
+                    {
+                        DBName = vLogicalName[c];
+                        DBNameLog = vLogicalNameLog[c];
+                        break;
+                    }
+                }
+                for (int c = 0; c < vLogicalNameLog.Count; c++)
+                {
+                    if (vLogicalName[c].StartsWith("DBAPPSOFT_"))
+                    {
+                        DBNameLog = vLogicalNameLog[c];
+                        break;
+                    }
+                }
+                vDB = new List<string>();
+                vDBc = new List<string>();
+                if (string.IsNullOrEmpty(DBName) || string.IsNullOrEmpty(DBNameLog))
+                {
+                    return;
+                }
+                for (int i = 0; i <= vLogicalName.Count; i++)
+                {
+                    try
+                    {
+                        if (vLogicalName[i].StartsWith("DBAPPSOFT_"))
+                        {
+                            using (Rate_DataDataContext _EndYearMain = new Rate_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.UsrPass))
+                            {
+                                string vWITH = "";
+                                vWITH = " Move '" + vLogicalName[i] + "' TO '" + vPathDB + "\\" + vLogicalName[i] + "_Endsyr_" + Path.GetFileName(ofd.FileName).Replace(".lck", null).Replace(".lck_" + VarGeneral.BranchNumber, null) + ".mdf',Move '" + vLogicalNameLog[i] + "' TO '" + vPathDB + "\\" + vLogicalNameLog[i] + "_Endsyr_" + Path.GetFileName(ofd.FileName).Replace(".lck", null).Replace(".lck_" + VarGeneral.BranchNumber, null) + ".ldf' ALTER DATABASE [" + vLogicalName[i] + "_Endsyr_" + Path.GetFileName(ofd.FileName).Replace(".lck", null).Replace(".lck_" + VarGeneral.BranchNumber, null) + "] SET READ_ONLY ";
+                                vWITH = " WITH RECOVERY, file = " + (i + 1) + ", " + vWITH;
+                                _EndYearMain.ExecuteCommand("USE [master] RESTORE DATABASE [" + vLogicalName[i] + "_Endsyr_" + Path.GetFileName(ofd.FileName).Replace(".lck", null).Replace(".lck_" + VarGeneral.BranchNumber, null) + "] FROM DISK = '" + filename + "'" + vWITH);
+                                vDBc.Add(vLogicalName[i] + "_Endsyr_" + Path.GetFileName(ofd.FileName).Replace(".lck", null).Replace(".lck_" + VarGeneral.BranchNumber, null));
+                            }
+                            continue;
+                        }
+                        int _Loop = 0;
+                        while (true)
+                        {
+                            try
+                            {
+                                if (_Loop > 2)
+                                {
+                                    break;
+                                }
+                                string logNm = "";
+                                string logNmLog = "";
+                                try
+                                {
+                                    if (!vLogicalName[i].Contains(DBName.Replace("DBAPPSOFT_", "")))
+                                    {
+                                        logNm = "APPSOFT_" + DBName.Replace("DBAPPSOFT_", "") + "_" + i;
+                                        logNmLog = "APPSOFT_" + DBName.Replace("DBAPPSOFT_", "") + "_" + i + "_log";
+                                    }
+                                }
+                                catch
+                                {
+                                    logNm = "";
+                                    logNmLog = "";
+                                }
+                                if (string.IsNullOrEmpty(logNm))
+                                {
+                                    logNm = vLogicalName[i];
+                                }
+                                if (string.IsNullOrEmpty(logNmLog))
+                                {
+                                    logNmLog = vLogicalName[i];
+                                }
+                                string vWITH = "";
+                                vWITH = " Move '" + vLogicalName[i] + "' TO '" + vPathDB + "\\" + DBName.Replace("DBAPPSOFT", "APPSOFT") + "_Endsyr_" + Path.GetFileName(ofd.FileName).Replace(".lck", null).Replace(".lck_" + VarGeneral.BranchNumber, null) + logNm.Substring(DBName.Length - 2) + ".mdf',Move '" + vLogicalNameLog[i] + "' TO '" + vPathDB + "\\" + DBName.Replace("DBAPPSOFT", "APPSOFT") + "_Endsyr_" + Path.GetFileName(ofd.FileName).Replace(".lck", null).Replace(".lck_" + VarGeneral.BranchNumber, null) + logNmLog.Substring(DBName.Length - 2) + ".ldf' ";
+                                vWITH = " WITH RECOVERY,  file = " + (i + 1) + ", " + vWITH;
+                                try
+                                {
+                                    GC.Collect();
+                                    GC.WaitForPendingFinalizers();
+                                    File.Delete(Application.StartupPath + "\\" + ServiceNm + "\\RestoreScript.sql");
+                                }
+                                catch
+                                {
+                                }
+                                TextWriter tw = File.CreateText(Application.StartupPath + "\\" + ServiceNm + "\\RestoreScript.sql");
+                                tw.WriteLine("USE [master] RESTORE DATABASE [" + DBName.Replace("DBAPPSOFT", "APPSOFT") + "_Endsyr_" + Path.GetFileName(ofd.FileName).Replace(".lck", null).Replace(".lck_" + VarGeneral.BranchNumber, null) + logNm.Substring(DBName.Length - 2) + "] FROM DISK = '" + filename + "'" + vWITH);
+                                tw.Close();
+                                string sqlConnectionString = "Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.UsrPass;
+                                FileInfo file = new FileInfo(Application.StartupPath + "\\" + ServiceNm + "\\RestoreScript.sql");
+                                FileStream fsToRead = file.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);
+                                StreamReader sr = new StreamReader(fsToRead);
+                                string script = sr.ReadToEnd();
+                                sr.Close();
+                                SqlConnection conn = new SqlConnection(sqlConnectionString);
+                                Server server = new Server(new ServerConnection(conn));
+                                if(Program.isdevelopermachine())
+                                {
+                                    script=script.Replace(@"F:\Users\USER\Source\localRepos\LProSoft\InvAcc\bin\Debug\PROSOFT\",@"E:\");
+                                }
+                                server.ConnectionContext.ExecuteNonQuery(script);
+                                string script2 = @"DECLARE @ss as nvarchar (max)
+set @ss = '
+use[DBAPPSOFT_default_Endsyr_DBEndYear_2021];
+                                GO
+                                use[master];
+go
+ALTER DATABASE [DBAPPSOFT_default_Endsyr_DBEndYear_2021] SET READ_WRITE
+                                GO
+                                USE[DBAPPSOFT_default_Endsyr_DBEndYear_2021]
+GO
+ALTER DATABASE[DBAPPSOFT_default_Endsyr_DBEndYear_2021] MODIFY FILE(NAME= N''DBAPPSOFT_default'', NEWNAME = N''DBPROSOFT_default'')
+GO
+USE[DBAPPSOFT_default_Endsyr_DBEndYear_2021]
+GO
+ALTER DATABASE[DBAPPSOFT_default_Endsyr_DBEndYear_2021] MODIFY FILE(NAME= N''DBAPPSOFT_default_log'', NEWNAME = N''DBPROSOFT_default_log'')
+GO
+ EXEC sp_renamedb ''DBAPPSOFT_default_Endsyr_DBEndYear_2021'', ''DBPROSOFT_default_Endsyr_DBEndYear_2021''
+GO
+
+USE[APPSOFT_default_Endsyr_DBEndYear_2021_1]
+GO
+ALTER DATABASE[APPSOFT_default_Endsyr_DBEndYear_2021_1] MODIFY FILE(NAME= N''APPSOFT_default_1'', NEWNAME = N''PROSOFT_default_1'')
+GO
+USE[APPSOFT_default_Endsyr_DBEndYear_2021_1]
+GO
+ALTER DATABASE[APPSOFT_default_Endsyr_DBEndYear_2021_1] MODIFY FILE(NAME= N''APPSOFT_default_1_log'', NEWNAME = N''PROSOFT_default_1_log'')
+GO
+ALTER DATABASE APPSOFT_default_Endsyr_DBEndYear_2021_1 SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+                EXEC sp_renamedb ''APPSOFT_default_Endsyr_DBEndYear_2021_1'', ''PROSOFT_default_Endsyr_DBEndYear_2021_1''
+ALTER DATABASE PROSOFT_default_Endsyr_DBEndYear_2021_1 SET MULTI_USER WITH ROLLBACK IMMEDIATE;
+'
+SET @ss = 'EXEC (''' + REPLACE(REPLACE(@ss, '''', ''''''), 'GO', '''); EXEC(''') + ''');'--Just add this one line.
+execute(@ss)
+"; server.ConnectionContext.ExecuteNonQuery(script2);
+
+
+                              
+                                vDB.Add(DBName.Replace("DBPROSOFT", "PROSOFT") + "_Endsyr_" + Path.GetFileName(ofd.FileName).Replace(".lck", null).Replace(".lck_" + VarGeneral.BranchNumber, null) + logNm.Substring(DBName.Length - 2));
+                            }
+                            catch (Exception error)
+                            {
+                                VarGeneral.DebLog.writeLog("_OpenData SendMail: ", error, enable: true);
+                                _Loop++;
+                                continue;
+                            }
+                            break;
+                        }
+                    }
+                    catch
+                    {
+                    }
+                }
+                List<string> newDb = db.ExecuteQuery<string>("  SELECT DB_NAME(database_id) AS DatabaseName\r\n                                                                        FROM sys.master_files AS mf\r\n                                                                        Where substring(DB_NAME(database_id),0,11) = 'DBPROSOFT_' and DB_NAME(database_id) like '%_Endsyr_%' and name not like '%log%' ", new object[0]).ToList();
+                if (newDb.Count <= 0)
+                {
+                    return;
+                }
+
+                for (int i = 0; i < vDBc.Count; i++)
+                {
+                    try
+                    {
+                        dbc.ExecuteCommand("ALTER DATABASE [" + vDBc[i] + "] SET READ_WRITE");
+                    }
+                    catch
+                    {
+                    }
+                }
+                for (int i = 0; i < vDB.Count; i++)
+                {
+                    Stock_DataDataContext _cc = new Stock_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=" + vDB[i] + ";UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.UsrPass);
+                    try
+                    {
+                        _cc.ExecuteCommand("ALTER DATABASE [" + vDB[i] + "] SET READ_WRITE");
+                    }
+                    catch
+                    {
+                    }
+                }
+                dbInstance = null;
+                dbInstanceRate = null;
+                VarGeneral.vEndYears = true;
+                VarGeneral.DBNo = newDb.FirstOrDefault();
+                new FrmMain(null, null, "", 0);
+                bubbleButton_Enter_Click(null, null);
+                return;
+             
+            }
+            MessageBox.Show((LangArEn == 0) ? "انت تحاول فتح قاعدة بيانات لا تحوي فروع ولا بيانات ممكن انت تعرض او ان الملف غير صحيح .!" : "You are trying to open a database does not contain branches and data possible you bid or the file is incorrect.!", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly);
+        }
+        private void _OpenDataprosoft(string filename)
         {
             if (VarGeneral.gUserName == "runsetting" && GetTotalFreeSpace("C:\\") < 20.0)
             {
@@ -16293,7 +16607,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             {
                 vPathDB = "C:\\Program Files\\Microsoft SQL Server\\MSSQL10_50.var_Ser_Nm\\MSSQL\\DATA".Replace("var_Ser_Nm", ServiceNm.ToUpper());
             }
-       System.Windows.Forms. OpenFileDialog  ofd = new System.Windows.Forms. OpenFileDialog (); 
+            System.Windows.Forms.OpenFileDialog ofd = new System.Windows.Forms.OpenFileDialog();
             List<string> vDB = new List<string>();
             List<string> vDBc = new List<string>();
             ofd.FileName = filename;
@@ -16380,7 +16694,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                     {
                         if (vLogicalName[i].StartsWith("DBPROSOFT_"))
                         {
-                            using (Rate_DataDataContext _EndYearMain = new Rate_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.Qut+ VarGeneral.UsrPass+ VarGeneral.Qut))
+                            using (Rate_DataDataContext _EndYearMain = new Rate_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.UsrPass))
                             {
                                 string vWITH = "";
                                 vWITH = " Move '" + vLogicalName[i] + "' TO '" + vPathDB + "\\" + vLogicalName[i] + "_Endsyr_" + Path.GetFileName(ofd.FileName).Replace(".lck", null).Replace(".lck_" + VarGeneral.BranchNumber, null) + ".mdf',Move '" + vLogicalNameLog[i] + "' TO '" + vPathDB + "\\" + vLogicalNameLog[i] + "_Endsyr_" + Path.GetFileName(ofd.FileName).Replace(".lck", null).Replace(".lck_" + VarGeneral.BranchNumber, null) + ".ldf' ALTER DATABASE [" + vLogicalName[i] + "_Endsyr_" + Path.GetFileName(ofd.FileName).Replace(".lck", null).Replace(".lck_" + VarGeneral.BranchNumber, null) + "] SET READ_ONLY ";
@@ -16437,7 +16751,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                                 TextWriter tw = File.CreateText(Application.StartupPath + "\\" + ServiceNm + "\\RestoreScript.sql");
                                 tw.WriteLine("USE [master] RESTORE DATABASE [" + DBName.Replace("DBPROSOFT", "PROSOFT") + "_Endsyr_" + Path.GetFileName(ofd.FileName).Replace(".lck", null).Replace(".lck_" + VarGeneral.BranchNumber, null) + logNm.Substring(DBName.Length - 2) + "] FROM DISK = '" + filename + "'" + vWITH);
                                 tw.Close();
-                                string sqlConnectionString = "Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.Qut+ VarGeneral.UsrPass+ VarGeneral.Qut;
+                                string sqlConnectionString = "Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.UsrPass;
                                 FileInfo file = new FileInfo(Application.StartupPath + "\\" + ServiceNm + "\\RestoreScript.sql");
                                 FileStream fsToRead = file.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);
                                 StreamReader sr = new StreamReader(fsToRead);
@@ -16478,7 +16792,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 }
                 for (int i = 0; i < vDB.Count; i++)
                 {
-                    Stock_DataDataContext _cc = new Stock_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=" + vDB[i] + ";UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.Qut+ VarGeneral.UsrPass+ VarGeneral.Qut);
+                    Stock_DataDataContext _cc = new Stock_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=" + vDB[i] + ";UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.UsrPass);
                     try
                     {
                         _cc.ExecuteCommand("ALTER DATABASE [" + vDB[i] + "] SET READ_WRITE");
@@ -16492,16 +16806,58 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 VarGeneral.vEndYears = true;
                 VarGeneral.DBNo = newDb.FirstOrDefault();
                 new FrmMain(null, null, "", 0);
-                FrmLog frm = new FrmLog();
-                frm.TopMost = false;
-                frm.ShowDialog();
-                dbInstance = null;
-                dbInstanceRate = null;
-                Frm_Main_Load(null, null);
+                bubbleButton_Enter_Click(null, null);
                 return;
             }
             MessageBox.Show((LangArEn == 0) ? "انت تحاول فتح قاعدة بيانات لا تحوي فروع ولا بيانات ممكن انت تعرض او ان الملف غير صحيح .!" : "You are trying to open a database does not contain branches and data possible you bid or the file is incorrect.!", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly);
         }
+
+        private void _OpenData(string filename)
+        {
+            if (VarGeneral.gUserName == "runsetting" && GetTotalFreeSpace("C:\\") < 20.0)
+            {
+                MessageBox.Show((LangArEn == 0) ? "لا توجد مساحة كافية لقراء البيانات .. يرجى المحاولة في وقت لاحق" : "There is not enough room for data readers ... please try later", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly);
+                return;
+            }
+            List<string> vLogicalName = new List<string>();
+
+            List<string> vLogicalNameLog = new List<string>();
+            for (int i = 1; i < 100; i++)
+            {
+                try
+                {
+                    List<string> vRecPath = db.ExecuteQuery<string>("RESTORE FILELISTONLY FROM DISK = '" + filename + "' with file = " + i, new object[0]).ToList();
+                    if (vRecPath.Count > 0 && (vRecPath[0].StartsWith("DBPROSOFT_") || vRecPath[0].StartsWith("PROSOFT_")))
+                    {
+                        vLogicalName.Add(vRecPath[0]);
+                        vLogicalNameLog.Add(vRecPath[1]);
+                    }
+                    else if (vRecPath.Count > 0 && (vRecPath[0].StartsWith("DBAPPSOFT_") || vRecPath[0].StartsWith("APPSOFT_")))
+                    {
+                        vLogicalName.Add(vRecPath[0]);
+                        vLogicalNameLog.Add(vRecPath[1]);
+                    }
+                }
+                catch
+                {
+                    break;
+                }
+            }
+            if (vLogicalName.Count > 0)
+            {
+                if (vLogicalName[0].Contains("APPSOFT"))
+                { _OpenDataappsoft(filename);
+
+                }
+            else
+                {
+                    _OpenDataprosoft(filename);
+
+
+                }
+            }
+        }
+        
         private void ItemDataImport()
         {
             if (dbc.Get_PermissionID(VarGeneral.UserID).UserPointTyp.Value == 1)
@@ -17021,7 +17377,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             try
             {
 #pragma warning disable CS0162 // Unreachable code detected
-               return false; if (SystemInformation.TerminalServerSession)
+                return false; if (SystemInformation.TerminalServerSession)
 #pragma warning restore CS0162 // Unreachable code detected
                 {
                     return true;
@@ -17215,7 +17571,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                     {
                         sTimerBackupCount = false;
                         List<string> _DBNo = new List<string>();
-                        using (Rate_DataDataContext _db = new Rate_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.Qut+ VarGeneral.UsrPass+ VarGeneral.Qut))
+                        using (Rate_DataDataContext _db = new Rate_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.UsrPass ))
                         {
                             _DBNo = _db.ExecuteQuery<string>("select name From master..sysdatabases Where name like 'DBPROSOFT_%' and name not like '%_Endsyr_%' order by name ", new object[0]).ToList();
                         }
@@ -17347,7 +17703,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                         }
                         else if (User_Remotly && (regval != 1 || regval != regvalNew || VarGeneral.vDemo) && _CheckRemotly)
                         {
-                         //   Environment.Exit(0);
+                            //   Environment.Exit(0);
                         }
                         try
                         {
@@ -17449,7 +17805,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                     {
                         if (Convert.ToDateTime(n.FormatGreg(VarGeneral.Gdate, "yyyy/MM/dd")) >= Convert.ToDateTime(n.FormatGreg(VarGeneral.Settings_Sys.AutoBackupDate, "yyyy/MM/dd")))
                         {
-                         if(autbackupstatus==0)   DBBackup(vMsg: false);
+                            if (autbackupstatus == 0) DBBackup(vMsg: false);
                         }
                     }
                     else
@@ -18506,7 +18862,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         {
             string dbname = getdatabasename();
             sampleSqlConnection = new SqlConnection(VarGeneral.BranchCS);
-            DataTable tb =ProShared. DBUdate.DbUpdates.execute("SELECT is_broker_enabled FROM sys.databases WHERE name = 'Database_name';".Replace("Database_name", dbname), VarGeneral.BranchCS);
+            DataTable tb = ProShared.DBUdate.DbUpdates.execute("SELECT is_broker_enabled FROM sys.databases WHERE name = 'Database_name';".Replace("Database_name", dbname), VarGeneral.BranchCS);
             if (tb.Rows.Count > 0)
             {
                 if (((bool)tb.Rows[0][0]) == false)
@@ -18799,7 +19155,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_PaymentOrder_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FMPaymentOrder()))
+            //if(!IsFormOpen(new FMPaymentOrder()))
             {
                 VarGeneral.InvTyp = 17;
                 FMPaymentOrder frm = new FMPaymentOrder();
@@ -19025,7 +19381,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         DropBoxSyncronization sync;
         public void syninfo()
         {
-                   }
+        }
         private void radialMenu_Lang_Item_Click(object sender, EventArgs e)
         {
             try
@@ -19112,14 +19468,14 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             catch (Exception error7)
 #pragma warning restore CS0168 // The variable 'error7' is declared but never used
             {
-                DbUpdates.copysetting2(); 
-                FrmPrinters sf= new FrmPrinters();
+                DbUpdates.copysetting2();
+                FrmPrinters sf = new FrmPrinters();
                 showChild(sf);
             }
         }
         private void buttonItem_Emp_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmEmp()))
+            //if(!IsFormOpen(new FrmEmp()))
             {
                 FrmEmp frm = new FrmEmp();
                 frm.Tag = LangArEn;
@@ -19132,7 +19488,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Attend_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmGenAttend()))
+            //if(!IsFormOpen(new FrmGenAttend()))
             {
                 FrmGenAttend frm = new FrmGenAttend();
                 frm.Tag = LangArEn;
@@ -19144,7 +19500,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_EmpRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepEmps()))
+            //if(!IsFormOpen(new FrmRepEmps()))
             {
                 FrmRepEmps frm = new FrmRepEmps();
                 frm.Tag = LangArEn;
@@ -19156,7 +19512,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_IDRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepID()))
+            //if(!IsFormOpen(new FrmRepID()))
             {
                 FrmRepID frm = new FrmRepID();
                 frm.Tag = LangArEn;
@@ -19168,7 +19524,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_PassportRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepPassport()))
+            //if(!IsFormOpen(new FrmRepPassport()))
             {
                 FrmRepPassport frm = new FrmRepPassport();
                 frm.Tag = LangArEn;
@@ -19180,7 +19536,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_FormRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepForm()))
+            //if(!IsFormOpen(new FrmRepForm()))
             {
                 FrmRepForm frm = new FrmRepForm();
                 frm.Tag = LangArEn;
@@ -19192,7 +19548,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_LicensRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepLicense()))
+            //if(!IsFormOpen(new FrmRepLicense()))
             {
                 FrmRepLicense frm = new FrmRepLicense();
                 frm.Tag = LangArEn;
@@ -19204,7 +19560,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_MidicAllowncRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepMidicalAllownce()))
+            //if(!IsFormOpen(new FrmRepMidicalAllownce()))
             {
                 FrmRepMidicalAllownce frm = new FrmRepMidicalAllownce();
                 frm.Tag = LangArEn;
@@ -19216,7 +19572,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_ReportUpdate_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepUpdateDoc()))
+            //if(!IsFormOpen(new FrmRepUpdateDoc()))
             {
                 FrmRepUpdateDoc frm = new FrmRepUpdateDoc();
                 frm.Tag = LangArEn;
@@ -19228,7 +19584,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepDocAllownc_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepUpdateDocAllownce()))
+            //if(!IsFormOpen(new FrmRepUpdateDocAllownce()))
             {
                 FrmRepUpdateDocAllownce frm = new FrmRepUpdateDocAllownce();
                 frm.Tag = LangArEn;
@@ -19240,7 +19596,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_VacRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepVacation()))
+            //if(!IsFormOpen(new FrmRepVacation()))
             {
                 FrmRepVacation frm = new FrmRepVacation();
                 frm.Tag = LangArEn;
@@ -19252,7 +19608,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_TicketRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepTickit()))
+            //if(!IsFormOpen(new FrmRepTickit()))
             {
                 FrmRepTickit frm = new FrmRepTickit();
                 frm.Tag = LangArEn;
@@ -19264,7 +19620,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Authriz_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmAuthorization()))
+            //if(!IsFormOpen(new FrmAuthorization()))
             {
                 FrmAuthorization frm = new FrmAuthorization();
                 frm.Tag = LangArEn;
@@ -19276,7 +19632,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_SecretariatsRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepSecretariats()))
+            //if(!IsFormOpen(new FrmRepSecretariats()))
             {
                 FrmRepSecretariats frm = new FrmRepSecretariats();
                 frm.Tag = LangArEn;
@@ -19288,7 +19644,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_VisaGoBackRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepVisa()))
+            //if(!IsFormOpen(new FrmRepVisa()))
             {
                 FrmRepVisa frm = new FrmRepVisa();
                 frm.Tag = LangArEn;
@@ -19300,7 +19656,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_EndServicRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepEndService()))
+            //if(!IsFormOpen(new FrmRepEndService()))
             {
                 FrmRepEndService frm = new FrmRepEndService();
                 frm.Tag = LangArEn;
@@ -19312,7 +19668,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_AddRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepAdd()))
+            //if(!IsFormOpen(new FrmRepAdd()))
             {
                 FrmRepAdd frm = new FrmRepAdd();
                 frm.Tag = LangArEn;
@@ -19324,7 +19680,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_AwardRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepReward()))
+            //if(!IsFormOpen(new FrmRepReward()))
             {
                 FrmRepReward frm = new FrmRepReward();
                 frm.Tag = LangArEn;
@@ -19336,7 +19692,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_AdvancRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepAdvances()))
+            //if(!IsFormOpen(new FrmRepAdvances()))
             {
                 FrmRepAdvances frm = new FrmRepAdvances();
                 frm.Tag = LangArEn;
@@ -19348,7 +19704,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Phons_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepCalls()))
+            //if(!IsFormOpen(new FrmRepCalls()))
             {
                 FrmRepCalls frm = new FrmRepCalls();
                 frm.Tag = LangArEn;
@@ -19360,7 +19716,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_DisRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepDiscount()))
+            //if(!IsFormOpen(new FrmRepDiscount()))
             {
                 FrmRepDiscount frm = new FrmRepDiscount();
                 frm.Tag = LangArEn;
@@ -19372,7 +19728,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_CommentaryRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepCommentary()))
+            //if(!IsFormOpen(new FrmRepCommentary()))
             {
                 FrmRepCommentary frm = new FrmRepCommentary();
                 frm.Tag = LangArEn;
@@ -19384,7 +19740,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepCars_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepCars()))
+            //if(!IsFormOpen(new FrmRepCars()))
             {
                 FrmRepCars frm = new FrmRepCars();
                 frm.Tag = LangArEn;
@@ -19423,7 +19779,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Transactions_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmTreatment()))
+            //if(!IsFormOpen(new FrmTreatment()))
             {
                 FrmTreatment frm = new FrmTreatment();
                 frm.Tag = LangArEn;
@@ -19435,7 +19791,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Commentary_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmCommentary()))
+            //if(!IsFormOpen(new FrmCommentary()))
             {
                 FrmCommentary frm = new FrmCommentary();
                 frm.Tag = LangArEn;
@@ -19447,7 +19803,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_PassPortForm_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmPassportForm()))
+            //if(!IsFormOpen(new FrmPassportForm()))
             {
                 FrmPassportForm frm = new FrmPassportForm();
                 frm.Tag = LangArEn;
@@ -19459,7 +19815,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Dept_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmDept()))
+            //if(!IsFormOpen(new FrmDept()))
             {
                 FrmDept frm = new FrmDept();
                 frm.Tag = LangArEn;
@@ -19471,7 +19827,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Projects_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmPRoject()))
+            //if(!IsFormOpen(new FrmPRoject()))
             {
                 FrmPRoject frm = new FrmPRoject();
                 frm.Tag = LangArEn;
@@ -19483,7 +19839,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Gur_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmSponser()))
+            //if(!IsFormOpen(new FrmSponser()))
             {
                 FrmSponser frm = new FrmSponser();
                 frm.Tag = LangArEn;
@@ -19495,7 +19851,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Nation_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmNation()))
+            //if(!IsFormOpen(new FrmNation()))
             {
                 FrmNation frm = new FrmNation();
                 frm.Tag = LangArEn;
@@ -19507,7 +19863,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Contract_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmContract()))
+            //if(!IsFormOpen(new FrmContract()))
             {
                 FrmContract frm = new FrmContract();
                 frm.Tag = LangArEn;
@@ -19519,7 +19875,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Vac_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmVacType()))
+            //if(!IsFormOpen(new FrmVacType()))
             {
                 FrmVacType frm = new FrmVacType();
                 frm.Tag = LangArEn;
@@ -19531,7 +19887,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_City_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmCity()))
+            //if(!IsFormOpen(new FrmCity()))
             {
                 FrmCity frm = new FrmCity();
                 frm.Tag = LangArEn;
@@ -19543,7 +19899,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Religen_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmReligions()))
+            //if(!IsFormOpen(new FrmReligions()))
             {
                 FrmReligions frm = new FrmReligions();
                 frm.Tag = LangArEn;
@@ -19555,7 +19911,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Cars_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmCar()))
+            //if(!IsFormOpen(new FrmCar()))
             {
                 FrmCar frm = new FrmCar();
                 frm.Tag = LangArEn;
@@ -19567,7 +19923,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Add_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmAdd()))
+            //if(!IsFormOpen(new FrmAdd()))
             {
                 FrmAdd frm = new FrmAdd();
                 frm.Tag = LangArEn;
@@ -19579,7 +19935,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Dis_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmDiscount()))
+            //if(!IsFormOpen(new FrmDiscount()))
             {
                 FrmDiscount frm = new FrmDiscount();
                 frm.Tag = LangArEn;
@@ -19592,7 +19948,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_VacOp_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmVacation()))
+            //if(!IsFormOpen(new FrmVacation()))
             {
                 FrmVacation frm = new FrmVacation();
                 frm.Tag = LangArEn;
@@ -19604,7 +19960,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Tickit_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmTicket()))
+            //if(!IsFormOpen(new FrmTicket()))
             {
                 FrmTicket frm = new FrmTicket();
                 frm.Tag = LangArEn;
@@ -19616,7 +19972,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Advanc_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmAdvances()))
+            //if(!IsFormOpen(new FrmAdvances()))
             {
                 FrmAdvances frm = new FrmAdvances();
                 frm.Tag = LangArEn;
@@ -19628,7 +19984,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_CallPhone_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmCallPhone()))
+            //if(!IsFormOpen(new FrmCallPhone()))
             {
                 FrmCallPhone frm = new FrmCallPhone();
                 frm.Tag = LangArEn;
@@ -19640,7 +19996,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Rewar_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRewards()))
+            //if(!IsFormOpen(new FrmRewards()))
             {
                 FrmRewards frm = new FrmRewards();
                 frm.Tag = LangArEn;
@@ -19652,7 +20008,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_AutizRep_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmRepAuthorization()))
+            //if(!IsFormOpen(new FrmRepAuthorization()))
             {
                 FrmRepAuthorization frm = new FrmRepAuthorization();
                 frm.Tag = LangArEn;
@@ -19664,7 +20020,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_Secretariats_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmSecretariats()))
+            //if(!IsFormOpen(new FrmSecretariats()))
             {
                 FrmSecretariats frm = new FrmSecretariats();
                 frm.Tag = LangArEn;
@@ -19676,7 +20032,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_VisaGoBack_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new Frmvisa()))
+            //if(!IsFormOpen(new Frmvisa()))
             {
                 Frmvisa frm = new Frmvisa();
                 frm.Tag = LangArEn;
@@ -19688,7 +20044,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_EndServic_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmEndService()))
+            //if(!IsFormOpen(new FrmEndService()))
             {
                 FrmEndService frm = new FrmEndService();
                 frm.Tag = LangArEn;
@@ -19700,7 +20056,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_UpdateDoc_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmUpdateDoc()))
+            //if(!IsFormOpen(new FrmUpdateDoc()))
             {
                 FrmUpdateDoc frm = new FrmUpdateDoc();
                 frm.Tag = LangArEn;
@@ -19719,7 +20075,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void ribbonButton1_Click(object sender, EventArgs e)
         {
-            ProShared.DroBoxSync.Frm_PrinterShow f = new  ProShared. DroBoxSync.Frm_PrinterShow(1);
+            ProShared.DroBoxSync.Frm_PrinterShow f = new ProShared.DroBoxSync.Frm_PrinterShow(1);
             //f.MdiParent = this;
             //childmin();
             showChild(f);
@@ -19761,16 +20117,16 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             {
                 LangChange(0);
                 VarGeneral.currentintlanguage = 0;
-           
+
             }
             else
-            { LangChange(1);VarGeneral.currentintlanguage = 1; }
+            { LangChange(1); VarGeneral.currentintlanguage = 1; }
         }
         private void buttonItem33_Click(object sender, EventArgs e)
         {
             try
             {
-             ProShared.   DBUdate.DbUpdates.updateeverything();
+                ProShared.DBUdate.DbUpdates.updateeverything();
                 MessageBox.Show("تم تحديث قاعدة البيانات بنجاح");
             }
             catch (Exception ex)
@@ -19780,7 +20136,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void ribbonButton1_Click_1(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmCarTypS()))
+            //if(!IsFormOpen(new FrmCarTypS()))
             {
                 FrmCarTypS frm = new FrmCarTypS();
                 frm.Tag = LangArEn;
@@ -19792,7 +20148,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void ribbonButton2_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmCarS()))
+            //if(!IsFormOpen(new FrmCarS()))
             {
                 FrmCarS frm = new FrmCarS();
                 frm.Tag = LangArEn;
@@ -19813,7 +20169,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void Color_Button_Click(object sender, EventArgs e)
         {
-           //if(!IsFormOpen(new FrmColor()))
+            //if(!IsFormOpen(new FrmColor()))
             {
                 FrmColor frm = new FrmColor();
                 frm.Tag = LangArEn;
@@ -20004,7 +20360,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
 
         private void ribbonButton1_Click_2(object sender, EventArgs e)
         {
-          
+
 
         }
 
@@ -20029,12 +20385,13 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 {
                     FrmReportsViewer.TypeOfReporting = 1;
                     File.WriteAllText(Application.StartupPath + "\\Script\\fastdll.dll", "Fastreport On");
-                   
+
 
                 }
             }
             else
-            { FrmReportsViewer.TypeOfReporting = 0;
+            {
+                FrmReportsViewer.TypeOfReporting = 0;
                 File.Delete(Application.StartupPath + "\\Script\\fastdll.dll");
             }
 
@@ -20055,16 +20412,17 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         {
             if (ribbonCheckBox2.Checked == true)
             {
-                {     File.WriteAllText(Application.StartupPath + "\\Script\\deloption.dll", "Delete On");
+                {
+                    File.WriteAllText(Application.StartupPath + "\\Script\\deloption.dll", "Delete On");
 
-                  
+
                 }
             }
             else
             {
-             
+
                 File.Delete(Application.StartupPath + "\\Script\\deloption.dll");
-         
+
             }
 
 
@@ -20078,7 +20436,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
 
         private void ribbonButton5_Click(object sender, EventArgs e)
         {
-            FMInvPrintSetup frm = new FMInvPrintSetup(1);
+            FrmPrinters frm = new FrmPrinters();
             frm.Tag = LangArEn;
             frm.TopMost = true;
             frm.ShowDialog();

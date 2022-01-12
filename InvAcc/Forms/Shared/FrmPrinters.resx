@@ -171,7 +171,7 @@
         feeesY1qoR+46jwZcxalBqlzZzN5L6mzqwXG8eXHwQR0/I8UUUV85ioqFaUV0PocLNzoxk+p/9k=
 </value>
   </data>
-  <data name="RButLandscape3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="RButLandscape_Sandatat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBggGDAkSBwgKFQkKDRYODQwMDRoTFBAWHxwhKR8cHh4j
         JzIqIyUpJSQaJTssLzI1ODgxGio9PDwvTSY3LDX/2wBDAQkKCg0LDRkODhk1JB4kNTU1NTU1NTU1LC01
@@ -224,7 +224,7 @@
         feeesY1qoR+46jwZcxalBqlzZzN5L6mzqwXG8eXHwQR0/I8UUUV85ioqFaUV0PocLNzoxk+p/9k=
 </value>
   </data>
-  <data name="RButLandscapeRep.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="RButLandscapeRep_Reports.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBggGDAkSBwgKFQkKDRYODQwMDRoTFBAWHxwhKR8cHh4j
         JzIqIyUpJSQaJTssLzI1ODgxGio9PDwvTSY3LDX/2wBDAQkKCg0LDRkODhk1JB4kNTU1NTU1NTU1LC01
@@ -250,7 +250,7 @@
         w9KWrivuP//Z
 </value>
   </data>
-  <data name="RButPortraitRep.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="RButPortraitRep_Reports.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBggGBQkIBwgKCQkKDRYODQwMDRoTFBAWHxwhIB8cHh4j
         JzIqIyUvJR4eKzssLzM1ODg4ISo9QTw2QTI3OD//2wBDAQkKCg0LDRkODhk1JB4kNTU1NTU1NTU1NTU1

@@ -1022,7 +1022,7 @@ repositoryItemDateEdit1.Properties.Mask.EditMask = "dd/MM/yyyy";
         internal void setreadonly(bool f)
         {
  
-            dataLayoutControl1.OptionsView.IsReadOnly = (f ? DevExpress.Utils.DefaultBoolean.True : DevExpress.Utils.DefaultBoolean.False);
+          //  dataLayoutControl1.OptionsView.IsReadOnly = (f ? DevExpress.Utils.DefaultBoolean.True : DevExpress.Utils.DefaultBoolean.False);
             gridView1.OptionsBehavior.Editable = !f;
         }
 
@@ -1144,7 +1144,7 @@ repositoryItemDateEdit1.Properties.Mask.EditMask = "dd/MM/yyyy";
             {
                 if (CurrentBill.InvNo != "" && State == FormState.Saved)
                 {
-                    if ((_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) != "2"))
+                    if ((_InvSetting.InvpRINTERInfo.ISPOINTERType!=true))
                     {
                         VarGeneral.Print_set_Gen_Stat = false;
                         RepShow _RepShow = new RepShow();
@@ -1307,7 +1307,7 @@ repositoryItemDateEdit1.Properties.Mask.EditMask = "dd/MM/yyyy";
                                     {
                                         frm.BarcodSts = false;
                                     }
-                                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                                    if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                                     {
                                         frm.Repvalue = "Purchase";
                                     }
@@ -1340,7 +1340,7 @@ repositoryItemDateEdit1.Properties.Mask.EditMask = "dd/MM/yyyy";
                                     VarGeneral.CostCenterlbl = "مركز التكلفة";
                                     VarGeneral.Mndoblbl = "المندوب العميل /المورد";
                                     VarGeneral.vTitle = Text;
-                                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1" || false)
+                                    if (_InvSetting.ISdirectPrinting || false)
                                     {
                                         frm._Proceess();
                                     }
@@ -1377,7 +1377,11 @@ repositoryItemDateEdit1.Properties.Mask.EditMask = "dd/MM/yyyy";
             DataList.Clear();
             gridControl1.Refresh();
             txtTotTax.Text = "";
+            lookUpEditWithDataSource1.EditValueChanged -= lookUpEditWithDataSource1_EditValueChanged_1;
             lookUpEditWithDataSource1.EditValue = null;
+
+            lookUpEditWithDataSource1.EditValueChanged += lookUpEditWithDataSource1_EditValueChanged_1;
+
             txtTotalAmLoc.Text = "";
         txtDueAmountLoc.Text = "";
         }

@@ -834,7 +834,7 @@ GROUP BY fvc.InvTyp";
                     FrmReport frm = new FrmReport();
                     this.TopMost = false;
 
-                    if (VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "1")
+                    if (!VarGeneral.GeneralPrinter.ISdirectPrinting)
                     {
                         if (!flag)
                         {
@@ -869,14 +869,14 @@ GROUP BY fvc.InvTyp";
             if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
             {
                 ButExit.Text = "خــــروج Esc";
-                ButOk.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "طبـــاعة F5" : "عــــرض F5");
+                ButOk.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "طبـــاعة F5" : "عــــرض F5");
                 groupBox4.Text = "التاريــــخ";
                 Text = "إحتساب الضريبة المستحقة";
             }
             else
             {
                 ButExit.Text = "Exit Esc";
-                ButOk.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "Print F5" : "Show F5");
+                ButOk.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "Print F5" : "Show F5");
                 groupBox4.Text = "Date";
                 Text = "Calculate the tax due";
             }

@@ -40,7 +40,6 @@ private void InitializeComponent()
             this.txtIntoAccName = new System.Windows.Forms.TextBox();
             this.txtFromAccName = new System.Windows.Forms.TextBox();
             this.txtIntoAccNo = new System.Windows.Forms.TextBox();
-            this.txtEqarNo = new System.Windows.Forms.TextBox();
             this.ButExit = new DevComponents.DotNetBar.ButtonX();
             this.ButOk = new DevComponents.DotNetBar.ButtonX();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@ private void InitializeComponent()
             this.button_SrchAccFrom = new DevComponents.DotNetBar.ButtonX();
             this.txtEqarName = new System.Windows.Forms.TextBox();
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
+            this.txtEqarNo = new System.Windows.Forms.TextBox();
             this.ribbonBar1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMBalanceB)).BeginInit();
@@ -84,11 +84,11 @@ private void InitializeComponent()
             this.ribbonBar1.BackgroundStyle.BackColor2 = System.Drawing.SystemColors.GradientActiveCaption;
             this.ribbonBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonBar1.ContainerControlProcessDialogKey = true;
+            this.ribbonBar1.Controls.Add(this.txtEqarNo);
             this.ribbonBar1.Controls.Add(this.groupBox3);
             this.ribbonBar1.Controls.Add(this.groupBox4);
             this.ribbonBar1.Controls.Add(this.txtIntoAccName);
             this.ribbonBar1.Controls.Add(this.txtFromAccName);
-            this.ribbonBar1.Controls.Add(this.txtEqarNo);
             this.ribbonBar1.Controls.Add(this.txtFromAccNo);
             this.ribbonBar1.Controls.Add(this.txtIntoAccNo);
             this.ribbonBar1.Controls.Add(this.ButExit);
@@ -119,6 +119,7 @@ private void InitializeComponent()
             // 
             // 
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar1.ItemClick += new System.EventHandler(this.ribbonBar1_ItemClick);
             // 
             // groupBox3
             // 
@@ -304,17 +305,6 @@ private void InitializeComponent()
             this.txtIntoAccNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtIntoAccNo.Visible = false;
             // 
-            // txtEqarNo
-            // 
-            this.txtEqarNo.BackColor = System.Drawing.Color.White;
-            this.txtEqarNo.Location = new System.Drawing.Point(324, 1);
-            this.txtEqarNo.Name = "txtEqarNo";
-            this.txtEqarNo.ReadOnly = true;
-            this.txtEqarNo.Size = new System.Drawing.Size(79, 20);
-            this.txtEqarNo.TabIndex = 11;
-            this.txtEqarNo.Tag = "";
-            this.txtEqarNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // ButExit
             // 
             this.ButExit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -445,9 +435,19 @@ private void InitializeComponent()
             // controlContainerItem1
             // 
             this.controlContainerItem1.AllowItemResize = false;
-            this.controlContainerItem1.Control = this.txtEqarNo;
             this.controlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
             this.controlContainerItem1.Name = "controlContainerItem1";
+            // 
+            // txtEqarNo
+            // 
+            this.txtEqarNo.BackColor = System.Drawing.Color.White;
+            this.txtEqarNo.Location = new System.Drawing.Point(244, 132);
+            this.txtEqarNo.Name = "txtEqarNo";
+            this.txtEqarNo.ReadOnly = true;
+            this.txtEqarNo.Size = new System.Drawing.Size(79, 20);
+            this.txtEqarNo.TabIndex = 1149;
+            this.txtEqarNo.Tag = "";
+            this.txtEqarNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmEqarAccRep
             // 
@@ -478,5 +478,6 @@ private void InitializeComponent()
         }//###########&&&&&&&&&&
 
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem1;
+        private System.Windows.Forms.TextBox txtEqarNo;
     }
 }

@@ -374,6 +374,7 @@ private void InitializeComponent()
             this.txtGedDes.Size = new System.Drawing.Size(378, 21);
             this.txtGedDes.TabIndex = 13;
             this.txtGedDes.Click += new System.EventHandler(this.txtGedDes_Click);
+            this.txtGedDes.TextChanged += new System.EventHandler(this.txtGedDes_TextChanged);
             this.txtGedDes.Enter += new System.EventHandler(this.textBox_NameA_Enter);
             this.txtGedDes.Leave += new System.EventHandler(this.textBox_NameA_Enter);
             // 

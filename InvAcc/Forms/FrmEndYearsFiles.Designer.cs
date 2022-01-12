@@ -32,8 +32,7 @@ private void InitializeComponent()
             this.buttonX_Ok = new DevComponents.DotNetBar.ButtonX();
             this.buttonX_Close = new DevComponents.DotNetBar.ButtonX();
             this.listBox_Paths2 = new System.Windows.Forms.ListBox();
-            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);  this.netResize1.LabelsAutoEllipse = false;
-            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
+            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
             this.SuspendLayout();
@@ -114,6 +113,7 @@ private void InitializeComponent()
             this.groupBox1.Size = new System.Drawing.Size(551, 77);
             this.groupBox1.TabIndex = 934;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // buttonX_Ok
             // 
@@ -164,7 +164,9 @@ private void InitializeComponent()
             // 
             // netResize1
             // 
+            this.netResize1.LabelsAutoEllipse = false;
             this.netResize1.ParentControl = this;
+            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 
             // FrmEndYearsFiles
             // 

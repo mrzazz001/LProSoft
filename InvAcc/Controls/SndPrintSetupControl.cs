@@ -172,7 +172,7 @@ namespace InvAcc.Controls
                     {
                         ChkPTable.Checked = true;
                     }
-                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "0")
+                    if (_InvSetting.InvpRINTERInfo.ISCashierType)
                     {
                         RedButPaperA4.Checked = false;
                         RedButCasher.Checked = true;
@@ -182,7 +182,7 @@ namespace InvAcc.Controls
                         RedButPaperA4.Checked = true;
                         RedButCasher.Checked = false;
                     }
-                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
+                    if (_InvSetting.ISdirectPrinting)
                     {
                         checkBox_previewPrint.Checked = false;
                     }

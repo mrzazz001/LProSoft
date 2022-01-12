@@ -120,6 +120,7 @@ namespace InvAcc.Forms
         {
             InitializeComponent();this.Load += langloads;
             SetColumns();
+            ExcelGridView.CellContentClick += ExcelGridView_CellContentClick;
         }
         protected override void OnParentRightToLeftChanged(EventArgs e)
         {
@@ -385,7 +386,39 @@ namespace InvAcc.Forms
                 return false;
             }
         }
-        private void FillGrid()
+
+        System.Windows.Forms.TextBox Activcontrol = null;
+
+        private void ExcelGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Activcontrol.Text = ExcelGridView.Columns[e.ColumnIndex].Name.ToString();
+                Activcontrol.Focus();
+                SendKeys.Send("{Tab}");
+            }
+            catch { }
+
+        }
+
+  
+        void FillGrid()
+        {
+
+
+            String ssFile = textBox_SearchFilePath.Text;
+            SpreadsheetGear.IWorkbook workbook = SpreadsheetGear.Factory.GetWorkbook(ssFile);
+
+            // Get a DataSet from an existing defined name
+      System.Data.      DataSet dataSet = workbook.GetDataSet(SpreadsheetGear.Data.GetDataFlags.FormattedText);
+
+            // Bind a DataGrid to the DataSet
+            ExcelGridView.DataSource = dataSet.Tables[0];
+            ExcelGridView.Refresh();
+
+        }
+
+        private void FillGrisd()
         {
             Thread t = new Thread(SplashStart);
             t.Start();
@@ -794,6 +827,16 @@ namespace InvAcc.Forms
             ColumnsFinger.Add("GW");
             ColumnsFinger.Add("GY");
             ColumnsFinger.Add("GZ");
+        }
+
+        private void textBox_ItmNo_TextChanged(object sender, EventArgs e)
+        {
+            Activcontrol = (sender as System.Windows.Forms.TextBox);
+        }
+
+        private void textBox_ItmNo_Enter(object sender, EventArgs e)
+        {
+            Activcontrol = (sender as System.Windows.Forms.TextBox);
         }
     }
 }

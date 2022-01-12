@@ -1098,7 +1098,7 @@ namespace InvAcc.Forms
                             frm.Tag = LangArEn;
                             frm.BarcodSts = false;
                             VarGeneral.EmptyTablePrint = true;
-                            if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                            if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                             {
                                 frm.Repvalue = "InvSal";
                             }
@@ -1107,7 +1107,7 @@ namespace InvAcc.Forms
                                 frm.RepCashier = "InvoiceCachier";
                             }
                             VarGeneral.vTitle = Text;
-                            if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
+                            if (_InvSetting.ISdirectPrinting)
                             {
                                 frm._Proceess();
                             }

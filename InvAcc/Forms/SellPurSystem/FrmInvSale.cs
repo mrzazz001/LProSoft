@@ -1354,7 +1354,7 @@ namespace InvAcc.Forms
         }
         private void _PrintInv(int _invHd, string _UserNo)
         {
-            if ((_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) != "2"))
+            if ((_InvSetting.ISPOINTERType!=true))
             {
                 try
                 {
@@ -1486,7 +1486,7 @@ namespace InvAcc.Forms
                         {
                             frm.BarcodSts = false;
                         }
-                        if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                        if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                         {
                             frm.Repvalue = "InvSal";
                         }
@@ -1520,7 +1520,7 @@ namespace InvAcc.Forms
                         VarGeneral.CostCenterlbl = label15.Text.Replace(" :", "");
                         VarGeneral.Mndoblbl = label18.Text.Replace(" :", "");
                         VarGeneral.vTitle = Text;
-                        if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1" || checkBoxItem_BarCode.Checked || ifMultiPrint)
+                        if (_InvSetting.ISdirectPrinting || checkBoxItem_BarCode.Checked || ifMultiPrint)
                         {
                             frm._Proceess();
                             return;
@@ -3009,20 +3009,357 @@ namespace InvAcc.Forms
                     switchButton_IfPrint.Visible = false;
                 }
             }
+
         }
         private void checkBox_Chash_CheckedChanged(object sender, EventArgs e)
         {
+            superTabControl_Info.SelectedTabIndex = 4;
             InvModeChanged();
+            if (Utilites.isnollorempty(txtCredit1.Tag))
+
+                txtCredit1.Tag = ((_InvSetting.AccCredit0.Trim() != "***") ? _InvSetting.AccCredit0.Trim() : "");
+            string ar = "";
+            try
+            {
+                ar = db.SelectAccRootByCode(txtCredit1.Tag.ToString()).Arb_Des;
+            }
+            catch { }
+            {
+                if (!string.IsNullOrEmpty(txtCredit1.Tag.ToString()))// && string.IsNullOrEmpty(txtCredit1.Text.ToString()) || (ar.Trim() != txtCredit1.Text.Trim()))
+                {
+                    if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+                    {
+                        txtCredit1.Text = db.SelectAccRootByCode(txtCredit1.Tag.ToString()).Arb_Des;
+                    }
+                    else
+                    {
+                        txtCredit1.Text = db.SelectAccRootByCode(txtCredit1.Tag.ToString()).Eng_Des;
+                    }
+                }
+                else
+                {
+                    txtCredit1.Text = "";
+                }
+            }
+            if (Utilites.isnollorempty(txtDebit1.Tag))
+                txtDebit1.Tag = ((_InvSetting.AccDebit0.Trim() != "***") ? _InvSetting.AccDebit0.Trim() : "");
+            try
+            {
+                ar = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Arb_Des;
+            }
+            catch { }
+
+            {
+                if (!string.IsNullOrEmpty(txtDebit1.Tag.ToString()))// && string.IsNullOrEmpty(txtDebit1.Text.ToString()) || (ar.Trim() != txtDebit1.Text.Trim()))
+                {
+                    if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+                    {
+                        txtDebit1.Text = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Arb_Des;
+                    }
+                    else
+                    {
+                        txtDebit1.Text = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Eng_Des;
+                    }
+                }
+                else
+                {
+                    txtDebit1.Text = "";
+                }
+            }
         }
         private void checkBox_Credit_CheckedChanged(object sender, EventArgs e)
         {
+            superTabControl_Info.SelectedTabIndex = 4;
             InvModeChanged();
+            if (Utilites.isnollorempty(txtCredit2.Tag))
+                txtCredit2.Tag = ((_InvSetting.AccCredit1.Trim() != "***") ? _InvSetting.AccCredit1.Trim() : "");
+            string ar = "";
+            try
+            {
+                ar = db.SelectAccRootByCode(txtCredit2.Tag.ToString()).Arb_Des;
+            }
+            catch { }
+            {
+                if (!string.IsNullOrEmpty(txtCredit2.Tag.ToString()))// && string.IsNullOrEmpty(txtCredit2.Text.ToString()) || (ar.Trim() != txtCredit2.Text.Trim()))
+                {
+                    if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+                    {
+                        txtCredit2.Text = db.SelectAccRootByCode(txtCredit2.Tag.ToString()).Arb_Des;
+                    }
+                    else
+                    {
+                        txtCredit2.Text = db.SelectAccRootByCode(txtCredit2.Tag.ToString()).Eng_Des;
+                    }
+                }
+                else
+                {
+                  
+                        txtCredit2.Text = "";
+                }
+            }
+            if (Utilites.isnollorempty(txtDebit2.Tag))
+                txtDebit2.Tag = ((_InvSetting.AccDebit1.Trim() != "***") ? _InvSetting.AccDebit1.Trim() : "");
+
+            try
+            {
+                ar = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Arb_Des;
+            }
+            catch { }
+
+            {
+                if (!string.IsNullOrEmpty(txtDebit2.Tag.ToString()))// && string.IsNullOrEmpty(txtDebit2.Text.ToString()) || (ar.Trim() != txtDebit2.Text.Trim()))
+                {
+                    if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+                    {
+                        txtDebit2.Text = db.SelectAccRootByCode(txtDebit2.Tag.ToString()).Arb_Des;
+                    }
+                    else
+                    {
+                        txtDebit2.Text = db.SelectAccRootByCode(txtDebit2.Tag.ToString()).Eng_Des;
+                    }
+                }
+                else
+                {
+                    if (txtCustNo.Text != "")
+                    {
+                        txtDebit2.Text = txtCustName.Text;
+                        txtDebit2.Tag = txtCustNo.Text;
+
+
+
+                    }
+                    else
+                        txtDebit2.Text = "";
+                }
+            }
+            //if(string.IsNullOrEmpty( txtCredit2.Text))
+
+            //    if (checkBox_Credit.Checked == true && txtCustNo.Text != "")
+            //{
+
+
+            //    txtCredit2.Text = txtCustName.Text;
+            //    txtCredit2.Tag = txtCustNo.Text;
+            //}
         }
+        //private void checkBox_Chash_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    InvModeChanged();
+        //    if (Utilites.isnollorempty(txtCredit1.Tag))
+
+        //        txtCredit1.Tag = ((_InvSetting.AccCredit0.Trim() != "***") ? _InvSetting.AccCredit0.Trim() : "");
+        //    {
+        //        if (!string.IsNullOrEmpty(txtCredit1.Tag.ToString()))
+        //        {
+        //            if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+        //            {
+        //                txtCredit1.Text = db.SelectAccRootByCode(txtCredit1.Tag.ToString()).Arb_Des;
+        //            }
+        //            else
+        //            {
+        //                txtCredit1.Text = db.SelectAccRootByCode(txtCredit1.Tag.ToString()).Eng_Des;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            txtCredit1.Text = "";
+        //        }
+
+
+        //    }
+        //    if (Utilites.isnollorempty(txtDebit1.Tag))
+        //       txtDebit1.Tag = ((_InvSetting.AccDebit0.Trim() != "***") ? _InvSetting.AccDebit0.Trim() : "");
+        //    {
+        //        if (!string.IsNullOrEmpty(txtDebit1.Tag.ToString()))
+        //        {
+        //            if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+        //            {
+        //                txtDebit1.Text = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Arb_Des;
+        //            }
+        //            else
+        //            {
+        //                txtDebit1.Text = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Eng_Des;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            txtDebit1.Text = "";
+        //        }
+
+        //    }
+        //}
+        //    private void checkBox_Credit_CheckedChanged(object sender, EventArgs e)
+        //    {
+        //        InvModeChanged();
+        //        if (Utilites.isnollorempty(txtCredit2.Tag))
+
+        //            txtCredit2.Tag = ((_InvSetting.AccCredit1.Trim() != "***") ? _InvSetting.AccCredit1.Trim() : "");
+        //        {
+        //            if (!string.IsNullOrEmpty(txtCredit2.Tag.ToString()))
+        //            {
+        //                if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+        //                {
+        //                    txtCredit2.Text = db.SelectAccRootByCode(txtCredit2.Tag.ToString()).Arb_Des;
+        //                }
+        //                else
+        //                {
+        //                    txtCredit2.Text = db.SelectAccRootByCode(txtCredit2.Tag.ToString()).Eng_Des;
+        //                }
+        //            }
+        //            else
+        //            {
+        //                txtCredit2.Text = "";
+        //            }
+        //        }
+        //        if (Utilites.isnollorempty(txtDebit2.Tag))
+
+        //            txtDebit2.Tag = ((_InvSetting.AccDebit1.Trim() != "***") ? _InvSetting.AccDebit1.Trim() : "");
+        //        {
+        //if (!string.IsNullOrEmpty(txtDebit2.Tag.ToString()))
+        //            {
+        //                if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+        //                {
+        //                    txtDebit2.Text = db.SelectAccRootByCode(txtDebit2.Tag.ToString()).Arb_Des;
+        //                }
+        //                else
+        //                {
+        //                    txtDebit2.Text = db.SelectAccRootByCode(txtDebit2.Tag.ToString()).Eng_Des;
+        //                }
+        //            }
+        //            else
+        //            {
+        //                txtDebit2.Text = "";
+        //            }
+        //        }
+        //        if (checkBox_Credit.Checked == true && txtCustNo.Text != "")
+        //        {
+
+
+        //            txtCredit2.Text = txtCustName.Text;
+        //            txtCredit2.Tag = txtCustNo.Text;
+        //        }
+
+        //    }
+
+
         private void checkBox_NetWork_CheckedChanged(object sender, EventArgs e)
         {
+            superTabControl_Info.SelectedTabIndex = 4;
             InvModeChanged();
             doubleInput_NetWorkLoc_Leave(null, null);
+            if (Utilites.isnollorempty(txtCredit3.Tag))
+                txtCredit3.Tag = ((_InvSetting.AccCredit2.Trim() != "***") ? _InvSetting.AccCredit2.Trim() : "");
+            string ar = "";
+            try
+            {
+                ar = db.SelectAccRootByCode(txtCredit3.Tag.ToString()).Arb_Des;
+            }
+            catch { }
+            {
+                if (!string.IsNullOrEmpty(txtCredit3.Tag.ToString()))// && string.IsNullOrEmpty(txtCredit3.Text.ToString()) || (ar.Trim() != txtCredit3.Text.Trim()))
+                {
+                    if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+                    {
+                        txtCredit3.Text = db.SelectAccRootByCode(txtCredit3.Tag.ToString()).Arb_Des;
+                    }
+                    else
+                    {
+                        txtCredit3.Text = db.SelectAccRootByCode(txtCredit3.Tag.ToString()).Eng_Des;
+                    }
+                }
+                else
+                {
+                 
+                        txtCredit3.Text = "";
+                }
+            }
+
+            if (Utilites.isnollorempty(txtDebit3.Tag))
+
+                txtDebit3.Tag = ((_InvSetting.AccDebit2.Trim() != "***") ? _InvSetting.AccDebit2.Trim() : "");
+            try
+            {
+                ar = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Arb_Des;
+            }
+            catch { }
+
+            {
+                if (!string.IsNullOrEmpty(txtDebit3.Tag.ToString()))// && string.IsNullOrEmpty(txtDebit3.Text.ToString()) || (ar.Trim() != txtDebit3.Text.Trim()))
+                {
+                    if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+                    {
+                        txtDebit3.Text = db.SelectAccRootByCode(txtDebit3.Tag.ToString()).Arb_Des;
+                    }
+                    else
+                    {
+                        txtDebit3.Text = db.SelectAccRootByCode(txtDebit3.Tag.ToString()).Eng_Des;
+                    }
+                }
+                else
+                {
+                    if (txtCustNo.Text != "")
+                    {
+                        txtDebit3.Text = txtCustName.Text;
+                        txtDebit3.Tag = txtCustNo.Text;
+
+
+
+                    }
+                    else
+                        txtDebit3.Text = "";
+                }
+            }
         }
+
+        //private void checkBox_NetWork_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    InvModeChanged();
+        //    doubleInput_NetWorkLoc_Leave(null, null);
+        //    if (Utilites.isnollorempty(txtCredit3.Tag))
+            
+        //        txtCredit3.Tag = ((_InvSetting.AccCredit2.Trim() != "***") ? _InvSetting.AccCredit2.Trim() : "");
+        //    {
+        //        if (!string.IsNullOrEmpty(txtCredit3.Tag.ToString()))
+        //        {
+        //            if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+        //            {
+        //                txtCredit3.Text = db.SelectAccRootByCode(txtCredit3.Tag.ToString()).Arb_Des;
+        //            }
+        //            else
+        //            {
+        //                txtCredit3.Text = db.SelectAccRootByCode(txtCredit3.Tag.ToString()).Eng_Des;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            txtCredit3.Text = "";
+        //        }
+                
+
+        //    }
+        //    if (Utilites.isnollorempty(txtDebit3.Tag))
+            
+        //        txtDebit3.Tag = ((_InvSetting.AccDebit2.Trim() != "***") ? _InvSetting.AccDebit2.Trim() : "");
+        //    {
+        //        if (!string.IsNullOrEmpty(txtDebit3.Tag.ToString()))
+        //        {
+        //            if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+        //            {
+        //                txtDebit3.Text = db.SelectAccRootByCode(txtDebit3.Tag.ToString()).Arb_Des;
+        //            }
+        //            else
+        //            {
+        //                txtDebit3.Text = db.SelectAccRootByCode(txtDebit3.Tag.ToString()).Eng_Des;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            txtDebit3.Text = "";
+        //        }
+        //    }
+        //}
+      
+        
         private void button_SrchCustNo_Click(object sender, EventArgs e)
         {
             Button_Edit_Click(sender, e);
@@ -4474,7 +4811,7 @@ namespace InvAcc.Forms
                 Button_PrintTable.Text = "عــرض";
                 Button_PrintTable.Tooltip = "F5";
                 Button_PrintTableMulti.Text = "طباعة الفواتير المحددة";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "طباعة" : "عــرض");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "طباعة" : "عــرض");
                 buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "تصدير";
                 Button_ExportTable2.Tooltip = "F10";
@@ -4583,7 +4920,7 @@ namespace InvAcc.Forms
                 Button_PrintTable.Text = "Show";
                 Button_PrintTable.Tooltip = "F5";
                 Button_PrintTableMulti.Text = "Print of the invoices selected";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "Print" : "Show");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "Print" : "Show");
                 buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "Export";
                 Button_ExportTable2.Tooltip = "F10";
@@ -4896,7 +5233,7 @@ namespace InvAcc.Forms
                 label_Curr.Visible = false;
                 try
                 {
-                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(0, 1) == "0")
+                  //  if (_InvSetting.InvpRINTERInfo.nTyp.Substring(0, 1) == "0")
                     {
                         //buttonItem_Order5_Print.Visible = false;
                     }
@@ -4978,7 +5315,7 @@ namespace InvAcc.Forms
             }
             try
             {
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                 {
                     ChkA4Cahir.Text = "Csh";
                 }
@@ -6230,6 +6567,16 @@ namespace InvAcc.Forms
         }
         public void SetData(T_INVHED value)
         {
+            txtCredit2.Tag = "";
+            txtCredit2.Text = "";
+            txtDebit2.Tag = "";
+            txtDebit2.Text = "";
+            txtCredit1.Text = "";
+            txtDebit1.Tag = "";
+            txtCredit3.Tag = "";
+            txtCredit3.Text = "";
+            txtDebit3.Tag = "";
+            txtDebit3.Text = "";
             ChkPriceIncludeTax.Value = (value.PriceIncludTax == true ? true : false);
             ChkPriceIncludeTax_ValueChanged(null, null);
             //   ChkPriceIncludeTax.Enabled = false;
@@ -6983,6 +7330,16 @@ namespace InvAcc.Forms
         }
         public void SetDataRt(T_INVHED value)
         {
+            txtCredit2.Tag = "";
+            txtCredit2.Text = "";
+            txtDebit2.Tag = "";
+            txtDebit2.Text = "";
+            txtCredit1.Text = "";
+            txtDebit1.Tag = "";
+            txtCredit3.Tag = "";
+            txtCredit3.Text = "";
+            txtDebit3.Tag = "";
+            txtDebit3.Text = "";
             switchButton_Lock.ValueChanged -= switchButton_Lock_ValueChanged;
             try
             {
@@ -15487,7 +15844,7 @@ namespace InvAcc.Forms
                         continue;
                     }
                     vRowBarcode = iiCnt;
-                    for (int i = 0; (double)i < ((VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 32) && _InvSettingBarCod.nTyp.Substring(2, 1) == "1") ? double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(vRowBarcode, 7)))) : 1.0); i++)
+                    for (int i = 0; (double)i < ((VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 32) && _InvSettingBarCod.ISdirectPrinting) ? double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(vRowBarcode, 7)))) : 1.0); i++)
                     {
                         PrintSet2();
                         prnt_prev = new PrintPreviewDialog();
@@ -15525,7 +15882,7 @@ namespace InvAcc.Forms
                         }
                         try
                         {
-                            if (_InvSettingBarCod.nTyp.Substring(2, 1) == "1")
+                            if (_InvSettingBarCod.ISdirectPrinting)
                             {
                                 prnt_doc2.Print();
                                 continue;
@@ -17251,8 +17608,9 @@ namespace InvAcc.Forms
              ProShared. DroBoxSync.Frm_PrinterShow f = new  ProShared. DroBoxSync.Frm_PrinterShow(VarGeneral.InvTyp);
             f.TopMost = true;
             f.ShowDialog();
-            _InvSetting.InvpRINTERInfo.nTyp =  ProShared. DroBoxSync.Frm_PrinterShow.PLSetting;
-        }
+                dbInstance = null;
+            _InvSetting = db.StockPrinterSetting(VarGeneral.UserID, VarGeneral.InvTyp).InvInfo;
+            buttonItem_Print.Text = (_InvSetting.ISdirectPrinting ? (LangArEn == 0 ? "طباعة" : "Print") : (LangArEn == 0 ? "عرض" : "Preview"));}
         private void ChkPriceIncludeTax_ValueChanged(object sender, EventArgs e)
         {
             if (State != FormState.New)

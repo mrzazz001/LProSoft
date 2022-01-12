@@ -162,7 +162,7 @@ namespace InvAcc.Forms
                     {
                         ChkPTable.Checked = true;
                     }
-                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "0")
+                    if (_InvSetting.InvpRINTERInfo.ISCashierType)
                     {
                         RedButPaperA4.Checked = false;
                         RedButCasher.Checked = true;

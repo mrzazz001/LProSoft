@@ -2366,7 +2366,7 @@ namespace InvAcc.Forms
                         catch
                         {
                         }
-                        if (_InvSetting.nTyp.Substring(2, 1) == "1")
+                        if (_InvSetting.ISdirectPrinting)
                         {
                             PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                         }
@@ -2883,7 +2883,7 @@ namespace InvAcc.Forms
                         catch
                         {
                         }
-                        if (_InvSetting.nTyp.Substring(2, 1) == "1")
+                        if (_InvSetting.ISdirectPrinting)
                         {
                             PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                         }
@@ -2945,7 +2945,7 @@ namespace InvAcc.Forms
                         }
                         else if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                         {
-                            if (VarGeneral.GeneralPrinter.nTyp_Setting.Substring(1, 1) == "0")
+                            if (VarGeneral.GeneralPrinter.Repl_ntyp_Setting.Substring(1, 1) == "0")
                             {
                                 MainCryRep = getdoc("InvAcc.Reports.RepInvoicComm");
                             }
@@ -3660,7 +3660,7 @@ namespace InvAcc.Forms
                         rpt.SetParameterValue("GDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 10) ? VarGeneral.Gdate : string.Empty);
                         rpt.SetParameterValue("vSts", false);
                         rpt.SetParameterValue("vLines", 1);
-                        if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                        if (_InvSetting.ISdirectPrinting || BarcodSts)
                         {
                             PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                         }
@@ -3834,7 +3834,7 @@ namespace InvAcc.Forms
                         rpt.SetParameterValue("GDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 10) ? VarGeneral.Gdate : string.Empty);
                         rpt.SetParameterValue("vSts", false);
                         rpt.SetParameterValue("vLines", 1);
-                        if (_InvSetting.nTyp.Substring(2, 1) == "1")
+                        if (_InvSetting.ISdirectPrinting)
                         {
                             PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                         }
@@ -4029,7 +4029,7 @@ namespace InvAcc.Forms
                         rpt.SetParameterValue("GDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 10) ? VarGeneral.Gdate : string.Empty);
                         rpt.SetParameterValue("vSts", false);
                         rpt.SetParameterValue("vLines", 1);
-                        if (_InvSetting.nTyp.Substring(2, 1) == "1")
+                        if (_InvSetting.ISdirectPrinting)
                         {
                             PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                         }
@@ -4307,7 +4307,7 @@ namespace InvAcc.Forms
                         rpt.SetParameterValue("GDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 10) ? VarGeneral.Gdate : string.Empty);
                         rpt.SetParameterValue("vSts", false);
                         rpt.SetParameterValue("vLines", 1);
-                        if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                        if (_InvSetting.ISdirectPrinting || BarcodSts)
                         {
                             PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                         }
@@ -4586,7 +4586,7 @@ namespace InvAcc.Forms
                         rpt.SetParameterValue("GDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 10) ? VarGeneral.Gdate : string.Empty);
                         rpt.SetParameterValue("vSts", false);
                         rpt.SetParameterValue("vLines", 1);
-                        if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                        if (_InvSetting.ISdirectPrinting || BarcodSts)
                         {
                             PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                         }
@@ -4768,7 +4768,7 @@ namespace InvAcc.Forms
                         rpt.SetParameterValue("GDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 10) ? VarGeneral.Gdate : string.Empty);
                         rpt.SetParameterValue("vSts", false);
                         rpt.SetParameterValue("vLines", 1);
-                        if (_InvSetting.nTyp.Substring(2, 1) == "1")
+                        if (_InvSetting.ISdirectPrinting)
                         {
                             PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                         }
@@ -4950,7 +4950,7 @@ namespace InvAcc.Forms
                         rpt.SetParameterValue("GDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 10) ? VarGeneral.Gdate : string.Empty);
                         rpt.SetParameterValue("vSts", false);
                         rpt.SetParameterValue("vLines", 1);
-                        if (_InvSetting.nTyp.Substring(2, 1) == "1")
+                        if (_InvSetting.ISdirectPrinting)
                         {
                             PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                         }
@@ -5891,7 +5891,7 @@ namespace InvAcc.Forms
                                 if ((orientationSetting.GetValueOrDefault() != 1 ? 0 : (orientationSetting.HasValue == true ? 1 : 0)) == 0)
                                 {
                                     this.STEP_Cachier_1();
-                                    if ((this.db.StockPrinterSetting(VarGeneral.UserID, 1).InvInfo.nTyp.Substring(2, 1) == "1" ? true : this.BarcodSts))
+                                    if ((this.db.StockPrinterSetting(VarGeneral.UserID, 1).InvInfo.ISdirectPrinting ? true : this.BarcodSts))
                                     {
                                         this.STEP_Cachier_2();
                                     }
@@ -5919,7 +5919,7 @@ namespace InvAcc.Forms
                             else
                             {
                                 STEP_Cachier_1();
-                                if (db.StockInvSetting( 21).nTyp.Substring(2, 1) == "1" || BarcodSts)
+                                if (db.StockInvSetting( 21).ISdirectPrinting || BarcodSts)
                                 {
                                     STEP_Cachier_2();
                                 }
@@ -6369,7 +6369,7 @@ namespace InvAcc.Forms
                             rpt.SetParameterValue("GDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 10) ? VarGeneral.Gdate : string.Empty);
                             rpt.SetParameterValue("vSts", false);
                             rpt.SetParameterValue("vLines", 1);
-                            if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                            if (_InvSetting.ISdirectPrinting || BarcodSts)
                             {
                                 PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                             }
@@ -6586,7 +6586,7 @@ namespace InvAcc.Forms
                             rpt.SetParameterValue("GDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 10) ? VarGeneral.Gdate : string.Empty);
                             rpt.SetParameterValue("vSts", false);
                             rpt.SetParameterValue("vLines", 1);
-                            if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                            if (_InvSetting.ISdirectPrinting || BarcodSts)
                             {
                                 PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                             }
@@ -12347,7 +12347,7 @@ namespace InvAcc.Forms
                 //else
                 //{
                 //    STEP_1();
-                //    if (db.StockInvSetting(1).nTyp.Substring(2, 1) == "1" || BarcodSts)
+                //    if (db.StockInvSetting(1).ISdirectPrinting || BarcodSts)
                 //    {
                 //        STEP_2();
                 //    }
@@ -12363,7 +12363,7 @@ namespace InvAcc.Forms
                 //else
                 //{
                 //    STEP_Cachier_1();
-                //    if (db.StockInvSetting(1).nTyp.Substring(2, 1) == "1" || BarcodSts)
+                //    if (db.StockInvSetting(1).ISdirectPrinting || BarcodSts)
                 //    {
                 //        STEP_Cachier_2();
                 //    }
@@ -12403,7 +12403,7 @@ namespace InvAcc.Forms
                     if ((orientationSetting.GetValueOrDefault() != 1 ? 0 : ((orientationSetting.HasValue) == true ? 1 : 0)) == 0)
                     {
                         this.STEP_1();
-                        if ((this.db.StockInvSetting( 1).nTyp.Substring(2, 1) == "1" ? true : this.BarcodSts))
+                        if ((this.db.StockInvSetting( 1).ISdirectPrinting ? true : this.BarcodSts))
                         {
                             this.STEP_2();
                         }
@@ -12926,7 +12926,7 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
-                if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                if (_InvSetting.ISdirectPrinting || BarcodSts)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, VarGeneral.Print_set_Gen_Stat ? VarGeneral.prnt_doc_Gen.PrinterSettings.PrinterName : _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }
@@ -13443,7 +13443,7 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
-                if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                if (_InvSetting.ISdirectPrinting || BarcodSts)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, VarGeneral.Print_set_Gen_Stat ? VarGeneral.prnt_doc_Gen.PrinterSettings.PrinterName : _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }
@@ -13465,7 +13465,7 @@ namespace InvAcc.Forms
                 else
                 {
                     STEP_1();
-                    if (db.StockInvSetting( 21).nTyp.Substring(2, 1) == "1" || BarcodSts)
+                    if (db.StockInvSetting( 21).ISdirectPrinting || BarcodSts)
                     {
                         STEP_2();
                     }
@@ -13941,7 +13941,7 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
-                if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                if (_InvSetting.ISdirectPrinting || BarcodSts)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }
@@ -14458,7 +14458,7 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
-                if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                if (_InvSetting.ISdirectPrinting || BarcodSts)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }
@@ -14975,7 +14975,7 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
-                if (_InvSetting.nTyp.Substring(2, 1) == "1")
+                if (_InvSetting.ISdirectPrinting)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }
@@ -15492,7 +15492,7 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
-                if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                if (_InvSetting.ISdirectPrinting || BarcodSts)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }
@@ -16009,7 +16009,7 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
-                if (_InvSetting.nTyp.Substring(2, 1) == "1")
+                if (_InvSetting.ISdirectPrinting)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }
@@ -16536,7 +16536,7 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
-                if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                if (_InvSetting.ISdirectPrinting || BarcodSts)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, VarGeneral.Print_set_Gen_Stat ? VarGeneral.prnt_doc_Gen.PrinterSettings.PrinterName : _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }
@@ -17053,7 +17053,7 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
-                if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                if (_InvSetting.ISdirectPrinting || BarcodSts)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, VarGeneral.Print_set_Gen_Stat ? VarGeneral.prnt_doc_Gen.PrinterSettings.PrinterName : _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }
@@ -17570,7 +17570,7 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
-                if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                if (_InvSetting.ISdirectPrinting || BarcodSts)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }
@@ -18087,7 +18087,7 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
-                if (_InvSetting.nTyp.Substring(2, 1) == "1")
+                if (_InvSetting.ISdirectPrinting)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }
@@ -26614,7 +26614,7 @@ namespace InvAcc.Forms
                 {
                 }
             }
-            if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+            if (_InvSetting.ISdirectPrinting || BarcodSts)
             {
                 PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, VarGeneral.Print_set_Gen_Stat ? VarGeneral.prnt_doc_Gen.PrinterSettings.PrinterName : _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
             }
@@ -26797,7 +26797,7 @@ namespace InvAcc.Forms
                 FastReport.Report rpt;
                 DataSet newData;
                 DataRow[] query;
-                if (_InvSetting.nTyp.Substring(1, 1) == "0")
+                if (_InvSetting.ISCashierType)
                 {
                     if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                     {
@@ -27156,7 +27156,7 @@ namespace InvAcc.Forms
                     catch
                     {
                     }
-                    if (db.StockInvSetting( 1).nTyp.Substring(2, 1) == "1" || BarcodSts)
+                    if (db.StockInvSetting( 1).ISdirectPrinting || BarcodSts)
                     {
                         PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                     }
@@ -27595,7 +27595,7 @@ namespace InvAcc.Forms
                     }
                 }
                 TopMost = false;
-                if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                if (_InvSetting.ISdirectPrinting || BarcodSts)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }
@@ -28133,7 +28133,7 @@ namespace InvAcc.Forms
                     }
                 }
             }
-            if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+            if (_InvSetting.ISdirectPrinting || BarcodSts)
             {
                 PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, VarGeneral.Print_set_Gen_Stat ? VarGeneral.prnt_doc_Gen.PrinterSettings.PrinterName : _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
             }
@@ -28199,7 +28199,7 @@ namespace InvAcc.Forms
                 FastReport.Report rpt;
                 DataSet newData;
                 DataRow[] query;
-                if (_InvSetting.nTyp.Substring(1, 1) == "1")
+                if (_InvSetting.ISA4PaperType)
                 {
                     if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                     {
@@ -28609,7 +28609,7 @@ namespace InvAcc.Forms
                             }
                         }
                     }
-                    if (db.StockInvSetting( 1).nTyp.Substring(2, 1) == "1" || BarcodSts)
+                    if (db.StockInvSetting( 1).ISdirectPrinting || BarcodSts)
                     {
                         PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                     }
@@ -29046,7 +29046,7 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
-                if (_InvSetting.nTyp.Substring(2, 1) == "1" || BarcodSts)
+                if (_InvSetting.ISdirectPrinting || BarcodSts)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
                 }

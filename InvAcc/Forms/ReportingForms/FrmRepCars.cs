@@ -185,7 +185,7 @@ namespace InvAcc.Forms
         {
             if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
             {
-                ButOk.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "طبـــاعة F5" : "عــــرض F5");
+                ButOk.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "طبـــاعة F5" : "عــــرض F5");
                 ButExit.Text = "خـــروج Esc";
                 expandablePanel_Cars.Text = "السيــارات";
                 expandablePanel_CarsType.Text = "أنواع السيــارات";
@@ -194,7 +194,7 @@ namespace InvAcc.Forms
             }
             else
             {
-                ButOk.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "Print F5" : "Show F5");
+                ButOk.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "Print F5" : "Show F5");
                 ButExit.Text = "Close Esc";
                 expandablePanel_Cars.Text = "Cars";
                 expandablePanel_CarsType.Text = "Car Type";

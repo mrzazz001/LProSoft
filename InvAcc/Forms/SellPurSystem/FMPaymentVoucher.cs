@@ -683,7 +683,7 @@ namespace InvAcc.Forms
                 {
                     return;
                 }
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) != "1")
+                if (!_InvSetting.InvpRINTERInfo.ISPOINTERType)
                 {
                     RepShow _RepShow = new RepShow();
                     _RepShow.Tables = "T_GDDET LEFT OUTER JOIN T_GDHEAD ON T_GDDET.gdID = T_GDHEAD.gdhead_ID LEFT OUTER JOIN T_INVSETTING ON T_GDHEAD.gdTyp = T_INVSETTING.InvID  LEFT OUTER JOIN T_Curency ON T_GDHEAD.CurTyp = T_Curency.Curency_ID LEFT OUTER JOIN T_CstTbl ON T_GDHEAD.gdCstNo = T_CstTbl.Cst_ID LEFT OUTER JOIN T_Mndob ON T_GDHEAD.gdMnd = T_Mndob.Mnd_ID LEFT OUTER JOIN T_AccDef ON T_GDDET.AccNo = T_AccDef.AccDef_No LEFT OUTER JOIN T_SYSSETTING ON T_GDHEAD.CompanyID = T_SYSSETTING.SYSSETTING_ID";
@@ -708,6 +708,8 @@ namespace InvAcc.Forms
                     }
                     try
                     {
+                        FrmReportsViewer.QRCodeData = Utilites.GetWQRCodeDataTransctions(data_this);
+
                         FrmReportsViewer frm = new FrmReportsViewer();
                         frm.Repvalue = "RepGaidSerf";
                         frm.Tag = LangArEn;
@@ -732,7 +734,7 @@ namespace InvAcc.Forms
                         if (frm2.vSts_Op)
                         {
                             VarGeneral.Snd_Gaid_Des = frm2.vSize_;
-                            if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1" || ifMultiPrint)
+                            if (_InvSetting.ISdirectPrinting || ifMultiPrint)
                             {
                                 frm._Proceess();
                                 return;
@@ -2879,7 +2881,7 @@ namespace InvAcc.Forms
                 Button_Delete.Tooltip = "F3";
                 Button_Save.Tooltip = "F2";
                 Button_Search.Tooltip = "F4";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "طباعة" : "عــرض");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "طباعة" : "عــرض");
                 buttonItem_Print.Tooltip = "F5";
                 Button_PrintTableMulti.Text = "طباعة السندات المحددة";
                 Button_ExportTable2.Text = "تصدير";
@@ -2924,7 +2926,7 @@ namespace InvAcc.Forms
                 Button_Delete.Tooltip = "F3";
                 Button_Save.Tooltip = "F2";
                 Button_Search.Tooltip = "F4";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "Print" : "Show");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "Print" : "Show");
                 buttonItem_Print.Tooltip = "F5";
                 Button_PrintTableMulti.Text = "Print of the Bounds selected";
                 Button_ExportTable2.Text = "Export";
@@ -3172,6 +3174,25 @@ namespace InvAcc.Forms
                 for (int iiCnt = 0; iiCnt < listmInvPrint.Count; iiCnt++)
                 {
                     _mInvPrint = listmInvPrint[iiCnt];
+                    if (_mInvPrint.pField == "Table.LogImg")
+                    {
+                        try
+                        {
+                            FrmReportsViewer.QRCodeData = Utilites.GetWQRCodeDataTransctions(DataThis);
+                            //  if (VarGeneral.RepData.Tables[0].Rows[iiRnt][_mInvPrint.pField] != null)
+                            {
+                                e.Graphics.DrawImage(Utilites. byteArrayToImage(Utilites.qrcodeimage()), (int)_mInvPrint.vRow, (int)_mInvPrint.vCol, 50f, 50f);
+
+                            }
+                        }
+                        catch (Exception error4)
+                        {
+                            VarGeneral.DebLog.writeLog("Print QRCODE:", error4, enable: true);
+                        }
+                        continue;
+
+                    }
+
                     if (!(_mInvPrint.vFont != "0") || _mInvPrint.vSize.Value == 0)
                     {
                         continue;
@@ -3261,7 +3282,7 @@ namespace InvAcc.Forms
             }
             RepShow _RepShow = new RepShow();
             _RepShow.Tables = "T_GDDET LEFT OUTER JOIN T_GDHEAD ON T_GDDET.gdID = T_GDHEAD.gdhead_ID LEFT OUTER JOIN T_INVSETTING ON T_GDHEAD.gdTyp = T_INVSETTING.InvID  LEFT OUTER JOIN T_Curency ON T_GDHEAD.CurTyp = T_Curency.Curency_ID LEFT OUTER JOIN T_CstTbl ON T_GDHEAD.gdCstNo = T_CstTbl.Cst_ID LEFT OUTER JOIN T_Mndob ON T_GDHEAD.gdMnd = T_Mndob.Mnd_ID LEFT OUTER JOIN T_AccDef ON T_GDDET.AccNo = T_AccDef.AccDef_No LEFT OUTER JOIN T_SYSSETTING ON T_GDHEAD.CompanyID = T_SYSSETTING.SYSSETTING_ID ";
-            string Fields = " CASE WHEN T_GDDET.gdValue > 0 THEN T_GDDET.gdValue ELSE 0 END as DebitBala , CASE WHEN T_GDDET.gdValue < 0 THEN Abs(T_GDDET.gdValue) ELSE 0 END as CreditBala , T_Curency.Arb_Des as Arb_Cur , T_Curency.Eng_Des as Eng_Cur , T_Curency.Rate, T_CstTbl.Arb_Des as Arb_Cst, T_CstTbl.Eng_Des as Eng_Cst , T_Mndob.Arb_Des as Arb_Mnd, T_Mndob.Eng_Des as Eng_Mnd , T_GDHEAD.* , T_GDDET.AccNo as AccDef_No,T_AccDef.Arb_Des ,T_AccDef.Eng_Des ,T_GDDET.gdDes,T_GDDET.gdDesE,T_SYSSETTING.LogImg,(select InvNamA from T_INVSETTING where T_GDHEAD.gdTyp = T_INVSETTING.InvID ) as InvNamA,(select InvNamE from T_INVSETTING where T_GDHEAD.gdTyp = T_INVSETTING.InvID ) as InvNamE,(select InvTypA0 from T_INVSETTING where T_GDHEAD.gdTyp = T_INVSETTING.InvID ) as InvTypA0 ,T_CstTbl.Cst_No,(select T_AccDef.Arb_Des from T_AccDef where T_AccDef.AccDef_No = (select (x.AccNo) from T_GDDET as x where x.gdID = (T_GDDET.gdID) and x.Lin = 1 )) as ch,(select T_AccDef.Eng_Des from T_AccDef where T_AccDef.AccDef_No = (select (x.AccNo) from T_GDDET as x where x.gdID = (T_GDDET.gdID) and x.Lin = 1 )) as tm,(select T_AccDef.Arb_Des from T_AccDef where T_AccDef.AccDef_No = (select (x.AccNo) from T_GDDET as x where x.gdID = (T_GDDET.gdID) and x.Lin = 0 )) as dt,(select T_AccDef.Eng_Des from T_AccDef where T_AccDef.AccDef_No = (select (x.AccNo) from T_GDDET as x where x.gdID = (T_GDDET.gdID) and x.Lin = 0 )) as curr,(select max(T_AccDef.Arb_Des) from T_AccDef where AccDef_No = (select max(x.AccNo) from T_GDDET x where x.gdID = (T_GDDET.gdID) and Lin = 1)) as CusVenNm,(select max(T_AccDef.Eng_Des) from T_AccDef where AccDef_No = (select max(x.AccNo) from T_GDDET x where x.gdID = (T_GDDET.gdID) and Lin = 1)) as CusVenNmE,(select max(T_AccDef.PersonalNm) from T_AccDef where AccDef_No = (select max(x.AccNo) from T_GDDET x where x.gdID = (T_GDDET.gdID) and Lin = 1)) as PersonalNm,(select max(T_AccDef.City) from T_AccDef where AccDef_No = (select max(x.AccNo) from T_GDDET x where x.gdID = (T_GDDET.gdID) and Lin = 1)) as City,(select max(T_AccDef.Email) from T_AccDef where AccDef_No = (select max(x.AccNo) from T_GDDET x where x.gdID = (T_GDDET.gdID) and Lin = 1)) as Email,(select max(T_AccDef.Mobile) from T_AccDef where AccDef_No = (select max(x.AccNo) from T_GDDET x where x.gdID = (T_GDDET.gdID) and Lin = 1)) as Mobile";
+            string Fields = " CASE WHEN T_GDDET.gdValue > 0 THEN T_GDDET.gdValue ELSE 0 END as DebitBala , CASE WHEN T_GDDET.gdValue < 0 THEN Abs(T_GDDET.gdValue) ELSE 0 END as CreditBala , T_Curency.Arb_Des as Arb_Cur , T_Curency.Eng_Des as Eng_Cur , T_Curency.Rate, T_CstTbl.Arb_Des as Arb_Cst, T_CstTbl.Eng_Des as Eng_Cst , T_Mndob.Arb_Des as Arb_Mnd, T_Mndob.Eng_Des as Eng_Mnd , T_GDHEAD.* , T_GDDET.AccNo as AccDef_No,T_AccDef.Arb_Des ,T_AccDef.Eng_Des ,T_GDDET.gdDes,T_GDDET.gdDesE,T_SYSSETTING.LogImg,(select InvNamA from T_INVSETTING where T_GDHEAD.gdTyp = T_INVSETTING.InvID ) as InvNamA,(select InvNamE from T_INVSETTING where T_GDHEAD.gdTyp = T_INVSETTING.InvID ) as InvNamE,T_GDHEAD.gdMem as InvTypA0 ,T_CstTbl.Cst_No,(select T_AccDef.Arb_Des from T_AccDef where T_AccDef.AccDef_No = (select (x.AccNo) from T_GDDET as x where x.gdID = (T_GDDET.gdID) and x.Lin = 1 )) as ch,(select T_AccDef.Eng_Des from T_AccDef where T_AccDef.AccDef_No = (select (x.AccNo) from T_GDDET as x where x.gdID = (T_GDDET.gdID) and x.Lin = 1 )) as tm,(select T_AccDef.Arb_Des from T_AccDef where T_AccDef.AccDef_No = (select (x.AccNo) from T_GDDET as x where x.gdID = (T_GDDET.gdID) and x.Lin = 0 )) as dt,(select T_AccDef.Eng_Des from T_AccDef where T_AccDef.AccDef_No = (select (x.AccNo) from T_GDDET as x where x.gdID = (T_GDDET.gdID) and x.Lin = 0 )) as curr,(select max(T_AccDef.Arb_Des) from T_AccDef where AccDef_No = (select max(x.AccNo) from T_GDDET x where x.gdID = (T_GDDET.gdID) and Lin = 1)) as CusVenNm,(select max(T_AccDef.Eng_Des) from T_AccDef where AccDef_No = (select max(x.AccNo) from T_GDDET x where x.gdID = (T_GDDET.gdID) and Lin = 1)) as CusVenNmE,(select max(T_AccDef.PersonalNm) from T_AccDef where AccDef_No = (select max(x.AccNo) from T_GDDET x where x.gdID = (T_GDDET.gdID) and Lin = 1)) as PersonalNm,(select max(T_AccDef.City) from T_AccDef where AccDef_No = (select max(x.AccNo) from T_GDDET x where x.gdID = (T_GDDET.gdID) and Lin = 1)) as City,(select max(T_AccDef.Email) from T_AccDef where AccDef_No = (select max(x.AccNo) from T_GDDET x where x.gdID = (T_GDDET.gdID) and Lin = 1)) as Email,(select max(T_AccDef.Mobile) from T_AccDef where AccDef_No = (select max(x.AccNo) from T_GDDET x where x.gdID = (T_GDDET.gdID) and Lin = 1)) as Mobile";
             VarGeneral.HeaderRep[0] = Text;
             VarGeneral.HeaderRep[1] = "";
             VarGeneral.HeaderRep[2] = "";
@@ -3561,7 +3582,7 @@ namespace InvAcc.Forms
              ProShared. DroBoxSync.Frm_PrinterShow f = new  ProShared. DroBoxSync.Frm_PrinterShow(VarGeneral.InvTyp);
             f.TopMost = true;
             f.ShowDialog();
-            _InvSetting.InvpRINTERInfo.nTyp =  ProShared. DroBoxSync.Frm_PrinterShow.PLSetting;
+            _InvSetting.InvpRINTERInfo.Repl_ntyp =  ProShared. DroBoxSync.Frm_PrinterShow.PLSetting;
         }
         private void buttonItem_Print_Click_1(object sender, EventArgs e)
         {

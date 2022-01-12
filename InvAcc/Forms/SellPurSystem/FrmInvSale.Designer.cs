@@ -981,7 +981,7 @@ private void InitializeComponent()
             this.button_opendraft.Checked = true;
             this.button_opendraft.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.button_opendraft.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button_opendraft.Location = new System.Drawing.Point(31, 3);
+            this.button_opendraft.Location = new System.Drawing.Point(30, 4);
             this.button_opendraft.Name = "button_opendraft";
             this.button_opendraft.Size = new System.Drawing.Size(113, 24);
             this.button_opendraft.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1004,7 +1004,7 @@ private void InitializeComponent()
             this.button_Draft.Checked = true;
             this.button_Draft.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.button_Draft.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button_Draft.Location = new System.Drawing.Point(151, 3);
+            this.button_Draft.Location = new System.Drawing.Point(150, 4);
             this.button_Draft.Name = "button_Draft";
             this.button_Draft.Size = new System.Drawing.Size(113, 24);
             this.button_Draft.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;

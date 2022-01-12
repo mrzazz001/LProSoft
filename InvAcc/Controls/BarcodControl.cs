@@ -87,7 +87,7 @@ namespace InvAcc.Controls
                         {
                             continue;
                         }
-                        if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
+                        if (_InvSetting.ISdirectPrinting)
                         {
                             checkBox_previewPrint.Checked = false;
                         }

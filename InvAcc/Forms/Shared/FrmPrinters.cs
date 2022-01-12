@@ -38,187 +38,171 @@ namespace InvAcc.Forms
             {
                 tabControl1.TabPages.Remove(tabPage5);
             }
-            CmbPrinterRep.Click += Button_Edit_Click;
-            CmbPaperSizeRep.Click += Button_Edit_Click;
-            RButLandscapeRep.Click += Button_Edit_Click;
-            RButPortraitRep.Click += Button_Edit_Click;
-            RadRepA4.Click += Button_Edit_Click;
-            RadRepCashier.Click += Button_Edit_Click;
-            txtpageCountRep.Click += Button_Edit_Click;
-            txtLinePageRep.Click += Button_Edit_Click;
-            txtRightRep.Click += Button_Edit_Click;
-            txtLeftMRep.Click += Button_Edit_Click;
-            txtTopMRep.Click += Button_Edit_Click;
-            txtBottMRep.Click += Button_Edit_Click;
+            CmbPrinter_Reports.Click += Button_Edit_Click;
+            CmbPaperSizeRep_Reports.Click += Button_Edit_Click;
+            RButLandscapeRep_Reports.Click += Button_Edit_Click;
+            RButPortraitRep_Reports.Click += Button_Edit_Click;
+            RadRepA4_Reports.Click += Button_Edit_Click;
+            RadRepCashier_Reports.Click += Button_Edit_Click;
+            txtpageCountRep_Reports.Click += Button_Edit_Click;
+            txtLinePageRep_Reports.Click += Button_Edit_Click;
+            txtRightRep_Reports.Click += Button_Edit_Click;
+            txtLeftMRep_Reports.Click += Button_Edit_Click;
+            txtTopM_Reports.Click += Button_Edit_Click;
+            txtBottMRep_Reports.Click += Button_Edit_Click;
             listInvSetting1 = db1.StockInvSettingList(VarGeneral.UserID);
-            txtBottM3.Click += Button_Edit_Click;
+            txtBottM_Sandatat.Click += Button_Edit_Click;
             txtDistance.Click += Button_Edit_Click;
-            checkBox_previewPrintRep.Click += Button_Edit_Click;
-            txtLeftM3.Click += Button_Edit_Click;
-            txtLinePage3.Click += Button_Edit_Click;
+            DirectOption_Reports.Click += Button_Edit_Click;
+            txtLeftM_Sandatat.Click += Button_Edit_Click;
+            txtLinePage_Sandatat.Click += Button_Edit_Click;
             txtpageCount3.Click += Button_Edit_Click;
-            txtRight3.Click += Button_Edit_Click;
-            txtTopM3.Click += Button_Edit_Click;
+            txtRight_Sandatat.Click += Button_Edit_Click;
+            txtTopM_Sandatat.Click += Button_Edit_Click;
             txtDistance.Click += Button_Edit_Click;
-            checkBox_previewPrint3.Click += Button_Edit_Click;
-            RButLandscape3.Click += Button_Edit_Click;
+            DirectPrinter_Sandatat.Click += Button_Edit_Click;
+            RButLandscape_Sandatat.Click += Button_Edit_Click;
             RButPortrait3.Click += Button_Edit_Click;
-            CmbInvType3.Click += Button_Edit_Click;
-            CmbPaperSize3.Click += Button_Edit_Click;
-            CmbPrinter3.Click += Button_Edit_Click;
-            listInvSetting3 = db3.StockInvSettingList(VarGeneral.UserID);
+            CmBType_Sandatat.Click += Button_Edit_Click;
+            CmbPaperSize_Sandatat.Click += Button_Edit_Click;
+            CmpPrinter__Sandatat.Click += Button_Edit_Click;
+            listInvSetting3 = db1.StockInvSettingList(VarGeneral.UserID);
             _SettingType2 = 0;
             txtBottM.Click += Button_Edit_Click;
             txtDistance.Click += Button_Edit_Click;
-            txtLeftM.Click += Button_Edit_Click;
+            txtLeftM_Barcode.Click += Button_Edit_Click;
             txtLinePage.Click += Button_Edit_Click;
-            txtpageCount.Click += Button_Edit_Click;
+            txtpageCount_Barcode.Click += Button_Edit_Click;
             txtRight.Click += Button_Edit_Click;
-            txtTopM.Click += Button_Edit_Click;
+            txtTopM_Barcode.Click += Button_Edit_Click;
             chk_Stoped.Click += Button_Edit_Click;
             checkBox_WaiterAll.Click += Button_Edit_Click;
             txtDistance.Click += Button_Edit_Click;
             textBox_CachierTxtA.Click += Button_Edit_Click;
             textBox_CachierTxtE.Click += Button_Edit_Click;
-            checkBox_previewPrint.Click += Button_Edit_Click;
+            DirectOption_Barcode.Click += Button_Edit_Click;
             RButLandscape.Click += Button_Edit_Click;
             RButPortrait.Click += Button_Edit_Click;
             CmbInvType.Click += Button_Edit_Click;
             CmbPaperSize.Click += Button_Edit_Click;
-            CmbPrinter.Click += Button_Edit_Click;
-            listInvSetting2 = db2.StockInvSettingList(VarGeneral.UserID);
+            cmPrinter_Barcode.Click += Button_Edit_Click;
+            listInvSetting2 = db1.StockInvSettingList(VarGeneral.UserID).Where(i=>i.InvID!=1091).ToList();
             if (Program.isScriptOf("SecriptInvitationCards.dll"))
             {
-                listInvSetting2 = db2.T_INVSETTINGs.Where((T_INVSETTING t) => t.InvID == 1 || t.InvID == 8).ToList();
+                listInvSetting2 = db1.T_INVSETTINGs.Where((T_INVSETTING t) => t.InvID == 1 || t.InvID == 8).ToList();
             }
             if (Program.isScriptOf("SecriptSchool.dll"))
             {
-                listInvSetting2 = db2.T_INVSETTINGs.Where((T_INVSETTING t) => t.InvID == 1 || t.InvID == 2 || t.InvID == 3 || t.InvID == 4 || t.InvID == 7 || t.InvID == 8 || t.InvID == 9 || t.InvID == 10 || t.InvID == 14).ToList();
+                listInvSetting2 = db1.T_INVSETTINGs.Where((T_INVSETTING t) => t.InvID == 1 || t.InvID == 2 || t.InvID == 3 || t.InvID == 4 || t.InvID == 7 || t.InvID == 8 || t.InvID == 9 || t.InvID == 10 || t.InvID == 14).ToList();
             }
             if (Program.isScriptOf("SecriptMaintenanceCars.dll"))
             {
-                listInvSetting2 = db2.T_INVSETTINGs.Where((T_INVSETTING t) => t.InvID == 1 || t.InvID == 2 || t.InvID == 3 || t.InvID == 4 || t.InvID == 7).ToList();
+                listInvSetting2 = db1.T_INVSETTINGs.Where((T_INVSETTING t) => t.InvID == 1 || t.InvID == 2 || t.InvID == 3 || t.InvID == 4 || t.InvID == 7).ToList();
             }
             if (Program.isScriptOf("SecriptTegnicalCollage.dll"))
             {
-                listInvSetting2 = db2.T_INVSETTINGs.Where((T_INVSETTING t) => t.InvID == 2 || t.InvID == 4 || t.InvID == 9 || t.InvID == 10 || t.InvID == 14 || t.InvID == 17 || t.InvID == 20).ToList();
+                listInvSetting2 = db1.T_INVSETTINGs.Where((T_INVSETTING t) => t.InvID == 2 || t.InvID == 4 || t.InvID == 9 || t.InvID == 10 || t.InvID == 14 || t.InvID == 17 || t.InvID == 20).ToList();
             }
             if (Program.isScriptOf("SecriptWaterPackages.dll"))
             {
-                listInvSetting2 = db2.T_INVSETTINGs.Where((T_INVSETTING t) => t.InvID == 1 || t.InvID == 2 || t.InvID == 3 || t.InvID == 4 || t.InvID == 5 || t.InvID == 6 || t.InvID == 7 || t.InvID == 8 || t.InvID == 9 || t.InvID == 10 || t.InvID == 14).ToList();
+                listInvSetting2 = db1.T_INVSETTINGs.Where((T_INVSETTING t) => t.InvID == 1 || t.InvID == 2 || t.InvID == 3 || t.InvID == 4 || t.InvID == 5 || t.InvID == 6 || t.InvID == 7 || t.InvID == 8 || t.InvID == 9 || t.InvID == 10 || t.InvID == 14).ToList();
             }
         }
         void filldatarep()
         {
-            CmbPrintTyp.Items.Clear();
-            CmbPrintTyp.Items.Add("فاتورة المبيعات فقط");
-            CmbPrintTyp.Items.Add("اعدادات التصنيفات فقط");
-            CmbPrintTyp.Items.Add("الكــــل");
-            CmbPrinterRep.Items.Clear();
+            cmbType_Reports.Items.Clear();
+            cmbType_Reports.Items.Add("فاتورة المبيعات فقط");
+            cmbType_Reports.Items.Add("اعدادات التصنيفات فقط");
+            cmbType_Reports.Items.Add("الكــــل");
+            CmbPrinter_Reports.Items.Clear();
             PrinterSettings PrintS = new PrinterSettings();
             if (PrinterSettings.InstalledPrinters.Count != 0)
             {
                 for (int iiCnt = 0; iiCnt < PrinterSettings.InstalledPrinters.Count; iiCnt++)
                 {
-                    CmbPrinterRep.Items.Add(PrinterSettings.InstalledPrinters[iiCnt]);
+                    CmbPrinter_Reports.Items.Add(PrinterSettings.InstalledPrinters[iiCnt]);
                 }
-                CmbPrinterRep.SelectedIndex = 0;
+                CmbPrinter_Reports.SelectedIndex = 0;
                 if (!string.IsNullOrEmpty(VarGeneral.PrintNam))
                 {
-                    CmbPrinterRep.Text = VarGeneral.PrintNam;
+                    CmbPrinter_Reports.Text = VarGeneral.PrintNam;
                 }
                 else
                 {
-                    CmbPrinterRep.Text = PrintS.DefaultPageSettings.PrinterSettings.PrinterName;
+                    CmbPrinter_Reports.Text = PrintS.DefaultPageSettings.PrinterSettings.PrinterName;
                 }
             }
         }
         void binddatarep()
         {
-            repsystemsetings = dprep.StockPrinterSetting(VarGeneral.UserID, 1091);
-            if (repsystemsetings.nTyp_Setting.Length == 2)
-                repsystemsetings.nTyp_Setting = "1" + repsystemsetings.nTyp_Setting;
-            string ntyp = repsystemsetings.nTyp_Setting;
-            CmbPrinterRep.Text = repsystemsetings.defPrn_Setting;
-            if (ntyp.Substring(1, 1) == "0")
+            repsystemsetings = db1.StockPrinterSetting(VarGeneral.UserID, 1091);
+            if (repsystemsetings.Repl_ntyp_Setting.Length == 2)
+                repsystemsetings.Repl_ntyp_Setting = "1" + repsystemsetings.Repl_ntyp_Setting;
+            string ntyp = repsystemsetings.Repl_ntyp_Setting;
+            CmbPrinter_Reports.Text = repsystemsetings.defPrn_Setting;
+           
             {
-                RadRepA4.Checked = true;
-                RadRepCashier.Checked = false;
-                RadRepPointer.Checked = false;
+                RadRepA4_Reports.Checked = repsystemsetings.ISA4PaperType;
+                RadRepCashier_Reports.Checked = repsystemsetings.ISCashierType;
+                RadRepPointer_Reports.Checked = repsystemsetings.ISPOINTERType;
             }
-            else if (ntyp.Substring(1, 1) == "1")
+         
+           
             {
-                RadRepA4.Checked = false;
-                RadRepCashier.Checked = true;
-                RadRepPointer.Checked = false;
-
+                DirectOption_Reports.Checked = repsystemsetings.ISdirectPrinting;
             }
-            else if (ntyp.Substring(1, 1) == "2")
+            txtBottMRep_Reports.Value = repsystemsetings.hAs_Setting.Value;
+            txtLeftMRep_Reports.Value = repsystemsetings.hYs_Setting.Value;
+            txtLinePageRep_Reports.Value = (int)repsystemsetings.lnPg_Setting.Value;
+            if (txtLinePageRep_Reports.Value <= 0)
             {
-                RadRepA4.Checked = false;
-                RadRepCashier.Checked = false;
-                RadRepPointer.Checked = true;
-
-            }
-            if (repsystemsetings.nTyp_Setting.Substring(2, 1) == "0")
-            {
-                checkBox_previewPrintRep.Checked = true;
+                txtLinePageRep_Reports.LockUpdateChecked = false;
             }
             else
             {
-                checkBox_previewPrintRep.Checked = false;
+                txtLinePageRep_Reports.LockUpdateChecked = true;
             }
-            txtBottMRep.Value = repsystemsetings.hAs_Setting.Value;
-            txtLeftMRep.Value = repsystemsetings.hYs_Setting.Value;
-            txtLinePageRep.Value = (int)repsystemsetings.lnPg_Setting.Value;
-            if (txtLinePageRep.Value <= 0)
-            {
-                txtLinePageRep.LockUpdateChecked = false;
-            }
-            else
-            {
-                txtLinePageRep.LockUpdateChecked = true;
-            }
-            txtRightRep.Value = repsystemsetings.hYm_Setting.Value;
-            txtTopMRep.Value = repsystemsetings.hAl_Setting.Value;
-            txtpageCountRep.Value = repsystemsetings.DefLines_Setting.Value;
+            txtRightRep_Reports.Value = repsystemsetings.hYm_Setting.Value;
+            txtTopM_Reports.Value = repsystemsetings.hAl_Setting.Value;
+            txtpageCountRep_Reports.Value = repsystemsetings.DefLines_Setting.Value;
             txtDistance.Value = repsystemsetings.lnSpc_Setting.Value;
             if (!string.IsNullOrEmpty(repsystemsetings.defSizePaper_Setting))
             {
-                CmbPaperSizeRep.Items.Clear();
-                CmbPaperSizeRep.Items.Add(repsystemsetings.defSizePaper_Setting);
-                CmbPaperSizeRep.SelectedIndex = 0;
+                CmbPaperSizeRep_Reports.Items.Clear();
+                CmbPaperSizeRep_Reports.Items.Add(repsystemsetings.defSizePaper_Setting);
+                CmbPaperSizeRep_Reports.SelectedIndex = 0;
             }
             if (repsystemsetings.Orientation_Setting.Value == 1)
             {
-                RButPortraitRep.Checked = true;
+                RButPortraitRep_Reports.Checked = true;
             }
             else
             {
-                RButLandscapeRep.Checked = true;
+                RButLandscapeRep_Reports.Checked = true;
             }
             ChkPTable.Visible = false;
-            ChkPTable3.Visible = false;
+            ChkPTable3_Sandatat.Visible = false;
         }
-        private bool SaveData1()
+        private bool savingBarcodeSetting()
         {
             try
             {
-
+                dbInstance1 = null;
+             T_Printer      _InvSetting1 = db1.StockPrinterSetting(VarGeneral.UserID, 22);
                 string ntyp = "10";
-                ntyp = (checkBox_previewPrint.Checked ? (ntyp + "1") : (ntyp + "0"));
-                _InvSetting1.nTyp = ntyp;
-                _InvSetting1.hAs = txtWidth.Value;
-                _InvSetting1.hYs = txtLeftM.Value;
-                _InvSetting1.lnPg = txtNumRows.Value;
-                _InvSetting1.hYm = txtHeight.Value;
-                _InvSetting1.hAl = txtTopM.Value;
-                _InvSetting1.lnSpc = txtNumCols.Value;
-                _InvSetting1.InvInfo.InvNum = txtBarHeigth.Value;
-                _InvSetting1.InvInfo.InvNum1 = txtBarWidth.Value;
-                _InvSetting1.defPrn = CmbPrinter.Text ?? "";
-                _InvSetting1.DefLines = txtpageCount.Value;
-                _InvSetting1.InvTypA4 = (checkBox_Collate.Checked ? "1" : "0");
+                ntyp = (DirectOption_Barcode.Checked ? (ntyp + "1") : (ntyp + "0"));
+                _InvSetting1.ISdirectPrinting = DirectOption_Barcode.Checked;
+                _InvSetting1.hAs = txtWidth_Barcode.Value;
+                _InvSetting1.hYs = txtLeftM_Barcode.Value;
+                _InvSetting1.lnPg = txtNumRows_Barcode.Value;
+                _InvSetting1.hYm = txtHeight_Barcode.Value;
+                _InvSetting1.hAl = txtTopM_Barcode.Value;
+                _InvSetting1.lnSpc = txtNumCols_Barcode.Value;
+                _InvSetting1.InvInfo.InvNum = txtBarHeigth_Barcode.Value;
+                _InvSetting1.InvInfo.InvNum1 = txtBarWidth_Barcode.Value;
+                _InvSetting1.defPrn = cmPrinter_Barcode.Text ?? "";
+                _InvSetting1.DefLines = txtpageCount_Barcode.Value;
+                _InvSetting1.InvTypA4 = (ColleteOptionBarcode.Checked ? "1" : "0");
                 db1.Log = VarGeneral.DebugLog;
                 db1.SubmitChanges(ConflictMode.ContinueOnConflict);
                 //   MessageBox.Show((LangArEn == 0) ? "لقد تم اتمام العملية بنجاح .." : "This Opration Is Done", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -238,45 +222,45 @@ namespace InvAcc.Forms
 
                     _InvSetting1 = db1.StockPrinterSetting(VarGeneral.UserID, 22);
 
-                    if (_InvSetting1.nTyp.Substring(2, 1) == "1")
+                    if (_InvSetting1.ISdirectPrinting)
                     {
-                        checkBox_previewPrint.Checked = true;
+                        DirectOption_Barcode.Checked = true;
                     }
                     else
                     {
-                        checkBox_previewPrint.Checked = false;
+                        DirectOption_Barcode.Checked = false;
                     }
-                    CmbPrinter.Text = _InvSetting1.defPrn;
-                    txtWidth.Text = _InvSetting1.hAs.ToString();
-                    txtLeftM.Text = _InvSetting1.hYs.ToString();
-                    txtNumRows.Text = _InvSetting1.lnPg.ToString();
-                    txtHeight.Text = _InvSetting1.hYm.ToString();
-                    txtTopM.Text = _InvSetting1.hAl.ToString();
-                    txtNumCols.Text = _InvSetting1.lnSpc.ToString();
-                    txtBarHeigth.Text = _InvSetting1.InvInfo.InvNum.ToString();
-                    txtBarWidth.Text = _InvSetting1.InvInfo.InvNum1.ToString();
-                    txtpageCount.Value = _InvSetting1.DefLines.Value;
+                    cmPrinter_Barcode.Text = _InvSetting1.defPrn;
+                    txtWidth_Barcode.Text = _InvSetting1.hAs.ToString();
+                    txtLeftM_Barcode.Text = _InvSetting1.hYs.ToString();
+                    txtNumRows_Barcode.Text = _InvSetting1.lnPg.ToString();
+                    txtHeight_Barcode.Text = _InvSetting1.hYm.ToString();
+                    txtTopM_Barcode.Text = _InvSetting1.hAl.ToString();
+                    txtNumCols_Barcode.Text = _InvSetting1.lnSpc.ToString();
+                    txtBarHeigth_Barcode.Text = _InvSetting1.InvInfo.InvNum.ToString();
+                    txtBarWidth_Barcode.Text = _InvSetting1.InvInfo.InvNum1.ToString();
+                    txtpageCount_Barcode.Value = _InvSetting1.DefLines.Value;
                     try
                     {
                         if (!string.IsNullOrEmpty(_InvSetting1.InvTypA4))
                         {
                             if (_InvSetting1.InvTypA4 == "0")
                             {
-                                checkBox_Collate.Checked = false;
+                                ColleteOptionBarcode.Checked = false;
                             }
                             else
                             {
-                                checkBox_Collate.Checked = true;
+                                ColleteOptionBarcode.Checked = true;
                             }
                         }
                         else
                         {
-                            checkBox_Collate.Checked = false;
+                            ColleteOptionBarcode.Checked = false;
                         }
                     }
                     catch
                     {
-                        checkBox_Collate.Checked = false;
+                        ColleteOptionBarcode.Checked = false;
                     }
 
 
@@ -287,7 +271,7 @@ namespace InvAcc.Forms
                 }
             }
             ChkPTable.Visible = false;
-            ChkPTable3.Visible = false;
+            ChkPTable3_Sandatat.Visible = false;
         }
         private void FillCombo1()
         {
@@ -298,21 +282,21 @@ namespace InvAcc.Forms
 #pragma warning restore CS0219 // The variable '_CmbIndex' is assigned but its value is never used
                 if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
                 {
-                    CmbPrinter.Items.Clear();
+                    cmPrinter_Barcode.Items.Clear();
                     PrinterSettings PrintS = new PrinterSettings();
                     if (PrinterSettings.InstalledPrinters.Count != 0)
                     {
                         for (int iiCnt = 0; iiCnt < PrinterSettings.InstalledPrinters.Count; iiCnt++)
                         {
-                            CmbPrinter.Items.Add(PrinterSettings.InstalledPrinters[iiCnt]);
+                            cmPrinter_Barcode.Items.Add(PrinterSettings.InstalledPrinters[iiCnt]);
                         }
                         if (!string.IsNullOrEmpty(VarGeneral.PrintNam))
                         {
-                            CmbPrinter.Text = VarGeneral.PrintNam;
+                            cmPrinter_Barcode.Text = VarGeneral.PrintNam;
                         }
                         else
                         {
-                            CmbPrinter.Text = PrintS.DefaultPageSettings.PrinterSettings.PrinterName;
+                            cmPrinter_Barcode.Text = PrintS.DefaultPageSettings.PrinterSettings.PrinterName;
                         }
                     }
                     CmbDir.Items.Clear();
@@ -336,21 +320,21 @@ namespace InvAcc.Forms
                 }
                 else
                 {
-                    CmbPrinter.Items.Clear();
+                    cmPrinter_Barcode.Items.Clear();
                     PrinterSettings PrintS = new PrinterSettings();
                     if (PrinterSettings.InstalledPrinters.Count != 0)
                     {
                         for (int iiCnt = 0; iiCnt < PrinterSettings.InstalledPrinters.Count; iiCnt++)
                         {
-                            CmbPrinter.Items.Add(PrinterSettings.InstalledPrinters[iiCnt]);
+                            cmPrinter_Barcode.Items.Add(PrinterSettings.InstalledPrinters[iiCnt]);
                         }
                         if (!string.IsNullOrEmpty(VarGeneral.PrintNam))
                         {
-                            CmbPrinter.Text = VarGeneral.PrintNam;
+                            cmPrinter_Barcode.Text = VarGeneral.PrintNam;
                         }
                         else
                         {
-                            CmbPrinter.Text = PrintS.DefaultPageSettings.PrinterSettings.PrinterName;
+                            cmPrinter_Barcode.Text = PrintS.DefaultPageSettings.PrinterSettings.PrinterName;
                         }
                     }
                     CmbDir.Items.Clear();
@@ -455,61 +439,65 @@ namespace InvAcc.Forms
         private int LangArEn = 0;
         private Stock_DataDataContext dbInstance1;
         T_Printer repsystemsetings;
+        Stock_DataDataContext db = new Stock_DataDataContext(VarGeneral.BranchCS);
         void savedatarep()
-        {
+        { 
             string ntyp = "1";
-            string c = "";
-            if (RadRepA4.Checked)
-                c = "0";
-            else if (RadRepCashier.Checked)
-                c = "1";
-            else
-                c = "2";
-            ntyp += c;
-            ntyp = (checkBox_previewPrintRep.Checked ? (ntyp + "0") : (ntyp + "1"));
+            //     Stock_DataDataContext db = new Stock_DataDataContext(VarGeneral.BranchCS);
 
-            repsystemsetings.nTyp_Setting = ntyp;
-            repsystemsetings.DefLines_Setting = txtpageCountRep.Value;
-            repsystemsetings.hAs_Setting = txtBottMRep.Value;
-            repsystemsetings.hYs_Setting = txtLeftMRep.Value;
-            repsystemsetings.lnPg_Setting = txtLinePageRep.Value;
-            repsystemsetings.hYm_Setting = txtRightRep.Value;
-            repsystemsetings.hAl_Setting = txtTopMRep.Value;
-            repsystemsetings.lnSpc_Setting = txtDistance.Value;
-            repsystemsetings.defPrn_Setting = CmbPrinterRep.Text ?? "";
-            repsystemsetings.DefLines_Setting = txtpageCountRep.Value;
-            if (RButPortraitRep.Checked)
             {
-                repsystemsetings.Orientation_Setting = 1;
-            }
-            else
-            {
-                repsystemsetings.Orientation_Setting = 2;
-            }
-            if (CmbPaperSizeRep.Items.Count > 0)
-            {
-                if (!string.IsNullOrEmpty(CmbPrinterRep.Text))
+                T_Printer ReportsSettings = new T_Printer();
+                int xd = 0;
+                xd= db.T_Printers.Single(x => x.User_ID == VarGeneral.UserID && x.InvID == 1091).P_ID;
+                ReportsSettings = db.T_Printers.Single(xc =>(int) xc.P_ID==xd);
+
+                ReportsSettings.ISA4PaperType = RadRepA4_Reports.Checked;
+                ReportsSettings.ISCashierType = RadRepCashier_Reports.Checked;
+                ReportsSettings.ISPOINTERType = RadRepPointer_Reports.Checked;
+                ReportsSettings.ISdirectPrinting = DirectOption_Reports.Checked;
+
+                ReportsSettings.DefLines_Setting = txtpageCountRep_Reports.Value;
+                ReportsSettings.hAs_Setting = txtBottMRep_Reports.Value;
+                ReportsSettings.hYs_Setting = txtLeftMRep_Reports.Value;
+                ReportsSettings.lnPg_Setting = txtLinePageRep_Reports.Value;
+                ReportsSettings.hYm_Setting = txtRightRep_Reports.Value;
+                ReportsSettings.hAl_Setting = txtTopM_Reports.Value;
+                ReportsSettings.lnSpc_Setting = txtDistance.Value;
+                ReportsSettings.defPrn_Setting = CmbPrinter_Reports.Text ?? "";
+                ReportsSettings.DefLines_Setting = txtpageCountRep_Reports.Value;
+                if (RButPortraitRep_Reports.Checked)
                 {
-                    if (CmbPaperSizeRep.SelectedIndex > 0)
+                    ReportsSettings.Orientation_Setting = 1;
+                }
+                else
+                {
+                    ReportsSettings.Orientation_Setting = 2;
+                }
+                if (CmbPaperSizeRep_Reports.Items.Count > 0)
+                {
+                    if (!string.IsNullOrEmpty(CmbPrinter_Reports.Text))
                     {
-                        repsystemsetings.defSizePaper_Setting = CmbPaperSizeRep.Text;
+                        if (CmbPaperSizeRep_Reports.SelectedIndex > 0)
+                        {
+                            ReportsSettings.defSizePaper_Setting = CmbPaperSizeRep_Reports.Text;
+                        }
+                        else
+                        {
+                            ReportsSettings.defSizePaper_Setting = "";
+                        }
                     }
                     else
                     {
-                        repsystemsetings.defSizePaper_Setting = "";
+                        ReportsSettings.defSizePaper_Setting = "";
                     }
                 }
                 else
                 {
-                    repsystemsetings.defSizePaper_Setting = "";
+                    ReportsSettings.defSizePaper_Setting = "";
                 }
+                db.SubmitChanges();
             }
-            else
-            {
-                repsystemsetings.defSizePaper_Setting = "";
-            }
-            dprep.SubmitChanges(ConflictMode.ContinueOnConflict);
-            VarGeneral._GeneralPrinter = null;
+
         }
         public void getallcontrols(Control root)
         {
@@ -552,16 +540,16 @@ namespace InvAcc.Forms
         {
             try
             {
-                if (SaveData1())
+                if (savingBarcodeSetting())
                 {
                 }
                 savedatarep();
-                bool SaveStat = SaveData2();
-                bool SaveStat3 = SaveData3();
-                db3.SubmitChanges(ConflictMode.ContinueOnConflict);
+                bool SaveStat = SavingInvoiceSettings();
+        
                 db1.SubmitChanges(ConflictMode.ContinueOnConflict);
-                db2.SubmitChanges(ConflictMode.ContinueOnConflict);
-                dprep.SubmitChanges();
+                db1.SubmitChanges(ConflictMode.ContinueOnConflict);
+                db1.SubmitChanges(ConflictMode.ContinueOnConflict);
+                db1.SubmitChanges();
      if(orUser!=1)           Close();
 
             }
@@ -592,7 +580,7 @@ namespace InvAcc.Forms
         }
         private void checkBox_previewPrint_CheckedChanged(object sender, EventArgs e)
         {
-            if (!checkBox_previewPrint.Checked)
+            if (!DirectOption_Barcode.Checked)
             {
                 groupBox1.Enabled = true;
             }
@@ -620,7 +608,7 @@ namespace InvAcc.Forms
                 SendKeys.Send("{Tab}");
             }
         }
-        Stock_DataDataContext dprep = new Stock_DataDataContext(VarGeneral.BranchCS);
+        
         protected override void OnLoad(EventArgs e)
         {
             filldatarep();
@@ -649,7 +637,7 @@ namespace InvAcc.Forms
                     BindData3();
                     getallcontrols(this);
                     ChkPTable.Visible = false;
-                    ChkPTable3.Visible = false;
+                    ChkPTable3_Sandatat.Visible = false;
 
 
                 }
@@ -679,7 +667,7 @@ namespace InvAcc.Forms
                     BindData2();
                     BindData3();
                     ChkPTable.Visible = false;
-                    ChkPTable3.Visible = false;
+                    ChkPTable3_Sandatat.Visible = false;
 
                 }
                 catch (Exception error)
@@ -713,17 +701,7 @@ namespace InvAcc.Forms
         public List<Control> controls;
         public Control codeControl2 = new Control();
         private bool canUpdate2 = true;
-        private Stock_DataDataContext db2
-        {
-            get
-            {
-                if (dbInstance2 == null)
-                {
-                    dbInstance2 = new Stock_DataDataContext(VarGeneral.BranchCS);
-                }
-                return dbInstance2;
-            }
-        }
+      
         protected bool CanUpdate2
         {
             get
@@ -777,7 +755,7 @@ namespace InvAcc.Forms
                     }
                     chk_Stoped.Value = false;
                     checkBox_WaiterAll.Checked = false;
-                    if (_InvSetting2.nTyp.Substring(0, 1) == "0")
+                    if (_InvSetting2.Repl_ntyp.Substring(0, 1) == "0")
                     {
                         ChkPTable.Checked = false;
                     }
@@ -786,33 +764,16 @@ namespace InvAcc.Forms
                         ChkPTable.Checked = true;
                     }
 
-                    if (_InvSetting2.nTyp.Substring(1, 1) == "1")
                     {
-                        RadInvA4.Checked = true;
-                        RadINVCashier.Checked = false;
-                        RadInvPointer.Checked = false;
+                        RadInvA4.Checked = _InvSetting2.ISA4PaperType;
+                        RadINVCashier.Checked = _InvSetting2.ISCashierType;
+                        RadInvPointer.Checked = _InvSetting2.ISPOINTERType;
                     }
-                    else if (_InvSetting2.nTyp.Substring(1, 1) == "2")
-                    {
-                        RadInvPointer.Checked = true;
-                        RadInvA4.Checked = false;
-                        RadINVCashier.Checked = false;
-                    }
-                    else if (_InvSetting2.nTyp.Substring(1, 1) == "0")
-                    {
-                        RadInvPointer.Checked = false;
-                        RadInvA4.Checked = false;
-                        RadINVCashier.Checked = true;
+                   
 
-                    }
-
-                    if (_InvSetting2.nTyp.Substring(2, 1) == "1")
+                  
                     {
-                        ChkInvDirect.Checked = true;
-                    }
-                    else
-                    {
-                        ChkInvDirect.Checked = false;
+                        ChkInvDirect.Checked = _InvSetting2.ISdirectPrinting;
                     }
                     txtBottM.Text = _InvSetting2.hAs.ToString();
                     doubleInput2.Text = _InvSetting2.hYs.ToString();
@@ -900,14 +861,14 @@ namespace InvAcc.Forms
                 chk_Stoped.OffText = ((LangArEn == 0) ? "إيقاف الطباعة" : "Printing Stoped");
                 ChkInvDirect.Visible = false;
                 chk_Stoped.Visible = true;
-                if (db2.StockPrinterSetting(VarGeneral.UserID, 1).nTyp.Substring(2, 1) == "1")
+                if (db1.StockPrinterSetting(VarGeneral.UserID, 1).ISdirectPrinting)
                 {
                     groupBox_PrintType.Visible = false;
                     picture_SSS.Visible = true;
                 }
             }
             ChkPTable.Visible = false;
-            ChkPTable3.Visible = false;
+            ChkPTable3_Sandatat.Visible = false;
         }
 
         private void FillCombo2()
@@ -990,47 +951,43 @@ namespace InvAcc.Forms
             }
             RibunButtons2();
         }
-        private bool SaveData2()
+        private bool SavingInvoiceSettings()
         {
             try
             {
-                string ntyp = "";
-                ntyp = (ChkPTable.Checked ? "1" : "0");
-                string c = "";
-                if (RadInvA4.Checked)
-                    c = "1";
-                else if (RadINVCashier.Checked)
-                    c = "0";
-                else
-                    c = "2";
-                ntyp += c;
+                dbInstance1 = null;
+                Stock_DataDataContext db = new Stock_DataDataContext(VarGeneral.BranchCS);
 
-                ntyp = (ChkInvDirect.Checked ? (ntyp + "1") : (ntyp + "0"));
-                _InvSetting2.nTyp = ntyp;
-                _InvSetting2.hAs = double.Parse(VarGeneral.TString.TEmpty(txtBottM.Text ?? ""));
-                _InvSetting2.hYs = double.Parse(VarGeneral.TString.TEmpty(doubleInput2.Text ?? ""));
-                _InvSetting2.lnPg = double.Parse(VarGeneral.TString.TEmpty(txtLinePage.Text ?? ""));
-                _InvSetting2.hYm = double.Parse(VarGeneral.TString.TEmpty(txtRight.Text ?? ""));
-                _InvSetting2.hAl = double.Parse(VarGeneral.TString.TEmpty(doubleInput1.Text ?? ""));
-                _InvSetting2.lnSpc = double.Parse(VarGeneral.TString.TEmpty(txtDistance.Text ?? ""));
-                _InvSetting2.invGdADesc = textBox_CachierTxtA.Text;
-                _InvSetting2.invGdEDesc = textBox_CachierTxtE.Text;
-                _InvSetting2.defPrn = comboBoxEx1.Text ?? "";
-                _InvSetting2.DefLines = integerInput1.Value;
-                _InvSetting2.InvInfo.PrintCat = chk_Stoped.Value;
+                T_Printer InoviceSetting = db.StockPrinterSetting(VarGeneral.UserID, ((Item)CmbInvType.SelectedItem).Value) ;
+                InoviceSetting.ISdirectPrinting = ChkInvDirect.Checked;
+                InoviceSetting.ISCashierType = RadINVCashier.Checked;
+                InoviceSetting.ISA4PaperType = RadInvA4.Checked;
+                InoviceSetting.ISPOINTERType = RadInvPointer.Checked;
+
+                InoviceSetting.hAs = double.Parse(VarGeneral.TString.TEmpty(txtBottM.Text ?? ""));
+                InoviceSetting.hYs = double.Parse(VarGeneral.TString.TEmpty(doubleInput2.Text ?? ""));
+                InoviceSetting.lnPg = double.Parse(VarGeneral.TString.TEmpty(txtLinePage.Text ?? ""));
+                InoviceSetting.hYm = double.Parse(VarGeneral.TString.TEmpty(txtRight.Text ?? ""));
+                InoviceSetting.hAl = double.Parse(VarGeneral.TString.TEmpty(doubleInput1.Text ?? ""));
+                InoviceSetting.lnSpc = double.Parse(VarGeneral.TString.TEmpty(txtDistance.Text ?? ""));
+                InoviceSetting.invGdADesc = textBox_CachierTxtA.Text;
+                InoviceSetting.invGdEDesc = textBox_CachierTxtE.Text;
+                InoviceSetting.defPrn = comboBoxEx1.Text ?? "";
+                InoviceSetting.DefLines = integerInput1.Value;
+                InoviceSetting.InvInfo.PrintCat = chk_Stoped.Value;
                 if (RButPortrait.Checked)
                 {
-                    _InvSetting2.Orientation = 1;
+                    InoviceSetting.Orientation = 1;
                 }
                 else
                 {
-                    _InvSetting2.Orientation = 2;
+                    InoviceSetting.Orientation = 2;
                 }
                 try
                 {
-                    if (checkBox_WaiterAll.Visible && _InvSetting2.InvID == 21)
+                    if (checkBox_WaiterAll.Visible && InoviceSetting.InvID == 21)
                     {
-                        _InvSetting2.InvInfo.autoCommGaid = checkBox_WaiterAll.Checked;
+                        InoviceSetting.InvInfo.autoCommGaid = checkBox_WaiterAll.Checked;
                     }
                 }
                 catch
@@ -1042,24 +999,24 @@ namespace InvAcc.Forms
                     {
                         if (CmbPaperSize.SelectedIndex > 0)
                         {
-                            _InvSetting2.defSizePaper = CmbPaperSize.Text;
+                            InoviceSetting.defSizePaper = CmbPaperSize.Text;
                         }
                         else
                         {
-                            _InvSetting2.defSizePaper = "";
+                            InoviceSetting.defSizePaper = "";
                         }
                     }
                     else
                     {
-                        _InvSetting2.defSizePaper = "";
+                        InoviceSetting.defSizePaper = "";
                     }
                 }
                 else
                 {
-                    _InvSetting2.defSizePaper = "";
+                    InoviceSetting.defSizePaper = "";
                 }
-                db2.Log = VarGeneral.DebugLog;
-                db2.SubmitChanges(ConflictMode.ContinueOnConflict);
+                db.Log = VarGeneral.DebugLog;
+                db.SubmitChanges(ConflictMode.ContinueOnConflict);
                 MessageBox.Show((LangArEn == 0) ? "لقد تم اتمام العملية بنجاح .." : "This Opration Is Done", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             catch (Exception error)
@@ -1117,17 +1074,7 @@ namespace InvAcc.Forms
         private int ItemIndex3 = 0;
 #pragma warning restore CS0414 // The field 'FrmPrinters.ItemIndex3' is assigned but its value is never used
         //private int LangArEn = 0
-        private Stock_DataDataContext db3
-        {
-            get
-            {
-                if (dbInstance3 == null)
-                {
-                    dbInstance3 = new Stock_DataDataContext(VarGeneral.BranchCS);
-                }
-                return dbInstance3;
-            }
-        }
+       
         FormState _state;
         public FormState State
         {
@@ -1166,62 +1113,62 @@ namespace InvAcc.Forms
         {
             State = FormState.Saved;
             ButWithSave.Enabled = false;
-            _item3 = (Item)CmbInvType3.SelectedItem;
+            _item3 = (Item)CmBType_Sandatat.SelectedItem;
             for (int iiCnt = 0; iiCnt < listInvSetting3.Count; iiCnt++)
             {
                 _InvSetting3 = db1.StockPrinterSetting(VarGeneral.UserID, listInvSetting3[iiCnt].InvID);
                 if (_item3.Value == _InvSetting3.InvID)
                 {
-                    if (_InvSetting3.nTyp.Substring(0, 1) == "0")
+                    if (_InvSetting3.Repl_ntyp.Substring(0, 1) == "0")
                     {
-                        ChkPTable3.Checked = false;
+                        ChkPTable3_Sandatat.Checked = false;
                     }
                     else
                     {
-                        ChkPTable3.Checked = true;
+                        ChkPTable3_Sandatat.Checked = true;
                     }
 
-                    if (_InvSetting3.nTyp.Substring(2, 1) == "1")
+                    if (_InvSetting3.ISdirectPrinting)
                     {
-                        checkBox_previewPrint3.Checked = true;
+                        DirectPrinter_Sandatat.Checked = true;
                     }
                     else
                     {
-                        checkBox_previewPrint3.Checked = false;
+                        DirectPrinter_Sandatat.Checked = false;
                     }
-                    txtBottM3.Text = _InvSetting3.hAs.ToString();
-                    txtLeftM3.Text = _InvSetting3.hYs.ToString();
-                    txtLinePage3.Value = (int)_InvSetting3.lnPg.Value;
-                    if (txtLinePage3.Value <= 0)
+                    txtBottM_Sandatat.Text = _InvSetting3.hAs.ToString();
+                    txtLeftM_Sandatat.Text = _InvSetting3.hYs.ToString();
+                    txtLinePage_Sandatat.Value = (int)_InvSetting3.lnPg.Value;
+                    if (txtLinePage_Sandatat.Value <= 0)
                     {
-                        txtLinePage3.LockUpdateChecked = false;
+                        txtLinePage_Sandatat.LockUpdateChecked = false;
                     }
                     else
                     {
-                        txtLinePage3.LockUpdateChecked = true;
+                        txtLinePage_Sandatat.LockUpdateChecked = true;
                     }
-                    txtRight3.Text = _InvSetting3.hYm.ToString();
-                    txtTopM3.Text = _InvSetting3.hAl.ToString();
+                    txtRight_Sandatat.Text = _InvSetting3.hYm.ToString();
+                    txtTopM_Sandatat.Text = _InvSetting3.hAl.ToString();
                     txtDistance.Text = _InvSetting3.lnSpc.ToString();
-                    CmbPrinter3.Text = _InvSetting3.defPrn;
+                    CmpPrinter__Sandatat.Text = _InvSetting3.defPrn;
                     txtpageCount3.Value = _InvSetting3.DefLines.Value;
                     if (_InvSetting3.InvID == 27 || _InvSetting3.InvID == 28)
                     {
-                        ChkPTable3.Visible = false;
+                        ChkPTable3_Sandatat.Visible = false;
                     }
                     else
                     {
-                        ChkPTable3.Visible = true;
+                        ChkPTable3_Sandatat.Visible = true;
                     }
                     if (!string.IsNullOrEmpty(_InvSetting3.defSizePaper))
                     {
-                        CmbPaperSize3.Items.Clear();
-                        CmbPaperSize3.Items.Add(_InvSetting3.defSizePaper);
-                        CmbPaperSize3.SelectedIndex = 0;
+                        CmbPaperSize_Sandatat.Items.Clear();
+                        CmbPaperSize_Sandatat.Items.Add(_InvSetting3.defSizePaper);
+                        CmbPaperSize_Sandatat.SelectedIndex = 0;
                     }
                     else
                     {
-                        CmbPaperSize3.Items.Clear();
+                        CmbPaperSize_Sandatat.Items.Clear();
                     }
                     if (_InvSetting3.Orientation.Value == 1)
                     {
@@ -1229,13 +1176,13 @@ namespace InvAcc.Forms
                     }
                     else
                     {
-                        RButLandscape3.Checked = true;
+                        RButLandscape_Sandatat.Checked = true;
                     }
                     break;
                 }
             }
             ChkPTable.Visible = false;
-            ChkPTable3.Visible = false;
+            ChkPTable3_Sandatat.Visible = false;
         }
         private void FillCombo3()
         {
@@ -1244,72 +1191,72 @@ namespace InvAcc.Forms
 #pragma warning restore CS0219 // The variable '_CmbIndex' is assigned but its value is never used
             if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
             {
-                CmbPrinter3.Items.Clear();
-                CmbPrinter3.Items.Add(" ");
+                CmpPrinter__Sandatat.Items.Clear();
+                CmpPrinter__Sandatat.Items.Add(" ");
                 PrinterSettings PrintS = new PrinterSettings();
                 if (PrinterSettings.InstalledPrinters.Count != 0)
                 {
                     for (int iiCnt = 0; iiCnt < PrinterSettings.InstalledPrinters.Count; iiCnt++)
                     {
-                        CmbPrinter3.Items.Add(PrinterSettings.InstalledPrinters[iiCnt]);
+                        CmpPrinter__Sandatat.Items.Add(PrinterSettings.InstalledPrinters[iiCnt]);
                     }
                     if (!string.IsNullOrEmpty(VarGeneral.PrintNam))
                     {
-                        CmbPrinter3.Text = VarGeneral.PrintNam;
+                        CmpPrinter__Sandatat.Text = VarGeneral.PrintNam;
                     }
                     else
                     {
-                        CmbPrinter3.Text = PrintS.DefaultPageSettings.PrinterSettings.PrinterName;
+                        CmpPrinter__Sandatat.Text = PrintS.DefaultPageSettings.PrinterSettings.PrinterName;
                     }
                 }
-                CmbInvType3.Items.Clear();
+                CmBType_Sandatat.Items.Clear();
                 for (int iiCnt = 0; iiCnt < listInvSetting3.Count; iiCnt++)
                 {
-                    _InvSetting3 = db1.StockPrinterSetting(VarGeneral.UserID, listInvSetting3[iiCnt].InvID);
+                    _InvSetting3 = db1.StockPrinterSettingwithoutGeneralPrinter(VarGeneral.UserID, listInvSetting3[iiCnt].InvID);
                     if (_InvSetting3.InvInfo.InvSetting == "1" && _InvSetting3.InvID != 18 && _InvSetting3.InvID != 19 && (!(VarGeneral.SSSLev != "H") || !(VarGeneral.SSSLev != "X") || (_InvSetting3.InvID != 27 && _InvSetting3.InvID != 28)) && (!(VarGeneral.SSSLev != "E") || !(VarGeneral.SSSLev != "D") || _InvSetting3.InvID != 16))
                     {
                         if (VarGeneral.SSSTyp != 0)
                         {
-                            CmbInvType3.Items.Add(new Item(_InvSetting3.InvInfo.InvNamA.Trim(), int.Parse(_InvSetting3.InvID.ToString())));
+                            CmBType_Sandatat.Items.Add(new Item(_InvSetting3.InvInfo.InvNamA.Trim(), int.Parse(_InvSetting3.InvID.ToString())));
                         }
                         else if (_InvSetting3.InvID != 11 && _InvSetting3.InvID != 23 && _InvSetting3.InvID != 24 && _InvSetting3.InvID != 25 && _InvSetting3.InvID != 26)
                         {
-                            CmbInvType3.Items.Add(new Item(_InvSetting3.InvInfo.InvNamA.Trim(), int.Parse(_InvSetting3.InvID.ToString())));
+                            CmBType_Sandatat.Items.Add(new Item(_InvSetting3.InvInfo.InvNamA.Trim(), int.Parse(_InvSetting3.InvID.ToString())));
                         }
                     }
                 }
-                CmbInvType3.SelectedIndex = 0;
+                CmBType_Sandatat.SelectedIndex = 0;
             }
             else
             {
-                CmbPrinter3.Items.Clear();
-                CmbPrinter3.Items.Add(" ");
+                CmpPrinter__Sandatat.Items.Clear();
+                CmpPrinter__Sandatat.Items.Add(" ");
                 PrinterSettings PrintS = new PrinterSettings();
                 if (PrinterSettings.InstalledPrinters.Count != 0)
                 {
                     for (int iiCnt = 0; iiCnt < PrinterSettings.InstalledPrinters.Count; iiCnt++)
                     {
-                        CmbPrinter3.Items.Add(PrinterSettings.InstalledPrinters[iiCnt]);
+                        CmpPrinter__Sandatat.Items.Add(PrinterSettings.InstalledPrinters[iiCnt]);
                     }
                     if (!string.IsNullOrEmpty(VarGeneral.PrintNam))
                     {
-                        CmbPrinter3.Text = VarGeneral.PrintNam;
+                        CmpPrinter__Sandatat.Text = VarGeneral.PrintNam;
                     }
                     else
                     {
-                        CmbPrinter3.Text = PrintS.DefaultPageSettings.PrinterSettings.PrinterName;
+                        CmpPrinter__Sandatat.Text = PrintS.DefaultPageSettings.PrinterSettings.PrinterName;
                     }
                 }
-                CmbInvType3.Items.Clear();
+                CmBType_Sandatat.Items.Clear();
                 for (int iiCnt = 0; iiCnt < listInvSetting3.Count; iiCnt++)
                 {
                     _InvSetting3 = db1.StockPrinterSetting(VarGeneral.UserID, listInvSetting3[iiCnt].InvID);
                     if (_InvSetting3.InvInfo.InvSetting == "1")
                     {
-                        CmbInvType3.Items.Add(new Item(_InvSetting3.InvInfo.InvNamE.Trim(), int.Parse(_InvSetting3.InvID.ToString())));
+                        CmBType_Sandatat.Items.Add(new Item(_InvSetting3.InvInfo.InvNamE.Trim(), int.Parse(_InvSetting3.InvID.ToString())));
                     }
                 }
-                CmbInvType3.SelectedIndex = 0;
+                CmBType_Sandatat.SelectedIndex = 0;
             }
             RibunButtons3();
         }
@@ -1328,65 +1275,67 @@ namespace InvAcc.Forms
                 labelX1.Text = "Barcode Printer Setting";
             }
         }
-        private bool SaveData3()
+        private bool SavingSandatatSettiongs()
         {
             try
             {
-                string ntyp = "";
-                ntyp = (ChkPTable3.Checked ? "1" : "0");
+                dbInstance1 = null;
+                Stock_DataDataContext db = new Stock_DataDataContext(VarGeneral.BranchCS);
 
-                string c = "";
-                if (RadInvA4.Checked)
-                    c = "0";
-                else if (RadINVCashier.Checked)
-                    c = "1";
-                else
+          T_Printer       sendatSetting = db.StockPrinterSetting(VarGeneral.UserID, ((Item)cmPrinter_Barcode.SelectedItem).Value);
+                string ntyp = "";
+                ntyp = (ChkPTable3_Sandatat.Checked ? "1" : "0");
+
+                string c = "0";
+               
                     c = "2";
                 ntyp += c;
-                ntyp = (checkBox_previewPrint3.Checked ? (ntyp + "1") : (ntyp + "0"));
-                _InvSetting3.nTyp = ntyp;
-                _InvSetting3.hAs = double.Parse(VarGeneral.TString.TEmpty(txtBottM3.Text ?? ""));
-                _InvSetting3.hYs = double.Parse(VarGeneral.TString.TEmpty(txtLeftM3.Text ?? ""));
-                _InvSetting3.lnPg = double.Parse(VarGeneral.TString.TEmpty(txtLinePage3.Text ?? ""));
-                _InvSetting3.hYm = double.Parse(VarGeneral.TString.TEmpty(txtRight3.Text ?? ""));
-                _InvSetting3.hAl = double.Parse(VarGeneral.TString.TEmpty(txtTopM3.Text ?? ""));
-                _InvSetting3.lnSpc = double.Parse(VarGeneral.TString.TEmpty(txtDistance.Text ?? ""));
-                _InvSetting3.defPrn = CmbPrinter3.Text ?? "";
-                _InvSetting3.DefLines = txtpageCount3.Value;
+                ntyp = (DirectPrinter_Sandatat.Checked ? (ntyp + "1") : (ntyp + "0"));
+         
+                
+                sendatSetting.Repl_ntyp = ntyp;
+                sendatSetting.hAs = double.Parse(VarGeneral.TString.TEmpty(txtBottM_Sandatat.Text ?? ""));
+                sendatSetting.hYs = double.Parse(VarGeneral.TString.TEmpty(txtLeftM_Sandatat.Text ?? ""));
+                sendatSetting.lnPg = double.Parse(VarGeneral.TString.TEmpty(txtLinePage_Sandatat.Text ?? ""));
+                sendatSetting.hYm = double.Parse(VarGeneral.TString.TEmpty(txtRight_Sandatat.Text ?? ""));
+                sendatSetting.hAl = double.Parse(VarGeneral.TString.TEmpty(txtTopM_Sandatat.Text ?? ""));
+                sendatSetting.lnSpc = double.Parse(VarGeneral.TString.TEmpty(txtDistance.Text ?? ""));
+                sendatSetting.defPrn = CmpPrinter__Sandatat.Text ?? "";
+                sendatSetting.DefLines = txtpageCount3.Value;
                 if (RButPortrait3.Checked)
                 {
-                    _InvSetting3.Orientation = 1;
+                    sendatSetting.Orientation = 1;
                 }
                 else
                 {
-                    _InvSetting3.Orientation = 2;
+                    sendatSetting.Orientation = 2;
                 }
-                if (CmbPaperSize3.Items.Count > 0)
+                if (CmbPaperSize_Sandatat.Items.Count > 0)
                 {
-                    if (!string.IsNullOrEmpty(CmbPrinter3.Text))
+                    if (!string.IsNullOrEmpty(CmpPrinter__Sandatat.Text))
                     {
-                        if (CmbPaperSize3.SelectedIndex > 0)
+                        if (CmbPaperSize_Sandatat.SelectedIndex > 0)
                         {
-                            _InvSetting3.defSizePaper = CmbPaperSize3.Text;
+                            sendatSetting.defSizePaper = CmbPaperSize_Sandatat.Text;
                         }
                         else
                         {
-                            _InvSetting3.defSizePaper = "";
+                            sendatSetting.defSizePaper = "";
                         }
                     }
                     else
                     {
-                        _InvSetting3.defSizePaper = "";
+                        sendatSetting.defSizePaper = "";
                     }
                 }
                 else
                 {
-                    _InvSetting3.defSizePaper = "";
+                    sendatSetting.defSizePaper = "";
                 }
-                db3.Log = VarGeneral.DebugLog;
-                db3.SubmitChanges(ConflictMode.ContinueOnConflict);
-                db1.SubmitChanges(ConflictMode.ContinueOnConflict);
-                db2.SubmitChanges(ConflictMode.ContinueOnConflict);
+                db.Log = VarGeneral.DebugLog;
+                db.SubmitChanges(ConflictMode.ContinueOnConflict);
+                db.SubmitChanges(ConflictMode.ContinueOnConflict);
+                db.SubmitChanges(ConflictMode.ContinueOnConflict);
 
                 // MessageBox.Show((LangArEn == 0) ? "لقد تم اتمام العملية بنجاح .." : "This Opration Is Done", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
@@ -1401,7 +1350,7 @@ namespace InvAcc.Forms
         {
             BindData3();
             ChkPTable.Visible = false;
-            ChkPTable3.Visible = false;
+            ChkPTable3_Sandatat.Visible = false;
 
 
         }
@@ -1410,17 +1359,17 @@ namespace InvAcc.Forms
             Button_Edit_Click(sender, e);
             if (VarGeneral.SSSLev == "B" || VarGeneral.SSSLev == "F" || VarGeneral.SSSLev == "C")
             {
-                ChkPTable3.Checked = true;
+                ChkPTable3_Sandatat.Checked = true;
             }
-            else if (!ChkPTable3.Checked)
+            else if (!ChkPTable3_Sandatat.Checked)
             {
-                CmbPaperSize3.Items.Clear();
-                CmbPaperSize3.Enabled = false;
+                CmbPaperSize_Sandatat.Items.Clear();
+                CmbPaperSize_Sandatat.Enabled = false;
             }
             else
             {
-                CmbPaperSize3.Items.Clear();
-                CmbPaperSize3.Enabled = true;
+                CmbPaperSize_Sandatat.Items.Clear();
+                CmbPaperSize_Sandatat.Enabled = true;
             }
         }
         private void checkBox_previewPrint3_CheckedChanged(object sender, EventArgs e)
@@ -1431,27 +1380,27 @@ namespace InvAcc.Forms
         {
             if (State != 0)
             {
-                CmbPaperSize3.Items.Clear();
+                CmbPaperSize_Sandatat.Items.Clear();
             }
         }
         private void txtLinePage3_ValueChanged(object sender, EventArgs e)
         {
-            if (txtLinePage3.Value == 0)
+            if (txtLinePage_Sandatat.Value == 0)
             {
-                txtLinePage3.LockUpdateChecked = false;
+                txtLinePage_Sandatat.LockUpdateChecked = false;
             }
         }
         private void txtLinePage3_LockUpdateChanged(object sender, EventArgs e)
         {
             if (1 != 0)
             {
-                if (txtLinePage3.LockUpdateChecked)
+                if (txtLinePage_Sandatat.LockUpdateChecked)
                 {
-                    txtLinePage3.Value = 1;
+                    txtLinePage_Sandatat.Value = 1;
                 }
                 else
                 {
-                    txtLinePage3.Value = 0;
+                    txtLinePage_Sandatat.Value = 0;
                 }
             }
         }
@@ -1480,46 +1429,46 @@ namespace InvAcc.Forms
         {
             if (statex2 != 0)
             {
-                CmbPaperSizeRep.Items.Clear();
+                CmbPaperSizeRep_Reports.Items.Clear();
             }
         }
         private void CmbPaperSizeRep_MouseClick(object sender, MouseEventArgs e)
         {
             try
             {
-                CmbPaperSizeRep.Items.Clear();
-                CmbPaperSizeRep.Items.Add((LangArEn == 0) ? "الإفتراضي" : "Default");
+                CmbPaperSizeRep_Reports.Items.Clear();
+                CmbPaperSizeRep_Reports.Items.Add((LangArEn == 0) ? "الإفتراضي" : "Default");
                 PrintDocument pd = new PrintDocument();
-                pd.PrinterSettings.PrinterName = CmbPrinterRep.Text;
+                pd.PrinterSettings.PrinterName = CmbPrinter_Reports.Text;
                 foreach (PaperSize item in pd.PrinterSettings.PaperSizes)
                 {
-                    CmbPaperSizeRep.Items.Add(item.PaperName);
+                    CmbPaperSizeRep_Reports.Items.Add(item.PaperName);
                 }
             }
             catch
             {
-                CmbPaperSizeRep.Items.Clear();
+                CmbPaperSizeRep_Reports.Items.Clear();
             }
         }
         private void txtLinePageRep_LockUpdateChanged(object sender, EventArgs e)
         {
             if (1 != 0)
             {
-                if (txtLinePageRep.LockUpdateChecked)
+                if (txtLinePageRep_Reports.LockUpdateChecked)
                 {
-                    txtLinePageRep.Value = 1;
+                    txtLinePageRep_Reports.Value = 1;
                 }
                 else
                 {
-                    txtLinePageRep.Value = 0;
+                    txtLinePageRep_Reports.Value = 0;
                 }
             }
         }
         private void txtLinePageRep_ValueChanged(object sender, EventArgs e)
         {
-            if (txtLinePageRep.Value == 0)
+            if (txtLinePageRep_Reports.Value == 0)
             {
-                txtLinePageRep.LockUpdateChecked = false;
+                txtLinePageRep_Reports.LockUpdateChecked = false;
             }
         }
         private void checkBox_previewPrintRep_Click(object sender, DevComponents.DotNetBar.CheckBoxChangeEventArgs e)
@@ -1603,13 +1552,13 @@ namespace InvAcc.Forms
 
         private void RadRepPointer_CheckedChanged(object sender, EventArgs e)
         {
-            if (RadRepPointer.Checked)
+            if (RadRepPointer_Reports.Checked)
             {
-                checkBox_previewPrintRep.Checked = true;
+                DirectOption_Reports.Checked = true;
                 // ChkInvDirect.Checked = true;
             }
             else
-                checkBox_previewPrintRep.Checked = false;
+                DirectOption_Reports.Checked = false;
 
 
         }
@@ -1625,6 +1574,31 @@ namespace InvAcc.Forms
             FrmPrinters_Load(null, null);
             OnLoad(null);
             Refresh();
+
+        }
+
+        private void groupPanel1Rep_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumRows_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumCols_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox13_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DirectOption_Reports_CheckedChanged(object sender, DevComponents.DotNetBar.CheckBoxChangeEventArgs e)
+        {
 
         }
     }

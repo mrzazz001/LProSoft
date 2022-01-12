@@ -314,8 +314,10 @@ namespace InvAcc.Forms
 
 			}
 		}
+		int repetedCount = 1;
 		private void button_OK_Click(object sender, EventArgs e)
 		{
+			repetedCount = 1;
 			try
 			{
 				if (string.IsNullOrEmpty(this.textBox_ItmNo.Text))
@@ -735,10 +737,12 @@ namespace InvAcc.Forms
 							this.Data_this_Itm.InvPaymentReturnStoped = new bool?(false);
 							this.Data_this_Itm.InvEnterStoped = new bool?(false);
 							this.Data_this_Itm.InvOutStoped = new bool?(false);
+							bool done = false;
 							if (this.State != FormState.New)
 							{
 								this.dbs.Log = VarGeneral.DebugLog;
 								this.dbs.SubmitChanges(ConflictMode.ContinueOnConflict);
+								done = true;
 							}
 							else
 							{
@@ -747,9 +751,26 @@ namespace InvAcc.Forms
 									this.dbs.T_Items.InsertOnSubmit(this.Data_this_Itm);
 									this.dbs.Log = VarGeneral.DebugLog;
 									this.dbs.SubmitChanges(ConflictMode.ContinueOnConflict);
+									done = true;
 								}
-								catch
+								catch(Exception ex)
 								{
+									
+									try
+									{
+										Data_this_Itm.Itm_No = Data_this_Itm.Itm_No + repetedCount.ToString();
+										this.dbs.T_Items.InsertOnSubmit(this.Data_this_Itm);
+										this.dbs.Log = VarGeneral.DebugLog;
+										this.dbs.SubmitChanges(ConflictMode.ContinueOnConflict);
+										repetedCount++;
+										done = true;
+									}
+									catch (Exception ex2)
+									{
+
+										//MessageBox.Show("Test");
+									}
+
 									//MessageBox.Show("Test");
 								}
 							}
@@ -1025,6 +1046,22 @@ namespace InvAcc.Forms
 			}
 		}
 		void FillGrid()
+		{
+
+
+			String ssFile = textBox_SearchFilePath.Text;
+			SpreadsheetGear.IWorkbook workbook = SpreadsheetGear.Factory.GetWorkbook(ssFile);
+
+			// Get a DataSet from an existing defined name
+			DataSet dataSet = workbook.GetDataSet(SpreadsheetGear.Data.GetDataFlags.FormattedText);
+
+			// Bind a DataGrid to the DataSet
+			ExcelGridView.DataSource = dataSet.Tables[0];
+			ExcelGridView.Refresh();
+
+		}
+
+		void FillGrids()
         {
 			 
 	

@@ -320,6 +320,7 @@ namespace InvAcc.Forms
         private T_SYSSETTING _SysSetting = new T_SYSSETTING();
         private List<T_SYSSETTING> listSysSetting = new List<T_SYSSETTING>();
         private T_INVSETTING _InvSetting = new T_INVSETTING();
+        public T_Printer _PrinterINvSetting;
         private List<T_INVSETTING> listInvSetting = new List<T_INVSETTING>();
         private T_STKSQTY _StksQty = new T_STKSQTY();
         private List<T_STKSQTY> listStkQty = new List<T_STKSQTY>();
@@ -1167,13 +1168,12 @@ namespace InvAcc.Forms
         }
         private void _PrintInv(int _invHd, string _UserNo)
         {
-            Program.min();
-  if ((_InvSetting.InvpRINTERInfo.nTyp.Substring(0, 1) == "1" && !VarGeneral.TString.ChkStatShow(permission.StopBanner, 2)) || (_InvSetting.InvpRINTERInfo.nTyp.Substring(0, 1) == "0" && VarGeneral.TString.ChkStatShow(permission.StopBanner, 2)))
+  if ((!_InvSetting.ISPOINTERType && !VarGeneral.TString.ChkStatShow(permission.StopBanner, 2)) || (_InvSetting.InvpRINTERInfo.nTyp.Substring(0, 1) == "0" && VarGeneral.TString.ChkStatShow(permission.StopBanner, 2)))
             {
                 RepShow _RepShow = new RepShow();
                 _RepShow.Tables = "T_INVDET LEFT OUTER JOIN T_INVHED ON T_INVDET.InvId = T_INVHED.InvHed_ID LEFT OUTER JOIN T_INVSETTING ON T_INVHED.InvTyp = T_INVSETTING.InvID  LEFT OUTER JOIN T_Curency ON T_INVHED.CurTyp = T_Curency.Curency_ID LEFT OUTER JOIN T_CstTbl ON T_INVHED.InvCstNo = T_CstTbl.Cst_ID LEFT OUTER JOIN T_Mndob ON T_INVHED.MndNo = T_Mndob.Mnd_ID LEFT OUTER JOIN T_Items ON T_INVDET.ItmNo = T_Items.Itm_No LEFT OUTER JOIN T_CATEGORY ON T_Items.ItmCat = T_CATEGORY.CAT_ID LEFT OUTER JOIN T_SYSSETTING ON T_INVHED.CompanyID = T_SYSSETTING.SYSSETTING_ID ";
                 string vInvH = " T_INVHED.InvHed_ID, T_INVHED.InvId as vID, T_INVHED.InvNo,T_INVHED.CusVenTaxNo, T_INVHED.InvTyp, T_INVHED.InvCashPay, T_INVHED.CusVenNo,case when T_INVHED.CusVenNo = '' THEN T_INVHED.CusVenNm ELSE (select T_AccDef.Arb_Des from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as CusVenNm,case when T_INVHED.CusVenNo = '' THEN T_INVHED.CusVenNm ELSE (select T_AccDef.Eng_Des from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as CusVenNmE, T_INVHED.CusVenAdd, T_INVHED.CusVenTel, T_INVHED.Remark, T_INVHED.HDat, T_INVHED.GDat, T_INVHED.MndNo, T_INVHED.SalsManNo, T_INVHED.SalsManNam, T_INVHED.InvTot, T_INVHED.InvDisPrs, ((case when IsDisUse1 = 1 then T_INVHED.InvValGaidDis else T_INVHED.InvDisVal end) + T_INVHED.DesPointsValue) as InvDisVal,T_INVHED.InvDisVal as InvDisValOnly,T_INVHED.DesPointsValue,T_INVHED.DesPointsValueLocCur,T_INVHED.PointsCount,T_INVHED.IsPoints, T_INVHED.InvNet, T_INVHED.InvNetLocCur, T_INVHED.CashPayLocCur, T_INVHED.IfRet, T_INVHED.CashPay, T_INVHED.InvTotLocCur, T_INVHED.InvDisValLocCur, T_INVHED.GadeNo, T_INVHED.GadeId, T_INVHED.RetNo, T_INVHED.RetId, T_INVHED.InvCashPayNm, T_INVHED.InvCost, T_INVHED.CustPri, T_INVHED.ArbTaf, T_INVHED.ToStore, T_INVHED.InvCash, T_INVHED.CurTyp, T_INVHED.EstDat,case when DATEDIFF(day, GETDATE(), EstDat) > 0 Then DATEDIFF(day, GETDATE(), EstDat) WHEN DATEDIFF(day, GETDATE(), InvCashPayNm) > 0 THEN DATEDIFF(day, GETDATE(), InvCashPayNm) Else '0' END as EstDatNote, T_INVHED.InvCstNo, T_INVHED.IfDel, T_INVHED.RefNo, T_INVHED.ToStoreNm, T_INVHED.EngTaf, T_INVHED.IfTrans, T_INVHED.InvQty, T_INVHED.CustNet, T_INVHED.CustRep, T_INVHED.InvWight_T, T_INVHED.IfPrint, T_INVHED.LTim, T_INVHED.DATE_CREATED, T_INVHED.MODIFIED_BY, T_INVHED.CreditPay, T_INVHED.DATE_MODIFIED, T_INVHED.CREATED_BY, T_INVHED.CreditPayLocCur, T_INVHED.NetworkPay, T_INVHED.NetworkPayLocCur, T_INVHED.MndExtrnal, T_INVHED.CompanyID, T_INVHED.InvAddCost, T_INVHED.InvAddCostExtrnal, T_INVHED.InvAddCostExtrnalLoc, T_INVHED.IsExtrnalGaid, T_INVHED.ExtrnalCostGaidID, T_INVHED.InvAddCostLoc, T_INVHED.CommMnd_Inv, T_INVHED.Puyaid, T_INVHED.Remming,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.PersonalNm from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as PersonalNm,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.City from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as City,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.Email from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as Email,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.Mobile from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as Mobile,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.Telphone1 from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as Telphone1,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select vColStr1 from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as CustAge,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.Telphone2 from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as Telphone2,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.Fax from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as Fax,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.zipCod from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as zipCod,T_SYSSETTING.LineGiftlNameA,T_SYSSETTING.LineGiftlNameE,T_Curency.Arb_Des as CurrnceyNm,T_Curency.Eng_Des as CurrnceyNmE,(select max(gdDes)from T_GDDET where gdID = T_INVHED.GadeId )as gdDes, (T_INVDET.Amount - (case when T_INVHED.IsTaxLines = 1 then (case when T_INVHED.IsTaxByTotal = 1 then (case when (Abs(T_INVDET.Qty) *  T_INVDET.Price * T_INVDET.ItmTax / 100) > 0 then ((Abs(T_INVDET.Qty) *  T_INVDET.Price) - case when (Abs(T_INVDET.Qty) * T_INVDET.Price * T_INVDET.ItmDis / 100) > 0 then (Abs(T_INVDET.Qty) * T_INVDET.Price * T_INVDET.ItmDis / 100) else 0 end )* T_INVDET.ItmTax / 100   else 0 end) else (Abs(T_INVDET.Qty) *  T_INVDET.Price * T_INVDET.ItmTax / 100) end) else 0 end )) as TotBeforeTax,(select invGdADesc from T_INVSETTING where T_INVHED.InvTyp = T_INVSETTING.InvID ) as invGdADesc,(select invGdEDesc from T_INVSETTING where T_INVHED.InvTyp = T_INVSETTING.InvID ) as invGdEDesc,(select T_CATEGORY.CAT_No from T_CATEGORY where T_CATEGORY.CAT_ID = T_Items.ItmCat) as CAT_No,(select T_CATEGORY.Arb_Des from T_CATEGORY where T_CATEGORY.CAT_ID = T_Items.ItmCat) as CatNmA,(select T_CATEGORY.Eng_Des from T_CATEGORY where T_CATEGORY.CAT_ID = T_Items.ItmCat) as CatNmE,(case when (select t.BarCod1 from T_Items t where t.Itm_No = T_INVDET.ItmNo and t.Unit1 = (select max(e.Unit_ID) from T_Unit e where e.Arb_Des = T_INVDET.ItmUnt )) != '' then (select t.BarCod1 from T_Items t where t.Itm_No = T_INVDET.ItmNo and t.Unit1 = (select max(e.Unit_ID) from T_Unit e where e.Arb_Des = T_INVDET.ItmUnt ))  when (select t.BarCod2 from T_Items t where t.Itm_No = T_INVDET.ItmNo and t.Unit2 = (select max(e.Unit_ID) from T_Unit e where e.Arb_Des = T_INVDET.ItmUnt )) != '' then (select t.BarCod2 from T_Items t where t.Itm_No = T_INVDET.ItmNo and t.Unit2 = (select max(e.Unit_ID) from T_Unit e where e.Arb_Des = T_INVDET.ItmUnt )) when (select t.BarCod3 from T_Items t where t.Itm_No = T_INVDET.ItmNo and t.Unit3 = (select max(e.Unit_ID) from T_Unit e where e.Arb_Des = T_INVDET.ItmUnt )) != '' then (select t.BarCod3 from T_Items t where t.Itm_No = T_INVDET.ItmNo and t.Unit3 = (select max(e.Unit_ID) from T_Unit e where e.Arb_Des = T_INVDET.ItmUnt )) when (select t.BarCod4 from T_Items t where t.Itm_No = T_INVDET.ItmNo and t.Unit4 = (select max(e.Unit_ID) from T_Unit e where e.Arb_Des = T_INVDET.ItmUnt )) != '' then (select t.BarCod4 from T_Items t where t.Itm_No = T_INVDET.ItmNo and t.Unit4 = (select max(e.Unit_ID) from T_Unit e where e.Arb_Des = T_INVDET.ItmUnt )) when (select t.BarCod5 from T_Items t where t.Itm_No = T_INVDET.ItmNo and t.Unit5 = (select max(e.Unit_ID) from T_Unit e where e.Arb_Des = T_INVDET.ItmUnt )) != '' then (select t.BarCod5 from T_Items t where t.Itm_No = T_INVDET.ItmNo and t.Unit5 = (select max(e.Unit_ID) from T_Unit e where e.Arb_Des = T_INVDET.ItmUnt )) else T_Items.Itm_No  end) as ItmBarcod";
-                string Fields = " Abs(T_INVDET.Qty) as QtyAbs , T_INVDET.InvDet_ID,T_INVHED.tailor1,T_INVHED.tailor2,T_INVHED.tailor3,T_INVHED.tailor4,T_INVHED.tailor5,T_INVHED.tailor6,T_INVHED.tailor7,T_INVHED.tailor8,T_INVHED.tailor9,T_INVHED.tailor10,T_INVHED.tailor11,T_INVHED.tailor12,T_INVHED.tailor13,T_INVHED.tailor14,T_INVHED.tailor15,T_INVHED.tailor16,T_INVHED.tailor17,T_INVHED.tailor18,T_INVHED.tailor19,T_INVHED.tailor20,T_INVHED.InvImg, T_INVDET.InvNo, T_INVDET.InvId, T_INVDET.InvSer, T_INVDET.ItmNo, T_INVDET.Cost, T_INVDET.Qty, T_INVDET.ItmUnt, T_INVDET.ItmDes,T_INVDET.ItmDesE , T_INVDET.ItmUntE, T_INVDET.ItmUntPak, T_INVDET.StoreNo, T_INVDET.Price, T_INVDET.Amount, T_INVDET.RealQty, T_INVDET.ItmTyp,T_INVDET.ItmDis, (Abs(T_INVDET.Qty) *  T_INVDET.Price) * (T_INVDET.ItmDis / 100) as ItmDisVal, T_INVDET.DatExper, T_INVDET.itmInvDsc,ItmIndex," + (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.LineGiftSts, vStr(VarGeneral.InvTyp)) ? " T_INVDET.ItmWight " : " 0 as ItmWight") + ", T_INVDET.ItmWight_T, T_INVDET.ItmAddCost, T_INVDET.RunCod, T_INVDET.LineDetails ,T_INVDET.Serial_Key, " + vInvH + ", T_Items.* , T_CstTbl.Arb_Des as CstTbl_Arb_Des , T_CstTbl.Eng_Des as CstTbl_Eng_Des , T_Mndob.Arb_Des as Mndob_Arb_Des , T_Mndob.Eng_Des as Mndob_Eng_Des,T_SYSSETTING.LogImg,(select max(T_AccDef.TaxNo) from T_AccDef where T_AccDef.AccDef_No = T_SYSSETTING.TaxAcc) as TaxAcc,T_SYSSETTING.TaxNoteInv,case when T_INVHED.IsTaxLines = 1 then (case when T_INVHED.IsTaxByTotal = 1 then (case when (Abs(T_INVDET.Qty) *  T_INVDET.Price * T_INVDET.ItmTax / 100) > 0 then ((Abs(T_INVDET.Qty) *  T_INVDET.Price) - case when (Abs(T_INVDET.Qty) * T_INVDET.Price * T_INVDET.ItmDis / 100) > 0 then (Abs(T_INVDET.Qty) * T_INVDET.Price * T_INVDET.ItmDis / 100) else 0 end )* T_INVDET.ItmTax / 100   else 0 end) else (Abs(T_INVDET.Qty) *  T_INVDET.Price * T_INVDET.ItmTax / 100) end) else 0 end as TaxValue ,(select InvNamA from T_INVSETTING where T_INVHED.InvTyp = T_INVSETTING.InvID ) as InvNamA,(select InvNamE from T_INVSETTING where T_INVHED.InvTyp = T_INVSETTING.InvID ) as InvNamE,(select T_Store.Arb_Des from T_Store where T_Store.Stor_ID = T_INVDET.StoreNo) as StoreNmA,(select T_Store.Eng_Des from T_Store where T_Store.Stor_ID = T_INVDET.StoreNo) as StoreNmE,(select defPrn from T_INVSETTING where CatID = (select ItmCat from T_Items where Itm_No = T_INVDET.ItmNo) ) as defPrn,case when T_INVHED.CusVenNo = '' THEN '0' ELSE (SELECT Sum(T_GDDET.gdValue) FROM T_GDHEAD INNER JOIN  T_GDDET ON T_GDHEAD.gdhead_ID = T_GDDET.gdID where T_GDDET.AccNo = T_INVHED.CusVenNo and T_GDHEAD.gdLok = 0 and (select T_AccDef.AccCat from T_AccDef where T_AccDef.AccDef_No = T_INVHED.CusVenNo) = '4') END as Balanc,T_INVDET.ItmTax,T_INVHED.InvAddTax,T_INVHED.InvAddTaxlLoc,T_INVHED.TaxGaidID,T_INVHED.IsTaxUse,T_INVHED.IsTaxLines,IsTaxByTotal,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.TaxNo from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as TaxCustNo,T_INVHED.OrderTyp," + ((data_this.IsTaxLines.Value && !VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 65)) ? " T_INVHED.InvTotLocCur - T_INVHED.InvAddTax as TotWithTaxPoint " : " T_INVHED.InvTotLocCur as TotWithTaxPoint") + " ,T_INVHED.InvTotLocCur - T_INVHED.InvDisVal as TotBeforeDisVal,T_INVHED.IsTaxByNet,T_INVHED.TaxByNetValue," + (data_this.IsTaxUse.Value ? " T_INVHED.InvNetLocCur - T_INVHED.InvAddTax as NetWithoutTax " : " T_INVHED.InvNetLocCur as NetWithoutTax");
+                string Fields = " Abs(T_INVDET.Qty) as QtyAbs , T_INVDET.InvDet_ID,T_INVHED.tailor1,T_INVHED.tailor2,T_INVHED.tailor3,T_INVHED.tailor4,T_INVHED.tailor5,T_INVHED.tailor6,T_INVHED.tailor7,T_INVHED.tailor8,T_INVHED.tailor9,T_INVHED.tailor10,T_INVHED.tailor11,T_INVHED.tailor12,T_INVHED.tailor13,T_INVHED.tailor14,T_INVHED.tailor15,T_INVHED.tailor16,T_INVHED.tailor17,T_INVHED.tailor18,T_INVHED.tailor19,T_INVHED.tailor20,T_INVHED.InvImg, T_INVDET.InvNo, T_INVDET.InvId, T_INVDET.InvSer, T_INVDET.ItmNo, T_INVDET.Cost, T_INVDET.Qty, T_INVDET.ItmUnt, T_INVDET.ItmDes,T_INVDET.ItmDesE , T_INVDET.ItmUntE, T_INVDET.ItmUntPak, T_INVDET.StoreNo, T_INVDET.Price, T_INVDET.Amount, T_INVDET.RealQty, T_INVDET.ItmTyp,T_INVDET.ItmDis, (Abs(T_INVDET.Qty) *  T_INVDET.Price) * (T_INVDET.ItmDis / 100) as ItmDisVal, T_INVDET.DatExper, T_INVDET.itmInvDsc,ItmIndex," + (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.LineGiftSts, vStr(VarGeneral.InvTyp)) ? " T_INVDET.ItmWight " : " 0 as ItmWight") + ", T_INVDET.ItmWight_T, T_INVDET.ItmAddCost, T_INVDET.RunCod, T_INVDET.LineDetails ,T_INVDET.Serial_Key, " + vInvH + ", T_Items.* , T_CstTbl.Arb_Des as CstTbl_Arb_Des , T_CstTbl.Eng_Des as CstTbl_Eng_Des , T_Mndob.Arb_Des as Mndob_Arb_Des , T_Mndob.Eng_Des as Mndob_Eng_Des,T_SYSSETTING.LogImg,(select max(T_AccDef.TaxNo) from T_AccDef where T_AccDef.AccDef_No = T_SYSSETTING.TaxAcc) as TaxAcc,T_SYSSETTING.TaxNoteInv,case when T_INVHED.IsTaxLines = 1 then (case when T_INVHED.IsTaxByTotal = 1 then (case when (Abs(T_INVDET.Qty) *  T_INVDET.Price * T_INVDET.ItmTax / 100) > 0 then ((Abs(T_INVDET.Qty) *  T_INVDET.Price) - case when (Abs(T_INVDET.Qty) * T_INVDET.Price * T_INVDET.ItmDis / 100) > 0 then (Abs(T_INVDET.Qty) * T_INVDET.Price * T_INVDET.ItmDis / 100) else 0 end )* T_INVDET.ItmTax / 100   else 0 end) else (Abs(T_INVDET.Qty) *  T_INVDET.Price * T_INVDET.ItmTax / 100) end) else 0 end as TaxValue ,(select InvNamA from T_INVSETTING where T_INVHED.InvTyp = T_INVSETTING.InvID ) as InvNamA,(select InvNamE from T_INVSETTING where T_INVHED.InvTyp = T_INVSETTING.InvID ) as InvNamE,(select T_Store.Arb_Des from T_Store where T_Store.Stor_ID = T_INVDET.StoreNo) as StoreNmA,(select T_Store.Eng_Des from T_Store where T_Store.Stor_ID = T_INVDET.StoreNo) as StoreNmE,(select CONVERT(Varchar,InvID) from T_INVSETTING where CatID = (select ItmCat from T_Items where Itm_No = T_INVDET.ItmNo) ) as defPrn,case when T_INVHED.CusVenNo = '' THEN '0' ELSE (SELECT Sum(T_GDDET.gdValue) FROM T_GDHEAD INNER JOIN  T_GDDET ON T_GDHEAD.gdhead_ID = T_GDDET.gdID where T_GDDET.AccNo = T_INVHED.CusVenNo and T_GDHEAD.gdLok = 0 and (select T_AccDef.AccCat from T_AccDef where T_AccDef.AccDef_No = T_INVHED.CusVenNo) = '4') END as Balanc,T_INVDET.ItmTax,T_INVHED.InvAddTax,T_INVHED.InvAddTaxlLoc,T_INVHED.TaxGaidID,T_INVHED.IsTaxUse,T_INVHED.IsTaxLines,IsTaxByTotal,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.TaxNo from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as TaxCustNo,T_INVHED.OrderTyp," + ((data_this.IsTaxLines.Value && !VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 65)) ? " T_INVHED.InvTotLocCur - T_INVHED.InvAddTax as TotWithTaxPoint " : " T_INVHED.InvTotLocCur as TotWithTaxPoint") + " ,T_INVHED.InvTotLocCur - T_INVHED.InvDisVal as TotBeforeDisVal,T_INVHED.IsTaxByNet,T_INVHED.TaxByNetValue," + (data_this.IsTaxUse.Value ? " T_INVHED.InvNetLocCur - T_INVHED.InvAddTax as NetWithoutTax " : " T_INVHED.InvNetLocCur as NetWithoutTax");
                 VarGeneral.HeaderRep[0] = Text;
                 VarGeneral.HeaderRep[1] = string.Empty;
                 VarGeneral.HeaderRep[2] = string.Empty;
@@ -1264,8 +1264,7 @@ namespace InvAcc.Forms
                             frm.RepCashier = "InvoiceCachier";
                             frm.Repvalue = "InvSalWtr";
                             frm.RepCashier = "InvoiceCachierWaiter";
-                            Program.min();
-                     
+                            if (checkBoxItem_BarCode == null) checkBoxItem_BarCode = new CheckBox();
                             frm.Tag = LangArEn;
                             if (checkBoxItem_BarCode.Checked)
                             {
@@ -1278,7 +1277,7 @@ namespace InvAcc.Forms
 
                             VarGeneral.vTitle = ((LangArEn == 0) ? db.StockInvSetting( VarGeneral.InvTyp).InvNamA : db.StockInvSetting( VarGeneral.InvTyp).InvNamE);
                             VarGeneral.vTitle = VarGeneral.vTitle.Trim();
-                            if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                            if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                             {
                                 frm.Repvalue = "InvSal";
                             }
@@ -1298,8 +1297,10 @@ namespace InvAcc.Forms
                                 {
                                     frm.Repvalue = "InvSal";
                                 }
+                                Program.min();
                                 VarGeneral.PrintingSettingGen = new PrintDialog();
-                                VarGeneral.prnt_doc_Gen = new PrintDocument(); VarGeneral.PrintingSettingGen.UseEXDialog = true;
+                                VarGeneral.prnt_doc_Gen = new PrintDocument();
+                                VarGeneral.PrintingSettingGen.UseEXDialog = true;
                                 if (VarGeneral.PrintingSettingGen.ShowDialog() != DialogResult.OK)
                                 {
                                     return;
@@ -1311,7 +1312,7 @@ namespace InvAcc.Forms
                             VarGeneral.Mndoblbl = label18.Text.Replace(" :", string.Empty);
                             Text = VarGeneral.vTitle;
                      
-                            if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1" || checkBoxItem_BarCode.Checked)
+                            if (_InvSetting.ISdirectPrinting || checkBoxItem_BarCode.Checked)
                             {
                                 frm._Proceess();
                             }
@@ -1329,11 +1330,11 @@ namespace InvAcc.Forms
                     }
                 }
             }
-            //else
-            //{
-            //    PrintSet();
-            //    prnt_doc.Print();
-            //}
+            else
+            {
+                PrintSet();
+              prnt_doc.Print();
+            }
             VarGeneral.IsCashCredit = true;
         }
         private void prnt_doc_PrintPage(object sender, PrintPageEventArgs e)
@@ -1774,12 +1775,12 @@ namespace InvAcc.Forms
       
         public FrmInvSalePoint()
         {
-            
+            VarGeneral.InvTyp = 1;
             fdsafas_load(null, null);
             InitializeComponent();
             button14.Click += Butdton_41;
             button20.Click += adsfasdfasd;
-            
+
             flxinitate();
             panel11.BackColor = Color.LightGray;
             VarGeneral.Settings_Sys = db.SystemSettingStock();
@@ -2114,7 +2115,8 @@ namespace InvAcc.Forms
 
         private void fdsafas_load(object sender, EventArgs e)
         {
-           // Program.min();
+            VarGeneral.InvTyp = 1;
+            // Program.min();
             _SysSetting = db.SystemSettingStock();
             barcodeFilter = VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 87);
             PagesButtons = true ;
@@ -4118,9 +4120,9 @@ namespace InvAcc.Forms
                 // puBar1.Button_Search.t = "F4";
                 Button_PrintTable.Text = "عــرض";
                 Button_PrintTable.Tooltip = "F5";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "طباعة" : "عــرض");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "طباعة" : "عــرض");
 
-                puBar1.buttonItem_Print.Caption= ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "طباعة" : "عــرض");
+                puBar1.buttonItem_Print.Caption= ((_InvSetting.ISdirectPrinting) ? "طباعة" : "عــرض");
 
                 // buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "تصدير";
@@ -4236,8 +4238,8 @@ namespace InvAcc.Forms
                 //  puBar1.Button_Search.Tooltip = "F4";
                 Button_PrintTable.Text = "Show";
                 Button_PrintTable.Tooltip = "F5";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "Print" : "Show");
-                puBar1.buttonItem_Print.Caption = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "Print" : "Show");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "Print" : "Show");
+                puBar1.buttonItem_Print.Caption = ((_InvSetting.ISdirectPrinting) ? "Print" : "Show");
 
                 // buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "Export";
@@ -4672,7 +4674,7 @@ namespace InvAcc.Forms
             }
             try
             {
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                 {
                     puBar1.ChkA4Cahir.Caption = "Csh";
                 }
@@ -13146,6 +13148,27 @@ else
                 form1.ShowDialog();
             }
         }
+        double getround2(double m1, int p)
+        {
+            return Math.Round(m1, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
+
+        }
+        object getdata(
+           int r, int c, int f)
+        {
+            if (r <= 0 || FlxInv.GetData(r, 8) == null) return null;
+            double p = 0;
+            p = double.Parse(FlxInv.GetData(r, 8).ToString());
+            //if(f==1)
+            //{
+            //    double t = 0;
+            //    double.Parse(FlxInv.GetData(r, 31).ToString(), out t);
+            //    t = (t / 100) + 1;
+            //  if(ChkPriceIncludeTax.Value)  p = p * t;
+            //}
+            return p;
+        }
+
         private void GetInvTot()
         {
             double InvTot = 0.0;
@@ -13168,19 +13191,15 @@ else
                 {
                     try
                     {
-                        if (FlxInv.Rows[iiCnt].Height <= 33)
-                        {
-                            continue;
-                        }
                         InvTot += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 38))));
                         InvCost += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 10)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 12))));
                         InvQty += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7))));
-                        if (switchButton_TaxByTotal.Value)
+                        if (switchButton_TaxByTotal.Value || ChkPriceIncludeTax.Checked)
                         {
                             double DisVal = 0.0;
                             try
                             {
-                                DisVal = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))) / 100.0);
+                                DisVal = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(getdata(iiCnt, 8, 1)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))) / 100.0);
                             }
                             catch
                             {
@@ -13191,10 +13210,10 @@ else
                         {
                             InvTax += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 31)))) / 100.0);
                         }
-                        ItmDisCount += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))) / 100.0);
+                        ItmDisCount += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(getdata(iiCnt, 8, 1)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 9)))) / 100.0);
                         try
                         {
-                            if ((File.Exists(Application.StartupPath + "\\Script\\SecriptColDisSalesPoint.dll") || (VarGeneral.gUserName == "runsetting" && File.Exists(Application.StartupPath + "\\Script\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", string.Empty).Trim() + "\\SecriptColDisSalesPoint.dll"))) && double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 36)))) > 0.0)
+                            if ((File.Exists(Application.StartupPath + "\\Script\\SecriptColDisSales.dll") || (VarGeneral.gUserName == "runsetting" && File.Exists(Application.StartupPath + "\\Script\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\SecriptColDisSales.dll"))) && double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 36)))) > 0.0)
                             {
                                 ItmDisCount += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 36)))) / 100.0);
                             }
@@ -13204,7 +13223,7 @@ else
                         }
                         try
                         {
-                            if ((File.Exists(Application.StartupPath + "\\Script\\SecriptColDisSalesPointValue.dll") || (VarGeneral.gUserName == "runsetting" && File.Exists(Application.StartupPath + "\\Script\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", string.Empty).Trim() + "\\SecriptColDisSalesPointValue.dll"))) && double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 36)))) > 0.0)
+                            if ((File.Exists(Application.StartupPath + "\\Script\\SecriptColDisSalesValue.dll") || (VarGeneral.gUserName == "runsetting" && File.Exists(Application.StartupPath + "\\Script\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\SecriptColDisSalesValue.dll"))) && double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 36)))) > 0.0)
                             {
                                 ItmDisCount += double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(iiCnt, 36))));
                             }
@@ -13217,13 +13236,13 @@ else
                     {
                     }
                 }
-                txtTotalAm.Text = VarGeneral.TString.TEmpty(Math.Round(InvTot * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
-                txtDueAmount.Text = VarGeneral.TString.TEmpty(Math.Round((InvTot - InvDis) * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                txtTotalAm.Text = VarGeneral.TString.TEmpty(getround2(InvTot * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                txtDueAmount.Text = VarGeneral.TString.TEmpty(getround2((InvTot - InvDis) * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
                 txtTotalQ.Text = VarGeneral.TString.TEmpty(InvQty.ToString());
-                txtInvCost.Text = VarGeneral.TString.TEmpty(Math.Round(InvCost, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
-                txtCustNet.Text = VarGeneral.TString.TEmpty(Math.Round(double.Parse(VarGeneral.TString.TEmpty(string.Concat(txtCustRep.Value))) + double.Parse(txtDueAmountLoc.Text), VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
-                txtTotalAmLoc.Text = VarGeneral.TString.TEmpty(Math.Round(InvTot, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
-                txtDueAmountLoc.Text = VarGeneral.TString.TEmpty(Math.Round(InvTot - InvDis, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                txtInvCost.Text = VarGeneral.TString.TEmpty(getround2(InvCost, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                txtTotalAmLoc.Text = VarGeneral.TString.TEmpty(getround2(InvTot, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                txtDueAmountLoc.Text = VarGeneral.TString.TEmpty(getround2(InvTot - InvDis, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                txtCustNet.Text = VarGeneral.TString.TEmpty(getround2(double.Parse(VarGeneral.TString.TEmpty(string.Concat(txtCustRep.Value))) + double.Parse(txtDueAmountLoc.Text), VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
                 double Tax_Per = 0.0;
                 try
                 {
@@ -13231,33 +13250,32 @@ else
                 }
                 catch
                 {
-                    Tax_Per = 0.0;
                 }
-                if (switchButton_TaxByNet.Value)
+                if (switchButton_TaxByNet.Value && !ChkPriceIncludeTax.Checked)
                 {
-                    InvTax = ((!(Tax_Per <= 0.0) && !(txtDueAmountLoc.Value <= 0.0)) ? Math.Round(txtDueAmountLoc.Value * Tax_Per / 100.0, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2) : 0.0);
+                    InvTax = ((!(Tax_Per <= 0.0) && !(txtDueAmountLoc.Value <= 0.0)) ? getround2(txtDueAmountLoc.Value * Tax_Per / 100.0, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2) : 0.0);
                 }
-                txtTotTax.Text = VarGeneral.TString.TEmpty(Math.Round(InvTax, VarGeneral.NumberOfDecimalForTax).ToString());
-                txtTotTaxLoc.Text = VarGeneral.TString.TEmpty(Math.Round(InvTax * RateValue, VarGeneral.NumberOfDecimalForTax).ToString());
-                if (switchButton_TaxLines.Value)
+                txtTotTax.Text = VarGeneral.TString.TEmpty(getround2(InvTax, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                txtTotTaxLoc.Text = VarGeneral.TString.TEmpty(getround2(InvTax * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                if (switchButton_TaxLines.Value || (ChkPriceIncludeTax.Checked))
                 {
                     if (!switchButton_Tax.Value)
                     {
-                        txtDueAmount.Text = VarGeneral.TString.TEmpty(Math.Round((InvTot - InvTax - InvDis) * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                        txtDueAmount.Text = VarGeneral.TString.TEmpty(getround2((InvTot - InvTax - InvDis) * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
                     }
                     if (!switchButton_Tax.Value)
                     {
-                        txtDueAmountLoc.Text = VarGeneral.TString.TEmpty(Math.Round(InvTot - InvTax - InvDis, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                        txtDueAmountLoc.Text = VarGeneral.TString.TEmpty(getround2(InvTot - InvTax - InvDis, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
                     }
                     if (switchButton_TaxByNet.Value && InvTax > 0.0)
                     {
                         if (switchButton_Tax.Value)
                         {
-                            txtDueAmount.Text = VarGeneral.TString.TEmpty(Math.Round((InvTot + InvTax - InvDis) * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                            txtDueAmount.Text = VarGeneral.TString.TEmpty(getround2((InvTot + InvTax - InvDis) * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
                         }
                         if (switchButton_Tax.Value)
                         {
-                            txtDueAmountLoc.Text = VarGeneral.TString.TEmpty(Math.Round(InvTot + InvTax - InvDis, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                            txtDueAmountLoc.Text = VarGeneral.TString.TEmpty(getround2(InvTot + InvTax - InvDis, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
                         }
                     }
                 }
@@ -13265,11 +13283,11 @@ else
                 {
                     if (switchButton_Tax.Value)
                     {
-                        txtDueAmount.Text = VarGeneral.TString.TEmpty(Math.Round((InvTot + InvTax - InvDis) * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                        txtDueAmount.Text = VarGeneral.TString.TEmpty(getround2((InvTot + InvTax - InvDis) * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
                     }
                     if (switchButton_Tax.Value)
                     {
-                        txtDueAmountLoc.Text = VarGeneral.TString.TEmpty(Math.Round(InvTot + InvTax - InvDis, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
+                        txtDueAmountLoc.Text = VarGeneral.TString.TEmpty(getround2(InvTot + InvTax - InvDis, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2).ToString());
                     }
                 }
                 txtTotDis.Value = (switchButton_Dis.Value ? (txtDiscountVal.Value + ItmDisCount) : txtDiscountVal.Value);
@@ -13280,8 +13298,8 @@ else
                 {
                     if (switchButton_Dis.Value && ItmDisCount > 0.0)
                     {
-                        txtTotalAm.Value += Math.Round(ItmDisCount * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
-                        txtTotalAmLoc.Value += Math.Round(ItmDisCount, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
+                        txtTotalAm.Value += getround2(ItmDisCount * RateValue, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
+                        txtTotalAmLoc.Value += getround2(ItmDisCount, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
                     }
                 }
                 catch
@@ -13290,10 +13308,10 @@ else
                 CommCalculat();
                 if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 56))
                 {
-                    txtTotalAm.Value = Math.Round(txtTotalAm.Value, 0);
-                    txtDueAmount.Value = Math.Round(txtDueAmount.Value, 0);
-                    txtTotalAmLoc.Value = Math.Round(txtTotalAmLoc.Value, 0);
-                    txtDueAmountLoc.Value = Math.Round(txtDueAmountLoc.Value, 0);
+                    txtTotalAm.Value = getround2(txtTotalAm.Value, 0);
+                    txtDueAmount.Value = getround2(txtDueAmount.Value, 0);
+                    txtTotalAmLoc.Value = getround2(txtTotalAmLoc.Value, 0);
+                    txtDueAmountLoc.Value = getround2(txtDueAmountLoc.Value, 0);
                 }
                 try
                 {
@@ -13321,14 +13339,18 @@ else
                     doubleInput_LostOrWin.Value = 0.0;
                 }
             }
-            if (FlxInv.Rows.Count <= 1)
+            if (VarGeneral.Settings_Sys.IsCustomerDisplay.Value)
             {
-                button_DeleteLine.Visible = false;
-            }
-
-            if (!VarGeneral.Settings_Sys.IsCustomerDisplay.Value && !VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 73))
-            {
-                FillFrmBranch();
+                double _pric = 0.0;
+                try
+                {
+                    _pric = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 8))));
+                }
+                catch
+                {
+                    _pric = 0.0;
+                }
+                CustomerDisplayData(txtDueAmountLoc.Value, _pric);
             }
         }
         private void CustomerDisplayData(double _vTot, double _price)
@@ -13509,7 +13531,7 @@ else
                 }
             }
 
-            Lab_DueAmountLoc.Text =  txtDueAmountLoc.Value +"   (SR) " ;
+            Lab_DueAmountLoc.Text =  txtDueAmountLoc.Text +"   (SR) " ;
 
         }
         private void txtRemark_ButtonCustomClick(object sender, EventArgs e)
@@ -18033,529 +18055,25 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
         //}
         private void buttonItem_Order1_Print_Click(object sender, EventArgs e)
         {
-            PrintOrders(1);
+          //  PrintOrders(1);
         }
         private void buttonItem_Order2_Print_Click(object sender, EventArgs e)
         {
-            PrintOrders(2);
+            //PrintOrders(2);
         }
         private void buttonItem_Order3_Print_Click(object sender, EventArgs e)
         {
-            PrintOrders(3);
+           // PrintOrders(3);
         }
         private void buttonItem_Order4_Print_Click(object sender, EventArgs e)
         {
-            PrintOrders(4);
+            //PrintOrders(4);
         }
         private void buttonItem_Order5_Print_Click(object sender, EventArgs e)
         {
-            PrintOrders(5);
+           // PrintOrders(5);
         }
-        private void PrintOrders(int _OrderTyp)
-        {
-            try
-            {
-                if ((_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) != "2"))
-                {
-                    orderNo_activate = _OrderTyp;
-                    T_INVHED newData = new T_INVHED();
-                    C1FlexGrid _ListGraid = new C1FlexGrid();
-                    switch (_OrderTyp)
-                    {
-                        case 1:
-                            newData = data_this_ORDER1;
-                            _ListGraid = GraidORDER1;
-                            break;
-                        case 2:
-                            newData = data_this_ORDER2;
-                            _ListGraid = GraidORDER2;
-                            break;
-                        case 3:
-                            newData = data_this_ORDER3;
-                            _ListGraid = GraidORDER3;
-                            break;
-                        case 4:
-                            newData = data_this_ORDER4;
-                            _ListGraid = GraidORDER4;
-                            break;
-                        case 5:
-                            newData = data_this_ORDER5;
-                            _ListGraid = GraidORDER5;
-                            break;
-                    }
-                    if (VarGeneral.SSSLev != "R" && VarGeneral.SSSLev != "C" && VarGeneral.SSSLev != "H")
-                    {
-                        for (int i = 1; i <= _ListGraid.Rows.Count; i++)
-                        {
-                            try
-                            {
-                                if (_ListGraid.Rows[i].Height == 33)
-                                {
-                                    _ListGraid.SetData(i - 1, 36, _ListGraid.Rows[i][2].ToString());
-                                }
-                            }
-                            catch
-                            {
-                            }
-                        }
-                    }
-                    bool tax = true;
-                    bool taxline = true;
-                    bool taxByTotal = false;
-                    DataSet _null = new DataSet();
-                    VarGeneral.RepData = new DataSet();
-                    DataSet _List = new DataSet();
-                    VarGeneral.RepData.Tables.Add();
-                    _null.Tables.Add();
-                    _null.Tables[0].Columns.Add();
-                    _null.Tables[0].Rows.Add("_null");
-                    VarGeneral.RepData.Tables[0].Merge(_null.Tables[0]);
-                    VarGeneral.RepData.Tables[0].Columns.Add("InvNo");
-                    VarGeneral.RepData.Tables[0].Columns.Add("HDat");
-                    VarGeneral.RepData.Tables[0].Columns.Add("GDat");
-                    VarGeneral.RepData.Tables[0].Columns.Add("CusVenNo");
-                    VarGeneral.RepData.Tables[0].Columns.Add("CusVenNm");
-                    VarGeneral.RepData.Tables[0].Columns.Add("CusVenAdd");
-                    VarGeneral.RepData.Tables[0].Columns.Add("CusVenTel");
-                    VarGeneral.RepData.Tables[0].Columns.Add("RefNo");
-                    VarGeneral.RepData.Tables[0].Columns.Add("UsrNamA");
-                    VarGeneral.RepData.Tables[0].Columns.Add("UsrNamE");
-                    VarGeneral.RepData.Tables[0].Columns.Add("Branch_Name");
-                    VarGeneral.RepData.Tables[0].Columns.Add("Branch_NameE");
-                    VarGeneral.RepData.Tables[0].Columns.Add("InvCash");
-                    VarGeneral.RepData.Tables[0].Columns.Add("Remark");
-                    VarGeneral.RepData.Tables[0].Columns.Add("EstDat");
-                    VarGeneral.RepData.Tables[0].Columns.Add("EstDatNote");
-                    VarGeneral.RepData.Tables[0].Columns.Add("InvQty");
-                    VarGeneral.RepData.Tables[0].Columns.Add("InvTotLocCur");
-                    VarGeneral.RepData.Tables[0].Columns.Add("InvDisValLocCur");
-                    VarGeneral.RepData.Tables[0].Columns.Add("InvNetLocCur");
-                    VarGeneral.RepData.Tables[0].Columns.Add("LogImg");
-                    VarGeneral.RepData.Tables[0].Columns.Add("TaxAcc");
-                    VarGeneral.RepData.Tables[0].Columns.Add("TaxNoteInv");
-                    VarGeneral.RepData.Tables[0].Columns.Add("InvAddTax");
-                    VarGeneral.RepData.Tables[0].Columns.Add("InvAddTaxlLoc");
-                    VarGeneral.RepData.Tables[0].Columns.Add("TaxGaidID");
-                    VarGeneral.RepData.Tables[0].Columns.Add("IsTaxUse", typeof(bool));
-                    VarGeneral.RepData.Tables[0].Columns.Add("IsTaxLines", typeof(bool));
-                    VarGeneral.RepData.Tables[0].Columns.Add("IsTaxByTotal", typeof(bool));
-                    VarGeneral.RepData.Tables[0].Rows.Add();
-                    VarGeneral.RepData.Tables[0].Rows[1]["InvNo"] = ((LangArEn == 0) ? "معلق" : "Hold");
-                    VarGeneral.RepData.Tables[0].Rows[1]["HDat"] = newData.HDat;
-                    VarGeneral.RepData.Tables[0].Rows[1]["GDat"] = newData.GDat;
-                    VarGeneral.RepData.Tables[0].Rows[1]["CusVenNo"] = newData.CusVenNo;
-                    VarGeneral.RepData.Tables[0].Rows[1]["CusVenNm"] = newData.CusVenNm;
-                    VarGeneral.RepData.Tables[0].Rows[1]["CusVenAdd"] = newData.CusVenAdd;
-                    VarGeneral.RepData.Tables[0].Rows[1]["CusVenTel"] = newData.CusVenTel;
-                    VarGeneral.RepData.Tables[0].Rows[1]["RefNo"] = newData.RefNo;
-                    VarGeneral.RepData.Tables[0].Rows[1]["UsrNamA"] = VarGeneral.UserNameA;
-                    VarGeneral.RepData.Tables[0].Rows[1]["UsrNamE"] = VarGeneral.UserNameE;
-                    VarGeneral.RepData.Tables[0].Rows[1]["Branch_Name"] = VarGeneral.BranchNameA;
-                    VarGeneral.RepData.Tables[0].Rows[1]["Branch_NameE"] = VarGeneral.BranchNameE;
-                    VarGeneral.RepData.Tables[0].Rows[1]["LogImg"] = VarGeneral.Settings_Sys.LogImg;
-                    VarGeneral.RepData.Tables[0].Rows[1]["TaxAcc"] = VarGeneral.Settings_Sys.TaxAcc;
-                    VarGeneral.RepData.Tables[0].Rows[1]["TaxNoteInv"] = VarGeneral.Settings_Sys.TaxNoteInv;
-                    VarGeneral.RepData.Tables[0].Rows[1]["InvAddTax"] = newData.InvAddTax;
-                    VarGeneral.RepData.Tables[0].Rows[1]["InvAddTaxlLoc"] = newData.InvAddTaxlLoc;
-                    VarGeneral.RepData.Tables[0].Rows[1]["TaxGaidID"] = newData.TaxGaidID;
-                    VarGeneral.RepData.Tables[0].Rows[1]["IsTaxUse"] = newData.IsTaxUse.Value;
-                    VarGeneral.RepData.Tables[0].Rows[1]["IsTaxLines"] = newData.IsTaxLines.Value;
-                    VarGeneral.RepData.Tables[0].Rows[1]["IsTaxByTotal"] = newData.IsTaxByTotal.Value;
-                    tax = newData.IsTaxUse.Value;
-                    taxline = newData.IsTaxLines.Value;
-                    taxByTotal = newData.IsTaxByTotal.Value;
-                    try
-                    {
-                        VarGeneral.RepData.Tables[0].Rows[1]["InvCash"] = newData.InvCash;
-                    }
-                    catch
-                    {
-                        VarGeneral.RepData.Tables[0].Rows[1]["InvCash"] = "نقدي";
-                    }
-                    VarGeneral.RepData.Tables[0].Rows[1]["Remark"] = newData.Remark;
-                    VarGeneral.RepData.Tables[0].Rows[1]["EstDat"] = newData.EstDat;
-                    VarGeneral.RepData.Tables[0].Rows[1]["EstDatNote"] = 0;
-                    VarGeneral.RepData.Tables[0].Rows[1]["InvQty"] = newData.InvQty;
-                    VarGeneral.RepData.Tables[0].Rows[1]["InvTotLocCur"] = newData.InvTotLocCur;
-                    VarGeneral.RepData.Tables[0].Rows[1]["InvDisValLocCur"] = newData.InvDisValLocCur;
-                    VarGeneral.RepData.Tables[0].Rows[1]["InvNetLocCur"] = newData.InvNetLocCur;
-                    _List.Tables.Add();
-                    _List.Tables[0].Columns.Add("InvId");
-                    _List.Tables[0].Columns.Add("InvSer");
-                    _List.Tables[0].Columns.Add("ItmNo");
-                    _List.Tables[0].Columns.Add("Cost");
-                    _List.Tables[0].Columns.Add("QtyAbs");
-                    _List.Tables[0].Columns.Add("ItmDes");
-                    _List.Tables[0].Columns.Add("ItmUnt");
-                    _List.Tables[0].Columns.Add("ItmDesE");
-                    _List.Tables[0].Columns.Add("ItmUntE");
-                    _List.Tables[0].Columns.Add("ItmUntPak");
-                    _List.Tables[0].Columns.Add("StoreNo");
-                    _List.Tables[0].Columns.Add("Price");
-                    _List.Tables[0].Columns.Add("Amount");
-                    _List.Tables[0].Columns.Add("RealQty");
-                    _List.Tables[0].Columns.Add("DatExper");
-                    _List.Tables[0].Columns.Add("ItmDis");
-                    _List.Tables[0].Columns.Add("RunCod");
-                    _List.Tables[0].Columns.Add("ItmWight");
-                    _List.Tables[0].Columns.Add("LineDetails");
-                    _List.Tables[0].Columns.Add("InvDet_ID");
-                    _List.Tables[0].Columns.Add("TaxValue");
-                    _List.Tables[0].Columns.Add("ItmTax");
-                    _List.Tables[0].Columns.Add("ItmCat", typeof(int));
-                    _List.Tables[0].Columns.Add("defPrn", typeof(string));
-                    for (int i = 1; i < _ListGraid.Rows.Count; i++)
-                    {
-                        if (_ListGraid.Rows[i].Height == 35)
-                        {
-                            if (string.Concat(_ListGraid.GetData(i, 1)) != string.Empty)
-                            {
-                                _List.Tables[0].Rows.Add();
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["InvId"] = string.Empty;
-                                }
-                                catch
-                                {
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["InvSer"] = i.ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["InvSer"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmNo"] = _ListGraid.GetData(i, 1).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmNo"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmCat"] = db.StockItem(_ListGraid.GetData(i, 1).ToString()).ItmCat;
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmCat"] = 1;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["defPrn"] = db.StockInvSettingInvoices(VarGeneral.UserID, db.StockItem(_ListGraid.GetData(i, 1).ToString()).ItmCat.Value).defPrn;
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["defPrn"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["Cost"] = _ListGraid.GetData(i, 10).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["Cost"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["QtyAbs"] = _ListGraid.GetData(i, 7).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["QtyAbs"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmDes"] = _ListGraid.GetData(i, 2).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmDes"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmUnt"] = _ListGraid.GetData(i, 3).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmUnt"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmDesE"] = _ListGraid.GetData(i, 4).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmDesE"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmUntE"] = _ListGraid.GetData(i, 5).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmUntE"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmUntPak"] = _ListGraid.GetData(i, 11).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmUntPak"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["StoreNo"] = _ListGraid.GetData(i, 6).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["StoreNo"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["Price"] = _ListGraid.GetData(i, 8).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["Price"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["Amount"] = _ListGraid.GetData(i, 38).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["Amount"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["RealQty"] = _ListGraid.GetData(i, 12).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["RealQty"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["DatExper"] = _ListGraid.GetData(i, 27).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["DatExper"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmDis"] = _ListGraid.GetData(i, 9).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmDis"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["RunCod"] = _ListGraid.GetData(i, 35).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["RunCod"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmWight"] = _ListGraid.GetData(i, 33).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmWight"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["LineDetails"] = _ListGraid.GetData(i, 36).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["LineDetails"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["InvDet_ID"] = _ListGraid.GetData(i, 25).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["InvDet_ID"] = string.Empty;
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["TaxValue"] = 0;
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["TaxValue"] = "0";
-                                }
-                                try
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmTax"] = _ListGraid.GetData(i, 31).ToString();
-                                }
-                                catch
-                                {
-                                    _List.Tables[0].Rows[i - 1]["ItmTax"] = string.Empty;
-                                }
-                            }
-                        }
-                        else if (_ListGraid.Rows[i].Height < 35)
-                        {
-                            _List.Tables[0].Rows.Add();
-                        }
-                    }
-                    VarGeneral.RepData.Tables[0].Merge(_List.Tables[0]);
-                    if (VarGeneral.RepData.Tables[0].Rows.Count != 0)
-                    {
-                        try
-                        {
-                            for (int i = 0; i < VarGeneral.RepData.Tables[0].Rows.Count; i++)
-                            {
-                                try
-                                {
-                                    for (int ii = 0; ii < VarGeneral.RepData.Tables[0].Columns.Count; ii++)
-                                    {
-                                        if (VarGeneral.RepData.Tables[0].Columns[ii].ColumnName == "EstDatNote")
-                                        {
-                                            VarGeneral.RepData.Tables[0].Rows[i][ii] = 0;
-                                        }
-                                        if (VarGeneral.RepData.Tables[0].Columns[ii].ColumnName == "LogImg")
-                                        {
-                                            VarGeneral.RepData.Tables[0].Rows[i][ii] = VarGeneral.Settings_Sys.LogImg;
-                                        }
-                                        if (VarGeneral.RepData.Tables[0].Columns[ii].ColumnName == "UsrNamA")
-                                        {
-                                            VarGeneral.RepData.Tables[0].Rows[i][ii] = VarGeneral.UserNameA;
-                                        }
-                                        if (VarGeneral.RepData.Tables[0].Columns[ii].ColumnName == "UsrNamE")
-                                        {
-                                            VarGeneral.RepData.Tables[0].Rows[i][ii] = VarGeneral.UserNameE;
-                                        }
-                                        if (VarGeneral.RepData.Tables[0].Columns[ii].ColumnName == "Branch_Name")
-                                        {
-                                            VarGeneral.RepData.Tables[0].Rows[i][ii] = VarGeneral.BranchNameA;
-                                        }
-                                        if (VarGeneral.RepData.Tables[0].Columns[ii].ColumnName == "Branch_NameE")
-                                        {
-                                            VarGeneral.RepData.Tables[0].Rows[i][ii] = VarGeneral.BranchNameE;
-                                        }
-                                        try
-                                        {
-                                            if (VarGeneral.RepData.Tables[0].Columns[ii].ColumnName == "IsTaxUse" && string.IsNullOrEmpty(VarGeneral.RepData.Tables[0].Rows[i][ii].ToString()))
-                                            {
-                                                VarGeneral.RepData.Tables[0].Rows[i][ii] = tax;
-                                            }
-                                        }
-                                        catch
-                                        {
-                                            VarGeneral.RepData.Tables[0].Rows[i][ii] = true;
-                                        }
-                                        try
-                                        {
-                                            if (VarGeneral.RepData.Tables[0].Columns[ii].ColumnName == "IsTaxLines" && string.IsNullOrEmpty(VarGeneral.RepData.Tables[0].Rows[i][ii].ToString()))
-                                            {
-                                                VarGeneral.RepData.Tables[0].Rows[i][ii] = taxline;
-                                            }
-                                        }
-                                        catch
-                                        {
-                                            VarGeneral.RepData.Tables[0].Rows[i][ii] = true;
-                                        }
-                                        try
-                                        {
-                                            if (VarGeneral.RepData.Tables[0].Columns[ii].ColumnName == "IsTaxByTotal" && string.IsNullOrEmpty(VarGeneral.RepData.Tables[0].Rows[i][ii].ToString()))
-                                            {
-                                                VarGeneral.RepData.Tables[0].Rows[i][ii] = taxByTotal;
-                                            }
-                                        }
-                                        catch
-                                        {
-                                            VarGeneral.RepData.Tables[0].Rows[i][ii] = false;
-                                        }
-                                        if (VarGeneral.RepData.Tables[0].Columns[ii].ColumnName == "ItmCat")
-                                        {
-                                            try
-                                            {
-                                                VarGeneral.RepData.Tables[0].Rows[i][ii] = db.StockItem(VarGeneral.RepData.Tables[0].Rows[i]["ItmNo"].ToString()).ItmCat;
-                                            }
-                                            catch
-                                            {
-                                                VarGeneral.RepData.Tables[0].Rows[i][ii] = 1;
-                                            }
-                                        }
-                                        if (VarGeneral.RepData.Tables[0].Columns[ii].ColumnName == "defPrn")
-                                        {
-                                            try
-                                            {
-                                                VarGeneral.RepData.Tables[0].Rows[i][ii] = db.StockInvSettingInvoices(VarGeneral.UserID, db.StockItem(VarGeneral.RepData.Tables[0].Rows[i]["ItmNo"].ToString()).ItmCat.Value).defPrn;
-                                            }
-                                            catch
-                                            {
-                                                VarGeneral.RepData.Tables[0].Rows[i][ii] = string.Empty;
-                                            }
-                                        }
-                                    }
-                                }
-                                catch
-                                {
-                                }
-                            }
-                            FrmReportsViewer frm = new FrmReportsViewer();
-                            frm.Repvalue = "InvSal";
-                            frm.RepCashier = "InvoiceCachier";
-                            frm.Repvalue = "InvSalWtr";
-                            frm.RepCashier = "InvoiceCachierWaiter";
-
-                            frm.Tag = LangArEn;
-                            VarGeneral.itmDes = "HOLD";
-                            frm.BarcodSts = true;
-                            if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
-                            {
-                                frm.Repvalue = "InvSal";
-                            }
-                            else
-                            {
-
-                                frm.RepCashier = "InvoiceCachier";
-                            }
-                            if (puBar1.ChkA4Cahir.Checked)
-                            {
-                                if (frm.Repvalue == "InvSal")
-                                {
-
-                                    frm.RepCashier = "InvoiceCachier";
-                                }
-                                else
-                                {
-                                    frm.Repvalue = "InvSal";
-                                }
-                            }
-                            VarGeneral.IsCashCredit = checkBox_Credit.Visible;
-                            VarGeneral.vTitle = Text;
-                            frm._Proceess();
-                        }
-                        catch (Exception error)
-                        {
-                            VarGeneral.itmDes = string.Empty;
-                            VarGeneral.DebLog.writeLog("buttonItem_Print_Click:", error, enable: true);
-                            MessageBox.Show(error.Message);
-                        }
-                    }
-                }
-            }
-            catch
-            {
-                VarGeneral.itmDes = string.Empty;
-                MessageBox.Show((LangArEn == 0) ? "لا توجد حقول للطباعة تأكد من إعدادات الطباعة" : "No printing fields make sure the print settings", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            }
-            VarGeneral.itmDes = string.Empty;
-            VarGeneral.IsCashCredit = true;
-        }
+      
         private void buttonItem_RelayBox_Click(object sender, EventArgs e)
         {
 
@@ -19070,7 +18588,7 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
                     RepShow _RepShow = new RepShow();
                     _RepShow.Tables = "T_INVDET LEFT OUTER JOIN T_INVHED ON T_INVDET.InvId = T_INVHED.InvHed_ID LEFT OUTER JOIN T_INVSETTING ON T_INVHED.InvTyp = T_INVSETTING.InvID  LEFT OUTER JOIN T_Curency ON T_INVHED.CurTyp = T_Curency.Curency_ID LEFT OUTER JOIN T_CstTbl ON T_INVHED.InvCstNo = T_CstTbl.Cst_ID LEFT OUTER JOIN T_Mndob ON T_INVHED.MndNo = T_Mndob.Mnd_ID LEFT OUTER JOIN T_Items ON T_INVDET.ItmNo = T_Items.Itm_No LEFT OUTER JOIN T_CATEGORY ON T_Items.ItmCat = T_CATEGORY.CAT_ID LEFT OUTER JOIN T_SYSSETTING ON T_INVHED.CompanyID = T_SYSSETTING.SYSSETTING_ID ";
                     string vInvH = " T_INVHED.InvHed_ID, T_INVHED.InvId as vID, T_INVHED.InvNo, T_INVHED.InvTyp, T_INVHED.InvCashPay, T_INVHED.CusVenNo,case when T_INVHED.CusVenNo = '' THEN T_INVHED.CusVenNm ELSE (select T_AccDef.Arb_Des from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as CusVenNm,case when T_INVHED.CusVenNo = '' THEN T_INVHED.CusVenNm ELSE (select T_AccDef.Eng_Des from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as CusVenNmE, T_INVHED.CusVenAdd, T_INVHED.CusVenTel, T_INVHED.Remark, T_INVHED.HDat, T_INVHED.GDat, T_INVHED.MndNo, T_INVHED.SalsManNo, T_INVHED.SalsManNam, T_INVHED.InvTot, T_INVHED.InvDisPrs, ((case when IsDisUse1 = 1 then T_INVHED.InvValGaidDis else T_INVHED.InvDisVal end) + T_INVHED.DesPointsValue) as InvDisVal,T_INVHED.InvDisVal as InvDisValOnly,T_INVHED.DesPointsValue,T_INVHED.DesPointsValueLocCur,T_INVHED.PointsCount,T_INVHED.IsPoints, T_INVHED.InvNet, T_INVHED.InvNetLocCur, T_INVHED.CashPayLocCur, T_INVHED.IfRet, T_INVHED.CashPay, T_INVHED.InvTotLocCur, T_INVHED.InvDisValLocCur, T_INVHED.GadeNo, T_INVHED.GadeId, T_INVHED.RetNo, T_INVHED.RetId, T_INVHED.InvCashPayNm, T_INVHED.InvCost, T_INVHED.CustPri, T_INVHED.ArbTaf, T_INVHED.ToStore, T_INVHED.InvCash, T_INVHED.CurTyp, T_INVHED.EstDat,case when DATEDIFF(day, GETDATE(), EstDat) > 0 Then DATEDIFF(day, GETDATE(), EstDat) WHEN DATEDIFF(day, GETDATE(), InvCashPayNm) > 0 THEN DATEDIFF(day, GETDATE(), InvCashPayNm) Else '0' END as EstDatNote, T_INVHED.InvCstNo, T_INVHED.IfDel, T_INVHED.RefNo, T_INVHED.ToStoreNm, T_INVHED.EngTaf, T_INVHED.IfTrans, T_INVHED.InvQty, T_INVHED.CustNet, T_INVHED.CustRep, T_INVHED.InvWight_T, T_INVHED.IfPrint, T_INVHED.LTim, T_INVHED.DATE_CREATED, T_INVHED.MODIFIED_BY, T_INVHED.CreditPay, T_INVHED.DATE_MODIFIED, T_INVHED.CREATED_BY, T_INVHED.CreditPayLocCur, T_INVHED.NetworkPay, T_INVHED.NetworkPayLocCur, T_INVHED.MndExtrnal, T_INVHED.CompanyID, T_INVHED.InvAddCost, T_INVHED.InvAddCostExtrnal, T_INVHED.InvAddCostExtrnalLoc, T_INVHED.IsExtrnalGaid, T_INVHED.ExtrnalCostGaidID, T_INVHED.InvAddCostLoc, T_INVHED.CommMnd_Inv, T_INVHED.Puyaid, T_INVHED.Remming,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.PersonalNm from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as PersonalNm,T_SYSSETTING.LineGiftlNameA,T_SYSSETTING.LineGiftlNameE,T_INVHED.OrderTyp";
-                    string Fields = " Abs(T_INVDET.Qty) as QtyAbs , T_INVDET.InvDet_ID,T_INVHED.tailor1,T_INVHED.tailor2,T_INVHED.tailor3,T_INVHED.tailor4,T_INVHED.tailor5,T_INVHED.tailor6,T_INVHED.tailor7,T_INVHED.tailor8,T_INVHED.tailor9,T_INVHED.tailor10,T_INVHED.tailor11,T_INVHED.tailor12,T_INVHED.tailor13,T_INVHED.tailor14,T_INVHED.tailor15,T_INVHED.tailor16,T_INVHED.tailor17,T_INVHED.tailor18,T_INVHED.tailor19,T_INVHED.tailor20,T_INVHED.InvImg, T_INVDET.InvNo, T_INVDET.InvId, T_INVDET.InvSer, T_INVDET.ItmNo, T_INVDET.Cost, T_INVDET.Qty, T_INVDET.ItmUnt,  T_INVDET.ItmDes,T_INVDET.ItmDesE , T_INVDET.ItmUntE, T_INVDET.ItmUntPak, T_INVDET.StoreNo, T_INVDET.Price, T_INVDET.Amount, T_INVDET.RealQty, T_INVDET.ItmTyp,T_INVDET.ItmDis, (Abs(T_INVDET.Qty) *  T_INVDET.Price) * (T_INVDET.ItmDis / 100) as ItmDisVal, T_INVDET.DatExper, T_INVDET.itmInvDsc,ItmIndex ," + (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.LineGiftSts, vStr(VarGeneral.InvTyp)) ? " T_INVDET.ItmWight " : " 0 as ItmWight") + ", T_INVDET.ItmWight_T, T_INVDET.ItmAddCost, T_INVDET.RunCod, T_INVDET.LineDetails ,T_INVDET.Serial_Key , " + vInvH + ", T_Items.* , T_CstTbl.Arb_Des as CstTbl_Arb_Des , T_CstTbl.Eng_Des as CstTbl_Eng_Des , T_Mndob.Arb_Des as Mndob_Arb_Des , T_Mndob.Eng_Des as Mndob_Eng_Des,T_SYSSETTING.LogImg,(select max(T_AccDef.TaxNo) from T_AccDef where T_AccDef.AccDef_No = T_SYSSETTING.TaxAcc) as TaxAcc,T_SYSSETTING.TaxNoteInv,case when T_INVHED.IsTaxLines = 1 then (case when T_INVHED.IsTaxByTotal = 1 then (case when (Abs(T_INVDET.Qty) *  T_INVDET.Price * T_INVDET.ItmTax / 100) > 0 then ((Abs(T_INVDET.Qty) *  T_INVDET.Price) - case when (Abs(T_INVDET.Qty) * T_INVDET.Price * T_INVDET.ItmDis / 100) > 0 then (Abs(T_INVDET.Qty) * T_INVDET.Price * T_INVDET.ItmDis / 100) else 0 end )* T_INVDET.ItmTax / 100   else 0 end) else (Abs(T_INVDET.Qty) *  T_INVDET.Price * T_INVDET.ItmTax / 100) end) else 0 end as TaxValue,(select InvNamA from T_INVSETTING where T_INVHED.InvTyp = T_INVSETTING.InvID ) as InvNamA,(select InvNamE from T_INVSETTING where T_INVHED.InvTyp = T_INVSETTING.InvID ) as InvNamE,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.Mobile from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as Mobile,(select T_Store.Arb_Des from T_Store where T_Store.Stor_ID = T_INVDET.StoreNo) as StoreNmA,(select T_Store.Eng_Des from T_Store where T_Store.Stor_ID = T_INVDET.StoreNo) as StoreNmE,(select defPrn from T_INVSETTING where CatID = (select ItmCat from T_Items where Itm_No = T_INVDET.ItmNo) ) as defPrn,T_INVDET.ItmTax,T_INVHED.InvAddTax,T_INVHED.InvAddTaxlLoc,T_INVHED.TaxGaidID,T_INVHED.IsTaxUse,T_INVHED.IsTaxLines,IsTaxByTotal,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.TaxNo from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as TaxCustNo," + ((!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 65)) ? " T_INVHED.InvTotLocCur - T_INVHED.InvAddTax as TotWithTaxPoint " : " T_INVHED.InvTotLocCur as TotWithTaxPoint") + " ,T_INVHED.InvTotLocCur - T_INVHED.InvDisVal as TotBeforeDisVal,T_INVHED.IsTaxByNet,T_INVHED.TaxByNetValue," + (data_this.IsTaxUse.Value ? " T_INVHED.InvNetLocCur - T_INVHED.InvAddTax as NetWithoutTax " : " T_INVHED.InvNetLocCur as NetWithoutTax");
+                    string Fields = " Abs(T_INVDET.Qty) as QtyAbs , T_INVDET.InvDet_ID,T_INVHED.tailor1,T_INVHED.tailor2,T_INVHED.tailor3,T_INVHED.tailor4,T_INVHED.tailor5,T_INVHED.tailor6,T_INVHED.tailor7,T_INVHED.tailor8,T_INVHED.tailor9,T_INVHED.tailor10,T_INVHED.tailor11,T_INVHED.tailor12,T_INVHED.tailor13,T_INVHED.tailor14,T_INVHED.tailor15,T_INVHED.tailor16,T_INVHED.tailor17,T_INVHED.tailor18,T_INVHED.tailor19,T_INVHED.tailor20,T_INVHED.InvImg, T_INVDET.InvNo, T_INVDET.InvId, T_INVDET.InvSer, T_INVDET.ItmNo, T_INVDET.Cost, T_INVDET.Qty, T_INVDET.ItmUnt,  T_INVDET.ItmDes,T_INVDET.ItmDesE , T_INVDET.ItmUntE, T_INVDET.ItmUntPak, T_INVDET.StoreNo, T_INVDET.Price, T_INVDET.Amount, T_INVDET.RealQty, T_INVDET.ItmTyp,T_INVDET.ItmDis, (Abs(T_INVDET.Qty) *  T_INVDET.Price) * (T_INVDET.ItmDis / 100) as ItmDisVal, T_INVDET.DatExper, T_INVDET.itmInvDsc,ItmIndex ," + (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.LineGiftSts, vStr(VarGeneral.InvTyp)) ? " T_INVDET.ItmWight " : " 0 as ItmWight") + ", T_INVDET.ItmWight_T, T_INVDET.ItmAddCost, T_INVDET.RunCod, T_INVDET.LineDetails ,T_INVDET.Serial_Key , " + vInvH + ", T_Items.* , T_CstTbl.Arb_Des as CstTbl_Arb_Des , T_CstTbl.Eng_Des as CstTbl_Eng_Des , T_Mndob.Arb_Des as Mndob_Arb_Des , T_Mndob.Eng_Des as Mndob_Eng_Des,T_SYSSETTING.LogImg,(select max(T_AccDef.TaxNo) from T_AccDef where T_AccDef.AccDef_No = T_SYSSETTING.TaxAcc) as TaxAcc,T_SYSSETTING.TaxNoteInv,case when T_INVHED.IsTaxLines = 1 then (case when T_INVHED.IsTaxByTotal = 1 then (case when (Abs(T_INVDET.Qty) *  T_INVDET.Price * T_INVDET.ItmTax / 100) > 0 then ((Abs(T_INVDET.Qty) *  T_INVDET.Price) - case when (Abs(T_INVDET.Qty) * T_INVDET.Price * T_INVDET.ItmDis / 100) > 0 then (Abs(T_INVDET.Qty) * T_INVDET.Price * T_INVDET.ItmDis / 100) else 0 end )* T_INVDET.ItmTax / 100   else 0 end) else (Abs(T_INVDET.Qty) *  T_INVDET.Price * T_INVDET.ItmTax / 100) end) else 0 end as TaxValue,(select InvNamA from T_INVSETTING where T_INVHED.InvTyp = T_INVSETTING.InvID ) as InvNamA,(select InvNamE from T_INVSETTING where T_INVHED.InvTyp = T_INVSETTING.InvID ) as InvNamE,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.Mobile from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as Mobile,(select T_Store.Arb_Des from T_Store where T_Store.Stor_ID = T_INVDET.StoreNo) as StoreNmA,(select T_Store.Eng_Des from T_Store where T_Store.Stor_ID = T_INVDET.StoreNo) as StoreNmE,(select InvID from T_INVSETTING where CatID = (select ItmCat from T_Items where Itm_No = T_INVDET.ItmNo) ) as defPrn,T_INVDET.ItmTax,T_INVHED.InvAddTax,T_INVHED.InvAddTaxlLoc,T_INVHED.TaxGaidID,T_INVHED.IsTaxUse,T_INVHED.IsTaxLines,IsTaxByTotal,case when T_INVHED.CusVenNo = '' THEN '' ELSE (select T_AccDef.TaxNo from T_AccDef where AccDef_No = T_INVHED.CusVenNo) END as TaxCustNo," + ((!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 65)) ? " T_INVHED.InvTotLocCur - T_INVHED.InvAddTax as TotWithTaxPoint " : " T_INVHED.InvTotLocCur as TotWithTaxPoint") + " ,T_INVHED.InvTotLocCur - T_INVHED.InvDisVal as TotBeforeDisVal,T_INVHED.IsTaxByNet,T_INVHED.TaxByNetValue," + (data_this.IsTaxUse.Value ? " T_INVHED.InvNetLocCur - T_INVHED.InvAddTax as NetWithoutTax " : " T_INVHED.InvNetLocCur as NetWithoutTax");
                     VarGeneral.HeaderRep[0] = Text;
                     VarGeneral.HeaderRep[1] = string.Empty;
                     VarGeneral.HeaderRep[2] = string.Empty;
@@ -19168,7 +18686,7 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
                         frm.RepCashier = "InvoiceCachierWaiter";
 
                         frm.Tag = LangArEn;
-                        if (_InvSettingWaiter.nTyp.Substring(1, 1) == "1")
+                        if (_InvSettingWaiter.ISA4PaperType)
                         {
                             frm.Repvalue = "InvSalWtr";
                         }
@@ -19181,7 +18699,7 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
                         {
                             frm._GroupsIsPrint = true;
                         }
-                      if (_InvSettingWaiter.nTyp.Substring(2, 1) == "1")
+                      if (_InvSettingWaiter.ISdirectPrinting)
                         {
                             frm._Proceess();
                             return;
@@ -20047,7 +19565,7 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
         }
         double getround(double value)
         {
-            return Math.Round(value, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
+            return value;//; Math.Round(value, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
         }
         double beforeeditprice = 0, enteredtotal = 0;
         private void FlxInv_StartEdit(object sender, RowColEventArgs e)
@@ -20401,6 +19919,7 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
         }
         private void FrmInvSalePoint_Shown(object sender, EventArgs e)
         {
+            VarGeneral.InvTyp = 1;
 
            base.ActiveControl= textBox_Barcode;
         
@@ -20729,7 +20248,7 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
 
         private void button23_Click(object sender, EventArgs e)
         {
-            Program.min();
+            
             Button_Close_Click(null, null);
         }
 
@@ -20984,67 +20503,51 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
         }
         private void FlxInv_CellChanged(object sender, RowColEventArgs e)
         {
-            if (e.Row <= 0) return;
-            if (e.Col == 8)
-            {
-                pricel = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()); ;
-            }
-            if (e.Col == 31)
-                ta = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()); ;
-            if (edit)
-            {
-                if (e.Col == 8)
-                {
-                    pricel = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()); without = pricel; edit = false; newprice = true;
-                    lastprice = 0;
-                }
-                if (e.Col == 31)
-                {
-                    ta = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()); t1 = ta;
-                }
-                else
-                    t1 = 0;
-                if (e.Col == 38)
-                {
-                    tot = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString());
-                }
-                else
-                    tot = 0;
-            }
-            //try
-            //{
-            //    if (e.Row > 0 && (e.Col == 38 || e.Col == 8 || e.Col == 7 || e.Col == 31))
-            //        FlxInv.SetData(e.Row, e.Col, Math.Round(double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()), VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2));
-            //}
-            //catch
-            //{
-            //}
-            bool flag = false;
+
             try
             {
-                if ((e.Col == 38 ? false : e.Col != 8))
+                if (FlxInv.GetData(e.Row, e.Col).ToString() == "")
+                { }
+                if (e.Col == 8)
                 {
-                    if (e.Row <= 0)
+                    pricel = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()); ;
+                }
+                if (e.Col == 31)
+                    ta = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()); ;
+                if (edit)
+                {
+                    if (e.Col == 8)
                     {
-                        flag = false;
+                        pricel = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()); without = pricel; edit = false; newprice = true;
+                    }
+                    if (e.Col == 31)
+                    {
+                        ta = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()); t1 = ta;
                     }
                     else
+                        t1 = 0;
+                    if (e.Col == 38)
                     {
-                        flag = (e.Col == 7 ? true : e.Col == 31);
+                        tot = double.Parse(FlxInv.GetData(e.Row, e.Col).ToString());
                     }
-                    if (flag)
-                    {
-                        this.FlxInv.SetData(e.Row, e.Col, Math.Round(double.Parse(this.FlxInv.GetData(e.Row, e.Col).ToString()), (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2)));
-                    }
+                    else
+                        tot = 0;
                 }
-                else
+                try
                 {
-                    this.FlxInv.SetData(e.Row, e.Col, this.Mathm(double.Parse(this.FlxInv.GetData(e.Row, e.Col).ToString()), (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2)));
+                    if (e.Row > 0 && (e.Col == 38 || e.Col == 7 || e.Col == 31))
+                        FlxInv.SetData(e.Row, e.Col, getround2(double.Parse(FlxInv.GetData(e.Row, e.Col).ToString()), VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2));
+                    if (e.Col == 38)
+                        if (FlxInv.GetData(e.Row, 1).ToString() == "")
+                        {
+                            FlxInv.Clear(ClearFlags.Content, e.Row, 38);
+                        }
+                }
+                catch
+                {
                 }
             }
-            catch
-            {
-            }
+            catch { }
 
         }
         private double Mathm(double v1, int v2)

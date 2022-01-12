@@ -955,7 +955,7 @@ namespace InvAcc.Forms
                 Button_Delete.Tooltip = "F3";
                 Button_Save.Tooltip = "F2";
                 Button_Search.Tooltip = "F4";
-                Button_PrintTable.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0")
+                Button_PrintTable.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting)
                     ? "طباعة"
                     : "عــرض");
                 Button_PrintTable.Tooltip = "F5";
@@ -1006,7 +1006,7 @@ namespace InvAcc.Forms
                 Button_Delete.Tooltip = "F3";
                 Button_Save.Tooltip = "F2";
                 Button_Search.Tooltip = "F4";
-                Button_PrintTable.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0")
+                Button_PrintTable.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting)
                     ? "Print"
                     : "Show");
                 Button_PrintTable.Tooltip = "F5";

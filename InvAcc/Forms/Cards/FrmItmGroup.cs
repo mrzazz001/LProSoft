@@ -898,7 +898,7 @@ namespace InvAcc.Forms
             RibunButtons();
             try
             {
-                if (data_this != null)
+                if (data_this.CAT_No != null)
                 {
                     SetData(data_this);
                 }
@@ -929,7 +929,7 @@ namespace InvAcc.Forms
                 Button_Delete.Tooltip = "F3";
                 Button_Save.Tooltip = "F2";
                 Button_Search.Tooltip = "F4";
-                Button_PrintTable.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "طباعة" : "عــرض");
+                Button_PrintTable.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "طباعة" : "عــرض");
                 Button_PrintTable.Tooltip = "F5";
                 Button_ExportTable2.Text = "تصدير";
                 Button_ExportTable2.Tooltip = "F10";
@@ -959,7 +959,7 @@ namespace InvAcc.Forms
                 Button_Delete.Tooltip = "F3";
                 Button_Save.Tooltip = "F2";
                 Button_Search.Tooltip = "F4";
-                Button_PrintTable.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "Print" : "Show");
+                Button_PrintTable.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "Print" : "Show");
                 Button_PrintTable.Tooltip = "F5";
                 Button_ExportTable2.Text = "Export";
                 Button_ExportTable2.Tooltip = "F10";
@@ -1092,7 +1092,7 @@ namespace InvAcc.Forms
                 textBox_ID.Tag = value.CAT_ID;
                 textBox_NameA.Text = value.Arb_Des;
                 textBox_NameE.Text = value.Eng_Des;
-                textBox_Symbol.Text = value.CAT_Symbol.Trim();
+                textBox_Symbol.Text = value.CAT_Symbol.FirstOrDefault().ToString().Trim ();
                 txtPoints.Value = value.TotalPoint.Value;
                 txtTotalPurchaes.Value = value.TotalPurchaes.Value;
               if(value.CatImage!=null)

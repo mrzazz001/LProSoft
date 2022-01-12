@@ -7746,6 +7746,7 @@
             this.Name = "NewFrmSystemSetting";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.Tag = "CmbPrintTyp";
             this.Load += new System.EventHandler(this.XtraForm1_Load);
             this.SizeChanged += new System.EventHandler(this.XtraForm1_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).EndInit();

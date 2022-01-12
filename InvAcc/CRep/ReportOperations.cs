@@ -490,7 +490,7 @@ namespace InvAcc
 
             }
 
-            if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
+            if (_InvSetting.ISdirectPrinting)
             {
                 PrintSet(1, _InvSetting.defSizePaper, _InvSetting.InvpRINTERInfo.DefLines.Value, _InvSetting.defPrn, _InvSetting.InvpRINTERInfo.hAs.Value, _InvSetting.InvpRINTERInfo.hYs.Value, _InvSetting.InvpRINTERInfo.hYm.Value, _InvSetting.InvpRINTERInfo.hAl.Value);
                 rpt.Print();

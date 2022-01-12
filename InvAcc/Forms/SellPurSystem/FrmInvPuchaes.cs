@@ -592,28 +592,21 @@ namespace InvAcc.Forms
             set
             {
                 data_this = value;
-                IsServiceBill = (value.IS_ServiceBill.HasValue ? (bool)value.IS_ServiceBill : false);
-                SetData(data_this);
-
-
-                
                 {
+                 
                     if (value.IS_ServiceBill.HasValue)
                     {
+                        IsServiceBill = (value.IS_ServiceBill.HasValue ? (bool)value.IS_ServiceBill : false);
+
                         if (value.IS_ServiceBill == true)
                         {
+                            checkBox1.CheckedChanged -= checkBox1_CheckedChanged;
                             checkBox1.Checked = true;
+
+                            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
                             if (State != FormState.Edit)
                                 setServiceBill(value);
-                            if (!checkBox1.Enabled)
-                            {
-                                billUcontrolType31.Enabled = false;
-                            }
-                            else
-                            {
-                                billUcontrolType31.Enabled = true;
-
-                            }
+                             
                         }
                         else
                         {
@@ -623,10 +616,17 @@ namespace InvAcc.Forms
                     }
                     else
                     {
+                        IsServiceBill = false;
+                      
                         ChkPriceIncludeTax.Value = false;
                         checkBox1.Checked = false;
                     }
                 }
+
+                SetData(data_this);
+
+        
+
             }
         }
         public T_STKSQTY DataThis_stkQ
@@ -682,15 +682,22 @@ namespace InvAcc.Forms
             set
             {
                 statex = value;
+                if (value == FormState.New)
+                    Button_Export.Visible = true;
+                else
+                    Button_Export.Visible = false;
+                if (value==FormState.Saved)
+                    checkBox1.Enabled = false;
+            if(value == FormState.New) checkBox1.Enabled = true;
                 if (IsServiceBill)
                 {
-                    if (value == FormState.New)
-                        billUcontrolType31.setreadonly(false);
-                    else
-                    {
-                        if (VarGeneral.DeleteOption == 1) billUcontrolType31.setreadonly(true);
-                        else billUcontrolType31.setreadonly(false);
-                    }
+                    //if (value == FormState.New)
+                    //    billUcontrolType31.setreadonly(false);
+                    //else
+                    //{
+                    //    if (VarGeneral.DeleteOption == 1) billUcontrolType31.setreadonly(true);
+                    //    else billUcontrolType31.setreadonly(false);
+                    //}
                 }
 
 
@@ -1838,7 +1845,7 @@ namespace InvAcc.Forms
             {
                 if (textBox_ID.Text != "" && State == FormState.Saved)
                 {
-                    if ((_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) != "2"))
+                    if ((_InvSetting.InvpRINTERInfo.ISPOINTERType!=true))
                     {
                         VarGeneral.Print_set_Gen_Stat = false;
                         RepShow _RepShow = new RepShow();
@@ -1946,7 +1953,7 @@ namespace InvAcc.Forms
                                     {
                                         frm.BarcodSts = false;
                                     }
-                                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                                    if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                                     {
                                         frm.Repvalue = "Purchase";
                                     }
@@ -1977,7 +1984,7 @@ namespace InvAcc.Forms
                                     VarGeneral.CostCenterlbl = label15.Text.Replace(" :", "");
                                     VarGeneral.Mndoblbl = label18.Text.Replace(" :", "");
                                     VarGeneral.vTitle = Text;
-                                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1" || ifMultiPrint)
+                                    if (_InvSetting.ISdirectPrinting || ifMultiPrint)
                                     {
                                         frm._Proceess();
                                     }
@@ -2097,12 +2104,14 @@ namespace InvAcc.Forms
             {
                 return;
             }
-
+            AutoGaidAcc();
             text_Mobile.Text = "";
             State = FormState.New;
             data_this = new T_INVHED();
             data_thisRe = new T_INVHED();
-
+ 
+            checkBox1.Checked = false;
+          
             _GdHead = new T_GDHEAD();
             if (IsServiceBill)
             {
@@ -2295,12 +2304,9 @@ namespace InvAcc.Forms
         void setdefaultaccounts()
         {
             GetInvSetting();
-            AutoGaidAcc();
-            if (checkBox_Credit.Checked == true && txtCustNo.Text != "")
-            {
-                txtDebit2.Text = txtCustName.Text;
-                txtDebit2.Tag = txtCustNo.Text;
-            }
+          
+          
+
         }
         private void InvModeChanged()
         {
@@ -2337,16 +2343,201 @@ namespace InvAcc.Forms
         }
         private void checkBox_Chash_CheckedChanged(object sender, EventArgs e)
         {
+            superTabControl_Info.SelectedTabIndex = 4;
             InvModeChanged();
+           if (Utilites.isnollorempty(txtCredit1.Tag))
+                  
+             txtCredit1.Tag = ((_InvSetting.AccCredit0.Trim() != "***") ? _InvSetting.AccCredit0.Trim() : "");
+            string ar = "";
+            try
+            {
+                ar = db.SelectAccRootByCode(txtCredit1.Tag.ToString()).Arb_Des;
+            }
+            catch { }
+            {
+                if (!string.IsNullOrEmpty(txtCredit1.Tag.ToString()))// && string.IsNullOrEmpty(txtCredit1.Text.ToString()) || (ar.Trim() != txtCredit1.Text.Trim()))
+                {
+                    if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+                    {
+                        txtCredit1.Text = db.SelectAccRootByCode(txtCredit1.Tag.ToString()).Arb_Des;
+                    }
+                    else
+                    {
+                        txtCredit1.Text = db.SelectAccRootByCode(txtCredit1.Tag.ToString()).Eng_Des;
+                    }
+                }
+                else
+                {
+                    txtCredit1.Text = "";
+                }
+            }
+            if (Utilites.isnollorempty(txtDebit1.Tag))
+                txtDebit1.Tag = ((_InvSetting.AccDebit0.Trim() != "***") ? _InvSetting.AccDebit0.Trim() : "");
+            try
+            {
+                ar = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Arb_Des;
+            }
+            catch { }
+
+            {
+                if (!string.IsNullOrEmpty(txtDebit1.Tag.ToString()))// && string.IsNullOrEmpty(txtDebit1.Text.ToString()) || (ar.Trim() != txtDebit1.Text.Trim()))
+                {
+                    if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+                    {
+                        txtDebit1.Text = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Arb_Des;
+                    }
+                    else
+                    {
+                        txtDebit1.Text = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Eng_Des;
+                    }
+                }
+                else
+                {
+                    txtDebit1.Text = "";
+                }
+            }
         }
         private void checkBox_Credit_CheckedChanged(object sender, EventArgs e)
         {
+            superTabControl_Info.SelectedTabIndex = 4;
             InvModeChanged();
+            if (Utilites.isnollorempty(txtCredit2.Tag))
+               txtCredit2.Tag = ((_InvSetting.AccCredit1.Trim() != "***") ? _InvSetting.AccCredit1.Trim() : "");
+            string ar = "";
+            try
+            {
+                ar = db.SelectAccRootByCode(txtCredit2.Tag.ToString()).Arb_Des;
+            }
+            catch { }
+            {
+                if (!string.IsNullOrEmpty(txtCredit2.Tag.ToString()))// && string.IsNullOrEmpty(txtCredit2.Text.ToString()) || (ar.Trim() != txtCredit2.Text.Trim()))
+                {
+                    if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+                    {
+                        txtCredit2.Text = db.SelectAccRootByCode(txtCredit2.Tag.ToString()).Arb_Des;
+                    }
+                    else
+                    {
+                        txtCredit2.Text = db.SelectAccRootByCode(txtCredit2.Tag.ToString()).Eng_Des;
+                    }
+                }
+                else
+                {
+                    if (txtCustNo.Text != "")
+                    {
+                        txtCredit2.Text = txtCustName.Text;
+                        txtCredit2.Tag = txtCustNo.Text;
+
+
+
+                    }
+                    else 
+                        txtCredit2.Text = "";
+                }
+            }
+            if (Utilites.isnollorempty(txtDebit2.Tag))
+                txtDebit2.Tag = ((_InvSetting.AccDebit1.Trim() != "***") ? _InvSetting.AccDebit1.Trim() : "");
+
+            try
+            {
+                ar = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Arb_Des;
+            }
+            catch { }
+
+            {
+                if (!string.IsNullOrEmpty(txtDebit2.Tag.ToString()))// && string.IsNullOrEmpty(txtDebit2.Text.ToString()) || (ar.Trim() != txtDebit2.Text.Trim()))
+                {
+                    if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+                    {
+                        txtDebit2.Text = db.SelectAccRootByCode(txtDebit2.Tag.ToString()).Arb_Des;
+                    }
+                    else
+                    {
+                        txtDebit2.Text = db.SelectAccRootByCode(txtDebit2.Tag.ToString()).Eng_Des;
+                    }
+                }
+                else
+                {
+                    txtDebit2.Text = "";
+                }
+            }
+            //if(string.IsNullOrEmpty( txtCredit2.Text))
+
+            //    if (checkBox_Credit.Checked == true && txtCustNo.Text != "")
+            //{
+
+
+            //    txtCredit2.Text = txtCustName.Text;
+            //    txtCredit2.Tag = txtCustNo.Text;
+            //}
         }
+
         private void checkBox_NetWork_CheckedChanged(object sender, EventArgs e)
         {
+            superTabControl_Info.SelectedTabIndex = 4;
             InvModeChanged();
             doubleInput_NetWorkLoc_Leave(null, null);
+            if (Utilites.isnollorempty(txtCredit3.Tag))
+             txtCredit3.Tag = ((_InvSetting.AccCredit2.Trim() != "***") ? _InvSetting.AccCredit2.Trim() : "");
+            string ar = "";
+            try
+            {
+                ar = db.SelectAccRootByCode(txtCredit3.Tag.ToString()).Arb_Des;
+            }
+            catch { }
+            {
+                if (!string.IsNullOrEmpty(txtCredit3.Tag.ToString()))// && string.IsNullOrEmpty(txtCredit3.Text.ToString()) || (ar.Trim() != txtCredit3.Text.Trim()))
+                {
+                    if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+                    {
+                        txtCredit3.Text = db.SelectAccRootByCode(txtCredit3.Tag.ToString()).Arb_Des;
+                    }
+                    else
+                    {
+                        txtCredit3.Text = db.SelectAccRootByCode(txtCredit3.Tag.ToString()).Eng_Des;
+                    }
+                }
+                else
+                {
+                    if (txtCustNo.Text != "")
+                    {
+                        txtCredit3.Text = txtCustName.Text;
+                        txtCredit3.Tag = txtCustNo.Text;
+
+
+
+                    }
+                    else
+                        txtCredit3.Text = "";
+                }
+            }
+
+            if (Utilites.isnollorempty(txtDebit3.Tag))
+            
+                txtDebit3.Tag = ((_InvSetting.AccDebit2.Trim() != "***") ? _InvSetting.AccDebit2.Trim() : "");
+            try
+            {
+                ar = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Arb_Des;
+            }
+            catch { }
+
+            {
+                if (!string.IsNullOrEmpty(txtDebit3.Tag.ToString()))// && string.IsNullOrEmpty(txtDebit3.Text.ToString()) || (ar.Trim() != txtDebit3.Text.Trim()))
+                {
+                    if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+                    {
+                        txtDebit3.Text = db.SelectAccRootByCode(txtDebit3.Tag.ToString()).Arb_Des;
+                    }
+                    else
+                    {
+                        txtDebit3.Text = db.SelectAccRootByCode(txtDebit3.Tag.ToString()).Eng_Des;
+                    }
+                }
+                else
+                {
+                    txtDebit3.Text = "";
+                }
+            }
         }
         private void button_SrchCustNo_Click(object sender, EventArgs e)
         {
@@ -3221,7 +3412,7 @@ namespace InvAcc.Forms
                 Button_PrintTable.Text = "عــرض";
                 Button_PrintTable.Tooltip = "F5";
                 Button_PrintTableMulti.Text = "طباعة الفواتير المحددة";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "طباعة" : "عــرض");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "طباعة" : "عــرض");
                 buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "تصدير";
                 Button_ExportTable2.Tooltip = "F10";
@@ -3327,7 +3518,7 @@ namespace InvAcc.Forms
                 Button_PrintTable.Text = "Show";
                 Button_PrintTable.Tooltip = "F5";
                 Button_PrintTableMulti.Text = "Print of the invoices selected";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "Print" : "Show");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "Print" : "Show");
                 buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "Export";
                 Button_ExportTable2.Tooltip = "F10";
@@ -3738,7 +3929,7 @@ namespace InvAcc.Forms
             }
             try
             {
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                 {
                     ChkA4Cahir.Text = "Csh";
                 }
@@ -4752,7 +4943,18 @@ namespace InvAcc.Forms
         }
         public void SetData(T_INVHED value)
         {
-       //     ChkPriceIncludeTax.Value = (value.PriceIncludTax == true ? true : false);
+            txtCredit2.Tag = "";
+            txtCredit2.Text = "";
+            txtDebit2.Tag = "";
+            txtDebit2.Text = "";
+            txtCredit1.Text = "";
+            txtDebit1.Tag = "";
+            txtCredit3.Tag = "";
+            txtCredit3.Text = "";
+            txtDebit3.Tag = "";
+            txtDebit3.Text = "";
+
+            //     ChkPriceIncludeTax.Value = (value.PriceIncludTax == true ? true : false);
 
             vRemming = 0.0;
 #pragma warning disable CS0472 // The result of the expression is always 'false' since a value of type 'double' is never equal to 'null' of type 'double?'
@@ -8806,7 +9008,7 @@ namespace InvAcc.Forms
             }
         }
         private void chekRept()
-        {
+        {if (importinprogress) return;
             if (State == FormState.Saved || FlxInv.ColSel != 1)
             {
                 return;
@@ -10912,7 +11114,7 @@ namespace InvAcc.Forms
                         continue;
                     }
                     vRowBarcode = iiCnt;
-                    for (int i = 0; (double)i < ((VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 32) && _InvSettingBarCod.nTyp.Substring(2, 1) == "1") ? double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(vRowBarcode, 7)))) : 1.0); i++)
+                    for (int i = 0; (double)i < ((VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 32) && _InvSettingBarCod.ISdirectPrinting) ? double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(vRowBarcode, 7)))) : 1.0); i++)
                     {
                         PrintSet2();
                         prnt_prev = new PrintPreviewDialog();
@@ -10950,7 +11152,7 @@ namespace InvAcc.Forms
                         }
                         try
                         {
-                            if (_InvSettingBarCod.nTyp.Substring(2, 1) == "1")
+                            if (_InvSettingBarCod.ISdirectPrinting)
                             {
                                 prnt_doc2.Print();
                                 continue;
@@ -11980,7 +12182,10 @@ namespace InvAcc.Forms
             ProShared.DroBoxSync.Frm_PrinterShow f = new ProShared.DroBoxSync.Frm_PrinterShow(VarGeneral.InvTyp);
             f.TopMost = true;
             f.ShowDialog();
-            _InvSetting.InvpRINTERInfo.nTyp = ProShared.DroBoxSync.Frm_PrinterShow.PLSetting;
+
+            dbInstance = null;
+            _InvSetting = db.StockPrinterSetting(VarGeneral.UserID, VarGeneral.InvTyp).InvInfo;
+            buttonItem_Print.Text = (_InvSetting.ISdirectPrinting ? (LangArEn == 0 ? "طباعة" : "Print") : (LangArEn == 0 ? "عرض" : "Preview"));
         }
         private void superTabControlPanel3_Click(object sender, EventArgs e)
         {
@@ -12357,34 +12562,35 @@ namespace InvAcc.Forms
                 checkBox1.CheckedChanged += checkBox1_CheckedChanged;
                 return;
             }
-            if ((State == FormState.New && edited)|| (State == FormState.New && billUcontrolType31.edited))
-                State = FormState.Edit;
+            //if ((State == FormState.New && edited)|| (State == FormState.New && billUcontrolType31.edited))
+            //    State = FormState.Edit;
 
-            Button_Add_Click(null, null);
+            //Button_Add_Click(null, null);
 
-            if (checkBox1.Checked)
-            {
-                VarGeneral.IsserviceBill = true;
+            //if (checkBox1.Checked)
+            //{
+            //    VarGeneral.IsserviceBill = true;
 
 
 
-            }
-            else
-            {
-                VarGeneral.IsserviceBill = false;
-            }
+            //}
+            //else
+            //{
+            //    VarGeneral.IsserviceBill = false;
+            //}
 
             IsServiceBill = checkBox1.Checked;
 
 
 
-            if (IsServiceBill)
-            {
+            //if (IsServiceBill)
+            //{
 
-                displayServiceBill();
-                data_this.IS_ServiceBill = false;
-            }
-            edited = false;
+            //    displayServiceBill();
+            //    data_this.IS_ServiceBill = false;
+            //}
+            //edited = false;
+          
         }
 
         private void txtTotTax_TextChanged(object sender, EventArgs e)
@@ -12523,6 +12729,327 @@ namespace InvAcc.Forms
         private void txtDueAmountLoc_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtDebit2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        bool importinprogress = false;
+        private void Button_Export_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                importinprogress = true;
+                   FrmInvExport frm = new FrmInvExport();
+                frm.Tag = LangArEn;
+                frm.TopMost = true;
+                frm.ShowDialog();
+                if (frm.ExcelGridView.Rows.Count <= 0 || string.IsNullOrEmpty(frm.textBox_ItmNo.Text))
+                {
+                    return;
+                }
+                FlxInv.Clear(ClearFlags.Content, 1, 1, FlxInv.Rows.Count - 1, 38);
+                FlxStkQty.Clear(ClearFlags.Content, 1, 1, 1, 1);
+                FlxInv.Rows.Count = frm.ExcelGridView.Rows.Count + 2;
+                int iiCnt;
+                for (iiCnt = 1; iiCnt <= frm.ExcelGridView.Rows.Count; iiCnt++)
+                {
+                    T_Item newData = db.StockItem(frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_ItmNo.Text].Value.ToString());
+                    if (newData == null || string.IsNullOrEmpty(newData.Itm_No))
+                    {
+                        continue;
+                    }
+                    FlxInv.SetData(iiCnt, 1, frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_ItmNo.Text].Value.ToString());
+                    FlxInv.Row = iiCnt;
+                    try
+                    {
+                        if (!(string.Concat(FlxInv.GetData(iiCnt, 1)) != ""))
+                        {
+                            continue;
+                        }
+                        FlxInv_AfterEdit(null, new RowColEventArgs(iiCnt, 1));
+                        try
+                        {
+                            if (!string.IsNullOrEmpty(frm.textBox_Unt.Text))
+                            {
+                                try
+                                {
+                                    oldUnit = frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_Unt.Text].Value.ToString();
+                                }
+                                catch
+                                {
+                                    oldUnit = "";
+                                }
+                                if (!string.IsNullOrEmpty(oldUnit))
+                                {
+                                    if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
+                                    {
+                                        FlxInv.Col = 3;
+                                    }
+                                    else
+                                    {
+                                        FlxInv.Col = 5;
+                                    }
+                                    string[] UNTS = FlxInv.Cols[FlxInv.Col].ComboList.Split('|');
+                                    bool untState = false;
+                                    for (int i = 0; i < UNTS.Length; i++)
+                                    {
+                                        if (UNTS[i] == oldUnit)
+                                        {
+                                            untState = true;
+                                            break;
+                                        }
+                                    }
+                                    if (untState)
+                                    {
+                                        FlxInv.SetData(iiCnt, FlxInv.Col, oldUnit);
+                                        if (!string.IsNullOrEmpty(oldUnit) && FlxInv.GetData(FlxInv.Row, FlxInv.Col).ToString() != oldUnit && FlxInv.GetData(FlxInv.Row, FlxInv.Col).ToString() != "")
+                                        {
+                                            double ItmDis = 0.0;
+                                            double ItmAddTax = 0.0;
+                                            ItmAddTax = Math.Round(double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 31)))) / 100.0), VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
+                                            if (!switchButton_TaxLines.Value || switchButton_TaxByTotal.Value)
+                                            {
+                                                ItmAddTax = 0.0;
+                                            }
+                                            ItmDis = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 9)))) / 100.0);
+                                            int ItemIndex = -1;
+                                            if (FlxInv.Col == 3)
+                                            {
+                                                string[] Items = FlxInv.Cols[FlxInv.Col].ComboList.Split('|');
+                                                for (int i = 0; i < Items.Length; i++)
+                                                {
+                                                    if (Items[i] == FlxInv.GetData(FlxInv.Row, FlxInv.Col).ToString())
+                                                    {
+                                                        ItemIndex = i + 1;
+                                                    }
+                                                }
+                                                string[] Items2 = FlxInv.Cols[5].ComboList.Split('|');
+                                                if (Items2.Length > 1 && ItemIndex > -1)
+                                                {
+                                                    FlxInv.SetData(FlxInv.Row, 5, Items2[ItemIndex - 1]);
+                                                }
+                                            }
+                                            else if (FlxInv.Col == 5)
+                                            {
+                                                string[] Items = FlxInv.Cols[FlxInv.Col].ComboList.Split('|');
+                                                for (int i = 0; i < Items.Length; i++)
+                                                {
+                                                    if (Items[i] == FlxInv.GetData(FlxInv.Row, FlxInv.Col).ToString())
+                                                    {
+                                                        ItemIndex = i + 1;
+                                                    }
+                                                }
+                                                string[] Items2 = FlxInv.Cols[3].ComboList.Split('|');
+                                                if (Items2.Length > 1 && ItemIndex > -1)
+                                                {
+                                                    FlxInv.SetData(FlxInv.Row, 3, Items2[ItemIndex - 1]);
+                                                }
+                                            }
+                                            switch (ItemIndex)
+                                            {
+                                                case 1:
+                                                    FlxInv.SetData(FlxInv.Row, 8, _Items.LastCost.Value * _Items.Pack1.Value / RateValue);
+                                                    FlxInv.SetData(FlxInv.Row, 11, _Items.Pack1);
+                                                    break;
+                                                case 2:
+                                                    FlxInv.SetData(FlxInv.Row, 8, _Items.LastCost.Value * _Items.Pack2.Value / RateValue);
+                                                    FlxInv.SetData(FlxInv.Row, 11, _Items.Pack2);
+                                                    break;
+                                                case 3:
+                                                    FlxInv.SetData(FlxInv.Row, 8, _Items.LastCost.Value * _Items.Pack3.Value / RateValue);
+                                                    FlxInv.SetData(FlxInv.Row, 11, _Items.Pack3);
+                                                    break;
+                                                case 4:
+                                                    FlxInv.SetData(FlxInv.Row, 8, _Items.LastCost.Value * _Items.Pack4.Value / RateValue);
+                                                    FlxInv.SetData(FlxInv.Row, 11, _Items.Pack4.Value);
+                                                    break;
+                                                case 5:
+                                                    FlxInv.SetData(FlxInv.Row, 8, _Items.LastCost.Value * _Items.Pack5.Value / RateValue);
+                                                    FlxInv.SetData(FlxInv.Row, 11, _Items.Pack5.Value);
+                                                    break;
+                                            }
+                                            Pack = ItemIndex;
+                                            BindDataofItemPrice();
+                                            FlxInv.SetData(FlxInv.Row, 12, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 11)))));
+                                            FlxInv.SetData(FlxInv.Row, 38, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 8)))) - ItmDis + ItmAddTax);
+                                            if (switchButton_TaxByTotal.Value && switchButton_TaxLines.Value && double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 38)))) > 0.0)
+                                            {
+                                                ItmAddTax = Math.Round((double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 8)))) - ItmDis) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 31)))) / 100.0), VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
+                                                FlxInv.SetData(FlxInv.Row, 38, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 38)))) + ItmAddTax);
+                                            }
+                                            PriceLoc = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 8))));
+                                            BindDataOfStkQty(FlxInv.GetData(FlxInv.Row, 1).ToString());
+                                            if (CmbCurr.SelectedIndex != -1)
+                                            {
+                                                List<T_Curency> listSer = db.StockCurrList(int.Parse(CmbCurr.SelectedValue.ToString()));
+                                                T_Curency _Curency = listSer[0];
+                                                double CurRate = _Curency.Rate.Value;
+                                            }
+                                            FlxInv.SetData(FlxInv.Row, 26, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 8)))) / 1.0);
+                                            ItmDis = double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 9)))) / 100.0);
+                                            ItmAddTax = Math.Round(double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 8)))) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 31)))) / 100.0), VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
+                                            if (!switchButton_TaxLines.Value || switchButton_TaxByTotal.Value)
+                                            {
+                                                ItmAddTax = 0.0;
+                                            }
+                                            FlxInv.SetData(FlxInv.Row, 38, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 8)))) - ItmDis + ItmAddTax);
+                                            if (switchButton_TaxByTotal.Value && switchButton_TaxLines.Value && double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 38)))) > 0.0)
+                                            {
+                                                ItmAddTax = Math.Round((double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 7)))) * double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 8)))) - ItmDis) * (double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 31)))) / 100.0), VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
+                                                FlxInv.SetData(FlxInv.Row, 38, double.Parse(VarGeneral.TString.TEmpty(string.Concat(FlxInv.GetData(FlxInv.Row, 38)))) + ItmAddTax);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        catch
+                        {
+                        }
+                        try
+                        {
+                            if (!string.IsNullOrEmpty(frm.textBox_Qty.Text))
+                            {
+                                if (double.Parse(frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_Qty.Text].Value.ToString()) > 0.0)
+                                {
+                                    FlxInv.SetData(iiCnt, 7, frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_Qty.Text].Value.ToString());
+                                }
+                                else
+                                {
+                                    FlxInv.SetData(iiCnt, 7, 1);
+                                }
+                            }
+                            else
+                            {
+                                FlxInv.SetData(iiCnt, 7, 1);
+                            }
+                        }
+                        catch
+                        {
+                            FlxInv.SetData(iiCnt, 7, 1);
+                        }
+                        try
+                        {
+                            if (!string.IsNullOrEmpty(frm.textBox_Price.Text) && double.Parse(frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_Price.Text].Value.ToString()) >= 0.0)
+                            {
+                                FlxInv.SetData(iiCnt, 8, frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_Price.Text].Value.ToString());
+                            }
+                        }
+                        catch
+                        {
+                        }
+                        try
+                        {
+                            if (!string.IsNullOrEmpty(frm.textBox_Discount.Text) && double.Parse(frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_Discount.Text].Value.ToString()) > 0.0)
+                            {
+                                FlxInv.SetData(iiCnt, 9, frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_Discount.Text].Value.ToString());
+                            }
+                        }
+                        catch
+                        {
+                        }
+                        try
+                        {
+                            if (!string.IsNullOrEmpty(frm.textBox_Tax.Text) && double.Parse(frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_Tax.Text].Value.ToString()) > 0.0)
+                            {
+                                FlxInv.SetData(iiCnt, 31, frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_Tax.Text].Value.ToString());
+                            }
+                        }
+                        catch
+                        {
+                        }
+                        try
+                        {
+                            if (!string.IsNullOrEmpty(frm.textBox_DateExpir.Text))
+                            {
+                                if (!string.IsNullOrEmpty(frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_DateExpir.Text].Value.ToString()) && _Items.Lot == 1)
+                                {
+                                    double d = double.Parse(frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_DateExpir.Text].Value.ToString());
+                                    string dtToString = DateTime.FromOADate(d).ToString("yyyy/MM/dd");
+                                    if (VarGeneral.CheckDate(dtToString))
+                                    {
+                                        FlxInv.SetData(iiCnt, 27, dtToString);
+                                    }
+                                    else
+                                    {
+                                        FlxInv.SetData(iiCnt, 27, "");
+                                    }
+                                }
+                                else
+                                {
+                                    FlxInv.SetData(iiCnt, 27, "");
+                                }
+                            }
+                            else
+                            {
+                                FlxInv.SetData(iiCnt, 27, "");
+                            }
+                        }
+                        catch
+                        {
+                            FlxInv.SetData(iiCnt, 27, "");
+                        }
+                        try
+                        {
+                            if (!string.IsNullOrEmpty(frm.textBox_RunNo.Text))
+                            {
+                                if (!string.IsNullOrEmpty(frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_RunNo.Text].Value.ToString()) && _Items.Lot == 1)
+                                {
+                                    FlxInv.SetData(iiCnt, 35, frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_RunNo.Text].Value.ToString());
+                                }
+                                else
+                                {
+                                    FlxInv.SetData(iiCnt, 35, "");
+                                }
+                            }
+                            else
+                            {
+                                FlxInv.SetData(iiCnt, 35, "");
+                            }
+                        }
+                        catch
+                        {
+                            FlxInv.SetData(iiCnt, 35, "");
+                        }
+                        try
+                        {
+                            if (!string.IsNullOrEmpty(frm.textBox_Store.Text) && !string.IsNullOrEmpty(frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_Store.Text].Value.ToString()) && listStore.Where((T_Store g) => g.Stor_ID == int.Parse(frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_Store.Text].Value.ToString())).ToList().Count > 0)
+                            {
+                                FlxInv.SetData(iiCnt, 6, frm.ExcelGridView.Rows[iiCnt - 1].Cells[frm.textBox_Store.Text].Value.ToString());
+                            }
+                        }
+                        catch
+                        {
+                        }
+                        FlxInv_AfterEdit(null, new RowColEventArgs(iiCnt, 8));
+                    }
+                    catch
+                    {
+                    }
+                }
+                for (int iiCnt2 = 1; iiCnt2 < FlxInv.Rows.Count; iiCnt2++)
+                {
+                    if (string.Concat(FlxInv.GetData(iiCnt2, 1)) == "")
+                    {
+                        FlxInv.RemoveItem(iiCnt2);
+                        iiCnt2 = 1;
+                    }
+                }
+                FlxInv.Rows.Count += VarGeneral.Settings_Sys.LineOfInvoices.Value;
+            }
+            catch (Exception error)
+            {
+                VarGeneral.DebLog.writeLog("Button_Export_Click:", error, enable: true);
+                FlxInv.Clear(ClearFlags.Content, 1, 1, FlxInv.Rows.Count - 1, 38);
+                FlxInv.Rows.Count = VarGeneral.Settings_Sys.LineOfInvoices.Value;
+            }
+            importinprogress = false;
+        }
+
+        private void Button_Add_Click_1(object sender, EventArgs e)
+        {
         }
 
         private void checkBox_Chash_CheckedChanged_1(object sender, EventArgs e)

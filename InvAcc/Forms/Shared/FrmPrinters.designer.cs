@@ -35,16 +35,16 @@ namespace InvAcc.Forms
             this.CmbPrintP = new System.Windows.Forms.ComboBox();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.button2 = new System.Windows.Forms.Button();
-            this.checkBox_previewPrint = new System.Windows.Forms.CheckBox();
+            this.DirectOption_Barcode = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox_Collate = new System.Windows.Forms.CheckBox();
-            this.txtLeftM = new DevComponents.Editors.DoubleInput();
-            this.txtTopM = new DevComponents.Editors.DoubleInput();
-            this.CmbPrinter = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.txtWidth = new DevComponents.Editors.DoubleInput();
-            this.txtHeight = new DevComponents.Editors.DoubleInput();
-            this.txtBarWidth = new DevComponents.Editors.IntegerInput();
-            this.txtBarHeigth = new DevComponents.Editors.IntegerInput();
+            this.ColleteOptionBarcode = new System.Windows.Forms.CheckBox();
+            this.txtLeftM_Barcode = new DevComponents.Editors.DoubleInput();
+            this.txtTopM_Barcode = new DevComponents.Editors.DoubleInput();
+            this.cmPrinter_Barcode = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.txtWidth_Barcode = new DevComponents.Editors.DoubleInput();
+            this.txtHeight_Barcode = new DevComponents.Editors.DoubleInput();
+            this.txtBarWidth_Barcode = new DevComponents.Editors.IntegerInput();
+            this.txtBarHeigth_Barcode = new DevComponents.Editors.IntegerInput();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,10 +53,10 @@ namespace InvAcc.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtpageCount = new DevComponents.Editors.IntegerInput();
+            this.txtpageCount_Barcode = new DevComponents.Editors.IntegerInput();
             this.label33 = new System.Windows.Forms.Label();
-            this.txtNumRows = new DevComponents.Editors.DoubleInput();
-            this.txtNumCols = new DevComponents.Editors.DoubleInput();
+            this.txtNumRows_Barcode = new DevComponents.Editors.DoubleInput();
+            this.txtNumCols_Barcode = new DevComponents.Editors.DoubleInput();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -101,23 +101,23 @@ namespace InvAcc.Forms
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.checkBox_previewPrint3 = new System.Windows.Forms.CheckBox();
-            this.CmbInvType3 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.DirectPrinter_Sandatat = new System.Windows.Forms.CheckBox();
+            this.CmBType_Sandatat = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.RButLandscape3 = new System.Windows.Forms.RadioButton();
+            this.RButLandscape_Sandatat = new System.Windows.Forms.RadioButton();
             this.RButPortrait3 = new System.Windows.Forms.RadioButton();
-            this.CmbPaperSize3 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.CmbPaperSize_Sandatat = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.label21 = new System.Windows.Forms.Label();
             this.txtpageCount3 = new DevComponents.Editors.IntegerInput();
             this.label22 = new System.Windows.Forms.Label();
             this.doubleInput3 = new DevComponents.Editors.DoubleInput();
-            this.txtLinePage3 = new DevComponents.Editors.IntegerInput();
-            this.CmbPrinter3 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.txtTopM3 = new DevComponents.Editors.DoubleInput();
-            this.txtBottM3 = new DevComponents.Editors.DoubleInput();
-            this.txtRight3 = new DevComponents.Editors.DoubleInput();
-            this.txtLeftM3 = new DevComponents.Editors.DoubleInput();
+            this.txtLinePage_Sandatat = new DevComponents.Editors.IntegerInput();
+            this.CmpPrinter__Sandatat = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.txtTopM_Sandatat = new DevComponents.Editors.DoubleInput();
+            this.txtBottM_Sandatat = new DevComponents.Editors.DoubleInput();
+            this.txtRight_Sandatat = new DevComponents.Editors.DoubleInput();
+            this.txtLeftM_Sandatat = new DevComponents.Editors.DoubleInput();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -127,7 +127,7 @@ namespace InvAcc.Forms
             this.label29 = new System.Windows.Forms.Label();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.label20 = new System.Windows.Forms.Label();
-            this.ChkPTable3 = new System.Windows.Forms.CheckBox();
+            this.ChkPTable3_Sandatat = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -135,35 +135,35 @@ namespace InvAcc.Forms
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.superTabStrip1 = new DevComponents.DotNetBar.SuperTabStrip();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
-            this.checkBox_previewPrintRep = new DevComponents.DotNetBar.CheckBoxItem();
+            this.DirectOption_Reports = new DevComponents.DotNetBar.CheckBoxItem();
             this.groupPanel1Rep = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.label33Rep = new System.Windows.Forms.Label();
-            this.CmbPaperSizeRep = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.CmbPaperSizeRep_Reports = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.label34Rep = new System.Windows.Forms.Label();
-            this.txtpageCountRep = new DevComponents.Editors.IntegerInput();
-            this.txtLinePageRep = new DevComponents.Editors.IntegerInput();
+            this.txtpageCountRep_Reports = new DevComponents.Editors.IntegerInput();
+            this.txtLinePageRep_Reports = new DevComponents.Editors.IntegerInput();
             this.label32Rep = new System.Windows.Forms.Label();
-            this.CmbPrinterRep = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.CmbPrinter_Reports = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.label26Rep = new System.Windows.Forms.Label();
             this.groupBox4Rep = new System.Windows.Forms.GroupBox();
-            this.txtRightRep = new DevComponents.Editors.DoubleInput();
-            this.txtLeftMRep = new DevComponents.Editors.DoubleInput();
+            this.txtRightRep_Reports = new DevComponents.Editors.DoubleInput();
+            this.txtLeftMRep_Reports = new DevComponents.Editors.DoubleInput();
             this.label27Rep = new System.Windows.Forms.Label();
             this.label28Rep = new System.Windows.Forms.Label();
             this.label29Rep = new System.Windows.Forms.Label();
             this.label30Rep = new System.Windows.Forms.Label();
-            this.txtTopMRep = new DevComponents.Editors.DoubleInput();
-            this.txtBottMRep = new DevComponents.Editors.DoubleInput();
+            this.txtTopM_Reports = new DevComponents.Editors.DoubleInput();
+            this.txtBottMRep_Reports = new DevComponents.Editors.DoubleInput();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.RButLandscapeRep = new System.Windows.Forms.RadioButton();
-            this.RButPortraitRep = new System.Windows.Forms.RadioButton();
+            this.RButLandscapeRep_Reports = new System.Windows.Forms.RadioButton();
+            this.RButPortraitRep_Reports = new System.Windows.Forms.RadioButton();
             this.groupBox_PrintTypeRep = new System.Windows.Forms.GroupBox();
-            this.RadRepPointer = new System.Windows.Forms.RadioButton();
-            this.RadRepCashier = new System.Windows.Forms.RadioButton();
-            this.RadRepA4 = new System.Windows.Forms.RadioButton();
+            this.RadRepPointer_Reports = new System.Windows.Forms.RadioButton();
+            this.RadRepCashier_Reports = new System.Windows.Forms.RadioButton();
+            this.RadRepA4_Reports = new System.Windows.Forms.RadioButton();
             this.doubleInput4 = new DevComponents.Editors.DoubleInput();
             this.label35 = new System.Windows.Forms.Label();
-            this.CmbPrintTyp = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cmbType_Reports = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -177,16 +177,16 @@ namespace InvAcc.Forms
             this.tabPage1.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLeftM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTopM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWidth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBarWidth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBarHeigth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeftM_Barcode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTopM_Barcode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWidth_Barcode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHeight_Barcode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBarWidth_Barcode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBarHeigth_Barcode)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtpageCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumRows)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumCols)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpageCount_Barcode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumRows_Barcode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumCols_Barcode)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.ribbonBar2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -208,22 +208,22 @@ namespace InvAcc.Forms
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtpageCount3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLinePage3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTopM3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBottM3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRight3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLeftM3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLinePage_Sandatat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTopM_Sandatat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBottM_Sandatat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRight_Sandatat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeftM_Sandatat)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabStrip1)).BeginInit();
             this.groupPanel1Rep.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtpageCountRep)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLinePageRep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpageCountRep_Reports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLinePageRep_Reports)).BeginInit();
             this.groupBox4Rep.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRightRep)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLeftMRep)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTopMRep)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBottMRep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRightRep_Reports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeftMRep_Reports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTopM_Reports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBottMRep_Reports)).BeginInit();
             this.groupBox8.SuspendLayout();
             this.groupBox_PrintTypeRep.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput4)).BeginInit();
@@ -340,7 +340,7 @@ namespace InvAcc.Forms
             this.ribbonBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonBar1.ContainerControlProcessDialogKey = true;
             this.ribbonBar1.Controls.Add(this.button2);
-            this.ribbonBar1.Controls.Add(this.checkBox_previewPrint);
+            this.ribbonBar1.Controls.Add(this.DirectOption_Barcode);
             this.ribbonBar1.Controls.Add(this.groupBox1);
             this.ribbonBar1.Controls.Add(this.groupBox3);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -374,33 +374,33 @@ namespace InvAcc.Forms
             this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // checkBox_previewPrint
+            // DirectOption_Barcode
             // 
-            this.checkBox_previewPrint.AutoSize = true;
-            this.checkBox_previewPrint.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox_previewPrint.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.checkBox_previewPrint.ForeColor = System.Drawing.Color.Blue;
-            this.checkBox_previewPrint.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox_previewPrint.Location = new System.Drawing.Point(402, 36);
-            this.checkBox_previewPrint.Name = "checkBox_previewPrint";
-            this.checkBox_previewPrint.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_previewPrint.Size = new System.Drawing.Size(90, 17);
-            this.checkBox_previewPrint.TabIndex = 1021;
-            this.checkBox_previewPrint.Text = "طباعة مباشرة";
-            this.checkBox_previewPrint.UseVisualStyleBackColor = false;
-            this.checkBox_previewPrint.CheckedChanged += new System.EventHandler(this.checkBox_previewPrint_CheckedChanged);
+            this.DirectOption_Barcode.AutoSize = true;
+            this.DirectOption_Barcode.BackColor = System.Drawing.Color.Transparent;
+            this.DirectOption_Barcode.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.DirectOption_Barcode.ForeColor = System.Drawing.Color.Blue;
+            this.DirectOption_Barcode.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DirectOption_Barcode.Location = new System.Drawing.Point(402, 36);
+            this.DirectOption_Barcode.Name = "DirectOption_Barcode";
+            this.DirectOption_Barcode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DirectOption_Barcode.Size = new System.Drawing.Size(90, 17);
+            this.DirectOption_Barcode.TabIndex = 1021;
+            this.DirectOption_Barcode.Text = "طباعة مباشرة";
+            this.DirectOption_Barcode.UseVisualStyleBackColor = false;
+            this.DirectOption_Barcode.CheckedChanged += new System.EventHandler(this.checkBox_previewPrint_CheckedChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.checkBox_Collate);
-            this.groupBox1.Controls.Add(this.txtLeftM);
-            this.groupBox1.Controls.Add(this.txtTopM);
-            this.groupBox1.Controls.Add(this.CmbPrinter);
-            this.groupBox1.Controls.Add(this.txtWidth);
-            this.groupBox1.Controls.Add(this.txtHeight);
-            this.groupBox1.Controls.Add(this.txtBarWidth);
-            this.groupBox1.Controls.Add(this.txtBarHeigth);
+            this.groupBox1.Controls.Add(this.ColleteOptionBarcode);
+            this.groupBox1.Controls.Add(this.txtLeftM_Barcode);
+            this.groupBox1.Controls.Add(this.txtTopM_Barcode);
+            this.groupBox1.Controls.Add(this.cmPrinter_Barcode);
+            this.groupBox1.Controls.Add(this.txtWidth_Barcode);
+            this.groupBox1.Controls.Add(this.txtHeight_Barcode);
+            this.groupBox1.Controls.Add(this.txtBarWidth_Barcode);
+            this.groupBox1.Controls.Add(this.txtBarHeigth_Barcode);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label5);
@@ -414,152 +414,152 @@ namespace InvAcc.Forms
             this.groupBox1.TabIndex = 983;
             this.groupBox1.TabStop = false;
             // 
-            // checkBox_Collate
+            // ColleteOptionBarcode
             // 
-            this.checkBox_Collate.AutoSize = true;
-            this.checkBox_Collate.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox_Collate.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.checkBox_Collate.ForeColor = System.Drawing.Color.Maroon;
-            this.checkBox_Collate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox_Collate.Location = new System.Drawing.Point(66, 53);
-            this.checkBox_Collate.Name = "checkBox_Collate";
-            this.checkBox_Collate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_Collate.Size = new System.Drawing.Size(71, 17);
-            this.checkBox_Collate.TabIndex = 1022;
-            this.checkBox_Collate.Text = "تجـميــــع";
-            this.checkBox_Collate.UseVisualStyleBackColor = false;
+            this.ColleteOptionBarcode.AutoSize = true;
+            this.ColleteOptionBarcode.BackColor = System.Drawing.Color.Transparent;
+            this.ColleteOptionBarcode.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.ColleteOptionBarcode.ForeColor = System.Drawing.Color.Maroon;
+            this.ColleteOptionBarcode.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ColleteOptionBarcode.Location = new System.Drawing.Point(66, 53);
+            this.ColleteOptionBarcode.Name = "ColleteOptionBarcode";
+            this.ColleteOptionBarcode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ColleteOptionBarcode.Size = new System.Drawing.Size(71, 17);
+            this.ColleteOptionBarcode.TabIndex = 1022;
+            this.ColleteOptionBarcode.Text = "تجـميــــع";
+            this.ColleteOptionBarcode.UseVisualStyleBackColor = false;
             // 
-            // txtLeftM
+            // txtLeftM_Barcode
             // 
-            this.txtLeftM.AllowEmptyState = false;
-            // 
-            // 
-            // 
-            this.txtLeftM.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtLeftM.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtLeftM.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtLeftM.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txtLeftM.Increment = 1D;
-            this.txtLeftM.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtLeftM.Location = new System.Drawing.Point(20, 21);
-            this.txtLeftM.MinValue = 0D;
-            this.txtLeftM.Name = "txtLeftM";
-            this.txtLeftM.Size = new System.Drawing.Size(47, 20);
-            this.txtLeftM.TabIndex = 3;
-            // 
-            // txtTopM
-            // 
-            this.txtTopM.AllowEmptyState = false;
+            this.txtLeftM_Barcode.AllowEmptyState = false;
             // 
             // 
             // 
-            this.txtTopM.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtTopM.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTopM.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtTopM.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txtTopM.Increment = 1D;
-            this.txtTopM.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtTopM.Location = new System.Drawing.Point(153, 21);
-            this.txtTopM.MinValue = 0D;
-            this.txtTopM.Name = "txtTopM";
-            this.txtTopM.Size = new System.Drawing.Size(47, 20);
-            this.txtTopM.TabIndex = 2;
+            this.txtLeftM_Barcode.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtLeftM_Barcode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtLeftM_Barcode.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtLeftM_Barcode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txtLeftM_Barcode.Increment = 1D;
+            this.txtLeftM_Barcode.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtLeftM_Barcode.Location = new System.Drawing.Point(20, 21);
+            this.txtLeftM_Barcode.MinValue = 0D;
+            this.txtLeftM_Barcode.Name = "txtLeftM_Barcode";
+            this.txtLeftM_Barcode.Size = new System.Drawing.Size(47, 20);
+            this.txtLeftM_Barcode.TabIndex = 3;
             // 
-            // CmbPrinter
+            // txtTopM_Barcode
             // 
-            this.CmbPrinter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CmbPrinter.DisplayMember = "Text";
-            this.CmbPrinter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbPrinter.FormattingEnabled = true;
-            this.CmbPrinter.ItemHeight = 15;
-            this.CmbPrinter.Location = new System.Drawing.Point(296, 21);
-            this.CmbPrinter.Name = "CmbPrinter";
-            this.CmbPrinter.Size = new System.Drawing.Size(202, 21);
-            this.CmbPrinter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.CmbPrinter.TabIndex = 1;
-            this.CmbPrinter.SelectedIndexChanged += new System.EventHandler(this.CmbPrinter_SelectedIndexChanged);
-            // 
-            // txtWidth
-            // 
-            this.txtWidth.AllowEmptyState = false;
+            this.txtTopM_Barcode.AllowEmptyState = false;
             // 
             // 
             // 
-            this.txtWidth.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtWidth.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtWidth.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtWidth.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txtWidth.Increment = 1D;
-            this.txtWidth.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtWidth.Location = new System.Drawing.Point(310, 84);
-            this.txtWidth.MinValue = 0D;
-            this.txtWidth.Name = "txtWidth";
-            this.txtWidth.ShowUpDown = true;
-            this.txtWidth.Size = new System.Drawing.Size(85, 20);
-            this.txtWidth.TabIndex = 6;
+            this.txtTopM_Barcode.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTopM_Barcode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTopM_Barcode.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTopM_Barcode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txtTopM_Barcode.Increment = 1D;
+            this.txtTopM_Barcode.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtTopM_Barcode.Location = new System.Drawing.Point(153, 21);
+            this.txtTopM_Barcode.MinValue = 0D;
+            this.txtTopM_Barcode.Name = "txtTopM_Barcode";
+            this.txtTopM_Barcode.Size = new System.Drawing.Size(47, 20);
+            this.txtTopM_Barcode.TabIndex = 2;
             // 
-            // txtHeight
+            // cmPrinter_Barcode
             // 
-            this.txtHeight.AllowEmptyState = false;
+            this.cmPrinter_Barcode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmPrinter_Barcode.DisplayMember = "Text";
+            this.cmPrinter_Barcode.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmPrinter_Barcode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmPrinter_Barcode.FormattingEnabled = true;
+            this.cmPrinter_Barcode.ItemHeight = 15;
+            this.cmPrinter_Barcode.Location = new System.Drawing.Point(296, 21);
+            this.cmPrinter_Barcode.Name = "cmPrinter_Barcode";
+            this.cmPrinter_Barcode.Size = new System.Drawing.Size(202, 21);
+            this.cmPrinter_Barcode.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmPrinter_Barcode.TabIndex = 1;
+            this.cmPrinter_Barcode.SelectedIndexChanged += new System.EventHandler(this.CmbPrinter_SelectedIndexChanged);
             // 
+            // txtWidth_Barcode
             // 
-            // 
-            this.txtHeight.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtHeight.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtHeight.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtHeight.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txtHeight.Increment = 1D;
-            this.txtHeight.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtHeight.Location = new System.Drawing.Point(52, 81);
-            this.txtHeight.MinValue = 0D;
-            this.txtHeight.Name = "txtHeight";
-            this.txtHeight.ShowUpDown = true;
-            this.txtHeight.Size = new System.Drawing.Size(85, 20);
-            this.txtHeight.TabIndex = 7;
-            this.txtHeight.Value = 2D;
-            // 
-            // txtBarWidth
-            // 
-            this.txtBarWidth.AllowEmptyState = false;
+            this.txtWidth_Barcode.AllowEmptyState = false;
             // 
             // 
             // 
-            this.txtBarWidth.BackgroundStyle.BackColor = System.Drawing.Color.AliceBlue;
-            this.txtBarWidth.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtBarWidth.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtBarWidth.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtBarWidth.DisplayFormat = "0";
-            this.txtBarWidth.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtBarWidth.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtBarWidth.Location = new System.Drawing.Point(430, 51);
-            this.txtBarWidth.MinValue = 0;
-            this.txtBarWidth.Name = "txtBarWidth";
-            this.txtBarWidth.ShowUpDown = true;
-            this.txtBarWidth.Size = new System.Drawing.Size(68, 21);
-            this.txtBarWidth.TabIndex = 4;
-            this.txtBarWidth.Value = 1;
+            this.txtWidth_Barcode.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtWidth_Barcode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtWidth_Barcode.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtWidth_Barcode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txtWidth_Barcode.Increment = 1D;
+            this.txtWidth_Barcode.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtWidth_Barcode.Location = new System.Drawing.Point(310, 84);
+            this.txtWidth_Barcode.MinValue = 0D;
+            this.txtWidth_Barcode.Name = "txtWidth_Barcode";
+            this.txtWidth_Barcode.ShowUpDown = true;
+            this.txtWidth_Barcode.Size = new System.Drawing.Size(85, 20);
+            this.txtWidth_Barcode.TabIndex = 6;
             // 
-            // txtBarHeigth
+            // txtHeight_Barcode
             // 
-            this.txtBarHeigth.AllowEmptyState = false;
+            this.txtHeight_Barcode.AllowEmptyState = false;
             // 
             // 
             // 
-            this.txtBarHeigth.BackgroundStyle.BackColor = System.Drawing.Color.AliceBlue;
-            this.txtBarHeigth.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtBarHeigth.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtBarHeigth.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtBarHeigth.DisplayFormat = "0";
-            this.txtBarHeigth.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtBarHeigth.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtBarHeigth.Location = new System.Drawing.Point(291, 51);
-            this.txtBarHeigth.MinValue = 0;
-            this.txtBarHeigth.Name = "txtBarHeigth";
-            this.txtBarHeigth.ShowUpDown = true;
-            this.txtBarHeigth.Size = new System.Drawing.Size(68, 21);
-            this.txtBarHeigth.TabIndex = 5;
-            this.txtBarHeigth.Value = 1;
+            this.txtHeight_Barcode.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtHeight_Barcode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtHeight_Barcode.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtHeight_Barcode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txtHeight_Barcode.Increment = 1D;
+            this.txtHeight_Barcode.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtHeight_Barcode.Location = new System.Drawing.Point(52, 81);
+            this.txtHeight_Barcode.MinValue = 0D;
+            this.txtHeight_Barcode.Name = "txtHeight_Barcode";
+            this.txtHeight_Barcode.ShowUpDown = true;
+            this.txtHeight_Barcode.Size = new System.Drawing.Size(85, 20);
+            this.txtHeight_Barcode.TabIndex = 7;
+            this.txtHeight_Barcode.Value = 2D;
+            // 
+            // txtBarWidth_Barcode
+            // 
+            this.txtBarWidth_Barcode.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.txtBarWidth_Barcode.BackgroundStyle.BackColor = System.Drawing.Color.AliceBlue;
+            this.txtBarWidth_Barcode.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtBarWidth_Barcode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtBarWidth_Barcode.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtBarWidth_Barcode.DisplayFormat = "0";
+            this.txtBarWidth_Barcode.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtBarWidth_Barcode.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtBarWidth_Barcode.Location = new System.Drawing.Point(430, 51);
+            this.txtBarWidth_Barcode.MinValue = 0;
+            this.txtBarWidth_Barcode.Name = "txtBarWidth_Barcode";
+            this.txtBarWidth_Barcode.ShowUpDown = true;
+            this.txtBarWidth_Barcode.Size = new System.Drawing.Size(68, 21);
+            this.txtBarWidth_Barcode.TabIndex = 4;
+            this.txtBarWidth_Barcode.Value = 1;
+            // 
+            // txtBarHeigth_Barcode
+            // 
+            this.txtBarHeigth_Barcode.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.txtBarHeigth_Barcode.BackgroundStyle.BackColor = System.Drawing.Color.AliceBlue;
+            this.txtBarHeigth_Barcode.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtBarHeigth_Barcode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtBarHeigth_Barcode.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtBarHeigth_Barcode.DisplayFormat = "0";
+            this.txtBarHeigth_Barcode.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtBarHeigth_Barcode.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtBarHeigth_Barcode.Location = new System.Drawing.Point(291, 51);
+            this.txtBarHeigth_Barcode.MinValue = 0;
+            this.txtBarHeigth_Barcode.Name = "txtBarHeigth_Barcode";
+            this.txtBarHeigth_Barcode.ShowUpDown = true;
+            this.txtBarHeigth_Barcode.Size = new System.Drawing.Size(68, 21);
+            this.txtBarHeigth_Barcode.TabIndex = 5;
+            this.txtBarHeigth_Barcode.Value = 1;
             // 
             // label7
             // 
@@ -637,10 +637,10 @@ namespace InvAcc.Forms
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.txtpageCount);
+            this.groupBox3.Controls.Add(this.txtpageCount_Barcode);
             this.groupBox3.Controls.Add(this.label33);
-            this.groupBox3.Controls.Add(this.txtNumRows);
-            this.groupBox3.Controls.Add(this.txtNumCols);
+            this.groupBox3.Controls.Add(this.txtNumRows_Barcode);
+            this.groupBox3.Controls.Add(this.txtNumCols_Barcode);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Location = new System.Drawing.Point(7, 144);
@@ -649,26 +649,26 @@ namespace InvAcc.Forms
             this.groupBox3.TabIndex = 990;
             this.groupBox3.TabStop = false;
             // 
-            // txtpageCount
+            // txtpageCount_Barcode
             // 
-            this.txtpageCount.AllowEmptyState = false;
+            this.txtpageCount_Barcode.AllowEmptyState = false;
             // 
             // 
             // 
-            this.txtpageCount.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
-            this.txtpageCount.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtpageCount.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtpageCount.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtpageCount.DisplayFormat = "0";
-            this.txtpageCount.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtpageCount.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtpageCount.Location = new System.Drawing.Point(20, 19);
-            this.txtpageCount.MinValue = 1;
-            this.txtpageCount.Name = "txtpageCount";
-            this.txtpageCount.ShowUpDown = true;
-            this.txtpageCount.Size = new System.Drawing.Size(62, 21);
-            this.txtpageCount.TabIndex = 1001;
-            this.txtpageCount.Value = 1;
+            this.txtpageCount_Barcode.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
+            this.txtpageCount_Barcode.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtpageCount_Barcode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtpageCount_Barcode.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtpageCount_Barcode.DisplayFormat = "0";
+            this.txtpageCount_Barcode.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtpageCount_Barcode.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtpageCount_Barcode.Location = new System.Drawing.Point(20, 19);
+            this.txtpageCount_Barcode.MinValue = 1;
+            this.txtpageCount_Barcode.Name = "txtpageCount_Barcode";
+            this.txtpageCount_Barcode.ShowUpDown = true;
+            this.txtpageCount_Barcode.Size = new System.Drawing.Size(62, 21);
+            this.txtpageCount_Barcode.TabIndex = 1001;
+            this.txtpageCount_Barcode.Value = 1;
             // 
             // label33
             // 
@@ -682,47 +682,49 @@ namespace InvAcc.Forms
             this.label33.TabIndex = 1000;
             this.label33.Text = "عدد النسخ :";
             // 
-            // txtNumRows
+            // txtNumRows_Barcode
             // 
-            this.txtNumRows.AllowEmptyState = false;
-            // 
-            // 
-            // 
-            this.txtNumRows.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
-            this.txtNumRows.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtNumRows.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtNumRows.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtNumRows.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txtNumRows.Increment = 1D;
-            this.txtNumRows.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtNumRows.Location = new System.Drawing.Point(416, 19);
-            this.txtNumRows.MinValue = 0D;
-            this.txtNumRows.Name = "txtNumRows";
-            this.txtNumRows.ShowUpDown = true;
-            this.txtNumRows.Size = new System.Drawing.Size(62, 20);
-            this.txtNumRows.TabIndex = 8;
-            this.txtNumRows.Value = 1D;
-            // 
-            // txtNumCols
-            // 
-            this.txtNumCols.AllowEmptyState = false;
+            this.txtNumRows_Barcode.AllowEmptyState = false;
             // 
             // 
             // 
-            this.txtNumCols.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
-            this.txtNumCols.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtNumCols.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtNumCols.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtNumCols.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txtNumCols.Increment = 1D;
-            this.txtNumCols.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtNumCols.Location = new System.Drawing.Point(204, 19);
-            this.txtNumCols.MinValue = 0D;
-            this.txtNumCols.Name = "txtNumCols";
-            this.txtNumCols.ShowUpDown = true;
-            this.txtNumCols.Size = new System.Drawing.Size(62, 20);
-            this.txtNumCols.TabIndex = 9;
-            this.txtNumCols.Value = 1D;
+            this.txtNumRows_Barcode.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
+            this.txtNumRows_Barcode.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtNumRows_Barcode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtNumRows_Barcode.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtNumRows_Barcode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txtNumRows_Barcode.Increment = 1D;
+            this.txtNumRows_Barcode.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtNumRows_Barcode.Location = new System.Drawing.Point(416, 19);
+            this.txtNumRows_Barcode.MinValue = 0D;
+            this.txtNumRows_Barcode.Name = "txtNumRows_Barcode";
+            this.txtNumRows_Barcode.ShowUpDown = true;
+            this.txtNumRows_Barcode.Size = new System.Drawing.Size(62, 20);
+            this.txtNumRows_Barcode.TabIndex = 8;
+            this.txtNumRows_Barcode.Value = 1D;
+            this.txtNumRows_Barcode.ValueChanged += new System.EventHandler(this.txtNumRows_ValueChanged);
+            // 
+            // txtNumCols_Barcode
+            // 
+            this.txtNumCols_Barcode.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.txtNumCols_Barcode.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
+            this.txtNumCols_Barcode.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtNumCols_Barcode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtNumCols_Barcode.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtNumCols_Barcode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txtNumCols_Barcode.Increment = 1D;
+            this.txtNumCols_Barcode.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtNumCols_Barcode.Location = new System.Drawing.Point(204, 19);
+            this.txtNumCols_Barcode.MinValue = 0D;
+            this.txtNumCols_Barcode.Name = "txtNumCols_Barcode";
+            this.txtNumCols_Barcode.ShowUpDown = true;
+            this.txtNumCols_Barcode.Size = new System.Drawing.Size(62, 20);
+            this.txtNumCols_Barcode.TabIndex = 9;
+            this.txtNumCols_Barcode.Value = 1D;
+            this.txtNumCols_Barcode.ValueChanged += new System.EventHandler(this.txtNumCols_ValueChanged);
             // 
             // label9
             // 
@@ -852,12 +854,12 @@ namespace InvAcc.Forms
             // 
             this.RadInvPointer.AutoSize = true;
             this.RadInvPointer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RadInvPointer.Location = new System.Drawing.Point(73, 72);
+            this.RadInvPointer.Location = new System.Drawing.Point(0, 72);
             this.RadInvPointer.Name = "RadInvPointer";
             this.RadInvPointer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RadInvPointer.Size = new System.Drawing.Size(97, 17);
+            this.RadInvPointer.Size = new System.Drawing.Size(178, 17);
             this.RadInvPointer.TabIndex = 15;
-            this.RadInvPointer.Text = "الطابعة النقطية ";
+            this.RadInvPointer.Text = "4طباعة الحقول على نموذج نقطي";
             this.RadInvPointer.UseVisualStyleBackColor = true;
             this.RadInvPointer.CheckedChanged += new System.EventHandler(this.PointerPrinterRD_CheckedChanged);
             // 
@@ -865,12 +867,12 @@ namespace InvAcc.Forms
             // 
             this.RadINVCashier.AutoSize = true;
             this.RadINVCashier.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RadINVCashier.Location = new System.Drawing.Point(34, 49);
+            this.RadINVCashier.Location = new System.Drawing.Point(72, 49);
             this.RadINVCashier.Name = "RadINVCashier";
             this.RadINVCashier.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RadINVCashier.Size = new System.Drawing.Size(137, 17);
+            this.RadINVCashier.Size = new System.Drawing.Size(106, 17);
             this.RadINVCashier.TabIndex = 14;
-            this.RadINVCashier.Text = "طباعة على ورق الكاشير";
+            this.RadINVCashier.Text = "نوع التقرير  كاشير";
             this.RadINVCashier.UseVisualStyleBackColor = true;
             this.RadINVCashier.Click += new System.EventHandler(this.RedButCasher_Click);
             // 
@@ -879,13 +881,13 @@ namespace InvAcc.Forms
             this.RadInvA4.AutoSize = true;
             this.RadInvA4.Checked = true;
             this.RadInvA4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RadInvA4.Location = new System.Drawing.Point(56, 24);
+            this.RadInvA4.Location = new System.Drawing.Point(89, 24);
             this.RadInvA4.Name = "RadInvA4";
             this.RadInvA4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RadInvA4.Size = new System.Drawing.Size(115, 17);
+            this.RadInvA4.Size = new System.Drawing.Size(88, 17);
             this.RadInvA4.TabIndex = 13;
             this.RadInvA4.TabStop = true;
-            this.RadInvA4.Text = "طباعة على ورق A4";
+            this.RadInvA4.Text = "نوع التقرير A4";
             this.RadInvA4.UseVisualStyleBackColor = true;
             this.RadInvA4.Click += new System.EventHandler(this.RedButPaperA4_Click);
             // 
@@ -1444,12 +1446,12 @@ namespace InvAcc.Forms
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.checkBox_previewPrint3);
-            this.panel2.Controls.Add(this.CmbInvType3);
+            this.panel2.Controls.Add(this.DirectPrinter_Sandatat);
+            this.panel2.Controls.Add(this.CmBType_Sandatat);
             this.panel2.Controls.Add(this.groupBox13);
             this.panel2.Controls.Add(this.labelX3);
             this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.ChkPTable3);
+            this.panel2.Controls.Add(this.ChkPTable3_Sandatat);
             this.panel2.Controls.Add(this.groupBox6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -1458,51 +1460,51 @@ namespace InvAcc.Forms
             this.panel2.Size = new System.Drawing.Size(580, 403);
             this.panel2.TabIndex = 858;
             // 
-            // checkBox_previewPrint3
+            // DirectPrinter_Sandatat
             // 
-            this.checkBox_previewPrint3.AutoSize = true;
-            this.checkBox_previewPrint3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.checkBox_previewPrint3.ForeColor = System.Drawing.Color.Blue;
-            this.checkBox_previewPrint3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox_previewPrint3.Location = new System.Drawing.Point(398, 91);
-            this.checkBox_previewPrint3.Name = "checkBox_previewPrint3";
-            this.checkBox_previewPrint3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_previewPrint3.Size = new System.Drawing.Size(108, 21);
-            this.checkBox_previewPrint3.TabIndex = 1020;
-            this.checkBox_previewPrint3.Text = "طباعة مباشرة";
-            this.checkBox_previewPrint3.UseVisualStyleBackColor = true;
-            this.checkBox_previewPrint3.CheckedChanged += new System.EventHandler(this.checkBox_previewPrint3_CheckedChanged);
+            this.DirectPrinter_Sandatat.AutoSize = true;
+            this.DirectPrinter_Sandatat.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.DirectPrinter_Sandatat.ForeColor = System.Drawing.Color.Blue;
+            this.DirectPrinter_Sandatat.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DirectPrinter_Sandatat.Location = new System.Drawing.Point(398, 91);
+            this.DirectPrinter_Sandatat.Name = "DirectPrinter_Sandatat";
+            this.DirectPrinter_Sandatat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DirectPrinter_Sandatat.Size = new System.Drawing.Size(108, 21);
+            this.DirectPrinter_Sandatat.TabIndex = 1020;
+            this.DirectPrinter_Sandatat.Text = "طباعة مباشرة";
+            this.DirectPrinter_Sandatat.UseVisualStyleBackColor = true;
+            this.DirectPrinter_Sandatat.CheckedChanged += new System.EventHandler(this.checkBox_previewPrint3_CheckedChanged);
             // 
-            // CmbInvType3
+            // CmBType_Sandatat
             // 
-            this.CmbInvType3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CmbInvType3.DisplayMember = "Text";
-            this.CmbInvType3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbInvType3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbInvType3.FormattingEnabled = true;
-            this.CmbInvType3.ItemHeight = 15;
-            this.CmbInvType3.Location = new System.Drawing.Point(7, 52);
-            this.CmbInvType3.Name = "CmbInvType3";
-            this.CmbInvType3.Size = new System.Drawing.Size(484, 21);
-            this.CmbInvType3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.CmbInvType3.TabIndex = 1;
-            this.CmbInvType3.SelectedIndexChanged += new System.EventHandler(this.CmbInvType3_SelectedIndexChanged);
+            this.CmBType_Sandatat.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CmBType_Sandatat.DisplayMember = "Text";
+            this.CmBType_Sandatat.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmBType_Sandatat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmBType_Sandatat.FormattingEnabled = true;
+            this.CmBType_Sandatat.ItemHeight = 15;
+            this.CmBType_Sandatat.Location = new System.Drawing.Point(7, 52);
+            this.CmBType_Sandatat.Name = "CmBType_Sandatat";
+            this.CmBType_Sandatat.Size = new System.Drawing.Size(484, 21);
+            this.CmBType_Sandatat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CmBType_Sandatat.TabIndex = 1;
+            this.CmBType_Sandatat.SelectedIndexChanged += new System.EventHandler(this.CmbInvType3_SelectedIndexChanged);
             // 
             // groupBox13
             // 
             this.groupBox13.BackColor = System.Drawing.Color.Transparent;
             this.groupBox13.Controls.Add(this.groupBox7);
-            this.groupBox13.Controls.Add(this.CmbPaperSize3);
+            this.groupBox13.Controls.Add(this.CmbPaperSize_Sandatat);
             this.groupBox13.Controls.Add(this.label21);
             this.groupBox13.Controls.Add(this.txtpageCount3);
             this.groupBox13.Controls.Add(this.label22);
             this.groupBox13.Controls.Add(this.doubleInput3);
-            this.groupBox13.Controls.Add(this.txtLinePage3);
-            this.groupBox13.Controls.Add(this.CmbPrinter3);
-            this.groupBox13.Controls.Add(this.txtTopM3);
-            this.groupBox13.Controls.Add(this.txtBottM3);
-            this.groupBox13.Controls.Add(this.txtRight3);
-            this.groupBox13.Controls.Add(this.txtLeftM3);
+            this.groupBox13.Controls.Add(this.txtLinePage_Sandatat);
+            this.groupBox13.Controls.Add(this.CmpPrinter__Sandatat);
+            this.groupBox13.Controls.Add(this.txtTopM_Sandatat);
+            this.groupBox13.Controls.Add(this.txtBottM_Sandatat);
+            this.groupBox13.Controls.Add(this.txtRight_Sandatat);
+            this.groupBox13.Controls.Add(this.txtLeftM_Sandatat);
             this.groupBox13.Controls.Add(this.label23);
             this.groupBox13.Controls.Add(this.label24);
             this.groupBox13.Controls.Add(this.label25);
@@ -1515,10 +1517,11 @@ namespace InvAcc.Forms
             this.groupBox13.Size = new System.Drawing.Size(551, 268);
             this.groupBox13.TabIndex = 90;
             this.groupBox13.TabStop = false;
+            this.groupBox13.Enter += new System.EventHandler(this.groupBox13_Enter);
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.RButLandscape3);
+            this.groupBox7.Controls.Add(this.RButLandscape_Sandatat);
             this.groupBox7.Controls.Add(this.RButPortrait3);
             this.groupBox7.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.groupBox7.Location = new System.Drawing.Point(21, 114);
@@ -1528,20 +1531,20 @@ namespace InvAcc.Forms
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "الإتجـــــاه";
             // 
-            // RButLandscape3
+            // RButLandscape_Sandatat
             // 
-            this.RButLandscape3.AutoSize = true;
-            this.RButLandscape3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.RButLandscape3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.RButLandscape3.Image = ((System.Drawing.Image)(resources.GetObject("RButLandscape3.Image")));
-            this.RButLandscape3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RButLandscape3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RButLandscape3.Location = new System.Drawing.Point(89, 76);
-            this.RButLandscape3.Name = "RButLandscape3";
-            this.RButLandscape3.Size = new System.Drawing.Size(115, 40);
-            this.RButLandscape3.TabIndex = 1008;
-            this.RButLandscape3.Text = "عرضي                  ";
-            this.RButLandscape3.UseVisualStyleBackColor = true;
+            this.RButLandscape_Sandatat.AutoSize = true;
+            this.RButLandscape_Sandatat.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.RButLandscape_Sandatat.ForeColor = System.Drawing.Color.SteelBlue;
+            this.RButLandscape_Sandatat.Image = ((System.Drawing.Image)(resources.GetObject("RButLandscape_Sandatat.Image")));
+            this.RButLandscape_Sandatat.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RButLandscape_Sandatat.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RButLandscape_Sandatat.Location = new System.Drawing.Point(89, 76);
+            this.RButLandscape_Sandatat.Name = "RButLandscape_Sandatat";
+            this.RButLandscape_Sandatat.Size = new System.Drawing.Size(115, 40);
+            this.RButLandscape_Sandatat.TabIndex = 1008;
+            this.RButLandscape_Sandatat.Text = "عرضي                  ";
+            this.RButLandscape_Sandatat.UseVisualStyleBackColor = true;
             // 
             // RButPortrait3
             // 
@@ -1560,19 +1563,19 @@ namespace InvAcc.Forms
             this.RButPortrait3.Text = "طولي                   ";
             this.RButPortrait3.UseVisualStyleBackColor = true;
             // 
-            // CmbPaperSize3
+            // CmbPaperSize_Sandatat
             // 
-            this.CmbPaperSize3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CmbPaperSize3.DisplayMember = "Text";
-            this.CmbPaperSize3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbPaperSize3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbPaperSize3.FormattingEnabled = true;
-            this.CmbPaperSize3.ItemHeight = 15;
-            this.CmbPaperSize3.Location = new System.Drawing.Point(246, 195);
-            this.CmbPaperSize3.Name = "CmbPaperSize3";
-            this.CmbPaperSize3.Size = new System.Drawing.Size(302, 21);
-            this.CmbPaperSize3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.CmbPaperSize3.TabIndex = 1014;
+            this.CmbPaperSize_Sandatat.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CmbPaperSize_Sandatat.DisplayMember = "Text";
+            this.CmbPaperSize_Sandatat.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbPaperSize_Sandatat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbPaperSize_Sandatat.FormattingEnabled = true;
+            this.CmbPaperSize_Sandatat.ItemHeight = 15;
+            this.CmbPaperSize_Sandatat.Location = new System.Drawing.Point(246, 195);
+            this.CmbPaperSize_Sandatat.Name = "CmbPaperSize_Sandatat";
+            this.CmbPaperSize_Sandatat.Size = new System.Drawing.Size(302, 21);
+            this.CmbPaperSize_Sandatat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CmbPaperSize_Sandatat.TabIndex = 1014;
             // 
             // label21
             // 
@@ -1638,120 +1641,120 @@ namespace InvAcc.Forms
             this.doubleInput3.Size = new System.Drawing.Size(68, 20);
             this.doubleInput3.TabIndex = 10;
             // 
-            // txtLinePage3
+            // txtLinePage_Sandatat
             // 
-            this.txtLinePage3.AllowEmptyState = false;
-            // 
-            // 
-            // 
-            this.txtLinePage3.BackgroundStyle.BackColor = System.Drawing.Color.AliceBlue;
-            this.txtLinePage3.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtLinePage3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtLinePage3.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtLinePage3.DisplayFormat = "0";
-            this.txtLinePage3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtLinePage3.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtLinePage3.Location = new System.Drawing.Point(288, 108);
-            this.txtLinePage3.LockUpdateChecked = false;
-            this.txtLinePage3.MinValue = 0;
-            this.txtLinePage3.Name = "txtLinePage3";
-            this.txtLinePage3.ShowCheckBox = true;
-            this.txtLinePage3.ShowUpDown = true;
-            this.txtLinePage3.Size = new System.Drawing.Size(145, 21);
-            this.txtLinePage3.TabIndex = 9;
-            this.txtLinePage3.ValueChanged += new System.EventHandler(this.txtLinePage3_ValueChanged);
-            this.txtLinePage3.LockUpdateChanged += new System.EventHandler(this.txtLinePage3_LockUpdateChanged);
-            // 
-            // CmbPrinter3
-            // 
-            this.CmbPrinter3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CmbPrinter3.DisplayMember = "Text";
-            this.CmbPrinter3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbPrinter3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbPrinter3.FormattingEnabled = true;
-            this.CmbPrinter3.ItemHeight = 15;
-            this.CmbPrinter3.Location = new System.Drawing.Point(6, 30);
-            this.CmbPrinter3.Name = "CmbPrinter3";
-            this.CmbPrinter3.Size = new System.Drawing.Size(396, 21);
-            this.CmbPrinter3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.CmbPrinter3.TabIndex = 3;
-            this.CmbPrinter3.SelectedIndexChanged += new System.EventHandler(this.CmbPrinter3_SelectedIndexChanged);
-            // 
-            // txtTopM3
-            // 
-            this.txtTopM3.AllowEmptyState = false;
+            this.txtLinePage_Sandatat.AllowEmptyState = false;
             // 
             // 
             // 
-            this.txtTopM3.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
-            this.txtTopM3.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtTopM3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTopM3.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtTopM3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txtTopM3.Increment = 1D;
-            this.txtTopM3.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtTopM3.Location = new System.Drawing.Point(288, 62);
-            this.txtTopM3.Name = "txtTopM3";
-            this.txtTopM3.ShowUpDown = true;
-            this.txtTopM3.Size = new System.Drawing.Size(145, 20);
-            this.txtTopM3.TabIndex = 5;
+            this.txtLinePage_Sandatat.BackgroundStyle.BackColor = System.Drawing.Color.AliceBlue;
+            this.txtLinePage_Sandatat.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtLinePage_Sandatat.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtLinePage_Sandatat.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtLinePage_Sandatat.DisplayFormat = "0";
+            this.txtLinePage_Sandatat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtLinePage_Sandatat.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtLinePage_Sandatat.Location = new System.Drawing.Point(288, 108);
+            this.txtLinePage_Sandatat.LockUpdateChecked = false;
+            this.txtLinePage_Sandatat.MinValue = 0;
+            this.txtLinePage_Sandatat.Name = "txtLinePage_Sandatat";
+            this.txtLinePage_Sandatat.ShowCheckBox = true;
+            this.txtLinePage_Sandatat.ShowUpDown = true;
+            this.txtLinePage_Sandatat.Size = new System.Drawing.Size(145, 21);
+            this.txtLinePage_Sandatat.TabIndex = 9;
+            this.txtLinePage_Sandatat.ValueChanged += new System.EventHandler(this.txtLinePage3_ValueChanged);
+            this.txtLinePage_Sandatat.LockUpdateChanged += new System.EventHandler(this.txtLinePage3_LockUpdateChanged);
             // 
-            // txtBottM3
+            // CmpPrinter__Sandatat
             // 
-            this.txtBottM3.AllowEmptyState = false;
+            this.CmpPrinter__Sandatat.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CmpPrinter__Sandatat.DisplayMember = "Text";
+            this.CmpPrinter__Sandatat.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmpPrinter__Sandatat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmpPrinter__Sandatat.FormattingEnabled = true;
+            this.CmpPrinter__Sandatat.ItemHeight = 15;
+            this.CmpPrinter__Sandatat.Location = new System.Drawing.Point(6, 30);
+            this.CmpPrinter__Sandatat.Name = "CmpPrinter__Sandatat";
+            this.CmpPrinter__Sandatat.Size = new System.Drawing.Size(396, 21);
+            this.CmpPrinter__Sandatat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CmpPrinter__Sandatat.TabIndex = 3;
+            this.CmpPrinter__Sandatat.SelectedIndexChanged += new System.EventHandler(this.CmbPrinter3_SelectedIndexChanged);
             // 
+            // txtTopM_Sandatat
             // 
-            // 
-            this.txtBottM3.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
-            this.txtBottM3.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtBottM3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtBottM3.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtBottM3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txtBottM3.Increment = 1D;
-            this.txtBottM3.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtBottM3.Location = new System.Drawing.Point(288, 85);
-            this.txtBottM3.Name = "txtBottM3";
-            this.txtBottM3.ShowUpDown = true;
-            this.txtBottM3.Size = new System.Drawing.Size(145, 20);
-            this.txtBottM3.TabIndex = 7;
-            // 
-            // txtRight3
-            // 
-            this.txtRight3.AllowEmptyState = false;
-            // 
-            // 
-            // 
-            this.txtRight3.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
-            this.txtRight3.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtRight3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtRight3.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtRight3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txtRight3.Increment = 1D;
-            this.txtRight3.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtRight3.Location = new System.Drawing.Point(6, 62);
-            this.txtRight3.Name = "txtRight3";
-            this.txtRight3.ShowUpDown = true;
-            this.txtRight3.Size = new System.Drawing.Size(142, 20);
-            this.txtRight3.TabIndex = 6;
-            // 
-            // txtLeftM3
-            // 
-            this.txtLeftM3.AllowEmptyState = false;
+            this.txtTopM_Sandatat.AllowEmptyState = false;
             // 
             // 
             // 
-            this.txtLeftM3.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
-            this.txtLeftM3.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtLeftM3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtLeftM3.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtLeftM3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.txtLeftM3.Increment = 1D;
-            this.txtLeftM3.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtLeftM3.Location = new System.Drawing.Point(6, 85);
-            this.txtLeftM3.Name = "txtLeftM3";
-            this.txtLeftM3.ShowUpDown = true;
-            this.txtLeftM3.Size = new System.Drawing.Size(142, 20);
-            this.txtLeftM3.TabIndex = 8;
+            this.txtTopM_Sandatat.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
+            this.txtTopM_Sandatat.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTopM_Sandatat.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTopM_Sandatat.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTopM_Sandatat.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txtTopM_Sandatat.Increment = 1D;
+            this.txtTopM_Sandatat.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtTopM_Sandatat.Location = new System.Drawing.Point(288, 62);
+            this.txtTopM_Sandatat.Name = "txtTopM_Sandatat";
+            this.txtTopM_Sandatat.ShowUpDown = true;
+            this.txtTopM_Sandatat.Size = new System.Drawing.Size(145, 20);
+            this.txtTopM_Sandatat.TabIndex = 5;
+            // 
+            // txtBottM_Sandatat
+            // 
+            this.txtBottM_Sandatat.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.txtBottM_Sandatat.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
+            this.txtBottM_Sandatat.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtBottM_Sandatat.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtBottM_Sandatat.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtBottM_Sandatat.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txtBottM_Sandatat.Increment = 1D;
+            this.txtBottM_Sandatat.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtBottM_Sandatat.Location = new System.Drawing.Point(288, 85);
+            this.txtBottM_Sandatat.Name = "txtBottM_Sandatat";
+            this.txtBottM_Sandatat.ShowUpDown = true;
+            this.txtBottM_Sandatat.Size = new System.Drawing.Size(145, 20);
+            this.txtBottM_Sandatat.TabIndex = 7;
+            // 
+            // txtRight_Sandatat
+            // 
+            this.txtRight_Sandatat.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.txtRight_Sandatat.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
+            this.txtRight_Sandatat.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtRight_Sandatat.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtRight_Sandatat.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtRight_Sandatat.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txtRight_Sandatat.Increment = 1D;
+            this.txtRight_Sandatat.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtRight_Sandatat.Location = new System.Drawing.Point(6, 62);
+            this.txtRight_Sandatat.Name = "txtRight_Sandatat";
+            this.txtRight_Sandatat.ShowUpDown = true;
+            this.txtRight_Sandatat.Size = new System.Drawing.Size(142, 20);
+            this.txtRight_Sandatat.TabIndex = 6;
+            // 
+            // txtLeftM_Sandatat
+            // 
+            this.txtLeftM_Sandatat.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.txtLeftM_Sandatat.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
+            this.txtLeftM_Sandatat.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtLeftM_Sandatat.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtLeftM_Sandatat.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtLeftM_Sandatat.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.txtLeftM_Sandatat.Increment = 1D;
+            this.txtLeftM_Sandatat.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtLeftM_Sandatat.Location = new System.Drawing.Point(6, 85);
+            this.txtLeftM_Sandatat.Name = "txtLeftM_Sandatat";
+            this.txtLeftM_Sandatat.ShowUpDown = true;
+            this.txtLeftM_Sandatat.Size = new System.Drawing.Size(142, 20);
+            this.txtLeftM_Sandatat.TabIndex = 8;
             // 
             // label23
             // 
@@ -1851,21 +1854,21 @@ namespace InvAcc.Forms
             this.label20.TabIndex = 41;
             this.label20.Text = " نوع الفاتورة:";
             // 
-            // ChkPTable3
+            // ChkPTable3_Sandatat
             // 
-            this.ChkPTable3.AutoSize = true;
-            this.ChkPTable3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.ChkPTable3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ChkPTable3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ChkPTable3.Location = new System.Drawing.Point(295, 78);
-            this.ChkPTable3.Name = "ChkPTable3";
-            this.ChkPTable3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ChkPTable3.Size = new System.Drawing.Size(193, 17);
-            this.ChkPTable3.TabIndex = 2;
-            this.ChkPTable3.Text = "طباعة السند بالشكل الإفتراضي";
-            this.ChkPTable3.UseVisualStyleBackColor = true;
-            this.ChkPTable3.Visible = false;
-            this.ChkPTable3.CheckedChanged += new System.EventHandler(this.ChkPTable3_CheckedChanged);
+            this.ChkPTable3_Sandatat.AutoSize = true;
+            this.ChkPTable3_Sandatat.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.ChkPTable3_Sandatat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ChkPTable3_Sandatat.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ChkPTable3_Sandatat.Location = new System.Drawing.Point(295, 78);
+            this.ChkPTable3_Sandatat.Name = "ChkPTable3_Sandatat";
+            this.ChkPTable3_Sandatat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ChkPTable3_Sandatat.Size = new System.Drawing.Size(193, 17);
+            this.ChkPTable3_Sandatat.TabIndex = 2;
+            this.ChkPTable3_Sandatat.Text = "طباعة السند بالشكل الإفتراضي";
+            this.ChkPTable3_Sandatat.UseVisualStyleBackColor = true;
+            this.ChkPTable3_Sandatat.Visible = false;
+            this.ChkPTable3_Sandatat.CheckedChanged += new System.EventHandler(this.ChkPTable3_CheckedChanged);
             // 
             // groupBox6
             // 
@@ -1986,7 +1989,7 @@ namespace InvAcc.Forms
             this.superTabStrip1.TabIndex = 976;
             this.superTabStrip1.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabItem1,
-            this.checkBox_previewPrintRep});
+            this.DirectOption_Reports});
             this.superTabStrip1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
             this.superTabStrip1.Text = "superTabStrip1";
             this.superTabStrip1.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
@@ -1997,13 +2000,14 @@ namespace InvAcc.Forms
             this.superTabItem1.Name = "superTabItem1";
             this.superTabItem1.Text = "الطابعات";
             // 
-            // checkBox_previewPrintRep
+            // DirectOption_Reports
             // 
-            this.checkBox_previewPrintRep.CheckSignSize = new System.Drawing.Size(20, 20);
-            this.checkBox_previewPrintRep.Name = "checkBox_previewPrintRep";
-            this.checkBox_previewPrintRep.Text = "طباعة مباشرة";
-            this.checkBox_previewPrintRep.TextColor = System.Drawing.Color.Red;
-            this.checkBox_previewPrintRep.CheckedChanging += new DevComponents.DotNetBar.CheckBoxChangeEventHandler(this.checkBox_previewPrintRep_Click);
+            this.DirectOption_Reports.CheckSignSize = new System.Drawing.Size(20, 20);
+            this.DirectOption_Reports.Name = "DirectOption_Reports";
+            this.DirectOption_Reports.Text = "طباعة مباشرة";
+            this.DirectOption_Reports.TextColor = System.Drawing.Color.Red;
+            this.DirectOption_Reports.CheckedChanging += new DevComponents.DotNetBar.CheckBoxChangeEventHandler(this.checkBox_previewPrintRep_Click);
+            this.DirectOption_Reports.CheckedChanged += new DevComponents.DotNetBar.CheckBoxChangeEventHandler(this.DirectOption_Reports_CheckedChanged);
             // 
             // groupPanel1Rep
             // 
@@ -2011,19 +2015,19 @@ namespace InvAcc.Forms
             this.groupPanel1Rep.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1Rep.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel1Rep.Controls.Add(this.label33Rep);
-            this.groupPanel1Rep.Controls.Add(this.CmbPaperSizeRep);
+            this.groupPanel1Rep.Controls.Add(this.CmbPaperSizeRep_Reports);
             this.groupPanel1Rep.Controls.Add(this.label34Rep);
-            this.groupPanel1Rep.Controls.Add(this.txtpageCountRep);
-            this.groupPanel1Rep.Controls.Add(this.txtLinePageRep);
+            this.groupPanel1Rep.Controls.Add(this.txtpageCountRep_Reports);
+            this.groupPanel1Rep.Controls.Add(this.txtLinePageRep_Reports);
             this.groupPanel1Rep.Controls.Add(this.label32Rep);
-            this.groupPanel1Rep.Controls.Add(this.CmbPrinterRep);
+            this.groupPanel1Rep.Controls.Add(this.CmbPrinter_Reports);
             this.groupPanel1Rep.Controls.Add(this.label26Rep);
             this.groupPanel1Rep.Controls.Add(this.groupBox4Rep);
             this.groupPanel1Rep.Controls.Add(this.groupBox8);
             this.groupPanel1Rep.Controls.Add(this.groupBox_PrintTypeRep);
             this.groupPanel1Rep.Controls.Add(this.doubleInput4);
             this.groupPanel1Rep.Controls.Add(this.label35);
-            this.groupPanel1Rep.Controls.Add(this.CmbPrintTyp);
+            this.groupPanel1Rep.Controls.Add(this.cmbType_Reports);
             this.groupPanel1Rep.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1Rep.Location = new System.Drawing.Point(6, 71);
             this.groupPanel1Rep.Name = "groupPanel1Rep";
@@ -2056,6 +2060,7 @@ namespace InvAcc.Forms
             // 
             this.groupPanel1Rep.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1Rep.TabIndex = 975;
+            this.groupPanel1Rep.Click += new System.EventHandler(this.groupPanel1Rep_Click);
             // 
             // label33Rep
             // 
@@ -2069,20 +2074,20 @@ namespace InvAcc.Forms
             this.label33Rep.Text = "حجم الورقة :";
             this.label33Rep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // CmbPaperSizeRep
+            // CmbPaperSizeRep_Reports
             // 
-            this.CmbPaperSizeRep.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CmbPaperSizeRep.DisplayMember = "Text";
-            this.CmbPaperSizeRep.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbPaperSizeRep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbPaperSizeRep.FormattingEnabled = true;
-            this.CmbPaperSizeRep.ItemHeight = 15;
-            this.CmbPaperSizeRep.Location = new System.Drawing.Point(3, 321);
-            this.CmbPaperSizeRep.Name = "CmbPaperSizeRep";
-            this.CmbPaperSizeRep.Size = new System.Drawing.Size(459, 21);
-            this.CmbPaperSizeRep.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.CmbPaperSizeRep.TabIndex = 1022;
-            this.CmbPaperSizeRep.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CmbPaperSizeRep_MouseClick);
+            this.CmbPaperSizeRep_Reports.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CmbPaperSizeRep_Reports.DisplayMember = "Text";
+            this.CmbPaperSizeRep_Reports.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbPaperSizeRep_Reports.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbPaperSizeRep_Reports.FormattingEnabled = true;
+            this.CmbPaperSizeRep_Reports.ItemHeight = 15;
+            this.CmbPaperSizeRep_Reports.Location = new System.Drawing.Point(3, 321);
+            this.CmbPaperSizeRep_Reports.Name = "CmbPaperSizeRep_Reports";
+            this.CmbPaperSizeRep_Reports.Size = new System.Drawing.Size(459, 21);
+            this.CmbPaperSizeRep_Reports.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CmbPaperSizeRep_Reports.TabIndex = 1022;
+            this.CmbPaperSizeRep_Reports.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CmbPaperSizeRep_MouseClick);
             // 
             // label34Rep
             // 
@@ -2096,50 +2101,50 @@ namespace InvAcc.Forms
             this.label34Rep.TabIndex = 1021;
             this.label34Rep.Text = "عدد النسخ";
             // 
-            // txtpageCountRep
+            // txtpageCountRep_Reports
             // 
-            this.txtpageCountRep.AllowEmptyState = false;
-            // 
-            // 
-            // 
-            this.txtpageCountRep.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
-            this.txtpageCountRep.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtpageCountRep.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtpageCountRep.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtpageCountRep.DisplayFormat = "0";
-            this.txtpageCountRep.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtpageCountRep.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtpageCountRep.Location = new System.Drawing.Point(316, 233);
-            this.txtpageCountRep.MinValue = 1;
-            this.txtpageCountRep.Name = "txtpageCountRep";
-            this.txtpageCountRep.ShowUpDown = true;
-            this.txtpageCountRep.Size = new System.Drawing.Size(240, 21);
-            this.txtpageCountRep.TabIndex = 1020;
-            this.txtpageCountRep.Value = 1;
-            // 
-            // txtLinePageRep
-            // 
-            this.txtLinePageRep.AllowEmptyState = false;
+            this.txtpageCountRep_Reports.AllowEmptyState = false;
             // 
             // 
             // 
-            this.txtLinePageRep.BackgroundStyle.BackColor = System.Drawing.Color.AliceBlue;
-            this.txtLinePageRep.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtLinePageRep.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtLinePageRep.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtLinePageRep.DisplayFormat = "0";
-            this.txtLinePageRep.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtLinePageRep.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtLinePageRep.Location = new System.Drawing.Point(316, 186);
-            this.txtLinePageRep.LockUpdateChecked = false;
-            this.txtLinePageRep.MinValue = 0;
-            this.txtLinePageRep.Name = "txtLinePageRep";
-            this.txtLinePageRep.ShowCheckBox = true;
-            this.txtLinePageRep.ShowUpDown = true;
-            this.txtLinePageRep.Size = new System.Drawing.Size(240, 21);
-            this.txtLinePageRep.TabIndex = 1019;
-            this.txtLinePageRep.ValueChanged += new System.EventHandler(this.txtLinePageRep_ValueChanged);
-            this.txtLinePageRep.LockUpdateChanged += new System.EventHandler(this.txtLinePageRep_LockUpdateChanged);
+            this.txtpageCountRep_Reports.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
+            this.txtpageCountRep_Reports.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtpageCountRep_Reports.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtpageCountRep_Reports.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtpageCountRep_Reports.DisplayFormat = "0";
+            this.txtpageCountRep_Reports.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtpageCountRep_Reports.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtpageCountRep_Reports.Location = new System.Drawing.Point(316, 233);
+            this.txtpageCountRep_Reports.MinValue = 1;
+            this.txtpageCountRep_Reports.Name = "txtpageCountRep_Reports";
+            this.txtpageCountRep_Reports.ShowUpDown = true;
+            this.txtpageCountRep_Reports.Size = new System.Drawing.Size(240, 21);
+            this.txtpageCountRep_Reports.TabIndex = 1020;
+            this.txtpageCountRep_Reports.Value = 1;
+            // 
+            // txtLinePageRep_Reports
+            // 
+            this.txtLinePageRep_Reports.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.txtLinePageRep_Reports.BackgroundStyle.BackColor = System.Drawing.Color.AliceBlue;
+            this.txtLinePageRep_Reports.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtLinePageRep_Reports.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtLinePageRep_Reports.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtLinePageRep_Reports.DisplayFormat = "0";
+            this.txtLinePageRep_Reports.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtLinePageRep_Reports.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtLinePageRep_Reports.Location = new System.Drawing.Point(316, 186);
+            this.txtLinePageRep_Reports.LockUpdateChecked = false;
+            this.txtLinePageRep_Reports.MinValue = 0;
+            this.txtLinePageRep_Reports.Name = "txtLinePageRep_Reports";
+            this.txtLinePageRep_Reports.ShowCheckBox = true;
+            this.txtLinePageRep_Reports.ShowUpDown = true;
+            this.txtLinePageRep_Reports.Size = new System.Drawing.Size(240, 21);
+            this.txtLinePageRep_Reports.TabIndex = 1019;
+            this.txtLinePageRep_Reports.ValueChanged += new System.EventHandler(this.txtLinePageRep_ValueChanged);
+            this.txtLinePageRep_Reports.LockUpdateChanged += new System.EventHandler(this.txtLinePageRep_LockUpdateChanged);
             // 
             // label32Rep
             // 
@@ -2151,20 +2156,20 @@ namespace InvAcc.Forms
             this.label32Rep.TabIndex = 1018;
             this.label32Rep.Text = "سطور الصفحة";
             // 
-            // CmbPrinterRep
+            // CmbPrinter_Reports
             // 
-            this.CmbPrinterRep.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CmbPrinterRep.DisplayMember = "Text";
-            this.CmbPrinterRep.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbPrinterRep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbPrinterRep.FormattingEnabled = true;
-            this.CmbPrinterRep.ItemHeight = 15;
-            this.CmbPrinterRep.Location = new System.Drawing.Point(3, 29);
-            this.CmbPrinterRep.Name = "CmbPrinterRep";
-            this.CmbPrinterRep.Size = new System.Drawing.Size(560, 21);
-            this.CmbPrinterRep.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.CmbPrinterRep.TabIndex = 1015;
-            this.CmbPrinterRep.SelectedIndexChanged += new System.EventHandler(this.CmbPrinterRep_SelectedIndexChanged);
+            this.CmbPrinter_Reports.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CmbPrinter_Reports.DisplayMember = "Text";
+            this.CmbPrinter_Reports.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbPrinter_Reports.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbPrinter_Reports.FormattingEnabled = true;
+            this.CmbPrinter_Reports.ItemHeight = 15;
+            this.CmbPrinter_Reports.Location = new System.Drawing.Point(3, 29);
+            this.CmbPrinter_Reports.Name = "CmbPrinter_Reports";
+            this.CmbPrinter_Reports.Size = new System.Drawing.Size(560, 21);
+            this.CmbPrinter_Reports.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CmbPrinter_Reports.TabIndex = 1015;
+            this.CmbPrinter_Reports.SelectedIndexChanged += new System.EventHandler(this.CmbPrinterRep_SelectedIndexChanged);
             // 
             // label26Rep
             // 
@@ -2180,14 +2185,14 @@ namespace InvAcc.Forms
             // 
             // groupBox4Rep
             // 
-            this.groupBox4Rep.Controls.Add(this.txtRightRep);
-            this.groupBox4Rep.Controls.Add(this.txtLeftMRep);
+            this.groupBox4Rep.Controls.Add(this.txtRightRep_Reports);
+            this.groupBox4Rep.Controls.Add(this.txtLeftMRep_Reports);
             this.groupBox4Rep.Controls.Add(this.label27Rep);
             this.groupBox4Rep.Controls.Add(this.label28Rep);
             this.groupBox4Rep.Controls.Add(this.label29Rep);
             this.groupBox4Rep.Controls.Add(this.label30Rep);
-            this.groupBox4Rep.Controls.Add(this.txtTopMRep);
-            this.groupBox4Rep.Controls.Add(this.txtBottMRep);
+            this.groupBox4Rep.Controls.Add(this.txtTopM_Reports);
+            this.groupBox4Rep.Controls.Add(this.txtBottMRep_Reports);
             this.groupBox4Rep.Location = new System.Drawing.Point(3, 55);
             this.groupBox4Rep.Name = "groupBox4Rep";
             this.groupBox4Rep.Size = new System.Drawing.Size(560, 70);
@@ -2195,43 +2200,43 @@ namespace InvAcc.Forms
             this.groupBox4Rep.TabStop = false;
             this.groupBox4Rep.Text = "الهوامش";
             // 
-            // txtRightRep
+            // txtRightRep_Reports
             // 
-            this.txtRightRep.AllowEmptyState = false;
-            // 
-            // 
-            // 
-            this.txtRightRep.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
-            this.txtRightRep.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtRightRep.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtRightRep.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtRightRep.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.txtRightRep.Increment = 1D;
-            this.txtRightRep.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtRightRep.Location = new System.Drawing.Point(0, 17);
-            this.txtRightRep.MinValue = 0D;
-            this.txtRightRep.Name = "txtRightRep";
-            this.txtRightRep.Size = new System.Drawing.Size(180, 20);
-            this.txtRightRep.TabIndex = 991;
-            // 
-            // txtLeftMRep
-            // 
-            this.txtLeftMRep.AllowEmptyState = false;
+            this.txtRightRep_Reports.AllowEmptyState = false;
             // 
             // 
             // 
-            this.txtLeftMRep.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
-            this.txtLeftMRep.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtLeftMRep.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtLeftMRep.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtLeftMRep.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.txtLeftMRep.Increment = 1D;
-            this.txtLeftMRep.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtLeftMRep.Location = new System.Drawing.Point(0, 41);
-            this.txtLeftMRep.MinValue = 0D;
-            this.txtLeftMRep.Name = "txtLeftMRep";
-            this.txtLeftMRep.Size = new System.Drawing.Size(180, 20);
-            this.txtLeftMRep.TabIndex = 993;
+            this.txtRightRep_Reports.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
+            this.txtRightRep_Reports.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtRightRep_Reports.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtRightRep_Reports.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtRightRep_Reports.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.txtRightRep_Reports.Increment = 1D;
+            this.txtRightRep_Reports.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtRightRep_Reports.Location = new System.Drawing.Point(0, 17);
+            this.txtRightRep_Reports.MinValue = 0D;
+            this.txtRightRep_Reports.Name = "txtRightRep_Reports";
+            this.txtRightRep_Reports.Size = new System.Drawing.Size(180, 20);
+            this.txtRightRep_Reports.TabIndex = 991;
+            // 
+            // txtLeftMRep_Reports
+            // 
+            this.txtLeftMRep_Reports.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.txtLeftMRep_Reports.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
+            this.txtLeftMRep_Reports.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtLeftMRep_Reports.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtLeftMRep_Reports.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtLeftMRep_Reports.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.txtLeftMRep_Reports.Increment = 1D;
+            this.txtLeftMRep_Reports.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtLeftMRep_Reports.Location = new System.Drawing.Point(0, 41);
+            this.txtLeftMRep_Reports.MinValue = 0D;
+            this.txtLeftMRep_Reports.Name = "txtLeftMRep_Reports";
+            this.txtLeftMRep_Reports.Size = new System.Drawing.Size(180, 20);
+            this.txtLeftMRep_Reports.TabIndex = 993;
             // 
             // label27Rep
             // 
@@ -2274,48 +2279,48 @@ namespace InvAcc.Forms
             this.label30Rep.TabIndex = 986;
             this.label30Rep.Text = "الأعلى :";
             // 
-            // txtTopMRep
+            // txtTopM_Reports
             // 
-            this.txtTopMRep.AllowEmptyState = false;
-            // 
-            // 
-            // 
-            this.txtTopMRep.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
-            this.txtTopMRep.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtTopMRep.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTopMRep.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtTopMRep.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.txtTopMRep.Increment = 1D;
-            this.txtTopMRep.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtTopMRep.Location = new System.Drawing.Point(279, 21);
-            this.txtTopMRep.MinValue = 0D;
-            this.txtTopMRep.Name = "txtTopMRep";
-            this.txtTopMRep.Size = new System.Drawing.Size(220, 20);
-            this.txtTopMRep.TabIndex = 989;
-            // 
-            // txtBottMRep
-            // 
-            this.txtBottMRep.AllowEmptyState = false;
+            this.txtTopM_Reports.AllowEmptyState = false;
             // 
             // 
             // 
-            this.txtBottMRep.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
-            this.txtBottMRep.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtBottMRep.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtBottMRep.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtBottMRep.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.txtBottMRep.Increment = 1D;
-            this.txtBottMRep.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtBottMRep.Location = new System.Drawing.Point(279, 45);
-            this.txtBottMRep.MinValue = 0D;
-            this.txtBottMRep.Name = "txtBottMRep";
-            this.txtBottMRep.Size = new System.Drawing.Size(220, 20);
-            this.txtBottMRep.TabIndex = 992;
+            this.txtTopM_Reports.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
+            this.txtTopM_Reports.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTopM_Reports.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTopM_Reports.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTopM_Reports.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.txtTopM_Reports.Increment = 1D;
+            this.txtTopM_Reports.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtTopM_Reports.Location = new System.Drawing.Point(279, 21);
+            this.txtTopM_Reports.MinValue = 0D;
+            this.txtTopM_Reports.Name = "txtTopM_Reports";
+            this.txtTopM_Reports.Size = new System.Drawing.Size(220, 20);
+            this.txtTopM_Reports.TabIndex = 989;
+            // 
+            // txtBottMRep_Reports
+            // 
+            this.txtBottMRep_Reports.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.txtBottMRep_Reports.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(198)))));
+            this.txtBottMRep_Reports.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtBottMRep_Reports.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtBottMRep_Reports.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtBottMRep_Reports.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.txtBottMRep_Reports.Increment = 1D;
+            this.txtBottMRep_Reports.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtBottMRep_Reports.Location = new System.Drawing.Point(279, 45);
+            this.txtBottMRep_Reports.MinValue = 0D;
+            this.txtBottMRep_Reports.Name = "txtBottMRep_Reports";
+            this.txtBottMRep_Reports.Size = new System.Drawing.Size(220, 20);
+            this.txtBottMRep_Reports.TabIndex = 992;
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.RButLandscapeRep);
-            this.groupBox8.Controls.Add(this.RButPortraitRep);
+            this.groupBox8.Controls.Add(this.RButLandscapeRep_Reports);
+            this.groupBox8.Controls.Add(this.RButPortraitRep_Reports);
             this.groupBox8.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.groupBox8.Location = new System.Drawing.Point(3, 165);
             this.groupBox8.Name = "groupBox8";
@@ -2324,43 +2329,43 @@ namespace InvAcc.Forms
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "الإتجـــــاه";
             // 
-            // RButLandscapeRep
+            // RButLandscapeRep_Reports
             // 
-            this.RButLandscapeRep.AutoSize = true;
-            this.RButLandscapeRep.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.RButLandscapeRep.ForeColor = System.Drawing.Color.SteelBlue;
-            this.RButLandscapeRep.Image = ((System.Drawing.Image)(resources.GetObject("RButLandscapeRep.Image")));
-            this.RButLandscapeRep.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RButLandscapeRep.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RButLandscapeRep.Location = new System.Drawing.Point(71, 60);
-            this.RButLandscapeRep.Name = "RButLandscapeRep";
-            this.RButLandscapeRep.Size = new System.Drawing.Size(109, 40);
-            this.RButLandscapeRep.TabIndex = 1008;
-            this.RButLandscapeRep.Text = "عرضي                ";
-            this.RButLandscapeRep.UseVisualStyleBackColor = true;
+            this.RButLandscapeRep_Reports.AutoSize = true;
+            this.RButLandscapeRep_Reports.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.RButLandscapeRep_Reports.ForeColor = System.Drawing.Color.SteelBlue;
+            this.RButLandscapeRep_Reports.Image = ((System.Drawing.Image)(resources.GetObject("RButLandscapeRep_Reports.Image")));
+            this.RButLandscapeRep_Reports.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RButLandscapeRep_Reports.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RButLandscapeRep_Reports.Location = new System.Drawing.Point(71, 60);
+            this.RButLandscapeRep_Reports.Name = "RButLandscapeRep_Reports";
+            this.RButLandscapeRep_Reports.Size = new System.Drawing.Size(109, 40);
+            this.RButLandscapeRep_Reports.TabIndex = 1008;
+            this.RButLandscapeRep_Reports.Text = "عرضي                ";
+            this.RButLandscapeRep_Reports.UseVisualStyleBackColor = true;
             // 
-            // RButPortraitRep
+            // RButPortraitRep_Reports
             // 
-            this.RButPortraitRep.AutoSize = true;
-            this.RButPortraitRep.Checked = true;
-            this.RButPortraitRep.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.RButPortraitRep.ForeColor = System.Drawing.Color.SteelBlue;
-            this.RButPortraitRep.Image = ((System.Drawing.Image)(resources.GetObject("RButPortraitRep.Image")));
-            this.RButPortraitRep.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RButPortraitRep.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RButPortraitRep.Location = new System.Drawing.Point(71, 18);
-            this.RButPortraitRep.Name = "RButPortraitRep";
-            this.RButPortraitRep.Size = new System.Drawing.Size(108, 40);
-            this.RButPortraitRep.TabIndex = 1007;
-            this.RButPortraitRep.TabStop = true;
-            this.RButPortraitRep.Text = "طولي                 ";
-            this.RButPortraitRep.UseVisualStyleBackColor = true;
+            this.RButPortraitRep_Reports.AutoSize = true;
+            this.RButPortraitRep_Reports.Checked = true;
+            this.RButPortraitRep_Reports.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.RButPortraitRep_Reports.ForeColor = System.Drawing.Color.SteelBlue;
+            this.RButPortraitRep_Reports.Image = ((System.Drawing.Image)(resources.GetObject("RButPortraitRep_Reports.Image")));
+            this.RButPortraitRep_Reports.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RButPortraitRep_Reports.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RButPortraitRep_Reports.Location = new System.Drawing.Point(71, 18);
+            this.RButPortraitRep_Reports.Name = "RButPortraitRep_Reports";
+            this.RButPortraitRep_Reports.Size = new System.Drawing.Size(108, 40);
+            this.RButPortraitRep_Reports.TabIndex = 1007;
+            this.RButPortraitRep_Reports.TabStop = true;
+            this.RButPortraitRep_Reports.Text = "طولي                 ";
+            this.RButPortraitRep_Reports.UseVisualStyleBackColor = true;
             // 
             // groupBox_PrintTypeRep
             // 
-            this.groupBox_PrintTypeRep.Controls.Add(this.RadRepPointer);
-            this.groupBox_PrintTypeRep.Controls.Add(this.RadRepCashier);
-            this.groupBox_PrintTypeRep.Controls.Add(this.RadRepA4);
+            this.groupBox_PrintTypeRep.Controls.Add(this.RadRepPointer_Reports);
+            this.groupBox_PrintTypeRep.Controls.Add(this.RadRepCashier_Reports);
+            this.groupBox_PrintTypeRep.Controls.Add(this.RadRepA4_Reports);
             this.groupBox_PrintTypeRep.Location = new System.Drawing.Point(3, 271);
             this.groupBox_PrintTypeRep.Name = "groupBox_PrintTypeRep";
             this.groupBox_PrintTypeRep.Size = new System.Drawing.Size(548, 45);
@@ -2368,46 +2373,46 @@ namespace InvAcc.Forms
             this.groupBox_PrintTypeRep.TabStop = false;
             this.groupBox_PrintTypeRep.Text = "طريقة الطباعة";
             // 
-            // RadRepPointer
+            // RadRepPointer_Reports
             // 
-            this.RadRepPointer.AutoSize = true;
-            this.RadRepPointer.Checked = true;
-            this.RadRepPointer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RadRepPointer.Location = new System.Drawing.Point(184, 22);
-            this.RadRepPointer.Name = "RadRepPointer";
-            this.RadRepPointer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RadRepPointer.Size = new System.Drawing.Size(94, 17);
-            this.RadRepPointer.TabIndex = 15;
-            this.RadRepPointer.TabStop = true;
-            this.RadRepPointer.Text = "الطابعة النقطية";
-            this.RadRepPointer.UseVisualStyleBackColor = true;
-            this.RadRepPointer.CheckedChanged += new System.EventHandler(this.RadRepPointer_CheckedChanged);
+            this.RadRepPointer_Reports.AutoSize = true;
+            this.RadRepPointer_Reports.Checked = true;
+            this.RadRepPointer_Reports.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RadRepPointer_Reports.Location = new System.Drawing.Point(107, 22);
+            this.RadRepPointer_Reports.Name = "RadRepPointer_Reports";
+            this.RadRepPointer_Reports.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RadRepPointer_Reports.Size = new System.Drawing.Size(172, 17);
+            this.RadRepPointer_Reports.TabIndex = 15;
+            this.RadRepPointer_Reports.TabStop = true;
+            this.RadRepPointer_Reports.Text = "طباعة الحقول على نموذج نقطي";
+            this.RadRepPointer_Reports.UseVisualStyleBackColor = true;
+            this.RadRepPointer_Reports.CheckedChanged += new System.EventHandler(this.RadRepPointer_CheckedChanged);
             // 
-            // RadRepCashier
+            // RadRepCashier_Reports
             // 
-            this.RadRepCashier.AutoSize = true;
-            this.RadRepCashier.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RadRepCashier.Location = new System.Drawing.Point(313, 21);
-            this.RadRepCashier.Name = "RadRepCashier";
-            this.RadRepCashier.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RadRepCashier.Size = new System.Drawing.Size(79, 17);
-            this.RadRepCashier.TabIndex = 14;
-            this.RadRepCashier.Text = "ورق كاشيير";
-            this.RadRepCashier.UseVisualStyleBackColor = true;
+            this.RadRepCashier_Reports.AutoSize = true;
+            this.RadRepCashier_Reports.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RadRepCashier_Reports.Location = new System.Drawing.Point(313, 21);
+            this.RadRepCashier_Reports.Name = "RadRepCashier_Reports";
+            this.RadRepCashier_Reports.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RadRepCashier_Reports.Size = new System.Drawing.Size(103, 17);
+            this.RadRepCashier_Reports.TabIndex = 14;
+            this.RadRepCashier_Reports.Text = "نوع التقرير كاشير";
+            this.RadRepCashier_Reports.UseVisualStyleBackColor = true;
             // 
-            // RadRepA4
+            // RadRepA4_Reports
             // 
-            this.RadRepA4.AutoSize = true;
-            this.RadRepA4.Checked = true;
-            this.RadRepA4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RadRepA4.Location = new System.Drawing.Point(445, 21);
-            this.RadRepA4.Name = "RadRepA4";
-            this.RadRepA4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RadRepA4.Size = new System.Drawing.Size(60, 17);
-            this.RadRepA4.TabIndex = 13;
-            this.RadRepA4.TabStop = true;
-            this.RadRepA4.Text = "ورق A4";
-            this.RadRepA4.UseVisualStyleBackColor = true;
+            this.RadRepA4_Reports.AutoSize = true;
+            this.RadRepA4_Reports.Checked = true;
+            this.RadRepA4_Reports.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RadRepA4_Reports.Location = new System.Drawing.Point(445, 21);
+            this.RadRepA4_Reports.Name = "RadRepA4_Reports";
+            this.RadRepA4_Reports.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RadRepA4_Reports.Size = new System.Drawing.Size(88, 17);
+            this.RadRepA4_Reports.TabIndex = 13;
+            this.RadRepA4_Reports.TabStop = true;
+            this.RadRepA4_Reports.Text = "نوع التقرير A4";
+            this.RadRepA4_Reports.UseVisualStyleBackColor = true;
             // 
             // doubleInput4
             // 
@@ -2439,21 +2444,21 @@ namespace InvAcc.Forms
             this.label35.TabIndex = 997;
             this.label35.Text = "المسافة بين السطور";
             // 
-            // CmbPrintTyp
+            // cmbType_Reports
             // 
-            this.CmbPrintTyp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CmbPrintTyp.DisplayMember = "Text";
-            this.CmbPrintTyp.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbPrintTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbPrintTyp.FocusHighlightColor = System.Drawing.Color.Empty;
-            this.CmbPrintTyp.FormattingEnabled = true;
-            this.CmbPrintTyp.ItemHeight = 15;
-            this.CmbPrintTyp.Location = new System.Drawing.Point(203, 183);
-            this.CmbPrintTyp.Name = "CmbPrintTyp";
-            this.CmbPrintTyp.Size = new System.Drawing.Size(160, 21);
-            this.CmbPrintTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.CmbPrintTyp.TabIndex = 1026;
-            this.CmbPrintTyp.Visible = false;
+            this.cmbType_Reports.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbType_Reports.DisplayMember = "Text";
+            this.cmbType_Reports.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbType_Reports.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbType_Reports.FocusHighlightColor = System.Drawing.Color.Empty;
+            this.cmbType_Reports.FormattingEnabled = true;
+            this.cmbType_Reports.ItemHeight = 15;
+            this.cmbType_Reports.Location = new System.Drawing.Point(203, 183);
+            this.cmbType_Reports.Name = "cmbType_Reports";
+            this.cmbType_Reports.Size = new System.Drawing.Size(160, 21);
+            this.cmbType_Reports.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbType_Reports.TabIndex = 1026;
+            this.cmbType_Reports.Visible = false;
             // 
             // tabPage5
             // 
@@ -2587,17 +2592,17 @@ namespace InvAcc.Forms
             this.ribbonBar1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLeftM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTopM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWidth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBarWidth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBarHeigth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeftM_Barcode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTopM_Barcode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWidth_Barcode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHeight_Barcode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBarWidth_Barcode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBarHeigth_Barcode)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtpageCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumRows)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumCols)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpageCount_Barcode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumRows_Barcode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumCols_Barcode)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.ribbonBar2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -2626,25 +2631,25 @@ namespace InvAcc.Forms
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtpageCount3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLinePage3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTopM3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBottM3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRight3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLeftM3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLinePage_Sandatat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTopM_Sandatat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBottM_Sandatat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRight_Sandatat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeftM_Sandatat)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabStrip1)).EndInit();
             this.groupPanel1Rep.ResumeLayout(false);
             this.groupPanel1Rep.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtpageCountRep)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLinePageRep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpageCountRep_Reports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLinePageRep_Reports)).EndInit();
             this.groupBox4Rep.ResumeLayout(false);
             this.groupBox4Rep.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRightRep)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLeftMRep)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTopMRep)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBottMRep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRightRep_Reports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeftMRep_Reports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTopM_Reports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBottMRep_Reports)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox_PrintTypeRep.ResumeLayout(false);
@@ -2668,16 +2673,16 @@ namespace InvAcc.Forms
         private DevComponents.DotNetBar.LabelX labelX1;
         private System.Windows.Forms.ComboBox CmbPrintP;
         private DevComponents.DotNetBar.RibbonBar ribbonBar1;
-        private System.Windows.Forms.CheckBox checkBox_previewPrint;
+        private System.Windows.Forms.CheckBox DirectOption_Barcode;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox_Collate;
-        private DevComponents.Editors.DoubleInput txtLeftM;
-        private DevComponents.Editors.DoubleInput txtTopM;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx CmbPrinter;
-        private DevComponents.Editors.DoubleInput txtWidth;
-        private DevComponents.Editors.DoubleInput txtHeight;
-        private DevComponents.Editors.IntegerInput txtBarWidth;
-        private DevComponents.Editors.IntegerInput txtBarHeigth;
+        private System.Windows.Forms.CheckBox ColleteOptionBarcode;
+        private DevComponents.Editors.DoubleInput txtLeftM_Barcode;
+        private DevComponents.Editors.DoubleInput txtTopM_Barcode;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmPrinter_Barcode;
+        private DevComponents.Editors.DoubleInput txtWidth_Barcode;
+        private DevComponents.Editors.DoubleInput txtHeight_Barcode;
+        private DevComponents.Editors.IntegerInput txtBarWidth_Barcode;
+        private DevComponents.Editors.IntegerInput txtBarHeigth_Barcode;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
@@ -2686,10 +2691,10 @@ namespace InvAcc.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private DevComponents.Editors.IntegerInput txtpageCount;
+        private DevComponents.Editors.IntegerInput txtpageCount_Barcode;
         private System.Windows.Forms.Label label33;
-        private DevComponents.Editors.DoubleInput txtNumRows;
-        private DevComponents.Editors.DoubleInput txtNumCols;
+        private DevComponents.Editors.DoubleInput txtNumRows_Barcode;
+        private DevComponents.Editors.DoubleInput txtNumCols_Barcode;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabPage2;
@@ -2733,23 +2738,23 @@ namespace InvAcc.Forms
         private System.Windows.Forms.TabPage tabPage3;
         private DevComponents.DotNetBar.RibbonBar ribbonBar3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.CheckBox checkBox_previewPrint3;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx CmbInvType3;
+        private System.Windows.Forms.CheckBox DirectPrinter_Sandatat;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx CmBType_Sandatat;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.RadioButton RButLandscape3;
+        private System.Windows.Forms.RadioButton RButLandscape_Sandatat;
         private System.Windows.Forms.RadioButton RButPortrait3;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx CmbPaperSize3;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx CmbPaperSize_Sandatat;
         private System.Windows.Forms.Label label21;
         private DevComponents.Editors.IntegerInput txtpageCount3;
         private System.Windows.Forms.Label label22;
         private DevComponents.Editors.DoubleInput doubleInput3;
-        private DevComponents.Editors.IntegerInput txtLinePage3;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx CmbPrinter3;
-        private DevComponents.Editors.DoubleInput txtTopM3;
-        private DevComponents.Editors.DoubleInput txtBottM3;
-        private DevComponents.Editors.DoubleInput txtRight3;
-        private DevComponents.Editors.DoubleInput txtLeftM3;
+        private DevComponents.Editors.IntegerInput txtLinePage_Sandatat;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx CmpPrinter__Sandatat;
+        private DevComponents.Editors.DoubleInput txtTopM_Sandatat;
+        private DevComponents.Editors.DoubleInput txtBottM_Sandatat;
+        private DevComponents.Editors.DoubleInput txtRight_Sandatat;
+        private DevComponents.Editors.DoubleInput txtLeftM_Sandatat;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
@@ -2759,7 +2764,7 @@ namespace InvAcc.Forms
         private System.Windows.Forms.Label label29;
         private DevComponents.DotNetBar.LabelX labelX3;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.CheckBox ChkPTable3;
+        private System.Windows.Forms.CheckBox ChkPTable3_Sandatat;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -2769,35 +2774,35 @@ namespace InvAcc.Forms
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1Rep;
         private DevComponents.Editors.DoubleInput doubleInput4;
         private System.Windows.Forms.Label label35;
-        private DevComponents.DotNetBar.CheckBoxItem checkBox_previewPrintRep;
+        private DevComponents.DotNetBar.CheckBoxItem DirectOption_Reports;
         private System.Windows.Forms.Label label33Rep;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx CmbPaperSizeRep;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx CmbPaperSizeRep_Reports;
         private System.Windows.Forms.Label label34Rep;
-        private DevComponents.Editors.IntegerInput txtpageCountRep;
-        private DevComponents.Editors.IntegerInput txtLinePageRep;
+        private DevComponents.Editors.IntegerInput txtpageCountRep_Reports;
+        private DevComponents.Editors.IntegerInput txtLinePageRep_Reports;
         private System.Windows.Forms.Label label32Rep;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx CmbPrinterRep;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx CmbPrinter_Reports;
         private System.Windows.Forms.Label label26Rep;
         private System.Windows.Forms.GroupBox groupBox4Rep;
-        private DevComponents.Editors.DoubleInput txtRightRep;
-        private DevComponents.Editors.DoubleInput txtLeftMRep;
+        private DevComponents.Editors.DoubleInput txtRightRep_Reports;
+        private DevComponents.Editors.DoubleInput txtLeftMRep_Reports;
         private System.Windows.Forms.Label label27Rep;
         private System.Windows.Forms.Label label28Rep;
         private System.Windows.Forms.Label label29Rep;
         private System.Windows.Forms.Label label30Rep;
-        private DevComponents.Editors.DoubleInput txtTopMRep;
-        private DevComponents.Editors.DoubleInput txtBottMRep;
+        private DevComponents.Editors.DoubleInput txtTopM_Reports;
+        private DevComponents.Editors.DoubleInput txtBottMRep_Reports;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.RadioButton RButLandscapeRep;
-        private System.Windows.Forms.RadioButton RButPortraitRep;
+        private System.Windows.Forms.RadioButton RButLandscapeRep_Reports;
+        private System.Windows.Forms.RadioButton RButPortraitRep_Reports;
         private System.Windows.Forms.GroupBox groupBox_PrintTypeRep;
-        private System.Windows.Forms.RadioButton RadRepCashier;
-        private System.Windows.Forms.RadioButton RadRepA4;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx CmbPrintTyp;
+        private System.Windows.Forms.RadioButton RadRepCashier_Reports;
+        private System.Windows.Forms.RadioButton RadRepA4_Reports;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbType_Reports;
         private DevComponents.DotNetBar.LabelX labelX4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RadioButton RadInvPointer;
-        private System.Windows.Forms.RadioButton RadRepPointer;
+        private System.Windows.Forms.RadioButton RadRepPointer_Reports;
         private System.Windows.Forms.GroupBox groupBox2;
         private DevComponents.DotNetBar.ButtonX ButWithoutSave;
         private DevComponents.DotNetBar.ButtonX ButWithSave;

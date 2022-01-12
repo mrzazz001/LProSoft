@@ -467,7 +467,7 @@ namespace InvAcc.Forms
                     return;
                 }
                 List<string> _DBNo = new List<string>();
-                using (Rate_DataDataContext _db = new Rate_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" + VarGeneral.Qut+ VarGeneral.UsrPass+ VarGeneral.Qut))
+                using (Rate_DataDataContext _db = new Rate_DataDataContext("Server=" + VarGeneral.gServerName + ";Database=;UID=" + VarGeneral.UsrName + ";PWD=" +  VarGeneral.UsrPass))
                 {
                     _DBNo = _db.ExecuteQuery<string>("select name From master..sysdatabases Where name like 'DBPROSOFT_%' and name not like '%_Endsyr_%' order by name ", new object[0]).ToList();
                 }

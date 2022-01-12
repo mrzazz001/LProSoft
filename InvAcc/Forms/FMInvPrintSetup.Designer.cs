@@ -349,6 +349,7 @@ private void InitializeComponent()
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(134, 21);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox_CachierTxtE
             // 
@@ -813,6 +814,7 @@ private void InitializeComponent()
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FMInvPrintSetup_FormClosing);
             this.Load += new System.EventHandler(this.FMInvPrintSetup_Load);
             this.Shown += new System.EventHandler(this.FrmInvSale_Shown);
             this.SizeChanged += new System.EventHandler(this.FrmInvSale_SizeChanged);

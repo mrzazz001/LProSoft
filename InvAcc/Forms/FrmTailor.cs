@@ -314,7 +314,7 @@ namespace InvAcc.Forms
             _SysSetting = new T_SYSSETTING();
             _InvSetting = db.StockInvSetting( VarGeneral.InvTyp);
             _SysSetting = db.SystemSettingStock();
-            buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "طباعة" : "عــرض");
+            buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "طباعة" : "عــرض");
             buttonItem_Print.Tooltip = "F5";
             text_tailor1_0.Click += Button_Edit_Click;
             text_tailor1_0.Click += Button_Edit_Click;
@@ -793,7 +793,7 @@ namespace InvAcc.Forms
                 frm.Repvalue = "InvSalTailor";
                 frm.Tag = LangArEn;
                 frm.BarcodSts = false;
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                 {
                     frm.Repvalue = "InvSalTailor";
                 }
@@ -804,7 +804,7 @@ namespace InvAcc.Forms
                 VarGeneral.CostCenterlbl = label15.Text.Replace(" :", "");
                 VarGeneral.Mndoblbl = label18.Text.Replace(" :", "");
                 VarGeneral.vTitle = "فاتورة مبيعات";
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
+                if (_InvSetting.ISdirectPrinting)
                 {
                     frm._Proceess();
                     return;

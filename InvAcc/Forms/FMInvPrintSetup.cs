@@ -246,7 +246,7 @@ namespace InvAcc.Forms
                 chk_Stoped.OffText = ((LangArEn == 0) ? "طابعة الكاشيير فقط" : "Cashier Printer Only");
                 FillCombo();
                 BindData();
-                if (VarGeneral.vDemo && VarGeneral.UserID != 1)
+                if (  VarGeneral.UserID != 1)
                 {
                     checkBox_previewPrint.Visible = false;
                 }
@@ -310,7 +310,7 @@ namespace InvAcc.Forms
                     {
                         ChkPTable.Checked = true;
                     }
-                    if (p.nTyp.Substring(1, 1) == "0")
+                    if (p.ISCashierType)
                     {
                         RedButPaperA4.Checked = false;
                         RedButCasher.Checked = true;
@@ -320,7 +320,7 @@ namespace InvAcc.Forms
                         RedButPaperA4.Checked = true;
                         RedButCasher.Checked = false;
                     }
-                    if (p.nTyp.Substring(2, 1) == "1")
+                    if (p.ISdirectPrinting)
                     {
                         checkBox_previewPrint.Checked = true;
                     }
@@ -344,7 +344,7 @@ namespace InvAcc.Forms
                     txtDistance.Text = p.lnSpc.ToString();
                     textBox_CachierTxtA.Text = _InvSetting.invGdADesc;
                     textBox_CachierTxtE.Text = _InvSetting.invGdEDesc;
-                    CmbPrinter.Text = p.defPrn;
+                    CmbPrinter.SelectedItem = p.defPrn;
                     txtpageCount.Value = p.DefLines.Value;
                     try
                     { 
@@ -414,7 +414,7 @@ namespace InvAcc.Forms
                 chk_Stoped.OffText = ((LangArEn == 0) ? "إيقاف الطباعة" : "Printing Stoped");
                 checkBox_previewPrint.Visible = true;
                 chk_Stoped.Visible = true;
-                if (db.StockInvSetting( 1).nTyp.Substring(2, 1) == "1")
+                if (db.StockInvSetting( 1).ISdirectPrinting)
                 {
                     groupBox_PrintType.Visible = true;
                   //  picture_SSS.Visible = true;
@@ -512,13 +512,19 @@ namespace InvAcc.Forms
                 ntyp = (ChkPTable.Checked ? "1" : "0");
                 ntyp = (RedButPaperA4.Checked ? (ntyp + "1") : (ntyp + "0"));
                 ntyp = (checkBox_previewPrint.Checked ? (ntyp + "1") : (ntyp + "0"));
-                T_Printer p = new T_Printer();
-                p = db.StockPrinterSetting(VarGeneral.UserID,_InvSetting.InvID);
-                if(p==null)
+                _item = (Item)CmbInvType.SelectedItem;
+                //  for (int iiCnt = 0; iiCnt < listInvSetting.Count; iiCnt++)
+                
+                    T_Printer p = db.StockPrinterSetting(VarGeneral.UserID, _item.Value);
+                try { _InvSetting = p.InvInfo; } catch { }
+                                  if(p==null)
                 {
                     p = new T_Printer();
                 }
-                p.nTyp = ntyp;
+                p.ISA4PaperType = RedButPaperA4.Checked;
+                p.ISCashierType = RedButCasher.Checked;
+                p.ISdirectPrinting = true;
+
                 p.hAs = double.Parse(VarGeneral.TString.TEmpty(txtBottM.Text ?? ""));
                 p.hYs = double.Parse(VarGeneral.TString.TEmpty(txtLeftM.Text ?? ""));
                 p.lnPg = double.Parse(VarGeneral.TString.TEmpty(txtLinePage.Text ?? ""));
@@ -538,16 +544,7 @@ namespace InvAcc.Forms
                 {
                     p.Orientation = 2;
                 }
-                try
-                {
-                    if (checkBox_WaiterAll.Visible && _InvSetting.InvID == 21)
-                    {
-                        _InvSetting.autoCommGaid = checkBox_WaiterAll.Checked;
-                    }
-                }
-                catch
-                {
-                }
+                
                 if (CmbPaperSize.Items.Count > 0)
                 {
                     if (!string.IsNullOrEmpty(CmbPrinter.Text))
@@ -583,59 +580,7 @@ namespace InvAcc.Forms
                 }
                else
                 {
-                    db.SubmitChanges();
-                }
-                _InvSetting.nTyp = ntyp;
-                _InvSetting.hAs = double.Parse(VarGeneral.TString.TEmpty(txtBottM.Text ?? ""));
-                _InvSetting.hYs = double.Parse(VarGeneral.TString.TEmpty(txtLeftM.Text ?? ""));
-                _InvSetting.lnPg = double.Parse(VarGeneral.TString.TEmpty(txtLinePage.Text ?? ""));
-                _InvSetting.hYm = double.Parse(VarGeneral.TString.TEmpty(txtRight.Text ?? ""));
-                _InvSetting.hAl = double.Parse(VarGeneral.TString.TEmpty(txtTopM.Text ?? ""));
-                _InvSetting.lnSpc = double.Parse(VarGeneral.TString.TEmpty(txtDistance.Text ?? ""));
-                _InvSetting.invGdADesc = textBox_CachierTxtA.Text;
-                _InvSetting.invGdEDesc = textBox_CachierTxtE.Text;
-                _InvSetting.defPrn = CmbPrinter.Text ?? "";
-                _InvSetting.DefLines = txtpageCount.Value;
-                _InvSetting.PrintCat = chk_Stoped.Value;
-                if (RButPortrait.Checked)
-                {
-                    _InvSetting.Orientation = 1;
-                }
-                else
-                {
-                    _InvSetting.Orientation = 2;
-                }
-                try
-                {
-                    if (checkBox_WaiterAll.Visible && _InvSetting.InvID == 21)
-                    {
-                        _InvSetting.autoCommGaid = checkBox_WaiterAll.Checked;
-                    }
-                }
-                catch
-                {
-                }
-                if (CmbPaperSize.Items.Count > 0)
-                {
-                    if (!string.IsNullOrEmpty(CmbPrinter.Text))
-                    {
-                        if (CmbPaperSize.SelectedIndex > 0)
-                        {
-                            _InvSetting.defSizePaper = CmbPaperSize.Text;
-                        }
-                        else
-                        {
-                            _InvSetting.defSizePaper = "";
-                        }
-                    }
-                    else
-                    {
-                        _InvSetting.defSizePaper = "";
-                    }
-                }
-                else
-                {
-                    _InvSetting.defSizePaper = "";
+                     
                 }
                 db.Log = VarGeneral.DebugLog;
                 db.SubmitChanges(ConflictMode.ContinueOnConflict);
@@ -661,6 +606,7 @@ namespace InvAcc.Forms
         {
             BindData();
         }
+        int defaultUser = VarGeneral.UserID;
         private void FMInvPrintSetup_Load(object sender, EventArgs e)
         {
         }
@@ -813,6 +759,16 @@ namespace InvAcc.Forms
             FMInvPrintSetup_Load(null, null);
             OnLoad(null);
             Refresh();
+        }
+
+        private void FMInvPrintSetup_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            VarGeneral.UserID = defaultUser;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

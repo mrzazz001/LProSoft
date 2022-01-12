@@ -14,8 +14,9 @@ namespace InvAcc.Forms
     public partial  class FrmEndYearsFiles : Form
     { void avs(int arln)
 
-{ 
- label29.Text=   (arln == 0 ? "  البيانات المقفلة                             The Data Locked  " : "  The Data Locked") ; textBox_EndsPath.Text=   (arln == 0 ? "  ....  " : "  ....") ; buttonX_Ok.Text=   (arln == 0 ? "  OK  موافـق  " : "  OK") ; buttonX_Close.Text=   (arln == 0 ? "  Close  إغلاق  " : "  Close") ;}
+{ // label29.Text=   (arln == 0 ? "  البيانات المقفلة                             The Data Locked  " : "  The Data Locked") ; textBox_EndsPath.Text=   (arln == 0 ? "  ....  " : "  ....") ; buttonX_Ok.Text=   (arln == 0 ? "  OK  موافـق  " : "  OK") ; buttonX_Close.Text=   (arln == 0 ? "  Close  إغلاق  " : "  Close") ;
+        
+        }
         private void langloads(object sender, EventArgs e)
         {
               avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
@@ -205,6 +206,11 @@ namespace InvAcc.Forms
                 VarGeneral.brNm = string.Empty;
                 Close();
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

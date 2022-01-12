@@ -824,7 +824,7 @@ namespace InvAcc.Forms
                 Button_Delete.Text = "حذف";
                 Button_Save.Text = "حفظ";
                 Button_Search.Text = "بحث";
-                buttonItem_Print.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "طباعة" : "عـرض");
+                buttonItem_Print.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "طباعة" : "عـرض");
                 Button_First.Tooltip = "السجل الاول";
                 Button_Last.Tooltip = "السجل الاخير";
                 Button_Next.Tooltip = "السجل التالي";
@@ -866,7 +866,7 @@ namespace InvAcc.Forms
                 Button_Delete.Text = "Delete";
                 Button_Save.Text = "Save";
                 Button_Search.Text = "Search";
-                buttonItem_Print.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "Print" : "Show");
+                buttonItem_Print.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "Print" : "Show");
                 Button_First.Tooltip = "First Record";
                 Button_Last.Tooltip = "Last Record";
                 Button_Next.Tooltip = "Next Record";

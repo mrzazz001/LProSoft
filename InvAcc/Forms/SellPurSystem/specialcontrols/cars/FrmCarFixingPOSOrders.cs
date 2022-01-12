@@ -1135,8 +1135,9 @@ namespace InvAcc.Forms
              ProShared. DroBoxSync.Frm_PrinterShow f = new  ProShared. DroBoxSync.Frm_PrinterShow(VarGeneral.InvTyp);
             f.TopMost = true;
             f.ShowDialog();
-            _InvSetting.InvpRINTERInfo.nTyp =  ProShared. DroBoxSync.Frm_PrinterShow.PLSetting;
-        }
+                dbInstance = null;
+            _InvSetting = db.StockPrinterSetting(VarGeneral.UserID, VarGeneral.InvTyp).InvInfo;
+            buttonItem_Print.Text = (_InvSetting.ISdirectPrinting ? (LangArEn == 0 ? "طباعة" : "Print") : (LangArEn == 0 ? "عرض" : "Preview"));}
         private void tableLayoutPanel5_Resize(object sender, EventArgs e)
         {
             TableLayoutOFALLControls.RowStyles[0].Height = th1;
@@ -2049,7 +2050,7 @@ namespace InvAcc.Forms
                 {
                     return;
                 }
-            if ((_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) != "2"))
+            if ((_InvSetting.InvpRINTERInfo.ISPOINTERType!=true))
                 {
                     RepShow _RepShow = new RepShow();
                     _RepShow.Tables = "T_INVDET LEFT OUTER JOIN T_INVHED ON T_INVDET.InvId = T_INVHED.InvHed_ID LEFT OUTER JOIN T_INVSETTING ON T_INVHED.InvTyp = T_INVSETTING.InvID  LEFT OUTER JOIN T_Curency ON T_INVHED.CurTyp = T_Curency.Curency_ID LEFT OUTER JOIN T_CstTbl ON T_INVHED.InvCstNo = T_CstTbl.Cst_ID LEFT OUTER JOIN T_Mndob ON T_INVHED.MndNo = T_Mndob.Mnd_ID LEFT OUTER JOIN T_Items ON T_INVDET.ItmNo = T_Items.Itm_No LEFT OUTER JOIN T_CATEGORY ON T_Items.ItmCat = T_CATEGORY.CAT_ID LEFT OUTER JOIN T_SYSSETTING ON T_INVHED.CompanyID = T_SYSSETTING.SYSSETTING_ID ";
@@ -2152,7 +2153,7 @@ namespace InvAcc.Forms
                     {
                         if (Program.iscarversion())
                         {
-                            if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                            if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                             {
                                 VarGeneral.CostCenterlbl = label15.Text.Replace(" :", "");
                                 VarGeneral.Mndoblbl = label18.Text.Replace(" :", "");
@@ -2180,7 +2181,7 @@ namespace InvAcc.Forms
                                     frm.Tag = LangArEn;
                                     frm.iscar = true;
                                     frm.iscarorder = true;
-                                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                                    if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                                     {
                                         frm.Repvalue = "CustQutation";
                                     }
@@ -2202,7 +2203,7 @@ namespace InvAcc.Forms
                                     VarGeneral.CostCenterlbl = label15.Text.Replace(" :", "");
                                     VarGeneral.Mndoblbl = label18.Text.Replace(" :", "");
                                     VarGeneral.vTitle = Text;
-                                    if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
+                                    if (_InvSetting.ISdirectPrinting)
                                     {
                                         frm._Proceess();
                                         return;
@@ -2218,7 +2219,7 @@ namespace InvAcc.Forms
                             frm.Repvalue = "CustQutation";
                             frm.RepCashier = "InvoiceCachier";
                             frm.Tag = LangArEn;
-                            if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                            if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                             {
                                 frm.Repvalue = "CustQutation";
                             }
@@ -2240,7 +2241,7 @@ namespace InvAcc.Forms
                             VarGeneral.CostCenterlbl = label15.Text.Replace(" :", "");
                             VarGeneral.Mndoblbl = label18.Text.Replace(" :", "");
                             VarGeneral.vTitle = Text;
-                            if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
+                            if (_InvSetting.ISdirectPrinting)
                             {
                                 frm._Proceess();
                                 return;
@@ -3101,7 +3102,7 @@ namespace InvAcc.Forms
                 Button_Search.Tooltip = "F4";
                 Button_PrintTable.Text = "عــرض";
                 Button_PrintTable.Tooltip = "F5";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "طباعة" : "عــرض");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "طباعة" : "عــرض");
                 buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "تصدير";
                 Button_ExportTable2.Tooltip = "F10";
@@ -3179,7 +3180,7 @@ namespace InvAcc.Forms
                 Button_Search.Tooltip = "F4";
                 Button_PrintTable.Text = "Show";
                 Button_PrintTable.Tooltip = "F5";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "Print" : "Show");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "Print" : "Show");
                 buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "Export";
                 Button_ExportTable2.Tooltip = "F10";

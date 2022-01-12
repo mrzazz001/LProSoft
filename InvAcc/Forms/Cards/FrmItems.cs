@@ -837,7 +837,7 @@ void ArbEng()
                 Button_Save.Tooltip = "F2";
                 Button_Search.Tooltip = "F4";
                 groupPanel_Inv.TitleText = "منع الصنف في فاتورة";
-                Button_PrintTable.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "طباعة" : "عــرض");
+                Button_PrintTable.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "طباعة" : "عــرض");
                 Button_PrintTable.Tooltip = "F5";
                 Button_ExportTable2.Text = "تصدير";
                 Button_ExportTable2.Tooltip = "F10";
@@ -935,7 +935,7 @@ void ArbEng()
                 Button_Save.Tooltip = "F2";
                 Button_Search.Tooltip = "F4";
                 groupPanel_Inv.TitleText = "Prevent product in the Invoice";
-                Button_PrintTable.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "Print" : "Show");
+                Button_PrintTable.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "Print" : "Show");
                 Button_PrintTable.Tooltip = "F5";
                 Button_ExportTable2.Text = "Export";
                 Button_ExportTable2.Tooltip = "F10";
@@ -5567,7 +5567,7 @@ void ArbEng()
         private void PrintSet()
         {
             string _PrinterName = prnt_doc.PrinterSettings.PrinterName;
-            prnt_doc.PrinterSettings.PrinterName = _InvSetting.InvpRINTERInfo.defPrn;
+            prnt_doc.PrinterSettings.PrinterName = _InvSetting.defPrn;
             if (!prnt_doc.PrinterSettings.IsValid)
             {
                 prnt_doc.PrinterSettings.PrinterName = _PrinterName;
@@ -5620,11 +5620,11 @@ void ArbEng()
             prnt_prev.MdiParent = base.MdiParent;
             PrintDialog PrintDialog1 = new PrintDialog();
             printDialog1.Document = prnt_doc;
-            T_INVSETTING _InvSetting = new T_INVSETTING();
-            _InvSetting = db.StockInvSetting( 22);
+            T_Printer _InvSetting = new T_Printer();
+            _InvSetting = db.StockPrinterSetting(VarGeneral.UserID, 22);
             try
             {
-                if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
+                if (_InvSetting.DefLines.Value > 0)
                 {
                     if (_InvSetting.InvTypA4 == "1")
                     {
@@ -5646,7 +5646,7 @@ void ArbEng()
             }
             try
             {
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
+                if (_InvSetting.ISdirectPrinting)
                 {
                     if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 55))
                     {
@@ -5684,14 +5684,14 @@ void ArbEng()
             try
             {
                 e.PageSettings.Margins.Bottom = 0;
-                e.PageSettings.Margins.Top = Convert.ToInt32(_InvSetting.InvpRINTERInfo.hAl);
-                e.PageSettings.Margins.Left = Convert.ToInt32(_InvSetting.InvpRINTERInfo.hYs);
+                e.PageSettings.Margins.Top = Convert.ToInt32(_InvSetting.hAl);
+                e.PageSettings.Margins.Left = Convert.ToInt32(_InvSetting.hYs);
                 e.PageSettings.Margins.Right = 0;
                 try
                 {
                     if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 55))
                     {
-                        e.PageSettings.PrinterSettings.Copies = short.Parse(_InvSetting.InvpRINTERInfo.DefLines.Value.ToString());
+                        e.PageSettings.PrinterSettings.Copies = short.Parse(_InvSetting.DefLines.Value.ToString());
                     }
                 }
                 catch
@@ -5714,8 +5714,8 @@ void ArbEng()
                 double _isCols = 0.0;
                 float _Row = 0f;
                 float _Col = 0f;
-                double _PageLine = _InvSetting.InvpRINTERInfo.lnPg.Value;
-                double _LineSp = _InvSetting.InvpRINTERInfo.lnSpc.Value;
+                double _PageLine = 1;
+                double _LineSp = _InvSetting.lnSpc.Value;
                 StringFormat strformat = new StringFormat((StringFormatFlags)0, 1);
                 for (int iiRnt = 0; (double)iiRnt < _PageLine; iiRnt++)
                 {
@@ -5829,9 +5829,9 @@ void ArbEng()
                                 }
                             }
                         }
-                        _isCols = _isCols + (double)_InvSetting.InvNum1.Value + _InvSetting.InvpRINTERInfo.hYm.Value;
+                        _isCols = _isCols + (double)_InvSetting.InvNum1.Value + _InvSetting.hYm.Value;
                     }
-                    _isRows = _isRows + (double)_InvSetting.InvNum.Value + _InvSetting.InvpRINTERInfo.hAs.Value;
+                    _isRows = _isRows + (double)_InvSetting.InvNum.Value + _InvSetting.hAs.Value;
                 }
                 CountPage++;
                 if (CountPage == e.PageSettings.PrinterSettings.Copies)
@@ -5903,11 +5903,11 @@ void ArbEng()
             prnt_prev.MdiParent = base.MdiParent;
             PrintDialog PrintDialog1 = new PrintDialog();
             printDialog1.Document = prnt_doc;
-            T_INVSETTING _InvSetting = new T_INVSETTING();
-            _InvSetting = db.StockInvSetting( 22);
+            T_Printer _InvSetting = new T_Printer();
+            _InvSetting = db.StockPrinterSetting(VarGeneral.UserID, 22);
             try
             {
-                if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
+                if (_InvSetting.DefLines.Value > 0)
                 {
                     if (_InvSetting.InvTypA4 == "1")
                     {
@@ -5929,7 +5929,7 @@ void ArbEng()
             }
             try
             {
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
+                if (_InvSetting.ISdirectPrinting)
                 {
                     if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 55))
                     {
@@ -5997,7 +5997,7 @@ void ArbEng()
             _InvSetting = db.StockInvSetting( 22);
             try
             {
-                if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
+                if (_InvSetting.DefLines.Value > 0)
                 {
                     if (_InvSetting.InvTypA4 == "1")
                     {
@@ -6019,7 +6019,7 @@ void ArbEng()
             }
             try
             {
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
+                if (_InvSetting.ISdirectPrinting)
                 {
                     if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 55))
                     {
@@ -6087,7 +6087,7 @@ void ArbEng()
             _InvSetting = db.StockInvSetting( 22);
             try
             {
-                if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
+                if (_InvSetting.DefLines.Value > 0)
                 {
                     if (_InvSetting.InvTypA4 == "1")
                     {
@@ -6109,7 +6109,7 @@ void ArbEng()
             }
             try
             {
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
+                if (_InvSetting.ISdirectPrinting)
                 {
                     if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 55))
                     {
@@ -6177,7 +6177,7 @@ void ArbEng()
             _InvSetting = db.StockInvSetting( 22);
             try
             {
-                if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
+                if (_InvSetting.DefLines.Value > 0)
                 {
                     if (_InvSetting.InvTypA4 == "1")
                     {
@@ -6199,7 +6199,7 @@ void ArbEng()
             }
             try
             {
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1")
+                if (_InvSetting.ISdirectPrinting)
                 {
                     if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 55))
                     {

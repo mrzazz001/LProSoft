@@ -2162,7 +2162,7 @@ namespace InvAcc.Forms
                 Button_Delete.Tooltip = "F3";
                 Button_Save.Tooltip = "F2";
                 Button_Search.Tooltip = "F4";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "طباعة" : "عــرض");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "طباعة" : "عــرض");
                 buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "تصدير";
                 Button_ExportTable2.Tooltip = "F10";
@@ -2202,7 +2202,7 @@ namespace InvAcc.Forms
                 Button_Delete.Tooltip = "F3";
                 Button_Save.Tooltip = "F2";
                 Button_Search.Tooltip = "F4";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "Print" : "Show");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "Print" : "Show");
                 buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "Export";
                 Button_ExportTable2.Tooltip = "F10";

@@ -654,7 +654,7 @@ namespace InvAcc.Forms
                             }
                             else
                             {
-                                obj2 = (VarGeneral.GeneralPrinter.nTyp_Setting.Substring(1, 1) == "1" ? string.Concat(" case when T_INVHED.InvTyp =2 or T_INVHED.InvTyp =4 or T_INVHED.InvTyp = 9 or T_INVHED.InvTyp =14 then 0 else (Round(T_INVHED.InvNetLocCur - T_INVHED.InvCost,", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2), ")) end as GadeNo ") : " T_INVHED.GadeNo ");
+                                obj2 = (VarGeneral.GeneralPrinter.ISCashierType ? string.Concat(" case when T_INVHED.InvTyp =2 or T_INVHED.InvTyp =4 or T_INVHED.InvTyp = 9 or T_INVHED.InvTyp =14 then 0 else (Round(T_INVHED.InvNetLocCur - T_INVHED.InvCost,", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2), ")) end as GadeNo ") : " T_INVHED.GadeNo ");
                             }
                             objArray[5] = obj2;
                             text[6] = ",T_INVHED.CusVenNo,T_INVHED.CusVenNm,T_SYSSETTING.LogImg,T_SYSSETTING.Calendr ,T_INVHED.SalsManNo,((case when IsDisUse1 = 1 then T_INVHED.InvValGaidDis else T_INVHED.InvDisVal end) + T_INVHED.DesPointsValue) as InvDisVal,T_INVHED.InvDisVal as InvDisValOnly,T_INVHED.DesPointsValue,T_INVHED.DesPointsValueLocCur,T_INVHED.PointsCount,T_INVHED.IsPoints,'' as UsrNamA,''as UsrNamE,Round(case when T_INVHED.IsTaxUse = 1 and T_INVHED.InvAddTax > 0 then T_INVHED.InvAddTax else  0 end ,";
@@ -703,7 +703,7 @@ namespace InvAcc.Forms
                             }
                             else
                             {
-                                obj3 = (VarGeneral.GeneralPrinter.nTyp_Setting.Substring(1, 1) == "1" ? string.Concat(" case when T_INVHED.InvTyp =2 or T_INVHED.InvTyp =4 or T_INVHED.InvTyp = 9 or T_INVHED.InvTyp =14 then 0 else (Round(T_INVHED.InvNetLocCur - T_INVHED.InvCost,", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2), ")) end as GadeNo ") : " T_INVHED.GadeNo ");
+                                obj3 = (VarGeneral.GeneralPrinter.ISCashierType ? string.Concat(" case when T_INVHED.InvTyp =2 or T_INVHED.InvTyp =4 or T_INVHED.InvTyp = 9 or T_INVHED.InvTyp =14 then 0 else (Round(T_INVHED.InvNetLocCur - T_INVHED.InvCost,", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2), ")) end as GadeNo ") : " T_INVHED.GadeNo ");
                             }
                             objArray1[5] = obj3;
                             text[6] = ",T_INVHED.CusVenNo,T_INVHED.CusVenNm,T_SYSSETTING.LogImg,T_SYSSETTING.Calendr ,T_INVHED.SalsManNo,((case when IsDisUse1 = 1 then T_INVHED.InvValGaidDis else T_INVHED.InvDisVal end) + T_INVHED.DesPointsValue) as InvDisVal,T_INVHED.InvDisVal as InvDisValOnly,T_INVHED.DesPointsValue,T_INVHED.DesPointsValueLocCur,T_INVHED.PointsCount,T_INVHED.IsPoints,'' as UsrNamA,''as UsrNamE,Round(case when T_INVHED.IsTaxUse = 1 and T_INVHED.InvAddTax > 0 then T_INVHED.InvAddTax else  0 end ,";
@@ -753,7 +753,7 @@ namespace InvAcc.Forms
                         }
                         else
                         {
-                            obj = (VarGeneral.GeneralPrinter.nTyp_Setting.Substring(1, 1) == "1" ? string.Concat(" case when T_INVHED.InvTyp =2 or T_INVHED.InvTyp =4 or T_INVHED.InvTyp = 9 or T_INVHED.InvTyp =14 then 0 else (Round(T_INVHED.InvNetLocCur - T_INVHED.InvCost,", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2), ")) end as GadeNo ") : " T_INVHED.GadeNo ");
+                            obj = (VarGeneral.GeneralPrinter.ISCashierType ? string.Concat(" case when T_INVHED.InvTyp =2 or T_INVHED.InvTyp =4 or T_INVHED.InvTyp = 9 or T_INVHED.InvTyp =14 then 0 else (Round(T_INVHED.InvNetLocCur - T_INVHED.InvCost,", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2), ")) end as GadeNo ") : " T_INVHED.GadeNo ");
                         }
                         objArray2[5] = obj;
                         text[6] = ",T_INVHED.CusVenNo,T_INVHED.CusVenNm,T_SYSSETTING.LogImg ,T_SYSSETTING.Calendr,T_INVHED.SalsManNo,((case when IsDisUse1 = 1 then T_INVHED.InvValGaidDis else T_INVHED.InvDisVal end) + T_INVHED.DesPointsValue) as InvDisVal,T_INVHED.InvDisVal as InvDisValOnly,T_INVHED.DesPointsValue,T_INVHED.DesPointsValueLocCur,T_INVHED.PointsCount,T_INVHED.IsPoints,'' as UsrNamA,''as UsrNamE,Round(case when T_INVHED.IsTaxUse = 1 and T_INVHED.InvAddTax > 0 then T_INVHED.InvAddTax else  0 end ,";
@@ -802,7 +802,7 @@ namespace InvAcc.Forms
                         }
                         else
                         {
-                            obj1 = (VarGeneral.GeneralPrinter.nTyp_Setting.Substring(1, 1) == "1" ? string.Concat(" case when T_INVHED.InvTyp =2 or T_INVHED.InvTyp =4 or T_INVHED.InvTyp = 9 or T_INVHED.InvTyp =14 then 0 else (Round(T_INVHED.InvNetLocCur - T_INVHED.InvCost,", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2), ")) end as GadeNo ") : " T_INVHED.GadeNo ");
+                            obj1 = (VarGeneral.GeneralPrinter.ISCashierType ? string.Concat(" case when T_INVHED.InvTyp =2 or T_INVHED.InvTyp =4 or T_INVHED.InvTyp = 9 or T_INVHED.InvTyp =14 then 0 else (Round(T_INVHED.InvNetLocCur - T_INVHED.InvCost,", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2), ")) end as GadeNo ") : " T_INVHED.GadeNo ");
                         }
                         objArray3[5] = obj1;
                         text[6] = ",T_INVHED.CusVenNo,T_INVHED.CusVenNm,T_SYSSETTING.LogImg ,T_SYSSETTING.Calendr,T_INVHED.SalsManNo,((case when IsDisUse1 = 1 then T_INVHED.InvValGaidDis else T_INVHED.InvDisVal end) + T_INVHED.DesPointsValue) as InvDisVal,T_INVHED.InvDisVal as InvDisValOnly,T_INVHED.DesPointsValue,T_INVHED.DesPointsValueLocCur,T_INVHED.PointsCount,T_INVHED.IsPoints,'' as UsrNamA,''as UsrNamE,Round(case when T_INVHED.IsTaxUse = 1 and T_INVHED.InvAddTax > 0 then T_INVHED.InvAddTax else  0 end ,";
@@ -954,6 +954,7 @@ namespace InvAcc.Forms
                                     }
                                 }
                             }
+                            VarGeneral.IsGeneralUsed = true;
                            // Program.createdb_BARACODE(VarGeneral.RepData.Tables[0], "ReportMultiTable");
                             FrmReportsViewer frm = new FrmReportsViewer()
                             {
@@ -1046,6 +1047,7 @@ namespace InvAcc.Forms
                             }
                             frm.TopMost = true;
                             frm.ShowDialog();
+                            VarGeneral.IsGeneralUsed = false;
                         }
                         catch (Exception exception1)
                         {
@@ -2099,7 +2101,7 @@ namespace InvAcc.Forms
             if (this.LangArEn != 0)
             {
                 this.ButExit.Text = "Exit Esc";
-                this.ButOk.Text = (VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0" ? "Print F5" : "Show F5");
+                this.ButOk.Text = (VarGeneral.GeneralPrinter.ISdirectPrinting ? "Print F5" : "Show F5");
                 this.groupBox3.Text = "Quantity";
                 this.groupBox_Date.Text = "Date of inactivity";
                 this.label1.Text = "From :";
@@ -2119,7 +2121,7 @@ namespace InvAcc.Forms
             else
             {
                 this.ButExit.Text = "خــــروج Esc";
-                this.ButOk.Text = (VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0" ? "طبـــاعة F5" : "عــــرض F5");
+                this.ButOk.Text = (VarGeneral.GeneralPrinter.ISdirectPrinting ? "طبـــاعة F5" : "عــــرض F5");
                 this.groupBox3.Text = "حسب رقم الفاتورة";
                 this.groupBox_Date.Text = "حسب تاريخ الفاتورة";
                 this.label1.Text = "مـــــن :";

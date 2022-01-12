@@ -131,7 +131,7 @@ namespace InvAcc.Forms
             if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == "")
             {
                 ButExit.Text = "خــــروج Esc";
-                ButOk.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "طبـــاعة F5" : "عــــرض F5");
+                ButOk.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "طبـــاعة F5" : "عــــرض F5");
                 ButQuery.Text = "إستعلام";
                 Text = "بيانات الأصناف";
                 FlexHead.Cols[0].Caption = "رقم العقار";
@@ -157,7 +157,7 @@ namespace InvAcc.Forms
             else
             {
                 ButExit.Text = "Exit Esc";
-                ButOk.Text = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(2, 1) == "0") ? "Print F5" : "Show F5");
+                ButOk.Text = ((VarGeneral.GeneralPrinter.ISdirectPrinting) ? "Print F5" : "Show F5");
                 ButQuery.Text = "Enquiry";
                 Text = "بيانات الأصناف";
                 FlexHead.Cols[0].Caption = "Property No";

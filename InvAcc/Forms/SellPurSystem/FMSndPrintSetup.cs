@@ -250,7 +250,7 @@ namespace InvAcc.Forms
                     {
                         ChkPTable3.Checked = true;
                     }
-                    if (_InvSetting3.nTyp.Substring(1, 1) == "0")
+                    if (_InvSetting3.ISCashierType)
                     {
                         RedButPaperA4.Checked = false;
                         RedButCasher.Checked = true;
@@ -260,7 +260,7 @@ namespace InvAcc.Forms
                         RedButPaperA4.Checked = true;
                         RedButCasher.Checked = false;
                     }
-                    if (_InvSetting3.nTyp.Substring(2, 1) == "1")
+                    if (_InvSetting3.ISdirectPrinting)
                     {
                         checkBox_previewPrint3.Checked = false;
                     }

@@ -1128,7 +1128,7 @@ namespace InvAcc.Forms
                 {
                     frm.BarcodSts = false;
                 }
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(1, 1) == "1")
+                if (_InvSetting.InvpRINTERInfo.ISA4PaperType)
                 {
                     frm.Repvalue = "InvSalWtr";
                 }
@@ -1140,7 +1140,7 @@ namespace InvAcc.Forms
                 VarGeneral.Mndoblbl = label18.Text.Replace(" :", "");
                 VarGeneral.vTitle = Text;
                 VarGeneral.IsCashCredit = false;
-                if (_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1" || checkBoxItem_BarCode.Checked)
+                if (_InvSetting.ISdirectPrinting || checkBoxItem_BarCode.Checked)
                 {
                     frm._Proceess();
                     return;
@@ -2280,7 +2280,7 @@ namespace InvAcc.Forms
                 Button_Search.Tooltip = "F4";
                 Button_PrintTable.Text = "عــرض";
                 Button_PrintTable.Tooltip = "F5";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "طباعة" : "عــرض");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "طباعة" : "عــرض");
                 buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "تصدير";
                 Button_ExportTable2.Tooltip = "F10";
@@ -2355,7 +2355,7 @@ namespace InvAcc.Forms
                 Button_Search.Tooltip = "F4";
                 Button_PrintTable.Text = "Show";
                 Button_PrintTable.Tooltip = "F5";
-                buttonItem_Print.Text = ((_InvSetting.InvpRINTERInfo.nTyp.Substring(2, 1) == "1") ? "Print" : "Show");
+                buttonItem_Print.Text = ((_InvSetting.ISdirectPrinting) ? "Print" : "Show");
                 buttonItem_Print.Tooltip = "F5";
                 Button_ExportTable2.Text = "Export";
                 Button_ExportTable2.Tooltip = "F10";
