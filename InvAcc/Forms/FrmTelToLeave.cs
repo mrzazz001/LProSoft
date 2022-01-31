@@ -2938,7 +2938,7 @@ namespace InvAcc.Forms
 			_GdHead.gdMnd = null;
 			_GdHead.gdRcptID = (_GdHead.gdRcptID.HasValue ? _GdHead.gdRcptID.Value : 0.0);
 			_GdHead.gdTot = Text6.Value;
-			_GdHead.gdTp = (_GdHead.gdTp.HasValue ? _GdHead.gdTp.Value : 0);
+			_GdHead.gdTp = (_GdHead.gdTp!=0? _GdHead.gdTp : 0);
 			_GdHead.gdTyp = VarGeneral.InvTyp;
 			_GdHead.RefNo = "";
 			_GdHead.AdminLock = false;

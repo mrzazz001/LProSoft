@@ -107,7 +107,8 @@ namespace InvAcc.Forms.Eqr_Version.New
             if (frm.SerachNo != string.Empty)
             {
                 var q = (from i in db.T_Owners where i.Owner_No == int.Parse(frm.Serach_No) select i).FirstOrDefault();
-                int index = db.T_Owners.ToBindingList<T_Owner>().IndexOf(q);
+                int index = db.T_Owners.ToBindingList<T_Owner>()
+                    .IndexOf(q);
                 if (index != -1)
                 {
 

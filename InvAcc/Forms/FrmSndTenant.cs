@@ -1201,7 +1201,7 @@ namespace InvAcc.Forms
                 txtRemark.Text = value.T_GDDETs.FirstOrDefault().gdDes;
                 txtRemarkE.Text = value.T_GDDETs.FirstOrDefault().gdDesE;
                 txtContractNo.Text = value.T_TenantContract.ContractNo.ToString();
-                txtContractNo.Tag = value.gdTp.Value;
+                txtContractNo.Tag = value.gdTp;
                 try
                 {
                     txtEqarNo.Text = value.T_TenantContract.T_EqarsData.EqarNo.ToString();

@@ -1111,3 +1111,4 @@ GROUP BY fvc.InvTyp";
         }
     }
 }
+ 

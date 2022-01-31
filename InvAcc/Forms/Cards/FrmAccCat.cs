@@ -15,6 +15,8 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using Softgroup.NetResize;
+
 namespace InvAcc.Forms
 {
     public partial  class FrmAccCat : Form
@@ -89,7 +91,7 @@ namespace InvAcc.Forms
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
-        private void netResize1_AfterControlResize(object sender, Softgroup.NetResize.AfterControlResizeEventArgs e)
+        private void netResize1_AfterControlResize(object sender, AfterControlResizeEventArgs e)
         {
             if (e.Control.Name.Contains("ribbonBar_Tasks"))
             {

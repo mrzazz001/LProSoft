@@ -748,7 +748,7 @@ namespace InvAcc.Forms
             _GdHead2.gdMnd = null;
             _GdHead2.gdRcptID = (_GdHead2.gdRcptID.HasValue ? _GdHead2.gdRcptID.Value : 0.0);
             _GdHead2.gdTot = _val;
-            _GdHead2.gdTp = (_GdHead2.gdTp.HasValue ? _GdHead2.gdTp.Value : 0);
+            _GdHead2.gdTp = (_GdHead2.gdTp!=0? _GdHead2.gdTp : 0);
             _GdHead2.gdTyp = 15;
             _GdHead2.RefNo = "";
             _GdHead2.AdminLock = true;
@@ -1051,7 +1051,7 @@ namespace InvAcc.Forms
             _GdHead.gdMnd = null;
             _GdHead.gdRcptID = (_GdHead.gdRcptID.HasValue ? _GdHead.gdRcptID.Value : 0.0);
             _GdHead.gdTot = Label17.Value;
-            _GdHead.gdTp = (_GdHead.gdTp.HasValue ? _GdHead.gdTp.Value : 0);
+            _GdHead.gdTp = (_GdHead.gdTp!=0? _GdHead.gdTp : 0);
             _GdHead.gdTyp = VarGeneral.InvTyp;
             _GdHead.RefNo = "";
             _GdHead.AdminLock = false;

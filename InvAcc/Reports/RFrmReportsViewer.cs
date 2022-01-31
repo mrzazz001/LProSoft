@@ -13785,6 +13785,7 @@ namespace InvAcc.Forms
                     catch
                     {
                     }
+                    Program.min();
                     try
                     {
                         rpt.SetParameterValue("IsCashCredit", VarGeneral.IsCashCredit ? "1" : "0");
@@ -14657,7 +14658,16 @@ namespace InvAcc.Forms
 
         private void STEP_Cachier_1()
         {
+            Program.min();
             T_Printer _InvSetting = new T_Printer();
+            for (int i = 0; i < VarGeneral.RepData.Tables[0].Rows.Count; i++)
+            {
+                if (VarGeneral.RepData.Tables[0].Rows[0][53].ToString() == "")
+                {
+
+                }
+            }
+
             _InvSetting = db.StockPrinterSetting(VarGeneral.UserID, VarGeneral.InvTyp);
             if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
             {

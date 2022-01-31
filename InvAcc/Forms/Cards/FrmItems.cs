@@ -5582,96 +5582,6 @@ void ArbEng()
                 prnt_doc.Print();
             }
         }
-        private void txtBarCode1_ButtonCustomClick(object sender, EventArgs e)
-        {
-            if (!(txtBarCode1.Text != string.Empty))
-            {
-                return;
-            }
-            VarGeneral.BarcodCopies = 0;
-            c1BarCode1.Text = txtBarCode1.Text;
-            c1BarCode1.Tag = textbox_SelPri1.Text + " " + txtCurr.Text;
-            try
-            {
-                if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 60) && textBox_TaxSales.Value > 0.0 && !string.IsNullOrEmpty(textbox_SelPri1.Text))
-                {
-                    c1BarCode1.Tag = Math.Round(double.Parse(VarGeneral.TString.TEmpty(textbox_SelPri1.Text)) + double.Parse(textbox_SelPri1.Text) * (textBox_TaxSales.Value / 100.0), VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
-                    if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 78))
-                    {
-                        c1BarCode1.Tag = Math.Round(double.Parse(c1BarCode1.Tag.ToString()), 0).ToString();
-                    }
-                    C1BarCode c1BarCode = c1BarCode1;
-                    c1BarCode.Tag = string.Concat(c1BarCode.Tag, " ", txtCurr.Text);
-                }
-            }
-            catch
-            {
-                c1BarCode1.Tag = textbox_SelPri1.Text + " " + txtCurr.Text;
-            }
-            PrintSet();
-            prnt_prev = new PrintPreviewDialog();
-            ToolStrip toollstr = (ToolStrip)prnt_prev.Controls["toolStrip1"];
-            toollstr.Items.RemoveAt(0);
-            toollstr.Items.Add("Print", null, PrintForm_Click);
-            prnt_prev.Controls.Add(toollstr);
-            prnt_prev.Document = prnt_doc;
-            prnt_prev.ShowIcon = false;
-            prnt_prev.AllowTransparency = true;
-            prnt_prev.MdiParent = base.MdiParent;
-            PrintDialog PrintDialog1 = new PrintDialog();
-            printDialog1.Document = prnt_doc;
-            T_Printer _InvSetting = new T_Printer();
-            _InvSetting = db.StockPrinterSetting(VarGeneral.UserID, 22);
-            try
-            {
-                if (_InvSetting.DefLines.Value > 0)
-                {
-                    if (_InvSetting.InvTypA4 == "1")
-                    {
-                        prnt_doc.PrinterSettings.Collate = true;
-                    }
-                    else
-                    {
-                        prnt_doc.PrinterSettings.Collate = false;
-                    }
-                }
-                else
-                {
-                    prnt_doc.PrinterSettings.Collate = false;
-                }
-            }
-            catch
-            {
-                prnt_doc.PrinterSettings.Collate = false;
-            }
-            try
-            {
-                if (_InvSetting.ISdirectPrinting)
-                {
-                    if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 55))
-                    {
-                        pdi.Document = new PrintDocument();
-                        if (pdi.ShowDialog() == DialogResult.OK)
-                        {
-                            prnt_doc.PrinterSettings = pdi.PrinterSettings;
-                            prnt_doc.Print();
-                        }
-                    }
-                    else
-                    {
-                        prnt_doc.Print();
-                    }
-                }
-                else
-                {
-                    prnt_prev.TopMost = true;
-                    prnt_prev.ShowDialog();
-                }
-            }
-            catch
-            {
-            }
-        }
         private void prnt_prev_FormClosed(object sender, FormClosedEventArgs e)
         {
         }
@@ -5865,6 +5775,97 @@ void ArbEng()
                 }
             }
         }
+        private void txtBarCode1_ButtonCustomClick(object sender, EventArgs e)
+        {
+            if (!(txtBarCode1.Text != string.Empty))
+            {
+                return;
+            }
+            VarGeneral.BarcodCopies = 0;
+            c1BarCode1.Text = txtBarCode1.Text;
+            c1BarCode1.Tag = textbox_SelPri1.Text + " " + txtCurr.Text;
+            try
+            {
+                if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 60) && textBox_TaxSales.Value > 0.0 && !string.IsNullOrEmpty(textbox_SelPri1.Text))
+                {
+                    c1BarCode1.Tag = Math.Round(double.Parse(VarGeneral.TString.TEmpty(textbox_SelPri1.Text)) + double.Parse(textbox_SelPri1.Text) * (textBox_TaxSales.Value / 100.0), VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
+                    if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 78))
+                    {
+                        c1BarCode1.Tag = Math.Round(double.Parse(c1BarCode1.Tag.ToString()), 0).ToString();
+                    }
+                    C1BarCode c1BarCode = c1BarCode1;
+                    c1BarCode.Tag = string.Concat(c1BarCode.Tag, " ", txtCurr.Text);
+                }
+            }
+            catch
+            {
+                c1BarCode1.Tag = textbox_SelPri1.Text + " " + txtCurr.Text;
+            }
+            PrintSet();
+            prnt_prev = new PrintPreviewDialog();
+            ToolStrip toollstr = (ToolStrip)prnt_prev.Controls["toolStrip1"];
+            toollstr.Items.RemoveAt(0);
+            toollstr.Items.Add("Print", null, PrintForm_Click);
+            prnt_prev.Controls.Add(toollstr);
+            prnt_prev.Document = prnt_doc;
+            prnt_prev.ShowIcon = false;
+            prnt_prev.AllowTransparency = true;
+            prnt_prev.MdiParent = base.MdiParent;
+            PrintDialog PrintDialog1 = new PrintDialog();
+            printDialog1.Document = prnt_doc;
+            T_INVSETTING _InvSetting = new T_INVSETTING();
+            _InvSetting = db.StockInvSetting(22);
+            try
+            {
+                if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
+                {
+                    if (_InvSetting.InvTypA4 == "1")
+                    {
+                        prnt_doc.PrinterSettings.Collate = true;
+                    }
+                    else
+                    {
+                        prnt_doc.PrinterSettings.Collate = false;
+                    }
+                }
+                else
+                {
+                    prnt_doc.PrinterSettings.Collate = false;
+                }
+            }
+            catch
+            {
+                prnt_doc.PrinterSettings.Collate = false;
+            }
+            try
+            {
+                if (_InvSetting.InvpRINTERInfo.ISdirectPrinting)
+                {
+                    if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 55))
+                    {
+                        pdi.Document = new PrintDocument();
+                        if (pdi.ShowDialog() == DialogResult.OK)
+                        {
+                            prnt_doc.PrinterSettings = pdi.PrinterSettings;
+                            prnt_doc.Print();
+                        }
+                    }
+                    else
+                    {
+                        prnt_doc.Print();
+                    }
+                }
+                else
+                {
+                    prnt_prev.TopMost = true;
+                    prnt_prev.ShowDialog();
+                }
+            }
+            catch
+            {
+            }
+        }
+
         private void txtBarCode2_ButtonCustomClick(object sender, EventArgs e)
         {
             if (!(txtBarCode2.Text != string.Empty))
@@ -5903,11 +5904,11 @@ void ArbEng()
             prnt_prev.MdiParent = base.MdiParent;
             PrintDialog PrintDialog1 = new PrintDialog();
             printDialog1.Document = prnt_doc;
-            T_Printer _InvSetting = new T_Printer();
-            _InvSetting = db.StockPrinterSetting(VarGeneral.UserID, 22);
+            T_INVSETTING _InvSetting = new T_INVSETTING();
+            _InvSetting = db.StockInvSetting(22);
             try
             {
-                if (_InvSetting.DefLines.Value > 0)
+                if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
                 {
                     if (_InvSetting.InvTypA4 == "1")
                     {
@@ -5929,7 +5930,7 @@ void ArbEng()
             }
             try
             {
-                if (_InvSetting.ISdirectPrinting)
+                if (_InvSetting.InvpRINTERInfo.ISdirectPrinting)
                 {
                     if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 55))
                     {
@@ -5994,10 +5995,10 @@ void ArbEng()
             PrintDialog PrintDialog1 = new PrintDialog();
             printDialog1.Document = prnt_doc;
             T_INVSETTING _InvSetting = new T_INVSETTING();
-            _InvSetting = db.StockInvSetting( 22);
+            _InvSetting = db.StockInvSetting(22);
             try
             {
-                if (_InvSetting.DefLines.Value > 0)
+                if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
                 {
                     if (_InvSetting.InvTypA4 == "1")
                     {
@@ -6019,7 +6020,7 @@ void ArbEng()
             }
             try
             {
-                if (_InvSetting.ISdirectPrinting)
+                if (_InvSetting.InvpRINTERInfo.ISdirectPrinting)
                 {
                     if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 55))
                     {
@@ -6084,10 +6085,10 @@ void ArbEng()
             PrintDialog PrintDialog1 = new PrintDialog();
             printDialog1.Document = prnt_doc;
             T_INVSETTING _InvSetting = new T_INVSETTING();
-            _InvSetting = db.StockInvSetting( 22);
+            _InvSetting = db.StockInvSetting(22);
             try
             {
-                if (_InvSetting.DefLines.Value > 0)
+                if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
                 {
                     if (_InvSetting.InvTypA4 == "1")
                     {
@@ -6109,7 +6110,7 @@ void ArbEng()
             }
             try
             {
-                if (_InvSetting.ISdirectPrinting)
+                if (_InvSetting.InvpRINTERInfo.ISdirectPrinting)
                 {
                     if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 55))
                     {
@@ -6174,10 +6175,10 @@ void ArbEng()
             PrintDialog PrintDialog1 = new PrintDialog();
             printDialog1.Document = prnt_doc;
             T_INVSETTING _InvSetting = new T_INVSETTING();
-            _InvSetting = db.StockInvSetting( 22);
+            _InvSetting = db.StockInvSetting(22);
             try
             {
-                if (_InvSetting.DefLines.Value > 0)
+                if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
                 {
                     if (_InvSetting.InvTypA4 == "1")
                     {
@@ -6199,7 +6200,7 @@ void ArbEng()
             }
             try
             {
-                if (_InvSetting.ISdirectPrinting)
+                if (_InvSetting.InvpRINTERInfo.ISdirectPrinting)
                 {
                     if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 55))
                     {

@@ -2,7 +2,7 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.DotNetBar.SuperGrid.Style;
-using ProShared.GeneralM;using ProShared;
+using ProShared.GeneralM; 
 using ProShared.Stock_Data;
 using SSSLanguage;
 using System;

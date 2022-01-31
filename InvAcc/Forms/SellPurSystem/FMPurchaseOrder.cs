@@ -5190,7 +5190,7 @@ namespace InvAcc.Forms
             }
             _GdHead.gdRcptID = (_GdHead.gdRcptID.HasValue ? _GdHead.gdRcptID.Value : 0.0);
             _GdHead.gdTot = txtDueAmountLoc.Value;
-            _GdHead.gdTp = (_GdHead.gdTp.HasValue ? _GdHead.gdTp.Value : 0);
+            _GdHead.gdTp = (_GdHead.gdTp!=0? _GdHead.gdTp : 0);
             _GdHead.gdTyp = VarGeneral.InvTyp;
             _GdHead.RefNo = txtRef.Text;
             _GdHead.AdminLock = switchButton_Lock.Value;
@@ -5226,7 +5226,7 @@ namespace InvAcc.Forms
             }
             _GdHeadCostDis.gdRcptID = (_GdHeadCostDis.gdRcptID.HasValue ? _GdHeadCostDis.gdRcptID.Value : 0.0);
             _GdHeadCostDis.gdTot = txtTotDis.Value;
-            _GdHeadCostDis.gdTp = (_GdHeadCostDis.gdTp.HasValue ? _GdHeadCostDis.gdTp.Value : 0);
+            _GdHeadCostDis.gdTp = (_GdHeadCostDis.gdTp!=0? _GdHeadCostDis.gdTp : 0);
             _GdHeadCostDis.gdTyp = VarGeneral.InvTyp;
             _GdHeadCostDis.RefNo = txtRef.Text;
             _GdHeadCostDis.DATE_MODIFIED = DateTime.Now;
@@ -5261,7 +5261,7 @@ namespace InvAcc.Forms
             }
             _GdHeadCostTax.gdRcptID = (_GdHeadCostTax.gdRcptID.HasValue ? _GdHeadCostTax.gdRcptID.Value : 0.0);
             _GdHeadCostTax.gdTot = txtTotTax.Value;
-            _GdHeadCostTax.gdTp = (_GdHeadCostTax.gdTp.HasValue ? _GdHeadCostTax.gdTp.Value : 0);
+            _GdHeadCostTax.gdTp = (_GdHeadCostTax.gdTp!=0? _GdHeadCostTax.gdTp : 0);
             _GdHeadCostTax.gdTyp = VarGeneral.InvTyp;
             _GdHeadCostTax.RefNo = txtRef.Text;
             _GdHeadCostTax.DATE_MODIFIED = DateTime.Now;

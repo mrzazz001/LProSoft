@@ -206,7 +206,7 @@ namespace InvAcc.Forms
                             }
                             _GdHead.gdRcptID = (_GdHead.gdRcptID.HasValue ? _GdHead.gdRcptID.Value : 0.0);
                             _GdHead.gdTot = q[c2].InvNetLocCur.Value;
-                            _GdHead.gdTp = (_GdHead.gdTp.HasValue ? _GdHead.gdTp.Value : 0);
+                            _GdHead.gdTp = (_GdHead.gdTp!=0? _GdHead.gdTp : 0);
                             _GdHead.gdTyp = VarGeneral.InvTyp;
                             _GdHead.RefNo = q[c2].RefNo;
                             _GdHead.AdminLock = q[c2].AdminLock.Value;

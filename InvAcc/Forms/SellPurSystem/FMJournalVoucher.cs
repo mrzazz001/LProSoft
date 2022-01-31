@@ -1703,7 +1703,7 @@ namespace InvAcc.Forms
             }
             data_this.gdRcptID = (data_this.gdRcptID.HasValue ? data_this.gdRcptID.Value : 0.0);
             data_this.gdTot = txtTotalCredit.Value;
-            data_this.gdTp = (data_this.gdTp.HasValue ? data_this.gdTp.Value : 0);
+            data_this.gdTp = (data_this.gdTp!=0? data_this.gdTp : 0);
             data_this.gdTyp = 11;
             data_this.RefNo = txtRef.Text;
             data_this.salMonth = "";

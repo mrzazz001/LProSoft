@@ -490,7 +490,7 @@ namespace InvAcc.Forms
                                     {
                                         value = 0;
                                     }
-                                    tGDHEAD.gdTp = new int?(value);
+                                    tGDHEAD.gdTp = (value);
                                     data_this.gdTyp = new int?(11);
                                     data_this.gdUser = this.CmbUser.SelectedValue.ToString();
                                     data_this.gdUserNam = this.CmbUser.Text;

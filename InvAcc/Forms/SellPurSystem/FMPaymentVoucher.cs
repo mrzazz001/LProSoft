@@ -1654,7 +1654,7 @@ namespace InvAcc.Forms
             }
             data_this.gdRcptID = (data_this.gdRcptID.HasValue ? data_this.gdRcptID.Value : 0.0);
             data_this.gdTot = txtTotalDebit.Value;
-            data_this.gdTp = (data_this.gdTp.HasValue ? data_this.gdTp.Value : 0);
+            data_this.gdTp = (data_this.gdTp!=0? data_this.gdTp : 0);
             data_this.gdTyp = 13;
             data_this.RefNo = txtRef.Text;
             if (!string.IsNullOrEmpty(txtInvNo.Text))

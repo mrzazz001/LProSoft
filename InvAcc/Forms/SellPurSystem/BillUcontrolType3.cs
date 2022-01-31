@@ -201,7 +201,7 @@ namespace InvAcc
                 k.Lin = i.Lin;
                 k.recptNo = i.recptNo;
                 k.recptNo = i.recptTyp;
-                db.T_TempGDDET.InsertOnSubmit(k);
+                db.T_TempGDDETs.InsertOnSubmit(k);
 
             }
             db.SubmitChanges();
@@ -707,7 +707,7 @@ repositoryItemDateEdit1.Properties.Mask.EditMask = "dd/MM/yyyy";
             }
             _GdHeadCostTax.gdRcptID = (_GdHeadCostTax.gdRcptID.HasValue ? _GdHeadCostTax.gdRcptID.Value : 0.0);
             _GdHeadCostTax.gdTot = txtTotTax.Value;
-            _GdHeadCostTax.gdTp = (_GdHeadCostTax.gdTp.HasValue ? _GdHeadCostTax.gdTp.Value : 0);
+            _GdHeadCostTax.gdTp = (_GdHeadCostTax.gdTp!=0? _GdHeadCostTax.gdTp : 0);
             _GdHeadCostTax.gdTyp = VarGeneral.InvTyp;
             _GdHeadCostTax.RefNo = txtRefText;
             _GdHeadCostTax.DATE_MODIFIED = DateTime.Now;
@@ -1062,7 +1062,7 @@ repositoryItemDateEdit1.Properties.Mask.EditMask = "dd/MM/yyyy";
             }
             currentGH.gdRcptID = (currentGH.gdRcptID.HasValue ? currentGH.gdRcptID.Value : 0.0);
             currentGH.gdTot = txtDueAmountLocValue;
-            currentGH.gdTp = (currentGH.gdTp.HasValue ? currentGH.gdTp.Value : 0);
+            currentGH.gdTp = (currentGH.gdTp!=0? currentGH.gdTp : 0);
             currentGH.gdTyp = VarGeneral.ServiceBillId;
             currentGH.RefNo = txtRefText;
             currentGH.AdminLock = switchButton_LockValue;
@@ -1493,7 +1493,7 @@ repositoryItemDateEdit1.Properties.Mask.EditMask = "dd/MM/yyyy";
                 }else
 
                 {
-                    var w = (from i in db.T_TempGDDET
+                    var w = (from i in db.T_TempGDDETs
                              where
    i.gdNo == t.InvHed_ID.ToString()
                              select i).ToList();
