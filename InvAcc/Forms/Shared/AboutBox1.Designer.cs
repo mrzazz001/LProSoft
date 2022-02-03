@@ -169,8 +169,8 @@ namespace InvAcc.Forms.Shared
             this.textBoxDescription.Size = new System.Drawing.Size(271, 112);
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.TabStop = false;
-            this.textBoxDescription.Text = "جميع الحقوق محفوظة لدى شركة الاداء الرقمي لتقنية المعلومات\r\nالعنوان : المملكة الع" +
-    "ربية السعودية الفرع الرئيسي (جده)";
+            this.textBoxDescription.Text = "جميع الحقوق محفوظة لدى شركة الاداsء الرقمي لتقنية المعلومات\r\nالعنوان : المملكة ال" +
+    "عربية السعودية الفرع الرئيسي (جده)";
             // 
             // okButton
             // 

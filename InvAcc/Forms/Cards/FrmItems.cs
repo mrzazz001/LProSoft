@@ -5567,7 +5567,7 @@ void ArbEng()
         private void PrintSet()
         {
             string _PrinterName = prnt_doc.PrinterSettings.PrinterName;
-            prnt_doc.PrinterSettings.PrinterName = _InvSetting.defPrn;
+            prnt_doc.PrinterSettings.PrinterName = _InvSetting.InvpRINTERInfo.defPrn;
             if (!prnt_doc.PrinterSettings.IsValid)
             {
                 prnt_doc.PrinterSettings.PrinterName = _PrinterName;
@@ -5819,7 +5819,7 @@ void ArbEng()
             {
                 if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
                 {
-                    if (_InvSetting.InvTypA4 == "1")
+                    if (_InvSetting.InvpRINTERInfo.InvTypA4  == "1")
                     {
                         prnt_doc.PrinterSettings.Collate = true;
                     }
@@ -5910,7 +5910,7 @@ void ArbEng()
             {
                 if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
                 {
-                    if (_InvSetting.InvTypA4 == "1")
+                    if (_InvSetting.InvpRINTERInfo.InvTypA4  == "1")
                     {
                         prnt_doc.PrinterSettings.Collate = true;
                     }
@@ -6000,7 +6000,7 @@ void ArbEng()
             {
                 if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
                 {
-                    if (_InvSetting.InvTypA4 == "1")
+                    if (_InvSetting.InvpRINTERInfo.InvTypA4  == "1")
                     {
                         prnt_doc.PrinterSettings.Collate = true;
                     }
@@ -6090,7 +6090,7 @@ void ArbEng()
             {
                 if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
                 {
-                    if (_InvSetting.InvTypA4 == "1")
+                    if (_InvSetting.InvpRINTERInfo.InvTypA4  == "1")
                     {
                         prnt_doc.PrinterSettings.Collate = true;
                     }
@@ -6180,7 +6180,7 @@ void ArbEng()
             {
                 if (_InvSetting.InvpRINTERInfo.DefLines.Value > 0)
                 {
-                    if (_InvSetting.InvTypA4 == "1")
+                    if (_InvSetting.InvpRINTERInfo.InvTypA4  == "1")
                     {
                         prnt_doc.PrinterSettings.Collate = true;
                     }
