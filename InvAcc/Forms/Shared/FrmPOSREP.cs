@@ -25,7 +25,22 @@ namespace InvAcc.Forms
             {
                 this.Enabled = false;
             }
-            cButton1.Text = "اضافة صنف";
+             if (VarGeneral.currentintlanguage == 1)
+            {
+                buttonItem_TableInfo.Text = "About Tables";
+                buttonItem_AlarmLocalOrder.Text = "local Orders";
+                buttonItem_MoveTables.Text = "Transfer Orders Between Tables";
+
+                LCLOSE.Text = "Close Boxes";
+                LRenum.Text = "Reset Boxes Series";
+                LSRPL.Text = "Saler Invoices";
+                Lmovment.Text = "Item Movement Report";
+                label1.Text = "Item Addation";
+                label4.Text = "Printer Settings";
+                label3.Text = "POS";
+                label2.Text = "Invoice Totals Report";
+                buttonX2.Text = "Exit";
+            }
         }
         int retrun = 0;
         public void setreturn()

@@ -61,6 +61,7 @@ namespace InvAcc.Forms
             this.toolStripMenuItem_waitersActive = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem_Megration = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem33 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem35 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem_RepairQty = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem_DeleteItemWithStore = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem_SyncGmail = new DevComponents.DotNetBar.ButtonItem();
@@ -481,8 +482,6 @@ namespace InvAcc.Forms
             this.textBoxItem1 = new DevComponents.DotNetBar.TextBoxItem();
             this.textBoxItem2 = new DevComponents.DotNetBar.TextBoxItem();
             this.buttonItem32 = new DevComponents.DotNetBar.ButtonItem();
-            this.onlineworning2 = new System.Windows.Forms.Panel();
-            this.c1Button1 = new C1.Win.C1Input.C1Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.metroToolbar_main = new DevComponents.DotNetBar.Metro.MetroToolbar();
             this.TTUSr = new DevComponents.DotNetBar.LabelItem();
@@ -501,7 +500,9 @@ namespace InvAcc.Forms
             this.warningBox = new DevComponents.DotNetBar.Controls.WarningBox();
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.tabControl1 = new JacksiroKe.MdiTabCtrl.TabControl();
-            this.buttonItem35 = new DevComponents.DotNetBar.ButtonItem();
+            this.c1Button1 = new C1.Win.C1Input.C1Button();
+            this.onlineworning2 = new System.Windows.Forms.Panel();
+            this.buttonItem36 = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.mainmenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
@@ -521,12 +522,12 @@ namespace InvAcc.Forms
             this.ribbonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar2)).BeginInit();
             this.bar2.SuspendLayout();
-            this.onlineworning2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.c1Button1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.panelWarning.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c1Button1)).BeginInit();
+            this.onlineworning2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonButton61
@@ -715,7 +716,8 @@ namespace InvAcc.Forms
             this.toolStripMenuItem_waitersActive,
             this.buttonItem_Megration,
             this.buttonItem33,
-            this.buttonItem35});
+            this.buttonItem35,
+            this.buttonItem36});
             this.buttonItem_ImportExcels.Text = "عمليـــات آخرى";
             // 
             // buttonItem_ImporItems
@@ -809,6 +811,12 @@ namespace InvAcc.Forms
             this.buttonItem33.Name = "buttonItem33";
             this.buttonItem33.Text = "تحديث قاعدة البيانات";
             this.buttonItem33.Click += new System.EventHandler(this.buttonItem33_Click);
+            // 
+            // buttonItem35
+            // 
+            this.buttonItem35.Name = "buttonItem35";
+            this.buttonItem35.Text = "معالج اعادة تسلسل الاصناف";
+            this.buttonItem35.Click += new System.EventHandler(this.buttonItem35_Click);
             // 
             // buttonItem_RepairQty
             // 
@@ -2074,7 +2082,7 @@ namespace InvAcc.Forms
             // 
             this.ribbonButton2.Name = "ribbonButton2";
             this.ribbonButton2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.SmallImage")));
-            this.ribbonButton2.Text = "Iqrar";
+            this.ribbonButton2.Text = "اقرار ضريبي";
             this.ribbonButton2.Click += new System.EventHandler(this.ribbonButton2_Click_2);
             // 
             // sideBarPanelItem_Invioces
@@ -2522,7 +2530,7 @@ namespace InvAcc.Forms
             // 
             this.ribbonButton3.Name = "ribbonButton3";
             this.ribbonButton3.SmallImage = global::InvAcc.Properties.Resources.Untitled_2_copy;
-            this.ribbonButton3.Text = "About US";
+            this.ribbonButton3.Text = "عنا";
             this.ribbonButton3.Click += new System.EventHandler(this.ribbonButton3_Click);
             // 
             // ribbonBottomToolBar1
@@ -4719,29 +4727,6 @@ namespace InvAcc.Forms
             this.buttonItem32.Text = "تحديث Refresh";
             this.buttonItem32.Click += new System.EventHandler(this.buttonItem_SrchRefresh_Click);
             // 
-            // onlineworning2
-            // 
-            this.onlineworning2.BackgroundImage = global::InvAcc.Properties.Resources.contact2;
-            this.onlineworning2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.onlineworning2.Controls.Add(this.c1Button1);
-            this.onlineworning2.Location = new System.Drawing.Point(203, 292);
-            this.onlineworning2.Name = "onlineworning2";
-            this.onlineworning2.Size = new System.Drawing.Size(519, 248);
-            this.onlineworning2.TabIndex = 1084;
-            this.onlineworning2.Visible = false;
-            // 
-            // c1Button1
-            // 
-            this.c1Button1.BackColor = System.Drawing.Color.Transparent;
-            this.c1Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.c1Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.c1Button1.Location = new System.Drawing.Point(493, 5);
-            this.c1Button1.Name = "c1Button1";
-            this.c1Button1.Size = new System.Drawing.Size(19, 18);
-            this.c1Button1.TabIndex = 3;
-            this.c1Button1.UseVisualStyleBackColor = false;
-            this.c1Button1.Click += new System.EventHandler(this.c1Button1_Click);
-            // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
@@ -5007,15 +4992,39 @@ namespace InvAcc.Forms
             this.tabControl1.SelectedTabChanged += new System.EventHandler(this.tabControl1_SelectedTabChanged);
             this.tabControl1.TabPressed += new JacksiroKe.MdiTabCtrl.TabControl.TabPressedEventHandler(this.tabControl1_TabPressed);
             this.tabControl1.F4Pressed += new JacksiroKe.MdiTabCtrl.TabControl.F4PressedEventHandler(this.tabControl1_F4Pressed);
+            this.tabControl1.Load += new System.EventHandler(this.tabControl1_Load);
             this.tabControl1.TabIndexChanged += new System.EventHandler(this.tabControl1_TabIndexChanged);
             this.tabControl1.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.tabControl1_ControlRemoved);
             this.tabControl1.Validated += new System.EventHandler(this.tabControl1_Validated);
             // 
-            // buttonItem35
+            // c1Button1
             // 
-            this.buttonItem35.Name = "buttonItem35";
-            this.buttonItem35.Text = "معالج اعادة تسلسل الاصناف";
-            this.buttonItem35.Click += new System.EventHandler(this.buttonItem35_Click);
+            this.c1Button1.BackColor = System.Drawing.Color.Transparent;
+            this.c1Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.c1Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.c1Button1.Location = new System.Drawing.Point(493, 5);
+            this.c1Button1.Name = "c1Button1";
+            this.c1Button1.Size = new System.Drawing.Size(19, 18);
+            this.c1Button1.TabIndex = 3;
+            this.c1Button1.UseVisualStyleBackColor = false;
+            this.c1Button1.Click += new System.EventHandler(this.c1Button1_Click);
+            // 
+            // onlineworning2
+            // 
+            this.onlineworning2.BackgroundImage = global::InvAcc.Properties.Resources.contact2;
+            this.onlineworning2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.onlineworning2.Controls.Add(this.c1Button1);
+            this.onlineworning2.Location = new System.Drawing.Point(203, 292);
+            this.onlineworning2.Name = "onlineworning2";
+            this.onlineworning2.Size = new System.Drawing.Size(519, 248);
+            this.onlineworning2.TabIndex = 1084;
+            this.onlineworning2.Visible = false;
+            // 
+            // buttonItem36
+            // 
+            this.buttonItem36.Name = "buttonItem36";
+            this.buttonItem36.Text = "فحص اعدادات الطباعة";
+            this.buttonItem36.Click += new System.EventHandler(this.buttonItem36_Click);
             // 
             // Frm_Main
             // 
@@ -5064,13 +5073,13 @@ namespace InvAcc.Forms
             this.ribbonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bar2)).EndInit();
             this.bar2.ResumeLayout(false);
-            this.onlineworning2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.c1Button1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.panelWarning.ResumeLayout(false);
             this.panelWarning.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c1Button1)).EndInit();
+            this.onlineworning2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5447,7 +5456,6 @@ namespace InvAcc.Forms
         private C1.Win.C1FlexGrid.C1FlexGrid c1FlexGrid1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
-        private DevComponents.DotNetBar.Controls.WarningBox OnlineWarning;
         private C1.Win.C1FlexGrid.C1FlexGrid dataGridView_TopInvoicePurchaes;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
@@ -5510,8 +5518,6 @@ namespace InvAcc.Forms
         private System.Windows.Forms.Panel panel7;
         private C1.Win.C1FlexGrid.C1FlexGrid c1FlexGrid2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel onlineworning2;
-        private C1.Win.C1Input.C1Button c1Button1;
         private C1.Win.C1Ribbon.RibbonButton ribbonButton101;
         private DevComponents.DotNetBar.Metro.MetroToolbar metroToolbar_main;
         private DevComponents.DotNetBar.LabelItem TTUSr;
@@ -5550,5 +5556,9 @@ namespace InvAcc.Forms
         private C1.Win.C1Ribbon.RibbonButton ribbonButton4;
         private C1.Win.C1Ribbon.RibbonButton ribbonButton5;
         private DevComponents.DotNetBar.ButtonItem buttonItem35;
+        private DevComponents.DotNetBar.Controls.WarningBox OnlineWarning;
+        private System.Windows.Forms.Panel onlineworning2;
+        private C1.Win.C1Input.C1Button c1Button1;
+        private DevComponents.DotNetBar.ButtonItem buttonItem36;
     }
 }

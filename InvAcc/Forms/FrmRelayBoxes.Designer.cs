@@ -32,47 +32,47 @@ partial class FrmRelayBoxes
 
 private void InitializeComponent()
         {
-            ComponentResourceManager resources = new ComponentResourceManager(typeof(FrmRelayBoxes));
-            this.groupPanel2 = new GroupPanel();
-            this.CmbCurr = new ComboBoxEx();
-            this.checBox_Acc2 = new CheckBoxX();
-            this.checBox_Acc1 = new CheckBoxX();
-            this.groupBox2 = new GroupBox();
-            this.RButDet = new RadioButton();
-            this.RButShort = new RadioButton();
-            this.button_RepAccTo = new ButtonX();
-            this.button_RepAccFrom = new ButtonX();
-            this.txtTime = new MaskedTextBox();
-            this.label4 = new Label();
-            this.txtGDate = new MaskedTextBox();
-            this.txtHDate = new MaskedTextBox();
-            this.buttonX_Close = new ButtonX();
-            this.ButOk = new ButtonX();
-            this.txtAmount = new DoubleInput();
-            this.label8 = new Label();
-            this.label2 = new Label();
-            this.label1 = new Label();
-            this.CmbUser = new ComboBoxEx();
-            this.label3 = new Label();
-            this.CmbFromBox = new ComboBoxEx();
-            this.CmbToBox = new ComboBoxEx();
-            this.groupPanel_Balance = new GroupPanel();
-            this.label_Balance = new Label();
-            this.groupPanel_SendOption = new GroupPanel();
-            this.chk2 = new CheckBoxX();
-            this.chk1 = new CheckBoxX();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRelayBoxes));
+            this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.CmbCurr = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.checBox_Acc2 = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.checBox_Acc1 = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RButDet = new System.Windows.Forms.RadioButton();
+            this.RButShort = new System.Windows.Forms.RadioButton();
+            this.button_RepAccTo = new DevComponents.DotNetBar.ButtonX();
+            this.button_RepAccFrom = new DevComponents.DotNetBar.ButtonX();
+            this.txtTime = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtGDate = new System.Windows.Forms.MaskedTextBox();
+            this.txtHDate = new System.Windows.Forms.MaskedTextBox();
+            this.buttonX_Close = new DevComponents.DotNetBar.ButtonX();
+            this.ButOk = new DevComponents.DotNetBar.ButtonX();
+            this.txtAmount = new DevComponents.Editors.DoubleInput();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CmbUser = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CmbFromBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.CmbToBox = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.groupPanel_Balance = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.label_Balance = new System.Windows.Forms.Label();
+            this.groupPanel_SendOption = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.chk2 = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.chk1 = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.groupPanel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((ISupportInitialize)this.txtAmount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAmount)).BeginInit();
             this.groupPanel_Balance.SuspendLayout();
             this.groupPanel_SendOption.SuspendLayout();
-            base.SuspendLayout();
-            this.groupPanel2.AccessibleDescription = null;
-            this.groupPanel2.AccessibleName = null;
-            resources.ApplyResources(this.groupPanel2, "groupPanel2");
-            this.groupPanel2.BackColor = Color.Transparent;
-            this.groupPanel2.CanvasColor = SystemColors.Control;
-            this.groupPanel2.ColorSchemeStyle = eDotNetBarStyle.Office2007;
+            this.SuspendLayout();
+            // 
+            // groupPanel2
+            // 
+            this.groupPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel2.Controls.Add(this.CmbCurr);
             this.groupPanel2.Controls.Add(this.checBox_Acc2);
             this.groupPanel2.Controls.Add(this.checBox_Acc1);
@@ -93,371 +93,543 @@ private void InitializeComponent()
             this.groupPanel2.Controls.Add(this.label3);
             this.groupPanel2.Controls.Add(this.CmbFromBox);
             this.groupPanel2.Controls.Add(this.CmbToBox);
+            this.groupPanel2.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupPanel2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.groupPanel2.Location = new System.Drawing.Point(99, 0);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Style.BackColor2 = SystemColors.GradientInactiveCaption;
+            this.groupPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupPanel2.Size = new System.Drawing.Size(397, 275);
+            // 
+            // 
+            // 
+            this.groupPanel2.Style.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupPanel2.Style.BackColorGradientAngle = 90;
-            this.groupPanel2.Style.BackColorSchemePart = eColorSchemePart.PanelBackground;
-            this.groupPanel2.Style.BorderBottom = eStyleBorderType.Solid;
+            this.groupPanel2.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel2.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel2.Style.BorderBottomWidth = 1;
-            this.groupPanel2.Style.BorderColorSchemePart = eColorSchemePart.PanelBorder;
-            this.groupPanel2.Style.BorderLeft = eStyleBorderType.Solid;
+            this.groupPanel2.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel2.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel2.Style.BorderLeftWidth = 1;
-            this.groupPanel2.Style.BorderRight = eStyleBorderType.Solid;
+            this.groupPanel2.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel2.Style.BorderRightWidth = 1;
-            this.groupPanel2.Style.BorderTop = eStyleBorderType.Solid;
+            this.groupPanel2.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel2.Style.BorderTopWidth = 1;
             this.groupPanel2.Style.CornerDiameter = 4;
-            this.groupPanel2.Style.CornerType = eCornerType.Rounded;
-            this.groupPanel2.Style.TextAlignment = eStyleTextAlignment.Center;
-            this.groupPanel2.Style.TextColorSchemePart = eColorSchemePart.PanelText;
-            this.groupPanel2.StyleMouseDown.CornerType = eCornerType.Square;
-            this.groupPanel2.StyleMouseOver.CornerType = eCornerType.Square;
-            this.groupPanel2.TitleImagePosition = eTitleImagePosition.Center;
-            this.CmbCurr.AccessibleDescription = null;
-            this.CmbCurr.AccessibleName = null;
-            resources.ApplyResources(this.CmbCurr, "CmbCurr");
-            this.CmbCurr.AutoCompleteSource = AutoCompleteSource.ListItems;
-            this.CmbCurr.BackgroundImage = null;
-            this.CmbCurr.CommandParameter = null;
+            this.groupPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            // 
+            // 
+            // 
+            this.groupPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel2.TabIndex = 970;
+            this.groupPanel2.Text = "حسابات الصناديق";
+            this.groupPanel2.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Center;
+            // 
+            // CmbCurr
+            // 
+            this.CmbCurr.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CmbCurr.DisplayMember = "Text";
-            this.CmbCurr.DrawMode = DrawMode.OwnerDrawFixed;
-            this.CmbCurr.DropDownStyle = ComboBoxStyle.DropDownList;
-            this.CmbCurr.Font = null;
+            this.CmbCurr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbCurr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbCurr.Enabled = false;
             this.CmbCurr.FormattingEnabled = true;
+            this.CmbCurr.ItemHeight = 15;
+            this.CmbCurr.Location = new System.Drawing.Point(4, 17);
             this.CmbCurr.Name = "CmbCurr";
-            this.CmbCurr.Style = eDotNetBarStyle.StyleManagerControlled;
-            this.checBox_Acc2.AccessibleDescription = null;
-            this.checBox_Acc2.AccessibleName = null;
-            resources.ApplyResources(this.checBox_Acc2, "checBox_Acc2");
-            this.checBox_Acc2.BackColor = Color.Transparent;
-            this.checBox_Acc2.BackgroundImage = null;
-            this.checBox_Acc2.BackgroundStyle.CornerType = eCornerType.Square;
-            this.checBox_Acc2.CommandParameter = null;
+            this.CmbCurr.Size = new System.Drawing.Size(123, 21);
+            this.CmbCurr.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CmbCurr.TabIndex = 6734;
+            // 
+            // checBox_Acc2
+            // 
+            this.checBox_Acc2.AutoSize = true;
+            this.checBox_Acc2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.checBox_Acc2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checBox_Acc2.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.checBox_Acc2.Location = new System.Drawing.Point(185, 127);
             this.checBox_Acc2.Name = "checBox_Acc2";
-            this.checBox_Acc2.Style = eDotNetBarStyle.StyleManagerControlled;
-            this.checBox_Acc2.TextColor = Color.Maroon;
-            this.checBox_Acc1.AccessibleDescription = null;
-            this.checBox_Acc1.AccessibleName = null;
-            resources.ApplyResources(this.checBox_Acc1, "checBox_Acc1");
-            this.checBox_Acc1.BackColor = Color.Transparent;
-            this.checBox_Acc1.BackgroundImage = null;
-            this.checBox_Acc1.BackgroundStyle.CornerType = eCornerType.Square;
-            this.checBox_Acc1.CommandParameter = null;
+            this.checBox_Acc2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checBox_Acc2.Size = new System.Drawing.Size(109, 15);
+            this.checBox_Acc2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checBox_Acc2.TabIndex = 6733;
+            this.checBox_Acc2.Text = "إرفاق كشف حساب";
+            this.checBox_Acc2.TextColor = System.Drawing.Color.Maroon;
+            // 
+            // checBox_Acc1
+            // 
+            this.checBox_Acc1.AutoSize = true;
+            this.checBox_Acc1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.checBox_Acc1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checBox_Acc1.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.checBox_Acc1.Location = new System.Drawing.Point(185, 81);
             this.checBox_Acc1.Name = "checBox_Acc1";
-            this.checBox_Acc1.Style = eDotNetBarStyle.StyleManagerControlled;
-            this.checBox_Acc1.TextColor = Color.Maroon;
-            this.groupBox2.AccessibleDescription = null;
-            this.groupBox2.AccessibleName = null;
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.BackColor = Color.Transparent;
-            this.groupBox2.BackgroundImage = null;
+            this.checBox_Acc1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checBox_Acc1.Size = new System.Drawing.Size(109, 15);
+            this.checBox_Acc1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checBox_Acc1.TabIndex = 6732;
+            this.checBox_Acc1.Text = "إرفاق كشف حساب";
+            this.checBox_Acc1.TextColor = System.Drawing.Color.Maroon;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.RButDet);
             this.groupBox2.Controls.Add(this.RButShort);
+            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Location = new System.Drawing.Point(5, 42);
             this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(74, 103);
+            this.groupBox2.TabIndex = 6731;
             this.groupBox2.TabStop = false;
-            this.RButDet.AccessibleDescription = null;
-            this.RButDet.AccessibleName = null;
-            resources.ApplyResources(this.RButDet, "RButDet");
-            this.RButDet.BackgroundImage = null;
-            this.RButDet.ForeColor = Color.SteelBlue;
+            // 
+            // RButDet
+            // 
+            this.RButDet.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.RButDet.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.RButDet.ForeColor = System.Drawing.Color.SteelBlue;
+            this.RButDet.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RButDet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RButDet.Location = new System.Drawing.Point(4, 16);
             this.RButDet.Name = "RButDet";
+            this.RButDet.Size = new System.Drawing.Size(64, 30);
+            this.RButDet.TabIndex = 1007;
+            this.RButDet.Text = "تفصيلي";
+            this.RButDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.RButDet.UseVisualStyleBackColor = true;
-            this.RButShort.AccessibleDescription = null;
-            this.RButShort.AccessibleName = null;
-            resources.ApplyResources(this.RButShort, "RButShort");
-            this.RButShort.BackgroundImage = null;
+            this.RButDet.CheckedChanged += new System.EventHandler(this.RButDet_CheckedChanged);
+            // 
+            // RButShort
+            // 
+            this.RButShort.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
             this.RButShort.Checked = true;
-            this.RButShort.ForeColor = Color.SteelBlue;
+            this.RButShort.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.RButShort.ForeColor = System.Drawing.Color.SteelBlue;
+            this.RButShort.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RButShort.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RButShort.Location = new System.Drawing.Point(4, 61);
             this.RButShort.Name = "RButShort";
+            this.RButShort.Size = new System.Drawing.Size(65, 30);
+            this.RButShort.TabIndex = 1008;
             this.RButShort.TabStop = true;
+            this.RButShort.Text = "مختصر";
+            this.RButShort.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.RButShort.UseVisualStyleBackColor = true;
-            this.button_RepAccTo.AccessibleDescription = null;
-            this.button_RepAccTo.AccessibleName = null;
-            this.button_RepAccTo.AccessibleRole = AccessibleRole.PushButton;
-            resources.ApplyResources(this.button_RepAccTo, "button_RepAccTo");
-            this.button_RepAccTo.BackgroundImage = null;
+            this.RButShort.CheckedChanged += new System.EventHandler(this.RButShort_CheckedChanged);
+            // 
+            // button_RepAccTo
+            // 
+            this.button_RepAccTo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.button_RepAccTo.Checked = true;
-            this.button_RepAccTo.ColorTable = eButtonColor.Flat;
-            this.button_RepAccTo.CommandParameter = null;
+            this.button_RepAccTo.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.button_RepAccTo.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.button_RepAccTo.Location = new System.Drawing.Point(85, 103);
             this.button_RepAccTo.Name = "button_RepAccTo";
-            this.button_RepAccTo.Style = eDotNetBarStyle.StyleManagerControlled;
+            this.button_RepAccTo.Size = new System.Drawing.Size(78, 20);
+            this.button_RepAccTo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.button_RepAccTo.Symbol = "";
-            this.button_RepAccTo.SymbolSize = 12f;
-            this.button_RepAccTo.TextColor = Color.Black;
-            this.button_RepAccTo.Click += new EventHandler(this.button_RepAccTo_Click);
-            this.button_RepAccFrom.AccessibleDescription = null;
-            this.button_RepAccFrom.AccessibleName = null;
-            this.button_RepAccFrom.AccessibleRole = AccessibleRole.PushButton;
-            resources.ApplyResources(this.button_RepAccFrom, "button_RepAccFrom");
-            this.button_RepAccFrom.BackgroundImage = null;
+            this.button_RepAccTo.SymbolSize = 12F;
+            this.button_RepAccTo.TabIndex = 1180;
+            this.button_RepAccTo.Text = "كشف";
+            this.button_RepAccTo.TextColor = System.Drawing.Color.Black;
+            this.button_RepAccTo.Click += new System.EventHandler(this.button_RepAccTo_Click);
+            // 
+            // button_RepAccFrom
+            // 
+            this.button_RepAccFrom.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.button_RepAccFrom.Checked = true;
-            this.button_RepAccFrom.ColorTable = eButtonColor.Flat;
-            this.button_RepAccFrom.CommandParameter = null;
+            this.button_RepAccFrom.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.button_RepAccFrom.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.button_RepAccFrom.Location = new System.Drawing.Point(85, 57);
             this.button_RepAccFrom.Name = "button_RepAccFrom";
-            this.button_RepAccFrom.Style = eDotNetBarStyle.StyleManagerControlled;
+            this.button_RepAccFrom.Size = new System.Drawing.Size(78, 20);
+            this.button_RepAccFrom.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.button_RepAccFrom.Symbol = "";
-            this.button_RepAccFrom.SymbolSize = 12f;
-            this.button_RepAccFrom.TextColor = Color.Black;
-            this.button_RepAccFrom.Click += new EventHandler(this.button_RepAccFrom_Click);
-            this.txtTime.AccessibleDescription = null;
-            this.txtTime.AccessibleName = null;
-            resources.ApplyResources(this.txtTime, "txtTime");
-            this.txtTime.BackColor = Color.White;
-            this.txtTime.BackgroundImage = null;
+            this.button_RepAccFrom.SymbolSize = 12F;
+            this.button_RepAccFrom.TabIndex = 1179;
+            this.button_RepAccFrom.Text = "كشف";
+            this.button_RepAccFrom.TextColor = System.Drawing.Color.Black;
+            this.button_RepAccFrom.Click += new System.EventHandler(this.button_RepAccFrom_Click);
+            // 
+            // txtTime
+            // 
+            this.txtTime.BackColor = System.Drawing.Color.White;
+            this.txtTime.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.txtTime.Location = new System.Drawing.Point(8, 149);
+            this.txtTime.Mask = "##:##";
             this.txtTime.Name = "txtTime";
-            this.txtTime.Click += new EventHandler(this.txtTime_Click);
-            this.label4.AccessibleDescription = null;
-            this.label4.AccessibleName = null;
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.BackColor = Color.Transparent;
-            this.label4.FlatStyle = FlatStyle.Flat;
+            this.txtTime.Size = new System.Drawing.Size(76, 21);
+            this.txtTime.TabIndex = 1177;
+            this.txtTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTime.Click += new System.EventHandler(this.txtTime_Click);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label4.Location = new System.Drawing.Point(303, 153);
             this.label4.Name = "label4";
-            this.txtGDate.AccessibleDescription = null;
-            this.txtGDate.AccessibleName = null;
-            resources.ApplyResources(this.txtGDate, "txtGDate");
-            this.txtGDate.BackColor = Color.WhiteSmoke;
-            this.txtGDate.BackgroundImage = null;
+            this.label4.Size = new System.Drawing.Size(71, 13);
+            this.label4.TabIndex = 1178;
+            this.label4.Text = "التاريــــــــخ :";
+            // 
+            // txtGDate
+            // 
+            this.txtGDate.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtGDate.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.txtGDate.Location = new System.Drawing.Point(194, 149);
+            this.txtGDate.Mask = "0000/00/00";
             this.txtGDate.Name = "txtGDate";
-            this.txtGDate.Leave += new EventHandler(this.txtGDate_Leave);
-            this.txtGDate.Click += new EventHandler(this.txtGDate_Click);
-            this.txtHDate.AccessibleDescription = null;
-            this.txtHDate.AccessibleName = null;
-            resources.ApplyResources(this.txtHDate, "txtHDate");
-            this.txtHDate.BackColor = Color.WhiteSmoke;
-            this.txtHDate.BackgroundImage = null;
+            this.txtGDate.Size = new System.Drawing.Size(106, 21);
+            this.txtGDate.TabIndex = 1175;
+            this.txtGDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGDate.Click += new System.EventHandler(this.txtGDate_Click);
+            this.txtGDate.Leave += new System.EventHandler(this.txtGDate_Leave);
+            // 
+            // txtHDate
+            // 
+            this.txtHDate.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtHDate.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.txtHDate.Location = new System.Drawing.Point(86, 149);
+            this.txtHDate.Mask = "0000/00/00";
             this.txtHDate.Name = "txtHDate";
-            this.txtHDate.Leave += new EventHandler(this.txtHDate_Leave);
-            this.txtHDate.Click += new EventHandler(this.txtHDate_Click);
-            this.buttonX_Close.AccessibleDescription = null;
-            this.buttonX_Close.AccessibleName = null;
-            this.buttonX_Close.AccessibleRole = AccessibleRole.PushButton;
-            resources.ApplyResources(this.buttonX_Close, "buttonX_Close");
-            this.buttonX_Close.BackgroundImage = null;
+            this.txtHDate.Size = new System.Drawing.Size(106, 21);
+            this.txtHDate.TabIndex = 1176;
+            this.txtHDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHDate.Click += new System.EventHandler(this.txtHDate_Click);
+            this.txtHDate.Leave += new System.EventHandler(this.txtHDate_Leave);
+            // 
+            // buttonX_Close
+            // 
+            this.buttonX_Close.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX_Close.Checked = true;
-            this.buttonX_Close.ColorTable = eButtonColor.OrangeWithBackground;
-            this.buttonX_Close.CommandParameter = null;
+            this.buttonX_Close.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX_Close.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.buttonX_Close.Location = new System.Drawing.Point(2, 213);
             this.buttonX_Close.Name = "buttonX_Close";
-            this.buttonX_Close.Style = eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX_Close.Size = new System.Drawing.Size(193, 40);
+            this.buttonX_Close.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX_Close.Symbol = "";
-            this.buttonX_Close.TextColor = Color.SteelBlue;
-            this.buttonX_Close.Click += new EventHandler(this.buttonX_Close_Click);
-            this.ButOk.AccessibleDescription = null;
-            this.ButOk.AccessibleName = null;
-            this.ButOk.AccessibleRole = AccessibleRole.PushButton;
-            resources.ApplyResources(this.ButOk, "ButOk");
-            this.ButOk.BackgroundImage = null;
-            this.ButOk.ColorTable = eButtonColor.BlueOrb;
-            this.ButOk.CommandParameter = null;
+            this.buttonX_Close.TabIndex = 1174;
+            this.buttonX_Close.Text = "إغلاق";
+            this.buttonX_Close.TextColor = System.Drawing.Color.SteelBlue;
+            this.buttonX_Close.Click += new System.EventHandler(this.buttonX_Close_Click);
+            // 
+            // ButOk
+            // 
+            this.ButOk.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButOk.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.ButOk.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.ButOk.Location = new System.Drawing.Point(197, 213);
             this.ButOk.Name = "ButOk";
-            this.ButOk.Style = eDotNetBarStyle.StyleManagerControlled;
+            this.ButOk.Size = new System.Drawing.Size(193, 40);
+            this.ButOk.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButOk.Symbol = "";
-            this.ButOk.SymbolSize = 16f;
-            this.ButOk.TextColor = Color.White;
-            this.ButOk.Click += new EventHandler(this.ButOk_Click);
-            this.txtAmount.AccessibleDescription = null;
-            this.txtAmount.AccessibleName = null;
+            this.ButOk.SymbolSize = 16F;
+            this.ButOk.TabIndex = 1173;
+            this.ButOk.Text = "ترحيل المبلغ F2";
+            this.ButOk.TextColor = System.Drawing.Color.White;
+            this.ButOk.Click += new System.EventHandler(this.ButOk_Click);
+            // 
+            // txtAmount
+            // 
             this.txtAmount.AllowEmptyState = false;
-            resources.ApplyResources(this.txtAmount, "txtAmount");
-            this.txtAmount.BackgroundImage = null;
-            this.txtAmount.BackgroundStyle.BackColor = Color.FromArgb(255, 255, 0);
+            this.txtAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.txtAmount.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
             this.txtAmount.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtAmount.BackgroundStyle.CornerType = eCornerType.Square;
-            this.txtAmount.ButtonCalculator.DisplayPosition = (int)resources.GetObject("txtAmount.ButtonCalculator.DisplayPosition");
-            this.txtAmount.ButtonCalculator.Image = null;
-            this.txtAmount.ButtonCalculator.Text = resources.GetString("txtAmount.ButtonCalculator.Text");
-            this.txtAmount.ButtonClear.DisplayPosition = (int)resources.GetObject("txtAmount.ButtonClear.DisplayPosition");
-            this.txtAmount.ButtonClear.Image = null;
-            this.txtAmount.ButtonClear.Text = resources.GetString("txtAmount.ButtonClear.Text");
-            this.txtAmount.ButtonCustom.DisplayPosition = (int)resources.GetObject("txtAmount.ButtonCustom.DisplayPosition");
-            this.txtAmount.ButtonCustom.Image = null;
-            this.txtAmount.ButtonCustom.Text = resources.GetString("txtAmount.ButtonCustom.Text");
-            this.txtAmount.ButtonCustom2.DisplayPosition = (int)resources.GetObject("txtAmount.ButtonCustom2.DisplayPosition");
-            this.txtAmount.ButtonCustom2.Image = null;
-            this.txtAmount.ButtonCustom2.Text = resources.GetString("txtAmount.ButtonCustom2.Text");
-            this.txtAmount.ButtonDropDown.DisplayPosition = (int)resources.GetObject("txtAmount.ButtonDropDown.DisplayPosition");
-            this.txtAmount.ButtonDropDown.Image = null;
-            this.txtAmount.ButtonDropDown.Text = resources.GetString("txtAmount.ButtonDropDown.Text");
-            this.txtAmount.ButtonFreeText.DisplayPosition = (int)resources.GetObject("txtAmount.ButtonFreeText.DisplayPosition");
-            this.txtAmount.ButtonFreeText.Image = null;
-            this.txtAmount.ButtonFreeText.Shortcut = eShortcut.F2;
-            this.txtAmount.ButtonFreeText.Text = resources.GetString("txtAmount.ButtonFreeText.Text");
-            this.txtAmount.CommandParameter = null;
+            this.txtAmount.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAmount.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtAmount.DisplayFormat = "0.00";
-            this.txtAmount.Increment = 1;
-            this.txtAmount.InputHorizontalAlignment = eHorizontalAlignment.Center;
-            this.txtAmount.MinValue = 0;
+            this.txtAmount.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtAmount.Increment = 1D;
+            this.txtAmount.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtAmount.Location = new System.Drawing.Point(8, 181);
+            this.txtAmount.MinValue = 0D;
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.ShowUpDown = true;
-            this.label8.AccessibleDescription = null;
-            this.label8.AccessibleName = null;
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.BackColor = Color.SteelBlue;
-            this.label8.BorderStyle = BorderStyle.FixedSingle;
-            this.label8.ForeColor = Color.White;
+            this.txtAmount.Size = new System.Drawing.Size(184, 21);
+            this.txtAmount.TabIndex = 1172;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.BackColor = System.Drawing.Color.SteelBlue;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label8.Location = new System.Drawing.Point(194, 181);
             this.label8.Name = "label8";
-            this.label2.AccessibleDescription = null;
-            this.label2.AccessibleName = null;
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.BackColor = Color.Transparent;
-            this.label2.FlatStyle = FlatStyle.Flat;
+            this.label8.Size = new System.Drawing.Size(106, 21);
+            this.label8.TabIndex = 1171;
+            this.label8.Text = "المبلـــغ :";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(303, 107);
             this.label2.Name = "label2";
-            this.label1.AccessibleDescription = null;
-            this.label1.AccessibleName = null;
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Font = null;
+            this.label2.Size = new System.Drawing.Size(82, 13);
+            this.label2.TabIndex = 1168;
+            this.label2.Text = "إلى الصندوق :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(303, 61);
             this.label1.Name = "label1";
-            this.CmbUser.AccessibleDescription = null;
-            this.CmbUser.AccessibleName = null;
-            resources.ApplyResources(this.CmbUser, "CmbUser");
-            this.CmbUser.AutoCompleteSource = AutoCompleteSource.ListItems;
-            this.CmbUser.BackgroundImage = null;
-            this.CmbUser.CommandParameter = null;
+            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.TabIndex = 1167;
+            this.label1.Text = "من الصندوق :";
+            // 
+            // CmbUser
+            // 
+            this.CmbUser.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CmbUser.DisplayMember = "Text";
-            this.CmbUser.DrawMode = DrawMode.OwnerDrawFixed;
-            this.CmbUser.DropDownStyle = ComboBoxStyle.DropDownList;
-            this.CmbUser.Font = null;
+            this.CmbUser.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbUser.Enabled = false;
             this.CmbUser.FormattingEnabled = true;
+            this.CmbUser.ItemHeight = 15;
+            this.CmbUser.Location = new System.Drawing.Point(129, 17);
             this.CmbUser.Name = "CmbUser";
-            this.CmbUser.Style = eDotNetBarStyle.StyleManagerControlled;
-            this.label3.AccessibleDescription = null;
-            this.label3.AccessibleName = null;
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Font = null;
+            this.CmbUser.Size = new System.Drawing.Size(171, 21);
+            this.CmbUser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CmbUser.TabIndex = 1165;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(303, 21);
             this.label3.Name = "label3";
-            this.CmbFromBox.AccessibleDescription = null;
-            this.CmbFromBox.AccessibleName = null;
-            resources.ApplyResources(this.CmbFromBox, "CmbFromBox");
-            this.CmbFromBox.AutoCompleteSource = AutoCompleteSource.ListItems;
-            this.CmbFromBox.BackgroundImage = null;
-            this.CmbFromBox.CommandParameter = null;
+            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.TabIndex = 1166;
+            this.label3.Text = "المستخدم :";
+            // 
+            // CmbFromBox
+            // 
+            this.CmbFromBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CmbFromBox.DisplayMember = "Text";
-            this.CmbFromBox.DrawMode = DrawMode.OwnerDrawFixed;
-            this.CmbFromBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            this.CmbFromBox.Font = null;
+            this.CmbFromBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbFromBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbFromBox.FormattingEnabled = true;
+            this.CmbFromBox.ItemHeight = 15;
+            this.CmbFromBox.Location = new System.Drawing.Point(167, 57);
             this.CmbFromBox.Name = "CmbFromBox";
-            this.CmbFromBox.Style = eDotNetBarStyle.StyleManagerControlled;
+            this.CmbFromBox.Size = new System.Drawing.Size(133, 21);
+            this.CmbFromBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CmbFromBox.TabIndex = 1169;
             this.CmbFromBox.Tag = "T_GDDET.AccNo ";
-            this.CmbFromBox.SelectedIndexChanged += new EventHandler(this.CmbFromBox_SelectedIndexChanged);
-            this.CmbToBox.AccessibleDescription = null;
-            this.CmbToBox.AccessibleName = null;
-            resources.ApplyResources(this.CmbToBox, "CmbToBox");
-            this.CmbToBox.AutoCompleteSource = AutoCompleteSource.ListItems;
-            this.CmbToBox.BackgroundImage = null;
-            this.CmbToBox.CommandParameter = null;
+            this.CmbFromBox.SelectedIndexChanged += new System.EventHandler(this.CmbFromBox_SelectedIndexChanged);
+            // 
+            // CmbToBox
+            // 
+            this.CmbToBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CmbToBox.DisplayMember = "Text";
-            this.CmbToBox.DrawMode = DrawMode.OwnerDrawFixed;
-            this.CmbToBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            this.CmbToBox.Font = null;
+            this.CmbToBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbToBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbToBox.FormattingEnabled = true;
+            this.CmbToBox.ItemHeight = 15;
+            this.CmbToBox.Location = new System.Drawing.Point(167, 103);
             this.CmbToBox.Name = "CmbToBox";
-            this.CmbToBox.Style = eDotNetBarStyle.StyleManagerControlled;
+            this.CmbToBox.Size = new System.Drawing.Size(133, 21);
+            this.CmbToBox.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CmbToBox.TabIndex = 1170;
             this.CmbToBox.Tag = "T_GDDET.AccNo ";
-            this.groupPanel_Balance.AccessibleDescription = null;
-            this.groupPanel_Balance.AccessibleName = null;
-            resources.ApplyResources(this.groupPanel_Balance, "groupPanel_Balance");
-            this.groupPanel_Balance.BackColor = Color.Transparent;
-            this.groupPanel_Balance.CanvasColor = SystemColors.Control;
-            this.groupPanel_Balance.ColorSchemeStyle = eDotNetBarStyle.Office2007;
+            // 
+            // groupPanel_Balance
+            // 
+            this.groupPanel_Balance.BackColor = System.Drawing.Color.Transparent;
+            this.groupPanel_Balance.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel_Balance.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel_Balance.Controls.Add(this.label_Balance);
+            this.groupPanel_Balance.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanel_Balance.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupPanel_Balance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.groupPanel_Balance.Location = new System.Drawing.Point(0, 0);
             this.groupPanel_Balance.Name = "groupPanel_Balance";
-            this.groupPanel_Balance.Style.BackColor2 = SystemColors.GradientInactiveCaption;
+            this.groupPanel_Balance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupPanel_Balance.Size = new System.Drawing.Size(99, 140);
+            // 
+            // 
+            // 
+            this.groupPanel_Balance.Style.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupPanel_Balance.Style.BackColorGradientAngle = 90;
-            this.groupPanel_Balance.Style.BackColorSchemePart = eColorSchemePart.PanelBackground;
-            this.groupPanel_Balance.Style.BorderBottom = eStyleBorderType.Solid;
+            this.groupPanel_Balance.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel_Balance.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel_Balance.Style.BorderBottomWidth = 1;
-            this.groupPanel_Balance.Style.BorderColorSchemePart = eColorSchemePart.PanelBorder;
-            this.groupPanel_Balance.Style.BorderLeft = eStyleBorderType.Solid;
+            this.groupPanel_Balance.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel_Balance.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel_Balance.Style.BorderLeftWidth = 1;
-            this.groupPanel_Balance.Style.BorderRight = eStyleBorderType.Solid;
+            this.groupPanel_Balance.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel_Balance.Style.BorderRightWidth = 1;
-            this.groupPanel_Balance.Style.BorderTop = eStyleBorderType.Solid;
+            this.groupPanel_Balance.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel_Balance.Style.BorderTopWidth = 1;
             this.groupPanel_Balance.Style.CornerDiameter = 4;
-            this.groupPanel_Balance.Style.CornerType = eCornerType.Rounded;
-            this.groupPanel_Balance.Style.TextAlignment = eStyleTextAlignment.Center;
-            this.groupPanel_Balance.Style.TextColorSchemePart = eColorSchemePart.PanelText;
-            this.groupPanel_Balance.StyleMouseDown.CornerType = eCornerType.Square;
-            this.groupPanel_Balance.StyleMouseOver.CornerType = eCornerType.Square;
-            this.groupPanel_Balance.TitleImagePosition = eTitleImagePosition.Right;
-            this.label_Balance.AccessibleDescription = null;
-            this.label_Balance.AccessibleName = null;
-            resources.ApplyResources(this.label_Balance, "label_Balance");
-            this.label_Balance.BackColor = Color.WhiteSmoke;
-            this.label_Balance.ForeColor = Color.Red;
+            this.groupPanel_Balance.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel_Balance.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel_Balance.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            // 
+            // 
+            // 
+            this.groupPanel_Balance.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel_Balance.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel_Balance.TabIndex = 971;
+            this.groupPanel_Balance.Text = "الرصيد الحالي";
+            this.groupPanel_Balance.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Right;
+            // 
+            // label_Balance
+            // 
+            this.label_Balance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label_Balance.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_Balance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
+            this.label_Balance.ForeColor = System.Drawing.Color.Red;
+            this.label_Balance.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label_Balance.Location = new System.Drawing.Point(0, 0);
             this.label_Balance.Name = "label_Balance";
-            this.groupPanel_SendOption.AccessibleDescription = null;
-            this.groupPanel_SendOption.AccessibleName = null;
-            resources.ApplyResources(this.groupPanel_SendOption, "groupPanel_SendOption");
-            this.groupPanel_SendOption.BackColor = Color.Transparent;
-            this.groupPanel_SendOption.CanvasColor = SystemColors.Control;
-            this.groupPanel_SendOption.ColorSchemeStyle = eDotNetBarStyle.Office2007;
+            this.label_Balance.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_Balance.Size = new System.Drawing.Size(93, 115);
+            this.label_Balance.TabIndex = 0;
+            this.label_Balance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupPanel_SendOption
+            // 
+            this.groupPanel_SendOption.BackColor = System.Drawing.Color.Transparent;
+            this.groupPanel_SendOption.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel_SendOption.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel_SendOption.Controls.Add(this.chk2);
             this.groupPanel_SendOption.Controls.Add(this.chk1);
+            this.groupPanel_SendOption.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanel_SendOption.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupPanel_SendOption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.groupPanel_SendOption.Location = new System.Drawing.Point(0, 140);
             this.groupPanel_SendOption.Name = "groupPanel_SendOption";
-            this.groupPanel_SendOption.Style.BackColor2 = SystemColors.GradientInactiveCaption;
+            this.groupPanel_SendOption.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupPanel_SendOption.Size = new System.Drawing.Size(99, 135);
+            // 
+            // 
+            // 
+            this.groupPanel_SendOption.Style.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupPanel_SendOption.Style.BackColorGradientAngle = 90;
-            this.groupPanel_SendOption.Style.BackColorSchemePart = eColorSchemePart.PanelBackground;
-            this.groupPanel_SendOption.Style.BorderBottom = eStyleBorderType.Solid;
+            this.groupPanel_SendOption.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel_SendOption.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel_SendOption.Style.BorderBottomWidth = 1;
-            this.groupPanel_SendOption.Style.BorderColorSchemePart = eColorSchemePart.PanelBorder;
-            this.groupPanel_SendOption.Style.BorderLeft = eStyleBorderType.Solid;
+            this.groupPanel_SendOption.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel_SendOption.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel_SendOption.Style.BorderLeftWidth = 1;
-            this.groupPanel_SendOption.Style.BorderRight = eStyleBorderType.Solid;
+            this.groupPanel_SendOption.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel_SendOption.Style.BorderRightWidth = 1;
-            this.groupPanel_SendOption.Style.BorderTop = eStyleBorderType.Solid;
+            this.groupPanel_SendOption.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel_SendOption.Style.BorderTopWidth = 1;
             this.groupPanel_SendOption.Style.CornerDiameter = 4;
-            this.groupPanel_SendOption.Style.CornerType = eCornerType.Rounded;
-            this.groupPanel_SendOption.Style.TextAlignment = eStyleTextAlignment.Center;
-            this.groupPanel_SendOption.Style.TextColorSchemePart = eColorSchemePart.PanelText;
-            this.groupPanel_SendOption.StyleMouseDown.CornerType = eCornerType.Square;
-            this.groupPanel_SendOption.StyleMouseOver.CornerType = eCornerType.Square;
-            this.groupPanel_SendOption.TitleImagePosition = eTitleImagePosition.Right;
-            this.chk2.AccessibleDescription = null;
-            this.chk2.AccessibleName = null;
-            resources.ApplyResources(this.chk2, "chk2");
-            this.chk2.BackColor = Color.Transparent;
-            this.chk2.BackgroundImage = null;
-            this.chk2.BackgroundStyle.CornerType = eCornerType.Square;
-            this.chk2.CommandParameter = null;
+            this.groupPanel_SendOption.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel_SendOption.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel_SendOption.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            // 
+            // 
+            // 
+            this.groupPanel_SendOption.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel_SendOption.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel_SendOption.TabIndex = 972;
+            this.groupPanel_SendOption.Text = "خيارات الإرسال";
+            this.groupPanel_SendOption.TitleImagePosition = DevComponents.DotNetBar.eTitleImagePosition.Right;
+            // 
+            // chk2
+            // 
+            this.chk2.AutoSize = true;
+            this.chk2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.chk2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chk2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.chk2.Location = new System.Drawing.Point(14, 71);
             this.chk2.Name = "chk2";
-            this.chk2.Style = eDotNetBarStyle.StyleManagerControlled;
-            this.chk1.AccessibleDescription = null;
-            this.chk1.AccessibleName = null;
-            resources.ApplyResources(this.chk1, "chk1");
-            this.chk1.BackColor = Color.Transparent;
-            this.chk1.BackgroundImage = null;
-            this.chk1.BackgroundStyle.CornerType = eCornerType.Square;
-            this.chk1.CommandParameter = null;
+            this.chk2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chk2.Size = new System.Drawing.Size(57, 15);
+            this.chk2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.chk2.TabIndex = 1178;
+            this.chk2.Text = "جـــوال";
+            // 
+            // chk1
+            // 
+            this.chk1.AutoSize = true;
+            this.chk1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.chk1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chk1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.chk1.Location = new System.Drawing.Point(10, 30);
             this.chk1.Name = "chk1";
-            this.chk1.Style = eDotNetBarStyle.StyleManagerControlled;
-            this.chk1.CheckedChanged += new EventHandler(this.chk1_CheckedChanged);
-            base.AccessibleDescription = null;
-            base.AccessibleName = null;
-            resources.ApplyResources(this, "$this");
-            base.AutoScaleMode = AutoScaleMode.Font;
-            this.BackColor = Color.SteelBlue;
-            this.BackgroundImage = null;
-            base.Controls.Add(this.groupPanel_SendOption);
-            base.Controls.Add(this.groupPanel_Balance);
-            base.Controls.Add(this.groupPanel2);
-            this.Font = null;
-            base.FormBorderStyle = FormBorderStyle.Fixed3D;
-            base.KeyPreview = true;
-            base.MaximizeBox = false;
-            base.Name = "FrmRelayBoxes";
-            base.Load += new EventHandler(this.FrmRelayBoxes_Load);
-            base.FormClosed += new FormClosedEventHandler(this.FrmRelayBoxes_FormClosed);
-            base.KeyDown += new KeyEventHandler(this.FrmRelayBoxes_KeyDown);
+            this.chk1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chk1.Size = new System.Drawing.Size(61, 15);
+            this.chk1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.chk1.TabIndex = 1177;
+            this.chk1.Text = "إيميــــل";
+            this.chk1.CheckedChanged += new System.EventHandler(this.chk1_CheckedChanged);
+            // 
+            // FrmRelayBoxes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(496, 275);
+            this.Controls.Add(this.groupPanel_SendOption);
+            this.Controls.Add(this.groupPanel_Balance);
+            this.Controls.Add(this.groupPanel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.Name = "FrmRelayBoxes";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ترحيل حسابات الصناديق - الخزينة";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmRelayBoxes_FormClosed);
+            this.Load += new System.EventHandler(this.FrmRelayBoxes_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmRelayBoxes_KeyDown);
             this.groupPanel2.ResumeLayout(false);
             this.groupPanel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((ISupportInitialize)this.txtAmount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAmount)).EndInit();
             this.groupPanel_Balance.ResumeLayout(false);
             this.groupPanel_SendOption.ResumeLayout(false);
             this.groupPanel_SendOption.PerformLayout();
-            base.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }//###########&&&&&&&&&&
 
 }

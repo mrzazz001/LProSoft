@@ -1782,15 +1782,84 @@ namespace InvAcc.Forms
             InitializeComponent();
             button14.Click += Butdton_41;
             button20.Click += adsfasdfasd;
-
+            
             flxinitate();
             panel11.BackColor = Color.LightGray;
             VarGeneral.Settings_Sys = db.SystemSettingStock();
             PanelCOntainer.BackColor = Color.White;
     
             Load += lamdssetings;
-    
-                puBar1.printersetting.ItemClick += PrinterSettings_ItemClick;
+            if (VarGeneral.currentintlanguage == 1) {
+                label54.Text = "Series";
+                ChkPriceIncludeTax.Text = "Price Not Include Tax";
+                button21.Text = "Tables";
+                label52.Text = "Type Of Order";
+                Button_Cashe.Text = "Cash";
+                Button_Network.Text = "Network";
+                Button_Cridet.Text = "Credit";
+                button13.Text = "Customer";
+                button14.Text = "Delgators";
+                buttonItem_Print.Text = "Print Order";
+                button_Draft.Text = "Draft Bill";
+                button_opendraft.Text = "Open Draft";
+                button_InitializeBill.Text = "Re Initiate Bill";
+                button5.Text = "Pay Now";
+                superTabItem7.Text = "Disccount";
+                label42.Text = "Total";
+                label48.Text = "Ryals";
+                label40.Text = "Credit:";
+                label41.Text = "Debit:";
+                Label26.Text = "Discount Value";
+                label55.Text = "Totals";
+                button1.Text = "Back";
+                label58.Text = "Customer Tax Number";
+                label53.Text = "Date";
+                label44.Text = "Mobile";
+
+                label36.Text = "Total";
+                But_PRecords.Text = "Details";
+                checkBox_CostGaidTax.Text = "Account Recipt";
+                label56.Text = "Ryals";
+                label39.Text = "Ryals";
+                label37.Text = "Credit:";
+                label38.Text = "Debit:";
+                button_DeleteLine.Text = "Delete Line";
+                label47.Text = "Net Amount";
+                lab_NamDisc.Text = "Discount";
+                button24.Text = "Minmize";
+                button23.Text = "Back";
+                button22.Text = "Exit";
+                button20.Text = "Back";
+                label45.Text = "Delegator";
+                button19.Text = "Back";
+                button15.Text = "Back";
+                button25.Text = "Back";
+                switchButtonItem1.OffText = "Line Totals";
+                switchButtonItem1.OnText = "Line Totals";
+                button7.Text = "Main";
+                button9.Text = "Payment";
+                button10.Text = "Discount";
+                button3.Text = "Tax";
+                button28.Text = "Bank Comm";
+                SwitchBill.Text = "Sale Return";
+                button12.Text = "Back";
+                label27.Text = "User";
+                button26.Text = "Back";
+                button27.Text = "Back";
+                button6.Text = "Back";
+                label30.Text = "Quantity";
+                label28.Text = "Benfits";
+                button2.Text = "Back";
+                button6.Text = "Back";
+                superTabItem1.Text = "D.Items";
+                superTabItem6.Text = "Details";
+                superTabItem9.Text = "Notes";
+                label57.Text = "To Be in Date";
+
+                label16.Text = "Payed Amount";
+                label20.Text = "Remaining:";
+            }
+            puBar1.printersetting.ItemClick += PrinterSettings_ItemClick;
             txtTotTax.ValueChanged += TaxChanged_Changed;
             if (ButOption == null) ButOption = new ButtonItem();
             poS_ItemsPanel2.Product_Click += product_Click;
@@ -1841,6 +1910,13 @@ namespace InvAcc.Forms
             txtHDate.Click += Button_Edit_Click;
             txtInvCost.Click += Button_Edit_Click;
             txtItemName.Click += Button_Edit_Click;
+            if (CalculateSupport() <= 0)
+            {
+                onlineworning2.Visible = true;
+                poS_ItemsPanel2.Enabled=false;
+                P_Main.Enabled = false;
+                HP_Main.Enabled = false;
+            }
             txtDueDate.Click += Button_Edit_Click;
             switchButton_TaxLines.ButtonWidth = 100;
             switchButton_Tax.Click += Button_Edit_Click;
@@ -2946,6 +3022,7 @@ namespace InvAcc.Forms
         }
         private void ArbEng()
         {
+            TopMost = false;
             if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
             {
                 LangArEn = 0;
@@ -4365,8 +4442,19 @@ namespace InvAcc.Forms
             try
             {
                 Program.min3();
-                fdsafas_load(null, null);
-                
+                fdsafas_load(null, null); 
+                if (VarGeneral.currentintlanguage != 0)
+                {
+                    Lab_DueAmountLoc.TextAlign = ContentAlignment.TopLeft;
+                    label47.Dock = DockStyle.Right;
+
+                }
+                if (VarGeneral.currentintlanguage != 0)
+            {
+                Lab_DueAmountLoc.TextAlign = ContentAlignment.MiddleLeft;
+                label47.Dock = DockStyle.Fill;
+
+            }
                 ComponentResourceManager resources = new ComponentResourceManager(typeof(FrmInvSalePoint));
                 if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                 {
@@ -8723,7 +8811,7 @@ else
                         data_this.SalsManNo = VarGeneral.UserNumber;
                         data_this.UserNew = VarGeneral.UserNumber;
                         data_this.SalsManNam = string.Empty;
-
+                        data_this.PriceIncludTax = ChkPriceIncludeTax.Checked;
                         data_this.InvHed_ID = InvHelper.INVHED_INSERT(data_this);
                         savingoccure = 1;
                     }
@@ -13784,6 +13872,9 @@ else
                 txtDebit3.Tag = string.Empty;
             }
         }
+        bool activflag = false;
+        int acv = 0; bool _CheckRemotly=false;
+    
         private void txtCredit1_ButtonCustomClick(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox_ID.Text))
@@ -16251,13 +16342,214 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
         {
             try
             {
-                return n.vDiff(n.IsHijri(txtDueDate.Text) ? n.FormatHijri(txtDueDate.Text, "yyyy/MM/dd") : n.GregToHijri(txtDueDate.Text, "yyyy/MM/dd"), VarGeneral.Hdate);
+                if (VarGeneral.gUserName == "runsetting")
+                {
+                    return 1000;
+                }
+                RegistryKey hKey = Registry.CurrentUser.OpenSubKey("Software\\PRS AND PR Settings\\MrdSoft\\Register", writable: true);
+                RegistryKey hKeyElec = Registry.CurrentUser.OpenSubKey("Software\\PRS AND PR Settings\\WinSystemOperation", writable: true);
+                RegistryKey hKeyNew = Registry.CurrentUser.OpenSubKey("Software\\MrdHrdw\\ItIntel", writable: true);
+                bool isRemotCheck = false;
+                string dtCheck = "";
+                try
+                {
+                    if (File.Exists(Application.StartupPath + "\\flxgridD.txt"))
+                    {
+                        isRemotCheck = true;
+                        FileInfo fileSecurity = new FileInfo(Application.StartupPath + "\\flxgridD.txt");
+                        FileStream fsToReadSecurity = fileSecurity.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);
+                        StreamReader srSecurity = new StreamReader(fsToReadSecurity);
+                        dtCheck = VarGeneral.Decrypt(srSecurity.ReadToEnd().Trim());
+                        srSecurity.Close();
+                    }
+                    else
+                    {
+                        isRemotCheck = false;
+                    }
+                }
+                catch
+                {
+                }
+                string regval = "";
+                string DT_H = "";
+                string regval_ELECTa = "";
+                string regval_New = "";
+                try
+                {
+                    regval = n.FormatGreg(hKey.GetValue("DTBackup").ToString(), "yyyy/MM/dd");
+                    DT_H = n.GregToHijri(regval);
+                }
+                catch
+                {
+                    regval = "";
+                    DT_H = "";
+                }
+                try
+                {
+                    regval_ELECTa = n.FormatGreg(hKeyElec.GetValue("vBackupELEC").ToString(), "yyyy/MM/dd");
+                }
+                catch
+                {
+                    regval_ELECTa = "";
+                }
+                try
+                {
+                    regval_New = n.FormatGreg(hKeyNew.GetValue("vBackup_New").ToString(), "yyyy/MM/dd");
+                }
+                catch
+                {
+                    regval_New = "";
+                }
+                if (!VarGeneral.CheckDate(regval))
+                {
+                    try
+                    {
+                        if (!VarGeneral.vDemo)
+                        {
+                            hKeyNew.CreateSubKey("TurnOff");
+                            hKeyNew.SetValue("TurnOff", "0");
+                        }
+                    }
+                    catch
+                    {
+                    }
+                    return 0;
+                }
+                if (!VarGeneral.CheckDate(regval_ELECTa))
+                {
+                    try
+                    {
+                        if (!VarGeneral.vDemo)
+                        {
+                            hKeyNew.CreateSubKey("TurnOff");
+                            hKeyNew.SetValue("TurnOff", "0");
+                        }
+                    }
+                    catch
+                    {
+                    }
+                    return 0;
+                }
+                if (!VarGeneral.CheckDate(regval_New))
+                {
+                    try
+                    {
+                        if (!VarGeneral.vDemo)
+                        {
+                            hKeyNew.CreateSubKey("TurnOff");
+                            hKeyNew.SetValue("TurnOff", "0");
+                        }
+                    }
+                    catch
+                    {
+                    }
+                    return 0;
+                }
+                if (regval.Trim() != regval_ELECTa.Trim() || regval.Trim() != regval_New.Trim() || regval_New.Trim() != regval_ELECTa.Trim())
+                {
+                    try
+                    {
+                        if (!VarGeneral.vDemo)
+                        {
+                            hKeyNew.CreateSubKey("TurnOff");
+                            hKeyNew.SetValue("TurnOff", "0");
+                        }
+                    }
+                    catch
+                    {
+                    }
+                    return 0;
+                }
+                if (isRemotCheck)
+                {
+                    if (!VarGeneral.CheckDate(dtCheck))
+                    {
+                        try
+                        {
+                            if (!VarGeneral.vDemo)
+                            {
+                                hKeyNew.CreateSubKey("TurnOff");
+                                hKeyNew.SetValue("TurnOff", "0");
+                            }
+                        }
+                        catch
+                        {
+                        }
+                        return 0;
+                    }
+                    if (dtCheck.Trim() != regval.Trim() || dtCheck.Trim() != regval_New.Trim() || dtCheck.Trim() != regval_ELECTa.Trim())
+                    {
+                        try
+                        {
+                            if (!VarGeneral.vDemo)
+                            {
+                                hKeyNew.CreateSubKey("TurnOff");
+                                hKeyNew.SetValue("TurnOff", "0");
+                            }
+                        }
+                        catch
+                        {
+                        }
+                        return 0;
+                    }
+                }
+                try
+                {
+                    if (Convert.ToDateTime(VarGeneral.Hdate) > Convert.ToDateTime(n.FormatHijri(DT_H, "yyyy/MM/dd")))
+                    {
+                        try
+                        {
+                            if (!VarGeneral.vDemo)
+                            {
+                                hKeyNew.CreateSubKey("TurnOff");
+                                hKeyNew.SetValue("TurnOff", "0");
+                            }
+                        }
+                        catch
+                        {
+                        }
+                        return 0;
+                    }
+                    return n.vDiff(n.FormatHijri(DT_H, "yyyy/MM/dd"), VarGeneral.Hdate);
+                }
+                catch
+                {
+                    if (Convert.ToDateTime(VarGeneral.Gdate) > Convert.ToDateTime(n.FormatGreg(regval, "yyyy/MM/dd")))
+                    {
+                        try
+                        {
+                            if (!VarGeneral.vDemo)
+                            {
+                                hKeyNew.CreateSubKey("TurnOff");
+                                hKeyNew.SetValue("TurnOff", "0");
+                            }
+                        }
+                        catch
+                        {
+                        }
+                        return 0;
+                    }
+                    return n.vDiff_E(n.FormatGreg(regval, "yyyy/MM/dd"), VarGeneral.Gdate);
+                }
             }
             catch
             {
+                try
+                {
+                    if (!VarGeneral.vDemo)
+                    {
+                        RegistryKey hKeyNew = Registry.CurrentUser.OpenSubKey("Software\\MrdHrdw\\ItIntel", writable: true);
+                        hKeyNew.CreateSubKey("TurnOff");
+                        hKeyNew.SetValue("TurnOff", "0");
+                    }
+                }
+                catch
+                {
+                }
                 return 0;
             }
         }
+
         private void item_CellClick(object itemno)
         {
             try
@@ -19924,8 +20216,13 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
         private void FrmInvSalePoint_Shown(object sender, EventArgs e)
         {
             VarGeneral.InvTyp = 1;
+            if (VarGeneral.currentintlanguage != 0)
+            {
+                Lab_DueAmountLoc.TextAlign = ContentAlignment.TopLeft;
+                label47.Dock = DockStyle.Right;
 
-           base.ActiveControl= textBox_Barcode;
+            }
+            base.ActiveControl= textBox_Barcode;
         
         }
 
@@ -20280,11 +20577,22 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
         private void ChkPriceIncludeTax_CheckedChanged(object sender, EventArgs e)
         {
             chkPriceIncludeTax_ValueChanged(null, null);
-            if (ChkPriceIncludeTax.Checked)
-                ChkPriceIncludeTax.Text = "السعر يشمل الضريبة";
+            if (LangArEn == 0)
+            {
+                if (ChkPriceIncludeTax.Checked)
+                    ChkPriceIncludeTax.Text = "السعر يشمل الضريبة";
+                else
+                    ChkPriceIncludeTax.Text = "السعر لا يشمل الضريبة";
+            }
             else
-                ChkPriceIncludeTax.Text = "السعر لا يشمل الضريبة";
+            {
 
+                if (ChkPriceIncludeTax.Checked)
+                    ChkPriceIncludeTax.Text = "Price Include Tax";
+                else
+                    ChkPriceIncludeTax.Text = "Price Not Include Tax";
+            }
+         
         }
 
         private void label54_Paint(object sender, PaintEventArgs e)
@@ -20485,6 +20793,21 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
         private void button12_Click(object sender, EventArgs e)
         {
             P_Main.BringToFront();
+        }
+
+        private void label56_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lab_DueAmountLoc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmInvSalePoint_RightToLeftChanged(object sender, EventArgs e)
+        {
+          
         }
 
         private void panel_Driver_VisibleChanged_1(object sender, EventArgs e)

@@ -517,7 +517,7 @@ private void InitializeComponent()
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(917, 16);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(96, 17);
+            this.checkBox1.Size = new System.Drawing.Size(97, 17);
             this.checkBox1.TabIndex = 1237;
             this.checkBox1.Text = "الفاتورة الخدمية";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -4429,7 +4429,7 @@ private void InitializeComponent()
             this.barTaskList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barTaskList.DockedBorderStyle = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.barTaskList.DockSide = DevComponents.DotNetBar.eDockSide.Top;
-            this.barTaskList.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.barTaskList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barTaskList.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.Caption;
             this.barTaskList.IsMaximized = false;
             this.barTaskList.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {

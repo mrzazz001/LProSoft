@@ -2105,6 +2105,14 @@ namespace InvAcc.Forms
                 return;
             }
             AutoGaidAcc();
+            txtCredit3.Tag = "";
+            txtCredit2.Tag = "";
+            txtCredit1.Tag = "";
+            txtDebit1.Tag = "";
+            txtDebit2.Tag = "";
+            txtDebit3.Tag = "";
+        
+
             text_Mobile.Text = "";
             State = FormState.New;
             data_this = new T_INVHED();
@@ -2477,8 +2485,8 @@ namespace InvAcc.Forms
             superTabControl_Info.SelectedTabIndex = 4;
             InvModeChanged();
             doubleInput_NetWorkLoc_Leave(null, null);
-            if (Utilites.isnollorempty(txtCredit3.Tag))
-             txtCredit3.Tag = ((_InvSetting.AccCredit2.Trim() != "***") ? _InvSetting.AccCredit2.Trim() : "");
+           if (Utilites.isnollorempty(txtCredit3.Tag))
+             txtCredit3.Tag = ((_InvSetting.AccCredit3.Trim() != "***") ? _InvSetting.AccCredit3.Trim() : "");
             string ar = "";
             try
             {
@@ -2514,7 +2522,7 @@ namespace InvAcc.Forms
 
             if (Utilites.isnollorempty(txtDebit3.Tag))
             
-                txtDebit3.Tag = ((_InvSetting.AccDebit2.Trim() != "***") ? _InvSetting.AccDebit2.Trim() : "");
+                txtDebit3.Tag = ((_InvSetting.AccDebit3.Trim() != "***") ? _InvSetting.AccDebit3.Trim() : "");
             try
             {
                 ar = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Arb_Des;
@@ -2597,8 +2605,7 @@ namespace InvAcc.Forms
                 }
                 txtCredit2.Text = txtCustName.Text;
                 txtCredit2.Tag = txtCustNo.Text;
-                txtCredit3.Text = txtCustName.Text;
-                txtCredit3.Tag = txtCustNo.Text;
+               
                 if (!checkBox_CostGaidTax.Checked || VarGeneral.SSSTyp == 0)
                 {
                     return;
@@ -10677,6 +10684,7 @@ namespace InvAcc.Forms
                 txtTele.ReadOnly = false;
                 txtAddress.ReadOnly = false;
             }
+            InvModeChanged();
         }
         private void button_CustD1_Click(object sender, EventArgs e)
         {

@@ -20447,5 +20447,14 @@ execute(@ss)
             frmItemNoWizard frm = new frmItemNoWizard();
             frm.ShowDialog();
         }
+
+        private void tabControl1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void buttonItem36_Click(object sender, EventArgs e)
+        {
+            VarGeneral.chekprintersettings();
+        }
     }
 }

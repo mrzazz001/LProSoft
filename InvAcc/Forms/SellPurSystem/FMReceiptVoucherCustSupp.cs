@@ -768,7 +768,12 @@ namespace InvAcc.Forms
                         db_.EndTransaction();
                     }
                 }
-                db_.StartTransaction();
+                double txtAmountValue = txtAmount.Value;
+                if (VarGeneral.AccTyp != 4)
+                {
+                    txtAmountValue = txtAmountValue * -1;
+                }
+                    db_.StartTransaction();
                 db_.ClearParameters();
                 db_.AddParameter("GDDET_ID", DbType.Int32, 0);
                 db_.AddParameter("gdID", DbType.Int32, data_this.gdhead_ID);
@@ -778,7 +783,7 @@ namespace InvAcc.Forms
                 db_.AddParameter("recptTyp", DbType.String, "11");
                 db_.AddParameter("AccNo", DbType.String, txtAccNo.Text);
                 db_.AddParameter("AccName", DbType.String, txtAccNameR.Text);
-                db_.AddParameter("gdValue", DbType.Double, txtAmount.Value);
+                db_.AddParameter("gdValue", DbType.Double, txtAmountValue);
                 db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
                 db_.AddParameter("Lin", DbType.Int32, 1);
                 db_.AddParameter("AccNoDestruction", DbType.String, null);
@@ -794,7 +799,7 @@ namespace InvAcc.Forms
                 db_.AddParameter("recptTyp", DbType.String, "11");
                 db_.AddParameter("AccNo", DbType.String, txtCustAccNo.Text);
                 db_.AddParameter("AccName", DbType.String, txtCustAccName.Text);
-                db_.AddParameter("gdValue", DbType.Double, 0.0 - txtAmount.Value);
+                db_.AddParameter("gdValue", DbType.Double, 0.0 - txtAmountValue);
                 db_.AddParameter("recptNo", DbType.String, textBox_ID.Text);
                 db_.AddParameter("Lin", DbType.Int32, 2);
                 db_.AddParameter("AccNoDestruction", DbType.String, null);
@@ -1063,26 +1068,43 @@ namespace InvAcc.Forms
             {
                 txtCustDescription.Text = "سند لتخفيض مديونية العميل";
                 txtCustDescriptionE.Text = "Indebtedness of the Cust.";
+                try
+                {
+                    if (_AccDef.Balance.Value >0.0)
+                    {
+                        label_Balance.Value = _AccDef.Balance.Value;
+                    }
+                    else
+                    {
+                        label_Balance.Value = 0.0;
+                    }
+                }
+                catch
+                {
+                    label_Balance.Value = 0.0;
+                }
+
             }
             else
             {
                 txtCustDescription.Text = "سند لتخفيض مديونية مورد";
-                txtCustDescriptionE.Text = "Indebtedness of the Supplier.";
-            }
-            try
-            {
-                if (_AccDef.Balance.Value > 0.0)
+                txtCustDescriptionE.Text = "Indebtedness of theSupplier.";
+                try
                 {
-                    label_Balance.Value = _AccDef.Balance.Value;
+                    if (_AccDef.Balance.Value < 0.0)
+                    {
+                        label_Balance.Value =(-1)* _AccDef.Balance.Value;
+                    }
+                    else
+                    {
+                        label_Balance.Value = 0.0;
+                    }
                 }
-                else
+                catch
                 {
                     label_Balance.Value = 0.0;
                 }
-            }
-            catch
-            {
-                label_Balance.Value = 0.0;
+
             }
         }
         private void txtCustDescription_Click(object sender, EventArgs e)

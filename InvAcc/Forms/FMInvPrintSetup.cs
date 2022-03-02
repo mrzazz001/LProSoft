@@ -533,7 +533,7 @@ namespace InvAcc.Forms
                 p.lnSpc = double.Parse(VarGeneral.TString.TEmpty(txtDistance.Text ?? ""));
                 p.invGdADesc = textBox_CachierTxtA.Text;
                 p.invGdEDesc = textBox_CachierTxtE.Text;
-                p.defPrn = CmbPrinter.Text ?? "";
+                p.defPrn = CmbPrinter.Text;
                 p.DefLines = txtpageCount.Value;
                 _InvSetting.PrintCat = chk_Stoped.Value;
                 if (RButPortrait.Checked)

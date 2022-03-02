@@ -25,8 +25,6 @@ partial class FrmEmp
 private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.PanelSpecialContainer = new System.Windows.Forms.Panel();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmp));
             DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.SuperGrid.Style.Background background1 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
@@ -37,27 +35,89 @@ private void InitializeComponent()
             DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle1 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
             DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle2 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
             DevComponents.DotNetBar.SuperGrid.Style.Background background4 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.timerInfoBallon = new System.Windows.Forms.Timer(this.components);
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.barTopDockSite = new DevComponents.DotNetBar.DockSite();
-            this.barBottomDockSite = new DevComponents.DotNetBar.DockSite();
-            this.dotNetBarManager1 = new DevComponents.DotNetBar.DotNetBarManager(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.barLeftDockSite = new DevComponents.DotNetBar.DockSite();
-            this.barRightDockSite = new DevComponents.DotNetBar.DockSite();
-            this.dockSite4 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite1 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite2 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite3 = new DevComponents.DotNetBar.DockSite();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ToolStripMenuItem_Rep = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItem_Det = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmp));
+            this.PanelSpecialContainer = new System.Windows.Forms.Panel();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.superTabControl_Employee = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel15 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_SrchNation = new DevComponents.DotNetBar.ButtonX();
+            this.button_SrchGuartor = new DevComponents.DotNetBar.ButtonX();
+            this.button_SrchJob = new DevComponents.DotNetBar.ButtonX();
+            this.button_SrchSection = new DevComponents.DotNetBar.ButtonX();
+            this.button_SrchDept = new DevComponents.DotNetBar.ButtonX();
+            this.pictureBox_EnterPic = new System.Windows.Forms.PictureBox();
+            this.textBox_NameE = new System.Windows.Forms.TextBox();
+            this.textBox_NameA = new System.Windows.Forms.TextBox();
+            this.textBox_SocialInsuranceNo = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox_QualificationA = new System.Windows.Forms.TextBox();
+            this.button_AddNewBirthPlaces = new DevComponents.DotNetBar.ButtonX();
+            this.button_SrchBirthPlaces = new DevComponents.DotNetBar.ButtonX();
+            this.textBox_ExperiencesA = new System.Windows.Forms.TextBox();
+            this.label127 = new System.Windows.Forms.Label();
+            this.comboBox_BloodTyp = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboBox_BirthPlace = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.label133 = new System.Windows.Forms.Label();
+            this.textBox_Email = new System.Windows.Forms.TextBox();
+            this.label125 = new System.Windows.Forms.Label();
+            this.textBox_Tel = new System.Windows.Forms.TextBox();
+            this.label124 = new System.Windows.Forms.Label();
+            this.comboBox_CityNo = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button_AddNewCity = new DevComponents.DotNetBar.ButtonX();
+            this.button_SrchCities = new DevComponents.DotNetBar.ButtonX();
+            this.textBox_AddressA = new System.Windows.Forms.TextBox();
+            this.label126 = new System.Windows.Forms.Label();
+            this.comboBox_Sex = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboBox_MaritalStatus = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboBox_Religion = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.dateTimeInput_BirthDate = new System.Windows.Forms.MaskedTextBox();
+            this.label119 = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label115 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.button_AddNewReligon = new DevComponents.DotNetBar.ButtonX();
+            this.button_SrchReligion = new DevComponents.DotNetBar.ButtonX();
+            this.button_SrchReligon = new DevComponents.DotNetBar.ButtonX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.checkBox_ClearPic = new DevComponents.DotNetBar.ButtonX();
+            this.button_Pic = new DevComponents.DotNetBar.ButtonX();
+            this.comboBox_Nationalty = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.button_AddNewNation = new DevComponents.DotNetBar.ButtonX();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox_Guarantor = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.button_AddNewSponser = new DevComponents.DotNetBar.ButtonX();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox_Job = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.button_AddNewJob = new DevComponents.DotNetBar.ButtonX();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox_Section = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.button_AddNewSection = new DevComponents.DotNetBar.ButtonX();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox_Dept = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.button_AddNewDept = new DevComponents.DotNetBar.ButtonX();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox_Pass = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox_CompPaying = new DevComponents.Editors.DoubleInput();
+            this.textBox_SalSubtract = new DevComponents.Editors.DoubleInput();
+            this.textBox_ID = new System.Windows.Forms.TextBox();
+            this.linkLabel_ChangeEmpNo = new System.Windows.Forms.LinkLabel();
+            this.button_PhotoShoot = new DevComponents.DotNetBar.ButtonX();
+            this.labelX15 = new DevComponents.DotNetBar.LabelX();
+            this.superTabItem_Gen = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel18 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.panelEx5 = new DevComponents.DotNetBar.PanelEx();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -304,85 +364,6 @@ private void InitializeComponent()
             this.checkBox_AutoReturnContr = new System.Windows.Forms.CheckBox();
             this.labelX18 = new DevComponents.DotNetBar.LabelX();
             this.superTabItem_Contract = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel15 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button_SrchNation = new DevComponents.DotNetBar.ButtonX();
-            this.button_SrchGuartor = new DevComponents.DotNetBar.ButtonX();
-            this.button_SrchJob = new DevComponents.DotNetBar.ButtonX();
-            this.button_SrchSection = new DevComponents.DotNetBar.ButtonX();
-            this.button_SrchDept = new DevComponents.DotNetBar.ButtonX();
-            this.pictureBox_EnterPic = new System.Windows.Forms.PictureBox();
-            this.textBox_NameE = new System.Windows.Forms.TextBox();
-            this.textBox_NameA = new System.Windows.Forms.TextBox();
-            this.textBox_SocialInsuranceNo = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox_QualificationA = new System.Windows.Forms.TextBox();
-            this.button_AddNewBirthPlaces = new DevComponents.DotNetBar.ButtonX();
-            this.button_SrchBirthPlaces = new DevComponents.DotNetBar.ButtonX();
-            this.textBox_ExperiencesA = new System.Windows.Forms.TextBox();
-            this.label127 = new System.Windows.Forms.Label();
-            this.comboBox_BloodTyp = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboBox_BirthPlace = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.label133 = new System.Windows.Forms.Label();
-            this.textBox_Email = new System.Windows.Forms.TextBox();
-            this.label125 = new System.Windows.Forms.Label();
-            this.textBox_Tel = new System.Windows.Forms.TextBox();
-            this.label124 = new System.Windows.Forms.Label();
-            this.comboBox_CityNo = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button_AddNewCity = new DevComponents.DotNetBar.ButtonX();
-            this.button_SrchCities = new DevComponents.DotNetBar.ButtonX();
-            this.textBox_AddressA = new System.Windows.Forms.TextBox();
-            this.label126 = new System.Windows.Forms.Label();
-            this.comboBox_Sex = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboBox_MaritalStatus = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboBox_Religion = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.dateTimeInput_BirthDate = new System.Windows.Forms.MaskedTextBox();
-            this.label119 = new System.Windows.Forms.Label();
-            this.label118 = new System.Windows.Forms.Label();
-            this.label117 = new System.Windows.Forms.Label();
-            this.label115 = new System.Windows.Forms.Label();
-            this.label114 = new System.Windows.Forms.Label();
-            this.label113 = new System.Windows.Forms.Label();
-            this.button_AddNewReligon = new DevComponents.DotNetBar.ButtonX();
-            this.button_SrchReligion = new DevComponents.DotNetBar.ButtonX();
-            this.button_SrchReligon = new DevComponents.DotNetBar.ButtonX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.checkBox_ClearPic = new DevComponents.DotNetBar.ButtonX();
-            this.button_Pic = new DevComponents.DotNetBar.ButtonX();
-            this.comboBox_Nationalty = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.button_AddNewNation = new DevComponents.DotNetBar.ButtonX();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox_Guarantor = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.button_AddNewSponser = new DevComponents.DotNetBar.ButtonX();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox_Job = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.button_AddNewJob = new DevComponents.DotNetBar.ButtonX();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox_Section = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.button_AddNewSection = new DevComponents.DotNetBar.ButtonX();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox_Dept = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.button_AddNewDept = new DevComponents.DotNetBar.ButtonX();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox_Pass = new System.Windows.Forms.TextBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox_CompPaying = new DevComponents.Editors.DoubleInput();
-            this.textBox_SalSubtract = new DevComponents.Editors.DoubleInput();
-            this.textBox_ID = new System.Windows.Forms.TextBox();
-            this.linkLabel_ChangeEmpNo = new System.Windows.Forms.LinkLabel();
-            this.button_PhotoShoot = new DevComponents.DotNetBar.ButtonX();
-            this.labelX15 = new DevComponents.DotNetBar.LabelX();
-            this.superTabItem_Gen = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.panelEx8 = new DevComponents.DotNetBar.PanelEx();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -562,6 +543,25 @@ private void InitializeComponent()
             this.lable_Records = new DevComponents.DotNetBar.LabelItem();
             this.Button_Next = new DevComponents.DotNetBar.ButtonItem();
             this.Button_Last = new DevComponents.DotNetBar.ButtonItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.timerInfoBallon = new System.Windows.Forms.Timer(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.barTopDockSite = new DevComponents.DotNetBar.DockSite();
+            this.barBottomDockSite = new DevComponents.DotNetBar.DockSite();
+            this.dotNetBarManager1 = new DevComponents.DotNetBar.DotNetBarManager(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.barLeftDockSite = new DevComponents.DotNetBar.DockSite();
+            this.barRightDockSite = new DevComponents.DotNetBar.DockSite();
+            this.dockSite4 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite1 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite2 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite3 = new DevComponents.DotNetBar.DockSite();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ToolStripMenuItem_Rep = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Det = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.expandableSplitter1 = new DevComponents.DotNetBar.ExpandableSplitter();
             this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
             this.DGV_Main = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
@@ -574,16 +574,19 @@ private void InitializeComponent()
             this.panel1 = new System.Windows.Forms.Panel();
             this.listBox_ImageFiles = new System.Windows.Forms.ListBox();
             this.listBox_ImageFiles2 = new System.Windows.Forms.ListBox();
-            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);  this.netResize1.LabelsAutoEllipse = false;
-            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
-            this.Shown += new System.EventHandler(this.FrmInvSale_Shown);
-            this.SizeChanged += new System.EventHandler(this.FrmInvSale_SizeChanged);
-            ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
-            this.contextMenuStrip2.SuspendLayout();
-            this.panelEx2.SuspendLayout();
+            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
+            this.PanelSpecialContainer.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Employee)).BeginInit();
             this.superTabControl_Employee.SuspendLayout();
+            this.superTabControlPanel15.SuspendLayout();
+            this.panelEx1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_EnterPic)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox_CompPaying)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox_SalSubtract)).BeginInit();
             this.superTabControlPanel18.SuspendLayout();
             this.panelEx5.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -649,14 +652,6 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.textBox_MandateDay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_AddHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_AddDay)).BeginInit();
-            this.superTabControlPanel15.SuspendLayout();
-            this.panelEx1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_EnterPic)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textBox_CompPaying)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBox_SalSubtract)).BeginInit();
             this.superTabControlPanel1.SuspendLayout();
             this.panelEx8.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -667,218 +662,23 @@ private void InitializeComponent()
             this.ribbonBar_Tasks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main2)).BeginInit();
+            this.contextMenuStrip2.SuspendLayout();
             this.panelEx3.SuspendLayout();
             this.ribbonBar_DGV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_DGV)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // PanelSpecialContainer
+            // 
+            this.PanelSpecialContainer.Controls.Add(this.ribbonBar1);
+            this.PanelSpecialContainer.Controls.Add(this.ribbonBar_Tasks);
             this.PanelSpecialContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelSpecialContainer.Location = new System.Drawing.Point(0, 0);
             this.PanelSpecialContainer.Name = "PanelSpecialContainer";
-            this.PanelSpecialContainer.Size = new System.Drawing.Size(1278, 514);
+            this.PanelSpecialContainer.Size = new System.Drawing.Size(677, 500);
             this.PanelSpecialContainer.TabIndex = 1220;
-            this.Controls.Add(this.PanelSpecialContainer);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.DefaultExt = "*.rtf";
-            this.saveFileDialog1.FileName = "doc1";
-            this.saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|All Files(*.*)|*.*";
-            this.saveFileDialog1.FilterIndex = 2;
-            this.saveFileDialog1.Title = "Save File";
-            // 
-            // timerInfoBallon
-            // 
-            this.timerInfoBallon.Interval = 3000;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.DefaultExt = "*.rtf";
-            this.openFileDialog1.Filter = "Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|All Files(*.*)|*.*";
-            this.openFileDialog1.FilterIndex = 2;
-            this.openFileDialog1.Title = "Open File";
-            // 
-            // barTopDockSite
-            // 
-            this.barTopDockSite.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.barTopDockSite.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barTopDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.barTopDockSite.Location = new System.Drawing.Point(0, 0);
-            this.barTopDockSite.Name = "barTopDockSite";
-            this.barTopDockSite.Size = new System.Drawing.Size(677, 0);
-            this.barTopDockSite.TabIndex = 889;
-            this.barTopDockSite.TabStop = false;
-            // 
-            // barBottomDockSite
-            // 
-            this.barBottomDockSite.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.barBottomDockSite.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barBottomDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.barBottomDockSite.Location = new System.Drawing.Point(0, 500);
-            this.barBottomDockSite.Name = "barBottomDockSite";
-            this.barBottomDockSite.Size = new System.Drawing.Size(677, 0);
-            this.barBottomDockSite.TabIndex = 890;
-            this.barBottomDockSite.TabStop = false;
-            // 
-            // dotNetBarManager1
-            // 
-            this.dotNetBarManager1.BottomDockSite = this.barBottomDockSite;
-            this.dotNetBarManager1.Images = this.imageList1;
-            this.dotNetBarManager1.LeftDockSite = this.barLeftDockSite;
-            //this.dotNetBarManager1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.dotNetBarManager1.MdiSystemItemVisible = false;
-            this.dotNetBarManager1.ParentForm = null;
-            this.dotNetBarManager1.RightDockSite = this.barRightDockSite;
-            this.dotNetBarManager1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2000;
-            this.dotNetBarManager1.ToolbarBottomDockSite = this.dockSite4;
-            this.dotNetBarManager1.ToolbarLeftDockSite = this.dockSite1;
-            this.dotNetBarManager1.ToolbarRightDockSite = this.dockSite2;
-            this.dotNetBarManager1.ToolbarTopDockSite = this.dockSite3;
-            this.dotNetBarManager1.TopDockSite = this.barTopDockSite;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Magenta;
-            this.imageList1.Images.SetKeyName(0, string.Empty);
-            this.imageList1.Images.SetKeyName(1, string.Empty);
-            this.imageList1.Images.SetKeyName(2, string.Empty);
-            this.imageList1.Images.SetKeyName(3, string.Empty);
-            this.imageList1.Images.SetKeyName(4, string.Empty);
-            this.imageList1.Images.SetKeyName(5, string.Empty);
-            this.imageList1.Images.SetKeyName(6, string.Empty);
-            this.imageList1.Images.SetKeyName(7, string.Empty);
-            this.imageList1.Images.SetKeyName(8, string.Empty);
-            this.imageList1.Images.SetKeyName(9, string.Empty);
-            this.imageList1.Images.SetKeyName(10, string.Empty);
-            this.imageList1.Images.SetKeyName(11, string.Empty);
-            this.imageList1.Images.SetKeyName(12, string.Empty);
-            this.imageList1.Images.SetKeyName(13, string.Empty);
-            this.imageList1.Images.SetKeyName(14, string.Empty);
-            this.imageList1.Images.SetKeyName(15, string.Empty);
-            this.imageList1.Images.SetKeyName(16, string.Empty);
-            this.imageList1.Images.SetKeyName(17, string.Empty);
-            this.imageList1.Images.SetKeyName(18, string.Empty);
-            this.imageList1.Images.SetKeyName(19, string.Empty);
-            this.imageList1.Images.SetKeyName(20, string.Empty);
-            this.imageList1.Images.SetKeyName(21, string.Empty);
-            this.imageList1.Images.SetKeyName(22, string.Empty);
-            this.imageList1.Images.SetKeyName(23, string.Empty);
-            // 
-            // barLeftDockSite
-            // 
-            this.barLeftDockSite.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.barLeftDockSite.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barLeftDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.barLeftDockSite.Location = new System.Drawing.Point(0, 0);
-            this.barLeftDockSite.Name = "barLeftDockSite";
-            this.barLeftDockSite.Size = new System.Drawing.Size(0, 500);
-            this.barLeftDockSite.TabIndex = 891;
-            this.barLeftDockSite.TabStop = false;
-            // 
-            // barRightDockSite
-            // 
-            this.barRightDockSite.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.barRightDockSite.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barRightDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.barRightDockSite.Location = new System.Drawing.Point(677, 0);
-            this.barRightDockSite.Name = "barRightDockSite";
-            this.barRightDockSite.Size = new System.Drawing.Size(0, 500);
-            this.barRightDockSite.TabIndex = 892;
-            this.barRightDockSite.TabStop = false;
-            // 
-            // dockSite4
-            // 
-            this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockSite4.Location = new System.Drawing.Point(0, 500);
-            this.dockSite4.Name = "dockSite4";
-            this.dockSite4.Size = new System.Drawing.Size(677, 0);
-            this.dockSite4.TabIndex = 896;
-            this.dockSite4.TabStop = false;
-            // 
-            // dockSite1
-            // 
-            this.dockSite1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dockSite1.Location = new System.Drawing.Point(0, 0);
-            this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(0, 500);
-            this.dockSite1.TabIndex = 893;
-            this.dockSite1.TabStop = false;
-            // 
-            // dockSite2
-            // 
-            this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockSite2.Location = new System.Drawing.Point(677, 0);
-            this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 500);
-            this.dockSite2.TabIndex = 894;
-            this.dockSite2.TabStop = false;
-            // 
-            // dockSite3
-            // 
-            this.dockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dockSite3.Location = new System.Drawing.Point(0, 0);
-            this.dockSite3.Name = "dockSite3";
-            this.dockSite3.Size = new System.Drawing.Size(677, 0);
-            this.dockSite3.TabIndex = 895;
-            this.dockSite3.TabStop = false;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // ToolStripMenuItem_Rep
-            // 
-            this.ToolStripMenuItem_Rep.Checked = true;
-            this.ToolStripMenuItem_Rep.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ToolStripMenuItem_Rep.Name = "ToolStripMenuItem_Rep";
-            this.ToolStripMenuItem_Rep.Size = new System.Drawing.Size(148, 22);
-            this.ToolStripMenuItem_Rep.Text = "إظهار التقرير";
-            // 
-            // ToolStripMenuItem_Det
-            // 
-            this.ToolStripMenuItem_Det.Name = "ToolStripMenuItem_Det";
-            this.ToolStripMenuItem_Det.Size = new System.Drawing.Size(148, 22);
-            this.ToolStripMenuItem_Det.Text = "إظهار التفاصيل";
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem_Det,
-            this.ToolStripMenuItem_Rep});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip2.Size = new System.Drawing.Size(149, 48);
-            // 
-            // panelEx2
-            // 
-            this.PanelSpecialContainer.Controls.Add(this.ribbonBar1);
-            this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelSpecialContainer.Controls.Add(this.ribbonBar_Tasks);
-            this.superTabControl_Main1.RightToLeftChanged += new System.EventHandler(this.superTabControl_Main1_RightToLeftChanged);
-            this.panelEx2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelEx2.Location = new System.Drawing.Point(0, 13);
-            this.panelEx2.MinimumSize = new System.Drawing.Size(677, 487);
-            this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(677, 487);
-            this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx2.Style.BackColor1.Color = System.Drawing.Color.AliceBlue;
-            this.panelEx2.Style.BackColor2.Color = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panelEx2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.panelEx2.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelEx2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.panelEx2.Style.GradientAngle = 90;
-            this.panelEx2.TabIndex = 0;
-            this.panelEx2.Text = "Click to collapse";
             // 
             // ribbonBar1
             // 
@@ -895,12 +695,13 @@ private void InitializeComponent()
             this.ribbonBar1.ContainerControlProcessDialogKey = true;
             this.ribbonBar1.Controls.Add(this.superTabControl_Employee);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonBar1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(677, 436);
+            this.ribbonBar1.Size = new System.Drawing.Size(677, 449);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 867;
+            this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -923,12 +724,12 @@ private void InitializeComponent()
             // 
             // 
             // 
-            this.superTabControl_Employee.ControlBox.CloseBox.Name = string.Empty;
+            this.superTabControl_Employee.ControlBox.CloseBox.Name = "";
             // 
             // 
             // 
-            this.superTabControl_Employee.ControlBox.MenuBox.Name = string.Empty;
-            this.superTabControl_Employee.ControlBox.Name = string.Empty;
+            this.superTabControl_Employee.ControlBox.MenuBox.Name = "";
+            this.superTabControl_Employee.ControlBox.Name = "";
             this.superTabControl_Employee.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl_Employee.ControlBox.MenuBox,
             this.superTabControl_Employee.ControlBox.CloseBox});
@@ -944,7 +745,7 @@ private void InitializeComponent()
             this.superTabControl_Employee.ReorderTabsEnabled = true;
             this.superTabControl_Employee.SelectedTabFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.superTabControl_Employee.SelectedTabIndex = 0;
-            this.superTabControl_Employee.Size = new System.Drawing.Size(677, 419);
+            this.superTabControl_Employee.Size = new System.Drawing.Size(677, 432);
             this.superTabControl_Employee.TabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Right;
             this.superTabControl_Employee.TabFont = new System.Drawing.Font("Segoe UI", 9F);
             this.superTabControl_Employee.TabIndex = 4;
@@ -966,6 +767,1160 @@ private void InitializeComponent()
             this.superTabControl_Employee.TabVerticalSpacing = 2;
             this.superTabControl_Employee.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
             // 
+            // superTabControlPanel15
+            // 
+            this.superTabControlPanel15.Controls.Add(this.panelEx1);
+            this.superTabControlPanel15.Controls.Add(this.labelX15);
+            this.superTabControlPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel15.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel15.Name = "superTabControlPanel15";
+            this.superTabControlPanel15.Size = new System.Drawing.Size(610, 432);
+            this.superTabControlPanel15.TabIndex = 0;
+            this.superTabControlPanel15.TabItem = this.superTabItem_Gen;
+            // 
+            // panelEx1
+            // 
+            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
+            this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx1.Controls.Add(this.groupBox1);
+            this.panelEx1.DisabledBackColor = System.Drawing.Color.Empty;
+            this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEx1.Location = new System.Drawing.Point(0, 0);
+            this.panelEx1.Name = "panelEx1";
+            this.panelEx1.Size = new System.Drawing.Size(610, 432);
+            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx1.Style.BackColor1.Color = System.Drawing.Color.AliceBlue;
+            this.panelEx1.Style.BackColor2.Color = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.panelEx1.Style.GradientAngle = 90;
+            this.panelEx1.TabIndex = 9;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox1.Controls.Add(this.button_SrchNation);
+            this.groupBox1.Controls.Add(this.button_SrchGuartor);
+            this.groupBox1.Controls.Add(this.button_SrchJob);
+            this.groupBox1.Controls.Add(this.button_SrchSection);
+            this.groupBox1.Controls.Add(this.button_SrchDept);
+            this.groupBox1.Controls.Add(this.pictureBox_EnterPic);
+            this.groupBox1.Controls.Add(this.textBox_NameE);
+            this.groupBox1.Controls.Add(this.textBox_NameA);
+            this.groupBox1.Controls.Add(this.textBox_SocialInsuranceNo);
+            this.groupBox1.Controls.Add(this.panel2);
+            this.groupBox1.Controls.Add(this.labelX1);
+            this.groupBox1.Controls.Add(this.checkBox_ClearPic);
+            this.groupBox1.Controls.Add(this.button_Pic);
+            this.groupBox1.Controls.Add(this.comboBox_Nationalty);
+            this.groupBox1.Controls.Add(this.button_AddNewNation);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.comboBox_Guarantor);
+            this.groupBox1.Controls.Add(this.button_AddNewSponser);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.comboBox_Job);
+            this.groupBox1.Controls.Add(this.button_AddNewJob);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.comboBox_Section);
+            this.groupBox1.Controls.Add(this.button_AddNewSection);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.comboBox_Dept);
+            this.groupBox1.Controls.Add(this.button_AddNewDept);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.textBox_Pass);
+            this.groupBox1.Controls.Add(this.label52);
+            this.groupBox1.Controls.Add(this.label40);
+            this.groupBox1.Controls.Add(this.label36);
+            this.groupBox1.Controls.Add(this.label38);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.textBox_ID);
+            this.groupBox1.Controls.Add(this.linkLabel_ChangeEmpNo);
+            this.groupBox1.Controls.Add(this.button_PhotoShoot);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(610, 432);
+            this.groupBox1.TabIndex = 103;
+            this.groupBox1.TabStop = false;
+            // 
+            // button_SrchNation
+            // 
+            this.button_SrchNation.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_SrchNation.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_SrchNation.Location = new System.Drawing.Point(31, 194);
+            this.button_SrchNation.Name = "button_SrchNation";
+            this.button_SrchNation.Size = new System.Drawing.Size(26, 20);
+            this.button_SrchNation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_SrchNation.Symbol = "";
+            this.button_SrchNation.SymbolSize = 12F;
+            this.button_SrchNation.TabIndex = 1600;
+            this.button_SrchNation.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_SrchNation.Click += new System.EventHandler(this.button_SrchNation_Click);
+            // 
+            // button_SrchGuartor
+            // 
+            this.button_SrchGuartor.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_SrchGuartor.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_SrchGuartor.Location = new System.Drawing.Point(182, 170);
+            this.button_SrchGuartor.Name = "button_SrchGuartor";
+            this.button_SrchGuartor.Size = new System.Drawing.Size(26, 20);
+            this.button_SrchGuartor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_SrchGuartor.Symbol = "";
+            this.button_SrchGuartor.SymbolSize = 12F;
+            this.button_SrchGuartor.TabIndex = 1596;
+            this.button_SrchGuartor.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_SrchGuartor.Click += new System.EventHandler(this.button_SrchGuartor_Click);
+            // 
+            // button_SrchJob
+            // 
+            this.button_SrchJob.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_SrchJob.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_SrchJob.Location = new System.Drawing.Point(182, 144);
+            this.button_SrchJob.Name = "button_SrchJob";
+            this.button_SrchJob.Size = new System.Drawing.Size(26, 20);
+            this.button_SrchJob.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_SrchJob.Symbol = "";
+            this.button_SrchJob.SymbolSize = 12F;
+            this.button_SrchJob.TabIndex = 1592;
+            this.button_SrchJob.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_SrchJob.Click += new System.EventHandler(this.button_SrchJob_Click);
+            // 
+            // button_SrchSection
+            // 
+            this.button_SrchSection.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_SrchSection.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_SrchSection.Location = new System.Drawing.Point(182, 118);
+            this.button_SrchSection.Name = "button_SrchSection";
+            this.button_SrchSection.Size = new System.Drawing.Size(26, 20);
+            this.button_SrchSection.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_SrchSection.Symbol = "";
+            this.button_SrchSection.SymbolSize = 12F;
+            this.button_SrchSection.TabIndex = 1588;
+            this.button_SrchSection.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_SrchSection.Click += new System.EventHandler(this.button_SrchSection_Click);
+            // 
+            // button_SrchDept
+            // 
+            this.button_SrchDept.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_SrchDept.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_SrchDept.Location = new System.Drawing.Point(182, 93);
+            this.button_SrchDept.Name = "button_SrchDept";
+            this.button_SrchDept.Size = new System.Drawing.Size(26, 20);
+            this.button_SrchDept.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_SrchDept.Symbol = "";
+            this.button_SrchDept.SymbolSize = 12F;
+            this.button_SrchDept.TabIndex = 1584;
+            this.button_SrchDept.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_SrchDept.Click += new System.EventHandler(this.button_SrchDept_Click);
+            // 
+            // pictureBox_EnterPic
+            // 
+            this.pictureBox_EnterPic.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_EnterPic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox_EnterPic.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox_EnterPic.Location = new System.Drawing.Point(3, 44);
+            this.pictureBox_EnterPic.Name = "pictureBox_EnterPic";
+            this.pictureBox_EnterPic.Size = new System.Drawing.Size(148, 126);
+            this.pictureBox_EnterPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_EnterPic.TabIndex = 6686;
+            this.pictureBox_EnterPic.TabStop = false;
+            // 
+            // textBox_NameE
+            // 
+            this.textBox_NameE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_NameE.ForeColor = System.Drawing.Color.Black;
+            this.textBox_NameE.Location = new System.Drawing.Point(154, 69);
+            this.textBox_NameE.MaxLength = 30;
+            this.textBox_NameE.Name = "textBox_NameE";
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_NameE, false);
+            this.textBox_NameE.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox_NameE.Size = new System.Drawing.Size(336, 20);
+            this.textBox_NameE.TabIndex = 4;
+            this.textBox_NameE.Enter += new System.EventHandler(this.textBox_NameE_Enter);
+            this.textBox_NameE.Leave += new System.EventHandler(this.textBox_NameA_Leave);
+            // 
+            // textBox_NameA
+            // 
+            this.textBox_NameA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_NameA.ForeColor = System.Drawing.Color.Black;
+            this.textBox_NameA.Location = new System.Drawing.Point(154, 44);
+            this.textBox_NameA.MaxLength = 30;
+            this.textBox_NameA.Name = "textBox_NameA";
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_NameA, false);
+            this.textBox_NameA.Size = new System.Drawing.Size(336, 20);
+            this.textBox_NameA.TabIndex = 3;
+            this.textBox_NameA.Enter += new System.EventHandler(this.textBox_NameA_Enter);
+            this.textBox_NameA.Leave += new System.EventHandler(this.textBox_NameA_Leave);
+            // 
+            // textBox_SocialInsuranceNo
+            // 
+            this.textBox_SocialInsuranceNo.AutoSelectAll = true;
+            this.textBox_SocialInsuranceNo.BackColor = System.Drawing.Color.AliceBlue;
+            // 
+            // 
+            // 
+            this.textBox_SocialInsuranceNo.Border.Class = "TextBoxBorder";
+            this.textBox_SocialInsuranceNo.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBox_SocialInsuranceNo.ButtonCustom.Text = ": التأمين الإجتماعي";
+            this.textBox_SocialInsuranceNo.ForeColor = System.Drawing.Color.Black;
+            this.textBox_SocialInsuranceNo.Location = new System.Drawing.Point(3, 218);
+            this.textBox_SocialInsuranceNo.Multiline = true;
+            this.textBox_SocialInsuranceNo.Name = "textBox_SocialInsuranceNo";
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_SocialInsuranceNo, false);
+            this.textBox_SocialInsuranceNo.Size = new System.Drawing.Size(575, 42);
+            this.textBox_SocialInsuranceNo.TabIndex = 10;
+            this.textBox_SocialInsuranceNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_SocialInsuranceNo.WatermarkColor = System.Drawing.Color.RosyBrown;
+            this.textBox_SocialInsuranceNo.WatermarkFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_SocialInsuranceNo.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.textBox_SocialInsuranceNo.WatermarkText = "...";
+            this.textBox_SocialInsuranceNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_SocialInsuranceNo_KeyPress);
+            this.textBox_SocialInsuranceNo.Leave += new System.EventHandler(this.textBox_SocialInsuranceNo_Leave);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.textBox_QualificationA);
+            this.panel2.Controls.Add(this.button_AddNewBirthPlaces);
+            this.panel2.Controls.Add(this.button_SrchBirthPlaces);
+            this.panel2.Controls.Add(this.textBox_ExperiencesA);
+            this.panel2.Controls.Add(this.label127);
+            this.panel2.Controls.Add(this.comboBox_BloodTyp);
+            this.panel2.Controls.Add(this.comboBox_BirthPlace);
+            this.panel2.Controls.Add(this.label133);
+            this.panel2.Controls.Add(this.textBox_Email);
+            this.panel2.Controls.Add(this.label125);
+            this.panel2.Controls.Add(this.textBox_Tel);
+            this.panel2.Controls.Add(this.label124);
+            this.panel2.Controls.Add(this.comboBox_CityNo);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.button_AddNewCity);
+            this.panel2.Controls.Add(this.button_SrchCities);
+            this.panel2.Controls.Add(this.textBox_AddressA);
+            this.panel2.Controls.Add(this.label126);
+            this.panel2.Controls.Add(this.comboBox_Sex);
+            this.panel2.Controls.Add(this.comboBox_MaritalStatus);
+            this.panel2.Controls.Add(this.comboBox_Religion);
+            this.panel2.Controls.Add(this.dateTimeInput_BirthDate);
+            this.panel2.Controls.Add(this.label119);
+            this.panel2.Controls.Add(this.label118);
+            this.panel2.Controls.Add(this.label117);
+            this.panel2.Controls.Add(this.label115);
+            this.panel2.Controls.Add(this.label114);
+            this.panel2.Controls.Add(this.label113);
+            this.panel2.Controls.Add(this.button_AddNewReligon);
+            this.panel2.Controls.Add(this.button_SrchReligion);
+            this.panel2.Controls.Add(this.button_SrchReligon);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 279);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(604, 150);
+            this.panel2.TabIndex = 6677;
+            // 
+            // textBox_QualificationA
+            // 
+            this.textBox_QualificationA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.textBox_QualificationA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_QualificationA.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.textBox_QualificationA.Location = new System.Drawing.Point(10, 92);
+            this.textBox_QualificationA.MaxLength = 50;
+            this.textBox_QualificationA.Name = "textBox_QualificationA";
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_QualificationA, false);
+            this.textBox_QualificationA.Size = new System.Drawing.Size(476, 21);
+            this.textBox_QualificationA.TabIndex = 21;
+            // 
+            // button_AddNewBirthPlaces
+            // 
+            this.button_AddNewBirthPlaces.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_AddNewBirthPlaces.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_AddNewBirthPlaces.Location = new System.Drawing.Point(131, 26);
+            this.button_AddNewBirthPlaces.Name = "button_AddNewBirthPlaces";
+            this.button_AddNewBirthPlaces.Size = new System.Drawing.Size(26, 20);
+            this.button_AddNewBirthPlaces.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_AddNewBirthPlaces.Symbol = "";
+            this.button_AddNewBirthPlaces.SymbolSize = 11F;
+            this.button_AddNewBirthPlaces.TabIndex = 6700;
+            this.button_AddNewBirthPlaces.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_AddNewBirthPlaces.Click += new System.EventHandler(this.button_AddNewBirthPlaces_Click);
+            // 
+            // button_SrchBirthPlaces
+            // 
+            this.button_SrchBirthPlaces.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_SrchBirthPlaces.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_SrchBirthPlaces.Location = new System.Drawing.Point(158, 26);
+            this.button_SrchBirthPlaces.Name = "button_SrchBirthPlaces";
+            this.button_SrchBirthPlaces.Size = new System.Drawing.Size(26, 20);
+            this.button_SrchBirthPlaces.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_SrchBirthPlaces.Symbol = "";
+            this.button_SrchBirthPlaces.SymbolSize = 12F;
+            this.button_SrchBirthPlaces.TabIndex = 6699;
+            this.button_SrchBirthPlaces.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_SrchBirthPlaces.Click += new System.EventHandler(this.button_SrchBirthPlaces_Click);
+            // 
+            // textBox_ExperiencesA
+            // 
+            this.textBox_ExperiencesA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textBox_ExperiencesA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_ExperiencesA.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.textBox_ExperiencesA.Location = new System.Drawing.Point(10, 115);
+            this.textBox_ExperiencesA.MaxLength = 100;
+            this.textBox_ExperiencesA.Multiline = true;
+            this.textBox_ExperiencesA.Name = "textBox_ExperiencesA";
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_ExperiencesA, false);
+            this.textBox_ExperiencesA.Size = new System.Drawing.Size(476, 29);
+            this.textBox_ExperiencesA.TabIndex = 22;
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.BackColor = System.Drawing.Color.Transparent;
+            this.label127.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label127.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label127.Location = new System.Drawing.Point(489, 118);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(87, 13);
+            this.label127.TabIndex = 6698;
+            this.label127.Text = "الخبـــــــــــــرات :";
+            // 
+            // comboBox_BloodTyp
+            // 
+            this.comboBox_BloodTyp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_BloodTyp.DisplayMember = "Text";
+            this.comboBox_BloodTyp.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_BloodTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_BloodTyp.FormattingEnabled = true;
+            this.comboBox_BloodTyp.ItemHeight = 15;
+            this.comboBox_BloodTyp.Location = new System.Drawing.Point(10, 26);
+            this.comboBox_BloodTyp.Name = "comboBox_BloodTyp";
+            this.comboBox_BloodTyp.Size = new System.Drawing.Size(54, 21);
+            this.comboBox_BloodTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBox_BloodTyp.TabIndex = 16;
+            // 
+            // comboBox_BirthPlace
+            // 
+            this.comboBox_BirthPlace.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_BirthPlace.DisplayMember = "Text";
+            this.comboBox_BirthPlace.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_BirthPlace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_BirthPlace.FormattingEnabled = true;
+            this.comboBox_BirthPlace.ItemHeight = 15;
+            this.comboBox_BirthPlace.Location = new System.Drawing.Point(185, 26);
+            this.comboBox_BirthPlace.Name = "comboBox_BirthPlace";
+            this.comboBox_BirthPlace.Size = new System.Drawing.Size(130, 21);
+            this.comboBox_BirthPlace.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBox_BirthPlace.TabIndex = 15;
+            // 
+            // label133
+            // 
+            this.label133.AutoSize = true;
+            this.label133.BackColor = System.Drawing.Color.Transparent;
+            this.label133.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label133.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label133.Location = new System.Drawing.Point(489, 96);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(85, 13);
+            this.label133.TabIndex = 6694;
+            this.label133.Text = "المؤهل العلمي :";
+            // 
+            // textBox_Email
+            // 
+            this.textBox_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Email.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.textBox_Email.Location = new System.Drawing.Point(10, 70);
+            this.textBox_Email.MaxLength = 30;
+            this.textBox_Email.Name = "textBox_Email";
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_Email, false);
+            this.textBox_Email.Size = new System.Drawing.Size(193, 21);
+            this.textBox_Email.TabIndex = 20;
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.BackColor = System.Drawing.Color.Transparent;
+            this.label125.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label125.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label125.Location = new System.Drawing.Point(204, 74);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(88, 13);
+            this.label125.TabIndex = 6692;
+            this.label125.Text = "البريد الإلكتروني :";
+            // 
+            // textBox_Tel
+            // 
+            this.textBox_Tel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Tel.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.textBox_Tel.Location = new System.Drawing.Point(296, 70);
+            this.textBox_Tel.MaxLength = 15;
+            this.textBox_Tel.Name = "textBox_Tel";
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_Tel, false);
+            this.textBox_Tel.Size = new System.Drawing.Size(190, 21);
+            this.textBox_Tel.TabIndex = 19;
+            this.textBox_Tel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_ID_No_KeyPress);
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.BackColor = System.Drawing.Color.Transparent;
+            this.label124.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label124.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label124.Location = new System.Drawing.Point(489, 74);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(84, 13);
+            this.label124.TabIndex = 6691;
+            this.label124.Text = "الجــــــــــــــوال :";
+            // 
+            // comboBox_CityNo
+            // 
+            this.comboBox_CityNo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_CityNo.DisplayMember = "Text";
+            this.comboBox_CityNo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_CityNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_CityNo.FormattingEnabled = true;
+            this.comboBox_CityNo.ItemHeight = 15;
+            this.comboBox_CityNo.Location = new System.Drawing.Point(65, 48);
+            this.comboBox_CityNo.Name = "comboBox_CityNo";
+            this.comboBox_CityNo.Size = new System.Drawing.Size(138, 21);
+            this.comboBox_CityNo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBox_CityNo.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label9.Location = new System.Drawing.Point(204, 52);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 13);
+            this.label9.TabIndex = 6685;
+            this.label9.Text = "المدينة :";
+            // 
+            // button_AddNewCity
+            // 
+            this.button_AddNewCity.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_AddNewCity.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_AddNewCity.Location = new System.Drawing.Point(10, 48);
+            this.button_AddNewCity.Name = "button_AddNewCity";
+            this.button_AddNewCity.Size = new System.Drawing.Size(26, 20);
+            this.button_AddNewCity.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_AddNewCity.Symbol = "";
+            this.button_AddNewCity.SymbolSize = 11F;
+            this.button_AddNewCity.TabIndex = 6688;
+            this.button_AddNewCity.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_AddNewCity.Click += new System.EventHandler(this.button_AddNewCity_Click);
+            // 
+            // button_SrchCities
+            // 
+            this.button_SrchCities.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_SrchCities.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_SrchCities.Location = new System.Drawing.Point(37, 48);
+            this.button_SrchCities.Name = "button_SrchCities";
+            this.button_SrchCities.Size = new System.Drawing.Size(26, 20);
+            this.button_SrchCities.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_SrchCities.Symbol = "";
+            this.button_SrchCities.SymbolSize = 12F;
+            this.button_SrchCities.TabIndex = 6687;
+            this.button_SrchCities.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_SrchCities.Click += new System.EventHandler(this.button_SrchCities_Click);
+            // 
+            // textBox_AddressA
+            // 
+            this.textBox_AddressA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_AddressA.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.textBox_AddressA.Location = new System.Drawing.Point(252, 48);
+            this.textBox_AddressA.MaxLength = 30;
+            this.textBox_AddressA.Name = "textBox_AddressA";
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AddressA, false);
+            this.textBox_AddressA.Size = new System.Drawing.Size(234, 21);
+            this.textBox_AddressA.TabIndex = 17;
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.BackColor = System.Drawing.Color.Transparent;
+            this.label126.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label126.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label126.Location = new System.Drawing.Point(489, 52);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(84, 13);
+            this.label126.TabIndex = 6684;
+            this.label126.Text = "العنـــــــــــــوان :";
+            // 
+            // comboBox_Sex
+            // 
+            this.comboBox_Sex.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_Sex.DisplayMember = "Text";
+            this.comboBox_Sex.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_Sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Sex.FormattingEnabled = true;
+            this.comboBox_Sex.ItemHeight = 15;
+            this.comboBox_Sex.Location = new System.Drawing.Point(410, 4);
+            this.comboBox_Sex.Name = "comboBox_Sex";
+            this.comboBox_Sex.Size = new System.Drawing.Size(76, 21);
+            this.comboBox_Sex.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBox_Sex.TabIndex = 11;
+            // 
+            // comboBox_MaritalStatus
+            // 
+            this.comboBox_MaritalStatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_MaritalStatus.DisplayMember = "Text";
+            this.comboBox_MaritalStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_MaritalStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_MaritalStatus.FormattingEnabled = true;
+            this.comboBox_MaritalStatus.ItemHeight = 15;
+            this.comboBox_MaritalStatus.Location = new System.Drawing.Point(223, 4);
+            this.comboBox_MaritalStatus.Name = "comboBox_MaritalStatus";
+            this.comboBox_MaritalStatus.Size = new System.Drawing.Size(92, 21);
+            this.comboBox_MaritalStatus.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBox_MaritalStatus.TabIndex = 12;
+            // 
+            // comboBox_Religion
+            // 
+            this.comboBox_Religion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_Religion.DisplayMember = "Text";
+            this.comboBox_Religion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_Religion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Religion.FormattingEnabled = true;
+            this.comboBox_Religion.ItemHeight = 15;
+            this.comboBox_Religion.Location = new System.Drawing.Point(65, 4);
+            this.comboBox_Religion.Name = "comboBox_Religion";
+            this.comboBox_Religion.Size = new System.Drawing.Size(113, 21);
+            this.comboBox_Religion.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBox_Religion.TabIndex = 13;
+            // 
+            // dateTimeInput_BirthDate
+            // 
+            this.dateTimeInput_BirthDate.Location = new System.Drawing.Point(410, 26);
+            this.dateTimeInput_BirthDate.Mask = "0000/00/00";
+            this.dateTimeInput_BirthDate.Name = "dateTimeInput_BirthDate";
+            this.dateTimeInput_BirthDate.Size = new System.Drawing.Size(76, 20);
+            this.dateTimeInput_BirthDate.TabIndex = 14;
+            this.dateTimeInput_BirthDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.BackColor = System.Drawing.Color.Transparent;
+            this.label119.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label119.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label119.Location = new System.Drawing.Point(489, 30);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(83, 13);
+            this.label119.TabIndex = 887;
+            this.label119.Text = "تاريـخ الميــــلاد :";
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.BackColor = System.Drawing.Color.Transparent;
+            this.label118.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label118.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label118.Location = new System.Drawing.Point(315, 8);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(90, 13);
+            this.label118.TabIndex = 886;
+            this.label118.Text = "الحالة الإجتماعية :";
+            // 
+            // label117
+            // 
+            this.label117.AutoSize = true;
+            this.label117.BackColor = System.Drawing.Color.Transparent;
+            this.label117.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label117.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label117.Location = new System.Drawing.Point(315, 30);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(90, 13);
+            this.label117.TabIndex = 881;
+            this.label117.Text = "مكان الميـــــــلاد :";
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.BackColor = System.Drawing.Color.Transparent;
+            this.label115.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label115.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label115.Location = new System.Drawing.Point(65, 30);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(64, 13);
+            this.label115.TabIndex = 877;
+            this.label115.Text = "فصيلة الدم :";
+            // 
+            // label114
+            // 
+            this.label114.AutoSize = true;
+            this.label114.BackColor = System.Drawing.Color.Transparent;
+            this.label114.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label114.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label114.Location = new System.Drawing.Point(489, 8);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(81, 13);
+            this.label114.TabIndex = 875;
+            this.label114.Text = "الجنــــــــــــس :";
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.BackColor = System.Drawing.Color.Transparent;
+            this.label113.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label113.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label113.Location = new System.Drawing.Point(180, 8);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(41, 13);
+            this.label113.TabIndex = 873;
+            this.label113.Text = "الديانة :";
+            // 
+            // button_AddNewReligon
+            // 
+            this.button_AddNewReligon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_AddNewReligon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_AddNewReligon.Location = new System.Drawing.Point(10, 4);
+            this.button_AddNewReligon.Name = "button_AddNewReligon";
+            this.button_AddNewReligon.Size = new System.Drawing.Size(26, 20);
+            this.button_AddNewReligon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_AddNewReligon.Symbol = "";
+            this.button_AddNewReligon.SymbolSize = 11F;
+            this.button_AddNewReligon.TabIndex = 6680;
+            this.button_AddNewReligon.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_AddNewReligon.Click += new System.EventHandler(this.button_AddNewReligon_Click);
+            // 
+            // button_SrchReligion
+            // 
+            this.button_SrchReligion.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_SrchReligion.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_SrchReligion.Location = new System.Drawing.Point(37, 4);
+            this.button_SrchReligion.Name = "button_SrchReligion";
+            this.button_SrchReligion.Size = new System.Drawing.Size(26, 20);
+            this.button_SrchReligion.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_SrchReligion.Symbol = "";
+            this.button_SrchReligion.SymbolSize = 12F;
+            this.button_SrchReligion.TabIndex = 6679;
+            this.button_SrchReligion.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_SrchReligion.Click += new System.EventHandler(this.button_SrchReligion_Click);
+            // 
+            // button_SrchReligon
+            // 
+            this.button_SrchReligon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_SrchReligon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_SrchReligon.Location = new System.Drawing.Point(37, 4);
+            this.button_SrchReligon.Name = "button_SrchReligon";
+            this.button_SrchReligon.Size = new System.Drawing.Size(26, 20);
+            this.button_SrchReligon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_SrchReligon.Symbol = "";
+            this.button_SrchReligon.SymbolSize = 12F;
+            this.button_SrchReligon.TabIndex = 6679;
+            this.button_SrchReligon.TextColor = System.Drawing.Color.SteelBlue;
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Dash;
+            this.labelX1.BackgroundStyle.BorderBottomColor = System.Drawing.Color.SteelBlue;
+            this.labelX1.BackgroundStyle.BorderBottomWidth = 1;
+            this.labelX1.BackgroundStyle.BorderColor = System.Drawing.Color.SteelBlue;
+            this.labelX1.BackgroundStyle.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Dash;
+            this.labelX1.BackgroundStyle.BorderLeftColor = System.Drawing.Color.SteelBlue;
+            this.labelX1.BackgroundStyle.BorderLeftWidth = 1;
+            this.labelX1.BackgroundStyle.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Dash;
+            this.labelX1.BackgroundStyle.BorderRightColor = System.Drawing.Color.SteelBlue;
+            this.labelX1.BackgroundStyle.BorderRightWidth = 1;
+            this.labelX1.BackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Dash;
+            this.labelX1.BackgroundStyle.BorderTopColor = System.Drawing.Color.SteelBlue;
+            this.labelX1.BackgroundStyle.BorderTopWidth = 1;
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.ForeColor = System.Drawing.Color.Red;
+            this.labelX1.Location = new System.Drawing.Point(24, 171);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(127, 19);
+            this.labelX1.Symbol = "";
+            this.labelX1.SymbolColor = System.Drawing.Color.SteelBlue;
+            this.labelX1.SymbolSize = 12F;
+            this.labelX1.TabIndex = 1605;
+            this.labelX1.Text = "صورة الموظف";
+            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // checkBox_ClearPic
+            // 
+            this.checkBox_ClearPic.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.checkBox_ClearPic.Checked = true;
+            this.checkBox_ClearPic.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.checkBox_ClearPic.Location = new System.Drawing.Point(3, 44);
+            this.checkBox_ClearPic.Name = "checkBox_ClearPic";
+            this.checkBox_ClearPic.Size = new System.Drawing.Size(19, 125);
+            this.checkBox_ClearPic.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBox_ClearPic.Symbol = "";
+            this.checkBox_ClearPic.SymbolSize = 11F;
+            this.checkBox_ClearPic.TabIndex = 1603;
+            this.checkBox_ClearPic.TextColor = System.Drawing.Color.SteelBlue;
+            this.checkBox_ClearPic.Tooltip = "إزالة الصورة";
+            this.checkBox_ClearPic.Click += new System.EventHandler(this.checkBox_ClearPic_Click);
+            // 
+            // button_Pic
+            // 
+            this.button_Pic.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_Pic.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_Pic.Location = new System.Drawing.Point(3, 170);
+            this.button_Pic.Name = "button_Pic";
+            this.button_Pic.Size = new System.Drawing.Size(19, 20);
+            this.button_Pic.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_Pic.Symbol = "";
+            this.button_Pic.SymbolSize = 11F;
+            this.button_Pic.TabIndex = 1604;
+            this.button_Pic.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_Pic.Tooltip = "إضافة صورة للصنف";
+            this.button_Pic.Click += new System.EventHandler(this.button_Pic_Click);
+            // 
+            // comboBox_Nationalty
+            // 
+            this.comboBox_Nationalty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_Nationalty.DisplayMember = "Text";
+            this.comboBox_Nationalty.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_Nationalty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Nationalty.FormattingEnabled = true;
+            this.comboBox_Nationalty.ItemHeight = 15;
+            this.comboBox_Nationalty.Location = new System.Drawing.Point(60, 194);
+            this.comboBox_Nationalty.Name = "comboBox_Nationalty";
+            this.comboBox_Nationalty.Size = new System.Drawing.Size(430, 21);
+            this.comboBox_Nationalty.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBox_Nationalty.TabIndex = 9;
+            this.comboBox_Nationalty.SelectedValueChanged += new System.EventHandler(this.comboBox_Nationalty_SelectedValueChanged);
+            // 
+            // button_AddNewNation
+            // 
+            this.button_AddNewNation.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_AddNewNation.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_AddNewNation.Location = new System.Drawing.Point(3, 194);
+            this.button_AddNewNation.Name = "button_AddNewNation";
+            this.button_AddNewNation.Size = new System.Drawing.Size(26, 20);
+            this.button_AddNewNation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_AddNewNation.Symbol = "";
+            this.button_AddNewNation.SymbolSize = 11F;
+            this.button_AddNewNation.TabIndex = 1601;
+            this.button_AddNewNation.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_AddNewNation.Visible = false;
+            this.button_AddNewNation.Click += new System.EventHandler(this.button_AddNewNation_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(490, 198);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 13);
+            this.label5.TabIndex = 1602;
+            this.label5.Text = "الجنسيـــــــــــــة :";
+            // 
+            // comboBox_Guarantor
+            // 
+            this.comboBox_Guarantor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_Guarantor.DisplayMember = "Text";
+            this.comboBox_Guarantor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_Guarantor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Guarantor.FormattingEnabled = true;
+            this.comboBox_Guarantor.ItemHeight = 15;
+            this.comboBox_Guarantor.Location = new System.Drawing.Point(211, 169);
+            this.comboBox_Guarantor.Name = "comboBox_Guarantor";
+            this.comboBox_Guarantor.Size = new System.Drawing.Size(279, 21);
+            this.comboBox_Guarantor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBox_Guarantor.TabIndex = 8;
+            // 
+            // button_AddNewSponser
+            // 
+            this.button_AddNewSponser.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_AddNewSponser.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_AddNewSponser.Location = new System.Drawing.Point(154, 170);
+            this.button_AddNewSponser.Name = "button_AddNewSponser";
+            this.button_AddNewSponser.Size = new System.Drawing.Size(26, 20);
+            this.button_AddNewSponser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_AddNewSponser.Symbol = "";
+            this.button_AddNewSponser.SymbolSize = 11F;
+            this.button_AddNewSponser.TabIndex = 1597;
+            this.button_AddNewSponser.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_AddNewSponser.Click += new System.EventHandler(this.button_AddNewSponser_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label4.Location = new System.Drawing.Point(490, 173);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.TabIndex = 1598;
+            this.label4.Text = "إســـــــم الكفيل :";
+            // 
+            // comboBox_Job
+            // 
+            this.comboBox_Job.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_Job.DisplayMember = "Text";
+            this.comboBox_Job.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_Job.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Job.FormattingEnabled = true;
+            this.comboBox_Job.ItemHeight = 15;
+            this.comboBox_Job.Location = new System.Drawing.Point(211, 144);
+            this.comboBox_Job.Name = "comboBox_Job";
+            this.comboBox_Job.Size = new System.Drawing.Size(279, 21);
+            this.comboBox_Job.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBox_Job.TabIndex = 7;
+            // 
+            // button_AddNewJob
+            // 
+            this.button_AddNewJob.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_AddNewJob.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_AddNewJob.Location = new System.Drawing.Point(154, 144);
+            this.button_AddNewJob.Name = "button_AddNewJob";
+            this.button_AddNewJob.Size = new System.Drawing.Size(26, 20);
+            this.button_AddNewJob.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_AddNewJob.Symbol = "";
+            this.button_AddNewJob.SymbolSize = 11F;
+            this.button_AddNewJob.TabIndex = 1593;
+            this.button_AddNewJob.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_AddNewJob.Click += new System.EventHandler(this.button_AddNewJob_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(490, 148);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.TabIndex = 1594;
+            this.label3.Text = "إســـــم الوظيفة :";
+            // 
+            // comboBox_Section
+            // 
+            this.comboBox_Section.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_Section.DisplayMember = "Text";
+            this.comboBox_Section.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_Section.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Section.FormattingEnabled = true;
+            this.comboBox_Section.ItemHeight = 15;
+            this.comboBox_Section.Location = new System.Drawing.Point(211, 119);
+            this.comboBox_Section.Name = "comboBox_Section";
+            this.comboBox_Section.Size = new System.Drawing.Size(279, 21);
+            this.comboBox_Section.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBox_Section.TabIndex = 6;
+            // 
+            // button_AddNewSection
+            // 
+            this.button_AddNewSection.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_AddNewSection.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_AddNewSection.Location = new System.Drawing.Point(154, 118);
+            this.button_AddNewSection.Name = "button_AddNewSection";
+            this.button_AddNewSection.Size = new System.Drawing.Size(26, 20);
+            this.button_AddNewSection.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_AddNewSection.Symbol = "";
+            this.button_AddNewSection.SymbolSize = 11F;
+            this.button_AddNewSection.TabIndex = 1589;
+            this.button_AddNewSection.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_AddNewSection.Click += new System.EventHandler(this.button_AddNewSection_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(490, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.TabIndex = 1590;
+            this.label2.Text = "إســــــم القسم :";
+            // 
+            // comboBox_Dept
+            // 
+            this.comboBox_Dept.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_Dept.DisplayMember = "Text";
+            this.comboBox_Dept.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_Dept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Dept.FormattingEnabled = true;
+            this.comboBox_Dept.ItemHeight = 15;
+            this.comboBox_Dept.Location = new System.Drawing.Point(211, 94);
+            this.comboBox_Dept.Name = "comboBox_Dept";
+            this.comboBox_Dept.Size = new System.Drawing.Size(279, 21);
+            this.comboBox_Dept.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBox_Dept.TabIndex = 5;
+            // 
+            // button_AddNewDept
+            // 
+            this.button_AddNewDept.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_AddNewDept.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_AddNewDept.Location = new System.Drawing.Point(154, 93);
+            this.button_AddNewDept.Name = "button_AddNewDept";
+            this.button_AddNewDept.Size = new System.Drawing.Size(26, 20);
+            this.button_AddNewDept.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_AddNewDept.Symbol = "";
+            this.button_AddNewDept.SymbolSize = 11F;
+            this.button_AddNewDept.TabIndex = 1585;
+            this.button_AddNewDept.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_AddNewDept.Click += new System.EventHandler(this.button_AddNewDept_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label12.Location = new System.Drawing.Point(490, 98);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(86, 13);
+            this.label12.TabIndex = 1586;
+            this.label12.Text = "إســــــــم الإدارة :";
+            // 
+            // textBox_Pass
+            // 
+            this.textBox_Pass.BackColor = System.Drawing.Color.Red;
+            this.textBox_Pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Pass.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.textBox_Pass.ForeColor = System.Drawing.Color.White;
+            this.textBox_Pass.Location = new System.Drawing.Point(3, 19);
+            this.textBox_Pass.MaxLength = 10;
+            this.textBox_Pass.Name = "textBox_Pass";
+            this.textBox_Pass.PasswordChar = '*';
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_Pass, false);
+            this.textBox_Pass.Size = new System.Drawing.Size(148, 20);
+            this.textBox_Pass.TabIndex = 2;
+            this.textBox_Pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.BackColor = System.Drawing.Color.Transparent;
+            this.label52.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label52.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label52.Location = new System.Drawing.Point(152, 23);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(93, 13);
+            this.label52.TabIndex = 99;
+            this.label52.Text = "كلمة سر الموظف :";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label40.Location = new System.Drawing.Point(490, 73);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(89, 13);
+            this.label40.TabIndex = 71;
+            this.label40.Text = "الإسم الإنجليزي :";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label36.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label36.Location = new System.Drawing.Point(490, 48);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(89, 13);
+            this.label36.TabIndex = 69;
+            this.label36.Text = "الإسم العــــربي :";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label38.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label38.Location = new System.Drawing.Point(490, 23);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(89, 13);
+            this.label38.TabIndex = 67;
+            this.label38.Text = "الرقـــــــــــــــــم :";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.textBox_CompPaying);
+            this.groupBox2.Controls.Add(this.textBox_SalSubtract);
+            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.groupBox2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.groupBox2.Location = new System.Drawing.Point(-258, 196);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(224, 63);
+            this.groupBox2.TabIndex = 1608;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "التأمين الإجتماعي";
+            this.groupBox2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(10, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 13);
+            this.label1.TabIndex = 82;
+            this.label1.Text = "%";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label6.Location = new System.Drawing.Point(10, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(20, 13);
+            this.label6.TabIndex = 81;
+            this.label6.Text = "%";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label7.Location = new System.Drawing.Point(109, 41);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 13);
+            this.label7.TabIndex = 79;
+            this.label7.Text = "مستحق من الشركة :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label8.Location = new System.Drawing.Point(109, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 13);
+            this.label8.TabIndex = 77;
+            this.label8.Text = "يخصــــــم من الراتب :";
+            // 
+            // textBox_CompPaying
+            // 
+            this.textBox_CompPaying.AllowEmptyState = false;
+            this.textBox_CompPaying.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_CompPaying.AutoOffFreeTextEntry = true;
+            this.textBox_CompPaying.AutoResolveFreeTextEntries = false;
+            // 
+            // 
+            // 
+            this.textBox_CompPaying.BackgroundStyle.BorderBottomWidth = 1;
+            this.textBox_CompPaying.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.textBox_CompPaying.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBox_CompPaying.BackgroundStyle.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_CompPaying.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.textBox_CompPaying.DisplayFormat = "0.00";
+            this.textBox_CompPaying.Enabled = false;
+            this.textBox_CompPaying.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.textBox_CompPaying.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox_CompPaying.Increment = 1D;
+            this.textBox_CompPaying.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.textBox_CompPaying.Location = new System.Drawing.Point(35, 37);
+            this.textBox_CompPaying.MaxValue = 100D;
+            this.textBox_CompPaying.MinValue = 0D;
+            this.textBox_CompPaying.Name = "textBox_CompPaying";
+            this.textBox_CompPaying.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox_CompPaying.Size = new System.Drawing.Size(68, 21);
+            this.textBox_CompPaying.TabIndex = 841;
+            // 
+            // textBox_SalSubtract
+            // 
+            this.textBox_SalSubtract.AllowEmptyState = false;
+            this.textBox_SalSubtract.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_SalSubtract.AutoOffFreeTextEntry = true;
+            this.textBox_SalSubtract.AutoResolveFreeTextEntries = false;
+            // 
+            // 
+            // 
+            this.textBox_SalSubtract.BackgroundStyle.BorderBottomWidth = 1;
+            this.textBox_SalSubtract.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.textBox_SalSubtract.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBox_SalSubtract.BackgroundStyle.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_SalSubtract.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.textBox_SalSubtract.DisplayFormat = "0.00";
+            this.textBox_SalSubtract.Enabled = false;
+            this.textBox_SalSubtract.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.textBox_SalSubtract.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.textBox_SalSubtract.Increment = 1D;
+            this.textBox_SalSubtract.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.textBox_SalSubtract.Location = new System.Drawing.Point(35, 16);
+            this.textBox_SalSubtract.MaxValue = 100D;
+            this.textBox_SalSubtract.MinValue = 0D;
+            this.textBox_SalSubtract.Name = "textBox_SalSubtract";
+            this.textBox_SalSubtract.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox_SalSubtract.Size = new System.Drawing.Size(68, 21);
+            this.textBox_SalSubtract.TabIndex = 840;
+            // 
+            // textBox_ID
+            // 
+            this.textBox_ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_ID.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.textBox_ID.Location = new System.Drawing.Point(360, 19);
+            this.textBox_ID.MaxLength = 6;
+            this.textBox_ID.Name = "textBox_ID";
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_ID, false);
+            this.textBox_ID.Size = new System.Drawing.Size(130, 21);
+            this.textBox_ID.TabIndex = 1;
+            this.textBox_ID.TextChanged += new System.EventHandler(this.textBox_ID_TextChanged);
+            this.textBox_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_ID_KeyPress);
+            // 
+            // linkLabel_ChangeEmpNo
+            // 
+            this.linkLabel_ChangeEmpNo.AutoSize = true;
+            this.linkLabel_ChangeEmpNo.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.linkLabel_ChangeEmpNo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.linkLabel_ChangeEmpNo.Location = new System.Drawing.Point(325, 22);
+            this.linkLabel_ChangeEmpNo.Name = "linkLabel_ChangeEmpNo";
+            this.linkLabel_ChangeEmpNo.Size = new System.Drawing.Size(32, 13);
+            this.linkLabel_ChangeEmpNo.TabIndex = 6685;
+            this.linkLabel_ChangeEmpNo.TabStop = true;
+            this.linkLabel_ChangeEmpNo.Text = "تغـيير";
+            this.linkLabel_ChangeEmpNo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_ChangeEmpNo_LinkClicked);
+            // 
+            // button_PhotoShoot
+            // 
+            this.button_PhotoShoot.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_PhotoShoot.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_PhotoShoot.Location = new System.Drawing.Point(3, 170);
+            this.button_PhotoShoot.Name = "button_PhotoShoot";
+            this.button_PhotoShoot.Size = new System.Drawing.Size(19, 20);
+            this.button_PhotoShoot.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_PhotoShoot.Symbol = "";
+            this.button_PhotoShoot.SymbolSize = 11F;
+            this.button_PhotoShoot.TabIndex = 1607;
+            this.button_PhotoShoot.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_PhotoShoot.Tooltip = "إضافة صورة للصنف";
+            this.button_PhotoShoot.Visible = false;
+            this.button_PhotoShoot.Click += new System.EventHandler(this.button_PhotoShoot_Click);
+            // 
+            // labelX15
+            // 
+            this.labelX15.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelX15.Location = new System.Drawing.Point(0, 0);
+            this.labelX15.Name = "labelX15";
+            this.labelX15.Size = new System.Drawing.Size(610, 432);
+            this.labelX15.TabIndex = 8;
+            this.labelX15.Text = "This space intentionally left blank.";
+            this.labelX15.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // superTabItem_Gen
+            // 
+            this.superTabItem_Gen.AttachedControl = this.superTabControlPanel15;
+            this.superTabItem_Gen.CloseButtonVisible = false;
+            this.superTabItem_Gen.GlobalItem = false;
+            this.superTabItem_Gen.Name = "superTabItem_Gen";
+            this.superTabItem_Gen.PredefinedColor = DevComponents.DotNetBar.eTabItemColor.Apple;
+            this.superTabItem_Gen.Text = "عــــــــــام";
+            // 
             // superTabControlPanel18
             // 
             this.superTabControlPanel18.Controls.Add(this.panelEx5);
@@ -985,6 +1940,7 @@ private void InitializeComponent()
             this.panelEx5.Controls.Add(this.groupBox10);
             this.panelEx5.Controls.Add(this.groupBox3);
             this.panelEx5.Controls.Add(this.expandablePanel_attends);
+            this.panelEx5.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx5.Location = new System.Drawing.Point(0, 0);
             this.panelEx5.Name = "panelEx5";
@@ -1012,7 +1968,7 @@ private void InitializeComponent()
             this.groupBox8.Size = new System.Drawing.Size(181, 187);
             this.groupBox8.TabIndex = 6776;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Tag = string.Empty;
+            this.groupBox8.Tag = "";
             this.groupBox8.Text = "التذاكـــر";
             // 
             // textBox_TicketsCount
@@ -1235,6 +2191,7 @@ private void InitializeComponent()
             this.groupPanel15.Controls.Add(this.textBox_AccSal);
             this.groupPanel15.Controls.Add(this.label15);
             this.groupPanel15.Controls.Add(this.textBox_AccSalName);
+            this.groupPanel15.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel15.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.groupPanel15.Location = new System.Drawing.Point(7, 66);
             this.groupPanel15.Name = "groupPanel15";
@@ -1290,9 +2247,9 @@ private void InitializeComponent()
             // button_SrchCostCenterAcc
             // 
             this.button_SrchCostCenterAcc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_SrchCostCenterAcc.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
+            this.button_SrchCostCenterAcc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_SrchCostCenterAcc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_SrchCostCenterAcc.Location = new System.Drawing.Point(-615, 130);
+            this.button_SrchCostCenterAcc.Location = new System.Drawing.Point(-627, 130);
             this.button_SrchCostCenterAcc.Name = "button_SrchCostCenterAcc";
             this.button_SrchCostCenterAcc.Size = new System.Drawing.Size(26, 20);
             this.button_SrchCostCenterAcc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1303,16 +2260,16 @@ private void InitializeComponent()
             // 
             // textBox_CostCenter
             // 
-            this.textBox_CostCenter.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Right));
+            this.textBox_CostCenter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_CostCenter.BackColor = System.Drawing.Color.White;
             this.textBox_CostCenter.Font = new System.Drawing.Font("Tahoma", 9F);
             this.textBox_CostCenter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox_CostCenter.Location = new System.Drawing.Point(-588, 159);
+            this.textBox_CostCenter.Location = new System.Drawing.Point(-600, 159);
             this.textBox_CostCenter.MaxLength = 30;
             this.textBox_CostCenter.Name = "textBox_CostCenter";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_CostCenter, false);
             this.textBox_CostCenter.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_CostCenter, false);
             this.textBox_CostCenter.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox_CostCenter.Size = new System.Drawing.Size(142, 22);
             this.textBox_CostCenter.TabIndex = 1615;
@@ -1320,11 +2277,11 @@ private void InitializeComponent()
             // 
             // label116
             // 
-            this.label116.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Right));
+            this.label116.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label116.AutoSize = true;
             this.label116.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label116.Location = new System.Drawing.Point(-445, 135);
+            this.label116.Location = new System.Drawing.Point(-457, 135);
             this.label116.Name = "label116";
             this.label116.Size = new System.Drawing.Size(83, 13);
             this.label116.TabIndex = 1618;
@@ -1332,15 +2289,15 @@ private void InitializeComponent()
             // 
             // textBox_CostCenterName
             // 
-            this.textBox_CostCenterName.Anchor = ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right));
+            this.textBox_CostCenterName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_CostCenterName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox_CostCenterName.Font = new System.Drawing.Font("Tahoma", 9F);
             this.textBox_CostCenterName.Location = new System.Drawing.Point(16, 151);
             this.textBox_CostCenterName.Name = "textBox_CostCenterName";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_CostCenterName, false);
             this.textBox_CostCenterName.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_CostCenterName, false);
             this.textBox_CostCenterName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox_CostCenterName.Size = new System.Drawing.Size(0, 22);
             this.textBox_CostCenterName.TabIndex = 1616;
@@ -1368,8 +2325,8 @@ private void InitializeComponent()
             this.textBox_AccLoan.Location = new System.Drawing.Point(187, 88);
             this.textBox_AccLoan.MaxLength = 30;
             this.textBox_AccLoan.Name = "textBox_AccLoan";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AccLoan, false);
             this.textBox_AccLoan.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AccLoan, false);
             this.textBox_AccLoan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox_AccLoan.Size = new System.Drawing.Size(71, 22);
             this.textBox_AccLoan.TabIndex = 1611;
@@ -1391,8 +2348,8 @@ private void InitializeComponent()
             this.textBox_AccLoanName.Font = new System.Drawing.Font("Tahoma", 9F);
             this.textBox_AccLoanName.Location = new System.Drawing.Point(1, 88);
             this.textBox_AccLoanName.Name = "textBox_AccLoanName";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AccLoanName, false);
             this.textBox_AccLoanName.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AccLoanName, false);
             this.textBox_AccLoanName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox_AccLoanName.Size = new System.Drawing.Size(157, 22);
             this.textBox_AccLoanName.TabIndex = 1612;
@@ -1420,8 +2377,8 @@ private void InitializeComponent()
             this.textBox_AccHousing.Location = new System.Drawing.Point(187, 55);
             this.textBox_AccHousing.MaxLength = 30;
             this.textBox_AccHousing.Name = "textBox_AccHousing";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AccHousing, false);
             this.textBox_AccHousing.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AccHousing, false);
             this.textBox_AccHousing.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox_AccHousing.Size = new System.Drawing.Size(71, 22);
             this.textBox_AccHousing.TabIndex = 1607;
@@ -1443,8 +2400,8 @@ private void InitializeComponent()
             this.textBox_AccHousingName.Font = new System.Drawing.Font("Tahoma", 9F);
             this.textBox_AccHousingName.Location = new System.Drawing.Point(1, 55);
             this.textBox_AccHousingName.Name = "textBox_AccHousingName";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AccHousingName, false);
             this.textBox_AccHousingName.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AccHousingName, false);
             this.textBox_AccHousingName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox_AccHousingName.Size = new System.Drawing.Size(157, 22);
             this.textBox_AccHousingName.TabIndex = 1608;
@@ -1472,8 +2429,8 @@ private void InitializeComponent()
             this.textBox_AccSal.Location = new System.Drawing.Point(187, 22);
             this.textBox_AccSal.MaxLength = 30;
             this.textBox_AccSal.Name = "textBox_AccSal";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AccSal, false);
             this.textBox_AccSal.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AccSal, false);
             this.textBox_AccSal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox_AccSal.Size = new System.Drawing.Size(71, 22);
             this.textBox_AccSal.TabIndex = 1603;
@@ -1495,8 +2452,8 @@ private void InitializeComponent()
             this.textBox_AccSalName.Font = new System.Drawing.Font("Tahoma", 9F);
             this.textBox_AccSalName.Location = new System.Drawing.Point(1, 22);
             this.textBox_AccSalName.Name = "textBox_AccSalName";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AccSalName, false);
             this.textBox_AccSalName.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AccSalName, false);
             this.textBox_AccSalName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox_AccSalName.Size = new System.Drawing.Size(157, 22);
             this.textBox_AccSalName.TabIndex = 1604;
@@ -1525,8 +2482,8 @@ private void InitializeComponent()
             this.txtBXBankName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txtBXBankName.Location = new System.Drawing.Point(5, 28);
             this.txtBXBankName.Name = "txtBXBankName";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtBXBankName, false);
             this.txtBXBankName.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtBXBankName, false);
             this.txtBXBankName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBXBankName.Size = new System.Drawing.Size(138, 20);
             this.txtBXBankName.TabIndex = 1046;
@@ -1553,8 +2510,8 @@ private void InitializeComponent()
             this.txtBXBankNo.Location = new System.Drawing.Point(172, 28);
             this.txtBXBankNo.MaxLength = 30;
             this.txtBXBankNo.Name = "txtBXBankNo";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtBXBankNo, false);
             this.txtBXBankNo.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtBXBankNo, false);
             this.txtBXBankNo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBXBankNo.Size = new System.Drawing.Size(87, 20);
             this.txtBXBankNo.TabIndex = 1041;
@@ -1572,6 +2529,7 @@ private void InitializeComponent()
             this.expandablePanel_attends.Controls.Add(this.expandablePanel_Mon);
             this.expandablePanel_attends.Controls.Add(this.expandablePanel_Sun);
             this.expandablePanel_attends.Controls.Add(this.expandablePanel_Sat);
+            this.expandablePanel_attends.DisabledBackColor = System.Drawing.Color.Empty;
             this.expandablePanel_attends.Dock = System.Windows.Forms.DockStyle.Left;
             this.expandablePanel_attends.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.expandablePanel_attends.Location = new System.Drawing.Point(0, 0);
@@ -1599,6 +2557,7 @@ private void InitializeComponent()
             this.expandablePanel_Fri.CanvasColor = System.Drawing.SystemColors.Control;
             this.expandablePanel_Fri.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.expandablePanel_Fri.Controls.Add(this.itemPanel7);
+            this.expandablePanel_Fri.DisabledBackColor = System.Drawing.Color.Empty;
             this.expandablePanel_Fri.Dock = System.Windows.Forms.DockStyle.Top;
             this.expandablePanel_Fri.Expanded = false;
             this.expandablePanel_Fri.ExpandedBounds = new System.Drawing.Rectangle(0, 182, 222, 226);
@@ -1652,12 +2611,14 @@ private void InitializeComponent()
             this.itemPanel7.Controls.Add(this.radioButton_FriPeriods2);
             this.itemPanel7.Controls.Add(this.radioButton_FriPeriods1);
             this.itemPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemPanel7.DragDropSupport = true;
             this.itemPanel7.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel7.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel7.Location = new System.Drawing.Point(0, 26);
             this.itemPanel7.Name = "itemPanel7";
+            this.itemPanel7.ReserveLeftSpace = false;
             this.itemPanel7.Size = new System.Drawing.Size(222, 0);
             this.itemPanel7.TabIndex = 3;
+            this.itemPanel7.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel7.Text = "itemPanel7";
             // 
             // groupPanel11
@@ -1671,6 +2632,7 @@ private void InitializeComponent()
             this.groupPanel11.Controls.Add(this.label51);
             this.groupPanel11.Controls.Add(this.textBox_FriTime2);
             this.groupPanel11.Controls.Add(this.label58);
+            this.groupPanel11.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel11.Location = new System.Drawing.Point(11, 114);
             this.groupPanel11.Name = "groupPanel11";
             this.groupPanel11.Size = new System.Drawing.Size(200, 79);
@@ -1783,6 +2745,7 @@ private void InitializeComponent()
             this.groupPanel12.Controls.Add(this.label66);
             this.groupPanel12.Controls.Add(this.textBox_FriTime1);
             this.groupPanel12.Controls.Add(this.label69);
+            this.groupPanel12.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel12.Location = new System.Drawing.Point(11, 30);
             this.groupPanel12.Name = "groupPanel12";
             this.groupPanel12.Size = new System.Drawing.Size(200, 79);
@@ -1928,6 +2891,7 @@ private void InitializeComponent()
             this.expandablePanel_Thurs.CanvasColor = System.Drawing.SystemColors.Control;
             this.expandablePanel_Thurs.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.expandablePanel_Thurs.Controls.Add(this.itemPanel6);
+            this.expandablePanel_Thurs.DisabledBackColor = System.Drawing.Color.Empty;
             this.expandablePanel_Thurs.Dock = System.Windows.Forms.DockStyle.Top;
             this.expandablePanel_Thurs.Expanded = false;
             this.expandablePanel_Thurs.ExpandedBounds = new System.Drawing.Rectangle(0, 156, 222, 226);
@@ -1981,12 +2945,14 @@ private void InitializeComponent()
             this.itemPanel6.Controls.Add(this.radioButton_ThurPeriods2);
             this.itemPanel6.Controls.Add(this.radioButton_ThurPeriods1);
             this.itemPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemPanel6.DragDropSupport = true;
             this.itemPanel6.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel6.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel6.Location = new System.Drawing.Point(0, 26);
             this.itemPanel6.Name = "itemPanel6";
+            this.itemPanel6.ReserveLeftSpace = false;
             this.itemPanel6.Size = new System.Drawing.Size(222, 0);
             this.itemPanel6.TabIndex = 3;
+            this.itemPanel6.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel6.Text = "itemPanel6";
             // 
             // groupPanel13
@@ -2000,6 +2966,7 @@ private void InitializeComponent()
             this.groupPanel13.Controls.Add(this.label77);
             this.groupPanel13.Controls.Add(this.textBox_ThurTime2);
             this.groupPanel13.Controls.Add(this.label81);
+            this.groupPanel13.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel13.Location = new System.Drawing.Point(11, 114);
             this.groupPanel13.Name = "groupPanel13";
             this.groupPanel13.Size = new System.Drawing.Size(200, 79);
@@ -2112,6 +3079,7 @@ private void InitializeComponent()
             this.groupPanel14.Controls.Add(this.label93);
             this.groupPanel14.Controls.Add(this.textBox_ThurTime1);
             this.groupPanel14.Controls.Add(this.label94);
+            this.groupPanel14.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel14.Location = new System.Drawing.Point(11, 30);
             this.groupPanel14.Name = "groupPanel14";
             this.groupPanel14.Size = new System.Drawing.Size(200, 79);
@@ -2257,6 +3225,7 @@ private void InitializeComponent()
             this.expandablePanel_Wen.CanvasColor = System.Drawing.SystemColors.Control;
             this.expandablePanel_Wen.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.expandablePanel_Wen.Controls.Add(this.itemPanel5);
+            this.expandablePanel_Wen.DisabledBackColor = System.Drawing.Color.Empty;
             this.expandablePanel_Wen.Dock = System.Windows.Forms.DockStyle.Top;
             this.expandablePanel_Wen.Expanded = false;
             this.expandablePanel_Wen.ExpandedBounds = new System.Drawing.Rectangle(0, 130, 30, 226);
@@ -2310,12 +3279,14 @@ private void InitializeComponent()
             this.itemPanel5.Controls.Add(this.radioButton_WenPeriods2);
             this.itemPanel5.Controls.Add(this.radioButton_WenPeriods1);
             this.itemPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemPanel5.DragDropSupport = true;
             this.itemPanel5.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel5.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel5.Location = new System.Drawing.Point(0, 26);
             this.itemPanel5.Name = "itemPanel5";
+            this.itemPanel5.ReserveLeftSpace = false;
             this.itemPanel5.Size = new System.Drawing.Size(222, 0);
             this.itemPanel5.TabIndex = 3;
+            this.itemPanel5.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel5.Text = "itemPanel5";
             // 
             // groupPanel9
@@ -2329,6 +3300,7 @@ private void InitializeComponent()
             this.groupPanel9.Controls.Add(this.label45);
             this.groupPanel9.Controls.Add(this.textBox_WenTime2);
             this.groupPanel9.Controls.Add(this.label46);
+            this.groupPanel9.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel9.Location = new System.Drawing.Point(11, 114);
             this.groupPanel9.Name = "groupPanel9";
             this.groupPanel9.Size = new System.Drawing.Size(200, 79);
@@ -2441,6 +3413,7 @@ private void InitializeComponent()
             this.groupPanel10.Controls.Add(this.label48);
             this.groupPanel10.Controls.Add(this.textBox_WenTime1);
             this.groupPanel10.Controls.Add(this.label49);
+            this.groupPanel10.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel10.Location = new System.Drawing.Point(11, 30);
             this.groupPanel10.Name = "groupPanel10";
             this.groupPanel10.Size = new System.Drawing.Size(200, 79);
@@ -2586,6 +3559,7 @@ private void InitializeComponent()
             this.expandablePanel_Tuse.CanvasColor = System.Drawing.SystemColors.Control;
             this.expandablePanel_Tuse.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.expandablePanel_Tuse.Controls.Add(this.itemPanel4);
+            this.expandablePanel_Tuse.DisabledBackColor = System.Drawing.Color.Empty;
             this.expandablePanel_Tuse.Dock = System.Windows.Forms.DockStyle.Top;
             this.expandablePanel_Tuse.Expanded = false;
             this.expandablePanel_Tuse.ExpandedBounds = new System.Drawing.Rectangle(0, 104, 222, 226);
@@ -2639,12 +3613,14 @@ private void InitializeComponent()
             this.itemPanel4.Controls.Add(this.radioButton_TusPeriods2);
             this.itemPanel4.Controls.Add(this.radioButton_TusPeriods1);
             this.itemPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemPanel4.DragDropSupport = true;
             this.itemPanel4.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel4.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel4.Location = new System.Drawing.Point(0, 26);
             this.itemPanel4.Name = "itemPanel4";
+            this.itemPanel4.ReserveLeftSpace = false;
             this.itemPanel4.Size = new System.Drawing.Size(222, 0);
             this.itemPanel4.TabIndex = 3;
+            this.itemPanel4.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel4.Text = "itemPanel4";
             // 
             // groupPanel7
@@ -2658,6 +3634,7 @@ private void InitializeComponent()
             this.groupPanel7.Controls.Add(this.label37);
             this.groupPanel7.Controls.Add(this.textBox_TusTime2);
             this.groupPanel7.Controls.Add(this.label39);
+            this.groupPanel7.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel7.Location = new System.Drawing.Point(11, 114);
             this.groupPanel7.Name = "groupPanel7";
             this.groupPanel7.Size = new System.Drawing.Size(200, 79);
@@ -2770,6 +3747,7 @@ private void InitializeComponent()
             this.groupPanel8.Controls.Add(this.label42);
             this.groupPanel8.Controls.Add(this.textBox_TusTime1);
             this.groupPanel8.Controls.Add(this.label43);
+            this.groupPanel8.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel8.Location = new System.Drawing.Point(11, 30);
             this.groupPanel8.Name = "groupPanel8";
             this.groupPanel8.Size = new System.Drawing.Size(200, 79);
@@ -2915,6 +3893,7 @@ private void InitializeComponent()
             this.expandablePanel_Mon.CanvasColor = System.Drawing.SystemColors.Control;
             this.expandablePanel_Mon.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.expandablePanel_Mon.Controls.Add(this.itemPanel3);
+            this.expandablePanel_Mon.DisabledBackColor = System.Drawing.Color.Empty;
             this.expandablePanel_Mon.Dock = System.Windows.Forms.DockStyle.Top;
             this.expandablePanel_Mon.Expanded = false;
             this.expandablePanel_Mon.ExpandedBounds = new System.Drawing.Rectangle(0, 78, 222, 226);
@@ -2968,12 +3947,14 @@ private void InitializeComponent()
             this.itemPanel3.Controls.Add(this.radioButton_MonPeriods2);
             this.itemPanel3.Controls.Add(this.radioButton_MonPeriods1);
             this.itemPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemPanel3.DragDropSupport = true;
             this.itemPanel3.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel3.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel3.Location = new System.Drawing.Point(0, 26);
             this.itemPanel3.Name = "itemPanel3";
+            this.itemPanel3.ReserveLeftSpace = false;
             this.itemPanel3.Size = new System.Drawing.Size(222, 0);
             this.itemPanel3.TabIndex = 3;
+            this.itemPanel3.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel3.Text = "itemPanel3";
             // 
             // groupPanel5
@@ -2987,6 +3968,7 @@ private void InitializeComponent()
             this.groupPanel5.Controls.Add(this.label30);
             this.groupPanel5.Controls.Add(this.textBox_MonTime2);
             this.groupPanel5.Controls.Add(this.label31);
+            this.groupPanel5.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel5.Location = new System.Drawing.Point(11, 114);
             this.groupPanel5.Name = "groupPanel5";
             this.groupPanel5.Size = new System.Drawing.Size(200, 79);
@@ -3099,6 +4081,7 @@ private void InitializeComponent()
             this.groupPanel6.Controls.Add(this.label33);
             this.groupPanel6.Controls.Add(this.textBox_MonTime1);
             this.groupPanel6.Controls.Add(this.label34);
+            this.groupPanel6.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel6.Location = new System.Drawing.Point(11, 30);
             this.groupPanel6.Name = "groupPanel6";
             this.groupPanel6.Size = new System.Drawing.Size(200, 79);
@@ -3244,6 +4227,7 @@ private void InitializeComponent()
             this.expandablePanel_Sun.CanvasColor = System.Drawing.SystemColors.Control;
             this.expandablePanel_Sun.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.expandablePanel_Sun.Controls.Add(this.itemPanel2);
+            this.expandablePanel_Sun.DisabledBackColor = System.Drawing.Color.Empty;
             this.expandablePanel_Sun.Dock = System.Windows.Forms.DockStyle.Top;
             this.expandablePanel_Sun.Expanded = false;
             this.expandablePanel_Sun.ExpandedBounds = new System.Drawing.Rectangle(0, 52, 222, 226);
@@ -3297,12 +4281,14 @@ private void InitializeComponent()
             this.itemPanel2.Controls.Add(this.radioButton_SunPeriods2);
             this.itemPanel2.Controls.Add(this.radioButton_SunPeriods1);
             this.itemPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemPanel2.DragDropSupport = true;
             this.itemPanel2.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel2.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel2.Location = new System.Drawing.Point(0, 26);
             this.itemPanel2.Name = "itemPanel2";
+            this.itemPanel2.ReserveLeftSpace = false;
             this.itemPanel2.Size = new System.Drawing.Size(222, 0);
             this.itemPanel2.TabIndex = 3;
+            this.itemPanel2.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel2.Text = "itemPanel2";
             // 
             // groupPanel3
@@ -3316,6 +4302,7 @@ private void InitializeComponent()
             this.groupPanel3.Controls.Add(this.label24);
             this.groupPanel3.Controls.Add(this.textBox_SunTime2);
             this.groupPanel3.Controls.Add(this.label25);
+            this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel3.Location = new System.Drawing.Point(11, 114);
             this.groupPanel3.Name = "groupPanel3";
             this.groupPanel3.Size = new System.Drawing.Size(200, 79);
@@ -3428,6 +4415,7 @@ private void InitializeComponent()
             this.groupPanel4.Controls.Add(this.label27);
             this.groupPanel4.Controls.Add(this.textBox_SunTime1);
             this.groupPanel4.Controls.Add(this.label28);
+            this.groupPanel4.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel4.Location = new System.Drawing.Point(11, 30);
             this.groupPanel4.Name = "groupPanel4";
             this.groupPanel4.Size = new System.Drawing.Size(200, 79);
@@ -3573,6 +4561,7 @@ private void InitializeComponent()
             this.expandablePanel_Sat.CanvasColor = System.Drawing.SystemColors.Control;
             this.expandablePanel_Sat.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.expandablePanel_Sat.Controls.Add(this.itemPanel1);
+            this.expandablePanel_Sat.DisabledBackColor = System.Drawing.Color.Empty;
             this.expandablePanel_Sat.Dock = System.Windows.Forms.DockStyle.Top;
             this.expandablePanel_Sat.Expanded = false;
             this.expandablePanel_Sat.ExpandedBounds = new System.Drawing.Rectangle(0, 26, 222, 226);
@@ -3626,12 +4615,14 @@ private void InitializeComponent()
             this.itemPanel1.Controls.Add(this.radioButton_SatPeriods2);
             this.itemPanel1.Controls.Add(this.radioButton_SatPeriods1);
             this.itemPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemPanel1.DragDropSupport = true;
             this.itemPanel1.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemPanel1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel1.Location = new System.Drawing.Point(0, 26);
             this.itemPanel1.Name = "itemPanel1";
+            this.itemPanel1.ReserveLeftSpace = false;
             this.itemPanel1.Size = new System.Drawing.Size(222, 0);
             this.itemPanel1.TabIndex = 3;
+            this.itemPanel1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.itemPanel1.Text = "itemPanel1";
             // 
             // groupPanel2
@@ -3645,6 +4636,7 @@ private void InitializeComponent()
             this.groupPanel2.Controls.Add(this.label21);
             this.groupPanel2.Controls.Add(this.textBox_SatTime2);
             this.groupPanel2.Controls.Add(this.label22);
+            this.groupPanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel2.Location = new System.Drawing.Point(11, 116);
             this.groupPanel2.Name = "groupPanel2";
             this.groupPanel2.Size = new System.Drawing.Size(200, 79);
@@ -3757,6 +4749,7 @@ private void InitializeComponent()
             this.groupPanel1.Controls.Add(this.label18);
             this.groupPanel1.Controls.Add(this.textBox_SatTime1);
             this.groupPanel1.Controls.Add(this.label14);
+            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.Location = new System.Drawing.Point(11, 32);
             this.groupPanel1.Name = "groupPanel1";
             this.groupPanel1.Size = new System.Drawing.Size(200, 79);
@@ -3975,6 +4968,7 @@ private void InitializeComponent()
             this.panelEx4.Controls.Add(this.groupBox7);
             this.panelEx4.Controls.Add(this.textBox_WorkNo);
             this.panelEx4.Controls.Add(this.checkBox_AutoReturnContr);
+            this.panelEx4.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx4.Location = new System.Drawing.Point(0, 0);
             this.panelEx4.Name = "panelEx4";
@@ -4009,10 +5003,10 @@ private void InitializeComponent()
             this.comboBox_CalculateNo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox_CalculateNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_CalculateNo.FormattingEnabled = true;
-            this.comboBox_CalculateNo.ItemHeight = 14;
+            this.comboBox_CalculateNo.ItemHeight = 15;
             this.comboBox_CalculateNo.Location = new System.Drawing.Point(11, 277);
             this.comboBox_CalculateNo.Name = "comboBox_CalculateNo";
-            this.comboBox_CalculateNo.Size = new System.Drawing.Size(569, 20);
+            this.comboBox_CalculateNo.Size = new System.Drawing.Size(569, 21);
             this.comboBox_CalculateNo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboBox_CalculateNo.TabIndex = 6778;
             this.comboBox_CalculateNo.SelectedValueChanged += new System.EventHandler(this.comboBox_CalculateNo_SelectedValueChanged);
@@ -4036,10 +5030,10 @@ private void InitializeComponent()
             this.comboBox_ContrTyp.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox_ContrTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_ContrTyp.FormattingEnabled = true;
-            this.comboBox_ContrTyp.ItemHeight = 14;
+            this.comboBox_ContrTyp.ItemHeight = 15;
             this.comboBox_ContrTyp.Location = new System.Drawing.Point(385, 20);
             this.comboBox_ContrTyp.Name = "comboBox_ContrTyp";
-            this.comboBox_ContrTyp.Size = new System.Drawing.Size(119, 20);
+            this.comboBox_ContrTyp.Size = new System.Drawing.Size(119, 21);
             this.comboBox_ContrTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboBox_ContrTyp.TabIndex = 6770;
             // 
@@ -4364,10 +5358,10 @@ private void InitializeComponent()
             this.comboBox_Allowances.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox_Allowances.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Allowances.FormattingEnabled = true;
-            this.comboBox_Allowances.ItemHeight = 14;
+            this.comboBox_Allowances.ItemHeight = 15;
             this.comboBox_Allowances.Location = new System.Drawing.Point(405, 107);
             this.comboBox_Allowances.Name = "comboBox_Allowances";
-            this.comboBox_Allowances.Size = new System.Drawing.Size(68, 20);
+            this.comboBox_Allowances.Size = new System.Drawing.Size(68, 21);
             this.comboBox_Allowances.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboBox_Allowances.TabIndex = 6753;
             // 
@@ -4378,10 +5372,10 @@ private void InitializeComponent()
             this.comboBox_AllowancesTime.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox_AllowancesTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_AllowancesTime.FormattingEnabled = true;
-            this.comboBox_AllowancesTime.ItemHeight = 14;
+            this.comboBox_AllowancesTime.ItemHeight = 15;
             this.comboBox_AllowancesTime.Location = new System.Drawing.Point(270, 107);
             this.comboBox_AllowancesTime.Name = "comboBox_AllowancesTime";
-            this.comboBox_AllowancesTime.Size = new System.Drawing.Size(99, 20);
+            this.comboBox_AllowancesTime.Size = new System.Drawing.Size(99, 21);
             this.comboBox_AllowancesTime.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboBox_AllowancesTime.TabIndex = 6752;
             // 
@@ -4452,10 +5446,10 @@ private void InitializeComponent()
             this.comboBox_DirBoss.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox_DirBoss.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_DirBoss.FormattingEnabled = true;
-            this.comboBox_DirBoss.ItemHeight = 14;
+            this.comboBox_DirBoss.ItemHeight = 15;
             this.comboBox_DirBoss.Location = new System.Drawing.Point(325, 78);
             this.comboBox_DirBoss.Name = "comboBox_DirBoss";
-            this.comboBox_DirBoss.Size = new System.Drawing.Size(179, 20);
+            this.comboBox_DirBoss.Size = new System.Drawing.Size(179, 21);
             this.comboBox_DirBoss.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboBox_DirBoss.TabIndex = 6747;
             // 
@@ -4493,7 +5487,7 @@ private void InitializeComponent()
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label10.Location = new System.Drawing.Point(506, 82);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.Size = new System.Drawing.Size(38, 13);
             this.label10.TabIndex = 6750;
             this.label10.Text = "المدير :";
             // 
@@ -4671,8 +5665,8 @@ private void InitializeComponent()
             // 
             // switchButton_SalStatus
             // 
-            this.switchButton_SalStatus.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left));
+            this.switchButton_SalStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             // 
             // 
             // 
@@ -4975,6 +5969,7 @@ private void InitializeComponent()
             this.textBox_WorkNo.Location = new System.Drawing.Point(9, 370);
             this.textBox_WorkNo.Multiline = true;
             this.textBox_WorkNo.Name = "textBox_WorkNo";
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_WorkNo, false);
             this.textBox_WorkNo.Size = new System.Drawing.Size(158, 40);
             this.textBox_WorkNo.TabIndex = 6779;
             this.textBox_WorkNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -5024,1158 +6019,6 @@ private void InitializeComponent()
             this.superTabItem_Contract.Name = "superTabItem_Contract";
             this.superTabItem_Contract.PredefinedColor = DevComponents.DotNetBar.eTabItemColor.Cyan;
             this.superTabItem_Contract.Text = "العقــــــــد";
-            // 
-            // superTabControlPanel15
-            // 
-            this.superTabControlPanel15.Controls.Add(this.panelEx1);
-            this.superTabControlPanel15.Controls.Add(this.labelX15);
-            this.superTabControlPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel15.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel15.Name = "superTabControlPanel15";
-            this.superTabControlPanel15.Size = new System.Drawing.Size(594, 419);
-            this.superTabControlPanel15.TabIndex = 0;
-            this.superTabControlPanel15.TabItem = this.superTabItem_Gen;
-            // 
-            // panelEx1
-            // 
-            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx1.Controls.Add(this.groupBox1);
-            this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEx1.Location = new System.Drawing.Point(0, 0);
-            this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(594, 419);
-            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx1.Style.BackColor1.Color = System.Drawing.Color.AliceBlue;
-            this.panelEx1.Style.BackColor2.Color = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.panelEx1.Style.GradientAngle = 90;
-            this.panelEx1.TabIndex = 9;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox1.Controls.Add(this.button_SrchNation);
-            this.groupBox1.Controls.Add(this.button_SrchGuartor);
-            this.groupBox1.Controls.Add(this.button_SrchJob);
-            this.groupBox1.Controls.Add(this.button_SrchSection);
-            this.groupBox1.Controls.Add(this.button_SrchDept);
-            this.groupBox1.Controls.Add(this.pictureBox_EnterPic);
-            this.groupBox1.Controls.Add(this.textBox_NameE);
-            this.groupBox1.Controls.Add(this.textBox_NameA);
-            this.groupBox1.Controls.Add(this.textBox_SocialInsuranceNo);
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.labelX1);
-            this.groupBox1.Controls.Add(this.checkBox_ClearPic);
-            this.groupBox1.Controls.Add(this.button_Pic);
-            this.groupBox1.Controls.Add(this.comboBox_Nationalty);
-            this.groupBox1.Controls.Add(this.button_AddNewNation);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox_Guarantor);
-            this.groupBox1.Controls.Add(this.button_AddNewSponser);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.comboBox_Job);
-            this.groupBox1.Controls.Add(this.button_AddNewJob);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox_Section);
-            this.groupBox1.Controls.Add(this.button_AddNewSection);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBox_Dept);
-            this.groupBox1.Controls.Add(this.button_AddNewDept);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox_Pass);
-            this.groupBox1.Controls.Add(this.label52);
-            this.groupBox1.Controls.Add(this.label40);
-            this.groupBox1.Controls.Add(this.label36);
-            this.groupBox1.Controls.Add(this.label38);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.textBox_ID);
-            this.groupBox1.Controls.Add(this.linkLabel_ChangeEmpNo);
-            this.groupBox1.Controls.Add(this.button_PhotoShoot);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(594, 419);
-            this.groupBox1.TabIndex = 103;
-            this.groupBox1.TabStop = false;
-            // 
-            // button_SrchNation
-            // 
-            this.button_SrchNation.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_SrchNation.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_SrchNation.Location = new System.Drawing.Point(31, 194);
-            this.button_SrchNation.Name = "button_SrchNation";
-            this.button_SrchNation.Size = new System.Drawing.Size(26, 20);
-            this.button_SrchNation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_SrchNation.Symbol = "";
-            this.button_SrchNation.SymbolSize = 12F;
-            this.button_SrchNation.TabIndex = 1600;
-            this.button_SrchNation.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_SrchNation.Click += new System.EventHandler(this.button_SrchNation_Click);
-            // 
-            // button_SrchGuartor
-            // 
-            this.button_SrchGuartor.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_SrchGuartor.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_SrchGuartor.Location = new System.Drawing.Point(182, 170);
-            this.button_SrchGuartor.Name = "button_SrchGuartor";
-            this.button_SrchGuartor.Size = new System.Drawing.Size(26, 20);
-            this.button_SrchGuartor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_SrchGuartor.Symbol = "";
-            this.button_SrchGuartor.SymbolSize = 12F;
-            this.button_SrchGuartor.TabIndex = 1596;
-            this.button_SrchGuartor.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_SrchGuartor.Click += new System.EventHandler(this.button_SrchGuartor_Click);
-            // 
-            // button_SrchJob
-            // 
-            this.button_SrchJob.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_SrchJob.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_SrchJob.Location = new System.Drawing.Point(182, 144);
-            this.button_SrchJob.Name = "button_SrchJob";
-            this.button_SrchJob.Size = new System.Drawing.Size(26, 20);
-            this.button_SrchJob.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_SrchJob.Symbol = "";
-            this.button_SrchJob.SymbolSize = 12F;
-            this.button_SrchJob.TabIndex = 1592;
-            this.button_SrchJob.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_SrchJob.Click += new System.EventHandler(this.button_SrchJob_Click);
-            // 
-            // button_SrchSection
-            // 
-            this.button_SrchSection.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_SrchSection.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_SrchSection.Location = new System.Drawing.Point(182, 118);
-            this.button_SrchSection.Name = "button_SrchSection";
-            this.button_SrchSection.Size = new System.Drawing.Size(26, 20);
-            this.button_SrchSection.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_SrchSection.Symbol = "";
-            this.button_SrchSection.SymbolSize = 12F;
-            this.button_SrchSection.TabIndex = 1588;
-            this.button_SrchSection.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_SrchSection.Click += new System.EventHandler(this.button_SrchSection_Click);
-            // 
-            // button_SrchDept
-            // 
-            this.button_SrchDept.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_SrchDept.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_SrchDept.Location = new System.Drawing.Point(182, 93);
-            this.button_SrchDept.Name = "button_SrchDept";
-            this.button_SrchDept.Size = new System.Drawing.Size(26, 20);
-            this.button_SrchDept.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_SrchDept.Symbol = "";
-            this.button_SrchDept.SymbolSize = 12F;
-            this.button_SrchDept.TabIndex = 1584;
-            this.button_SrchDept.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_SrchDept.Click += new System.EventHandler(this.button_SrchDept_Click);
-            // 
-            // pictureBox_EnterPic
-            // 
-            this.pictureBox_EnterPic.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_EnterPic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox_EnterPic.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox_EnterPic.Location = new System.Drawing.Point(3, 44);
-            this.pictureBox_EnterPic.Name = "pictureBox_EnterPic";
-            this.pictureBox_EnterPic.Size = new System.Drawing.Size(148, 126);
-            this.pictureBox_EnterPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_EnterPic.TabIndex = 6686;
-            this.pictureBox_EnterPic.TabStop = false;
-            // 
-            // textBox_NameE
-            // 
-            this.textBox_NameE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_NameE.ForeColor = System.Drawing.Color.Black;
-            this.textBox_NameE.Location = new System.Drawing.Point(154, 69);
-            this.textBox_NameE.MaxLength = 30;
-            this.textBox_NameE.Name = "textBox_NameE";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_NameE, false);
-            this.textBox_NameE.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox_NameE.Size = new System.Drawing.Size(336, 20);
-            this.textBox_NameE.TabIndex = 4;
-            this.textBox_NameE.Enter += new System.EventHandler(this.textBox_NameE_Enter);
-            this.textBox_NameE.Leave += new System.EventHandler(this.textBox_NameA_Leave);
-            // 
-            // textBox_NameA
-            // 
-            this.textBox_NameA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_NameA.ForeColor = System.Drawing.Color.Black;
-            this.textBox_NameA.Location = new System.Drawing.Point(154, 44);
-            this.textBox_NameA.MaxLength = 30;
-            this.textBox_NameA.Name = "textBox_NameA";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_NameA, false);
-            this.textBox_NameA.Size = new System.Drawing.Size(336, 20);
-            this.textBox_NameA.TabIndex = 3;
-            this.textBox_NameA.Enter += new System.EventHandler(this.textBox_NameA_Enter);
-            this.textBox_NameA.Leave += new System.EventHandler(this.textBox_NameA_Leave);
-            // 
-            // textBox_SocialInsuranceNo
-            // 
-            this.textBox_SocialInsuranceNo.AutoSelectAll = true;
-            this.textBox_SocialInsuranceNo.BackColor = System.Drawing.Color.AliceBlue;
-            // 
-            // 
-            // 
-            this.textBox_SocialInsuranceNo.Border.Class = "TextBoxBorder";
-            this.textBox_SocialInsuranceNo.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBox_SocialInsuranceNo.ButtonCustom.Text = ": التأمين الإجتماعي";
-            this.textBox_SocialInsuranceNo.ForeColor = System.Drawing.Color.Black;
-            this.textBox_SocialInsuranceNo.Location = new System.Drawing.Point(3, 218);
-            this.textBox_SocialInsuranceNo.Multiline = true;
-            this.textBox_SocialInsuranceNo.Name = "textBox_SocialInsuranceNo";
-            this.textBox_SocialInsuranceNo.Size = new System.Drawing.Size(575, 42);
-            this.textBox_SocialInsuranceNo.TabIndex = 10;
-            this.textBox_SocialInsuranceNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox_SocialInsuranceNo.WatermarkColor = System.Drawing.Color.RosyBrown;
-            this.textBox_SocialInsuranceNo.WatermarkFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_SocialInsuranceNo.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.textBox_SocialInsuranceNo.WatermarkText = "...";
-            this.textBox_SocialInsuranceNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_SocialInsuranceNo_KeyPress);
-            this.textBox_SocialInsuranceNo.Leave += new System.EventHandler(this.textBox_SocialInsuranceNo_Leave);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.textBox_QualificationA);
-            this.panel2.Controls.Add(this.button_AddNewBirthPlaces);
-            this.panel2.Controls.Add(this.button_SrchBirthPlaces);
-            this.panel2.Controls.Add(this.textBox_ExperiencesA);
-            this.panel2.Controls.Add(this.label127);
-            this.panel2.Controls.Add(this.comboBox_BloodTyp);
-            this.panel2.Controls.Add(this.comboBox_BirthPlace);
-            this.panel2.Controls.Add(this.label133);
-            this.panel2.Controls.Add(this.textBox_Email);
-            this.panel2.Controls.Add(this.label125);
-            this.panel2.Controls.Add(this.textBox_Tel);
-            this.panel2.Controls.Add(this.label124);
-            this.panel2.Controls.Add(this.comboBox_CityNo);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.button_AddNewCity);
-            this.panel2.Controls.Add(this.button_SrchCities);
-            this.panel2.Controls.Add(this.textBox_AddressA);
-            this.panel2.Controls.Add(this.label126);
-            this.panel2.Controls.Add(this.comboBox_Sex);
-            this.panel2.Controls.Add(this.comboBox_MaritalStatus);
-            this.panel2.Controls.Add(this.comboBox_Religion);
-            this.panel2.Controls.Add(this.dateTimeInput_BirthDate);
-            this.panel2.Controls.Add(this.label119);
-            this.panel2.Controls.Add(this.label118);
-            this.panel2.Controls.Add(this.label117);
-            this.panel2.Controls.Add(this.label115);
-            this.panel2.Controls.Add(this.label114);
-            this.panel2.Controls.Add(this.label113);
-            this.panel2.Controls.Add(this.button_AddNewReligon);
-            this.panel2.Controls.Add(this.button_SrchReligion);
-            this.panel2.Controls.Add(this.button_SrchReligon);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 266);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(588, 150);
-            this.panel2.TabIndex = 6677;
-            // 
-            // textBox_QualificationA
-            // 
-            this.textBox_QualificationA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox_QualificationA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_QualificationA.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.textBox_QualificationA.Location = new System.Drawing.Point(10, 92);
-            this.textBox_QualificationA.MaxLength = 50;
-            this.textBox_QualificationA.Name = "textBox_QualificationA";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_QualificationA, false);
-            this.textBox_QualificationA.Size = new System.Drawing.Size(476, 21);
-            this.textBox_QualificationA.TabIndex = 21;
-            // 
-            // button_AddNewBirthPlaces
-            // 
-            this.button_AddNewBirthPlaces.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_AddNewBirthPlaces.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_AddNewBirthPlaces.Location = new System.Drawing.Point(131, 26);
-            this.button_AddNewBirthPlaces.Name = "button_AddNewBirthPlaces";
-            this.button_AddNewBirthPlaces.Size = new System.Drawing.Size(26, 20);
-            this.button_AddNewBirthPlaces.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_AddNewBirthPlaces.Symbol = "";
-            this.button_AddNewBirthPlaces.SymbolSize = 11F;
-            this.button_AddNewBirthPlaces.TabIndex = 6700;
-            this.button_AddNewBirthPlaces.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_AddNewBirthPlaces.Click += new System.EventHandler(this.button_AddNewBirthPlaces_Click);
-            // 
-            // button_SrchBirthPlaces
-            // 
-            this.button_SrchBirthPlaces.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_SrchBirthPlaces.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_SrchBirthPlaces.Location = new System.Drawing.Point(158, 26);
-            this.button_SrchBirthPlaces.Name = "button_SrchBirthPlaces";
-            this.button_SrchBirthPlaces.Size = new System.Drawing.Size(26, 20);
-            this.button_SrchBirthPlaces.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_SrchBirthPlaces.Symbol = "";
-            this.button_SrchBirthPlaces.SymbolSize = 12F;
-            this.button_SrchBirthPlaces.TabIndex = 6699;
-            this.button_SrchBirthPlaces.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_SrchBirthPlaces.Click += new System.EventHandler(this.button_SrchBirthPlaces_Click);
-            // 
-            // textBox_ExperiencesA
-            // 
-            this.textBox_ExperiencesA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox_ExperiencesA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_ExperiencesA.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.textBox_ExperiencesA.Location = new System.Drawing.Point(10, 115);
-            this.textBox_ExperiencesA.MaxLength = 100;
-            this.textBox_ExperiencesA.Multiline = true;
-            this.textBox_ExperiencesA.Name = "textBox_ExperiencesA";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_ExperiencesA, false);
-            this.textBox_ExperiencesA.Size = new System.Drawing.Size(476, 29);
-            this.textBox_ExperiencesA.TabIndex = 22;
-            // 
-            // label127
-            // 
-            this.label127.AutoSize = true;
-            this.label127.BackColor = System.Drawing.Color.Transparent;
-            this.label127.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label127.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label127.Location = new System.Drawing.Point(489, 118);
-            this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(87, 13);
-            this.label127.TabIndex = 6698;
-            this.label127.Text = "الخبـــــــــــــرات :";
-            // 
-            // comboBox_BloodTyp
-            // 
-            this.comboBox_BloodTyp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_BloodTyp.DisplayMember = "Text";
-            this.comboBox_BloodTyp.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox_BloodTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_BloodTyp.FormattingEnabled = true;
-            this.comboBox_BloodTyp.ItemHeight = 14;
-            this.comboBox_BloodTyp.Location = new System.Drawing.Point(10, 26);
-            this.comboBox_BloodTyp.Name = "comboBox_BloodTyp";
-            this.comboBox_BloodTyp.Size = new System.Drawing.Size(54, 20);
-            this.comboBox_BloodTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBox_BloodTyp.TabIndex = 16;
-            // 
-            // comboBox_BirthPlace
-            // 
-            this.comboBox_BirthPlace.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_BirthPlace.DisplayMember = "Text";
-            this.comboBox_BirthPlace.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox_BirthPlace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_BirthPlace.FormattingEnabled = true;
-            this.comboBox_BirthPlace.ItemHeight = 14;
-            this.comboBox_BirthPlace.Location = new System.Drawing.Point(185, 26);
-            this.comboBox_BirthPlace.Name = "comboBox_BirthPlace";
-            this.comboBox_BirthPlace.Size = new System.Drawing.Size(130, 20);
-            this.comboBox_BirthPlace.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBox_BirthPlace.TabIndex = 15;
-            // 
-            // label133
-            // 
-            this.label133.AutoSize = true;
-            this.label133.BackColor = System.Drawing.Color.Transparent;
-            this.label133.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label133.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label133.Location = new System.Drawing.Point(489, 96);
-            this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(85, 13);
-            this.label133.TabIndex = 6694;
-            this.label133.Text = "المؤهل العلمي :";
-            // 
-            // textBox_Email
-            // 
-            this.textBox_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_Email.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.textBox_Email.Location = new System.Drawing.Point(10, 70);
-            this.textBox_Email.MaxLength = 30;
-            this.textBox_Email.Name = "textBox_Email";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_Email, false);
-            this.textBox_Email.Size = new System.Drawing.Size(193, 21);
-            this.textBox_Email.TabIndex = 20;
-            // 
-            // label125
-            // 
-            this.label125.AutoSize = true;
-            this.label125.BackColor = System.Drawing.Color.Transparent;
-            this.label125.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label125.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label125.Location = new System.Drawing.Point(204, 74);
-            this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(88, 13);
-            this.label125.TabIndex = 6692;
-            this.label125.Text = "البريد الإلكتروني :";
-            // 
-            // textBox_Tel
-            // 
-            this.textBox_Tel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_Tel.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.textBox_Tel.Location = new System.Drawing.Point(296, 70);
-            this.textBox_Tel.MaxLength = 15;
-            this.textBox_Tel.Name = "textBox_Tel";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_Tel, false);
-            this.textBox_Tel.Size = new System.Drawing.Size(190, 21);
-            this.textBox_Tel.TabIndex = 19;
-            this.textBox_Tel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_ID_No_KeyPress);
-            // 
-            // label124
-            // 
-            this.label124.AutoSize = true;
-            this.label124.BackColor = System.Drawing.Color.Transparent;
-            this.label124.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label124.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label124.Location = new System.Drawing.Point(489, 74);
-            this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(84, 13);
-            this.label124.TabIndex = 6691;
-            this.label124.Text = "الجــــــــــــــوال :";
-            // 
-            // comboBox_CityNo
-            // 
-            this.comboBox_CityNo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_CityNo.DisplayMember = "Text";
-            this.comboBox_CityNo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox_CityNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_CityNo.FormattingEnabled = true;
-            this.comboBox_CityNo.ItemHeight = 14;
-            this.comboBox_CityNo.Location = new System.Drawing.Point(65, 48);
-            this.comboBox_CityNo.Name = "comboBox_CityNo";
-            this.comboBox_CityNo.Size = new System.Drawing.Size(138, 20);
-            this.comboBox_CityNo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBox_CityNo.TabIndex = 18;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(204, 52);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 13);
-            this.label9.TabIndex = 6685;
-            this.label9.Text = "المدينة :";
-            // 
-            // button_AddNewCity
-            // 
-            this.button_AddNewCity.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_AddNewCity.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_AddNewCity.Location = new System.Drawing.Point(10, 48);
-            this.button_AddNewCity.Name = "button_AddNewCity";
-            this.button_AddNewCity.Size = new System.Drawing.Size(26, 20);
-            this.button_AddNewCity.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_AddNewCity.Symbol = "";
-            this.button_AddNewCity.SymbolSize = 11F;
-            this.button_AddNewCity.TabIndex = 6688;
-            this.button_AddNewCity.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_AddNewCity.Click += new System.EventHandler(this.button_AddNewCity_Click);
-            // 
-            // button_SrchCities
-            // 
-            this.button_SrchCities.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_SrchCities.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_SrchCities.Location = new System.Drawing.Point(37, 48);
-            this.button_SrchCities.Name = "button_SrchCities";
-            this.button_SrchCities.Size = new System.Drawing.Size(26, 20);
-            this.button_SrchCities.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_SrchCities.Symbol = "";
-            this.button_SrchCities.SymbolSize = 12F;
-            this.button_SrchCities.TabIndex = 6687;
-            this.button_SrchCities.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_SrchCities.Click += new System.EventHandler(this.button_SrchCities_Click);
-            // 
-            // textBox_AddressA
-            // 
-            this.textBox_AddressA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_AddressA.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.textBox_AddressA.Location = new System.Drawing.Point(252, 48);
-            this.textBox_AddressA.MaxLength = 30;
-            this.textBox_AddressA.Name = "textBox_AddressA";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_AddressA, false);
-            this.textBox_AddressA.Size = new System.Drawing.Size(234, 21);
-            this.textBox_AddressA.TabIndex = 17;
-            // 
-            // label126
-            // 
-            this.label126.AutoSize = true;
-            this.label126.BackColor = System.Drawing.Color.Transparent;
-            this.label126.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label126.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label126.Location = new System.Drawing.Point(489, 52);
-            this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(84, 13);
-            this.label126.TabIndex = 6684;
-            this.label126.Text = "العنـــــــــــــوان :";
-            // 
-            // comboBox_Sex
-            // 
-            this.comboBox_Sex.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_Sex.DisplayMember = "Text";
-            this.comboBox_Sex.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox_Sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Sex.FormattingEnabled = true;
-            this.comboBox_Sex.ItemHeight = 14;
-            this.comboBox_Sex.Location = new System.Drawing.Point(410, 4);
-            this.comboBox_Sex.Name = "comboBox_Sex";
-            this.comboBox_Sex.Size = new System.Drawing.Size(76, 20);
-            this.comboBox_Sex.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBox_Sex.TabIndex = 11;
-            // 
-            // comboBox_MaritalStatus
-            // 
-            this.comboBox_MaritalStatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_MaritalStatus.DisplayMember = "Text";
-            this.comboBox_MaritalStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox_MaritalStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_MaritalStatus.FormattingEnabled = true;
-            this.comboBox_MaritalStatus.ItemHeight = 14;
-            this.comboBox_MaritalStatus.Location = new System.Drawing.Point(223, 4);
-            this.comboBox_MaritalStatus.Name = "comboBox_MaritalStatus";
-            this.comboBox_MaritalStatus.Size = new System.Drawing.Size(92, 20);
-            this.comboBox_MaritalStatus.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBox_MaritalStatus.TabIndex = 12;
-            // 
-            // comboBox_Religion
-            // 
-            this.comboBox_Religion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_Religion.DisplayMember = "Text";
-            this.comboBox_Religion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox_Religion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Religion.FormattingEnabled = true;
-            this.comboBox_Religion.ItemHeight = 14;
-            this.comboBox_Religion.Location = new System.Drawing.Point(65, 4);
-            this.comboBox_Religion.Name = "comboBox_Religion";
-            this.comboBox_Religion.Size = new System.Drawing.Size(113, 20);
-            this.comboBox_Religion.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBox_Religion.TabIndex = 13;
-            // 
-            // dateTimeInput_BirthDate
-            // 
-            this.dateTimeInput_BirthDate.Location = new System.Drawing.Point(410, 26);
-            this.dateTimeInput_BirthDate.Mask = "0000/00/00";
-            this.dateTimeInput_BirthDate.Name = "dateTimeInput_BirthDate";
-            this.dateTimeInput_BirthDate.Size = new System.Drawing.Size(76, 20);
-            this.dateTimeInput_BirthDate.TabIndex = 14;
-            this.dateTimeInput_BirthDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label119
-            // 
-            this.label119.AutoSize = true;
-            this.label119.BackColor = System.Drawing.Color.Transparent;
-            this.label119.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label119.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label119.Location = new System.Drawing.Point(489, 30);
-            this.label119.Name = "label119";
-            this.label119.Size = new System.Drawing.Size(83, 13);
-            this.label119.TabIndex = 887;
-            this.label119.Text = "تاريـخ الميــــلاد :";
-            // 
-            // label118
-            // 
-            this.label118.AutoSize = true;
-            this.label118.BackColor = System.Drawing.Color.Transparent;
-            this.label118.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label118.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label118.Location = new System.Drawing.Point(315, 8);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(90, 13);
-            this.label118.TabIndex = 886;
-            this.label118.Text = "الحالة الإجتماعية :";
-            // 
-            // label117
-            // 
-            this.label117.AutoSize = true;
-            this.label117.BackColor = System.Drawing.Color.Transparent;
-            this.label117.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label117.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label117.Location = new System.Drawing.Point(315, 30);
-            this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(90, 13);
-            this.label117.TabIndex = 881;
-            this.label117.Text = "مكان الميـــــــلاد :";
-            // 
-            // label115
-            // 
-            this.label115.AutoSize = true;
-            this.label115.BackColor = System.Drawing.Color.Transparent;
-            this.label115.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label115.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label115.Location = new System.Drawing.Point(65, 30);
-            this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(64, 13);
-            this.label115.TabIndex = 877;
-            this.label115.Text = "فصيلة الدم :";
-            // 
-            // label114
-            // 
-            this.label114.AutoSize = true;
-            this.label114.BackColor = System.Drawing.Color.Transparent;
-            this.label114.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label114.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label114.Location = new System.Drawing.Point(489, 8);
-            this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(81, 13);
-            this.label114.TabIndex = 875;
-            this.label114.Text = "الجنــــــــــــس :";
-            // 
-            // label113
-            // 
-            this.label113.AutoSize = true;
-            this.label113.BackColor = System.Drawing.Color.Transparent;
-            this.label113.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label113.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label113.Location = new System.Drawing.Point(180, 8);
-            this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(41, 13);
-            this.label113.TabIndex = 873;
-            this.label113.Text = "الديانة :";
-            // 
-            // button_AddNewReligon
-            // 
-            this.button_AddNewReligon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_AddNewReligon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_AddNewReligon.Location = new System.Drawing.Point(10, 4);
-            this.button_AddNewReligon.Name = "button_AddNewReligon";
-            this.button_AddNewReligon.Size = new System.Drawing.Size(26, 20);
-            this.button_AddNewReligon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_AddNewReligon.Symbol = "";
-            this.button_AddNewReligon.SymbolSize = 11F;
-            this.button_AddNewReligon.TabIndex = 6680;
-            this.button_AddNewReligon.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_AddNewReligon.Click += new System.EventHandler(this.button_AddNewReligon_Click);
-            // 
-            // button_SrchReligion
-            // 
-            this.button_SrchReligion.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_SrchReligion.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_SrchReligion.Location = new System.Drawing.Point(37, 4);
-            this.button_SrchReligion.Name = "button_SrchReligion";
-            this.button_SrchReligion.Size = new System.Drawing.Size(26, 20);
-            this.button_SrchReligion.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_SrchReligion.Symbol = "";
-            this.button_SrchReligion.SymbolSize = 12F;
-            this.button_SrchReligion.TabIndex = 6679;
-            this.button_SrchReligion.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_SrchReligion.Click += new System.EventHandler(this.button_SrchReligion_Click);
-            // 
-            // button_SrchReligon
-            // 
-            this.button_SrchReligon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_SrchReligon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_SrchReligon.Location = new System.Drawing.Point(37, 4);
-            this.button_SrchReligon.Name = "button_SrchReligon";
-            this.button_SrchReligon.Size = new System.Drawing.Size(26, 20);
-            this.button_SrchReligon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_SrchReligon.Symbol = "";
-            this.button_SrchReligon.SymbolSize = 12F;
-            this.button_SrchReligon.TabIndex = 6679;
-            this.button_SrchReligon.TextColor = System.Drawing.Color.SteelBlue;
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Dash;
-            this.labelX1.BackgroundStyle.BorderBottomColor = System.Drawing.Color.SteelBlue;
-            this.labelX1.BackgroundStyle.BorderBottomWidth = 1;
-            this.labelX1.BackgroundStyle.BorderColor = System.Drawing.Color.SteelBlue;
-            this.labelX1.BackgroundStyle.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Dash;
-            this.labelX1.BackgroundStyle.BorderLeftColor = System.Drawing.Color.SteelBlue;
-            this.labelX1.BackgroundStyle.BorderLeftWidth = 1;
-            this.labelX1.BackgroundStyle.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Dash;
-            this.labelX1.BackgroundStyle.BorderRightColor = System.Drawing.Color.SteelBlue;
-            this.labelX1.BackgroundStyle.BorderRightWidth = 1;
-            this.labelX1.BackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Dash;
-            this.labelX1.BackgroundStyle.BorderTopColor = System.Drawing.Color.SteelBlue;
-            this.labelX1.BackgroundStyle.BorderTopWidth = 1;
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.ForeColor = System.Drawing.Color.Red;
-            this.labelX1.Location = new System.Drawing.Point(24, 171);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(127, 19);
-            this.labelX1.Symbol = "";
-            this.labelX1.SymbolColor = System.Drawing.Color.SteelBlue;
-            this.labelX1.SymbolSize = 12F;
-            this.labelX1.TabIndex = 1605;
-            this.labelX1.Text = "صورة الموظف";
-            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // checkBox_ClearPic
-            // 
-            this.checkBox_ClearPic.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.checkBox_ClearPic.Checked = true;
-            this.checkBox_ClearPic.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.checkBox_ClearPic.Location = new System.Drawing.Point(3, 44);
-            this.checkBox_ClearPic.Name = "checkBox_ClearPic";
-            this.checkBox_ClearPic.Size = new System.Drawing.Size(19, 125);
-            this.checkBox_ClearPic.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.checkBox_ClearPic.Symbol = "";
-            this.checkBox_ClearPic.SymbolSize = 11F;
-            this.checkBox_ClearPic.TabIndex = 1603;
-            this.checkBox_ClearPic.TextColor = System.Drawing.Color.SteelBlue;
-            this.checkBox_ClearPic.Tooltip = "إزالة الصورة";
-            this.checkBox_ClearPic.Click += new System.EventHandler(this.checkBox_ClearPic_Click);
-            // 
-            // button_Pic
-            // 
-            this.button_Pic.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_Pic.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_Pic.Location = new System.Drawing.Point(3, 170);
-            this.button_Pic.Name = "button_Pic";
-            this.button_Pic.Size = new System.Drawing.Size(19, 20);
-            this.button_Pic.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_Pic.Symbol = "";
-            this.button_Pic.SymbolSize = 11F;
-            this.button_Pic.TabIndex = 1604;
-            this.button_Pic.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_Pic.Tooltip = "إضافة صورة للصنف";
-            this.button_Pic.Click += new System.EventHandler(this.button_Pic_Click);
-            // 
-            // comboBox_Nationalty
-            // 
-            this.comboBox_Nationalty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_Nationalty.DisplayMember = "Text";
-            this.comboBox_Nationalty.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox_Nationalty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Nationalty.FormattingEnabled = true;
-            this.comboBox_Nationalty.ItemHeight = 14;
-            this.comboBox_Nationalty.Location = new System.Drawing.Point(60, 194);
-            this.comboBox_Nationalty.Name = "comboBox_Nationalty";
-            this.comboBox_Nationalty.Size = new System.Drawing.Size(430, 20);
-            this.comboBox_Nationalty.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBox_Nationalty.TabIndex = 9;
-            this.comboBox_Nationalty.SelectedValueChanged += new System.EventHandler(this.comboBox_Nationalty_SelectedValueChanged);
-            // 
-            // button_AddNewNation
-            // 
-            this.button_AddNewNation.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_AddNewNation.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_AddNewNation.Location = new System.Drawing.Point(3, 194);
-            this.button_AddNewNation.Name = "button_AddNewNation";
-            this.button_AddNewNation.Size = new System.Drawing.Size(26, 20);
-            this.button_AddNewNation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_AddNewNation.Symbol = "";
-            this.button_AddNewNation.SymbolSize = 11F;
-            this.button_AddNewNation.TabIndex = 1601;
-            this.button_AddNewNation.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_AddNewNation.Visible = false;
-            this.button_AddNewNation.Click += new System.EventHandler(this.button_AddNewNation_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(490, 198);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
-            this.label5.TabIndex = 1602;
-            this.label5.Text = "الجنسيـــــــــــــة :";
-            // 
-            // comboBox_Guarantor
-            // 
-            this.comboBox_Guarantor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_Guarantor.DisplayMember = "Text";
-            this.comboBox_Guarantor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox_Guarantor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Guarantor.FormattingEnabled = true;
-            this.comboBox_Guarantor.ItemHeight = 14;
-            this.comboBox_Guarantor.Location = new System.Drawing.Point(211, 169);
-            this.comboBox_Guarantor.Name = "comboBox_Guarantor";
-            this.comboBox_Guarantor.Size = new System.Drawing.Size(279, 20);
-            this.comboBox_Guarantor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBox_Guarantor.TabIndex = 8;
-            // 
-            // button_AddNewSponser
-            // 
-            this.button_AddNewSponser.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_AddNewSponser.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_AddNewSponser.Location = new System.Drawing.Point(154, 170);
-            this.button_AddNewSponser.Name = "button_AddNewSponser";
-            this.button_AddNewSponser.Size = new System.Drawing.Size(26, 20);
-            this.button_AddNewSponser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_AddNewSponser.Symbol = "";
-            this.button_AddNewSponser.SymbolSize = 11F;
-            this.button_AddNewSponser.TabIndex = 1597;
-            this.button_AddNewSponser.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_AddNewSponser.Click += new System.EventHandler(this.button_AddNewSponser_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(490, 173);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
-            this.label4.TabIndex = 1598;
-            this.label4.Text = "إســـــــم الكفيل :";
-            // 
-            // comboBox_Job
-            // 
-            this.comboBox_Job.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_Job.DisplayMember = "Text";
-            this.comboBox_Job.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox_Job.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Job.FormattingEnabled = true;
-            this.comboBox_Job.ItemHeight = 14;
-            this.comboBox_Job.Location = new System.Drawing.Point(211, 144);
-            this.comboBox_Job.Name = "comboBox_Job";
-            this.comboBox_Job.Size = new System.Drawing.Size(279, 20);
-            this.comboBox_Job.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBox_Job.TabIndex = 7;
-            // 
-            // button_AddNewJob
-            // 
-            this.button_AddNewJob.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_AddNewJob.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_AddNewJob.Location = new System.Drawing.Point(154, 144);
-            this.button_AddNewJob.Name = "button_AddNewJob";
-            this.button_AddNewJob.Size = new System.Drawing.Size(26, 20);
-            this.button_AddNewJob.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_AddNewJob.Symbol = "";
-            this.button_AddNewJob.SymbolSize = 11F;
-            this.button_AddNewJob.TabIndex = 1593;
-            this.button_AddNewJob.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_AddNewJob.Click += new System.EventHandler(this.button_AddNewJob_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(490, 148);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 13);
-            this.label3.TabIndex = 1594;
-            this.label3.Text = "إســـــم الوظيفة :";
-            // 
-            // comboBox_Section
-            // 
-            this.comboBox_Section.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_Section.DisplayMember = "Text";
-            this.comboBox_Section.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox_Section.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Section.FormattingEnabled = true;
-            this.comboBox_Section.ItemHeight = 14;
-            this.comboBox_Section.Location = new System.Drawing.Point(211, 119);
-            this.comboBox_Section.Name = "comboBox_Section";
-            this.comboBox_Section.Size = new System.Drawing.Size(279, 20);
-            this.comboBox_Section.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBox_Section.TabIndex = 6;
-            // 
-            // button_AddNewSection
-            // 
-            this.button_AddNewSection.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_AddNewSection.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_AddNewSection.Location = new System.Drawing.Point(154, 118);
-            this.button_AddNewSection.Name = "button_AddNewSection";
-            this.button_AddNewSection.Size = new System.Drawing.Size(26, 20);
-            this.button_AddNewSection.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_AddNewSection.Symbol = "";
-            this.button_AddNewSection.SymbolSize = 11F;
-            this.button_AddNewSection.TabIndex = 1589;
-            this.button_AddNewSection.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_AddNewSection.Click += new System.EventHandler(this.button_AddNewSection_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(490, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
-            this.label2.TabIndex = 1590;
-            this.label2.Text = "إســــــم القسم :";
-            // 
-            // comboBox_Dept
-            // 
-            this.comboBox_Dept.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_Dept.DisplayMember = "Text";
-            this.comboBox_Dept.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox_Dept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Dept.FormattingEnabled = true;
-            this.comboBox_Dept.ItemHeight = 14;
-            this.comboBox_Dept.Location = new System.Drawing.Point(211, 94);
-            this.comboBox_Dept.Name = "comboBox_Dept";
-            this.comboBox_Dept.Size = new System.Drawing.Size(279, 20);
-            this.comboBox_Dept.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBox_Dept.TabIndex = 5;
-            // 
-            // button_AddNewDept
-            // 
-            this.button_AddNewDept.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_AddNewDept.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_AddNewDept.Location = new System.Drawing.Point(154, 93);
-            this.button_AddNewDept.Name = "button_AddNewDept";
-            this.button_AddNewDept.Size = new System.Drawing.Size(26, 20);
-            this.button_AddNewDept.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_AddNewDept.Symbol = "";
-            this.button_AddNewDept.SymbolSize = 11F;
-            this.button_AddNewDept.TabIndex = 1585;
-            this.button_AddNewDept.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_AddNewDept.Click += new System.EventHandler(this.button_AddNewDept_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(490, 98);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(90, 13);
-            this.label12.TabIndex = 1586;
-            this.label12.Text = "إســــــــم الإدارة :";
-            // 
-            // textBox_Pass
-            // 
-            this.textBox_Pass.BackColor = System.Drawing.Color.Red;
-            this.textBox_Pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_Pass.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.textBox_Pass.ForeColor = System.Drawing.Color.White;
-            this.textBox_Pass.Location = new System.Drawing.Point(3, 19);
-            this.textBox_Pass.MaxLength = 10;
-            this.textBox_Pass.Name = "textBox_Pass";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_Pass, false);
-            this.textBox_Pass.PasswordChar = '*';
-            this.textBox_Pass.Size = new System.Drawing.Size(148, 20);
-            this.textBox_Pass.TabIndex = 2;
-            this.textBox_Pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.BackColor = System.Drawing.Color.Transparent;
-            this.label52.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label52.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label52.Location = new System.Drawing.Point(152, 23);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(93, 13);
-            this.label52.TabIndex = 99;
-            this.label52.Text = "كلمة سر الموظف :";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label40.Location = new System.Drawing.Point(490, 73);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(89, 13);
-            this.label40.TabIndex = 71;
-            this.label40.Text = "الإسم الإنجليزي :";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label36.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label36.Location = new System.Drawing.Point(490, 48);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(89, 13);
-            this.label36.TabIndex = 69;
-            this.label36.Text = "الإسم العــــربي :";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label38.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label38.Location = new System.Drawing.Point(490, 23);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(89, 13);
-            this.label38.TabIndex = 67;
-            this.label38.Text = "الرقـــــــــــــــــم :";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBox_CompPaying);
-            this.groupBox2.Controls.Add(this.textBox_SalSubtract);
-            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.groupBox2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.groupBox2.Location = new System.Drawing.Point(-258, 196);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(224, 63);
-            this.groupBox2.TabIndex = 1608;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "التأمين الإجتماعي";
-            this.groupBox2.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(10, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 13);
-            this.label1.TabIndex = 82;
-            this.label1.Text = "%";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(10, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 13);
-            this.label6.TabIndex = 81;
-            this.label6.Text = "%";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(109, 41);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 13);
-            this.label7.TabIndex = 79;
-            this.label7.Text = "مستحق من الشركة :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(109, 21);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 13);
-            this.label8.TabIndex = 77;
-            this.label8.Text = "يخصــــــم من الراتب :";
-            // 
-            // textBox_CompPaying
-            // 
-            this.textBox_CompPaying.AllowEmptyState = false;
-            this.textBox_CompPaying.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
-            this.textBox_CompPaying.AutoOffFreeTextEntry = true;
-            this.textBox_CompPaying.AutoResolveFreeTextEntries = false;
-            // 
-            // 
-            // 
-            this.textBox_CompPaying.BackgroundStyle.BorderBottomWidth = 1;
-            this.textBox_CompPaying.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.textBox_CompPaying.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBox_CompPaying.BackgroundStyle.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_CompPaying.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.textBox_CompPaying.DisplayFormat = "0.00";
-            this.textBox_CompPaying.Enabled = false;
-            this.textBox_CompPaying.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.textBox_CompPaying.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox_CompPaying.Increment = 1D;
-            this.textBox_CompPaying.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.textBox_CompPaying.Location = new System.Drawing.Point(35, 37);
-            this.textBox_CompPaying.MaxValue = 100D;
-            this.textBox_CompPaying.MinValue = 0D;
-            this.textBox_CompPaying.Name = "textBox_CompPaying";
-            this.textBox_CompPaying.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_CompPaying.Size = new System.Drawing.Size(68, 21);
-            this.textBox_CompPaying.TabIndex = 841;
-            // 
-            // textBox_SalSubtract
-            // 
-            this.textBox_SalSubtract.AllowEmptyState = false;
-            this.textBox_SalSubtract.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
-            this.textBox_SalSubtract.AutoOffFreeTextEntry = true;
-            this.textBox_SalSubtract.AutoResolveFreeTextEntries = false;
-            // 
-            // 
-            // 
-            this.textBox_SalSubtract.BackgroundStyle.BorderBottomWidth = 1;
-            this.textBox_SalSubtract.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.textBox_SalSubtract.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBox_SalSubtract.BackgroundStyle.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_SalSubtract.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.textBox_SalSubtract.DisplayFormat = "0.00";
-            this.textBox_SalSubtract.Enabled = false;
-            this.textBox_SalSubtract.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.textBox_SalSubtract.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox_SalSubtract.Increment = 1D;
-            this.textBox_SalSubtract.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.textBox_SalSubtract.Location = new System.Drawing.Point(35, 16);
-            this.textBox_SalSubtract.MaxValue = 100D;
-            this.textBox_SalSubtract.MinValue = 0D;
-            this.textBox_SalSubtract.Name = "textBox_SalSubtract";
-            this.textBox_SalSubtract.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_SalSubtract.Size = new System.Drawing.Size(68, 21);
-            this.textBox_SalSubtract.TabIndex = 840;
-            // 
-            // textBox_ID
-            // 
-            this.textBox_ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_ID.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBox_ID.Location = new System.Drawing.Point(360, 19);
-            this.textBox_ID.MaxLength = 6;
-            this.textBox_ID.Name = "textBox_ID";
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_ID, false);
-            this.textBox_ID.Size = new System.Drawing.Size(130, 21);
-            this.textBox_ID.TabIndex = 1;
-            this.textBox_ID.TextChanged += new System.EventHandler(this.textBox_ID_TextChanged);
-            this.textBox_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_ID_KeyPress);
-            // 
-            // linkLabel_ChangeEmpNo
-            // 
-            this.linkLabel_ChangeEmpNo.AutoSize = true;
-            this.linkLabel_ChangeEmpNo.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.linkLabel_ChangeEmpNo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.linkLabel_ChangeEmpNo.Location = new System.Drawing.Point(325, 22);
-            this.linkLabel_ChangeEmpNo.Name = "linkLabel_ChangeEmpNo";
-            this.linkLabel_ChangeEmpNo.Size = new System.Drawing.Size(32, 13);
-            this.linkLabel_ChangeEmpNo.TabIndex = 6685;
-            this.linkLabel_ChangeEmpNo.TabStop = true;
-            this.linkLabel_ChangeEmpNo.Text = "تغـيير";
-            this.linkLabel_ChangeEmpNo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_ChangeEmpNo_LinkClicked);
-            // 
-            // button_PhotoShoot
-            // 
-            this.button_PhotoShoot.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_PhotoShoot.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_PhotoShoot.Location = new System.Drawing.Point(3, 170);
-            this.button_PhotoShoot.Name = "button_PhotoShoot";
-            this.button_PhotoShoot.Size = new System.Drawing.Size(19, 20);
-            this.button_PhotoShoot.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_PhotoShoot.Symbol = "";
-            this.button_PhotoShoot.SymbolSize = 11F;
-            this.button_PhotoShoot.TabIndex = 1607;
-            this.button_PhotoShoot.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_PhotoShoot.Tooltip = "إضافة صورة للصنف";
-            this.button_PhotoShoot.Visible = false;
-            this.button_PhotoShoot.Click += new System.EventHandler(this.button_PhotoShoot_Click);
-            // 
-            // labelX15
-            // 
-            this.labelX15.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelX15.Location = new System.Drawing.Point(0, 0);
-            this.labelX15.Name = "labelX15";
-            this.labelX15.Size = new System.Drawing.Size(594, 419);
-            this.labelX15.TabIndex = 8;
-            this.labelX15.Text = "This space intentionally left blank.";
-            this.labelX15.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // superTabItem_Gen
-            // 
-            this.superTabItem_Gen.AttachedControl = this.superTabControlPanel15;
-            this.superTabItem_Gen.CloseButtonVisible = false;
-            this.superTabItem_Gen.GlobalItem = false;
-            this.superTabItem_Gen.Name = "superTabItem_Gen";
-            this.superTabItem_Gen.PredefinedColor = DevComponents.DotNetBar.eTabItemColor.Apple;
-            this.superTabItem_Gen.Text = "عــــــــــام";
             // 
             // superTabControlPanel1
             // 
@@ -6274,6 +6117,7 @@ private void InitializeComponent()
             this.panelEx8.Controls.Add(this.textBox_Name1);
             this.panelEx8.Controls.Add(this.label132);
             this.panelEx8.Controls.Add(this.textBox_Note);
+            this.panelEx8.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx8.Location = new System.Drawing.Point(0, 0);
             this.panelEx8.Name = "panelEx8";
@@ -6334,10 +6178,10 @@ private void InitializeComponent()
             this.comboBox_InsuranceType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox_InsuranceType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_InsuranceType.FormattingEnabled = true;
-            this.comboBox_InsuranceType.ItemHeight = 14;
+            this.comboBox_InsuranceType.ItemHeight = 15;
             this.comboBox_InsuranceType.Location = new System.Drawing.Point(146, 17);
             this.comboBox_InsuranceType.Name = "comboBox_InsuranceType";
-            this.comboBox_InsuranceType.Size = new System.Drawing.Size(248, 20);
+            this.comboBox_InsuranceType.Size = new System.Drawing.Size(248, 21);
             this.comboBox_InsuranceType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboBox_InsuranceType.TabIndex = 6688;
             this.comboBox_InsuranceType.SelectedIndexChanged += new System.EventHandler(this.comboBox_InsuranceType_SelectedIndexChanged);
@@ -6376,7 +6220,7 @@ private void InitializeComponent()
             this.label120.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label120.Location = new System.Drawing.Point(395, 21);
             this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(111, 13);
+            this.label120.Size = new System.Drawing.Size(108, 13);
             this.label120.TabIndex = 6691;
             this.label120.Text = "شركة التأمين الصحي :";
             // 
@@ -7352,6 +7196,7 @@ private void InitializeComponent()
             this.textBox_Note.Location = new System.Drawing.Point(10, 79);
             this.textBox_Note.Multiline = true;
             this.textBox_Note.Name = "textBox_Note";
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_Note, false);
             this.textBox_Note.Size = new System.Drawing.Size(568, 53);
             this.textBox_Note.TabIndex = 6693;
             this.textBox_Note.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -7432,6 +7277,7 @@ private void InitializeComponent()
             this.panelEx6.Controls.Add(this.label97);
             this.panelEx6.Controls.Add(this.label95);
             this.panelEx6.Controls.Add(this.label92);
+            this.panelEx6.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx6.Location = new System.Drawing.Point(0, 0);
             this.panelEx6.Name = "panelEx6";
@@ -7582,6 +7428,7 @@ private void InitializeComponent()
             this.comboBox_License_From.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox_License_From.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_License_From.FormattingEnabled = true;
+            this.comboBox_License_From.ItemHeight = 15;
             this.comboBox_License_From.Location = new System.Drawing.Point(41, 352);
             this.comboBox_License_From.Name = "comboBox_License_From";
             this.comboBox_License_From.Size = new System.Drawing.Size(168, 21);
@@ -7624,7 +7471,6 @@ private void InitializeComponent()
             this.bubbleBar5.ButtonBackAreaStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.bubbleBar5.ImageSizeLarge = new System.Drawing.Size(22, 22);
             this.bubbleBar5.ImageSizeNormal = new System.Drawing.Size(22, 22);
-            this.bubbleBar5.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.bubbleBar5.Location = new System.Drawing.Point(0, 0);
             this.bubbleBar5.MouseOverTabColors.BorderColor = System.Drawing.SystemColors.Highlight;
             this.bubbleBar5.Name = "bubbleBar5";
@@ -7634,6 +7480,7 @@ private void InitializeComponent()
             this.bubbleBar5.TabIndex = 6802;
             this.bubbleBar5.Tabs.Add(this.bubbleBarTab11);
             this.bubbleBar5.TabsVisible = false;
+            this.bubbleBar5.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // bubbleBarTab11
             // 
@@ -7645,7 +7492,7 @@ private void InitializeComponent()
             this.bubbleBarTab11.LightBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bubbleBarTab11.Name = "bubbleBarTab11";
             this.bubbleBarTab11.PredefinedColor = DevComponents.DotNetBar.eTabItemColor.Blue;
-            this.bubbleBarTab11.Text = string.Empty;
+            this.bubbleBarTab11.Text = "";
             this.bubbleBarTab11.TextColor = System.Drawing.Color.Black;
             // 
             // bubbleButton5
@@ -7743,10 +7590,10 @@ private void InitializeComponent()
             this.comboBox_Form_From.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox_Form_From.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Form_From.FormattingEnabled = true;
-            this.comboBox_Form_From.ItemHeight = 14;
+            this.comboBox_Form_From.ItemHeight = 15;
             this.comboBox_Form_From.Location = new System.Drawing.Point(-548, 254);
             this.comboBox_Form_From.Name = "comboBox_Form_From";
-            this.comboBox_Form_From.Size = new System.Drawing.Size(167, 20);
+            this.comboBox_Form_From.Size = new System.Drawing.Size(167, 21);
             this.comboBox_Form_From.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboBox_Form_From.TabIndex = 6788;
             // 
@@ -7863,10 +7710,10 @@ private void InitializeComponent()
             this.comboBox_Insurance_From.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox_Insurance_From.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Insurance_From.FormattingEnabled = true;
-            this.comboBox_Insurance_From.ItemHeight = 14;
+            this.comboBox_Insurance_From.ItemHeight = 15;
             this.comboBox_Insurance_From.Location = new System.Drawing.Point(44, 284);
             this.comboBox_Insurance_From.Name = "comboBox_Insurance_From";
-            this.comboBox_Insurance_From.Size = new System.Drawing.Size(167, 20);
+            this.comboBox_Insurance_From.Size = new System.Drawing.Size(167, 21);
             this.comboBox_Insurance_From.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboBox_Insurance_From.TabIndex = 6776;
             // 
@@ -7983,10 +7830,10 @@ private void InitializeComponent()
             this.comboBox_Passport_From.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox_Passport_From.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Passport_From.FormattingEnabled = true;
-            this.comboBox_Passport_From.ItemHeight = 14;
+            this.comboBox_Passport_From.ItemHeight = 15;
             this.comboBox_Passport_From.Location = new System.Drawing.Point(44, 209);
             this.comboBox_Passport_From.Name = "comboBox_Passport_From";
-            this.comboBox_Passport_From.Size = new System.Drawing.Size(167, 20);
+            this.comboBox_Passport_From.Size = new System.Drawing.Size(167, 21);
             this.comboBox_Passport_From.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboBox_Passport_From.TabIndex = 6765;
             // 
@@ -8103,10 +7950,10 @@ private void InitializeComponent()
             this.comboBox_ID_From.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox_ID_From.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_ID_From.FormattingEnabled = true;
-            this.comboBox_ID_From.ItemHeight = 14;
+            this.comboBox_ID_From.ItemHeight = 15;
             this.comboBox_ID_From.Location = new System.Drawing.Point(45, 137);
             this.comboBox_ID_From.Name = "comboBox_ID_From";
-            this.comboBox_ID_From.Size = new System.Drawing.Size(167, 20);
+            this.comboBox_ID_From.Size = new System.Drawing.Size(167, 21);
             this.comboBox_ID_From.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboBox_ID_From.TabIndex = 6749;
             // 
@@ -8288,12 +8135,13 @@ private void InitializeComponent()
             this.ribbonBar_Tasks.Controls.Add(this.superTabControl_Main1);
             this.ribbonBar_Tasks.Controls.Add(this.superTabControl_Main2);
             this.ribbonBar_Tasks.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ribbonBar_Tasks.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.ribbonBar_Tasks.Location = new System.Drawing.Point(0, 436);
+            this.ribbonBar_Tasks.DragDropSupport = true;
+            this.ribbonBar_Tasks.Location = new System.Drawing.Point(0, 449);
             this.ribbonBar_Tasks.Name = "ribbonBar_Tasks";
             this.ribbonBar_Tasks.Size = new System.Drawing.Size(677, 51);
             this.ribbonBar_Tasks.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_Tasks.TabIndex = 868;
+            this.ribbonBar_Tasks.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -8314,12 +8162,12 @@ private void InitializeComponent()
             // 
             // 
             // 
-            this.superTabControl_Main1.ControlBox.CloseBox.Name = string.Empty;
+            this.superTabControl_Main1.ControlBox.CloseBox.Name = "";
             // 
             // 
             // 
-            this.superTabControl_Main1.ControlBox.MenuBox.Name = string.Empty;
-            this.superTabControl_Main1.ControlBox.Name = string.Empty;
+            this.superTabControl_Main1.ControlBox.MenuBox.Name = "";
+            this.superTabControl_Main1.ControlBox.Name = "";
             this.superTabControl_Main1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl_Main1.ControlBox.MenuBox,
             this.superTabControl_Main1.ControlBox.CloseBox});
@@ -8349,6 +8197,7 @@ private void InitializeComponent()
             this.superTabControl_Main1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
             this.superTabControl_Main1.Text = "superTabControl3";
             this.superTabControl_Main1.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            this.superTabControl_Main1.RightToLeftChanged += new System.EventHandler(this.superTabControl_Main1_RightToLeftChanged);
             // 
             // Button_Close
             // 
@@ -8482,12 +8331,12 @@ private void InitializeComponent()
             // 
             // 
             // 
-            this.superTabControl_Main2.ControlBox.CloseBox.Name = string.Empty;
+            this.superTabControl_Main2.ControlBox.CloseBox.Name = "";
             // 
             // 
             // 
-            this.superTabControl_Main2.ControlBox.MenuBox.Name = string.Empty;
-            this.superTabControl_Main2.ControlBox.Name = string.Empty;
+            this.superTabControl_Main2.ControlBox.MenuBox.Name = "";
+            this.superTabControl_Main2.ControlBox.Name = "";
             this.superTabControl_Main2.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl_Main2.ControlBox.MenuBox,
             this.superTabControl_Main2.ControlBox.CloseBox});
@@ -8625,6 +8474,204 @@ private void InitializeComponent()
             this.Button_Last.Text = "الأخير";
             this.Button_Last.Tooltip = " السجل الاخير";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "*.rtf";
+            this.saveFileDialog1.FileName = "doc1";
+            this.saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|All Files(*.*)|*.*";
+            this.saveFileDialog1.FilterIndex = 2;
+            this.saveFileDialog1.Title = "Save File";
+            // 
+            // timerInfoBallon
+            // 
+            this.timerInfoBallon.Interval = 3000;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.DefaultExt = "*.rtf";
+            this.openFileDialog1.Filter = "Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|All Files(*.*)|*.*";
+            this.openFileDialog1.FilterIndex = 2;
+            this.openFileDialog1.Title = "Open File";
+            // 
+            // barTopDockSite
+            // 
+            this.barTopDockSite.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.barTopDockSite.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barTopDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.barTopDockSite.Location = new System.Drawing.Point(0, 0);
+            this.barTopDockSite.Name = "barTopDockSite";
+            this.barTopDockSite.Size = new System.Drawing.Size(677, 0);
+            this.barTopDockSite.TabIndex = 889;
+            this.barTopDockSite.TabStop = false;
+            // 
+            // barBottomDockSite
+            // 
+            this.barBottomDockSite.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.barBottomDockSite.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barBottomDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.barBottomDockSite.Location = new System.Drawing.Point(0, 500);
+            this.barBottomDockSite.Name = "barBottomDockSite";
+            this.barBottomDockSite.Size = new System.Drawing.Size(677, 0);
+            this.barBottomDockSite.TabIndex = 890;
+            this.barBottomDockSite.TabStop = false;
+            // 
+            // dotNetBarManager1
+            // 
+            this.dotNetBarManager1.BottomDockSite = this.barBottomDockSite;
+            this.dotNetBarManager1.Images = this.imageList1;
+            this.dotNetBarManager1.LeftDockSite = this.barLeftDockSite;
+            this.dotNetBarManager1.MdiSystemItemVisible = false;
+            this.dotNetBarManager1.ParentForm = null;
+            this.dotNetBarManager1.RightDockSite = this.barRightDockSite;
+            this.dotNetBarManager1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2000;
+            this.dotNetBarManager1.ToolbarBottomDockSite = this.dockSite4;
+            this.dotNetBarManager1.ToolbarLeftDockSite = this.dockSite1;
+            this.dotNetBarManager1.ToolbarRightDockSite = this.dockSite2;
+            this.dotNetBarManager1.ToolbarTopDockSite = this.dockSite3;
+            this.dotNetBarManager1.TopDockSite = this.barTopDockSite;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Magenta;
+            this.imageList1.Images.SetKeyName(0, "");
+            this.imageList1.Images.SetKeyName(1, "");
+            this.imageList1.Images.SetKeyName(2, "");
+            this.imageList1.Images.SetKeyName(3, "");
+            this.imageList1.Images.SetKeyName(4, "");
+            this.imageList1.Images.SetKeyName(5, "");
+            this.imageList1.Images.SetKeyName(6, "");
+            this.imageList1.Images.SetKeyName(7, "");
+            this.imageList1.Images.SetKeyName(8, "");
+            this.imageList1.Images.SetKeyName(9, "");
+            this.imageList1.Images.SetKeyName(10, "");
+            this.imageList1.Images.SetKeyName(11, "");
+            this.imageList1.Images.SetKeyName(12, "");
+            this.imageList1.Images.SetKeyName(13, "");
+            this.imageList1.Images.SetKeyName(14, "");
+            this.imageList1.Images.SetKeyName(15, "");
+            this.imageList1.Images.SetKeyName(16, "");
+            this.imageList1.Images.SetKeyName(17, "");
+            this.imageList1.Images.SetKeyName(18, "");
+            this.imageList1.Images.SetKeyName(19, "");
+            this.imageList1.Images.SetKeyName(20, "");
+            this.imageList1.Images.SetKeyName(21, "");
+            this.imageList1.Images.SetKeyName(22, "");
+            this.imageList1.Images.SetKeyName(23, "");
+            // 
+            // barLeftDockSite
+            // 
+            this.barLeftDockSite.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.barLeftDockSite.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barLeftDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.barLeftDockSite.Location = new System.Drawing.Point(0, 0);
+            this.barLeftDockSite.Name = "barLeftDockSite";
+            this.barLeftDockSite.Size = new System.Drawing.Size(0, 500);
+            this.barLeftDockSite.TabIndex = 891;
+            this.barLeftDockSite.TabStop = false;
+            // 
+            // barRightDockSite
+            // 
+            this.barRightDockSite.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.barRightDockSite.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barRightDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.barRightDockSite.Location = new System.Drawing.Point(677, 0);
+            this.barRightDockSite.Name = "barRightDockSite";
+            this.barRightDockSite.Size = new System.Drawing.Size(0, 500);
+            this.barRightDockSite.TabIndex = 892;
+            this.barRightDockSite.TabStop = false;
+            // 
+            // dockSite4
+            // 
+            this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dockSite4.Location = new System.Drawing.Point(0, 500);
+            this.dockSite4.Name = "dockSite4";
+            this.dockSite4.Size = new System.Drawing.Size(677, 0);
+            this.dockSite4.TabIndex = 896;
+            this.dockSite4.TabStop = false;
+            // 
+            // dockSite1
+            // 
+            this.dockSite1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dockSite1.Location = new System.Drawing.Point(0, 0);
+            this.dockSite1.Name = "dockSite1";
+            this.dockSite1.Size = new System.Drawing.Size(0, 500);
+            this.dockSite1.TabIndex = 893;
+            this.dockSite1.TabStop = false;
+            // 
+            // dockSite2
+            // 
+            this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dockSite2.Location = new System.Drawing.Point(677, 0);
+            this.dockSite2.Name = "dockSite2";
+            this.dockSite2.Size = new System.Drawing.Size(0, 500);
+            this.dockSite2.TabIndex = 894;
+            this.dockSite2.TabStop = false;
+            // 
+            // dockSite3
+            // 
+            this.dockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dockSite3.Location = new System.Drawing.Point(0, 0);
+            this.dockSite3.Name = "dockSite3";
+            this.dockSite3.Size = new System.Drawing.Size(677, 0);
+            this.dockSite3.TabIndex = 895;
+            this.dockSite3.TabStop = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // ToolStripMenuItem_Rep
+            // 
+            this.ToolStripMenuItem_Rep.Checked = true;
+            this.ToolStripMenuItem_Rep.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ToolStripMenuItem_Rep.Name = "ToolStripMenuItem_Rep";
+            this.ToolStripMenuItem_Rep.Size = new System.Drawing.Size(148, 22);
+            this.ToolStripMenuItem_Rep.Text = "إظهار التقرير";
+            // 
+            // ToolStripMenuItem_Det
+            // 
+            this.ToolStripMenuItem_Det.Name = "ToolStripMenuItem_Det";
+            this.ToolStripMenuItem_Det.Size = new System.Drawing.Size(148, 22);
+            this.ToolStripMenuItem_Det.Text = "إظهار التفاصيل";
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_Det,
+            this.ToolStripMenuItem_Rep});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.contextMenuStrip2.Size = new System.Drawing.Size(149, 48);
+            // 
+            // panelEx2
+            // 
+            this.panelEx2.DisabledBackColor = System.Drawing.Color.Empty;
+            this.panelEx2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelEx2.Location = new System.Drawing.Point(0, 13);
+            this.panelEx2.MinimumSize = new System.Drawing.Size(677, 487);
+            this.panelEx2.Name = "panelEx2";
+            this.panelEx2.Size = new System.Drawing.Size(677, 487);
+            this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx2.Style.BackColor1.Color = System.Drawing.Color.AliceBlue;
+            this.panelEx2.Style.BackColor2.Color = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panelEx2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.panelEx2.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.panelEx2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.panelEx2.Style.GradientAngle = 90;
+            this.panelEx2.TabIndex = 0;
+            this.panelEx2.Text = "Click to collapse";
+            // 
             // expandableSplitter1
             // 
             this.expandableSplitter1.BackColor = System.Drawing.Color.Black;
@@ -8665,6 +8712,7 @@ private void InitializeComponent()
             // 
             this.panelEx3.Controls.Add(this.DGV_Main);
             this.panelEx3.Controls.Add(this.ribbonBar_DGV);
+            this.panelEx3.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx3.Location = new System.Drawing.Point(0, 0);
             this.panelEx3.Name = "panelEx3";
@@ -8695,13 +8743,18 @@ private void InitializeComponent()
             this.DGV_Main.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.DGV_Main.Font = new System.Drawing.Font("Tahoma", 9F);
             this.DGV_Main.ForeColor = System.Drawing.Color.Black;
-            this.DGV_Main.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.DGV_Main.Location = new System.Drawing.Point(0, 0);
             this.DGV_Main.Name = "DGV_Main";
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.ActiveRowIndicatorStyle = DevComponents.DotNetBar.SuperGrid.ActiveRowIndicatorStyle.Both;
             this.DGV_Main.PrimaryGrid.AllowEdit = false;
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.Caption.BackgroundImageLayout = DevComponents.DotNetBar.SuperGrid.GridBackgroundImageLayout.Center;
-            this.DGV_Main.PrimaryGrid.Caption.Text = string.Empty;
+            this.DGV_Main.PrimaryGrid.Caption.Text = "";
             this.DGV_Main.PrimaryGrid.Caption.Visible = false;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.AlternateColumnCellStyles.Default.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.False;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.AlternateColumnCellStyles.Default.TextColor = System.Drawing.Color.Black;
@@ -8736,21 +8789,28 @@ private void InitializeComponent()
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.SquareTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle2;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.TextColor = System.Drawing.Color.White;
             this.DGV_Main.PrimaryGrid.DefaultVisualStyles.TitleStyles.Default.RowHeaderStyle.TextAlignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.GroupByRow.RowHeaderVisibility = DevComponents.DotNetBar.SuperGrid.RowHeaderVisibility.Never;
             this.DGV_Main.PrimaryGrid.GroupByRow.Text = "جميــع السجــــلات";
             this.DGV_Main.PrimaryGrid.GroupByRow.Visible = true;
-            this.DGV_Main.PrimaryGrid.GroupByRow.WatermarkText = string.Empty;
+            this.DGV_Main.PrimaryGrid.GroupByRow.WatermarkText = "";
             this.DGV_Main.PrimaryGrid.InitialActiveRow = DevComponents.DotNetBar.SuperGrid.RelativeRow.None;
             this.DGV_Main.PrimaryGrid.InitialSelection = DevComponents.DotNetBar.SuperGrid.RelativeSelection.None;
             this.DGV_Main.PrimaryGrid.MultiSelect = false;
             this.DGV_Main.PrimaryGrid.ShowRowGridIndex = true;
+            // 
+            // 
+            // 
             this.DGV_Main.PrimaryGrid.Title.AllowSelection = false;
-            this.DGV_Main.PrimaryGrid.Title.Text = string.Empty;
+            this.DGV_Main.PrimaryGrid.Title.Text = "";
             this.DGV_Main.PrimaryGrid.Title.Visible = false;
             this.DGV_Main.PrimaryGrid.Visible = false;
             this.DGV_Main.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.DGV_Main.Size = new System.Drawing.Size(677, 0);
             this.DGV_Main.TabIndex = 862;
+            this.DGV_Main.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // ribbonBar_DGV
             // 
@@ -8766,12 +8826,13 @@ private void InitializeComponent()
             this.ribbonBar_DGV.ContainerControlProcessDialogKey = true;
             this.ribbonBar_DGV.Controls.Add(this.superTabControl_DGV);
             this.ribbonBar_DGV.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ribbonBar_DGV.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar_DGV.DragDropSupport = true;
             this.ribbonBar_DGV.Location = new System.Drawing.Point(0, -51);
             this.ribbonBar_DGV.Name = "ribbonBar_DGV";
             this.ribbonBar_DGV.Size = new System.Drawing.Size(677, 51);
             this.ribbonBar_DGV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_DGV.TabIndex = 869;
+            this.ribbonBar_DGV.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -8792,12 +8853,12 @@ private void InitializeComponent()
             // 
             // 
             // 
-            this.superTabControl_DGV.ControlBox.CloseBox.Name = string.Empty;
+            this.superTabControl_DGV.ControlBox.CloseBox.Name = "";
             // 
             // 
             // 
-            this.superTabControl_DGV.ControlBox.MenuBox.Name = string.Empty;
-            this.superTabControl_DGV.ControlBox.Name = string.Empty;
+            this.superTabControl_DGV.ControlBox.MenuBox.Name = "";
+            this.superTabControl_DGV.ControlBox.Name = "";
             this.superTabControl_DGV.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl_DGV.ControlBox.MenuBox,
             this.superTabControl_DGV.ControlBox.CloseBox});
@@ -8904,9 +8965,17 @@ private void InitializeComponent()
             this.listBox_ImageFiles2.Size = new System.Drawing.Size(29, 17);
             this.listBox_ImageFiles2.TabIndex = 899;
             // 
+            // netResize1
+            // 
+            this.netResize1.AutoSaveLayout = true;
+            this.netResize1.LabelsAutoEllipse = false;
+            this.netResize1.ParentControl = this;
+            this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
+            // 
             // FrmEmp
             // 
             this.ClientSize = new System.Drawing.Size(677, 500);
+            this.Controls.Add(this.PanelSpecialContainer);
             this.Controls.Add(this.listBox_ImageFiles2);
             this.Controls.Add(this.listBox_ImageFiles);
             this.Controls.Add(this.panel1);
@@ -8918,25 +8987,33 @@ private void InitializeComponent()
             this.Controls.Add(this.dockSite1);
             this.Controls.Add(this.dockSite2);
             this.Controls.Add(this.dockSite3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = (InvAcc.Properties.Resources.favicon);
+            this.Icon = global::InvAcc.Properties.Resources.favicon;
             this.KeyPreview = true;
-            this.MaximizeBox = false;
             this.Name = "FrmEmp";
-            this.netResize1.AutoSaveLayout = true;
-            this.netResize1.ParentControl = this;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "كرت الموظفـــــين";
             this.Load += new System.EventHandler(this.FrmEmp_Load);
+            this.Shown += new System.EventHandler(this.FrmInvSale_Shown);
+            this.SizeChanged += new System.EventHandler(this.FrmInvSale_SizeChanged);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Frm_KeyPress);
-            this.contextMenuStrip2.ResumeLayout(false);
-            this.panelEx2.ResumeLayout(false);
+            this.PanelSpecialContainer.ResumeLayout(false);
             this.ribbonBar1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Employee)).EndInit();
             this.superTabControl_Employee.ResumeLayout(false);
+            this.superTabControlPanel15.ResumeLayout(false);
+            this.panelEx1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_EnterPic)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox_CompPaying)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox_SalSubtract)).EndInit();
             this.superTabControlPanel18.ResumeLayout(false);
             this.panelEx5.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
@@ -9033,17 +9110,6 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.textBox_MandateDay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_AddHours)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_AddDay)).EndInit();
-            this.superTabControlPanel15.ResumeLayout(false);
-            this.panelEx1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_EnterPic)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textBox_CompPaying)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBox_SalSubtract)).EndInit();
             this.superTabControlPanel1.ResumeLayout(false);
             this.panelEx8.ResumeLayout(false);
             this.panelEx8.PerformLayout();
@@ -9058,15 +9124,14 @@ private void InitializeComponent()
             this.ribbonBar_Tasks.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main2)).EndInit();
+            this.contextMenuStrip2.ResumeLayout(false);
             this.panelEx3.ResumeLayout(false);
             this.ribbonBar_DGV.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_DGV)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.Icon = (InvAcc.Properties.Resources.favicon);
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).EndInit();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-            this.MaximizeBox = true;
             this.ResumeLayout(false);
+
         }//###########&&&&&&&&&&
 
 }

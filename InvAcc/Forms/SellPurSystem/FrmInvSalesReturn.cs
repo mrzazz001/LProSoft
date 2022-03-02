@@ -10488,7 +10488,10 @@ namespace InvAcc.Forms
                 State = FormState.Saved;
                 Clear();
                 DataThisRe = newData;
+                ChkPriceIncludeTax.ValueChanged -= ChkPriceIncludeTax_ValueChanged;
                 ChkPriceIncludeTax.Value = (bool)newData.PriceIncludTax;
+
+                ChkPriceIncludeTax.ValueChanged += ChkPriceIncludeTax_ValueChanged;
                 ChkPriceIncludeTax.Enabled = false;
                 CmbInvSide.SelectedIndexChanged += CmbInvSide_SelectedIndexChanged;
                 if (VarGeneral._IsPOS)
@@ -10507,9 +10510,11 @@ namespace InvAcc.Forms
                 txtDebit6.Text = string.Empty;
                 txtDebit6.Tag = string.Empty;
                 txtCredit6.Text = string.Empty;
-                txtCredit6.Tag = string.Empty;
+                txtCredit2.Tag = string.Empty;
                 checkBox_GaidDis_CheckedChanged(sender, e);
                 GetInvTot();
+                checkBox_Credit_CheckedChanged(null, null);
+
             }
         }
         private void CmbInvSide_SelectedIndexChanged(object sender, EventArgs e)
@@ -11902,6 +11907,7 @@ namespace InvAcc.Forms
                 txtCustName.ReadOnly = true;
                 txtTele.ReadOnly = true;
                 txtAddress.ReadOnly = true;
+          
                 text_Mobile.ReadOnly = true;
                 text_CusTaxNo.ReadOnly = true;
                 T_AccDef h = db.StockAccDefsByAcNO(txtCustNo.Text);
@@ -11927,6 +11933,7 @@ namespace InvAcc.Forms
                 text_CusTaxNo.ReadOnly = false;
                 txtAddress.ReadOnly = false;
             }
+            checkBox_Credit_CheckedChanged(null, null);
         }
         private void button_CustD1_Click(object sender, EventArgs e)
         {

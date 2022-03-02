@@ -802,6 +802,7 @@ GROUP BY fvc.InvTyp";
                 scc = scc.Replace("WHERE ", " WHERE " + BuildRuleList(0));
                 scc += w;
                 scc = scc.Replace("IsTaxGaid", "IsTaxUse");
+                scc = scc.Replace("InvAddTaxlLoc", "InvAddTax");
                 DataTable tb = ProShared.DBUdate.DbUpdates.execute(scc, VarGeneral.BranchCS);
                
             if(tb.Rows.Count>0)

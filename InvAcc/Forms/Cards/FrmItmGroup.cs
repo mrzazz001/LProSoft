@@ -1297,6 +1297,35 @@ namespace InvAcc.Forms
                         db.SubmitChanges();
                         int max = db.MaxINVSETTING;
                         db.ExecuteCommand("INSERT [dbo].[T_INVSETTING] ([InvID], [InvNamA], [InvNamE], [InvSetting], [InvStartNo], [InvTypA0], [InvTypA1], [InvTypA2], [InvTypA3], [InvTypA4], [InvTypE0], [InvTypE1], [InvTypE2], [InvTypE3], [InvTypE4], [InvColorH], [InvColorD], [InvPrice], [FldA1], [FldA2], [FldA3], [FldA4], [FldA5], [FldE1], [FldE2], [FldE3], [FldE4], [FldE5], [AccCredit0], [AccDebit0], [invALogo], [invELogo], [invGdADesc], [invGdEDesc], [invGdStng], [AccCredit1], [AccDebit1], [AccCredit2], [AccDebit2], [AccCredit3], [AccDebit3], [AccCredit4], [AccDebit4], [hAl], [hAs], [hYm], [hYs], [lnPg], [lnSpc], [defPrn], [nTyp], [ItmTyp], [InvNum], [InvNum1], [DefLines],[CatID],[PrintCat]) VALUES (" + max + ", N'" + data_this.Arb_Des + "', N'" + data_this.Eng_Des + "', N'212', N'1         ', N'نقدي                          ', N'آجل       ', NULL, NULL, NULL, N'Cash      ', N'Credit    ', NULL, NULL, NULL, -2147483633, 12640511, 0, N'العميل              ', NULL, NULL, NULL, NULL, N'Customer            ', NULL, NULL, NULL, NULL, N'3021001        ', N'1020001        ', NULL, NULL, NULL, NULL, NULL, N'3021005        ', N'***', N'3021005', N'1022001', NULL, NULL, NULL, NULL, 1, 1, 1, 1, 0, 6, N'Microsoft XPS Document Writer', N'110 ', N'1011 ', 1, 1,1," + data_this.CAT_ID + ",0)");
+                        Stock_DataDataContext dd = new Stock_DataDataContext(VarGeneral.BranchCS);
+                        var q = from i in db.T_INVSETTINGs where i.InvID == max select i;
+                        T_INVSETTING f = q.FirstOrDefault();
+                        if (f != null)
+                        {
+                            T_Printer p = new T_Printer();
+                            p.P_ID = dd.MaxPrinterSettings;
+                            p.InvID = max;
+                            p.lnPg = f.lnPg;
+                            p.lnSpc = f.lnSpc;
+                            p.nTyp = f.nTyp;
+                            p.Orientation = f.Orientation;
+                            p.Paper_Size = f.defSizePaper;
+                            p.Printer_Name = f.defPrn;
+                            p.User_ID = VarGeneral.UserID;
+                            p.DefLines = f.DefLines;
+                            p.defPrn = f.defPrn;
+                            p.defSizePaper = f.defSizePaper;
+                            p.hAl = f.hAl;
+                            p.hAs = f.hAs;
+                            p.hYm = f.hYm;
+                            p.hYs = f.hYs;
+                            p.invGdADesc = f.invGdADesc;
+                            p.invGdEDesc = f.invGdEDesc;
+                            p.InvTypA4 = f.InvTypA4;
+                            dd.T_Printers.InsertOnSubmit(p);
+                            dd.SubmitChanges();
+
+                        }
                     }
                     catch (SqlException ex4)
                     {
@@ -1309,6 +1338,35 @@ namespace InvAcc.Forms
                         MessageBox.Show("الرمز مستخدم من قبل.\n سيتم الحفظ برقم جديد [" + max + "]", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         textBox_ID.Text = string.Concat(max);
                         data_this.CAT_No = string.Concat(max);
+                        Stock_DataDataContext dd = new Stock_DataDataContext(VarGeneral.BranchCS);
+                        var q = from i in db.T_INVSETTINGs where i.InvID == max select i;
+                        T_INVSETTING f = q.FirstOrDefault();
+                        if (f != null)
+                        {
+                            T_Printer p = new T_Printer();
+                            p.P_ID = dd.MaxPrinterSettings;
+                            p.InvID = max;
+                            p.lnPg = f.lnPg;
+                            p.lnSpc = f.lnSpc;
+                            p.nTyp = f.nTyp;
+                            p.Orientation = f.Orientation;
+                            p.Paper_Size = f.defSizePaper;
+                            p.Printer_Name = f.defPrn;
+                            p.User_ID = VarGeneral.UserID;
+                            p.DefLines = f.DefLines;
+                            p.defPrn = f.defPrn;
+                            p.defSizePaper = f.defSizePaper;
+                            p.hAl = f.hAl;
+                            p.hAs = f.hAs;
+                            p.hYm = f.hYm;
+                            p.hYs = f.hYs;
+                            p.invGdADesc = f.invGdADesc;
+                            p.invGdEDesc = f.invGdEDesc;
+                            p.InvTypA4 = f.InvTypA4;
+                            dd.T_Printers.InsertOnSubmit(p);
+                            dd.SubmitChanges();
+
+                        }
                         Button_Save_Click(sender, e);
                     }
                     catch (Exception)

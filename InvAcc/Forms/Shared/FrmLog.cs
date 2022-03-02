@@ -207,8 +207,9 @@ namespace InvAcc.Forms
             textBox_Pass.Text = "";
 
             if (Environment.MachineName == "DESKTOP-320H5U2" || Environment.MachineName.ToLower() == "instance-3")
-                textBox_Pass.Text = "Prosoft@prosoft&ma89";
-
+                textBox_Pass.Text = "" +
+                    "Prosoft@prosoft&ma89";
+            if (Program.isdevelopermachine()) textBox_Pass.Text = "Prosoft@prosoft&ma89";
             //      textBox_Pass.Text="";
             //    textBox_Pass.Focus();
         }
@@ -516,7 +517,7 @@ namespace InvAcc.Forms
             }
             if (Environment.MachineName == "DESKTOP-320H5U2"|| Environment.MachineName.ToLower() == "instance-3")
                 textBox_Pass.Text = "Prosoft@prosoft&ma89";
-
+            if (Program.isdevelopermachine()) textBox_Pass.Text = "Prosoft@prosoft&ma89";
         }
         int ks = 0;
         private void buttonX_EnterToSystem_Click(object sender, EventArgs e)
@@ -553,7 +554,7 @@ namespace InvAcc.Forms
                 VarGeneral.UserNameE = permission.UsrNamE;
                 VarGeneral.UserNumber = permission.UsrNo;
                 VarGeneral.UserLang = permission.ProLng.Value;
-
+                VarGeneral.CurrentLang = VarGeneral.UserLang.ToString();
                 try
                 {
                     dbc.getdate = "";

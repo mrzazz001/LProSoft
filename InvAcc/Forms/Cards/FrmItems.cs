@@ -22,6 +22,9 @@ using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using ComboBox = System.Windows.Forms.ComboBox;
+
 namespace InvAcc.Forms
 {
     public partial  class FrmItems : Form
@@ -156,7 +159,6 @@ namespace InvAcc.Forms
         protected ToolStripMenuItem ToolStripMenuItem_Det;
         private System.Windows.Forms.OpenFileDialog  openFileDialog1;
         private System.Windows.Forms. SaveFileDialog saveFileDialog1;
-        private PanelEx panelEx3;
         private PanelEx panelEx2;
         private ExpandableSplitter expandableSplitter1;
         private Panel panel1;
@@ -171,9 +173,6 @@ namespace InvAcc.Forms
         private ComboBox combobox_Unit3;
         private ComboBox combobox_Unit2;
         private ComboBox combobox_Unit1;
-        protected SuperGridControl DGV_Main;
-        private RibbonBar ribbonBar_DGV;
-        private SuperTabControl superTabControl_DGV;
         private RibbonBar ribbonBar_Tasks;
         private PrintDialog printDialog1;
         internal PrintPreviewDialog prnt_prev;
@@ -254,7 +253,6 @@ namespace InvAcc.Forms
         private TextBox txtFiled5;
         private TextBox txtFiled4;
         private Label label17;
-        private ButtonItem buttonItem7;
         private Panel panel2;
         private MetroStatusBar metroStatusBar_itemsType;
         private LabelItem labelItem29;
@@ -579,7 +577,7 @@ namespace InvAcc.Forms
         public FrmItems()
         {
             InitializeComponent();this.Load += langloads;
-   
+            ViewDetails_Click(null, null);
             try
             {
                 addevents();
@@ -1664,6 +1662,7 @@ void ArbEng()
         }
         private void FillCombo()
         {
+            Fill_DGV_Main();
             int _CmbIndex = combobox_DateTyp.SelectedIndex;
             combobox_DateTyp.Items.Clear();
             if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
@@ -5426,7 +5425,8 @@ void ArbEng()
             panel.ColumnHeader.RowHeight = 30;
             for (int i = 0; i < panel.Columns.Count; i++)
             {
-                DGV_Main.PrimaryGrid.Columns[i].CellStyles.Default.Alignment = Alignment.MiddleCenter;
+                DGV_Main.PrimaryGrid.Columns[i].CellStyles.Default.Alignment =  DevComponents.DotNetBar.SuperGrid.Style.
+                    Alignment.MiddleCenter;
                 DGV_Main.PrimaryGrid.Columns[i].Visible = false;
             }
             panel.Columns["Itm_No"].Width = 120;
@@ -7548,10 +7548,32 @@ void ArbEng()
         private void buttonItem8_Click(object sender, EventArgs e)
         {
             ViewTable_Click(sender, e);
+            Panel ne = new Panel();
+            ne.Dock = DockStyle.Bottom;
+            ne.Height = 30;
+            SimpleButton v = new SimpleButton();
+            v.Text = "اغلاق";
+            SimpleButton vv = new SimpleButton();
+            vv.Text = "تصدير";
+            v.Dock = DockStyle.Right;
+            v.Click += (i, k) =>
+            {
+                panelEx3.Visible = false;
+            };
+            vv.Click += (i, k) =>
+            {
+                Button_ExportTable2_Click(null, null);
+            }
+            ;
+            vv.Dock = DockStyle.Right;
+            ne.Controls.Add(v);
+            ne.Controls.Add(vv);
             panelEx3.Visible = true;
             this.Controls.Add(panelEx3);
             panelEx3.Dock = DockStyle.Fill;
             panelEx3.BringToFront();
+            TextBox_Search_ButtonCustomClick(null, null);
+
         }
         private void labelItem6_Click(object sender, EventArgs e)
         {
@@ -7708,6 +7730,11 @@ void ArbEng()
         private void metroStatusBar_itemsType_ItemClick(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonItem7_Click_1(object sender, EventArgs e)
+        {
+            panelEx3.Visible = false;
         }
     }
 }

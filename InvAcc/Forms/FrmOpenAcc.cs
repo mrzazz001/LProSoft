@@ -571,10 +571,19 @@ namespace InvAcc.Forms
         private void SettingGridLate()
         {
             DVG_ACC.PrimaryGrid.Columns[0].HeaderText = ((LangArEn == 0) ? "الــدائن" : "Credit");
+            (DVG_ACC.PrimaryGrid.Columns[0].EditControl as GridDoubleInputEditControl).DisplayFormat = VarGeneral.DicimalNN;
+           // (DVG_ACC.PrimaryGrid.Columns[0].EditControl as GridDoubleInputEditControl).DisplayFormat = ".000";
+            (DVG_ACC.PrimaryGrid.Columns[1].EditControl as GridDoubleInputEditControl).DisplayFormat = VarGeneral.DicimalNN;
+
             DVG_ACC.PrimaryGrid.Columns[1].HeaderText = ((LangArEn == 0) ? "المــدين" : "Debit");
             DVG_ACC.PrimaryGrid.Columns[2].HeaderText = ((LangArEn == 0) ? "المستوى" : "Level");
             DVG_ACC.PrimaryGrid.Columns[3].HeaderText = ((LangArEn == 0) ? "إسم الحساب" : "Account Name");
             DVG_ACC.PrimaryGrid.Columns[4].HeaderText = ((LangArEn == 0) ? "رقم الحساب" : "Account No");
+            (DVG_ACC.PrimaryGrid.Columns[0].EditControl as GridDoubleInputEditControl).DisplayFormat = VarGeneral.DicimalNN;
+            // (DVG_ACC.PrimaryGrid.Columns[0].EditControl as GridDoubleInputEditControl).DisplayFormat = ".000";
+            (DVG_ACC.PrimaryGrid.Columns[1].EditControl as GridDoubleInputEditControl).DisplayFormat = VarGeneral.DicimalNN;
+          
+
         }
         private void FrmOpenAcc_Load(object sender, EventArgs e)
         {

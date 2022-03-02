@@ -1537,5 +1537,15 @@ namespace InvAcc.Forms
                 this.Format = format;
             }
         }
+
+        private void RButShort_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RButDet_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

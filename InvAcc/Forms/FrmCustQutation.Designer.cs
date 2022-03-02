@@ -3186,7 +3186,7 @@ private void InitializeComponent()
             this.barTaskList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barTaskList.DockedBorderStyle = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.barTaskList.DockSide = DevComponents.DotNetBar.eDockSide.Top;
-            this.barTaskList.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.barTaskList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barTaskList.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.Caption;
             this.barTaskList.IsMaximized = false;
             this.barTaskList.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {

@@ -2271,12 +2271,17 @@ namespace InvAcc.Forms
             if (Utilites.isnollorempty(txtDebit2.Tag))
                 txtDebit2.Tag = ((_InvSetting.AccDebit1.Trim() != "***") ? _InvSetting.AccDebit1.Trim() : "");
 
+          
+            if (!string.IsNullOrEmpty(txtCustNo.Text))
+            {
+                txtDebit2.Tag = txtCustNo.Text;
+                
+            }
             try
             {
                 ar = db.SelectAccRootByCode(txtDebit1.Tag.ToString()).Arb_Des;
             }
             catch { }
-
             {
                 if (!string.IsNullOrEmpty(txtDebit2.Tag.ToString()))// && string.IsNullOrEmpty(txtDebit2.Text.ToString()) || (ar.Trim() != txtDebit2.Text.Trim()))
                 {
@@ -2294,6 +2299,7 @@ namespace InvAcc.Forms
                     txtDebit2.Text = "";
                 }
             }
+          
             //if(string.IsNullOrEmpty( txtCredit2.Text))
 
             //    if (checkBox_Credit.Checked == true && txtCustNo.Text != "")
@@ -2432,8 +2438,7 @@ namespace InvAcc.Forms
                 }
                 txtDebit2.Text = txtCustName.Text;
                 txtDebit2.Tag = txtCustNo.Text;
-                txtDebit3.Text = txtCustName.Text;
-                txtDebit3.Tag = txtCustNo.Text;
+                
                 if (!checkBox_CostGaidTax.Checked || VarGeneral.SSSTyp == 0)
                 {
                     return;
@@ -8227,6 +8232,7 @@ namespace InvAcc.Forms
                     txtCredit6.Text = string.Empty;
                     txtCredit6.Tag = string.Empty;
                     checkBox_GaidDis_CheckedChanged(sender, e);
+                    checkBox_Credit_CheckedChanged(null, null);
                 }
             }
         }

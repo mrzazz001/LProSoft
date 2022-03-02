@@ -98,7 +98,7 @@ private void InitializeComponent()
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dotNetBarManager1 = new DevComponents.DotNetBar.DotNetBarManager(this.components);
-            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);  this.netResize1.LabelsAutoEllipse = false;
+            this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.PanelSpecialContainer.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -148,12 +148,13 @@ private void InitializeComponent()
             this.ribbonBar1.Controls.Add(this.label3);
             this.ribbonBar1.Controls.Add(this.label6);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonBar1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
             this.ribbonBar1.Size = new System.Drawing.Size(507, 379);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 867;
+            this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -210,7 +211,7 @@ private void InitializeComponent()
             this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label16.Location = new System.Drawing.Point(414, 284);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(84, 13);
+            this.label16.Size = new System.Drawing.Size(86, 13);
             this.label16.TabIndex = 1180;
             this.label16.Text = "البيان / إنجليزي :";
             // 
@@ -235,7 +236,7 @@ private void InitializeComponent()
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label9.Location = new System.Drawing.Point(414, 194);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 13);
+            this.label9.Size = new System.Drawing.Size(86, 13);
             this.label9.TabIndex = 1178;
             this.label9.Text = "البيان / إنجليزي :";
             // 
@@ -332,6 +333,7 @@ private void InitializeComponent()
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel1.Controls.Add(this.label_Balance);
+            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.groupPanel1.Location = new System.Drawing.Point(16, 46);
             this.groupPanel1.Name = "groupPanel1";
@@ -422,7 +424,7 @@ private void InitializeComponent()
             this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label13.Location = new System.Drawing.Point(414, 254);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(83, 13);
+            this.label13.Size = new System.Drawing.Size(84, 13);
             this.label13.TabIndex = 1105;
             this.label13.Text = "البيان / عـــربي :";
             // 
@@ -432,7 +434,7 @@ private void InitializeComponent()
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label12.Location = new System.Drawing.Point(414, 164);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 13);
+            this.label12.Size = new System.Drawing.Size(84, 13);
             this.label12.TabIndex = 1103;
             this.label12.Text = "البيان / عـــربي :";
             // 
@@ -578,10 +580,10 @@ private void InitializeComponent()
             this.CmbCostC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbCostC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCostC.FormattingEnabled = true;
-            this.CmbCostC.ItemHeight = 14;
+            this.CmbCostC.ItemHeight = 15;
             this.CmbCostC.Location = new System.Drawing.Point(211, 70);
             this.CmbCostC.Name = "CmbCostC";
-            this.CmbCostC.Size = new System.Drawing.Size(200, 20);
+            this.CmbCostC.Size = new System.Drawing.Size(200, 21);
             this.CmbCostC.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbCostC.TabIndex = 1087;
             // 
@@ -592,10 +594,10 @@ private void InitializeComponent()
             this.CmbCurr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbCurr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCurr.FormattingEnabled = true;
-            this.CmbCurr.ItemHeight = 14;
+            this.CmbCurr.ItemHeight = 15;
             this.CmbCurr.Location = new System.Drawing.Point(211, 40);
             this.CmbCurr.Name = "CmbCurr";
-            this.CmbCurr.Size = new System.Drawing.Size(200, 20);
+            this.CmbCurr.Size = new System.Drawing.Size(200, 21);
             this.CmbCurr.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbCurr.TabIndex = 1086;
             // 
@@ -606,10 +608,10 @@ private void InitializeComponent()
             this.CmbLegate.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbLegate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbLegate.FormattingEnabled = true;
-            this.CmbLegate.ItemHeight = 14;
+            this.CmbLegate.ItemHeight = 15;
             this.CmbLegate.Location = new System.Drawing.Point(211, 100);
             this.CmbLegate.Name = "CmbLegate";
-            this.CmbLegate.Size = new System.Drawing.Size(200, 20);
+            this.CmbLegate.Size = new System.Drawing.Size(200, 21);
             this.CmbLegate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbLegate.TabIndex = 1088;
             // 
@@ -674,7 +676,7 @@ private void InitializeComponent()
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label8.Location = new System.Drawing.Point(997, 93);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 13);
+            this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 1059;
             this.label8.Text = "إستلمنا من :";
             // 
@@ -743,7 +745,7 @@ private void InitializeComponent()
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label5.Location = new System.Drawing.Point(265, 427);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 1071;
             this.label5.Text = "رقم الشيك";
             this.label5.Visible = false;
@@ -768,7 +770,7 @@ private void InitializeComponent()
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label6.Location = new System.Drawing.Point(672, 380);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.Size = new System.Drawing.Size(59, 13);
             this.label6.TabIndex = 1052;
             this.label6.Text = "الحســــاب :";
             // 
@@ -786,12 +788,13 @@ private void InitializeComponent()
             this.ribbonBar_Tasks.ContainerControlProcessDialogKey = true;
             this.ribbonBar_Tasks.Controls.Add(this.superTabControl_Main1);
             this.ribbonBar_Tasks.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ribbonBar_Tasks.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar_Tasks.DragDropSupport = true;
             this.ribbonBar_Tasks.Location = new System.Drawing.Point(0, 379);
             this.ribbonBar_Tasks.Name = "ribbonBar_Tasks";
             this.ribbonBar_Tasks.Size = new System.Drawing.Size(507, 51);
             this.ribbonBar_Tasks.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_Tasks.TabIndex = 871;
+            this.ribbonBar_Tasks.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -816,7 +819,6 @@ private void InitializeComponent()
             this.superTabControl_Main1.ControlBox.CloseBox.Category = null;
             this.superTabControl_Main1.ControlBox.CloseBox.Description = null;
             this.superTabControl_Main1.ControlBox.CloseBox.Name = "";
-            this.superTabControl_Main1.ControlBox.CloseBox.Tag = null;
             this.superTabControl_Main1.ControlBox.Description = null;
             // 
             // 
@@ -824,12 +826,10 @@ private void InitializeComponent()
             this.superTabControl_Main1.ControlBox.MenuBox.Category = null;
             this.superTabControl_Main1.ControlBox.MenuBox.Description = null;
             this.superTabControl_Main1.ControlBox.MenuBox.Name = "";
-            this.superTabControl_Main1.ControlBox.MenuBox.Tag = null;
             this.superTabControl_Main1.ControlBox.Name = "";
             this.superTabControl_Main1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl_Main1.ControlBox.MenuBox,
             this.superTabControl_Main1.ControlBox.CloseBox});
-            this.superTabControl_Main1.ControlBox.Tag = null;
             this.superTabControl_Main1.ControlBox.Visible = false;
             this.superTabControl_Main1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControl_Main1.ForeColor = System.Drawing.Color.Black;
@@ -945,6 +945,7 @@ private void InitializeComponent()
             // 
             // panelEx2
             // 
+            this.panelEx2.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelEx2.Location = new System.Drawing.Point(0, 14);
             this.panelEx2.Name = "panelEx2";
@@ -1142,7 +1143,6 @@ private void InitializeComponent()
             this.dotNetBarManager1.BottomDockSite = this.barBottomDockSite;
             this.dotNetBarManager1.Images = this.imageList1;
             this.dotNetBarManager1.LeftDockSite = this.barLeftDockSite;
-            //this.dotNetBarManager1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.dotNetBarManager1.MdiSystemItemVisible = false;
             this.dotNetBarManager1.ParentForm = null;
             this.dotNetBarManager1.RightDockSite = this.barRightDockSite;
@@ -1156,6 +1156,7 @@ private void InitializeComponent()
             // netResize1
             // 
             this.netResize1.AutoSaveLayout = true;
+            this.netResize1.LabelsAutoEllipse = false;
             this.netResize1.ParentControl = this;
             this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 

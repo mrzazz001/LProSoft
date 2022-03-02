@@ -31,7 +31,7 @@ namespace InvAcc
         public static bool isdevelopermachine()
         {
 
-            if (Environment.MachineName.ToLower() == "instance-3" || Environment.MachineName == "DESKTOP-320H5U2")
+            if (Environment.MachineName.ToLower() == "instance-3" || Environment.MachineName.ToLower() == "windows109222" || Environment.MachineName == "DESKTOP-320H5U2")
             {
                // VarGeneral.SSSLev = "Q";
                 if (ks == 0)

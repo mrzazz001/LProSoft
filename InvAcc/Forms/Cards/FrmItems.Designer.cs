@@ -72,6 +72,12 @@ private void InitializeComponent()
             DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates7 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
             DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable15 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabControlBoxStateColorTable superTabControlBoxStateColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabControlBoxStateColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabControlBoxStateColorTable superTabControlBoxStateColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabControlBoxStateColorTable();
             DevComponents.DotNetBar.SuperGrid.Style.Background background1 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
             DevComponents.DotNetBar.SuperGrid.Style.Background background2 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
             DevComponents.DotNetBar.SuperGrid.Style.Background background3 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
@@ -80,12 +86,6 @@ private void InitializeComponent()
             DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle1 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
             DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle baseTreeButtonVisualStyle2 = new DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle();
             DevComponents.DotNetBar.SuperGrid.Style.Background background4 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
-            DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabControlBoxStateColorTable superTabControlBoxStateColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabControlBoxStateColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabControlBoxStateColorTable superTabControlBoxStateColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabControlBoxStateColorTable();
             this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
@@ -111,6 +111,7 @@ private void InitializeComponent()
             this.radioButton_Product = new DevComponents.DotNetBar.CheckBoxItem();
             this.superTabControl_Info = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.combobox_DateTyp = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.txtBarCode1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.radiobutton_RButDef1 = new System.Windows.Forms.RadioButton();
             this.labelItem8 = new System.Windows.Forms.Label();
@@ -262,15 +263,6 @@ private void InitializeComponent()
             this.ToolStripMenuItem_Det = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
-            this.DGV_Main = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
-            this.ribbonBar_DGV = new DevComponents.DotNetBar.RibbonBar();
-            this.superTabControl_DGV = new DevComponents.DotNetBar.SuperTabControl();
-            this.textBox_search = new DevComponents.DotNetBar.TextBoxItem();
-            this.Button_ExportTable2 = new DevComponents.DotNetBar.ButtonItem();
-            this.Button_PrintTable = new DevComponents.DotNetBar.ButtonItem();
-            this.labelItem3 = new DevComponents.DotNetBar.LabelItem();
-            this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label43 = new System.Windows.Forms.Label();
@@ -355,7 +347,15 @@ private void InitializeComponent()
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.PanelContainerSpatial = new System.Windows.Forms.Panel();
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
-            this.combobox_DateTyp = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
+            this.DGV_Main = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
+            this.ribbonBar_DGV = new DevComponents.DotNetBar.RibbonBar();
+            this.superTabControl_DGV = new DevComponents.DotNetBar.SuperTabControl();
+            this.textBox_search = new DevComponents.DotNetBar.TextBoxItem();
+            this.Button_ExportTable2 = new DevComponents.DotNetBar.ButtonItem();
+            this.Button_PrintTable = new DevComponents.DotNetBar.ButtonItem();
+            this.labelItem3 = new DevComponents.DotNetBar.LabelItem();
+            this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar_Units.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -381,9 +381,6 @@ private void InitializeComponent()
             this.expandablePanel_AnotherPrice.SuspendLayout();
             this.panelEx_Size.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
-            this.panelEx3.SuspendLayout();
-            this.ribbonBar_DGV.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.superTabControl_DGV)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textbox_Sentence)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textbox_Legates)).BeginInit();
@@ -401,6 +398,9 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.PanelContainerSpatial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
+            this.panelEx3.SuspendLayout();
+            this.ribbonBar_DGV.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.superTabControl_DGV)).BeginInit();
             this.SuspendLayout();
             // 
             // tabItem1
@@ -835,6 +835,21 @@ private void InitializeComponent()
             this.superTabControlPanel3.Size = new System.Drawing.Size(993, 74);
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.sideBarPanelItem_Unit1;
+            // 
+            // combobox_DateTyp
+            // 
+            this.combobox_DateTyp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combobox_DateTyp.DisplayMember = "Text";
+            this.combobox_DateTyp.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combobox_DateTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_DateTyp.Enabled = false;
+            this.combobox_DateTyp.FormattingEnabled = true;
+            this.combobox_DateTyp.ItemHeight = 15;
+            this.combobox_DateTyp.Location = new System.Drawing.Point(735, 5);
+            this.combobox_DateTyp.Name = "combobox_DateTyp";
+            this.combobox_DateTyp.Size = new System.Drawing.Size(140, 21);
+            this.combobox_DateTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.combobox_DateTyp.TabIndex = 1621;
             // 
             // txtBarCode1
             // 
@@ -2823,235 +2838,6 @@ private void InitializeComponent()
             this.saveFileDialog1.FilterIndex = 2;
             this.saveFileDialog1.Title = "Save File";
             // 
-            // panelEx3
-            // 
-            this.panelEx3.Controls.Add(this.DGV_Main);
-            this.panelEx3.Controls.Add(this.ribbonBar_DGV);
-            this.panelEx3.DisabledBackColor = System.Drawing.Color.Empty;
-            this.panelEx3.Location = new System.Drawing.Point(0, -12);
-            this.panelEx3.Name = "panelEx3";
-            this.panelEx3.Size = new System.Drawing.Size(923, 10);
-            this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.panelEx3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.panelEx3.Style.BackgroundImagePosition = DevComponents.DotNetBar.eBackgroundImagePosition.Tile;
-            this.panelEx3.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.panelEx3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.panelEx3.Style.GradientAngle = 90;
-            this.panelEx3.TabIndex = 2;
-            this.panelEx3.Text = "Fill Panel";
-            // 
-            // DGV_Main
-            // 
-            this.DGV_Main.BackColor = System.Drawing.Color.Transparent;
-            background1.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.VerticalCenter;
-            background1.Color1 = System.Drawing.Color.Silver;
-            background1.Color2 = System.Drawing.Color.White;
-            this.DGV_Main.DefaultVisualStyles.GroupByStyles.Default.Background = background1;
-            background2.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.Center;
-            background2.Color1 = System.Drawing.Color.LightSteelBlue;
-            this.DGV_Main.DefaultVisualStyles.RowStyles.Default.Background = background2;
-            background3.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.DGV_Main.DefaultVisualStyles.RowStyles.MouseOver.Background = background3;
-            this.DGV_Main.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
-            this.DGV_Main.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.DGV_Main.ForeColor = System.Drawing.Color.Black;
-            this.DGV_Main.Location = new System.Drawing.Point(0, 0);
-            this.DGV_Main.Name = "DGV_Main";
-            // 
-            // 
-            // 
-            this.DGV_Main.PrimaryGrid.ActiveRowIndicatorStyle = DevComponents.DotNetBar.SuperGrid.ActiveRowIndicatorStyle.Both;
-            this.DGV_Main.PrimaryGrid.AllowEdit = false;
-            // 
-            // 
-            // 
-            this.DGV_Main.PrimaryGrid.Caption.BackgroundImageLayout = DevComponents.DotNetBar.SuperGrid.GridBackgroundImageLayout.Center;
-            this.DGV_Main.PrimaryGrid.Caption.Text = "";
-            this.DGV_Main.PrimaryGrid.Caption.Visible = false;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.AlternateColumnCellStyles.Default.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.False;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.AlternateColumnCellStyles.Default.TextColor = System.Drawing.Color.Black;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.AlternateRowCellStyles.Default.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.False;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.AlternateRowCellStyles.Default.TextColor = System.Drawing.Color.Black;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CaptionStyles.Default.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CaptionStyles.Default.TextColor = System.Drawing.Color.White;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CaptionStyles.ReadOnly.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CellStyles.Selected.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderRowStyles.Default.RowHeader.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.True;
-            borderColor1.Bottom = System.Drawing.Color.Black;
-            borderColor1.Left = System.Drawing.Color.Black;
-            borderColor1.Right = System.Drawing.Color.Black;
-            borderColor1.Top = System.Drawing.Color.Black;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.BorderColor = borderColor1;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.TextColor = System.Drawing.Color.SteelBlue;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.FilterColumnHeaderStyles.Default.TextColor = System.Drawing.Color.White;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.FooterStyles.Default.TextColor = System.Drawing.Color.White;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.False;
-            borderColor2.Bottom = System.Drawing.Color.Black;
-            borderColor2.Left = System.Drawing.Color.Black;
-            borderColor2.Right = System.Drawing.Color.Black;
-            borderColor2.Top = System.Drawing.Color.Black;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.BorderColor = borderColor2;
-            baseTreeButtonVisualStyle1.BorderColor = System.Drawing.Color.White;
-            baseTreeButtonVisualStyle1.LineColor = System.Drawing.Color.White;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.CircleTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle1;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.HeaderHLinePattern = DevComponents.DotNetBar.SuperGrid.Style.LinePattern.None;
-            background4.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            baseTreeButtonVisualStyle2.Background = background4;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.SquareTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle2;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.TextColor = System.Drawing.Color.White;
-            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.TitleStyles.Default.RowHeaderStyle.TextAlignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
-            // 
-            // 
-            // 
-            this.DGV_Main.PrimaryGrid.GroupByRow.RowHeaderVisibility = DevComponents.DotNetBar.SuperGrid.RowHeaderVisibility.Never;
-            this.DGV_Main.PrimaryGrid.GroupByRow.Text = "جميــع السجــــلات";
-            this.DGV_Main.PrimaryGrid.GroupByRow.Visible = true;
-            this.DGV_Main.PrimaryGrid.GroupByRow.WatermarkText = "";
-            this.DGV_Main.PrimaryGrid.InitialActiveRow = DevComponents.DotNetBar.SuperGrid.RelativeRow.None;
-            this.DGV_Main.PrimaryGrid.InitialSelection = DevComponents.DotNetBar.SuperGrid.RelativeSelection.None;
-            this.DGV_Main.PrimaryGrid.MultiSelect = false;
-            this.DGV_Main.PrimaryGrid.ShowRowGridIndex = true;
-            // 
-            // 
-            // 
-            this.DGV_Main.PrimaryGrid.Title.AllowSelection = false;
-            this.DGV_Main.PrimaryGrid.Title.Text = "";
-            this.DGV_Main.PrimaryGrid.Title.Visible = false;
-            this.DGV_Main.PrimaryGrid.Visible = false;
-            this.DGV_Main.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DGV_Main.Size = new System.Drawing.Size(923, 0);
-            this.DGV_Main.TabIndex = 870;
-            this.DGV_Main.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            // 
-            // ribbonBar_DGV
-            // 
-            this.ribbonBar_DGV.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar_DGV.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar_DGV.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar_DGV.ContainerControlProcessDialogKey = true;
-            this.ribbonBar_DGV.Controls.Add(this.superTabControl_DGV);
-            this.ribbonBar_DGV.DragDropSupport = true;
-            this.ribbonBar_DGV.Location = new System.Drawing.Point(0, -41);
-            this.ribbonBar_DGV.Name = "ribbonBar_DGV";
-            this.ribbonBar_DGV.Size = new System.Drawing.Size(923, 51);
-            this.ribbonBar_DGV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar_DGV.TabIndex = 871;
-            this.ribbonBar_DGV.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            // 
-            // 
-            // 
-            this.ribbonBar_DGV.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar_DGV.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar_DGV.TitleVisible = false;
-            // 
-            // superTabControl_DGV
-            // 
-            this.superTabControl_DGV.BackColor = System.Drawing.Color.White;
-            this.superTabControl_DGV.CausesValidation = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.superTabControl_DGV.ControlBox.CloseBox.Name = "";
-            // 
-            // 
-            // 
-            this.superTabControl_DGV.ControlBox.MenuBox.Name = "";
-            this.superTabControl_DGV.ControlBox.Name = "";
-            this.superTabControl_DGV.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.superTabControl_DGV.ControlBox.MenuBox,
-            this.superTabControl_DGV.ControlBox.CloseBox});
-            this.superTabControl_DGV.ControlBox.Visible = false;
-            this.superTabControl_DGV.ForeColor = System.Drawing.Color.Black;
-            this.superTabControl_DGV.ItemPadding.Bottom = 4;
-            this.superTabControl_DGV.ItemPadding.Left = 4;
-            this.superTabControl_DGV.ItemPadding.Right = 4;
-            this.superTabControl_DGV.ItemPadding.Top = 4;
-            this.superTabControl_DGV.Location = new System.Drawing.Point(0, 0);
-            this.superTabControl_DGV.Name = "superTabControl_DGV";
-            this.superTabControl_DGV.ReorderTabsEnabled = true;
-            this.superTabControl_DGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.superTabControl_DGV.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.superTabControl_DGV.SelectedTabIndex = -1;
-            this.superTabControl_DGV.Size = new System.Drawing.Size(923, 51);
-            this.superTabControl_DGV.TabFont = new System.Drawing.Font("Tahoma", 8F);
-            this.superTabControl_DGV.TabIndex = 12;
-            this.superTabControl_DGV.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.textBox_search,
-            this.Button_ExportTable2,
-            this.Button_PrintTable,
-            this.labelItem3,
-            this.buttonItem7});
-            this.superTabControl_DGV.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
-            this.superTabControl_DGV.Text = "superTabControl1";
-            this.superTabControl_DGV.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
-            // 
-            // textBox_search
-            // 
-            this.textBox_search.ButtonCustom.Text = "...";
-            this.textBox_search.ButtonCustom.Visible = true;
-            this.textBox_search.Name = "textBox_search";
-            this.textBox_search.TextBoxHeight = 44;
-            this.textBox_search.TextBoxWidth = 150;
-            this.textBox_search.WatermarkColor = System.Drawing.SystemColors.GrayText;
-            // 
-            // Button_ExportTable2
-            // 
-            this.Button_ExportTable2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.Button_ExportTable2.FontBold = true;
-            this.Button_ExportTable2.FontItalic = true;
-            this.Button_ExportTable2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Button_ExportTable2.Image = ((System.Drawing.Image)(resources.GetObject("Button_ExportTable2.Image")));
-            this.Button_ExportTable2.ImageFixedSize = new System.Drawing.Size(32, 32);
-            this.Button_ExportTable2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.Button_ExportTable2.Name = "Button_ExportTable2";
-            this.Button_ExportTable2.SubItemsExpandWidth = 14;
-            this.Button_ExportTable2.Symbol = "";
-            this.Button_ExportTable2.SymbolSize = 15F;
-            this.Button_ExportTable2.Text = "تصدير";
-            this.Button_ExportTable2.Tooltip = "تصدير الى الأكسيل";
-            // 
-            // Button_PrintTable
-            // 
-            this.Button_PrintTable.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.Button_PrintTable.Checked = true;
-            this.Button_PrintTable.FontBold = true;
-            this.Button_PrintTable.FontItalic = true;
-            this.Button_PrintTable.Image = ((System.Drawing.Image)(resources.GetObject("Button_PrintTable.Image")));
-            this.Button_PrintTable.ImageFixedSize = new System.Drawing.Size(32, 32);
-            this.Button_PrintTable.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.Button_PrintTable.Name = "Button_PrintTable";
-            this.Button_PrintTable.SubItemsExpandWidth = 14;
-            this.Button_PrintTable.Symbol = "";
-            this.Button_PrintTable.SymbolSize = 15F;
-            this.Button_PrintTable.Text = "طباعة";
-            this.Button_PrintTable.Tooltip = "طباعة";
-            // 
-            // labelItem3
-            // 
-            this.labelItem3.Name = "labelItem3";
-            this.labelItem3.Width = 40;
-            // 
-            // buttonItem7
-            // 
-            this.buttonItem7.Name = "buttonItem7";
-            this.buttonItem7.Symbol = "";
-            this.buttonItem7.Text = "عودة";
-            this.buttonItem7.Click += new System.EventHandler(this.buttonItem7_Click);
-            // 
             // panelEx2
             // 
             this.panelEx2.DisabledBackColor = System.Drawing.Color.Empty;
@@ -4235,7 +4021,6 @@ private void InitializeComponent()
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panelEx3);
             this.panel1.Controls.Add(this.panelEx2);
             this.panel1.Controls.Add(this.expandableSplitter1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -4355,20 +4140,237 @@ private void InitializeComponent()
             this.netResize1.ParentControl = this;
             this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 
-            // combobox_DateTyp
+            // panelEx3
             // 
-            this.combobox_DateTyp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combobox_DateTyp.DisplayMember = "Text";
-            this.combobox_DateTyp.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combobox_DateTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combobox_DateTyp.Enabled = false;
-            this.combobox_DateTyp.FormattingEnabled = true;
-            this.combobox_DateTyp.ItemHeight = 15;
-            this.combobox_DateTyp.Location = new System.Drawing.Point(735, 5);
-            this.combobox_DateTyp.Name = "combobox_DateTyp";
-            this.combobox_DateTyp.Size = new System.Drawing.Size(140, 21);
-            this.combobox_DateTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.combobox_DateTyp.TabIndex = 1621;
+            this.panelEx3.Controls.Add(this.DGV_Main);
+            this.panelEx3.Controls.Add(this.ribbonBar_DGV);
+            this.panelEx3.DisabledBackColor = System.Drawing.Color.Empty;
+            this.panelEx3.Location = new System.Drawing.Point(180, 85);
+            this.panelEx3.Name = "panelEx3";
+            this.panelEx3.Size = new System.Drawing.Size(923, 336);
+            this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.panelEx3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.panelEx3.Style.BackgroundImagePosition = DevComponents.DotNetBar.eBackgroundImagePosition.Tile;
+            this.panelEx3.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.panelEx3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
+            this.panelEx3.Style.GradientAngle = 90;
+            this.panelEx3.TabIndex = 890;
+            this.panelEx3.Text = "Fill Panel";
+            // 
+            // DGV_Main
+            // 
+            this.DGV_Main.BackColor = System.Drawing.Color.Transparent;
+            background1.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.VerticalCenter;
+            background1.Color1 = System.Drawing.Color.Silver;
+            background1.Color2 = System.Drawing.Color.White;
+            this.DGV_Main.DefaultVisualStyles.GroupByStyles.Default.Background = background1;
+            background2.BackFillType = DevComponents.DotNetBar.SuperGrid.Style.BackFillType.Center;
+            background2.Color1 = System.Drawing.Color.LightSteelBlue;
+            this.DGV_Main.DefaultVisualStyles.RowStyles.Default.Background = background2;
+            background3.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.DGV_Main.DefaultVisualStyles.RowStyles.MouseOver.Background = background3;
+            this.DGV_Main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGV_Main.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
+            this.DGV_Main.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.DGV_Main.ForeColor = System.Drawing.Color.Black;
+            this.DGV_Main.Location = new System.Drawing.Point(0, 0);
+            this.DGV_Main.Name = "DGV_Main";
+            // 
+            // 
+            // 
+            this.DGV_Main.PrimaryGrid.ActiveRowIndicatorStyle = DevComponents.DotNetBar.SuperGrid.ActiveRowIndicatorStyle.Both;
+            this.DGV_Main.PrimaryGrid.AllowEdit = false;
+            // 
+            // 
+            // 
+            this.DGV_Main.PrimaryGrid.Caption.BackgroundImageLayout = DevComponents.DotNetBar.SuperGrid.GridBackgroundImageLayout.Center;
+            this.DGV_Main.PrimaryGrid.Caption.Text = "";
+            this.DGV_Main.PrimaryGrid.Caption.Visible = false;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.AlternateColumnCellStyles.Default.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.False;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.AlternateColumnCellStyles.Default.TextColor = System.Drawing.Color.Black;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.AlternateRowCellStyles.Default.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.False;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.AlternateRowCellStyles.Default.TextColor = System.Drawing.Color.Black;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CaptionStyles.Default.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CaptionStyles.Default.TextColor = System.Drawing.Color.White;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CaptionStyles.ReadOnly.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.CellStyles.Selected.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderRowStyles.Default.RowHeader.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.True;
+            borderColor1.Bottom = System.Drawing.Color.Black;
+            borderColor1.Left = System.Drawing.Color.Black;
+            borderColor1.Right = System.Drawing.Color.Black;
+            borderColor1.Top = System.Drawing.Color.Black;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.BorderColor = borderColor1;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.ColumnHeaderStyles.Default.TextColor = System.Drawing.Color.SteelBlue;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.FilterColumnHeaderStyles.Default.TextColor = System.Drawing.Color.White;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.FooterStyles.Default.TextColor = System.Drawing.Color.White;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.AllowWrap = DevComponents.DotNetBar.SuperGrid.Style.Tbool.False;
+            borderColor2.Bottom = System.Drawing.Color.Black;
+            borderColor2.Left = System.Drawing.Color.Black;
+            borderColor2.Right = System.Drawing.Color.Black;
+            borderColor2.Top = System.Drawing.Color.Black;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.BorderColor = borderColor2;
+            baseTreeButtonVisualStyle1.BorderColor = System.Drawing.Color.White;
+            baseTreeButtonVisualStyle1.LineColor = System.Drawing.Color.White;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.CircleTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle1;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.HeaderHLinePattern = DevComponents.DotNetBar.SuperGrid.Style.LinePattern.None;
+            background4.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            baseTreeButtonVisualStyle2.Background = background4;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.SquareTreeButtonStyle.ExpandButton = baseTreeButtonVisualStyle2;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.TextColor = System.Drawing.Color.White;
+            this.DGV_Main.PrimaryGrid.DefaultVisualStyles.TitleStyles.Default.RowHeaderStyle.TextAlignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            // 
+            // 
+            // 
+            this.DGV_Main.PrimaryGrid.GroupByRow.RowHeaderVisibility = DevComponents.DotNetBar.SuperGrid.RowHeaderVisibility.Never;
+            this.DGV_Main.PrimaryGrid.GroupByRow.Text = "جميــع السجــــلات";
+            this.DGV_Main.PrimaryGrid.GroupByRow.Visible = true;
+            this.DGV_Main.PrimaryGrid.GroupByRow.WatermarkText = "";
+            this.DGV_Main.PrimaryGrid.InitialActiveRow = DevComponents.DotNetBar.SuperGrid.RelativeRow.None;
+            this.DGV_Main.PrimaryGrid.InitialSelection = DevComponents.DotNetBar.SuperGrid.RelativeSelection.None;
+            this.DGV_Main.PrimaryGrid.MultiSelect = false;
+            this.DGV_Main.PrimaryGrid.ShowRowGridIndex = true;
+            // 
+            // 
+            // 
+            this.DGV_Main.PrimaryGrid.Title.AllowSelection = false;
+            this.DGV_Main.PrimaryGrid.Title.Text = "";
+            this.DGV_Main.PrimaryGrid.Title.Visible = false;
+            this.DGV_Main.PrimaryGrid.Visible = false;
+            this.DGV_Main.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DGV_Main.Size = new System.Drawing.Size(923, 285);
+            this.DGV_Main.TabIndex = 870;
+            this.DGV_Main.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            // 
+            // ribbonBar_DGV
+            // 
+            this.ribbonBar_DGV.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.ribbonBar_DGV.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar_DGV.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar_DGV.ContainerControlProcessDialogKey = true;
+            this.ribbonBar_DGV.Controls.Add(this.superTabControl_DGV);
+            this.ribbonBar_DGV.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ribbonBar_DGV.DragDropSupport = true;
+            this.ribbonBar_DGV.Location = new System.Drawing.Point(0, 285);
+            this.ribbonBar_DGV.Name = "ribbonBar_DGV";
+            this.ribbonBar_DGV.Size = new System.Drawing.Size(923, 51);
+            this.ribbonBar_DGV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar_DGV.TabIndex = 871;
+            this.ribbonBar_DGV.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            // 
+            // 
+            // 
+            this.ribbonBar_DGV.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar_DGV.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar_DGV.TitleVisible = false;
+            // 
+            // superTabControl_DGV
+            // 
+            this.superTabControl_DGV.BackColor = System.Drawing.Color.White;
+            this.superTabControl_DGV.CausesValidation = false;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.superTabControl_DGV.ControlBox.CloseBox.Name = "";
+            // 
+            // 
+            // 
+            this.superTabControl_DGV.ControlBox.MenuBox.Name = "";
+            this.superTabControl_DGV.ControlBox.Name = "";
+            this.superTabControl_DGV.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.superTabControl_DGV.ControlBox.MenuBox,
+            this.superTabControl_DGV.ControlBox.CloseBox});
+            this.superTabControl_DGV.ControlBox.Visible = false;
+            this.superTabControl_DGV.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.superTabControl_DGV.ForeColor = System.Drawing.Color.Black;
+            this.superTabControl_DGV.ItemPadding.Bottom = 4;
+            this.superTabControl_DGV.ItemPadding.Left = 4;
+            this.superTabControl_DGV.ItemPadding.Right = 4;
+            this.superTabControl_DGV.ItemPadding.Top = 4;
+            this.superTabControl_DGV.Location = new System.Drawing.Point(0, 0);
+            this.superTabControl_DGV.Name = "superTabControl_DGV";
+            this.superTabControl_DGV.ReorderTabsEnabled = true;
+            this.superTabControl_DGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.superTabControl_DGV.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.superTabControl_DGV.SelectedTabIndex = -1;
+            this.superTabControl_DGV.Size = new System.Drawing.Size(923, 51);
+            this.superTabControl_DGV.TabFont = new System.Drawing.Font("Tahoma", 8F);
+            this.superTabControl_DGV.TabIndex = 12;
+            this.superTabControl_DGV.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.textBox_search,
+            this.Button_ExportTable2,
+            this.Button_PrintTable,
+            this.labelItem3,
+            this.buttonItem7});
+            this.superTabControl_DGV.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
+            this.superTabControl_DGV.Text = "superTabControl1";
+            this.superTabControl_DGV.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            // 
+            // textBox_search
+            // 
+            this.textBox_search.ButtonCustom.Text = "...";
+            this.textBox_search.ButtonCustom.Visible = true;
+            this.textBox_search.Name = "textBox_search";
+            this.textBox_search.TextBoxHeight = 44;
+            this.textBox_search.TextBoxWidth = 150;
+            this.textBox_search.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            // 
+            // Button_ExportTable2
+            // 
+            this.Button_ExportTable2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.Button_ExportTable2.FontBold = true;
+            this.Button_ExportTable2.FontItalic = true;
+            this.Button_ExportTable2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Button_ExportTable2.Image = ((System.Drawing.Image)(resources.GetObject("Button_ExportTable2.Image")));
+            this.Button_ExportTable2.ImageFixedSize = new System.Drawing.Size(32, 32);
+            this.Button_ExportTable2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.Button_ExportTable2.Name = "Button_ExportTable2";
+            this.Button_ExportTable2.SubItemsExpandWidth = 14;
+            this.Button_ExportTable2.Symbol = "";
+            this.Button_ExportTable2.SymbolSize = 15F;
+            this.Button_ExportTable2.Text = "تصدير";
+            this.Button_ExportTable2.Tooltip = "تصدير الى الأكسيل";
+            // 
+            // Button_PrintTable
+            // 
+            this.Button_PrintTable.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.Button_PrintTable.Checked = true;
+            this.Button_PrintTable.FontBold = true;
+            this.Button_PrintTable.FontItalic = true;
+            this.Button_PrintTable.Image = ((System.Drawing.Image)(resources.GetObject("Button_PrintTable.Image")));
+            this.Button_PrintTable.ImageFixedSize = new System.Drawing.Size(32, 32);
+            this.Button_PrintTable.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.Button_PrintTable.Name = "Button_PrintTable";
+            this.Button_PrintTable.SubItemsExpandWidth = 14;
+            this.Button_PrintTable.Symbol = "";
+            this.Button_PrintTable.SymbolSize = 15F;
+            this.Button_PrintTable.Text = "طباعة";
+            this.Button_PrintTable.Tooltip = "طباعة";
+            // 
+            // labelItem3
+            // 
+            this.labelItem3.Name = "labelItem3";
+            this.labelItem3.Width = 40;
+            // 
+            // buttonItem7
+            // 
+            this.buttonItem7.Name = "buttonItem7";
+            this.buttonItem7.Symbol = "";
+            this.buttonItem7.Text = "عودة";
+            this.buttonItem7.Click += new System.EventHandler(this.buttonItem7_Click_1);
             // 
             // FrmItems
             // 
@@ -4383,6 +4385,7 @@ private void InitializeComponent()
             this.Controls.Add(this.combobox_Unit1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtCurr);
+            this.Controls.Add(this.panelEx3);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Tahoma", 8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -4434,9 +4437,6 @@ private void InitializeComponent()
             this.panelEx_Size.ResumeLayout(false);
             this.panelEx_Size.PerformLayout();
             this.contextMenuStrip2.ResumeLayout(false);
-            this.panelEx3.ResumeLayout(false);
-            this.ribbonBar_DGV.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.superTabControl_DGV)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textbox_Sentence)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textbox_Legates)).EndInit();
@@ -4458,6 +4458,9 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.PanelContainerSpatial.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).EndInit();
+            this.panelEx3.ResumeLayout(false);
+            this.ribbonBar_DGV.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.superTabControl_DGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4481,10 +4484,6 @@ private void InitializeComponent()
         private DevComponents.DotNetBar.ButtonItem buttonItem4;
         private DevComponents.DotNetBar.ButtonItem buttonItem3;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
-        private DevComponents.DotNetBar.TextBoxItem textBox_search;
-        private DevComponents.DotNetBar.ButtonItem Button_ExportTable2;
-        private DevComponents.DotNetBar.ButtonItem Button_PrintTable;
-        private DevComponents.DotNetBar.LabelItem labelItem3;
         private DevComponents.DotNetBar.ButtonItem Button_Close;
         private DevComponents.DotNetBar.ButtonItem Button_Search;
         private DevComponents.DotNetBar.ButtonItem Button_Delete;
@@ -4502,5 +4501,14 @@ private void InitializeComponent()
         private DevComponents.DotNetBar.ButtonItem buttonItem_x;
         private DevComponents.DotNetBar.ButtonItem buttonItem8;
         private DevComponents.DotNetBar.Controls.ComboBoxEx combobox_DateTyp;
+        private DevComponents.DotNetBar.PanelEx panelEx3;
+        protected DevComponents.DotNetBar.SuperGrid.SuperGridControl DGV_Main;
+        private DevComponents.DotNetBar.RibbonBar ribbonBar_DGV;
+        private DevComponents.DotNetBar.SuperTabControl superTabControl_DGV;
+        private DevComponents.DotNetBar.TextBoxItem textBox_search;
+        private DevComponents.DotNetBar.ButtonItem Button_ExportTable2;
+        private DevComponents.DotNetBar.ButtonItem Button_PrintTable;
+        private DevComponents.DotNetBar.LabelItem labelItem3;
+        private DevComponents.DotNetBar.ButtonItem buttonItem7;
     }
 }

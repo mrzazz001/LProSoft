@@ -999,10 +999,10 @@
             this.chk46.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.chk46.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.chk46.FormattingEnabled = true;
-            this.chk46.ItemHeight = 15;
+            this.chk46.ItemHeight = 16;
             this.chk46.Location = new System.Drawing.Point(44, 9);
             this.chk46.Name = "chk46";
-            this.chk46.Size = new System.Drawing.Size(756, 21);
+            this.chk46.Size = new System.Drawing.Size(756, 22);
             this.chk46.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk46.TabIndex = 1022;
             // 
@@ -1122,7 +1122,7 @@
             this.chk1.Location = new System.Drawing.Point(848, 11);
             this.chk1.Name = "chk1";
             this.chk1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk1.Size = new System.Drawing.Size(196, 15);
+            this.chk1.Size = new System.Drawing.Size(202, 16);
             this.chk1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk1.TabIndex = 13;
             this.chk1.Text = "تمكين الترقيم التلقائي للأصناف إبتدا من ";
@@ -1138,7 +1138,7 @@
             this.chk3.Location = new System.Drawing.Point(886, 38);
             this.chk3.Name = "chk3";
             this.chk3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk3.Size = new System.Drawing.Size(158, 15);
+            this.chk3.Size = new System.Drawing.Size(162, 16);
             this.chk3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk3.TabIndex = 15;
             this.chk3.Text = "تنبيه بانتهاء صلاحية الصنف قبل";
@@ -1154,7 +1154,7 @@
             this.chk2.Location = new System.Drawing.Point(907, 61);
             this.chk2.Name = "chk2";
             this.chk2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk2.Size = new System.Drawing.Size(137, 15);
+            this.chk2.Size = new System.Drawing.Size(141, 16);
             this.chk2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk2.TabIndex = 18;
             this.chk2.Text = "التنبيه التلقائي لحد الطلب";
@@ -1166,10 +1166,10 @@
             this.CmbDateTyp.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbDateTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbDateTyp.FormattingEnabled = true;
-            this.CmbDateTyp.ItemHeight = 15;
+            this.CmbDateTyp.ItemHeight = 16;
             this.CmbDateTyp.Location = new System.Drawing.Point(44, 34);
             this.CmbDateTyp.Name = "CmbDateTyp";
-            this.CmbDateTyp.Size = new System.Drawing.Size(756, 21);
+            this.CmbDateTyp.Size = new System.Drawing.Size(756, 22);
             this.CmbDateTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbDateTyp.TabIndex = 17;
             // 
@@ -1543,10 +1543,10 @@
             this.CmbCalendar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCalendar.FocusHighlightColor = System.Drawing.Color.Empty;
             this.CmbCalendar.FormattingEnabled = true;
-            this.CmbCalendar.ItemHeight = 15;
+            this.CmbCalendar.ItemHeight = 16;
             this.CmbCalendar.Location = new System.Drawing.Point(54, 5);
             this.CmbCalendar.Name = "CmbCalendar";
-            this.CmbCalendar.Size = new System.Drawing.Size(555, 21);
+            this.CmbCalendar.Size = new System.Drawing.Size(555, 22);
             this.CmbCalendar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbCalendar.TabIndex = 966;
             this.CmbCalendar.SelectedIndexChanged += new System.EventHandler(this.CmbCalendar_SelectedIndexChanged);
@@ -1659,10 +1659,10 @@
             this.comboBox_AutoBackup.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox_AutoBackup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_AutoBackup.FormattingEnabled = true;
-            this.comboBox_AutoBackup.ItemHeight = 15;
+            this.comboBox_AutoBackup.ItemHeight = 16;
             this.comboBox_AutoBackup.Location = new System.Drawing.Point(53, 221);
             this.comboBox_AutoBackup.Name = "comboBox_AutoBackup";
-            this.comboBox_AutoBackup.Size = new System.Drawing.Size(196, 21);
+            this.comboBox_AutoBackup.Size = new System.Drawing.Size(196, 22);
             this.comboBox_AutoBackup.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboBox_AutoBackup.TabIndex = 982;
             // 
@@ -1746,7 +1746,7 @@
             this.chk71.Location = new System.Drawing.Point(3, 2);
             this.chk71.Name = "chk71";
             this.chk71.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk71.Size = new System.Drawing.Size(150, 15);
+            this.chk71.Size = new System.Drawing.Size(154, 16);
             this.chk71.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk71.TabIndex = 989;
             this.chk71.Text = "ايقاف تعبئة الدليل المحاسبية";
@@ -1762,7 +1762,7 @@
             this.chk27.Location = new System.Drawing.Point(159, 2);
             this.chk27.Name = "chk27";
             this.chk27.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk27.Size = new System.Drawing.Size(145, 15);
+            this.chk27.Size = new System.Drawing.Size(148, 16);
             this.chk27.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk27.TabIndex = 988;
             this.chk27.Text = "اعتماد البحث السريع للسند";
@@ -1778,7 +1778,7 @@
             this.chk24.Location = new System.Drawing.Point(308, 1);
             this.chk24.Name = "chk24";
             this.chk24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk24.Size = new System.Drawing.Size(138, 15);
+            this.chk24.Size = new System.Drawing.Size(141, 16);
             this.chk24.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk24.TabIndex = 976;
             this.chk24.Text = "اظهار كل الحسابات للسند";
@@ -1790,10 +1790,10 @@
             this.CmbCurr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbCurr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCurr.FormattingEnabled = true;
-            this.CmbCurr.ItemHeight = 15;
+            this.CmbCurr.ItemHeight = 16;
             this.CmbCurr.Location = new System.Drawing.Point(655, -3);
             this.CmbCurr.Name = "CmbCurr";
-            this.CmbCurr.Size = new System.Drawing.Size(121, 21);
+            this.CmbCurr.Size = new System.Drawing.Size(121, 22);
             this.CmbCurr.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbCurr.TabIndex = 1051;
             // 
@@ -2021,7 +2021,7 @@
             this.ChkHead.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ChkHead.Location = new System.Drawing.Point(3, 24);
             this.ChkHead.Name = "ChkHead";
-            this.ChkHead.Size = new System.Drawing.Size(138, 15);
+            this.ChkHead.Size = new System.Drawing.Size(142, 16);
             this.ChkHead.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ChkHead.TabIndex = 9;
             this.ChkHead.Text = "إظهار الترويسة في التقارير";
@@ -2094,7 +2094,7 @@
             this.txtHeadingL1.Location = new System.Drawing.Point(7, 3);
             this.txtHeadingL1.Name = "txtHeadingL1";
             this.netResize1.SetResizeTextBoxMultiline(this.txtHeadingL1, false);
-            this.txtHeadingL1.Size = new System.Drawing.Size(673, 20);
+            this.txtHeadingL1.Size = new System.Drawing.Size(673, 21);
             this.txtHeadingL1.TabIndex = 976;
             this.txtHeadingL1.Tag = "lTrwes1";
             this.txtHeadingL1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -2111,7 +2111,7 @@
             this.txtHeadingL2.Location = new System.Drawing.Point(7, 36);
             this.txtHeadingL2.Name = "txtHeadingL2";
             this.netResize1.SetResizeTextBoxMultiline(this.txtHeadingL2, false);
-            this.txtHeadingL2.Size = new System.Drawing.Size(673, 20);
+            this.txtHeadingL2.Size = new System.Drawing.Size(673, 21);
             this.txtHeadingL2.TabIndex = 977;
             this.txtHeadingL2.Tag = "lTrwes2";
             this.txtHeadingL2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -2128,7 +2128,7 @@
             this.txtHeadingL3.Location = new System.Drawing.Point(7, 69);
             this.txtHeadingL3.Name = "txtHeadingL3";
             this.netResize1.SetResizeTextBoxMultiline(this.txtHeadingL3, false);
-            this.txtHeadingL3.Size = new System.Drawing.Size(739, 20);
+            this.txtHeadingL3.Size = new System.Drawing.Size(739, 21);
             this.txtHeadingL3.TabIndex = 978;
             this.txtHeadingL3.Tag = "lTrwes3";
             this.txtHeadingL3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2156,7 +2156,7 @@
             this.txtHeadingL4.Location = new System.Drawing.Point(7, 102);
             this.txtHeadingL4.Name = "txtHeadingL4";
             this.netResize1.SetResizeTextBoxMultiline(this.txtHeadingL4, false);
-            this.txtHeadingL4.Size = new System.Drawing.Size(739, 20);
+            this.txtHeadingL4.Size = new System.Drawing.Size(739, 21);
             this.txtHeadingL4.TabIndex = 979;
             this.txtHeadingL4.Tag = "lTrwes4";
             this.txtHeadingL4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2228,7 +2228,7 @@
             this.txtHeadingR2.Location = new System.Drawing.Point(11, 37);
             this.txtHeadingR2.Name = "txtHeadingR2";
             this.netResize1.SetResizeTextBoxMultiline(this.txtHeadingR2, false);
-            this.txtHeadingR2.Size = new System.Drawing.Size(683, 20);
+            this.txtHeadingR2.Size = new System.Drawing.Size(683, 21);
             this.txtHeadingR2.TabIndex = 973;
             this.txtHeadingR2.Tag = "rTrwes2";
             // 
@@ -2255,7 +2255,7 @@
             this.txtHeadingR1.Location = new System.Drawing.Point(11, 4);
             this.txtHeadingR1.Name = "txtHeadingR1";
             this.netResize1.SetResizeTextBoxMultiline(this.txtHeadingR1, false);
-            this.txtHeadingR1.Size = new System.Drawing.Size(683, 20);
+            this.txtHeadingR1.Size = new System.Drawing.Size(683, 21);
             this.txtHeadingR1.TabIndex = 972;
             this.txtHeadingR1.Tag = "rTrwes1";
             // 
@@ -2271,7 +2271,7 @@
             this.txtHeadingR4.Location = new System.Drawing.Point(11, 103);
             this.txtHeadingR4.Name = "txtHeadingR4";
             this.netResize1.SetResizeTextBoxMultiline(this.txtHeadingR4, false);
-            this.txtHeadingR4.Size = new System.Drawing.Size(683, 20);
+            this.txtHeadingR4.Size = new System.Drawing.Size(683, 21);
             this.txtHeadingR4.TabIndex = 975;
             this.txtHeadingR4.Tag = "rTrwes4";
             this.txtHeadingR4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2288,7 +2288,7 @@
             this.txtHeadingR3.Location = new System.Drawing.Point(11, 70);
             this.txtHeadingR3.Name = "txtHeadingR3";
             this.netResize1.SetResizeTextBoxMultiline(this.txtHeadingR3, false);
-            this.txtHeadingR3.Size = new System.Drawing.Size(683, 20);
+            this.txtHeadingR3.Size = new System.Drawing.Size(683, 21);
             this.txtHeadingR3.TabIndex = 974;
             this.txtHeadingR3.Tag = "rTrwes3";
             this.txtHeadingR3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2365,7 +2365,7 @@
             this.TXtVatNumbber.Location = new System.Drawing.Point(676, 35);
             this.TXtVatNumbber.Name = "TXtVatNumbber";
             this.netResize1.SetResizeTextBoxMultiline(this.TXtVatNumbber, false);
-            this.TXtVatNumbber.Size = new System.Drawing.Size(281, 20);
+            this.TXtVatNumbber.Size = new System.Drawing.Size(281, 21);
             this.TXtVatNumbber.TabIndex = 1318;
             this.TXtVatNumbber.TextChanged += new System.EventHandler(this.TXtVatNumbber_TextChanged);
             // 
@@ -2388,7 +2388,7 @@
             this.txtAddr.MaxLength = 50;
             this.txtAddr.Name = "txtAddr";
             this.netResize1.SetResizeTextBoxMultiline(this.txtAddr, false);
-            this.txtAddr.Size = new System.Drawing.Size(951, 20);
+            this.txtAddr.Size = new System.Drawing.Size(951, 21);
             this.txtAddr.TabIndex = 1316;
             this.txtAddr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2425,7 +2425,7 @@
             this.txtFax.Name = "txtFax";
             this.netResize1.SetResizeTextBoxMultiline(this.txtFax, false);
             this.txtFax.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtFax.Size = new System.Drawing.Size(495, 20);
+            this.txtFax.Size = new System.Drawing.Size(495, 21);
             this.txtFax.TabIndex = 92;
             this.txtFax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2434,7 +2434,7 @@
             this.CountryCode.Location = new System.Drawing.Point(6, 243);
             this.CountryCode.Name = "CountryCode";
             this.netResize1.SetResizeTextBoxMultiline(this.CountryCode, false);
-            this.CountryCode.Size = new System.Drawing.Size(492, 20);
+            this.CountryCode.Size = new System.Drawing.Size(492, 21);
             this.CountryCode.TabIndex = 1312;
             // 
             // txtPOBox
@@ -2445,7 +2445,7 @@
             this.txtPOBox.MaxLength = 20;
             this.txtPOBox.Name = "txtPOBox";
             this.netResize1.SetResizeTextBoxMultiline(this.txtPOBox, false);
-            this.txtPOBox.Size = new System.Drawing.Size(381, 20);
+            this.txtPOBox.Size = new System.Drawing.Size(381, 21);
             this.txtPOBox.TabIndex = 95;
             this.txtPOBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2477,7 +2477,7 @@
             this.ProviesionState.Location = new System.Drawing.Point(6, 164);
             this.ProviesionState.Name = "ProviesionState";
             this.netResize1.SetResizeTextBoxMultiline(this.ProviesionState, false);
-            this.ProviesionState.Size = new System.Drawing.Size(496, 20);
+            this.ProviesionState.Size = new System.Drawing.Size(496, 21);
             this.ProviesionState.TabIndex = 1313;
             // 
             // label22
@@ -2514,7 +2514,7 @@
             this.txtMobile.MaxLength = 15;
             this.txtMobile.Name = "txtMobile";
             this.netResize1.SetResizeTextBoxMultiline(this.txtMobile, false);
-            this.txtMobile.Size = new System.Drawing.Size(495, 20);
+            this.txtMobile.Size = new System.Drawing.Size(495, 21);
             this.txtMobile.TabIndex = 93;
             this.txtMobile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2536,7 +2536,7 @@
             this.txtMailCode.MaxLength = 20;
             this.txtMailCode.Name = "txtMailCode";
             this.netResize1.SetResizeTextBoxMultiline(this.txtMailCode, false);
-            this.txtMailCode.Size = new System.Drawing.Size(491, 20);
+            this.txtMailCode.Size = new System.Drawing.Size(491, 21);
             this.txtMailCode.TabIndex = 96;
             this.txtMailCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2573,7 +2573,7 @@
             this.TxtGroupVatNumb.Location = new System.Drawing.Point(6, 36);
             this.TxtGroupVatNumb.Name = "TxtGroupVatNumb";
             this.netResize1.SetResizeTextBoxMultiline(this.TxtGroupVatNumb, false);
-            this.TxtGroupVatNumb.Size = new System.Drawing.Size(544, 20);
+            this.TxtGroupVatNumb.Size = new System.Drawing.Size(544, 21);
             this.TxtGroupVatNumb.TabIndex = 1310;
             this.TxtGroupVatNumb.TextChanged += new System.EventHandler(this.TxtGroupVatNumb_TextChanged);
             // 
@@ -2598,10 +2598,10 @@
             this.CmbMail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbMail.FocusHighlightColor = System.Drawing.Color.Empty;
             this.CmbMail.FormattingEnabled = true;
-            this.CmbMail.ItemHeight = 15;
+            this.CmbMail.ItemHeight = 16;
             this.CmbMail.Location = new System.Drawing.Point(587, 293);
             this.CmbMail.Name = "CmbMail";
-            this.CmbMail.Size = new System.Drawing.Size(380, 21);
+            this.CmbMail.Size = new System.Drawing.Size(380, 22);
             this.CmbMail.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbMail.TabIndex = 970;
             // 
@@ -2614,7 +2614,7 @@
             this.txtTel1.Name = "txtTel1";
             this.netResize1.SetResizeTextBoxMultiline(this.txtTel1, false);
             this.txtTel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTel1.Size = new System.Drawing.Size(381, 20);
+            this.txtTel1.Size = new System.Drawing.Size(381, 21);
             this.txtTel1.TabIndex = 91;
             this.txtTel1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2634,7 +2634,7 @@
             this.Byer_IDTExt.Location = new System.Drawing.Point(6, 60);
             this.Byer_IDTExt.Name = "Byer_IDTExt";
             this.netResize1.SetResizeTextBoxMultiline(this.Byer_IDTExt, false);
-            this.Byer_IDTExt.Size = new System.Drawing.Size(657, 20);
+            this.Byer_IDTExt.Size = new System.Drawing.Size(657, 21);
             this.Byer_IDTExt.TabIndex = 1308;
             // 
             // label14
@@ -2666,7 +2666,7 @@
             this.AddationalNumber.Location = new System.Drawing.Point(598, 164);
             this.AddationalNumber.Name = "AddationalNumber";
             this.netResize1.SetResizeTextBoxMultiline(this.AddationalNumber, false);
-            this.AddationalNumber.Size = new System.Drawing.Size(122, 20);
+            this.AddationalNumber.Size = new System.Drawing.Size(122, 21);
             this.AddationalNumber.TabIndex = 1308;
             // 
             // label26
@@ -2687,7 +2687,7 @@
             this.txtEmailBoss.MaxLength = 50;
             this.txtEmailBoss.Name = "txtEmailBoss";
             this.netResize1.SetResizeTextBoxMultiline(this.txtEmailBoss, false);
-            this.txtEmailBoss.Size = new System.Drawing.Size(381, 20);
+            this.txtEmailBoss.Size = new System.Drawing.Size(381, 21);
             this.txtEmailBoss.TabIndex = 886;
             this.txtEmailBoss.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2708,7 +2708,7 @@
             this.streetline2.Location = new System.Drawing.Point(6, 138);
             this.streetline2.Name = "streetline2";
             this.netResize1.SetResizeTextBoxMultiline(this.streetline2, false);
-            this.streetline2.Size = new System.Drawing.Size(952, 20);
+            this.streetline2.Size = new System.Drawing.Size(952, 21);
             this.streetline2.TabIndex = 1308;
             // 
             // comboBox1
@@ -2740,7 +2740,7 @@
             this.txtCompany.MaxLength = 50;
             this.txtCompany.Name = "txtCompany";
             this.netResize1.SetResizeTextBoxMultiline(this.txtCompany, false);
-            this.txtCompany.Size = new System.Drawing.Size(286, 20);
+            this.txtCompany.Size = new System.Drawing.Size(286, 21);
             this.txtCompany.TabIndex = 88;
             this.txtCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2752,7 +2752,7 @@
             this.txtTel2.MaxLength = 50;
             this.txtTel2.Name = "txtTel2";
             this.netResize1.SetResizeTextBoxMultiline(this.txtTel2, false);
-            this.txtTel2.Size = new System.Drawing.Size(381, 20);
+            this.txtTel2.Size = new System.Drawing.Size(381, 21);
             this.txtTel2.TabIndex = 94;
             this.txtTel2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2853,7 +2853,7 @@
             this.BuildingNumber.Location = new System.Drawing.Point(820, 164);
             this.BuildingNumber.Name = "BuildingNumber";
             this.netResize1.SetResizeTextBoxMultiline(this.BuildingNumber, false);
-            this.BuildingNumber.Size = new System.Drawing.Size(138, 20);
+            this.BuildingNumber.Size = new System.Drawing.Size(138, 21);
             this.BuildingNumber.TabIndex = 1308;
             // 
             // streetline1
@@ -2861,7 +2861,7 @@
             this.streetline1.Location = new System.Drawing.Point(6, 113);
             this.streetline1.Name = "streetline1";
             this.netResize1.SetResizeTextBoxMultiline(this.streetline1, false);
-            this.streetline1.Size = new System.Drawing.Size(952, 20);
+            this.streetline1.Size = new System.Drawing.Size(952, 21);
             this.streetline1.TabIndex = 1308;
             // 
             // txtAct
@@ -2872,7 +2872,7 @@
             this.txtAct.MaxLength = 20;
             this.txtAct.Name = "txtAct";
             this.netResize1.SetResizeTextBoxMultiline(this.txtAct, false);
-            this.txtAct.Size = new System.Drawing.Size(544, 20);
+            this.txtAct.Size = new System.Drawing.Size(544, 21);
             this.txtAct.TabIndex = 89;
             // 
             // navigationPage2
@@ -2938,7 +2938,7 @@
             this.txtFirstInventory.Name = "txtFirstInventory";
             this.txtFirstInventory.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtFirstInventory, false);
-            this.txtFirstInventory.Size = new System.Drawing.Size(194, 14);
+            this.txtFirstInventory.Size = new System.Drawing.Size(194, 15);
             this.txtFirstInventory.TabIndex = 877;
             this.txtFirstInventory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2947,7 +2947,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(83, 33);
+            this.label11.Location = new System.Drawing.Point(83, 34);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(114, 13);
             this.label11.TabIndex = 874;
@@ -2962,11 +2962,11 @@
             this.txtLastInventory.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtLastInventory.ButtonCustom.Visible = true;
             this.txtLastInventory.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtLastInventory.Location = new System.Drawing.Point(3, 49);
+            this.txtLastInventory.Location = new System.Drawing.Point(3, 50);
             this.txtLastInventory.Name = "txtLastInventory";
             this.txtLastInventory.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtLastInventory, false);
-            this.txtLastInventory.Size = new System.Drawing.Size(194, 14);
+            this.txtLastInventory.Size = new System.Drawing.Size(194, 15);
             this.txtLastInventory.TabIndex = 878;
             this.txtLastInventory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2975,7 +2975,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(95, 66);
+            this.label12.Location = new System.Drawing.Point(95, 68);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(102, 13);
             this.label12.TabIndex = 875;
@@ -2990,11 +2990,11 @@
             this.txtBoxAccount.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtBoxAccount.ButtonCustom.Visible = true;
             this.txtBoxAccount.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtBoxAccount.Location = new System.Drawing.Point(3, 82);
+            this.txtBoxAccount.Location = new System.Drawing.Point(3, 84);
             this.txtBoxAccount.Name = "txtBoxAccount";
             this.txtBoxAccount.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtBoxAccount, false);
-            this.txtBoxAccount.Size = new System.Drawing.Size(194, 14);
+            this.txtBoxAccount.Size = new System.Drawing.Size(194, 15);
             this.txtBoxAccount.TabIndex = 879;
             this.txtBoxAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -3003,7 +3003,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label13.Location = new System.Drawing.Point(85, 99);
+            this.label13.Location = new System.Drawing.Point(85, 102);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(112, 13);
             this.label13.TabIndex = 873;
@@ -3018,11 +3018,11 @@
             this.txtProfits.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtProfits.ButtonCustom.Visible = true;
             this.txtProfits.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtProfits.Location = new System.Drawing.Point(3, 115);
+            this.txtProfits.Location = new System.Drawing.Point(3, 118);
             this.txtProfits.Name = "txtProfits";
             this.txtProfits.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtProfits, false);
-            this.txtProfits.Size = new System.Drawing.Size(194, 14);
+            this.txtProfits.Size = new System.Drawing.Size(194, 15);
             this.txtProfits.TabIndex = 880;
             this.txtProfits.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -3721,10 +3721,10 @@
             this.CmbPrintTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbPrintTyp.FocusHighlightColor = System.Drawing.Color.Empty;
             this.CmbPrintTyp.FormattingEnabled = true;
-            this.CmbPrintTyp.ItemHeight = 15;
+            this.CmbPrintTyp.ItemHeight = 16;
             this.CmbPrintTyp.Location = new System.Drawing.Point(3, 26);
             this.CmbPrintTyp.Name = "CmbPrintTyp";
-            this.CmbPrintTyp.Size = new System.Drawing.Size(234, 21);
+            this.CmbPrintTyp.Size = new System.Drawing.Size(234, 22);
             this.CmbPrintTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbPrintTyp.TabIndex = 1107;
             this.CmbPrintTyp.Visible = false;
@@ -3737,7 +3737,7 @@
             this.label75.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label75.ForeColor = System.Drawing.Color.SteelBlue;
             this.label75.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label75.Location = new System.Drawing.Point(3, 50);
+            this.label75.Location = new System.Drawing.Point(3, 51);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(234, 20);
             this.label75.TabIndex = 1111;
@@ -3754,10 +3754,10 @@
             this.chk39.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.chk39.FocusHighlightColor = System.Drawing.Color.Empty;
             this.chk39.FormattingEnabled = true;
-            this.chk39.ItemHeight = 15;
-            this.chk39.Location = new System.Drawing.Point(3, 73);
+            this.chk39.ItemHeight = 16;
+            this.chk39.Location = new System.Drawing.Point(3, 74);
             this.chk39.Name = "chk39";
-            this.chk39.Size = new System.Drawing.Size(234, 21);
+            this.chk39.Size = new System.Drawing.Size(234, 22);
             this.chk39.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk39.TabIndex = 1110;
             this.chk39.Visible = false;
@@ -3770,7 +3770,7 @@
             this.label97.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label97.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label97.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label97.Location = new System.Drawing.Point(118, 97);
+            this.label97.Location = new System.Drawing.Point(118, 99);
             this.label97.Name = "label97";
             this.label97.Size = new System.Drawing.Size(119, 13);
             this.label97.TabIndex = 1119;
@@ -3785,10 +3785,10 @@
             this.chk36.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.chk36.FocusHighlightColor = System.Drawing.Color.Empty;
             this.chk36.FormattingEnabled = true;
-            this.chk36.ItemHeight = 15;
-            this.chk36.Location = new System.Drawing.Point(3, 113);
+            this.chk36.ItemHeight = 16;
+            this.chk36.Location = new System.Drawing.Point(3, 115);
             this.chk36.Name = "chk36";
-            this.chk36.Size = new System.Drawing.Size(234, 21);
+            this.chk36.Size = new System.Drawing.Size(234, 22);
             this.chk36.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk36.TabIndex = 1112;
             // 
@@ -3796,7 +3796,7 @@
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(40, 137);
+            this.label9.Location = new System.Drawing.Point(40, 140);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(197, 24);
             this.label9.TabIndex = 1121;
@@ -3810,10 +3810,10 @@
             this.CmbInvMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbInvMode.FocusHighlightColor = System.Drawing.Color.Empty;
             this.CmbInvMode.FormattingEnabled = true;
-            this.CmbInvMode.ItemHeight = 15;
-            this.CmbInvMode.Location = new System.Drawing.Point(0, 164);
+            this.CmbInvMode.ItemHeight = 16;
+            this.CmbInvMode.Location = new System.Drawing.Point(0, 167);
             this.CmbInvMode.Name = "CmbInvMode";
-            this.CmbInvMode.Size = new System.Drawing.Size(237, 21);
+            this.CmbInvMode.Size = new System.Drawing.Size(237, 22);
             this.CmbInvMode.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbInvMode.TabIndex = 1123;
             // 
@@ -3825,7 +3825,7 @@
             this.label51.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label51.ForeColor = System.Drawing.Color.SteelBlue;
             this.label51.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label51.Location = new System.Drawing.Point(5, 188);
+            this.label51.Location = new System.Drawing.Point(5, 191);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(232, 20);
             this.label51.TabIndex = 1109;
@@ -3841,10 +3841,10 @@
             this.CmbPointImages.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbPointImages.FocusHighlightColor = System.Drawing.Color.Empty;
             this.CmbPointImages.FormattingEnabled = true;
-            this.CmbPointImages.ItemHeight = 15;
-            this.CmbPointImages.Location = new System.Drawing.Point(5, 211);
+            this.CmbPointImages.ItemHeight = 16;
+            this.CmbPointImages.Location = new System.Drawing.Point(5, 214);
             this.CmbPointImages.Name = "CmbPointImages";
-            this.CmbPointImages.Size = new System.Drawing.Size(232, 21);
+            this.CmbPointImages.Size = new System.Drawing.Size(232, 22);
             this.CmbPointImages.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbPointImages.TabIndex = 1108;
             // 
@@ -3853,7 +3853,7 @@
             this.label74.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label74.BackColor = System.Drawing.Color.Transparent;
             this.label74.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label74.Location = new System.Drawing.Point(28, 235);
+            this.label74.Location = new System.Drawing.Point(28, 238);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(209, 22);
             this.label74.TabIndex = 1104;
@@ -3868,10 +3868,10 @@
             this.CmbOrderTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbOrderTyp.FocusHighlightColor = System.Drawing.Color.Empty;
             this.CmbOrderTyp.FormattingEnabled = true;
-            this.CmbOrderTyp.ItemHeight = 15;
-            this.CmbOrderTyp.Location = new System.Drawing.Point(3, 260);
+            this.CmbOrderTyp.ItemHeight = 16;
+            this.CmbOrderTyp.Location = new System.Drawing.Point(3, 263);
             this.CmbOrderTyp.Name = "CmbOrderTyp";
-            this.CmbOrderTyp.Size = new System.Drawing.Size(234, 21);
+            this.CmbOrderTyp.Size = new System.Drawing.Size(234, 22);
             this.CmbOrderTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbOrderTyp.TabIndex = 1105;
             // 
@@ -3880,7 +3880,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(129, 284);
+            this.label8.Location = new System.Drawing.Point(129, 288);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 13);
             this.label8.TabIndex = 1120;
@@ -3895,10 +3895,10 @@
             this.CmbCost.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCost.FocusHighlightColor = System.Drawing.Color.Empty;
             this.CmbCost.FormattingEnabled = true;
-            this.CmbCost.ItemHeight = 15;
-            this.CmbCost.Location = new System.Drawing.Point(-2, 300);
+            this.CmbCost.ItemHeight = 16;
+            this.CmbCost.Location = new System.Drawing.Point(-2, 304);
             this.CmbCost.Name = "CmbCost";
-            this.CmbCost.Size = new System.Drawing.Size(239, 21);
+            this.CmbCost.Size = new System.Drawing.Size(239, 22);
             this.CmbCost.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbCost.TabIndex = 1122;
             // 
@@ -3911,10 +3911,10 @@
             // 
             // 
             this.chk69.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.chk69.Location = new System.Drawing.Point(96, 331);
+            this.chk69.Location = new System.Drawing.Point(92, 334);
             this.chk69.Name = "chk69";
             this.chk69.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk69.Size = new System.Drawing.Size(141, 15);
+            this.chk69.Size = new System.Drawing.Size(145, 16);
             this.chk69.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk69.TabIndex = 1116;
             this.chk69.Text = "تنبيه بتاريخ الإستحقاق قبل";
@@ -3933,7 +3933,7 @@
             this.txtAlarmDeuDateBefor.DisplayFormat = "0";
             this.txtAlarmDeuDateBefor.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Bold);
             this.txtAlarmDeuDateBefor.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtAlarmDeuDateBefor.Location = new System.Drawing.Point(37, 327);
+            this.txtAlarmDeuDateBefor.Location = new System.Drawing.Point(33, 331);
             this.txtAlarmDeuDateBefor.MinValue = 0;
             this.txtAlarmDeuDateBefor.Name = "txtAlarmDeuDateBefor";
             this.txtAlarmDeuDateBefor.Size = new System.Drawing.Size(53, 19);
@@ -3947,7 +3947,7 @@
             this.labelAlarmDueo.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.labelAlarmDueo.ForeColor = System.Drawing.Color.MidnightBlue;
             this.labelAlarmDueo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelAlarmDueo.Location = new System.Drawing.Point(9, 336);
+            this.labelAlarmDueo.Location = new System.Drawing.Point(5, 340);
             this.labelAlarmDueo.Name = "labelAlarmDueo";
             this.labelAlarmDueo.Size = new System.Drawing.Size(22, 13);
             this.labelAlarmDueo.TabIndex = 1118;
@@ -3962,10 +3962,10 @@
             // 
             // 
             this.chk58.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.chk58.Location = new System.Drawing.Point(85, 356);
+            this.chk58.Location = new System.Drawing.Point(81, 359);
             this.chk58.Name = "chk58";
             this.chk58.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk58.Size = new System.Drawing.Size(152, 15);
+            this.chk58.Size = new System.Drawing.Size(156, 16);
             this.chk58.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk58.TabIndex = 1113;
             this.chk58.Text = "احتساب تاريخ الأستحقاق بعد";
@@ -3984,7 +3984,7 @@
             this.txtDateofInv.DisplayFormat = "0";
             this.txtDateofInv.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Bold);
             this.txtDateofInv.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtDateofInv.Location = new System.Drawing.Point(45, 352);
+            this.txtDateofInv.Location = new System.Drawing.Point(41, 356);
             this.txtDateofInv.MinValue = 0;
             this.txtDateofInv.Name = "txtDateofInv";
             this.txtDateofInv.Size = new System.Drawing.Size(34, 19);
@@ -3998,7 +3998,7 @@
             this.label76.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label76.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label76.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label76.Location = new System.Drawing.Point(17, 361);
+            this.label76.Location = new System.Drawing.Point(13, 365);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(22, 13);
             this.label76.TabIndex = 1115;
@@ -5531,7 +5531,7 @@
             this.checkBoxX14.Location = new System.Drawing.Point(771, 119);
             this.checkBoxX14.Name = "checkBoxX14";
             this.checkBoxX14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBoxX14.Size = new System.Drawing.Size(148, 15);
+            this.checkBoxX14.Size = new System.Drawing.Size(152, 16);
             this.checkBoxX14.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBoxX14.TabIndex = 976;
             this.checkBoxX14.Text = "تحديد كفيل لكل موظف جديد";
@@ -5741,7 +5741,7 @@
             this.checkBoxX12.Location = new System.Drawing.Point(757, 115);
             this.checkBoxX12.Name = "checkBoxX12";
             this.checkBoxX12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBoxX12.Size = new System.Drawing.Size(148, 15);
+            this.checkBoxX12.Size = new System.Drawing.Size(152, 16);
             this.checkBoxX12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBoxX12.TabIndex = 976;
             this.checkBoxX12.Text = "تحديد كفيل لكل موظف جديد";
@@ -6749,7 +6749,7 @@
             this.checkBoxX3.Location = new System.Drawing.Point(904, 119);
             this.checkBoxX3.Name = "checkBoxX3";
             this.checkBoxX3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBoxX3.Size = new System.Drawing.Size(148, 15);
+            this.checkBoxX3.Size = new System.Drawing.Size(152, 16);
             this.checkBoxX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBoxX3.TabIndex = 976;
             this.checkBoxX3.Text = "تحديد كفيل لكل موظف جديد";
@@ -7374,7 +7374,7 @@
             this.textBox_DocPath.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.textBox_DocPath, false);
             this.textBox_DocPath.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox_DocPath.Size = new System.Drawing.Size(775, 20);
+            this.textBox_DocPath.Size = new System.Drawing.Size(775, 21);
             this.textBox_DocPath.TabIndex = 991;
             // 
             // label38
@@ -7603,7 +7603,7 @@
             this.ChkEmp1.Location = new System.Drawing.Point(379, 39);
             this.ChkEmp1.Name = "ChkEmp1";
             this.ChkEmp1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ChkEmp1.Size = new System.Drawing.Size(229, 15);
+            this.ChkEmp1.Size = new System.Drawing.Size(236, 16);
             this.ChkEmp1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ChkEmp1.TabIndex = 980;
             this.ChkEmp1.TabStop = false;
@@ -7633,7 +7633,7 @@
             this.checkBox_VacationManually.Location = new System.Drawing.Point(105, 92);
             this.checkBox_VacationManually.Name = "checkBox_VacationManually";
             this.checkBox_VacationManually.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_VacationManually.Size = new System.Drawing.Size(193, 15);
+            this.checkBox_VacationManually.Size = new System.Drawing.Size(198, 16);
             this.checkBox_VacationManually.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_VacationManually.TabIndex = 18;
             this.checkBox_VacationManually.Text = "احتساب تلقائي للاجازة في قرار الاجازة";
@@ -7649,7 +7649,7 @@
             this.checkBox_Sponer.Location = new System.Drawing.Point(304, 89);
             this.checkBox_Sponer.Name = "checkBox_Sponer";
             this.checkBox_Sponer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_Sponer.Size = new System.Drawing.Size(148, 15);
+            this.checkBox_Sponer.Size = new System.Drawing.Size(152, 16);
             this.checkBox_Sponer.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_Sponer.TabIndex = 976;
             this.checkBox_Sponer.Text = "تحديد كفيل لكل موظف جديد";
@@ -7687,7 +7687,7 @@
             this.checkBox_AttendanceManually.Location = new System.Drawing.Point(445, 12);
             this.checkBox_AttendanceManually.Name = "checkBox_AttendanceManually";
             this.checkBox_AttendanceManually.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_AttendanceManually.Size = new System.Drawing.Size(165, 15);
+            this.checkBox_AttendanceManually.Size = new System.Drawing.Size(169, 16);
             this.checkBox_AttendanceManually.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_AttendanceManually.TabIndex = 976;
             this.checkBox_AttendanceManually.Text = "السماح بإدخال وقت الحضور يدوياَ";
@@ -7703,7 +7703,7 @@
             this.checkBox_AutoLeave.Location = new System.Drawing.Point(446, 66);
             this.checkBox_AutoLeave.Name = "checkBox_AutoLeave";
             this.checkBox_AutoLeave.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_AutoLeave.Size = new System.Drawing.Size(165, 15);
+            this.checkBox_AutoLeave.Size = new System.Drawing.Size(169, 16);
             this.checkBox_AutoLeave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_AutoLeave.TabIndex = 978;
             this.checkBox_AutoLeave.Text = "صـــرف الموظفــــين تلقــــائيا بعد ";

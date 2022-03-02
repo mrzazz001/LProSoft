@@ -2,29 +2,23 @@ using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using CrystalDecisions.Windows.Forms;
 using Framework.Cache;
-using ProShared.GeneralM;
-using ProShared;
-using ProShared.Stock_Data;
-
 using Library.RepShow;
 using Microsoft.Win32;
+using ProShared;
+using ProShared.GeneralM;
+using ProShared.Stock_Data;
 using SSSDateTime.Date;
 using SSSLanguage;
 using System;
-using ProShared;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Windows.Forms;
-using System.Xml.Serialization;
- 
+
 
 namespace InvAcc.Forms
 {
@@ -455,7 +449,10 @@ namespace InvAcc.Forms
             }
             if ((VarGeneral.GeneralPrinter.ISCashierType && VarGeneral.IsGeneralUsed) || (_Invsetting.ISCashierType && !VarGeneral.IsGeneralUsed) || repvalue.ToLower().Contains("cashi"))
                 rpt.PrintOptions.DissociatePageSizeAndPrinterPaperSize = false;
-
+            if (vLines > 0)
+            {
+            //   rpt.SetParameterValue("vSts", true);
+            }
             for (int i = 0; i < vReplay; i++)
             {
                 try
@@ -605,7 +602,7 @@ namespace InvAcc.Forms
             MainCryRep.Load(spath);
             MainCryRep.PrintOptions.DissociatePageSizeAndPrinterPaperSize = true;
 
-
+          
             try
             {
                 Image j = Utilites.generate(FrmReportsViewer.QRCodeData);
@@ -819,7 +816,7 @@ namespace InvAcc.Forms
 
             if (vLines > 0)
             {
-                rpt.SetParameterValue("vSts", true);
+            //    rpt.SetParameterValue("vSts", true);
             }
             try
             {
@@ -12921,6 +12918,16 @@ namespace InvAcc.Forms
                 string s2 = VarGeneral.RepData.Tables[0].Rows[1]["TaxCustNo"].ToString();
 
                 string s3 = VarGeneral.RepData.Tables[0].Rows[1]["LineDetails"].ToString();
+                bool f = false;
+                try
+                {
+                    object k = (MainCryRep.ReportDefinition.Sections["Report Header b"].ReportObjects["LineDetails"]);
+                    f = true;   
+                }
+                catch
+                {
+                    f = false;
+                }
                 foreach (DataRow r in VarGeneral.RepData.Tables[0].Rows)
                 {
                     try
@@ -12940,7 +12947,7 @@ namespace InvAcc.Forms
 
                     try
                     {
-                        r["LineDetails"] = s3;
+                if(f)      r["LineDetails"] = s3;
                     }
                     catch
                     { }
@@ -12948,6 +12955,7 @@ namespace InvAcc.Forms
             }
             catch
             {
+
 
             }
         }
@@ -13052,6 +13060,7 @@ namespace InvAcc.Forms
 
         private void STEP_Cachier_2()
         {
+            VarGeneral._dbshared = null;
             for (int i = 0; i < VarGeneral.RepData.Tables[0].Rows.Count; i++)
             {
                 try
@@ -14816,6 +14825,7 @@ namespace InvAcc.Forms
             }
 
             ReportDocument rpt = MainCryRep;
+      
             string vUsrNmA = string.Empty;
             string vBranchNmA = string.Empty;
             string vUsrNmE = string.Empty;

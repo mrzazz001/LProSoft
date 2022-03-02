@@ -6567,6 +6567,7 @@ namespace InvAcc.Forms
         }
         public void SetData(T_INVHED value)
         {
+            txtCrn_No.Text = value.CusVenCRN;
             txtCredit2.Tag = "";
             txtCredit2.Text = "";
             txtDebit2.Tag = "";
@@ -10026,6 +10027,7 @@ namespace InvAcc.Forms
         }
         private T_INVHED GetData()
         {
+            data_this.CusVenCRN = txtCrn_No.Text;
             txtDueAmountLoc.ValueChanged -= txtDueAmountLoc_ValueChanged;
             try
             {
@@ -15284,6 +15286,7 @@ namespace InvAcc.Forms
                 text_CusTaxNo.Text = "";
                 text_CusTaxNo.ReadOnly = false;
             }
+            InvModeChanged();
         }
         private void button_CustD1_Click(object sender, EventArgs e)
         {
@@ -17980,6 +17983,16 @@ namespace InvAcc.Forms
         }
 
         private void Button_Prev_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDebit5_TextChanged(object sender, EventArgs e)
         {
 
         }
