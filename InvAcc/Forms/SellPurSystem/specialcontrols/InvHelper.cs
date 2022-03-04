@@ -134,6 +134,7 @@ namespace InvAcc.Forms.SellPurSystem.specialcontrols
             dbHead.AddParameter("CusVenTaxNo", DbType.String, data_this.CusVenTaxNo);
             dbHead.AddParameter("IS_ServiceBill", DbType.Boolean, data_this.IS_ServiceBill);
             dbHead.AddParameter("Hash_Value", DbType.String, data_this.Hash_Value);
+            dbHead.AddParameter("CusVenCRN", DbType.String, data_this.CusVenCRN);
             dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_INSERT");
            return   int.Parse(dbHead.GetParameterValue("InvHed_ID").ToString());
         }
@@ -348,6 +349,7 @@ namespace InvAcc.Forms.SellPurSystem.specialcontrols
             dbHead.AddParameter("CusVenTaxNo", DbType.String, data_this.CusVenTaxNo);
             dbHead.AddParameter("IS_ServiceBill", DbType.Boolean, data_this.IS_ServiceBill);
             dbHead.AddParameter("Hash_Value", DbType.String, data_this.Hash_Value);
+            dbHead.AddParameter("CusVenCRN", DbType.String, data_this.CusVenCRN);
             dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_UPDATE");
 
         }

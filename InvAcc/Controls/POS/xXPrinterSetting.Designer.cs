@@ -34,10 +34,10 @@ namespace ProRealEstate.Utilties
             this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.chk_Stoped = new DevExpress.XtraEditors.ToggleSwitch();
-            this.invGdEDesctext = new DevExpress.XtraEditors.TextEdit();
-            this.invGdADesctext = new DevExpress.XtraEditors.TextEdit();
             this.Deflines = new DevExpress.XtraEditors.SpinEdit();
+            this.t_PrintersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.InvA = new DevExpress.XtraEditors.SpinEdit();
+            this.t_UsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.InvNamATextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -55,6 +55,8 @@ namespace ProRealEstate.Utilties
             this.InvA1 = new DevExpress.XtraEditors.SpinEdit();
             this.ISdirectPrintingCheckEdit = new DevExpress.XtraEditors.ToggleSwitch();
             this.checkedit_all = new DevExpress.XtraEditors.ToggleSwitch();
+            this.invGdADesctext = new DevExpress.XtraEditors.MemoEdit();
+            this.invGdEDesctext = new DevExpress.XtraEditors.MemoEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -84,8 +86,6 @@ namespace ProRealEstate.Utilties
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemFordefPrn = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForPaper_Size = new DevExpress.XtraLayout.LayoutControlItem();
-            this.t_PrintersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.t_UsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lookUpEditWithDataSource2 = new InvAcc.LookUpEditWithDataSource();
             this.lookUpEditWithDataSource1 = new InvAcc.LookUpEditWithDataSource();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -93,10 +93,10 @@ namespace ProRealEstate.Utilties
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chk_Stoped.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invGdEDesctext.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invGdADesctext.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Deflines.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t_PrintersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvA.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t_UsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvNamATextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ISA4PaperTypeCheckEdit.Properties)).BeginInit();
@@ -113,6 +113,8 @@ namespace ProRealEstate.Utilties
             ((System.ComponentModel.ISupportInitialize)(this.InvA1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ISdirectPrintingCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkedit_all.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invGdADesctext.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invGdEDesctext.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
@@ -142,8 +144,6 @@ namespace ProRealEstate.Utilties
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemFordefPrn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPaper_Size)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t_PrintersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t_UsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditWithDataSource2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditWithDataSource1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
@@ -153,8 +153,6 @@ namespace ProRealEstate.Utilties
             // dataLayoutControl1
             // 
             this.dataLayoutControl1.Controls.Add(this.chk_Stoped);
-            this.dataLayoutControl1.Controls.Add(this.invGdEDesctext);
-            this.dataLayoutControl1.Controls.Add(this.invGdADesctext);
             this.dataLayoutControl1.Controls.Add(this.Deflines);
             this.dataLayoutControl1.Controls.Add(this.InvA);
             this.dataLayoutControl1.Controls.Add(this.lookUpEditWithDataSource2);
@@ -176,6 +174,8 @@ namespace ProRealEstate.Utilties
             this.dataLayoutControl1.Controls.Add(this.InvA1);
             this.dataLayoutControl1.Controls.Add(this.ISdirectPrintingCheckEdit);
             this.dataLayoutControl1.Controls.Add(this.checkedit_all);
+            this.dataLayoutControl1.Controls.Add(this.invGdADesctext);
+            this.dataLayoutControl1.Controls.Add(this.invGdEDesctext);
             this.dataLayoutControl1.DataSource = this.t_PrintersBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -194,29 +194,9 @@ namespace ProRealEstate.Utilties
             this.chk_Stoped.Name = "chk_Stoped";
             this.chk_Stoped.Properties.OffText = "ايقاف الطباعة";
             this.chk_Stoped.Properties.OnText = "السماح بالطباعة";
-            this.chk_Stoped.Size = new System.Drawing.Size(204, 23);
+            this.chk_Stoped.Size = new System.Drawing.Size(204, 24);
             this.chk_Stoped.StyleController = this.dataLayoutControl1;
             this.chk_Stoped.TabIndex = 1;
-            // 
-            // invGdEDesctext
-            // 
-            this.invGdEDesctext.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.t_PrintersBindingSource, "invGdEDesc", true));
-            this.invGdEDesctext.Location = new System.Drawing.Point(24, 224);
-            this.invGdEDesctext.MinimumSize = new System.Drawing.Size(0, 200);
-            this.invGdEDesctext.Name = "invGdEDesctext";
-            this.invGdEDesctext.Size = new System.Drawing.Size(116, 200);
-            this.invGdEDesctext.StyleController = this.dataLayoutControl1;
-            this.invGdEDesctext.TabIndex = 39;
-            // 
-            // invGdADesctext
-            // 
-            this.invGdADesctext.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.t_PrintersBindingSource, "invGdADesc", true));
-            this.invGdADesctext.Location = new System.Drawing.Point(144, 224);
-            this.invGdADesctext.MinimumSize = new System.Drawing.Size(0, 200);
-            this.invGdADesctext.Name = "invGdADesctext";
-            this.invGdADesctext.Size = new System.Drawing.Size(115, 200);
-            this.invGdADesctext.StyleController = this.dataLayoutControl1;
-            this.invGdADesctext.TabIndex = 38;
             // 
             // Deflines
             // 
@@ -239,6 +219,10 @@ namespace ProRealEstate.Utilties
             this.Deflines.Size = new System.Drawing.Size(116, 20);
             this.Deflines.StyleController = this.dataLayoutControl1;
             this.Deflines.TabIndex = 37;
+            // 
+            // t_PrintersBindingSource
+            // 
+            this.t_PrintersBindingSource.DataSource = typeof(ProShared.Stock_Data.T_Printer);
             // 
             // InvA
             // 
@@ -263,13 +247,17 @@ namespace ProRealEstate.Utilties
             this.InvA.TabIndex = 36;
             this.InvA.EditValueChanged += new System.EventHandler(this.spinEdit1_EditValueChanged);
             // 
+            // t_UsersBindingSource
+            // 
+            this.t_UsersBindingSource.DataSource = typeof(ProShared.Stock_Data.T_User);
+            // 
             // toggleSwitch1
             // 
-            this.toggleSwitch1.Location = new System.Drawing.Point(563, 301);
+            this.toggleSwitch1.Location = new System.Drawing.Point(563, 304);
             this.toggleSwitch1.Name = "toggleSwitch1";
             this.toggleSwitch1.Properties.OffText = "اتجاه الطباعة طولي";
             this.toggleSwitch1.Properties.OnText = "اتجاه الطباعة عرضي";
-            this.toggleSwitch1.Size = new System.Drawing.Size(204, 23);
+            this.toggleSwitch1.Size = new System.Drawing.Size(204, 24);
             this.toggleSwitch1.StyleController = this.dataLayoutControl1;
             this.toggleSwitch1.TabIndex = 32;
             this.toggleSwitch1.Toggled += new System.EventHandler(this.toggleSwitch1_Toggled);
@@ -517,24 +505,44 @@ namespace ProRealEstate.Utilties
             // ISdirectPrintingCheckEdit
             // 
             this.ISdirectPrintingCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.t_PrintersBindingSource, "ISdirectPrinting", true));
-            this.ISdirectPrintingCheckEdit.Location = new System.Drawing.Point(563, 274);
+            this.ISdirectPrintingCheckEdit.Location = new System.Drawing.Point(563, 276);
             this.ISdirectPrintingCheckEdit.Name = "ISdirectPrintingCheckEdit";
             this.ISdirectPrintingCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
             this.ISdirectPrintingCheckEdit.Properties.OffText = "عرض التقرير في الشاشة";
             this.ISdirectPrintingCheckEdit.Properties.OnText = "الارسال الى الطابعة مباشرة";
-            this.ISdirectPrintingCheckEdit.Size = new System.Drawing.Size(204, 23);
+            this.ISdirectPrintingCheckEdit.Size = new System.Drawing.Size(204, 24);
             this.ISdirectPrintingCheckEdit.StyleController = this.dataLayoutControl1;
             this.ISdirectPrintingCheckEdit.TabIndex = 30;
             // 
             // checkedit_all
             // 
-            this.checkedit_all.Location = new System.Drawing.Point(563, 247);
+            this.checkedit_all.Location = new System.Drawing.Point(563, 248);
             this.checkedit_all.Name = "checkedit_all";
             this.checkedit_all.Properties.OffText = "ايقاف الكل";
             this.checkedit_all.Properties.OnText = "الكل";
-            this.checkedit_all.Size = new System.Drawing.Size(204, 23);
+            this.checkedit_all.Size = new System.Drawing.Size(204, 24);
             this.checkedit_all.StyleController = this.dataLayoutControl1;
             this.checkedit_all.TabIndex = 1023;
+            // 
+            // invGdADesctext
+            // 
+            this.invGdADesctext.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.t_PrintersBindingSource, "invGdADesc", true));
+            this.invGdADesctext.Location = new System.Drawing.Point(144, 224);
+            this.invGdADesctext.MinimumSize = new System.Drawing.Size(0, 200);
+            this.invGdADesctext.Name = "invGdADesctext";
+            this.invGdADesctext.Size = new System.Drawing.Size(115, 200);
+            this.invGdADesctext.StyleController = this.dataLayoutControl1;
+            this.invGdADesctext.TabIndex = 38;
+            // 
+            // invGdEDesctext
+            // 
+            this.invGdEDesctext.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.t_PrintersBindingSource, "invGdEDesc", true));
+            this.invGdEDesctext.Location = new System.Drawing.Point(24, 224);
+            this.invGdEDesctext.MinimumSize = new System.Drawing.Size(0, 200);
+            this.invGdEDesctext.Name = "invGdEDesctext";
+            this.invGdEDesctext.Size = new System.Drawing.Size(116, 200);
+            this.invGdEDesctext.StyleController = this.dataLayoutControl1;
+            this.invGdEDesctext.TabIndex = 39;
             // 
             // Root
             // 
@@ -632,16 +640,16 @@ namespace ProRealEstate.Utilties
             this.layoutControlItem11.Control = this.chk_Stoped;
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(208, 27);
+            this.layoutControlItem11.Size = new System.Drawing.Size(208, 28);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.checkedit_all;
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 27);
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(208, 27);
+            this.layoutControlItem12.Size = new System.Drawing.Size(208, 28);
             this.layoutControlItem12.Text = "الكل";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
@@ -650,9 +658,9 @@ namespace ProRealEstate.Utilties
             // ItemForISdirectPrinting
             // 
             this.ItemForISdirectPrinting.Control = this.ISdirectPrintingCheckEdit;
-            this.ItemForISdirectPrinting.Location = new System.Drawing.Point(0, 54);
+            this.ItemForISdirectPrinting.Location = new System.Drawing.Point(0, 56);
             this.ItemForISdirectPrinting.Name = "ItemForISdirectPrinting";
-            this.ItemForISdirectPrinting.Size = new System.Drawing.Size(208, 27);
+            this.ItemForISdirectPrinting.Size = new System.Drawing.Size(208, 28);
             this.ItemForISdirectPrinting.Text = "ISdirect Printing";
             this.ItemForISdirectPrinting.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForISdirectPrinting.TextVisible = false;
@@ -660,9 +668,9 @@ namespace ProRealEstate.Utilties
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.toggleSwitch1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 81);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(208, 115);
+            this.layoutControlItem2.Size = new System.Drawing.Size(208, 112);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -850,14 +858,6 @@ namespace ProRealEstate.Utilties
             this.ItemForPaper_Size.TextLocation = DevExpress.Utils.Locations.Top;
             this.ItemForPaper_Size.TextSize = new System.Drawing.Size(112, 13);
             // 
-            // t_PrintersBindingSource
-            // 
-            this.t_PrintersBindingSource.DataSource = typeof(ProShared.Stock_Data.T_Printer);
-            // 
-            // t_UsersBindingSource
-            // 
-            this.t_UsersBindingSource.DataSource = typeof(ProShared.Stock_Data.T_User);
-            // 
             // lookUpEditWithDataSource2
             // 
             this.lookUpEditWithDataSource2.Location = new System.Drawing.Point(309, 68);
@@ -1033,10 +1033,10 @@ namespace ProRealEstate.Utilties
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chk_Stoped.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invGdEDesctext.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invGdADesctext.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Deflines.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t_PrintersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvA.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t_UsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvNamATextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ISA4PaperTypeCheckEdit.Properties)).EndInit();
@@ -1053,6 +1053,8 @@ namespace ProRealEstate.Utilties
             ((System.ComponentModel.ISupportInitialize)(this.InvA1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ISdirectPrintingCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkedit_all.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invGdADesctext.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invGdEDesctext.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
@@ -1082,8 +1084,6 @@ namespace ProRealEstate.Utilties
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemFordefPrn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPaper_Size)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t_PrintersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t_UsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditWithDataSource2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditWithDataSource1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
@@ -1139,8 +1139,6 @@ namespace ProRealEstate.Utilties
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraEditors.SpinEdit Deflines;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-        private DevExpress.XtraEditors.TextEdit invGdEDesctext;
-        private DevExpress.XtraEditors.TextEdit invGdADesctext;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraEditors.ToggleSwitch chk_Stoped;
@@ -1152,5 +1150,7 @@ namespace ProRealEstate.Utilties
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup5;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraEditors.MemoEdit invGdADesctext;
+        private DevExpress.XtraEditors.MemoEdit invGdEDesctext;
     }
 }

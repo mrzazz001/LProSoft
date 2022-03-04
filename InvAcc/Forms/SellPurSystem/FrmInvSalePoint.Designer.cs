@@ -515,6 +515,8 @@ namespace InvAcc.Forms
             this.OnlineWarning = new DevComponents.DotNetBar.Controls.WarningBox();
             this.onlineworning2 = new System.Windows.Forms.Panel();
             this.c1Button1 = new C1.Win.C1Input.C1Button();
+            this.txtCrn_No = new System.Windows.Forms.TextBox();
+            this.label59 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtDueAmount)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.Button_Groups.SuspendLayout();
@@ -1584,9 +1586,9 @@ namespace InvAcc.Forms
             // 
             this.panel8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel8.Controls.Add(this.HP_Main);
-            this.panel8.Controls.Add(this.HP_CustDetails);
             this.panel8.Controls.Add(this.HP_Delegator);
             this.panel8.Controls.Add(this.panel_Table);
+            this.panel8.Controls.Add(this.HP_CustDetails);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 92);
             this.panel8.Name = "panel8";
@@ -1745,6 +1747,8 @@ namespace InvAcc.Forms
             // 
             // HP_CustDetails
             // 
+            this.HP_CustDetails.Controls.Add(this.txtCrn_No);
+            this.HP_CustDetails.Controls.Add(this.label59);
             this.HP_CustDetails.Controls.Add(this.text_CusTaxNo);
             this.HP_CustDetails.Controls.Add(this.label58);
             this.HP_CustDetails.Controls.Add(this.button15);
@@ -1796,10 +1800,9 @@ namespace InvAcc.Forms
             // button15
             // 
             this.button15.BackColor = System.Drawing.Color.SkyBlue;
-            this.button15.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button15.Location = new System.Drawing.Point(0, 105);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(404, 32);
+            this.button15.Size = new System.Drawing.Size(138, 32);
             this.button15.TabIndex = 1245;
             this.button15.Text = "رجوع";
             this.button15.UseVisualStyleBackColor = false;
@@ -6872,6 +6875,30 @@ namespace InvAcc.Forms
             this.c1Button1.TabIndex = 3;
             this.c1Button1.UseVisualStyleBackColor = false;
             // 
+            // txtCrn_No
+            // 
+            this.txtCrn_No.BackColor = System.Drawing.Color.White;
+            this.txtCrn_No.Location = new System.Drawing.Point(150, 112);
+            this.txtCrn_No.MaxLength = 100;
+            this.txtCrn_No.Name = "txtCrn_No";
+            this.netResize1.SetResizeTextBoxMultiline(this.txtCrn_No, false);
+            this.txtCrn_No.Size = new System.Drawing.Size(143, 20);
+            this.txtCrn_No.TabIndex = 1248;
+            // 
+            // label59
+            // 
+            this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label59.AutoSize = true;
+            this.label59.BackColor = System.Drawing.Color.Transparent;
+            this.label59.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label59.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label59.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label59.Location = new System.Drawing.Point(298, 114);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(101, 13);
+            this.label59.TabIndex = 1249;
+            this.label59.Text = "رقم السجل التجاري:";
+            // 
             // FrmInvSalePoint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7326,5 +7353,7 @@ namespace InvAcc.Forms
         private DevComponents.DotNetBar.Controls.WarningBox OnlineWarning;
         private Panel onlineworning2;
         private C1.Win.C1Input.C1Button c1Button1;
+        private TextBox txtCrn_No;
+        internal Label label59;
     }
 }

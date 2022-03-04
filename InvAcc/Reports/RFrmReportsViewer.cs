@@ -309,7 +309,7 @@ namespace InvAcc.Forms
         private void PrintSet(ReportDocument rpt, int vLines, PaperOrientation vType, string vPeaperNm, int vReplay, string _PrintNm, double _mergBottom, double _mergleft, double _mergRight, double _mergTop)
         {
 
-            
+      //      try { rpt.SetParameterValue("CATPrint", "False"); } catch { }
             TopMost = false;
             Hide();
             string ntyp = "";
@@ -12921,8 +12921,8 @@ namespace InvAcc.Forms
                 bool f = false;
                 try
                 {
-                    object k = (MainCryRep.ReportDefinition.Sections["Report Header b"].ReportObjects["LineDetails"]);
-                    f = true;   
+                    object k = (MainCryRep.ReportDefinition.Sections["Report Header b"].ReportObjects["LineDetail1"]);
+              if(k!=null)      f = true;   
                 }
                 catch
                 {
@@ -13323,6 +13323,8 @@ namespace InvAcc.Forms
                         }
                         rpt = this.MainCryRep;
                         newData = new DataSet();
+                      
+
                         query = VarGeneral.RepData.Tables[0].Select(VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? ("defPrn = '" + myData2[i] + "'") : ("ItmCat = " + myData[i]));
                         if (query.Count() <= 0)
                         {
@@ -13331,6 +13333,7 @@ namespace InvAcc.Forms
                         newData.Tables.Add(query.CopyToDataTable());
                         rpt.SetDataSource(newData.Tables[0]);
                         setTarwisaa(rpt);
+                       
                         try
                         {
                             if (!VarGeneral.TString.ChkStatShow(_InvSetting.InvInfo.TaxOptions, 1))
@@ -13420,7 +13423,7 @@ namespace InvAcc.Forms
                         catch
                         {
                         }
-                        rpt.SetParameterValue("CompanyPic", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) && VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 34)) ? "Show" : "Hide");
+                        rpt.SetParameterValue("CompanyPic", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) && VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 35)) ? "Show" : "Hide");
                         rpt.SetParameterValue("vPage", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 12) ? "Show" : "Hide");
                         rpt.SetParameterValue("vTitle", VarGeneral.vTitle);
                         try
@@ -13521,6 +13524,11 @@ namespace InvAcc.Forms
                         catch
                         {
                         }
+                        if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 35)) 
+                            { 
+                            try { rpt.SetParameterValue("CATPrint", "True"); } catch { }
+                        }
+                        //try { rpt.SetParameterValue("CATPrint", "4False"); } catch { }
                         if (_InvSetting.ISdirectPrinting || this.BarcodSts||_InvSetting.InvInfo.CatID.HasValue)
                         {
 
@@ -13831,7 +13839,7 @@ namespace InvAcc.Forms
                     {
                     }
                     rpt.SetParameterValue("StoreSts", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 16) ? "Show" : "Hide");
-                    rpt.SetParameterValue("CompanyPic", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) && VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 34)) ? "Show" : "Hide");
+                    rpt.SetParameterValue("CompanyPic", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) && VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 35)) ? "Show" : "Hide");
                     rpt.SetParameterValue("vPage", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 12) ? "Show" : "Hide");
                     rpt.SetParameterValue("vTitle", VarGeneral.vTitle);
                     rpt.SetParameterValue("HDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 11) ? VarGeneral.Hdate : "");
@@ -13954,6 +13962,11 @@ namespace InvAcc.Forms
                             {
                             }
                         }
+                    }
+
+                    if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 35))
+                    {
+                        try { rpt.SetParameterValue("CATPrint", "True"); } catch { }
                     }
                     if (_InvSetting.ISdirectPrinting || this.BarcodSts)
                     {
@@ -14647,6 +14660,8 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
+                try { rpt.SetParameterValue("CATPrint", "True"); } catch { }
+
                 if (_InvSetting.ISdirectPrinting || BarcodSts)
                 {
                     PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
@@ -15212,7 +15227,14 @@ namespace InvAcc.Forms
                 catch
                 {
                 }
+
             }
+            try
+            {
+                rpt.SetParameterValue("CATPrint", "True");
+            }
+            catch { }
+
             if (_InvSetting.ISdirectPrinting || BarcodSts)
             {
                 PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, VarGeneral.Print_set_Gen_Stat ? VarGeneral.prnt_doc_Gen.PrinterSettings.PrinterName : _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);

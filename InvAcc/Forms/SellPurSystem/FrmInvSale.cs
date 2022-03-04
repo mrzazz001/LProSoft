@@ -2746,6 +2746,8 @@ namespace InvAcc.Forms
         }
         public void Clear()
         {
+            txtCrn_No.Text = "";
+            text_CusTaxNo.Text = "";
             if (State == FormState.New)
             {
                 return;

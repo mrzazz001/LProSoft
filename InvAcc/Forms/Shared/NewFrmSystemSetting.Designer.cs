@@ -3825,7 +3825,7 @@
             this.label51.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label51.ForeColor = System.Drawing.Color.SteelBlue;
             this.label51.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label51.Location = new System.Drawing.Point(5, 191);
+            this.label51.Location = new System.Drawing.Point(5, 192);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(232, 20);
             this.label51.TabIndex = 1109;
@@ -3842,7 +3842,7 @@
             this.CmbPointImages.FocusHighlightColor = System.Drawing.Color.Empty;
             this.CmbPointImages.FormattingEnabled = true;
             this.CmbPointImages.ItemHeight = 16;
-            this.CmbPointImages.Location = new System.Drawing.Point(5, 214);
+            this.CmbPointImages.Location = new System.Drawing.Point(5, 215);
             this.CmbPointImages.Name = "CmbPointImages";
             this.CmbPointImages.Size = new System.Drawing.Size(232, 22);
             this.CmbPointImages.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -3853,7 +3853,7 @@
             this.label74.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label74.BackColor = System.Drawing.Color.Transparent;
             this.label74.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label74.Location = new System.Drawing.Point(28, 238);
+            this.label74.Location = new System.Drawing.Point(28, 240);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(209, 22);
             this.label74.TabIndex = 1104;
@@ -3869,7 +3869,7 @@
             this.CmbOrderTyp.FocusHighlightColor = System.Drawing.Color.Empty;
             this.CmbOrderTyp.FormattingEnabled = true;
             this.CmbOrderTyp.ItemHeight = 16;
-            this.CmbOrderTyp.Location = new System.Drawing.Point(3, 263);
+            this.CmbOrderTyp.Location = new System.Drawing.Point(3, 265);
             this.CmbOrderTyp.Name = "CmbOrderTyp";
             this.CmbOrderTyp.Size = new System.Drawing.Size(234, 22);
             this.CmbOrderTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -3880,7 +3880,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(129, 288);
+            this.label8.Location = new System.Drawing.Point(129, 290);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 13);
             this.label8.TabIndex = 1120;
@@ -3896,7 +3896,7 @@
             this.CmbCost.FocusHighlightColor = System.Drawing.Color.Empty;
             this.CmbCost.FormattingEnabled = true;
             this.CmbCost.ItemHeight = 16;
-            this.CmbCost.Location = new System.Drawing.Point(-2, 304);
+            this.CmbCost.Location = new System.Drawing.Point(-2, 306);
             this.CmbCost.Name = "CmbCost";
             this.CmbCost.Size = new System.Drawing.Size(239, 22);
             this.CmbCost.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -3911,7 +3911,7 @@
             // 
             // 
             this.chk69.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.chk69.Location = new System.Drawing.Point(92, 334);
+            this.chk69.Location = new System.Drawing.Point(92, 337);
             this.chk69.Name = "chk69";
             this.chk69.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chk69.Size = new System.Drawing.Size(145, 16);
@@ -3933,7 +3933,7 @@
             this.txtAlarmDeuDateBefor.DisplayFormat = "0";
             this.txtAlarmDeuDateBefor.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Bold);
             this.txtAlarmDeuDateBefor.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtAlarmDeuDateBefor.Location = new System.Drawing.Point(33, 331);
+            this.txtAlarmDeuDateBefor.Location = new System.Drawing.Point(33, 334);
             this.txtAlarmDeuDateBefor.MinValue = 0;
             this.txtAlarmDeuDateBefor.Name = "txtAlarmDeuDateBefor";
             this.txtAlarmDeuDateBefor.Size = new System.Drawing.Size(53, 19);
@@ -3947,7 +3947,7 @@
             this.labelAlarmDueo.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.labelAlarmDueo.ForeColor = System.Drawing.Color.MidnightBlue;
             this.labelAlarmDueo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelAlarmDueo.Location = new System.Drawing.Point(5, 340);
+            this.labelAlarmDueo.Location = new System.Drawing.Point(5, 343);
             this.labelAlarmDueo.Name = "labelAlarmDueo";
             this.labelAlarmDueo.Size = new System.Drawing.Size(22, 13);
             this.labelAlarmDueo.TabIndex = 1118;
@@ -3962,7 +3962,7 @@
             // 
             // 
             this.chk58.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.chk58.Location = new System.Drawing.Point(81, 359);
+            this.chk58.Location = new System.Drawing.Point(81, 362);
             this.chk58.Name = "chk58";
             this.chk58.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chk58.Size = new System.Drawing.Size(156, 16);
@@ -3984,7 +3984,7 @@
             this.txtDateofInv.DisplayFormat = "0";
             this.txtDateofInv.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Bold);
             this.txtDateofInv.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtDateofInv.Location = new System.Drawing.Point(41, 356);
+            this.txtDateofInv.Location = new System.Drawing.Point(41, 359);
             this.txtDateofInv.MinValue = 0;
             this.txtDateofInv.Name = "txtDateofInv";
             this.txtDateofInv.Size = new System.Drawing.Size(34, 19);
@@ -3998,7 +3998,7 @@
             this.label76.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label76.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label76.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label76.Location = new System.Drawing.Point(13, 365);
+            this.label76.Location = new System.Drawing.Point(13, 368);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(22, 13);
             this.label76.TabIndex = 1115;

@@ -62,7 +62,7 @@ namespace  InvAcc.Forms
 
         private void XtraForm1_FormClosing(object sender, FormClosingEventArgs e)
         {
-          
+        //    Close();
         }
 
         private void xPrinterSetting1_Load(object sender, EventArgs e)

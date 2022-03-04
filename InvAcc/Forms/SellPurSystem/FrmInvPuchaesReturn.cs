@@ -1957,6 +1957,8 @@ namespace InvAcc.Forms
             {
                 return;
             }
+            txtCrn_No.Text = "";
+            text_CusTaxNo.Text = "";
             State = FormState.New;
             data_this = new T_INVHED();
             data_thisRe = new T_INVHED();
@@ -4281,6 +4283,8 @@ namespace InvAcc.Forms
         {
             try
             {
+                text_CusTaxNo.Text = value.CusVenTaxNo;
+                txtCrn_No.Text = value.CusVenCRN;
                 switchButton_Lock.ValueChanged -= switchButton_Lock_ValueChanged;
                 if (!RepetitionSts && !ReverseSts)
                 {
@@ -4787,6 +4791,8 @@ namespace InvAcc.Forms
             txtCustNo.Text = value.CusVenNo.ToString();
             try
             {
+                text_CusTaxNo.Text = value.CusVenTaxNo;
+                txtCrn_No.Text = value.CusVenCRN;
                 if (!string.IsNullOrEmpty(value.CusVenNo))
                 {
                     txtCustName.Text = ((LangArEn == 0) ? db.StockAccDefWithOutBalance(value.CusVenNo).Arb_Des : db.StockAccDefWithOutBalance(value.CusVenNo).Eng_Des);
@@ -6417,6 +6423,8 @@ namespace InvAcc.Forms
         }
         private T_INVHED GetData()
         {
+            data_this.CusVenTaxNo = text_CusTaxNo.Text;
+            data_this.CusVenCRN = txtCrn_No.Text;
             txtDueAmountLoc.ValueChanged -= txtDueAmountLoc_ValueChanged;
             try
             {

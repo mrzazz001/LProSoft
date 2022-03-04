@@ -5129,6 +5129,7 @@ namespace InvAcc.Forms
         }
         public void SetData(T_INVHED value)
         {
+         txtCrn_No.Text = data_this.CusVenCRN;
             ChkPriceIncludeTax.Value = (value.PriceIncludTax == true ? true : false);
             //   ChkPriceIncludeTax_ValueChanged(null, null);
             //  ChkPriceIncludeTax.Enabled = false;
@@ -5626,6 +5627,7 @@ namespace InvAcc.Forms
         int draft = 0;
         public void SetDataRt(T_INVHED value)
         {
+            data_this.CusVenCRN = txtCrn_No.Text;
             switchButton_Lock.ValueChanged -= switchButton_Lock_ValueChanged;
             try
             {
@@ -7700,6 +7702,8 @@ namespace InvAcc.Forms
             catch
             {
             }
+            data_this.CusVenCRN = txtCrn_No.Text;
+
             txtDueAmountLoc.ValueChanged += txtDueAmountLoc_ValueChanged;
             try
             {

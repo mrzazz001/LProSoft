@@ -537,7 +537,7 @@ private void InitializeComponent()
             // txtCrn_No
             // 
             this.txtCrn_No.BackColor = System.Drawing.Color.White;
-            this.txtCrn_No.Location = new System.Drawing.Point(557, 60);
+            this.txtCrn_No.Location = new System.Drawing.Point(560, 53);
             this.txtCrn_No.MaxLength = 100;
             this.txtCrn_No.Name = "txtCrn_No";
             this.netResize1.SetResizeTextBoxMultiline(this.txtCrn_No, false);
@@ -552,7 +552,7 @@ private void InitializeComponent()
             this.label43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label43.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label43.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label43.Location = new System.Drawing.Point(735, 62);
+            this.label43.Location = new System.Drawing.Point(738, 57);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(101, 13);
             this.label43.TabIndex = 1231;
@@ -605,11 +605,11 @@ private void InitializeComponent()
             // text_CusTaxNo
             // 
             this.text_CusTaxNo.BackColor = System.Drawing.Color.White;
-            this.text_CusTaxNo.Location = new System.Drawing.Point(350, 60);
+            this.text_CusTaxNo.Location = new System.Drawing.Point(350, 55);
             this.text_CusTaxNo.MaxLength = 100;
             this.text_CusTaxNo.Name = "text_CusTaxNo";
             this.netResize1.SetResizeTextBoxMultiline(this.text_CusTaxNo, false);
-            this.text_CusTaxNo.Size = new System.Drawing.Size(102, 20);
+            this.text_CusTaxNo.Size = new System.Drawing.Size(108, 20);
             this.text_CusTaxNo.TabIndex = 1229;
             // 
             // label42
@@ -620,7 +620,7 @@ private void InitializeComponent()
             this.label42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label42.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label42.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label42.Location = new System.Drawing.Point(458, 63);
+            this.label42.Location = new System.Drawing.Point(458, 57);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(99, 13);
             this.label42.TabIndex = 1228;

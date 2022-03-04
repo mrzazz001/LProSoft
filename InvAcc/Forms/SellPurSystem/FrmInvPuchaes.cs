@@ -2105,6 +2105,9 @@ namespace InvAcc.Forms
                 return;
             }
             AutoGaidAcc();
+
+            txtCrn_No.Text = "";
+            text_CusTaxNo.Text = "";
             txtCredit3.Tag = "";
             txtCredit2.Tag = "";
             txtCredit1.Tag = "";
@@ -4950,6 +4953,8 @@ namespace InvAcc.Forms
         }
         public void SetData(T_INVHED value)
         {
+          text_CusTaxNo.Text=value. CusVenTaxNo;
+          txtCrn_No.Text=value.CusVenCRN;
             txtCredit2.Tag = "";
             txtCredit2.Text = "";
             txtDebit2.Tag = "";
@@ -7153,6 +7158,8 @@ namespace InvAcc.Forms
         }
         private T_INVHED GetData()
         {
+            data_this.CusVenTaxNo = text_CusTaxNo.Text;
+            data_this.CusVenCRN = txtCrn_No.Text;
             data_this.CusVenMob = text_Mobile.Text;
             txtDueAmountLoc.ValueChanged -= txtDueAmountLoc_ValueChanged;
             if (IsServiceBill) data_this.InvTyp = 1002;
@@ -9138,7 +9145,10 @@ namespace InvAcc.Forms
         }
         public void SetDataRt(T_INVHED value)
         {
-       try{     switchButton_Lock.ValueChanged -= switchButton_Lock_ValueChanged;
+            text_CusTaxNo.Text = value.CusVenTaxNo;
+            txtCrn_No.Text = value.CusVenCRN;
+            try
+            {     switchButton_Lock.ValueChanged -= switchButton_Lock_ValueChanged;
             ButReturn.Tag = value.InvHed_ID.ToString();
             txtCustNo.Text = value.CusVenNo.ToString();
             try

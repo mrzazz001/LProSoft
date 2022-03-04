@@ -2618,6 +2618,8 @@ namespace InvAcc.Forms
         }
         public void Clear()
         {
+            txtCrn_No.Text = "";
+            text_CusTaxNo.Text = "";
             text_CusTaxNo.Text =
 
                 "";
@@ -6259,6 +6261,7 @@ namespace InvAcc.Forms
         }
         public void SetData(T_INVHED value)
         {
+            txtCrn_No.Text = value.CusVenCRN;
             switch_InSide.ValueChanged -= switch_InSide_ValueChanged;
             switch_OutSide.ValueChanged -= switch_OutSide_ValueChanged;
             switch_Dilevry.ValueChanged -= switch_Dilevry_ValueChanged;
@@ -7065,6 +7068,7 @@ else
         }
         public void SetDataRt(T_INVHED value)
         {
+            txtCrn_No.Text = value.CusVenCRN;
             switch_InSide.ValueChanged -= switch_InSide_ValueChanged;
             switch_OutSide.ValueChanged -= switch_OutSide_ValueChanged;
             switch_Dilevry.ValueChanged -= switch_Dilevry_ValueChanged;
@@ -9754,6 +9758,7 @@ else
         }
         private T_INVHED GetData()
         {
+         data_this.CusVenCRN=   txtCrn_No.Text;
             txtDueAmountLoc.ValueChanged -= txtDueAmountLoc_ValueChanged;
             try
             {
