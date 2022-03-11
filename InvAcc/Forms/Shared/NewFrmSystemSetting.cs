@@ -873,7 +873,6 @@ namespace InvAcc.Forms.Shared
              //   this.Text = nn[c1FlexGrid2.RowSel - 1].ToString();
             }
         }
-
         private void switchButton_NewColumnName_ValueChanged(object sender, EventArgs e)
         {
             NewColumnData();
@@ -2575,6 +2574,10 @@ namespace InvAcc.Forms.Shared
             c1FlexGrid2.SetData(61, 1, "استخدام حقل البار كود لفلترة الاصناف في نقاط البيع  ");
             c1FlexGrid2.SetData(62, 1, "اضهار مفاتيح التنقل بين الاصناف  والتصنيفات في نقاط البيع  ");
             c1FlexGrid2.SetData(63, 1, "الافتراضي عند اضافة فاتورة مشتريات جديده الفاتورة الخدمية  ");
+            c1FlexGrid2.SetData(64, 1, "اضهار الرصيد في فواتير الاجل في الفاتورة ");
+
+        //   c1FlexGrid2.SetData(65, 1, " السج ");
+
 
 
             //c1FlexGrid2.SetData(59, 1, "");
@@ -2645,7 +2648,9 @@ namespace InvAcc.Forms.Shared
             setbilloption(61, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 87));
             setbilloption(62, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 88));
             setbilloption(63, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 89));
-            if(init)
+
+            setbilloption(64, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 90));
+            if (init)
             {
                 setbilloption(57, true);
                 setbilloption(31, true);
@@ -3448,6 +3453,10 @@ namespace InvAcc.Forms.Shared
 
 
                 setting += VarGeneral.TString.ChkStatSave((bool)c1FlexGrid2.GetData(63, 2));
+                if (c1FlexGrid2.GetData(64, 2) == null) c1FlexGrid2.SetData(64, 2, false);
+
+
+               setting += VarGeneral.TString.ChkStatSave((bool)c1FlexGrid2.GetData(64, 2));
 
                 _SysSetting.Seting = setting;
                 _SysSetting.LineOfInvoices = txtLinesInv.Value;

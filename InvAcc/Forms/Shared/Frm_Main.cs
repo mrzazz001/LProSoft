@@ -17116,7 +17116,9 @@ execute(@ss)
             radialMenu_Setting_ItemClick(item, e);
         }
         public static bool activflag = true;
-        private int CalculateSupport()
+
+         
+        public  int CalculateSupport()
         {
             try
             {
@@ -17156,6 +17158,7 @@ execute(@ss)
                 {
                     regval = n.FormatGreg(hKey.GetValue("DTBackup").ToString(), "yyyy/MM/dd");
                     DT_H = n.GregToHijri(regval);
+                    regval = n.FormatGreg(regval, "yyyy/MM/dd");
                 }
                 catch
                 {
@@ -17178,7 +17181,7 @@ execute(@ss)
                 {
                     regval_New = "";
                 }
-                if (!VarGeneral.CheckDate(regval))
+                if (!VarGeneral. CheckDate(regval))
                 {
                     try
                     {
@@ -17191,6 +17194,7 @@ execute(@ss)
                     catch
                     {
                     }
+
                     return 0;
                 }
                 if (!VarGeneral.CheckDate(regval_ELECTa))
@@ -17327,6 +17331,7 @@ execute(@ss)
                 return 0;
             }
         }
+
         private void CheckBackupFile()
         {
             if (!(VarGeneral.gUserName != "runsetting") || File.Exists(Application.StartupPath + "\\stopcheck.txt"))

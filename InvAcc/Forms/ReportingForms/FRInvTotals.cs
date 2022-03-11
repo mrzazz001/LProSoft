@@ -1282,6 +1282,12 @@ END";
                     Utilites.AddTarwisa(rpt);
                   
                     tb.TableName = "item";
+                    foreach(DataRow R in tb.Rows)
+                    {
+                        for(int k =0;k<R.ItemArray.Length;k ++)
+                        { if (R.ItemArray[k] == "" || R.ItemArray[k] == null) { R.ItemArray[k] = 0;
+                            } }
+                    }
                     tb3.TableName = "item2";
                     DataSet dts = new DataSet();
                     dts.Tables.Add(tb);
@@ -1305,6 +1311,7 @@ END";
                     {
                         if (!flag)
                         {
+                         //   rpt.Show();
                             rpt.Show(frm);
                             frm.Show();
                         }else

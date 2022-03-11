@@ -3150,7 +3150,7 @@
             this.c1FlexGrid2.Font = new System.Drawing.Font("Tahoma", 8F);
             this.c1FlexGrid2.Location = new System.Drawing.Point(240, 27);
             this.c1FlexGrid2.Name = "c1FlexGrid2";
-            this.c1FlexGrid2.Rows.Count = 64;
+            this.c1FlexGrid2.Rows.Count = 65;
             this.c1FlexGrid2.Rows.DefaultSize = 19;
             this.c1FlexGrid2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.c1FlexGrid2.Size = new System.Drawing.Size(845, 398);

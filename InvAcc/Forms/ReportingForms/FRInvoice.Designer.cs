@@ -27,6 +27,8 @@ private void InitializeComponent()
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRInvoice));
             this.PanelSpecialContainer = new System.Windows.Forms.Panel();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.ButOk = new C1.Win.C1Input.C1Button();
             this.ButExit = new C1.Win.C1Input.C1Button();
@@ -95,7 +97,6 @@ private void InitializeComponent()
             this.radioButton_ِReturn0 = new System.Windows.Forms.RadioButton();
             this.checkBox_DatePay = new System.Windows.Forms.CheckBox();
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.PanelSpecialContainer.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ButOk)).BeginInit();
@@ -113,6 +114,7 @@ private void InitializeComponent()
             // 
             // PanelSpecialContainer
             // 
+            this.PanelSpecialContainer.Controls.Add(this.checkBox2);
             this.PanelSpecialContainer.Controls.Add(this.checkBox1);
             this.PanelSpecialContainer.Controls.Add(this.ribbonBar1);
             this.PanelSpecialContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -120,6 +122,29 @@ private void InitializeComponent()
             this.PanelSpecialContainer.Name = "PanelSpecialContainer";
             this.PanelSpecialContainer.Size = new System.Drawing.Size(582, 479);
             this.PanelSpecialContainer.TabIndex = 1220;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(431, 315);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(122, 17);
+            this.checkBox2.TabIndex = 1101;
+            this.checkBox2.Text = "اظهار السجل التجاري";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(304, 310);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(106, 17);
+            this.checkBox1.TabIndex = 1100;
+            this.checkBox1.Text = "فواتير المصروفات";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
             // 
             // ribbonBar1
             // 
@@ -974,7 +999,7 @@ private void InitializeComponent()
             this.radioButton_Tax2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.radioButton_Tax2.Location = new System.Drawing.Point(74, 14);
             this.radioButton_Tax2.Name = "radioButton_Tax2";
-            this.radioButton_Tax2.Size = new System.Drawing.Size(82, 17);
+            this.radioButton_Tax2.Size = new System.Drawing.Size(83, 17);
             this.radioButton_Tax2.TabIndex = 30;
             this.radioButton_Tax2.Text = "بدون الضريبة";
             this.radioButton_Tax2.UseVisualStyleBackColor = true;
@@ -985,7 +1010,7 @@ private void InitializeComponent()
             this.radioButton_Tax0.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.radioButton_Tax0.Location = new System.Drawing.Point(186, 14);
             this.radioButton_Tax0.Name = "radioButton_Tax0";
-            this.radioButton_Tax0.Size = new System.Drawing.Size(61, 17);
+            this.radioButton_Tax0.Size = new System.Drawing.Size(63, 17);
             this.radioButton_Tax0.TabIndex = 29;
             this.radioButton_Tax0.Text = "بالضريبة";
             this.radioButton_Tax0.UseVisualStyleBackColor = true;
@@ -1021,7 +1046,7 @@ private void InitializeComponent()
             this.radioButton_Del2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.radioButton_Del2.Location = new System.Drawing.Point(98, 15);
             this.radioButton_Del2.Name = "radioButton_Del2";
-            this.radioButton_Del2.Size = new System.Drawing.Size(89, 17);
+            this.radioButton_Del2.Size = new System.Drawing.Size(86, 17);
             this.radioButton_Del2.TabIndex = 27;
             this.radioButton_Del2.Text = "المحذوفة فقط";
             this.radioButton_Del2.UseVisualStyleBackColor = true;
@@ -1033,7 +1058,7 @@ private void InitializeComponent()
             this.radioButton_Del0.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.radioButton_Del0.Location = new System.Drawing.Point(194, 15);
             this.radioButton_Del0.Name = "radioButton_Del0";
-            this.radioButton_Del0.Size = new System.Drawing.Size(84, 17);
+            this.radioButton_Del0.Size = new System.Drawing.Size(83, 17);
             this.radioButton_Del0.TabIndex = 26;
             this.radioButton_Del0.TabStop = true;
             this.radioButton_Del0.Text = "الغير محذوفة";
@@ -1071,7 +1096,7 @@ private void InitializeComponent()
             this.radioButton_ِReturn2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.radioButton_ِReturn2.Location = new System.Drawing.Point(69, 14);
             this.radioButton_ِReturn2.Name = "radioButton_ِReturn2";
-            this.radioButton_ِReturn2.Size = new System.Drawing.Size(87, 17);
+            this.radioButton_ِReturn2.Size = new System.Drawing.Size(84, 17);
             this.radioButton_ِReturn2.TabIndex = 30;
             this.radioButton_ِReturn2.Text = "المرتجعة فقط";
             this.radioButton_ِReturn2.UseVisualStyleBackColor = true;
@@ -1082,7 +1107,7 @@ private void InitializeComponent()
             this.radioButton_ِReturn0.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.radioButton_ِReturn0.Location = new System.Drawing.Point(165, 14);
             this.radioButton_ِReturn0.Name = "radioButton_ِReturn0";
-            this.radioButton_ِReturn0.Size = new System.Drawing.Size(82, 17);
+            this.radioButton_ِReturn0.Size = new System.Drawing.Size(81, 17);
             this.radioButton_ِReturn0.TabIndex = 29;
             this.radioButton_ِReturn0.Text = "الغير مرتجعة";
             this.radioButton_ِReturn0.UseVisualStyleBackColor = true;
@@ -1103,19 +1128,6 @@ private void InitializeComponent()
             this.netResize1.LabelsAutoEllipse = false;
             this.netResize1.ParentControl = this;
             this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(304, 310);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(103, 17);
-            this.checkBox1.TabIndex = 1100;
-            this.checkBox1.Text = "فواتير المصروفات";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.Visible = false;
             // 
             // FRInvoice
             // 
@@ -1162,5 +1174,6 @@ private void InitializeComponent()
         }//###########&&&&&&&&&&
 
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }

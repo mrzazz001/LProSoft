@@ -1910,13 +1910,7 @@ namespace InvAcc.Forms
             txtHDate.Click += Button_Edit_Click;
             txtInvCost.Click += Button_Edit_Click;
             txtItemName.Click += Button_Edit_Click;
-            if (CalculateSupport() <= 0)
-            {
-                onlineworning2.Visible = true;
-                poS_ItemsPanel2.Enabled=false;
-                P_Main.Enabled = false;
-                HP_Main.Enabled = false;
-            }
+            
             txtDueDate.Click += Button_Edit_Click;
             switchButton_TaxLines.ButtonWidth = 100;
             switchButton_Tax.Click += Button_Edit_Click;
@@ -4469,6 +4463,13 @@ namespace InvAcc.Forms
                     LangArEn = 1;
                 }
                 ADD_Controls();
+                if (!FrmLog.flage)
+                {
+                    onlineworning2.Visible = true;
+                    poS_ItemsPanel2.Enabled = false;
+                    P_Main.Enabled = false;
+                    HP_Main.Enabled = false;
+                }
                 Permmission = dbc.Get_PermissionID(VarGeneral.UserID);
                 _StorePr = permission.StorePrmission.Split(',').ToList();
                 int? createGaid;
@@ -16322,7 +16323,8 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
                 if (VarGeneral.CheckDate(txtDueDate.Text))
                 {
                     txtDueDate.Text = Convert.ToDateTime(txtDueDate.Text).ToString("yyyy/MM/dd");
-                    if (CalculateSupport() > 0)
+                    if (
+                        CalculateSupport() > 0)
                     {
                         label_Due.Text = ((LangArEn == 0) ? ("موعد الدفع سيكون بعد " + CalculateSupport() + " يوم") : ("Payment date will be after " + CalculateSupport() + " Day"));
                     }
@@ -16343,218 +16345,12 @@ txtDiscountP.Text = txtDiscountP.Text.Substring(0, txtDiscountP.Text.Length - 3)
                 label_Due.Text = string.Empty;
             }
         }
+
+
         private int CalculateSupport()
         {
-            try
-            {
-                if (VarGeneral.gUserName == "runsetting")
-                {
-                    return 1000;
-                }
-                RegistryKey hKey = Registry.CurrentUser.OpenSubKey("Software\\PRS AND PR Settings\\MrdSoft\\Register", writable: true);
-                RegistryKey hKeyElec = Registry.CurrentUser.OpenSubKey("Software\\PRS AND PR Settings\\WinSystemOperation", writable: true);
-                RegistryKey hKeyNew = Registry.CurrentUser.OpenSubKey("Software\\MrdHrdw\\ItIntel", writable: true);
-                bool isRemotCheck = false;
-                string dtCheck = "";
-                try
-                {
-                    if (File.Exists(Application.StartupPath + "\\flxgridD.txt"))
-                    {
-                        isRemotCheck = true;
-                        FileInfo fileSecurity = new FileInfo(Application.StartupPath + "\\flxgridD.txt");
-                        FileStream fsToReadSecurity = fileSecurity.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);
-                        StreamReader srSecurity = new StreamReader(fsToReadSecurity);
-                        dtCheck = VarGeneral.Decrypt(srSecurity.ReadToEnd().Trim());
-                        srSecurity.Close();
-                    }
-                    else
-                    {
-                        isRemotCheck = false;
-                    }
-                }
-                catch
-                {
-                }
-                string regval = "";
-                string DT_H = "";
-                string regval_ELECTa = "";
-                string regval_New = "";
-                try
-                {
-                    regval = n.FormatGreg(hKey.GetValue("DTBackup").ToString(), "yyyy/MM/dd");
-                    DT_H = n.GregToHijri(regval);
-                }
-                catch
-                {
-                    regval = "";
-                    DT_H = "";
-                }
-                try
-                {
-                    regval_ELECTa = n.FormatGreg(hKeyElec.GetValue("vBackupELEC").ToString(), "yyyy/MM/dd");
-                }
-                catch
-                {
-                    regval_ELECTa = "";
-                }
-                try
-                {
-                    regval_New = n.FormatGreg(hKeyNew.GetValue("vBackup_New").ToString(), "yyyy/MM/dd");
-                }
-                catch
-                {
-                    regval_New = "";
-                }
-                if (!VarGeneral.CheckDate(regval))
-                {
-                    try
-                    {
-                        if (!VarGeneral.vDemo)
-                        {
-                            hKeyNew.CreateSubKey("TurnOff");
-                            hKeyNew.SetValue("TurnOff", "0");
-                        }
-                    }
-                    catch
-                    {
-                    }
-                    return 0;
-                }
-                if (!VarGeneral.CheckDate(regval_ELECTa))
-                {
-                    try
-                    {
-                        if (!VarGeneral.vDemo)
-                        {
-                            hKeyNew.CreateSubKey("TurnOff");
-                            hKeyNew.SetValue("TurnOff", "0");
-                        }
-                    }
-                    catch
-                    {
-                    }
-                    return 0;
-                }
-                if (!VarGeneral.CheckDate(regval_New))
-                {
-                    try
-                    {
-                        if (!VarGeneral.vDemo)
-                        {
-                            hKeyNew.CreateSubKey("TurnOff");
-                            hKeyNew.SetValue("TurnOff", "0");
-                        }
-                    }
-                    catch
-                    {
-                    }
-                    return 0;
-                }
-                if (regval.Trim() != regval_ELECTa.Trim() || regval.Trim() != regval_New.Trim() || regval_New.Trim() != regval_ELECTa.Trim())
-                {
-                    try
-                    {
-                        if (!VarGeneral.vDemo)
-                        {
-                            hKeyNew.CreateSubKey("TurnOff");
-                            hKeyNew.SetValue("TurnOff", "0");
-                        }
-                    }
-                    catch
-                    {
-                    }
-                    return 0;
-                }
-                if (isRemotCheck)
-                {
-                    if (!VarGeneral.CheckDate(dtCheck))
-                    {
-                        try
-                        {
-                            if (!VarGeneral.vDemo)
-                            {
-                                hKeyNew.CreateSubKey("TurnOff");
-                                hKeyNew.SetValue("TurnOff", "0");
-                            }
-                        }
-                        catch
-                        {
-                        }
-                        return 0;
-                    }
-                    if (dtCheck.Trim() != regval.Trim() || dtCheck.Trim() != regval_New.Trim() || dtCheck.Trim() != regval_ELECTa.Trim())
-                    {
-                        try
-                        {
-                            if (!VarGeneral.vDemo)
-                            {
-                                hKeyNew.CreateSubKey("TurnOff");
-                                hKeyNew.SetValue("TurnOff", "0");
-                            }
-                        }
-                        catch
-                        {
-                        }
-                        return 0;
-                    }
-                }
-                try
-                {
-                    if (Convert.ToDateTime(VarGeneral.Hdate) > Convert.ToDateTime(n.FormatHijri(DT_H, "yyyy/MM/dd")))
-                    {
-                        try
-                        {
-                            if (!VarGeneral.vDemo)
-                            {
-                                hKeyNew.CreateSubKey("TurnOff");
-                                hKeyNew.SetValue("TurnOff", "0");
-                            }
-                        }
-                        catch
-                        {
-                        }
-                        return 0;
-                    }
-                    return n.vDiff(n.FormatHijri(DT_H, "yyyy/MM/dd"), VarGeneral.Hdate);
-                }
-                catch
-                {
-                    if (Convert.ToDateTime(VarGeneral.Gdate) > Convert.ToDateTime(n.FormatGreg(regval, "yyyy/MM/dd")))
-                    {
-                        try
-                        {
-                            if (!VarGeneral.vDemo)
-                            {
-                                hKeyNew.CreateSubKey("TurnOff");
-                                hKeyNew.SetValue("TurnOff", "0");
-                            }
-                        }
-                        catch
-                        {
-                        }
-                        return 0;
-                    }
-                    return n.vDiff_E(n.FormatGreg(regval, "yyyy/MM/dd"), VarGeneral.Gdate);
-                }
-            }
-            catch
-            {
-                try
-                {
-                    if (!VarGeneral.vDemo)
-                    {
-                        RegistryKey hKeyNew = Registry.CurrentUser.OpenSubKey("Software\\MrdHrdw\\ItIntel", writable: true);
-                        hKeyNew.CreateSubKey("TurnOff");
-                        hKeyNew.SetValue("TurnOff", "0");
-                    }
-                }
-                catch
-                {
-                }
-                return 0;
-            }
+         return   RegEditCheck.CalculateSupport();
         }
-
         private void item_CellClick(object itemno)
         {
             try

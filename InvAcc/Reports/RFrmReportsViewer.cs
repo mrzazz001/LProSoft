@@ -587,7 +587,7 @@ namespace InvAcc.Forms
                 tableLogonInfo.ConnectionInfo = connectionInfo;
                 table.ApplyLogOnInfo(tableLogonInfo);
             }
-        }
+        }int KKS = 0;
         ReportDocument getdoc(string name)
         {
             string n = string.Empty;
@@ -600,6 +600,10 @@ namespace InvAcc.Forms
             MainCryRep = new ReportDocument();
             string spath = Path.GetFullPath(path + n);
             MainCryRep.Load(spath);
+            if(spath.Contains("RepInvSal.rpt"))
+            {
+                KKS = 10;
+            }
             MainCryRep.PrintOptions.DissociatePageSizeAndPrinterPaperSize = true;
 
           
@@ -709,7 +713,20 @@ namespace InvAcc.Forms
             double _mergBottom;
             double _mergleft; double _mergRight;
             double _mergTop;
+            if (KKS == 10)
+            {
+                try
+                {
+                    string s = db.SystemSettingStock().Seting;
+                    if (VarGeneral.TString.ChkStatShow(s, 90))
+                        MainCryRep.SetParameterValue("ShowBalance", "True");
+                    else
+                        MainCryRep.SetParameterValue("ShowBalance", "False");
 
+
+                }
+                catch { }
+            }
             string ntyp = "";
             T_Printer _Invsetting = db.StockPrinterSetting(VarGeneral.UserID, ids);
             if (VarGeneral.IsGeneralUsed)
@@ -12112,13 +12129,62 @@ namespace InvAcc.Forms
                     {
                         MainCryRep = getdoc("InvAcc.ReportsCasheirE.RepInvoicShort2");
                     }
+
                     else
                     {
                         MainCryRep = getdoc("InvAcc.ReportsCasheirE.RepInvoic");
                     }
+                    if (VarGeneral.ShowCRN)
+                    {
+                        try
+                        {
+                            if (MainCryRep.FileName.Contains(@"\ReportsE\RepInvoicWidth.rpt"))
+                            {
+                                try
+                                {
+                                    (MainCryRep.ReportDefinition.ReportObjects["Text10"] as TextObject).Text = "CRN";
+                                    VarGeneral.CostCenterlbl = "السجل التجاري";
+                                }
+                                catch
+                                {
+                                    (MainCryRep.ReportDefinition.ReportObjects["Text3"] as TextObject).Text = "السجل التجاري";
+                                }
+                            }
+                            else if (MainCryRep.FileName.Contains(@"\ReportsE\RepInvoic.rpt"))
+                            {
+                                {
+                                    (MainCryRep.ReportDefinition.ReportObjects["Text3"] as TextObject).Text = "CRN";
+                                }
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    (MainCryRep.ReportDefinition.ReportObjects["TextCostCenter"] as TextObject).Text = "السجل التجاري";
+                                    VarGeneral.CostCenterlbl = "السجل التجاري";
+                                }
+                                catch
+                                {
+                                    (MainCryRep.ReportDefinition.ReportObjects["Text3"] as TextObject).Text = "السجل التجاري";
+                                }
+                            }
+                            for (int i = 0; i < VarGeneral.RepData.Tables[0].Rows.Count; i++)
+                            {
+                                VarGeneral.RepData.Tables[0].Rows[i]["" +
+                                    "CostCenteNm"] = VarGeneral.RepData.Tables[0].Rows[i]["CusVenCRN"];
+                            }
+                            VarGeneral.CostCenterlbl = "السجل التجاري";
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+
                     ReportDocument rpt = MainCryRep;
                     rpt.SetDataSource(VarGeneral.RepData.Tables[0]);
-               setTarwisaa(rpt);try
+                    setTarwisaa(rpt);
+                    try
                     {
                         if (VarGeneral.itmDes == "Note")
                         {
@@ -12133,6 +12199,8 @@ namespace InvAcc.Forms
                     catch
                     {
                     }
+            
+                  
                     try
                     {
                         if (VarGeneral.itmDes == "العميل" || VarGeneral.itmDes == "المورد" || VarGeneral.itmDes == "Cust" || VarGeneral.itmDes == "Supp")
