@@ -717,8 +717,8 @@ namespace InvAcc.Forms
             {
                 try
                 {
-                    string s = db.SystemSettingStock().Seting;
-                    if (VarGeneral.TString.ChkStatShow(s, 90))
+                    string s = new Stock_DataDataContext(VarGeneral.BranchCS).SystemSettingStock().Seting;
+                    if (!VarGeneral.TString.ChkStatShow(s, 90))
                         MainCryRep.SetParameterValue("ShowBalance", "True");
                     else
                         MainCryRep.SetParameterValue("ShowBalance", "False");
