@@ -1865,7 +1865,7 @@ namespace InvAcc.Forms
             }
         }
         private void FRInvoice_Load(object sender, EventArgs e)
-        { 
+        { ///////////////////////////////////////////////////////////////
         }
         private void Frm_KeyDown(object sender, KeyEventArgs e)
         {
