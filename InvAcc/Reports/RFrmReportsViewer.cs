@@ -12989,7 +12989,7 @@ namespace InvAcc.Forms
                 bool f = false;
                 try
                 {
-                    object k = (MainCryRep.ReportDefinition.Sections["Report Header b"].ReportObjects["LineDetail1"]);
+                    object k = (MainCryRep.ReportDefinition.Sections["ReportHeaderSection2"].ReportObjects["LineDetail1"]);
               if(k!=null)      f = true;   
                 }
                 catch
