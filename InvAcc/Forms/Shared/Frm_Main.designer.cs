@@ -62,6 +62,7 @@ namespace InvAcc.Forms
             this.buttonItem_Megration = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem33 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem35 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem36 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem_RepairQty = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem_DeleteItemWithStore = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem_SyncGmail = new DevComponents.DotNetBar.ButtonItem();
@@ -502,7 +503,6 @@ namespace InvAcc.Forms
             this.tabControl1 = new JacksiroKe.MdiTabCtrl.TabControl();
             this.c1Button1 = new C1.Win.C1Input.C1Button();
             this.onlineworning2 = new System.Windows.Forms.Panel();
-            this.buttonItem36 = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.mainmenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
@@ -818,6 +818,12 @@ namespace InvAcc.Forms
             this.buttonItem35.Text = "معالج اعادة تسلسل الاصناف";
             this.buttonItem35.Click += new System.EventHandler(this.buttonItem35_Click);
             // 
+            // buttonItem36
+            // 
+            this.buttonItem36.Name = "buttonItem36";
+            this.buttonItem36.Text = "فحص اعدادات الطباعة";
+            this.buttonItem36.Click += new System.EventHandler(this.buttonItem36_Click);
+            // 
             // buttonItem_RepairQty
             // 
             this.buttonItem_RepairQty.Checked = true;
@@ -892,7 +898,7 @@ namespace InvAcc.Forms
             this.mainmenu.Location = new System.Drawing.Point(0, 155);
             this.mainmenu.MenuBar = true;
             this.mainmenu.Name = "mainmenu";
-            this.mainmenu.Size = new System.Drawing.Size(1306, 24);
+            this.mainmenu.Size = new System.Drawing.Size(1028, 26);
             this.mainmenu.Stretch = true;
             this.mainmenu.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.mainmenu.TabIndex = 56;
@@ -2567,7 +2573,7 @@ namespace InvAcc.Forms
             this.c1Ribbon1.Name = "c1Ribbon1";
             this.c1Ribbon1.QatHolder = this.ribbonQat1;
             this.c1Ribbon1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.c1Ribbon1.Size = new System.Drawing.Size(1306, 155);
+            this.c1Ribbon1.Size = new System.Drawing.Size(1028, 155);
             this.c1Ribbon1.Tabs.Add(this.sideBarPanelItem_Files);
             this.c1Ribbon1.Tabs.Add(this.sideBarPanelItem_Invioces);
             this.c1Ribbon1.Tabs.Add(this.sideBarPanelItem_Acc);
@@ -3585,7 +3591,7 @@ namespace InvAcc.Forms
             this.bar1.Location = new System.Drawing.Point(3, 29);
             this.bar1.Name = "bar1";
             this.bar1.SingleLineColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bar1.Size = new System.Drawing.Size(1300, 39);
+            this.bar1.Size = new System.Drawing.Size(1300, 42);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar1.TabIndex = 1;
@@ -3609,7 +3615,7 @@ namespace InvAcc.Forms
             this.expandablePanel3.Padding = new System.Windows.Forms.Padding(3);
             this.expandablePanel3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.expandablePanel3.RightToLeftLayout = true;
-            this.expandablePanel3.Size = new System.Drawing.Size(1306, 749);
+            this.expandablePanel3.Size = new System.Drawing.Size(1028, 749);
             this.expandablePanel3.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expandablePanel3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuSide;
             this.expandablePanel3.Style.BackgroundImagePosition = DevComponents.DotNetBar.eBackgroundImagePosition.Tile;
@@ -3645,9 +3651,9 @@ namespace InvAcc.Forms
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 188);
+            this.panel1.Location = new System.Drawing.Point(3, 191);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1300, 236);
+            this.panel1.Size = new System.Drawing.Size(1022, 236);
             this.panel1.TabIndex = 3;
             // 
             // panel7
@@ -3655,7 +3661,7 @@ namespace InvAcc.Forms
             this.panel7.Controls.Add(this.c1FlexGrid2);
             this.panel7.Controls.Add(this.label6);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(-85, 0);
+            this.panel7.Location = new System.Drawing.Point(-363, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(280, 236);
             this.panel7.TabIndex = 1125;
@@ -3703,7 +3709,7 @@ namespace InvAcc.Forms
             this.panel3.Controls.Add(this.dataGridView_TopItems);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(195, 0);
+            this.panel3.Location = new System.Drawing.Point(-83, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(280, 236);
             this.panel3.TabIndex = 1124;
@@ -3750,7 +3756,7 @@ namespace InvAcc.Forms
             this.panel5.Controls.Add(this.c1FlexGrid1);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(475, 0);
+            this.panel5.Location = new System.Drawing.Point(197, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(275, 236);
             this.panel5.TabIndex = 1123;
@@ -3822,7 +3828,7 @@ namespace InvAcc.Forms
             this.panel4.Controls.Add(this.dataGridView_TopInvoicePurchaes);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(750, 0);
+            this.panel4.Location = new System.Drawing.Point(472, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(275, 236);
             this.panel4.TabIndex = 1121;
@@ -3866,7 +3872,7 @@ namespace InvAcc.Forms
             this.panel2.Controls.Add(this.dataGridView_TopInvoice);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1025, 0);
+            this.panel2.Location = new System.Drawing.Point(747, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(275, 236);
             this.panel2.TabIndex = 1081;
@@ -3917,13 +3923,13 @@ namespace InvAcc.Forms
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.ribbonTabItem1});
             this.ribbonControl1.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
-            this.ribbonControl1.Location = new System.Drawing.Point(3, 68);
+            this.ribbonControl1.Location = new System.Drawing.Point(3, 71);
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.ribbonControl1.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.applicationButton1,
             this.buttonItem9});
-            this.ribbonControl1.Size = new System.Drawing.Size(1300, 120);
+            this.ribbonControl1.Size = new System.Drawing.Size(1022, 120);
             this.ribbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.ribbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -3955,10 +3961,10 @@ namespace InvAcc.Forms
             this.ribbonPanel1.Controls.Add(this.ribbonBar3);
             this.ribbonPanel1.Controls.Add(this.ribbonBar1);
             this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel1.Location = new System.Drawing.Point(0, 34);
+            this.ribbonPanel1.Location = new System.Drawing.Point(0, 37);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(1300, 83);
+            this.ribbonPanel1.Size = new System.Drawing.Size(1022, 80);
             // 
             // 
             // 
@@ -3998,7 +4004,7 @@ namespace InvAcc.Forms
             this.circularProgressItem1});
             this.ribbonBar8.Location = new System.Drawing.Point(870, 0);
             this.ribbonBar8.Name = "ribbonBar8";
-            this.ribbonBar8.Size = new System.Drawing.Size(35, 80);
+            this.ribbonBar8.Size = new System.Drawing.Size(35, 77);
             this.ribbonBar8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar8.TabIndex = 7;
             this.ribbonBar8.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4040,7 +4046,7 @@ namespace InvAcc.Forms
             this.labelItem_TotPurReturn});
             this.ribbonBar4.Location = new System.Drawing.Point(725, 0);
             this.ribbonBar4.Name = "ribbonBar4";
-            this.ribbonBar4.Size = new System.Drawing.Size(145, 80);
+            this.ribbonBar4.Size = new System.Drawing.Size(145, 77);
             this.ribbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar4.TabIndex = 3;
             this.ribbonBar4.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4096,7 +4102,7 @@ namespace InvAcc.Forms
             this.labelItem_TotSalReturn});
             this.ribbonBar2.Location = new System.Drawing.Point(580, 0);
             this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(145, 80);
+            this.ribbonBar2.Size = new System.Drawing.Size(145, 77);
             this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar2.TabIndex = 1;
             this.ribbonBar2.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4151,7 +4157,7 @@ namespace InvAcc.Forms
             this.labelItem_PurchInvCount});
             this.ribbonBar7.Location = new System.Drawing.Point(435, 0);
             this.ribbonBar7.Name = "ribbonBar7";
-            this.ribbonBar7.Size = new System.Drawing.Size(145, 80);
+            this.ribbonBar7.Size = new System.Drawing.Size(145, 77);
             this.ribbonBar7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar7.TabIndex = 6;
             this.ribbonBar7.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4206,7 +4212,7 @@ namespace InvAcc.Forms
             this.labelItem_SalesInvCount});
             this.ribbonBar6.Location = new System.Drawing.Point(290, 0);
             this.ribbonBar6.Name = "ribbonBar6";
-            this.ribbonBar6.Size = new System.Drawing.Size(145, 80);
+            this.ribbonBar6.Size = new System.Drawing.Size(145, 77);
             this.ribbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar6.TabIndex = 5;
             this.ribbonBar6.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4261,7 +4267,7 @@ namespace InvAcc.Forms
             this.labelItem_TotPurch});
             this.ribbonBar3.Location = new System.Drawing.Point(145, 0);
             this.ribbonBar3.Name = "ribbonBar3";
-            this.ribbonBar3.Size = new System.Drawing.Size(145, 80);
+            this.ribbonBar3.Size = new System.Drawing.Size(145, 77);
             this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar3.TabIndex = 2;
             this.ribbonBar3.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4316,7 +4322,7 @@ namespace InvAcc.Forms
             this.labelItem_TotSales});
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(145, 80);
+            this.ribbonBar1.Size = new System.Drawing.Size(145, 77);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar1.TabIndex = 0;
             this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4619,7 +4625,7 @@ namespace InvAcc.Forms
             this.bar2.Location = new System.Drawing.Point(3, 29);
             this.bar2.Name = "bar2";
             this.bar2.SingleLineColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bar2.Size = new System.Drawing.Size(1300, 39);
+            this.bar2.Size = new System.Drawing.Size(1022, 42);
             this.bar2.Stretch = true;
             this.bar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar2.TabIndex = 1;
@@ -4769,10 +4775,10 @@ namespace InvAcc.Forms
             this.labelItem_Level,
             this.labelItem_Reg});
             this.metroToolbar_main.ItemSpacing = 12;
-            this.metroToolbar_main.Location = new System.Drawing.Point(0, 732);
+            this.metroToolbar_main.Location = new System.Drawing.Point(0, 694);
             this.metroToolbar_main.Name = "metroToolbar_main";
             this.metroToolbar_main.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.metroToolbar_main.Size = new System.Drawing.Size(1306, 17);
+            this.metroToolbar_main.Size = new System.Drawing.Size(1028, 55);
             this.metroToolbar_main.TabIndex = 1086;
             this.metroToolbar_main.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
@@ -4787,6 +4793,7 @@ namespace InvAcc.Forms
             this.TTUSr.SymbolSize = 13F;
             this.TTUSr.Text = "labelItem1";
             this.TTUSr.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.TTUSr.Click += new System.EventHandler(this.TTUSr_Click);
             // 
             // TTServerName
             // 
@@ -4890,9 +4897,9 @@ namespace InvAcc.Forms
             this.panelWarning.Controls.Add(this.label_SupportTimer);
             this.panelWarning.Controls.Add(this.warningBox);
             this.panelWarning.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelWarning.Location = new System.Drawing.Point(0, 703);
+            this.panelWarning.Location = new System.Drawing.Point(0, 665);
             this.panelWarning.Name = "panelWarning";
-            this.panelWarning.Size = new System.Drawing.Size(1306, 29);
+            this.panelWarning.Size = new System.Drawing.Size(1028, 29);
             this.panelWarning.TabIndex = 1088;
             // 
             // label7
@@ -4965,7 +4972,7 @@ namespace InvAcc.Forms
             this.warningBox.Name = "warningBox";
             this.warningBox.OptionsText = "تواصل معنا ..";
             this.warningBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.warningBox.Size = new System.Drawing.Size(1306, 29);
+            this.warningBox.Size = new System.Drawing.Size(1028, 29);
             this.warningBox.TabIndex = 71;
             this.warningBox.CloseClick += new System.EventHandler(this.warningBox_CloseClick);
             // 
@@ -4977,10 +4984,10 @@ namespace InvAcc.Forms
             // tabControl1
             // 
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 179);
+            this.tabControl1.Location = new System.Drawing.Point(0, 181);
             this.tabControl1.MenuRenderer = null;
             this.tabControl1.Name = "tabControl1";
-            this.tabControl1.Size = new System.Drawing.Size(1306, 524);
+            this.tabControl1.Size = new System.Drawing.Size(1028, 484);
             this.tabControl1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
             this.tabControl1.TabCloseButtonImage = null;
             this.tabControl1.TabCloseButtonImageDisabled = null;
@@ -5020,18 +5027,12 @@ namespace InvAcc.Forms
             this.onlineworning2.TabIndex = 1084;
             this.onlineworning2.Visible = false;
             // 
-            // buttonItem36
-            // 
-            this.buttonItem36.Name = "buttonItem36";
-            this.buttonItem36.Text = "فحص اعدادات الطباعة";
-            this.buttonItem36.Click += new System.EventHandler(this.buttonItem36_Click);
-            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(1306, 749);
+            this.ClientSize = new System.Drawing.Size(1028, 749);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panelWarning);
             this.Controls.Add(this.onlineworning2);

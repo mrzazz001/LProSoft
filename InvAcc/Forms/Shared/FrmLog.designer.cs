@@ -102,6 +102,7 @@ namespace InvAcc.Forms
             this.label5 = new System.Windows.Forms.Label();
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.groupPanel12 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel_BoardNo.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -181,6 +182,7 @@ namespace InvAcc.Forms
             this.button_Support.Tooltip = "NumberBoard | لوحة الأرقـــام";
             this.button_Support.Visible = false;
             this.button_Support.CheckedChanged += new System.EventHandler(this.button_Support_CheckedChanged);
+            this.button_Support.Click += new System.EventHandler(this.button_Support_Click);
             // 
             // textBox_Pass
             // 
@@ -665,7 +667,7 @@ namespace InvAcc.Forms
             this.labelVersion.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.labelVersion.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(180, 17);
+            this.labelVersion.Size = new System.Drawing.Size(0, 17);
             this.labelVersion.TabIndex = 884;
             this.labelVersion.Text = "Version : 1.0.5";
             this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1010,6 +1012,15 @@ namespace InvAcc.Forms
             this.groupPanel12.Visible = false;
             this.groupPanel12.Click += new System.EventHandler(this.groupPanel1_Click);
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(219, 241);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 10;
+            this.simpleButton1.Text = "simpleButton1";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // buttonX4
             // 
             this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -1030,8 +1041,9 @@ namespace InvAcc.Forms
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(50)))), ((int)(((byte)(59)))));
             this.BackgroundImage = global::InvAcc.Properties.Resources.Log;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1306, 772);
+            this.ClientSize = new System.Drawing.Size(1044, 772);
             this.ControlBox = false;
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.groupPanel12);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonItem_Exit);
@@ -1151,5 +1163,6 @@ namespace InvAcc.Forms
         private GroupPanel groupPanel12;
         private ButtonX buttonX4;
         private ToolStripMenuItem toolStripMenuItem2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

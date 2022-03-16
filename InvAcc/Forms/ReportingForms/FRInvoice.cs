@@ -2069,10 +2069,13 @@ namespace InvAcc.Forms
                 this.groupBox2.Enabled = true;
                 this.checkBox_DatePay.Enabled = true;
                 this.combobox_RepType.Enabled = true;
+                checkBox2.Enabled = true;
                 this.RButPortrait_CheckedChanged(sender, e);
             }
             else
             {
+                checkBox2.Enabled = false;
+                checkBox2.Checked = false;
                 this.groupBox2.Enabled = false;
                 this.checkBox_Note.Enabled = false;
                 this.checkBox_Note.Checked = false;

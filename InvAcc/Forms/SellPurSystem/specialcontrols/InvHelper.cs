@@ -17,10 +17,26 @@ namespace InvAcc.Forms.SellPurSystem.specialcontrols
 {
     class InvHelper
     {
+        public  static bool Add_Cridte_Recorde(T_INVHED inv)
+        {
+
+
+            // List<  T_GDHEAD> list=VarGeneral.dbshared
+            List < T_GDHEAD > list = VarGeneral.dbshared.StockGdHeadid((int)inv.GadeId.Value);
+            return true;
+
+        }
+
+        public static bool Add_Depite_Recorde(T_INVHED inv)
+        {
+
+            return true;
+        }
         public static int INVHED_INSERT( T_INVHED data_this)
         {
             IDatabase dbHead = Database.GetDatabase(VarGeneral.BranchCS);
             dbHead.ClearParameters();
+
             string ss = Utilites.GetInvSetring(data_this);
             data_this.Hash_Value = Utilites.HashEncrypt(ss);
             dbHead.AddOutParameter("InvHed_ID", DbType.Int32);

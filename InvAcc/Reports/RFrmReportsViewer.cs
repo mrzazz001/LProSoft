@@ -12149,31 +12149,56 @@ namespace InvAcc.Forms
                                 {
                                     (MainCryRep.ReportDefinition.ReportObjects["Text3"] as TextObject).Text = "السجل التجاري";
                                 }
+                                for (int i = 0; i < VarGeneral.RepData.Tables[0].Rows.Count; i++)
+                                {
+                                    VarGeneral.RepData.Tables[0].Rows[i]["" +
+                                        "CostCenteNm"] = VarGeneral.RepData.Tables[0].Rows[i]["CusVenCRN"];
+                                }
+                                VarGeneral.CostCenterlbl = "السجل التجاري";
                             }
                             else if (MainCryRep.FileName.Contains(@"\ReportsE\RepInvoic.rpt"))
                             {
                                 {
                                     (MainCryRep.ReportDefinition.ReportObjects["Text3"] as TextObject).Text = "CRN";
                                 }
+                                for (int i = 0; i < VarGeneral.RepData.Tables[0].Rows.Count; i++)
+                                {
+                                    VarGeneral.RepData.Tables[0].Rows[i]["" +
+                                        "CostCenteNm"] = VarGeneral.RepData.Tables[0].Rows[i]["CusVenCRN"];
+                                }
+                                VarGeneral.CostCenterlbl = "السجل التجاري";
                             }
-                            else
+                            else if (MainCryRep.FileName.Contains(@"\Reports\RepInvoicWidth.rpt"))
                             {
                                 try
                                 {
-                                    (MainCryRep.ReportDefinition.ReportObjects["TextCostCenter"] as TextObject).Text = "السجل التجاري";
+                                    (MainCryRep.ReportDefinition.ReportObjects["Text10"] as TextObject).Text = "CRN";
                                     VarGeneral.CostCenterlbl = "السجل التجاري";
                                 }
                                 catch
                                 {
                                     (MainCryRep.ReportDefinition.ReportObjects["Text3"] as TextObject).Text = "السجل التجاري";
                                 }
+                                for (int i = 0; i < VarGeneral.RepData.Tables[0].Rows.Count; i++)
+                                {
+                                    VarGeneral.RepData.Tables[0].Rows[i]["" +
+                                        "CostCenteNm"] = VarGeneral.RepData.Tables[0].Rows[i]["CusVenCRN"];
+                                }
+                                VarGeneral.CostCenterlbl = "السجل التجاري";
                             }
-                            for (int i = 0; i < VarGeneral.RepData.Tables[0].Rows.Count; i++)
+                            else if (MainCryRep.FileName.Contains(@"\Reports\RepInvoic.rpt"))
                             {
-                                VarGeneral.RepData.Tables[0].Rows[i]["" +
-                                    "CostCenteNm"] = VarGeneral.RepData.Tables[0].Rows[i]["CusVenCRN"];
+                                {
+                                    (MainCryRep.ReportDefinition.ReportObjects["Text3"] as TextObject).Text = "CRN";
+                                }
+                                for (int i = 0; i < VarGeneral.RepData.Tables[0].Rows.Count; i++)
+                                {
+                                    VarGeneral.RepData.Tables[0].Rows[i]["" +
+                                        "CostCenteNm"] = VarGeneral.RepData.Tables[0].Rows[i]["CusVenCRN"];
+                                }
+                                VarGeneral.CostCenterlbl = "السجل التجاري";
                             }
-                            VarGeneral.CostCenterlbl = "السجل التجاري";
+
                         }
                         catch
                         {

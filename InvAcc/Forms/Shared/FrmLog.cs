@@ -188,6 +188,8 @@ namespace InvAcc.Forms
             Utilites.systemLoading();
             CheckRemotDate();
             InitializeComponent();//this.Load += langloads;
+            simpleButton1.Visible = false;
+            if (Program.isdevelopermachine()) simpleButton1.Visible = true;
             //circularProgressItem11.IsRunning = true;
             VarGeneral.UsrTyp = false;
             if (InvAcc.Properties.Settings.Default.ServiceBill)
@@ -2564,6 +2566,40 @@ namespace InvAcc.Forms
         {
 
         }
+
+        private void button_Support_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            foreach (T_INVHED i in dbc.T_INVHEDs)
+            {
+                T_INVHED q = dbc.StockInvHead((int)i.InvTyp, i.InvNo);
+                try
+                {if (q.InvTyp != 1) continue;
+                    DateTime v = (DateTime)q.DATE_CREATED;
+                    if (v < new DateTime(2020, 9, 01)) continue;
+                    DateTimeConverter dd = new DateTimeConverter();
+
+                    string y = q.GDat.Split('/')[0];
+                    string m = q.GDat.Split('/')[1];
+                    string da = q.GDat.Split('/')[2];
+
+                    DateTime b = new DateTime(int.Parse(y), int.Parse(m), int.Parse(da), v.Hour, v.Minute, v.Second, v.Millisecond);
+                    q.DATE_CREATED = b;
+                    q.DATE_MODIFIED = b;
+
+
+                    string ss = Utilites.GetInvSetring(q);
+                    q.Hash_Value = Utilites.HashEncrypt(ss);
+                    dbc.SubmitChanges();
+                }
+                catch { }
+
+            }
+        }
+
         public static bool flage =true;
         private void FrmLog_Shown(object sender, EventArgs e)
         {

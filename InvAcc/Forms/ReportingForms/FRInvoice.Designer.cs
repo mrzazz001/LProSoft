@@ -27,7 +27,6 @@ private void InitializeComponent()
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRInvoice));
             this.PanelSpecialContainer = new System.Windows.Forms.Panel();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.ButOk = new C1.Win.C1Input.C1Button();
@@ -79,6 +78,7 @@ private void InitializeComponent()
             this.RButLandscape = new System.Windows.Forms.RadioButton();
             this.RButPortrait = new System.Windows.Forms.RadioButton();
             this.groupBox_OrderTyp = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.radioButton_Delivery = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.radioButton_Out = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.radioButton_In = new DevComponents.DotNetBar.Controls.CheckBoxX();
@@ -97,6 +97,7 @@ private void InitializeComponent()
             this.radioButton_ِReturn0 = new System.Windows.Forms.RadioButton();
             this.checkBox_DatePay = new System.Windows.Forms.CheckBox();
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.PanelSpecialContainer.SuspendLayout();
             this.ribbonBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ButOk)).BeginInit();
@@ -110,28 +111,18 @@ private void InitializeComponent()
             this.CmbDeleted.SuspendLayout();
             this.CmbReturn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelSpecialContainer
             // 
-            this.PanelSpecialContainer.Controls.Add(this.checkBox2);
             this.PanelSpecialContainer.Controls.Add(this.checkBox1);
             this.PanelSpecialContainer.Controls.Add(this.ribbonBar1);
             this.PanelSpecialContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelSpecialContainer.Location = new System.Drawing.Point(0, 0);
             this.PanelSpecialContainer.Name = "PanelSpecialContainer";
-            this.PanelSpecialContainer.Size = new System.Drawing.Size(582, 479);
+            this.PanelSpecialContainer.Size = new System.Drawing.Size(582, 538);
             this.PanelSpecialContainer.TabIndex = 1220;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(431, 315);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(122, 17);
-            this.checkBox2.TabIndex = 1101;
-            this.checkBox2.Text = "اظهار السجل التجاري";
-            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
@@ -208,7 +199,7 @@ private void InitializeComponent()
             this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(582, 479);
+            this.ribbonBar1.Size = new System.Drawing.Size(582, 538);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 1099;
             this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -230,7 +221,7 @@ private void InitializeComponent()
             this.ButOk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButOk.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.ButOk.Location = new System.Drawing.Point(260, 432);
+            this.ButOk.Location = new System.Drawing.Point(260, 482);
             this.ButOk.Name = "ButOk";
             this.ButOk.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ButOk.Size = new System.Drawing.Size(227, 27);
@@ -247,7 +238,7 @@ private void InitializeComponent()
             this.ButExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButExit.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.ButExit.Location = new System.Drawing.Point(75, 432);
+            this.ButExit.Location = new System.Drawing.Point(75, 482);
             this.ButExit.Name = "ButExit";
             this.ButExit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ButExit.Size = new System.Drawing.Size(179, 27);
@@ -904,12 +895,22 @@ private void InitializeComponent()
             this.groupBox_OrderTyp.Controls.Add(this.radioButton_Out);
             this.groupBox_OrderTyp.Controls.Add(this.radioButton_In);
             this.groupBox_OrderTyp.Enabled = false;
-            this.groupBox_OrderTyp.Location = new System.Drawing.Point(169, 392);
+            this.groupBox_OrderTyp.Location = new System.Drawing.Point(169, 428);
             this.groupBox_OrderTyp.Name = "groupBox_OrderTyp";
             this.groupBox_OrderTyp.Size = new System.Drawing.Size(390, 37);
             this.groupBox_OrderTyp.TabIndex = 6746;
             this.groupBox_OrderTyp.TabStop = false;
             this.groupBox_OrderTyp.Tag = " T_INVHED.IfRet ";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(13, -1);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(122, 17);
+            this.checkBox2.TabIndex = 1101;
+            this.checkBox2.Text = "اظهار السجل التجاري";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // radioButton_Delivery
             // 
@@ -931,7 +932,7 @@ private void InitializeComponent()
             // 
             // 
             this.radioButton_Out.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.radioButton_Out.Location = new System.Drawing.Point(162, 14);
+            this.radioButton_Out.Location = new System.Drawing.Point(232, 14);
             this.radioButton_Out.Name = "radioButton_Out";
             this.radioButton_Out.Size = new System.Drawing.Size(72, 17);
             this.radioButton_Out.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1129,12 +1130,22 @@ private void InitializeComponent()
             this.netResize1.ParentControl = this;
             this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.checkBox2);
+            this.groupBox4.Location = new System.Drawing.Point(273, 407);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(141, 21);
+            this.groupBox4.TabIndex = 1221;
+            this.groupBox4.TabStop = false;
+            // 
             // FRInvoice
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(582, 479);
+            this.ClientSize = new System.Drawing.Size(582, 538);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.PanelSpecialContainer);
             this.Icon = global::InvAcc.Properties.Resources.favicon;
             this.KeyPreview = true;
@@ -1169,11 +1180,14 @@ private void InitializeComponent()
             this.CmbReturn.ResumeLayout(false);
             this.CmbReturn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }//###########&&&&&&&&&&
 
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }

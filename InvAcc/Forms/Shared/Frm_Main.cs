@@ -20461,5 +20461,26 @@ execute(@ss)
         {
             VarGeneral.chekprintersettings();
         }
+
+        private void TTUSr_Click(object sender, EventArgs e)
+        {
+            if(VarGeneral.UserID==1)
+            {
+                string vNewNo = InputDialog.mostrar("ادخل كلمة سر الاضافات", "الدعم الفني");
+                if (!string.IsNullOrEmpty(vNewNo))
+                {
+                    try
+                    {
+                        int k = int.Parse(vNewNo);
+                        if (vNewNo == "34523")
+                        {
+                            InvAcc.Forms.Shared.support.XFrmOptionSc f = new Shared.support.XFrmOptionSc();
+                            f.ShowDialog();
+                        }
+                    }
+                    catch { }
+                }
+            }
+        }
     }
 }
