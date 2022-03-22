@@ -318,14 +318,7 @@ namespace InvAcc.Controls
         }
     }
 
-    static class ExtensionMethods
-    {
-        public static BindingList<T> ToBindingList<T>(this IEnumerable<T> range)
-        {
-            return new BindingList<T>(range.ToList());
-        }
-    }
-
+   
     public enum CommandTOexecute
     {
         Ok, Cancel, NeedPermision

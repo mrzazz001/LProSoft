@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvAcc", "InvAcc\InvAcc.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProShared", "..\ProShared\ProShared\ProShared.csproj", "{23FB1BA2-29E8-452F-89B2-F5CFB902452E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProLIB", "..\ProLIB\ProLIB\ProLIB.csproj", "{63C41FEE-12E9-451C-87DA-360C58C2F164}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEST", "..\TESTLS\TEST\TEST.csproj", "{1F72D634-9919-42FC-ACAA-85F73215BE2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{23FB1BA2-29E8-452F-89B2-F5CFB902452E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23FB1BA2-29E8-452F-89B2-F5CFB902452E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23FB1BA2-29E8-452F-89B2-F5CFB902452E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63C41FEE-12E9-451C-87DA-360C58C2F164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C41FEE-12E9-451C-87DA-360C58C2F164}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C41FEE-12E9-451C-87DA-360C58C2F164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C41FEE-12E9-451C-87DA-360C58C2F164}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F72D634-9919-42FC-ACAA-85F73215BE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F72D634-9919-42FC-ACAA-85F73215BE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F72D634-9919-42FC-ACAA-85F73215BE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F72D634-9919-42FC-ACAA-85F73215BE2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

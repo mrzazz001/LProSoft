@@ -9088,6 +9088,10 @@ namespace InvAcc.Forms
                 FlxSerial.Visible = false;
             }
         }
+        double getround(double value)
+        {
+            return Math.Round(value, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
+        }
         double caltax(double amount, double taxpercent)
         {
             without = amount;
@@ -13186,10 +13190,7 @@ namespace InvAcc.Forms
             else
             { enteredtotal = 0; }
         }
-        double getround(double value)
-        {
-            return Math.Round(value, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
-        }
+       
         double _without = 0;
         public double 
             without

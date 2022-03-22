@@ -17,6 +17,7 @@ using ProShared.DBUdate;
 using InvAcc.Forms.Cards;
 using ProShared.Stock_Data;
 using InvAcc.Controls;
+using ProRealEstate.Forms;
 
 namespace InvAcc
 {
@@ -100,7 +101,8 @@ namespace InvAcc
             Application.ApplicationExit += closing;
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
             VarGeneral.ProdectNo = getversion();
-            try { isdevelopermachine(); } catch { }
+            DbUpdates d = new DbUpdates();           try { isdevelopermachine(); } catch { }
+            VarGeneral.InvTyp = 3;
             try
             {
             
@@ -167,7 +169,7 @@ namespace InvAcc
             }
             catch
             {}
-            ; Application.Run(new FrmLog());
+            ; Application.Run(new Bills());
             closing(null, null);
         }
         public static string getversion()

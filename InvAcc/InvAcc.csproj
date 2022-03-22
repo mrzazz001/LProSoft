@@ -152,6 +152,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\PROSOFT\C1.Win.C1TrueDBGrid.2.dll</HintPath>
     </Reference>
+    <Reference Include="C1.Win.Input.MultiSelect.4, Version=4.0.20203.457, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.TreeView.4, Version=4.0.20203.457, Culture=neutral, PublicKeyToken=79882d576c6336da" />
     <Reference Include="CButtonLib">
       <HintPath>D:\Prosoft\InvAcc\bin\Debug\CButtonLib.dll</HintPath>
     </Reference>
@@ -567,6 +569,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="PresentationCore" />
+    <Reference Include="ProLIB">
+      <HintPath>..\..\ProLIB\ProLIB\bin\Debug\ProLIB.dll</HintPath>
+    </Reference>
     <Reference Include="ProShared">
       <HintPath>..\..\ProShared\ProShared\bin\Debug\ProShared.dll</HintPath>
     </Reference>
@@ -2485,6 +2490,9 @@
     <Compile Include="Forms\MDIParent1.Designer.cs">
       <DependentUpon>MDIParent1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SellPurSystem\specialcontrols\bil.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\SellPurSystem\specialcontrols\cars\FrmCarChecking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2543,6 +2551,25 @@
       <DependentUpon>XGmesures.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SellPurSystem\specialcontrols\InvHelper.cs" />
+    <Compile Include="Forms\SellPurSystem\specialcontrols\PDHeplper.cs" />
+    <Compile Include="Forms\SellPurSystem\specialcontrols\XCreditDebiatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\specialcontrols\XCreditDebiatForm.Designer.cs">
+      <DependentUpon>XCreditDebiatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\specialcontrols\XFrmCDRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\specialcontrols\XFrmCDRecords.Designer.cs">
+      <DependentUpon>XFrmCDRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\XFrmDainInv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\XFrmDainInv.Designer.cs">
+      <DependentUpon>XFrmDainInv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Shared\AboutBox1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -3649,6 +3676,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SellPurSystem\specialcontrols\Glassess\XGmesures.resx">
       <DependentUpon>XGmesures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellPurSystem\specialcontrols\XCreditDebiatForm.resx">
+      <DependentUpon>XCreditDebiatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellPurSystem\specialcontrols\XFrmCDRecords.resx">
+      <DependentUpon>XFrmCDRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellPurSystem\XFrmDainInv.resx">
+      <DependentUpon>XFrmDainInv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Shared\AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>

@@ -17,12 +17,126 @@ namespace InvAcc.Forms.SellPurSystem.specialcontrols
 {
     class InvHelper
     {
-        public  static bool Add_Cridte_Recorde(T_INVHED inv)
+        private static T_GDHEAD GetData(int CmbLegate,int costcenter, int currancy ,string txtInvNo,string txtHDate,string txtGDate,string textBox_ID,string txtChequeNo,double txtTotalCredit,string txtReceivedForm)
+        {
+            T_GDHEAD data_this = new T_GDHEAD();
+         string   max = "";
+            max = VarGeneral.dbshared.MaxGDHEADsNo.ToString();
+         textBox_ID = max ?? "";
+         data_this.gdNo = max ?? "";
+       
+           data_this.DATE_CREATED = new DateTime?(DateTime.Now);
+            data_this.gdUser = VarGeneral.UserNumber;
+          data_this.gdUserNam = VarGeneral.UserNameA;
+          data_this.MODIFIED_BY = "";
+            ScriptNumber ScriptNumber1 = new ScriptNumber();
+            data_this.gdHDate = txtHDate;
+            data_this.gdGDate = txtGDate;
+            data_this.gdNo = textBox_ID;
+            data_this.ChekNo = txtChequeNo;
+            data_this.CurTyp = currancy;
+            data_this.ArbTaf = ScriptNumber1.ScriptNum(decimal.Parse(VarGeneral.TString.TEmpty(string.Concat(txtTotalCredit))));
+            data_this.EngTaf = ScriptNumber1.TafEng(decimal.Parse(VarGeneral.TString.TEmpty(string.Concat(txtTotalCredit))));
+            data_this.gdCstNo = costcenter;
+            data_this.gdID = 0;
+            data_this.gdLok = false;
+            data_this.gdMem = txtReceivedForm;
+            if (CmbLegate > 0)
+            {
+                data_this.gdMnd = CmbLegate;
+            }
+            else
+            {
+                data_this.gdMnd = null;
+            }
+            data_this.gdRcptID = (data_this.gdRcptID.HasValue ? data_this.gdRcptID.Value : 0.0);
+            data_this.gdTot = txtTotalCredit;
+            data_this.gdTp = (data_this.gdTp != 0 ? data_this.gdTp : 0);
+            data_this.gdTyp = 12;
+            data_this.RefNo = "";
+            if (!string.IsNullOrEmpty(txtInvNo))
+            {
+                data_this.BName = txtInvNo;
+            }
+            else
+            {
+                data_this.BName = "";
+            }
+            
+            data_this.salMonth = "";
+            try
+            {
+                if (CmbLegate>0)
+                {
+                    T_Mndob q = VarGeneral.dbshared.StockMndobID(int.Parse(CmbLegate.ToString()));
+                    if (q.Comm_Gaid.Value > 0.0 && txtTotalCredit > 0.0)
+                    {
+                        data_this.CommMnd_Gaid = txtTotalCredit * (q.Comm_Gaid.Value / 100.0);
+                    }
+                    else
+                    {
+                        data_this.CommMnd_Gaid = 0.0;
+                    }
+                }
+                else
+                {
+                    data_this.CommMnd_Gaid = 0.0;
+                }
+            }
+            catch
+            {
+                data_this.CommMnd_Gaid = 0.0;
+            }
+            data_this.CompanyID = 1;
+            return data_this;
+        }
+        public  static bool Add_Cridte_Recorde(T_INVHED inv,string AccCrdt_Credit,string AccDbt_Credit,double cridet)
         {
 
 
             // List<  T_GDHEAD> list=VarGeneral.dbshared
             List < T_GDHEAD > list = VarGeneral.dbshared.StockGdHeadid((int)inv.GadeId.Value);
+            T_INVSETTING _InvSetting = VarGeneral.dbshared.StockInvSetting((int)inv.InvTyp);
+            //  if (doubleInput_CreditLoc.Value > 0.0 && !string.IsNullOrEmpty(AccCrdt_Credit) && !string.IsNullOrEmpty(AccDbt_Credit))
+            T_GDHEAD gd = GetData((int)inv.MndNo, (int)inv.InvCstNo, (int)inv.CurTyp, inv.InvNo, VarGeneral.Hdate, VarGeneral.Gdate, "", "", cridet, "");
+            int invGadeId = gd.gdhead_ID;
+            IDatabase db_ = Database.GetDatabase(VarGeneral.BranchCS);
+            
+            {
+                db_.StartTransaction();
+                db_.ClearParameters();
+                db_.AddParameter("GDDET_ID", DbType.Int32, 0);
+                db_.AddParameter("gdID", DbType.Int32,invGadeId);
+                db_.AddParameter("gdNo", DbType.String, inv.InvNo);
+                db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مبيعات رقم : ".Replace("فاتورة مبيعات", _InvSetting.InvNamA.Trim()) + inv.InvNo);
+                db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Sales Invoice No : ".Replace("Sales Invoice", _InvSetting.InvNamE.Trim()) + inv.InvNo);
+                db_.AddParameter("recptTyp", DbType.String, "1");
+                db_.AddParameter("AccNo", DbType.String, AccCrdt_Credit);
+                db_.AddParameter("AccName", DbType.String, "");
+                db_.AddParameter("gdValue", DbType.Double, 0.0 - cridet);
+                db_.AddParameter("recptNo", DbType.String, inv.InvNo);
+                db_.AddParameter("Lin", DbType.Int32, 2);
+                db_.AddParameter("AccNoDestruction", DbType.String, null);
+                db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
+                db_.EndTransaction();
+                db_.StartTransaction();
+                db_.ClearParameters();
+                db_.AddParameter("GDDET_ID", DbType.Int32, 0);
+                db_.AddParameter("gdID", DbType.Int32,invGadeId);
+                db_.AddParameter("gdNo", DbType.String, inv.InvNo);
+                db_.AddParameter("gdDes", DbType.String, "قيد تلقائي لفاتورة مبيعات رقم : ".Replace("فاتورة مبيعات", _InvSetting.InvNamA.Trim()) + inv.InvNo);
+                db_.AddParameter("gdDesE", DbType.String, "Auto Bound To Sales Invoice No : ".Replace("Sales Invoice", _InvSetting.InvNamE.Trim()) + inv.InvNo);
+                db_.AddParameter("recptTyp", DbType.String, "1");
+                db_.AddParameter("AccNo", DbType.String, AccDbt_Credit);
+                db_.AddParameter("AccName", DbType.String, "");
+                db_.AddParameter("gdValue", DbType.Double, cridet);
+                db_.AddParameter("recptNo", DbType.String, inv.InvNo);
+                db_.AddParameter("Lin", DbType.Int32, 2);
+                db_.AddParameter("AccNoDestruction", DbType.String, null);
+                db_.ExecuteNonQueryWithoutCommit(storedProcedure: true, "S_T_GDDET_INSERT");
+                db_.EndTransaction();
+            }
+
             return true;
 
         }
