@@ -8500,7 +8500,15 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         }
         private void buttonItem_RepGeneralDaily_Click(object sender, EventArgs e)
         {
+            VarGeneral.InvType = 2;
+            FRAccountTranc from1 = new FRAccountTranc();
+            from1.label10.Visible = this.sideBarPanelItem_Invioces.Visible;
+            from1.txtInvNo.Visible = this.sideBarPanelItem_Invioces.Visible;
+            from1.button_SrchInvNo.Visible = this.sideBarPanelItem_Invioces.Visible;
+            from1.CmbInvType.Visible = this.sideBarPanelItem_Invioces.Visible;
+            from1.Tag = this.LangArEn;
 
+            showChild(from1);
 
         }
         private void buttonItem_RepReviewBalanceOfMovement_Click(object sender, EventArgs e)

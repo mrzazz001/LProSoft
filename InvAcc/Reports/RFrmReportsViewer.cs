@@ -308,8 +308,8 @@ namespace InvAcc.Forms
         }
         private void PrintSet(ReportDocument rpt, int vLines, PaperOrientation vType, string vPeaperNm, int vReplay, string _PrintNm, double _mergBottom, double _mergleft, double _mergRight, double _mergTop)
         {
-
-      //      try { rpt.SetParameterValue("CATPrint", "False"); } catch { }
+            setpagesetting(rpt);
+            //      try { rpt.SetParameterValue("CATPrint", "False"); } catch { }
             TopMost = false;
             Hide();
             string ntyp = "";

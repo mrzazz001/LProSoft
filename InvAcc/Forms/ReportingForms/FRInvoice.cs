@@ -867,7 +867,7 @@ namespace InvAcc.Forms
                                     _RepShow.Rule = _RepShow.Rule.Replace("Where T_INVHED.InvTyp = 2 ", "Where (T_INVHED.InvTyp = 2 or T_INVHED.InvTyp=1002 )");
                             }
                         }
-                        _RepShow.Fields = "T_INVHED.CusVenCRN," + _RepShow.Fields;
+                  if(combobox_RepType.SelectedIndex==0)      _RepShow.Fields = "T_INVHED.CusVenCRN," + _RepShow.Fields;
                         _RepShow = _RepShow.Save();
                  
                         VarGeneral.RepData = _RepShow.RepData;

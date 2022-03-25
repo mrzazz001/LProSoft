@@ -18,6 +18,8 @@ using InvAcc.Forms.Cards;
 using ProShared.Stock_Data;
 using InvAcc.Controls;
 using ProRealEstate.Forms;
+using System.Printing;
+using System.Linq;
 
 namespace InvAcc
 {
@@ -169,7 +171,7 @@ namespace InvAcc
             }
             catch
             {}
-            ; Application.Run(new Bills());
+            ; Application.Run(new FrmLog());
             closing(null, null);
         }
         public static string getversion()
@@ -316,5 +318,22 @@ namespace InvAcc
             return Information.IsNumeric(s);
         }
 
+    }
+    class Printer
+    {
+        public void PrintReport(string printerIP, string printerName)
+        {
+            string printerFullName = CheckPrinterConfiguration(printerIP, printerName);
+ 
+        }
+        public string CheckPrinterConfiguration(string printerIP, string printerName)
+        {
+            var server = new PrintServer();
+            var queues = server.GetPrintQueues(new[]
+            { EnumeratedPrintQueueTypes.Local, EnumeratedPrintQueueTypes.Connections });
+            string fulllName = queues.Where(q => q.Name == printerName &&
+            q.QueuePort.Name == printerIP).Select(q => q.FullName).FirstOrDefault();
+            return fulllName;
+        }
     }
 }
