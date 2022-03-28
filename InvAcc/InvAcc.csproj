@@ -1849,6 +1849,9 @@
     <Compile Include="Forms\SellPurSystem\FrmInvPuchaesReturn.Designer.cs">
       <DependentUpon>FrmInvPuchaesReturn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SellPurSystem\FrmInvSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\SellPurSystem\FrmInvSale.Designer.cs">
       <DependentUpon>FrmInvSale.cs</DependentUpon>
     </Compile>
@@ -2552,7 +2555,25 @@
       <DependentUpon>XGmesures.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SellPurSystem\specialcontrols\InvHelper.cs" />
+    <Compile Include="Forms\SellPurSystem\specialcontrols\Notices\BillPartial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\specialcontrols\Notices\Bills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\specialcontrols\Notices\Bills.Designer.cs">
+      <DependentUpon>Bills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\specialcontrols\Notices\XFnoticeCreditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellPurSystem\specialcontrols\Notices\XFnoticeCreditor.Designer.cs">
+      <DependentUpon>XFnoticeCreditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SellPurSystem\specialcontrols\PDHeplper.cs" />
+    <Compile Include="Forms\SellPurSystem\specialcontrols\PFrmINvSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\SellPurSystem\specialcontrols\XCreditDebiatForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2666,9 +2687,6 @@
     </Compile>
     <Compile Include="Forms\Shared\NewFrmSystemSetting.Designer.cs">
       <DependentUpon>NewFrmSystemSetting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SellPurSystem\FrmInvSale.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Shared\SSSFMInvPrintSetup.cs">
       <SubType>Form</SubType>
@@ -3429,6 +3447,9 @@
     <EmbeddedResource Include="Forms\SellPurSystem\FrmInvPuchaesReturn.resx">
       <DependentUpon>FrmInvPuchaesReturn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvSale.resx">
+      <DependentUpon>FrmInvSale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SellPurSystem\FrmInvSalePoint.resx">
       <DependentUpon>FrmInvSalePoint.cs</DependentUpon>
     </EmbeddedResource>
@@ -3678,6 +3699,12 @@
     <EmbeddedResource Include="Forms\SellPurSystem\specialcontrols\Glassess\XGmesures.resx">
       <DependentUpon>XGmesures.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellPurSystem\specialcontrols\Notices\Bills.resx">
+      <DependentUpon>Bills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellPurSystem\specialcontrols\Notices\XFnoticeCreditor.resx">
+      <DependentUpon>XFnoticeCreditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SellPurSystem\specialcontrols\XCreditDebiatForm.resx">
       <DependentUpon>XCreditDebiatForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -3731,9 +3758,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Shared\NewFrmSystemSetting.resx">
       <DependentUpon>NewFrmSystemSetting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SellPurSystem\FrmInvSale.resx">
-      <DependentUpon>FrmInvSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Shared\SSSFMInvPrintSetup.resx">
       <DependentUpon>SSSFMInvPrintSetup.cs</DependentUpon>

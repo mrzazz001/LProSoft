@@ -2866,6 +2866,46 @@ namespace InvAcc.Forms
             RefreshPKeys();
             textBox_ID.Text = PKeys.LastOrDefault();
         }
+        public void setDirectReturnInv(string k)
+        {
+            T_INVHED newData = dbReturn.StockInvHead(1, k.ToString());
+            if (newData != null || !string.IsNullOrEmpty(newData.InvNo))
+            {
+                CmbInvSide.SelectedIndexChanged -= CmbInvSide_SelectedIndexChanged;
+                State = FormState.Saved;
+                Clear();
+                DataThisRe = newData;
+                ChkPriceIncludeTax.ValueChanged -= ChkPriceIncludeTax_ValueChanged;
+                ChkPriceIncludeTax.Value = (bool)newData.PriceIncludTax;
+
+                ChkPriceIncludeTax.ValueChanged += ChkPriceIncludeTax_ValueChanged;
+                ChkPriceIncludeTax.Enabled = false;
+                CmbInvSide.SelectedIndexChanged += CmbInvSide_SelectedIndexChanged;
+                if (VarGeneral._IsPOS)
+                {
+                    AutoGaidAcc_POS();
+                }
+                else
+                {
+                    AutoGaidAcc();
+                }
+                txtDebit5.Text = string.Empty;
+                txtDebit5.Tag = string.Empty;
+                txtCredit5.Text = string.Empty;
+                txtCredit5.Tag = string.Empty;
+                checkBox_CostGaidTax_CheckedChanged(null, null);
+                txtDebit6.Text = string.Empty;
+                txtDebit6.Tag = string.Empty;
+                txtCredit6.Text = string.Empty;
+                txtCredit2.Tag = string.Empty;
+                checkBox_GaidDis_CheckedChanged(null, null);
+                GetInvTot();
+                checkBox_Credit_CheckedChanged(null, null);
+
+            }
+
+        }
+
         private void Button_Add_Click(object sender, EventArgs e)
         {
             // ChkPriceIncludeTax.Enabled = true;
@@ -3657,7 +3697,11 @@ namespace InvAcc.Forms
                 switchButton_Lock.Visible = false;
             }
                 Permmission = dbc.Get_PermissionID(VarGeneral.UserID);
-                _StorePr = permission.StorePrmission.Split(',').ToList();
+                try
+                {
+                    _StorePr = permission.StorePrmission.Split(',').ToList();
+                }
+                catch { }
                 if (columns_Names_visible.Count == 0)
                 {
                     columns_Names_visible.Add("InvNo", new ColumnDictinary("رقم الفاتورة", "Invoice No", ifDefault: true, string.Empty));
@@ -7945,76 +7989,7 @@ namespace InvAcc.Forms
             data_this.IsCommGaid = false;
             return data_this;
         }
-        private T_GDHEAD GetDataGdCostDis()
-        {
-            _GdHeadCostDis.gdHDate = txtHDate.Text;
-            _GdHeadCostDis.gdGDate = txtGDate.Text;
-            _GdHeadCostDis.gdNo = textBox_ID.Text;
-            _GdHeadCostDis.ArbTaf = ScriptNumber1.ScriptNum(decimal.Parse("0" + txtTotDis.Text));
-            _GdHeadCostDis.BName = _GdHeadCostDis.BName;
-            _GdHeadCostDis.ChekNo = _GdHeadCostDis.ChekNo;
-            _GdHeadCostDis.CurTyp = int.Parse(CmbCurr.SelectedValue.ToString());
-            _GdHeadCostDis.EngTaf = ScriptNumber1.TafEng(decimal.Parse("0" + txtTotDis.Text));
-            _GdHeadCostDis.gdCstNo = int.Parse(CmbCostC.SelectedValue.ToString());
-            _GdHeadCostDis.gdID = 0;
-            _GdHeadCostDis.gdLok = false;
-            _GdHeadCostDis.AdminLock = switchButton_Lock.Value;
-            _GdHeadCostDis.gdMem = "سند بقيمة الخصم|Discount Value";
-            if (CmbLegate.SelectedIndex > 0)
-            {
-                _GdHeadCostDis.gdMnd = int.Parse(CmbLegate.SelectedValue.ToString());
-            }
-            else
-            {
-                _GdHeadCostDis.gdMnd = null;
-            }
-            _GdHeadCostDis.gdRcptID = (_GdHeadCostDis.gdRcptID.HasValue ? _GdHeadCostDis.gdRcptID.Value : 0.0);
-            _GdHeadCostDis.gdTot = txtTotDis.Value;
-            _GdHeadCostDis.gdTp = (_GdHeadCostDis.gdTp!=0? _GdHeadCostDis.gdTp : 0);
-            _GdHeadCostDis.gdTyp = VarGeneral.InvTyp;
-            _GdHeadCostDis.RefNo = txtRef.Text;
-            _GdHeadCostDis.DATE_MODIFIED = DateTime.Now;
-            _GdHeadCostDis.salMonth = string.Empty;
-            _GdHeadCostDis.gdUser = VarGeneral.UserNumber;
-            _GdHeadCostDis.gdUserNam = VarGeneral.UserNameA;
-            _GdHeadCostDis.CompanyID = 1;
-            return _GdHeadCostDis;
-        }
-        private T_GDHEAD GetDataGdCostTax()
-        {
-            _GdHeadCostTax.gdHDate = txtHDate.Text;
-            _GdHeadCostTax.gdGDate = txtGDate.Text;
-            _GdHeadCostTax.gdNo = textBox_ID.Text;
-            _GdHeadCostTax.ArbTaf = ScriptNumber1.ScriptNum(decimal.Parse("0" + txtTotTax.Text));
-            _GdHeadCostTax.BName = _GdHeadCostTax.BName;
-            _GdHeadCostTax.ChekNo = _GdHeadCostTax.ChekNo;
-            _GdHeadCostTax.CurTyp = int.Parse(CmbCurr.SelectedValue.ToString());
-            _GdHeadCostTax.EngTaf = ScriptNumber1.TafEng(decimal.Parse("0" + txtTotTax.Text));
-            _GdHeadCostTax.gdCstNo = int.Parse(CmbCostC.SelectedValue.ToString());
-            _GdHeadCostTax.gdID = 0;
-            _GdHeadCostTax.gdLok = false;
-            _GdHeadCostTax.AdminLock = switchButton_Lock.Value;
-            _GdHeadCostTax.gdMem = "سند بقيمة الضريبة|Tax Value";
-            if (CmbLegate.SelectedIndex > 0)
-            {
-                _GdHeadCostTax.gdMnd = int.Parse(CmbLegate.SelectedValue.ToString());
-            }
-            else
-            {
-                _GdHeadCostTax.gdMnd = null;
-            }
-            _GdHeadCostTax.gdRcptID = (_GdHeadCostTax.gdRcptID.HasValue ? _GdHeadCostTax.gdRcptID.Value : 0.0);
-            _GdHeadCostTax.gdTot = txtTotTax.Value;
-            _GdHeadCostTax.gdTp = (_GdHeadCostTax.gdTp!=0? _GdHeadCostTax.gdTp : 0);
-            _GdHeadCostTax.gdTyp = VarGeneral.InvTyp;
-            _GdHeadCostTax.RefNo = txtRef.Text;
-            _GdHeadCostTax.DATE_MODIFIED = DateTime.Now;
-            _GdHeadCostTax.salMonth = string.Empty;
-            _GdHeadCostTax.gdUser = VarGeneral.UserNumber;
-            _GdHeadCostTax.gdUserNam = VarGeneral.UserNameA;
-            _GdHeadCostTax.CompanyID = 1;
-            return _GdHeadCostTax;
-        }
+      
         private T_GDHEAD GetDataGd()
         {
             _GdHead.gdHDate = txtHDate.Text;
@@ -8050,6 +8025,77 @@ namespace InvAcc.Forms
             _GdHead.CompanyID = 1;
             return _GdHead;
         }
+        private T_GDHEAD GetDataGdCostTax()
+        {
+            _GdHeadCostTax.gdHDate = txtHDate.Text;
+            _GdHeadCostTax.gdGDate = txtGDate.Text;
+            _GdHeadCostTax.gdNo = textBox_ID.Text;
+            _GdHeadCostTax.ArbTaf = ScriptNumber1.ScriptNum(decimal.Parse("0" + txtTotTax.Text));
+            _GdHeadCostTax.BName = _GdHeadCostTax.BName;
+            _GdHeadCostTax.ChekNo = _GdHeadCostTax.ChekNo;
+            _GdHeadCostTax.CurTyp = int.Parse(CmbCurr.SelectedValue.ToString());
+            _GdHeadCostTax.EngTaf = ScriptNumber1.TafEng(decimal.Parse("0" + txtTotTax.Text));
+            _GdHeadCostTax.gdCstNo = int.Parse(CmbCostC.SelectedValue.ToString());
+            _GdHeadCostTax.gdID = 0;
+            _GdHeadCostTax.gdLok = false;
+            _GdHeadCostTax.AdminLock = switchButton_Lock.Value;
+            _GdHeadCostTax.gdMem = "سند بقيمة الضريبة|Tax Value";
+            if (CmbLegate.SelectedIndex > 0)
+            {
+                _GdHeadCostTax.gdMnd = int.Parse(CmbLegate.SelectedValue.ToString());
+            }
+            else
+            {
+                _GdHeadCostTax.gdMnd = null;
+            }
+            _GdHeadCostTax.gdRcptID = (_GdHeadCostTax.gdRcptID.HasValue ? _GdHeadCostTax.gdRcptID.Value : 0.0);
+            _GdHeadCostTax.gdTot = txtTotTax.Value;
+            _GdHeadCostTax.gdTp = (_GdHeadCostTax.gdTp != 0 ? _GdHeadCostTax.gdTp : 0);
+            _GdHeadCostTax.gdTyp = VarGeneral.InvTyp;
+            _GdHeadCostTax.RefNo = txtRef.Text;
+            _GdHeadCostTax.DATE_MODIFIED = DateTime.Now;
+            _GdHeadCostTax.salMonth = string.Empty;
+            _GdHeadCostTax.gdUser = VarGeneral.UserNumber;
+            _GdHeadCostTax.gdUserNam = VarGeneral.UserNameA;
+            _GdHeadCostTax.CompanyID = 1;
+            return _GdHeadCostTax;
+        }
+        private T_GDHEAD GetDataGdCostDis()
+        {
+            _GdHeadCostDis.gdHDate = txtHDate.Text;
+            _GdHeadCostDis.gdGDate = txtGDate.Text;
+            _GdHeadCostDis.gdNo = textBox_ID.Text;
+            _GdHeadCostDis.ArbTaf = ScriptNumber1.ScriptNum(decimal.Parse("0" + txtTotDis.Text));
+            _GdHeadCostDis.BName = _GdHeadCostDis.BName;
+            _GdHeadCostDis.ChekNo = _GdHeadCostDis.ChekNo;
+            _GdHeadCostDis.CurTyp = int.Parse(CmbCurr.SelectedValue.ToString());
+            _GdHeadCostDis.EngTaf = ScriptNumber1.TafEng(decimal.Parse("0" + txtTotDis.Text));
+            _GdHeadCostDis.gdCstNo = int.Parse(CmbCostC.SelectedValue.ToString());
+            _GdHeadCostDis.gdID = 0;
+            _GdHeadCostDis.gdLok = false;
+            _GdHeadCostDis.AdminLock = switchButton_Lock.Value;
+            _GdHeadCostDis.gdMem = "سند بقيمة الخصم|Discount Value";
+            if (CmbLegate.SelectedIndex > 0)
+            {
+                _GdHeadCostDis.gdMnd = int.Parse(CmbLegate.SelectedValue.ToString());
+            }
+            else
+            {
+                _GdHeadCostDis.gdMnd = null;
+            }
+            _GdHeadCostDis.gdRcptID = (_GdHeadCostDis.gdRcptID.HasValue ? _GdHeadCostDis.gdRcptID.Value : 0.0);
+            _GdHeadCostDis.gdTot = txtTotDis.Value;
+            _GdHeadCostDis.gdTp = (_GdHeadCostDis.gdTp != 0 ? _GdHeadCostDis.gdTp : 0);
+            _GdHeadCostDis.gdTyp = VarGeneral.InvTyp;
+            _GdHeadCostDis.RefNo = txtRef.Text;
+            _GdHeadCostDis.DATE_MODIFIED = DateTime.Now;
+            _GdHeadCostDis.salMonth = string.Empty;
+            _GdHeadCostDis.gdUser = VarGeneral.UserNumber;
+            _GdHeadCostDis.gdUserNam = VarGeneral.UserNameA;
+            _GdHeadCostDis.CompanyID = 1;
+            return _GdHeadCostDis;
+        }
+
         object getdata(
        int r, int c, int f)
         {

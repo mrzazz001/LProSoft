@@ -35,7 +35,10 @@ using InvAcc.Forms.SellPurSystem.specialcontrols;
 namespace InvAcc.Forms
 {
     public partial  class FrmInvSale : Form
-    { void avs(int arln)
+    { 
+        
+       
+        void avs(int arln)
 
 { 
  textBox_AccBalance.Text=   (arln == 0 ? "  0  " : "  0") ; labelBalance.Text=   (arln == 0 ? "  الرصيـــــــد   " : "  balance") ; button_SrchInvNoBarcod.Text=   (arln == 0 ? "  بحث  " : "  Search") ; label40.Text=   (arln == 0 ? "  خصم النقـاط  " : "  Points Discount") ; buttonItem_POSReturn.Text=   (arln == 0 ? "  مرتجع  " : "  bounce") ; label_Pay.Text=   (arln == 0 ? "  تسديد  " : "  payment") ; labelPharmacy3.Text=   (arln == 0 ? "  يوم  " : "  day") ; labelPharmacy2.Text=   (arln == 0 ? "  يوم ,يصرف منها  " : "  day, spent") ; labelPharmacy1.Text=   (arln == 0 ? "  مدة العلاج :  " : "  Duration of treatment:") ;  checkBox_NetWork.Text=   (arln == 0 ? "  شبكـــة  " : "Network") ; checkBox_Credit.Text=   (arln == 0 ? "  أجـــل  " : "Credit") ; checkBox_Chash.Text=   (arln == 0 ? "  نقـــدي  " : "Cach") ; superTabStrip_ORders.Text=   (arln == 0 ? "  superTabStrip1  " : "  superTabStrip1") ; button_opendraft.Text=   (arln == 0 ? "  الفواتير المعلقة  " : "  Pending invoices") ; button_Draft.Text=   (arln == 0 ? "  تعليق الفاتورة  " : "  Invoice comment") ; c1BarCode1.Text=   (arln == 0 ? "  1225  " : "  1225") ; button_GoodsDisbursedInv.Text=   (arln == 0 ? "  فواتير صرف البضاعة  " : "  Goods exchange invoices") ; label10.Text=   (arln == 0 ? "  اسم العميـــــل :  " : "  Client name:") ; label4.Text=   (arln == 0 ? "  حساب العميــل :  " : "  Customer account:") ; label12.Text=   (arln == 0 ? "  هاتف :  " : "  Telephone :") ; label33.Text=   (arln == 0 ? "  قيمة الضريبة:  " : "  Tax value:") ; label8.Text=   (arln == 0 ? "  نسبة الخصم  " : "  discount percentage") ; Label26.Text=   (arln == 0 ? "  قيمة الخصم  " : "  discount value") ; label3.Text=   (arln == 0 ? "  بالريــال  " : "  in riyals") ; label9.Text=   (arln == 0 ? "  صافي الفاتورة :  " : "  net bill:") ; label17.Text=   (arln == 0 ? "  قيمة الفاتـــورة :  " : "  Invoice value:") ; label36.Text=   (arln == 0 ? "  الجوال :  " : "  cell phone :") ; label15.Text=   (arln == 0 ? "  مركز التكلفـــــة :  " : "  cost center:") ; label13.Text=   (arln == 0 ? "  عنوان العميل :  " : "  Customer address:") ; label19.Text=   (arln == 0 ? "  العملــــــــة :  " : "  work:") ; label18.Text=   (arln == 0 ? "  المنـــــدوب :  " : "  The delegate:") ; label7.Text=   (arln == 0 ? "  رقم المرجع :  " : "  reference number :") ; Label2.Text=   (arln == 0 ? "  التاريــــــــخ :  " : "  date:") ; Label1.Text=   (arln == 0 ? "  رقم الفاتورة :  " : "  invoice number :") ; label32.Text=   (arln == 0 ? "  السيريال  " : "  serial السي") ; label25.Text=   (arln == 0 ? "  الوحدة  " : "  Unit") ; label22.Text=   (arln == 0 ? "  سعر اخر بيع  " : "  last sale price") ; label23.Text=   (arln == 0 ? "  أخر تكلفة  " : "  latest cost") ; label24.Text=   (arln == 0 ? "  متوسط التكلفة  " : "  average cost") ; superTabItem_items.Text=   (arln == 0 ? "  م.الصنف  " : "  M. Category") ; superTabControl_CostSts.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; textBox_AccBalanceBottom.Text=   (arln == 0 ? "  0  " : "  0") ; labelBalanceBottom.Text=   (arln == 0 ? "  الرصيـد   " : "  balance") ; labelC1.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; label14.Text=   (arln == 0 ? "  شبكة :  " : "  Network :") ; labelC2.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; label11.Text=   (arln == 0 ? "  آجــل :  " : "  deferred:") ; label6.Text=   (arln == 0 ? "  نقــــداّ :  " : "  cash:") ; labelC3.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; labelD1.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; labelD3.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; labelD2.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; superTabItem_Pay.Text=   (arln == 0 ? "  الدفع  " : "  paying off") ; label31.Text=   (arln == 0 ? "  إجمالي القيمة  " : "  Total value") ; label37.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label38.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; label39.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; checkBox_GaidDis.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; superTabItem_Dis.Text=   (arln == 0 ? "  الخصـــــم  " : "  discount ال") ; label34.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label35.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; checkBox_CostGaidTax.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; superTabItem_Tax.Text=   (arln == 0 ? "  الضـــرائب  " : "  taxes") ; label48.Text=   (arln == 0 ? "  إجمالي القيمة  " : "  Total value") ; label41.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label49.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; checkBox_GaidBankComm.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; superTabItem_LocalComm.Text=   (arln == 0 ? "  عمولات بنكية  " : "  Bank commissions") ; label44.Text=   (arln == 0 ? "  إجمالي القيمة  " : "  Total value") ; label45.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label46.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; label47.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; labelItem_TaxByNetPer.Text=   (arln == 0 ? "  %  " : "  %") ; superTabItem_Gaids.Text=   (arln == 0 ? "  القيود  " : "  limitations") ; label_LockeName.Text=   (arln == 0 ? "  --  " : "  --") ; label16.Text=   (arln == 0 ? "  إجمالي المتبقي :  " : "  Remaining total:") ; label20.Text=   (arln == 0 ? "  المدفوع من العميل :  " : "  Paid by the customer:") ; label27.Text=   (arln == 0 ? "  المستخدم :  " : "  the user :") ; label28.Text=   (arln == 0 ? "  صافـي الــربــح :  " : "  net profit:") ; label30.Text=   (arln == 0 ? "  إجمالــي الكميــة :  " : "  Total Quantity:") ; label_Curr.Text=   (arln == 0 ? "  العملة  " : "  the currency") ; superTabItem_Detiles.Text=   (arln == 0 ? "  تفاصيل  " : "  details") ; label29.Text=   (arln == 0 ? "  رقم الحاوية :  " : "  containers number :") ; label21.Text=   (arln == 0 ? "  تاريخ الإستحقاق   " : "  due date") ; labelPharmcy4.Text=   (arln == 0 ? "  المدفوع من العميل :  " : "  Paid by the customer:") ; superTabItem_Note.Text=   (arln == 0 ? "  ملاحظات  " : "  Notes") ; checkBoxItem_BarCode.Text=   (arln == 0 ? "  قراءه تلقائية  " : "  automatic reading") ; label5.Text=   (arln == 0 ? "  السعر المعتمــد :  " : "  Approved price:") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_BarcodPrint.Text=   (arln == 0 ? "  BC  " : "  BC") ; ButReturnShow.Text=   (arln == 0 ? "  عروض الأسعـــــار  " : "  Price Offers") ; ButPurchaseShow.Text=   (arln == 0 ? "  فواتير المشتريــات  " : "  Purchase invoices") ; ButOutGoodShow.Text=   (arln == 0 ? "  فواتير إخراج بضاعة  " : "  merchandise delivery invoices") ; buttonItem1.Text=   (arln == 0 ? "  الفواتير المعلقة  " : "  Pending invoices") ; ButEnterGoodShow.Text=   (arln == 0 ? "  فواتير إدخال بضاعة  " : "  Goods entry invoices") ; button_Repetition.Text=   (arln == 0 ? "  تكرار  " : "  Repetition") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; /*buttonItem_Print.Text=   (arln == 0 ? "  طباعة  " : "  Print") ;*/ printerSetting.Text=   (arln == 0 ? "  اعدادات الطابعة  " : "  printer settings") ; Button_Search.Text=   (arln == 0 ? "  بحث  " : "  Search") ;
@@ -718,6 +721,8 @@ namespace InvAcc.Forms
                 canUpdate = value;
             }
         }
+    public   int DOption =1;
+public        int Dtype = -1;
         public FormState State
         {
             get
@@ -726,7 +731,7 @@ namespace InvAcc.Forms
             }
             set
             {
-                if (value == FormState.Edit&& VarGeneral.DeleteOption == 1)
+                if (value == FormState.Edit&& DOption == 1)
                 {
                     return;
                 }
@@ -5031,8 +5036,11 @@ namespace InvAcc.Forms
                 }
 
 
-           { Permmission = dbc.Get_PermissionID(VarGeneral.UserID); };
-                _StorePr = permission.StorePrmission.Split(',').ToList();
+           {
+                    
+                    
+                    Permmission = dbc.Get_PermissionID(VarGeneral.UserID); };
+                try { _StorePr = permission.StorePrmission.Split(',').ToList(); } catch { }
                 if (File.Exists(Application.StartupPath + "\\Script\\SecriptInv.dll"))
                 {
                     CmbUsers.Visible = true;

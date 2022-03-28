@@ -20,6 +20,7 @@ using InvAcc.Controls;
 using ProRealEstate.Forms;
 using System.Printing;
 using System.Linq;
+using TEST.Forms;
 
 namespace InvAcc
 {
@@ -160,7 +161,6 @@ namespace InvAcc
 
             //InvAcc.Properties.Settings.Default.B4 = k
 
-           
             // 
             setserve();
             //  Application.Run(new Forms.formstest("13"));
@@ -171,7 +171,8 @@ namespace InvAcc
             }
             catch
             {}
-            ; Application.Run(new FrmLog());
+            ;
+            Application.Run(new FrmLog());
             closing(null, null);
         }
         public static string getversion()

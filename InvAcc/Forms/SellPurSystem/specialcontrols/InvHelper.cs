@@ -483,6 +483,148 @@ namespace InvAcc.Forms.SellPurSystem.specialcontrols
             dbHead.ExecuteNonQuery(storedProcedure: true, "S_T_INVHED_UPDATE");
 
         }
+
+
+        public T_INVDET BindDataofItemPriceP(T_INVDET k, int ItemIndex, T_Item _Items, int SelectedIndex, double Pack, double RateValue, double xxx)
+        {
+            double x = 0;
+
+            switch (ItemIndex)
+            {
+                case 1:
+                    k.Price = (_Items.LastCost * _Items.Pack1) / RateValue;
+                    k.ItmUntPak = (_Items.Pack1);
+                    break;
+                case 2:
+                    k.Price = (_Items.LastCost * _Items.Pack2 / RateValue);
+                    k.ItmUntPak = (_Items.Pack2);
+                    break;
+                case 3:
+                    k.Price = (_Items.LastCost * _Items.Pack3 / RateValue);
+                    k.ItmUntPak = (_Items.Pack3);
+                    break;
+                case 4:
+                    k.Price = (_Items.LastCost * _Items.Pack4 / RateValue);
+                    k.ItmUntPak = (_Items.Pack4);
+                    break;
+                case 5:
+                    k.Price = (_Items.LastCost * _Items.Pack5 / RateValue);
+                    k.Price = (_Items.Pack5);
+                    break;
+            }
+
+            if (SelectedIndex == 1 && (int)_Items.LastCost.Value != 0)
+            {
+                x = (_Items.LastCost.Value * Pack / RateValue);
+            }
+            else if (SelectedIndex == 2 && (int)_Items.AvrageCost.Value != 0)
+            {
+                x = (_Items.AvrageCost.Value * Pack / RateValue);
+            }
+            else if (SelectedIndex == 3 && (int)_Items.StartCost.Value != 0)
+            {
+                x = (_Items.StartCost.Value * Pack / RateValue);
+            }
+            else if (SelectedIndex == 4 && (int)_Items.FirstCost.Value != 0)
+            {
+                x = (_Items.FirstCost.Value * Pack / RateValue);
+            }
+            k.Price = x;
+            return k;
+        }
+
+        public static T_INVDET BindDataofItemPriceSales(T_INVDET k)//, T_Item _Items)//,   string txtCustNoText = "")
+        {
+            T_Item _Items = k.T_Item;
+            int SelectedIndex = 0;
+            if (k.T_INVHED.PaymentOrderTyp.HasValue)
+                SelectedIndex = (int)k.T_INVHED.PaymentOrderTyp;
+            else SelectedIndex = -1;
+            int ItemIndex = k.T_Item.getUnit(k.ItmUnt).index;
+            string txtCustNoText = k.T_INVHED.CusVenNo;
+
+            double RateValue = (double)VarGeneral.dbshared.StockCurency(k.T_INVHED.CurTyp.ToString()).Rate;
+            double Pack = (double)k.ItmUntPak; double xxx;
+            switch (ItemIndex)
+            {
+                case 1:
+                    k.Price = (_Items.UntPri1 / RateValue);
+                    k.ItmUntPak = (_Items.Pack1);
+                    break;
+                case 2:
+                    k.Price = (_Items.UntPri2 / RateValue);
+                    k.ItmUntPak = (_Items.Pack2);
+                    break;
+                case 3:
+                    k.Price = (_Items.UntPri3 / RateValue);
+                    k.ItmUntPak = (_Items.Pack3);
+                    break;
+                case 4:
+                    k.Price = (_Items.UntPri4 / RateValue);
+                    k.ItmUntPak = (_Items.Pack4);
+                    break;
+                case 5:
+                    k.Price = (_Items.UntPri5 / RateValue);
+                    k.ItmUntPak = (_Items.Pack5);
+                    break;
+            }
+            if (SelectedIndex == 1 && _Items.Price1.HasValue)
+            {
+                k.Price = (_Items.Price1.Value / RateValue);
+            }
+            else if (SelectedIndex == 2 && _Items.Price2.HasValue)
+            {
+                k.Price = (_Items.Price2.Value / RateValue);
+            }
+            else if (SelectedIndex == 3 && _Items.Price3.HasValue)
+            {
+                k.Price = (_Items.Price3.Value / RateValue);
+            }
+            else if (SelectedIndex == 4 && _Items.Price4.HasValue)
+            {
+                k.Price = (_Items.Price4.Value / RateValue);
+            }
+            else if (SelectedIndex == 5 && _Items.Price5.HasValue)
+            {
+                k.Price = (_Items.Price5.Value / RateValue);
+            }
+            try
+            {
+                if (string.IsNullOrEmpty(txtCustNoText))
+                {
+                    return null;
+                }
+                T_AccDef q = VarGeneral.dbshared.StockAccDefWithOutBalance(txtCustNoText);
+                if (q != null && !string.IsNullOrEmpty(q.AccDef_No) && q.Price > 0)
+                {
+                    if (q.Price == 1 && _Items.Price1.HasValue)
+                    {
+                        k.Price = (_Items.Price1.Value / RateValue);
+                    }
+                    else if (q.Price == 2 && _Items.Price2.HasValue)
+                    {
+                        k.Price = (_Items.Price2.Value / RateValue);
+                    }
+                    else if (q.Price == 3 && _Items.Price3.HasValue)
+                    {
+                        k.Price = (_Items.Price3.Value / RateValue);
+                    }
+                    else if (q.Price == 4 && _Items.Price4.HasValue)
+                    {
+                        k.Price = (_Items.Price4.Value / RateValue);
+                    }
+                    else if (q.Price == 5 && _Items.Price5.HasValue)
+                    {
+                        k.Price = (_Items.Price5.Value / RateValue);
+                    }
+                }
+            }
+            catch
+            {
+            }
+            return k;
+        }
+
         public static void ConvertsetDbParameter( object k, string Name, DbType tj, object value=null)
         {
             Type t = k.GetType();

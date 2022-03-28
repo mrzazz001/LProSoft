@@ -113,12 +113,13 @@ private void InitializeComponent()
             this.ribbonBar1.Controls.Add(this.button_SrchAccFrom);
             this.ribbonBar1.Controls.Add(this.groupBox3);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonBar1.Tag= "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
             this.ribbonBar1.Size = new System.Drawing.Size(405, 251);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 1102;
+            this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // 
             // 
@@ -517,7 +518,7 @@ private void InitializeComponent()
             this.ClientSize = new System.Drawing.Size(405, 251);
             this.Controls.Add(this.ribbonBar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(InvAcc.Properties.Resources.favicon));
+            this.Icon = global::InvAcc.Properties.Resources.favicon;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "FRAccountReportToGuest";
@@ -537,8 +538,8 @@ private void InitializeComponent()
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMBalanceB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMBalanceS)).EndInit();
-            this.Icon = ((System.Drawing.Icon)(InvAcc.Properties.Resources.favicon));
             this.ResumeLayout(false);
+
         }//###########&&&&&&&&&&
 
 }
