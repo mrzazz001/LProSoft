@@ -10714,10 +10714,17 @@ namespace InvAcc.Forms
                 txtTele.ReadOnly = true;
                 txtAddress.ReadOnly = true;
                 text_Mobile.ReadOnly = true;
+
+                T_AccDef h = db.StockAccDefsByAcNO(txtCustNo.Text);
                 try
                 {
-                    T_AccDef h = db.StockAccDefsByAcNO(txtCustNo.Text);
                     text_Mobile.Text = h.Mobile;
+                }
+                catch { }
+                try
+                {
+
+                    text_CusTaxNo.Text = h.TaxNo;
                 }
                 catch { }
             }

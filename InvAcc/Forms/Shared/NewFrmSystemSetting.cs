@@ -2575,8 +2575,10 @@ namespace InvAcc.Forms.Shared
             c1FlexGrid2.SetData(62, 1, "اضهار مفاتيح التنقل بين الاصناف  والتصنيفات في نقاط البيع  ");
             c1FlexGrid2.SetData(63, 1, "الافتراضي عند اضافة فاتورة مشتريات جديده الفاتورة الخدمية  ");
             c1FlexGrid2.SetData(64, 1, "اضهار الرصيد في فواتير الاجل في الفاتورة ");
+            c1FlexGrid2.SetData(65, 1, "تثبيت ترويسة التفواتير في جميع الصفحات ");
+            c1FlexGrid2.SetData(66, 1, "تثبيت ذيل الفاتورة في جميع الصفحات ");
 
-        //   c1FlexGrid2.SetData(65, 1, " السج ");
+            //   c1FlexGrid2.SetData(65, 1, " السج ");
 
 
 
@@ -2650,6 +2652,10 @@ namespace InvAcc.Forms.Shared
             setbilloption(63, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 89));
 
             setbilloption(64, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 90));
+
+            setbilloption(65, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 91));
+
+            setbilloption(66, VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 92));
             if (init)
             {
                 setbilloption(57, true);
@@ -3457,6 +3463,15 @@ namespace InvAcc.Forms.Shared
 
 
                setting += VarGeneral.TString.ChkStatSave((bool)c1FlexGrid2.GetData(64, 2));
+                if (c1FlexGrid2.GetData(65, 2) == null) c1FlexGrid2.SetData(65, 2, false);
+
+
+                setting += VarGeneral.TString.ChkStatSave((bool)c1FlexGrid2.GetData(65, 2));
+
+                if (c1FlexGrid2.GetData(66, 2) == null) c1FlexGrid2.SetData(66, 2, false);
+
+
+                setting += VarGeneral.TString.ChkStatSave((bool)c1FlexGrid2.GetData(66, 2));
 
                 _SysSetting.Seting = setting;
                 _SysSetting.LineOfInvoices = txtLinesInv.Value;

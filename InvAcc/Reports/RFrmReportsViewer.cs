@@ -600,7 +600,8 @@ namespace InvAcc.Forms
             MainCryRep = new ReportDocument();
             string spath = Path.GetFullPath(path + n);
             MainCryRep.Load(spath);
-            if(spath.Contains("RepInvSal.rpt"))
+            if(spath.Contains("RepInvSal.rpt")|| spath.Contains("RepInvPurchase.rpt") ||
+                spath.Contains("RepInvPurchaseReturn.rpt") || spath.Contains("RepInvSalReturn.rpt"))
             {
                 KKS = 10;
             }
@@ -715,10 +716,36 @@ namespace InvAcc.Forms
             double _mergTop;
             if (KKS == 10)
             {
+                string s = new Stock_DataDataContext(VarGeneral.BranchCS).SystemSettingStock().Seting;
+
                 try
                 {
-                    string s = new Stock_DataDataContext(VarGeneral.BranchCS).SystemSettingStock().Seting;
-                    if (!VarGeneral.TString.ChkStatShow(s, 90))
+                    if (VarGeneral.TString.ChkStatShow(s, 91))
+                        MainCryRep.SetParameterValue("RepeateHeader", "True");
+                    else
+                        MainCryRep.SetParameterValue("RepeateHeader", "False");
+
+                }
+                catch
+                {
+
+                }
+                try
+                {
+                    if (VarGeneral.TString.ChkStatShow(s, 92))
+                        MainCryRep.SetParameterValue("RepeatTail", "True");
+                    else
+                        MainCryRep.SetParameterValue("RepeatTail", "False");
+
+                }
+                catch
+                {
+
+                }
+
+                try
+                {
+                        if (!VarGeneral.TString.ChkStatShow(s, 90))
                         MainCryRep.SetParameterValue("ShowBalance", "True");
                     else
                         MainCryRep.SetParameterValue("ShowBalance", "False");

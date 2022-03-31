@@ -1259,7 +1259,7 @@ END";
                 if (tb.Rows.Count>0)
                 { 
                     FastReport.Report rpt = new FastReport.Report();
-                    bool sss = ((VarGeneral.GeneralPrinter.nTyp_Setting.Substring(1, 1) == "0") ? true : false);
+                    bool sss = ((VarGeneral.GeneralPrinter.ISA4PaperType) ? true : false);
                     string en = (LangArEn == 0 ? "Reports" : "ReportsE");
                     if (sss)
                     {
