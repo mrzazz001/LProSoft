@@ -7069,6 +7069,11 @@ else
         }
         public void SetDataRt(T_INVHED value)
         {
+            try
+            {
+                ChkPriceIncludeTax.Checked = (value.PriceIncludTax == true ? true : false);
+            }
+            catch { }
             txtCrn_No.Text = value.CusVenCRN;
             switch_InSide.ValueChanged -= switch_InSide_ValueChanged;
             switch_OutSide.ValueChanged -= switch_OutSide_ValueChanged;
@@ -13264,7 +13269,11 @@ else
             //}
             return p;
         }
+        double getround3(double m1, int p)
+        {
+            return Math.Round(m1, p);
 
+        }
         private void GetInvTot()
         {
             double InvTot = 0.0;
@@ -13404,11 +13413,12 @@ else
                 CommCalculat();
                 if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 56))
                 {
-                    txtTotalAm.Value = getround2(txtTotalAm.Value, 0);
-                    txtDueAmount.Value = getround2(txtDueAmount.Value, 0);
-                    txtTotalAmLoc.Value = getround2(txtTotalAmLoc.Value, 0);
-                    txtDueAmountLoc.Value = getround2(txtDueAmountLoc.Value, 0);
+                    txtTotalAm.Value = getround3(txtTotalAm.Value, 0);
+                    txtDueAmount.Value = getround3(txtDueAmount.Value, 0);
+                    txtTotalAmLoc.Value = getround3(txtTotalAmLoc.Value, 0);
+                    txtDueAmountLoc.Value = getround3(txtDueAmountLoc.Value, 0);
                 }
+               
                 try
                 {
                     if (checkBox_CostGaidTax.Checked && txtPaymentLoc.Value + doubleInput_NetWorkLoc.Value + doubleInput_CreditLoc.Value != txtDueAmountLoc.Value - txtTotTax.Value)

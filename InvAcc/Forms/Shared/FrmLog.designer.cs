@@ -102,8 +102,8 @@ namespace InvAcc.Forms
             this.label5 = new System.Windows.Forms.Label();
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
             this.groupPanel12 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.groupPanel_BoardNo.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -663,14 +663,14 @@ namespace InvAcc.Forms
             this.labelVersion.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelVersion.ForeColor = System.Drawing.Color.Goldenrod;
             this.labelVersion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelVersion.Location = new System.Drawing.Point(481, 628);
+            this.labelVersion.Location = new System.Drawing.Point(364, 598);
             this.labelVersion.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.labelVersion.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(0, 17);
+            this.labelVersion.Size = new System.Drawing.Size(244, 17);
             this.labelVersion.TabIndex = 884;
             this.labelVersion.Text = "Version : 1.0.5";
-            this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelVersion.Click += new System.EventHandler(this.labelVersion_Click);
             this.labelVersion.MouseEnter += new System.EventHandler(this.labelVersion_MouseEnter);
             this.labelVersion.MouseLeave += new System.EventHandler(this.labelVersion_MouseLeave);
@@ -950,18 +950,17 @@ namespace InvAcc.Forms
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.LawnGreen;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(522, 647);
+            this.label5.Location = new System.Drawing.Point(372, 626);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.label5.MaximumSize = new System.Drawing.Size(0, 17);
             this.label5.Name = "label5";
             this.netResize1.SetResizeChildren(this.label5, false);
             this.netResize1.SetResizeControl(this.label5, false);
             this.netResize1.SetResizeFont(this.label5, false);
-            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.Size = new System.Drawing.Size(236, 17);
             this.label5.TabIndex = 1189;
             this.label5.Text = "DB Version: ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1012,15 +1011,6 @@ namespace InvAcc.Forms
             this.groupPanel12.Visible = false;
             this.groupPanel12.Click += new System.EventHandler(this.groupPanel1_Click);
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(219, 241);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 10;
-            this.simpleButton1.Text = "simpleButton1";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
             // buttonX4
             // 
             this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -1034,10 +1024,18 @@ namespace InvAcc.Forms
             this.buttonX4.Text = "اضافه QrCode (عروض سعر : العملاء -الموردين - طلب شراء)";
             this.buttonX4.Click += new System.EventHandler(this.buttonX4_Click);
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(219, 241);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 10;
+            this.simpleButton1.Text = "simpleButton1";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // FrmLog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(50)))), ((int)(((byte)(59)))));
             this.BackgroundImage = global::InvAcc.Properties.Resources.Log;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

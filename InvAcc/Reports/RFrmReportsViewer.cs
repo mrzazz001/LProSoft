@@ -1552,8 +1552,12 @@ namespace InvAcc.Forms
                             {
                                 if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                                 {
-                                    rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
                                     rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                                     rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                                     rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 6494;
@@ -1561,15 +1565,19 @@ namespace InvAcc.Forms
                                     try
                                     {
                                         rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                                    }
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                                     catch
                                     {
                                     }
                                 }
                                 else
                                 {
-                                    rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
                                     rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                                     rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                                     rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 3162;
@@ -1577,7 +1585,7 @@ namespace InvAcc.Forms
                                     try
                                     {
                                         rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                                    }
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                                     catch
                                     {
                                     }
@@ -1663,7 +1671,14 @@ namespace InvAcc.Forms
                             if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                             {
                                 rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                                 rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                                 rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
@@ -1810,8 +1825,12 @@ namespace InvAcc.Forms
                             {
                                 if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                                 {
-                                    rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
                                     rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                                     rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                                     rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 6494;
@@ -1819,15 +1838,19 @@ namespace InvAcc.Forms
                                     try
                                     {
                                         rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                                    }
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                                     catch
                                     {
                                     }
                                 }
                                 else
                                 {
-                                    rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
                                     rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                                     rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                                     rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 3162;
@@ -1835,7 +1858,7 @@ namespace InvAcc.Forms
                                     try
                                     {
                                         rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                                    }
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                                     catch
                                     {
                                     }
@@ -1920,7 +1943,14 @@ namespace InvAcc.Forms
                             if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                             {
                                 rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                                 rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                                 rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
@@ -6257,7 +6287,14 @@ namespace InvAcc.Forms
                 if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                 {
                     rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                    rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                     rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                     rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                     try
                     {
@@ -6294,32 +6331,40 @@ namespace InvAcc.Forms
                 {
                     if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                     {
-                        rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
+                        rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                         rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                         rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 6494;
                         rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Left = 6494;
                         try
                         {
                             rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                        }
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                         catch
                         {
                         }
                     }
                     else
                     {
-                        rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
+                        rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                         rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                         rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 3162;
                         rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Left = 3162;
                         try
                         {
                             rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                        }
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                         catch
                         {
                         }
@@ -6500,8 +6545,15 @@ namespace InvAcc.Forms
                         {
                             if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                             {
-                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
@@ -6513,12 +6565,20 @@ namespace InvAcc.Forms
                                 rpt.ReportDefinition.ReportObjects["Text7"].Width = 1700;
                                 rpt.ReportDefinition.ReportObjects["Amount1"].Width = 1700;
                                 rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                                 rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
                             }
                             else
                             {
-                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
@@ -6537,9 +6597,13 @@ namespace InvAcc.Forms
                         {
                             if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                             {
-                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
                                     rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -6548,15 +6612,21 @@ namespace InvAcc.Forms
                                 {
                                 }
                                 rpt.ReportDefinition.ReportObjects["Text28"].Width = 1632;
+rpt.ReportDefinition.ReportObjects["Text40"].Width = 1632;
                                 rpt.ReportDefinition.ReportObjects["Text28"].Left = 1156;
+rpt.ReportDefinition.ReportObjects["Text40"].Left = 1156;
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].Width = 1632;
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].Left = 1156;
                             }
                             else
                             {
-                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
                                     rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -6565,6 +6635,7 @@ namespace InvAcc.Forms
                                 {
                                 }
                                 rpt.ReportDefinition.ReportObjects["Text28"].Width = 1632;
+rpt.ReportDefinition.ReportObjects["Text40"].Width = 1632;
                                 rpt.ReportDefinition.ReportObjects["Text28"].Left = 8364;
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].Width = 1632;
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].Left = 8364;
@@ -6572,9 +6643,13 @@ namespace InvAcc.Forms
                         }
                         else if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                         {
-                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                             try
                             {
                                 rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -6589,19 +6664,34 @@ namespace InvAcc.Forms
                             }
                             catch
                             {
-                            }
-                            rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                            } rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                             rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                             rpt.ReportDefinition.ReportObjects["Text7"].Width = 2618;
+
+rpt.ReportDefinition.ReportObjects["Text32"].Width = 2618;
+
                             rpt.ReportDefinition.ReportObjects["Amount1"].Width = 2618;
                             rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                             rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
                         }
                         else
                         {
-                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                             try
                             {
                                 rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -6616,10 +6706,20 @@ namespace InvAcc.Forms
                             }
                             catch
                             {
-                            }
-                            rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                            } rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                             rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                             rpt.ReportDefinition.ReportObjects["Text7"].Width = 2618;
+
+rpt.ReportDefinition.ReportObjects["Text32"].Width = 2618;
+
                             rpt.ReportDefinition.ReportObjects["Amount1"].Width = 2618;
                             rpt.ReportDefinition.ReportObjects["Text7"].Left = 8330;
                             rpt.ReportDefinition.ReportObjects["Amount1"].Left = 8330;
@@ -6818,7 +6918,14 @@ namespace InvAcc.Forms
                     if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                     {
                         rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                         rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                         rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                         try
                         {
@@ -6854,8 +6961,15 @@ namespace InvAcc.Forms
                         {
                             if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                             {
-                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
@@ -6867,12 +6981,20 @@ namespace InvAcc.Forms
                                 rpt.ReportDefinition.ReportObjects["Text7"].Width = 1700;
                                 rpt.ReportDefinition.ReportObjects["Amount1"].Width = 1700;
                                 rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                                 rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
                             }
                             else
                             {
-                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
@@ -6891,9 +7013,13 @@ namespace InvAcc.Forms
                         {
                             if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                             {
-                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
                                     rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -6902,15 +7028,21 @@ namespace InvAcc.Forms
                                 {
                                 }
                                 rpt.ReportDefinition.ReportObjects["Text28"].Width = 1632;
+rpt.ReportDefinition.ReportObjects["Text40"].Width = 1632;
                                 rpt.ReportDefinition.ReportObjects["Text28"].Left = 1156;
+rpt.ReportDefinition.ReportObjects["Text40"].Left = 1156;
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].Width = 1632;
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].Left = 1156;
                             }
                             else
                             {
-                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
                                     rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -6919,6 +7051,7 @@ namespace InvAcc.Forms
                                 {
                                 }
                                 rpt.ReportDefinition.ReportObjects["Text28"].Width = 1632;
+rpt.ReportDefinition.ReportObjects["Text40"].Width = 1632;
                                 rpt.ReportDefinition.ReportObjects["Text28"].Left = 8364;
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].Width = 1632;
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].Left = 8364;
@@ -6926,9 +7059,13 @@ namespace InvAcc.Forms
                         }
                         else if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                         {
-                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                             try
                             {
                                 rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -6943,19 +7080,34 @@ namespace InvAcc.Forms
                             }
                             catch
                             {
-                            }
-                            rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                            } rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                             rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                             rpt.ReportDefinition.ReportObjects["Text7"].Width = 2618;
+
+rpt.ReportDefinition.ReportObjects["Text32"].Width = 2618;
+
                             rpt.ReportDefinition.ReportObjects["Amount1"].Width = 2618;
                             rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                             rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
                         }
                         else
                         {
-                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                             try
                             {
                                 rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -6970,10 +7122,20 @@ namespace InvAcc.Forms
                             }
                             catch
                             {
-                            }
-                            rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                            } rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                             rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                             rpt.ReportDefinition.ReportObjects["Text7"].Width = 2618;
+
+rpt.ReportDefinition.ReportObjects["Text32"].Width = 2618;
+
                             rpt.ReportDefinition.ReportObjects["Amount1"].Width = 2618;
                             rpt.ReportDefinition.ReportObjects["Text7"].Left = 8330;
                             rpt.ReportDefinition.ReportObjects["Amount1"].Left = 8330;
@@ -7120,32 +7282,40 @@ namespace InvAcc.Forms
                     {
                         if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                         {
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
+                            rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                             rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                             rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 6494;
                             rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Left = 6494;
                             try
                             {
                                 rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                            }
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                             catch
                             {
                             }
                         }
                         else
                         {
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
+                            rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                             rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                             rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 3162;
                             rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Left = 3162;
                             try
                             {
                                 rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                            }
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                             catch
                             {
                             }
@@ -7224,7 +7394,14 @@ namespace InvAcc.Forms
                     if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                     {
                         rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                         rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                         rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                         try
                         {
@@ -7440,7 +7617,14 @@ namespace InvAcc.Forms
                     if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                     {
                         rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                         rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                         rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                         try
                         {
@@ -7583,32 +7767,40 @@ namespace InvAcc.Forms
                     {
                         if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                         {
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
+                            rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                             rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                             rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 6494;
                             rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Left = 6494;
                             try
                             {
                                 rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                            }
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                             catch
                             {
                             }
                         }
                         else
                         {
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
+                            rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                             rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                             rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 3162;
                             rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Left = 3162;
                             try
                             {
                                 rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                            }
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                             catch
                             {
                             }
@@ -7693,7 +7885,14 @@ namespace InvAcc.Forms
                     if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                     {
                         rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                         rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                         rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                         try
                         {
@@ -7905,7 +8104,14 @@ namespace InvAcc.Forms
                     if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                     {
                         rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                         rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                         rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                         try
                         {
@@ -8117,7 +8323,14 @@ namespace InvAcc.Forms
                     if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                     {
                         rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                         rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                         rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                         try
                         {
@@ -8479,7 +8692,14 @@ namespace InvAcc.Forms
                     if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                     {
                         rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                         rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                         rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                         try
                         {
@@ -8707,7 +8927,14 @@ namespace InvAcc.Forms
                     if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                     {
                         rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                         rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                         rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                         try
                         {
@@ -8935,7 +9162,14 @@ namespace InvAcc.Forms
                     if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                     {
                         rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                         rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                         rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                         try
                         {
@@ -13881,16 +14115,20 @@ namespace InvAcc.Forms
                     {
                         if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 16))
                         {
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
+                            rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                             rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                             rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 6494;
                             rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Left = 6494;
                             try
                             {
                                 rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                            }
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                             catch
                             {
                             }
@@ -13987,7 +14225,14 @@ namespace InvAcc.Forms
                         if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                         {
                             rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                             rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                             rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                             try
                             {
@@ -14021,12 +14266,20 @@ namespace InvAcc.Forms
                         {
                             try
                             {
-                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                                 rpt.ReportDefinition.ReportObjects["Text7"].Width = 1700;
                                 rpt.ReportDefinition.ReportObjects["Amount1"].Width = 1700;
                                 rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                                 rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
                             }
                             catch
@@ -14037,9 +14290,13 @@ namespace InvAcc.Forms
                         {
                             try
                             {
-                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
                                     rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -14048,7 +14305,9 @@ namespace InvAcc.Forms
                                 {
                                 }
                                 rpt.ReportDefinition.ReportObjects["Text28"].Width = 1632;
+rpt.ReportDefinition.ReportObjects["Text40"].Width = 1632;
                                 rpt.ReportDefinition.ReportObjects["Text28"].Left = 1156;
+rpt.ReportDefinition.ReportObjects["Text40"].Left = 1156;
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].Width = 1632;
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].Left = 1156;
                             }
@@ -14060,9 +14319,14 @@ namespace InvAcc.Forms
                         {
                             try
                             {
-                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; 
                                 rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
                                     rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -14070,12 +14334,23 @@ namespace InvAcc.Forms
                                 catch
                                 {
                                 }
-                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                                 rpt.ReportDefinition.ReportObjects["Text7"].Width = 2618;
+
+rpt.ReportDefinition.ReportObjects["Text32"].Width = 2618;
+
                                 rpt.ReportDefinition.ReportObjects["Amount1"].Width = 2618;
                                 rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                                 rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
                             }
                             catch
@@ -14265,16 +14540,20 @@ namespace InvAcc.Forms
                     {
                         if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 16))
                         {
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
+                            rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                             rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                             rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 6494;
                             rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Left = 6494;
                             try
                             {
                                 rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                            }
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                             catch
                             {
                             }
@@ -14354,7 +14633,14 @@ namespace InvAcc.Forms
                         if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                         {
                             rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                             rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                             rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                             try
                             {
@@ -14395,12 +14681,21 @@ namespace InvAcc.Forms
                                 }
                                 catch
                                 {
-                                }
+                                } 
                                 rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                                 rpt.ReportDefinition.ReportObjects["Text7"].Width = 1700;
                                 rpt.ReportDefinition.ReportObjects["Amount1"].Width = 1700;
                                 rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                                 rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
                             }
                             catch
@@ -14411,9 +14706,13 @@ namespace InvAcc.Forms
                         {
                             try
                             {
-                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
                                     rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -14422,7 +14721,9 @@ namespace InvAcc.Forms
                                 {
                                 }
                                 rpt.ReportDefinition.ReportObjects["Text28"].Width = 1632;
+rpt.ReportDefinition.ReportObjects["Text40"].Width = 1632;
                                 rpt.ReportDefinition.ReportObjects["Text28"].Left = 1156;
+rpt.ReportDefinition.ReportObjects["Text40"].Left = 1156;
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].Width = 1632;
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].Left = 1156;
                             }
@@ -14434,9 +14735,13 @@ namespace InvAcc.Forms
                         {
                             try
                             {
-                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                                 try
                                 {
                                     rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -14451,12 +14756,23 @@ namespace InvAcc.Forms
                                 }
                                 catch
                                 {
-                                }
-                                rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                                } rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                                 rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                                 rpt.ReportDefinition.ReportObjects["Text7"].Width = 2618;
+
+rpt.ReportDefinition.ReportObjects["Text32"].Width = 2618;
+
                                 rpt.ReportDefinition.ReportObjects["Amount1"].Width = 2618;
                                 rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                                 rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
                             }
                             catch
@@ -15389,12 +15705,20 @@ namespace InvAcc.Forms
                             }
                             catch
                             {
-                            }
-                            rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                            } rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                             rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                             rpt.ReportDefinition.ReportObjects["Text7"].Width = 1700;
                             rpt.ReportDefinition.ReportObjects["Amount1"].Width = 1700;
                             rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                             rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
                         }
                         else
@@ -15406,8 +15730,15 @@ namespace InvAcc.Forms
                             }
                             catch
                             {
-                            }
-                            rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                            } rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                             rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                             rpt.ReportDefinition.ReportObjects["Text7"].Width = 1768;
                             rpt.ReportDefinition.ReportObjects["Amount1"].Width = 1768;
@@ -15421,7 +15752,12 @@ namespace InvAcc.Forms
                         {
                             rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
                             rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                             try
                             {
                                 rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -15430,15 +15766,23 @@ namespace InvAcc.Forms
                             {
                             }
                             rpt.ReportDefinition.ReportObjects["Text28"].Width = 1632;
+rpt.ReportDefinition.ReportObjects["Text40"].Width = 1632;
                             rpt.ReportDefinition.ReportObjects["Text28"].Left = 1156;
+rpt.ReportDefinition.ReportObjects["Text40"].Left = 1156;
                             rpt.ReportDefinition.ReportObjects["DatExper1"].Width = 1632;
                             rpt.ReportDefinition.ReportObjects["DatExper1"].Left = 1156;
                         }
                         else
                         {
-                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
+                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; 
+                            
                             rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                             try
                             {
                                 rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -15447,6 +15791,7 @@ namespace InvAcc.Forms
                             {
                             }
                             rpt.ReportDefinition.ReportObjects["Text28"].Width = 1632;
+rpt.ReportDefinition.ReportObjects["Text40"].Width = 1632;
                             rpt.ReportDefinition.ReportObjects["Text28"].Left = 8364;
                             rpt.ReportDefinition.ReportObjects["DatExper1"].Width = 1632;
                             rpt.ReportDefinition.ReportObjects["DatExper1"].Left = 8364;
@@ -15454,9 +15799,13 @@ namespace InvAcc.Forms
                     }
                     else if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                     {
-                        rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                        rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                         try
                         {
                             rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -15471,19 +15820,34 @@ namespace InvAcc.Forms
                         }
                         catch
                         {
-                        }
-                        rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                        } rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                         rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                         rpt.ReportDefinition.ReportObjects["Text7"].Width = 2618;
+
+rpt.ReportDefinition.ReportObjects["Text32"].Width = 2618;
+
                         rpt.ReportDefinition.ReportObjects["Amount1"].Width = 2618;
                         rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                         rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
                     }
                     else
                     {
-                        rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                        rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                         try
                         {
                             rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -15498,10 +15862,20 @@ namespace InvAcc.Forms
                         }
                         catch
                         {
-                        }
-                        rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                        } rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                         rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                         rpt.ReportDefinition.ReportObjects["Text7"].Width = 2618;
+
+rpt.ReportDefinition.ReportObjects["Text32"].Width = 2618;
+
                         rpt.ReportDefinition.ReportObjects["Amount1"].Width = 2618;
                         rpt.ReportDefinition.ReportObjects["Text7"].Left = 8330;
                         rpt.ReportDefinition.ReportObjects["Amount1"].Left = 8330;
@@ -15667,32 +16041,41 @@ namespace InvAcc.Forms
                 {
                     if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                     {
-                        rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
+                        rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                         rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                         rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 6494;
                         rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Left = 6494;
                         try
                         {
                             rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                        }
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                         catch
                         {
                         }
                     }
                     else
                     {
-                        rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
-                        rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
+                        rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+ try{ 
+rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+                                   
+}catch{}
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
                         rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
                         rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 3162;
                         rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Left = 3162;
                         try
                         {
                             rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-                        }
+
+rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
                         catch
                         {
                         }
@@ -15789,7 +16172,14 @@ namespace InvAcc.Forms
                 if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                 {
                     rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                    rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                     rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+}catch
+{
+}
                     rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
                     try
                     {
@@ -15832,12 +16222,20 @@ namespace InvAcc.Forms
                             }
                             catch
                             {
-                            }
-                            rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                            } rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                             rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                             rpt.ReportDefinition.ReportObjects["Text7"].Width = 1700;
                             rpt.ReportDefinition.ReportObjects["Amount1"].Width = 1700;
                             rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                             rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
                         }
                         else
@@ -15849,8 +16247,15 @@ namespace InvAcc.Forms
                             }
                             catch
                             {
-                            }
-                            rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                            } rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                             rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                             rpt.ReportDefinition.ReportObjects["Text7"].Width = 1768;
                             rpt.ReportDefinition.ReportObjects["Amount1"].Width = 1768;
@@ -15868,9 +16273,13 @@ namespace InvAcc.Forms
                     {
                         if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                         {
-                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                             try
                             {
                                 rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -15879,15 +16288,22 @@ namespace InvAcc.Forms
                             {
                             }
                             rpt.ReportDefinition.ReportObjects["Text28"].Width = 1632;
+rpt.ReportDefinition.ReportObjects["Text40"].Width = 1632;
                             rpt.ReportDefinition.ReportObjects["Text28"].Left = 1156;
+rpt.ReportDefinition.ReportObjects["Text40"].Left = 1156;
                             rpt.ReportDefinition.ReportObjects["DatExper1"].Width = 1632;
                             rpt.ReportDefinition.ReportObjects["DatExper1"].Left = 1156;
                         }
                         else
                         {
-                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
+                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; 
                             rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                             try
                             {
                                 rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -15896,6 +16312,7 @@ namespace InvAcc.Forms
                             {
                             }
                             rpt.ReportDefinition.ReportObjects["Text28"].Width = 1632;
+rpt.ReportDefinition.ReportObjects["Text40"].Width = 1632;
                             rpt.ReportDefinition.ReportObjects["Text28"].Left = 8364;
                             rpt.ReportDefinition.ReportObjects["DatExper1"].Width = 1632;
                             rpt.ReportDefinition.ReportObjects["DatExper1"].Left = 8364;
@@ -15911,9 +16328,13 @@ namespace InvAcc.Forms
                     {
                         if (VarGeneral.CurrentLang.ToString() == "0" || VarGeneral.CurrentLang.ToString() == string.Empty)
                         {
-                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                             try
                             {
                                 rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -15928,19 +16349,34 @@ namespace InvAcc.Forms
                             }
                             catch
                             {
-                            }
-                            rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                            } rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                             rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                             rpt.ReportDefinition.ReportObjects["Text7"].Width = 2618;
+
+rpt.ReportDefinition.ReportObjects["Text32"].Width = 2618;
+
                             rpt.ReportDefinition.ReportObjects["Amount1"].Width = 2618;
                             rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                             rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
                         }
                         else
                         {
-                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+ try{
+rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+}catch
+{
+}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
                             try
                             {
                                 rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
@@ -15955,10 +16391,20 @@ namespace InvAcc.Forms
                             }
                             catch
                             {
-                            }
-                            rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                            } rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+try{
+rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+ rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+}catch
+{
+}
                             rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
                             rpt.ReportDefinition.ReportObjects["Text7"].Width = 2618;
+
+rpt.ReportDefinition.ReportObjects["Text32"].Width = 2618;
+
                             rpt.ReportDefinition.ReportObjects["Amount1"].Width = 2618;
                             rpt.ReportDefinition.ReportObjects["Text7"].Left = 8330;
                             rpt.ReportDefinition.ReportObjects["Amount1"].Left = 8330;

@@ -7,7 +7,7 @@ using DevComponents.Editors;
 using Framework.Data;
 using InputKey;
 using ProShared.GeneralM;using ProShared;
-using ProShared.Stock_Data;
+using ProShared.Stock_Data; 
 using Library.RepShow;
 using Microsoft.Win32;
 using SSSDateTime.Date;
@@ -4346,6 +4346,11 @@ namespace InvAcc.Forms
         {
             txtGDate.SelectAll();
         }
+        double getround3(double m1, int p)
+        {
+            return Math.Round(m1, p);
+
+        }
         private void GetInvTot()
         {
             double InvTot = 0.0;
@@ -4487,11 +4492,12 @@ namespace InvAcc.Forms
             }
             if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 56))
             {
-                txtTotalAm.Value = Math.Round(txtTotalAm.Value, 0);
-                txtDueAmount.Value = Math.Round(txtDueAmount.Value, 0);
-                txtTotalAmLoc.Value = Math.Round(txtTotalAmLoc.Value, 0);
-                txtDueAmountLoc.Value = Math.Round(txtDueAmountLoc.Value, 0);
+                txtTotalAm.Value = getround3(txtTotalAm.Value, 0);
+                txtDueAmount.Value = getround3(txtDueAmount.Value, 0);
+                txtTotalAmLoc.Value = getround3(txtTotalAmLoc.Value, 0);
+                txtDueAmountLoc.Value = getround3(txtDueAmountLoc.Value, 0);
             }
+           
             try
             {
                 if (checkBox_CostGaidTax.Checked && txtPaymentLoc.Value + doubleInput_NetWorkLoc.Value + doubleInput_CreditLoc.Value != txtDueAmountLoc.Value - txtTotTax.Value)
@@ -5672,6 +5678,8 @@ namespace InvAcc.Forms
         public void SetDataRt(T_INVHED value)
         {
             data_this.CusVenCRN = txtCrn_No.Text;
+            ChkPriceIncludeTax.Value = (value.PriceIncludTax == true ? true : false);
+
             switchButton_Lock.ValueChanged -= switchButton_Lock_ValueChanged;
             try
             {

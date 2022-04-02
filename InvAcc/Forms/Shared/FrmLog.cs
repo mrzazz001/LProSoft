@@ -284,7 +284,7 @@ namespace InvAcc.Forms
             {
 
 
-              
+                AutoScaleDimensions = new SizeF(1024, 772);
 
 
                 RegistryKey hKeyNew = Registry.CurrentUser.OpenSubKey("Software\\MrdHrdw\\ItIntel", true);

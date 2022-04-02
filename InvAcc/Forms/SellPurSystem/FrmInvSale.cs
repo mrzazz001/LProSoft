@@ -6299,6 +6299,11 @@ public        int Dtype = -1;
             return Math.Round(m1, VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? VarGeneral.DecimalNo : 2);
 
              }
+        double getround3(double m1, int p)
+        {
+            return Math.Round(m1, p);
+
+        }
         private void txtTime_Leave(object sender, EventArgs e)
         {
             try
@@ -7341,6 +7346,12 @@ public        int Dtype = -1;
         }
         public void SetDataRt(T_INVHED value)
         {
+            try
+            {
+                ChkPriceIncludeTax.Value = (value.PriceIncludTax == true ? true : false);
+            }
+            catch { }
+
             txtCredit2.Tag = "";
             txtCredit2.Text = "";
             txtDebit2.Tag = "";
@@ -14610,10 +14621,10 @@ public        int Dtype = -1;
                 CommCalculat();
                 if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 56))
                 {
-                    txtTotalAm.Value = getround2(txtTotalAm.Value, 0);
-                    txtDueAmount.Value = getround2(txtDueAmount.Value, 0);
-                    txtTotalAmLoc.Value = getround2(txtTotalAmLoc.Value, 0);
-                    txtDueAmountLoc.Value = getround2(txtDueAmountLoc.Value, 0);
+                    txtTotalAm.Value = getround3(txtTotalAm.Value, 0);
+                    txtDueAmount.Value = getround3(txtDueAmount.Value, 0);
+                    txtTotalAmLoc.Value = getround3(txtTotalAmLoc.Value, 0);
+                    txtDueAmountLoc.Value = getround3(txtDueAmountLoc.Value, 0);
                 }
                 try
                 {
@@ -17832,6 +17843,7 @@ public        int Dtype = -1;
         }
         void SetDatass(T_INVHED v)
         {
+            
         }
         private void Button_Save_Click_1(object sender, EventArgs e)
         {
