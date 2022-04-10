@@ -20467,7 +20467,67 @@ execute(@ss)
 
         private void buttonItem36_Click(object sender, EventArgs e)
         {
-            VarGeneral.chekprintersettings();
+            try
+            {
+                this.db.ExecuteCommand(@"
+WITH cte AS(
+    SELECT
+       InvID,
+        ROW_NUMBER() OVER(
+            PARTITION BY
+              InvID
+            ORDER BY
+                 InvID
+        ) row_num
+     FROM
+        T_INVSETTING
+)
+DELETE FROM cte
+WHERE row_num > 1;
+                ", new object[0]);
+
+            }
+            catch
+            {
+
+            }
+
+
+            try
+            {
+                this.db.ExecuteCommand(@"
+WITH cte AS (
+    SELECT 
+       InvID,User_ID,
+        ROW_NUMBER() OVER (
+            PARTITION BY 
+              InvID,User_ID
+            ORDER BY 
+                 InvID,User_ID
+        ) row_num
+     FROM 
+        T_Printers
+)
+DELETE FROM cte
+WHERE row_num > 1;
+
+                ", new object[0]);
+
+            }
+            catch
+            {
+
+            }
+            try
+            {
+                VarGeneral.insertMessingCategoriesSettings();
+            }
+            catch { }
+            try
+            {
+                VarGeneral.insertMessingCategoriesPrinterSettengs();
+            }
+            catch { }
         }
 
         private void TTUSr_Click(object sender, EventArgs e)
@@ -20489,6 +20549,21 @@ execute(@ss)
                     catch { }
                 }
             }
+        }
+
+        private void buttonItem37_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                VarGeneral.insertMessingCategoriesSettings();
+            }
+            catch { }
+            try
+            {
+                VarGeneral.insertMessingCategoriesPrinterSettengs();
+            }
+            catch { }
         }
     }
 }

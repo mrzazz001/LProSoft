@@ -503,6 +503,7 @@ namespace InvAcc.Forms
             this.tabControl1 = new JacksiroKe.MdiTabCtrl.TabControl();
             this.c1Button1 = new C1.Win.C1Input.C1Button();
             this.onlineworning2 = new System.Windows.Forms.Panel();
+            this.buttonItem37 = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.mainmenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
@@ -717,7 +718,8 @@ namespace InvAcc.Forms
             this.buttonItem_Megration,
             this.buttonItem33,
             this.buttonItem35,
-            this.buttonItem36});
+            this.buttonItem36,
+            this.buttonItem37});
             this.buttonItem_ImportExcels.Text = "عمليـــات آخرى";
             // 
             // buttonItem_ImporItems
@@ -4775,10 +4777,10 @@ namespace InvAcc.Forms
             this.labelItem_Level,
             this.labelItem_Reg});
             this.metroToolbar_main.ItemSpacing = 12;
-            this.metroToolbar_main.Location = new System.Drawing.Point(0, 694);
+            this.metroToolbar_main.Location = new System.Drawing.Point(0, 730);
             this.metroToolbar_main.Name = "metroToolbar_main";
             this.metroToolbar_main.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.metroToolbar_main.Size = new System.Drawing.Size(1028, 55);
+            this.metroToolbar_main.Size = new System.Drawing.Size(1028, 19);
             this.metroToolbar_main.TabIndex = 1086;
             this.metroToolbar_main.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
@@ -4897,7 +4899,7 @@ namespace InvAcc.Forms
             this.panelWarning.Controls.Add(this.label_SupportTimer);
             this.panelWarning.Controls.Add(this.warningBox);
             this.panelWarning.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelWarning.Location = new System.Drawing.Point(0, 665);
+            this.panelWarning.Location = new System.Drawing.Point(0, 701);
             this.panelWarning.Name = "panelWarning";
             this.panelWarning.Size = new System.Drawing.Size(1028, 29);
             this.panelWarning.TabIndex = 1088;
@@ -4987,7 +4989,7 @@ namespace InvAcc.Forms
             this.tabControl1.Location = new System.Drawing.Point(0, 181);
             this.tabControl1.MenuRenderer = null;
             this.tabControl1.Name = "tabControl1";
-            this.tabControl1.Size = new System.Drawing.Size(1028, 484);
+            this.tabControl1.Size = new System.Drawing.Size(1028, 520);
             this.tabControl1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
             this.tabControl1.TabCloseButtonImage = null;
             this.tabControl1.TabCloseButtonImageDisabled = null;
@@ -5026,6 +5028,12 @@ namespace InvAcc.Forms
             this.onlineworning2.Size = new System.Drawing.Size(519, 248);
             this.onlineworning2.TabIndex = 1084;
             this.onlineworning2.Visible = false;
+            // 
+            // buttonItem37
+            // 
+            this.buttonItem37.Name = "buttonItem37";
+            this.buttonItem37.Text = "ادراج اعدادات التصنيفات الغير مدخله";
+            this.buttonItem37.Click += new System.EventHandler(this.buttonItem37_Click);
             // 
             // Frm_Main
             // 
@@ -5561,5 +5569,6 @@ namespace InvAcc.Forms
         private System.Windows.Forms.Panel onlineworning2;
         private C1.Win.C1Input.C1Button c1Button1;
         private DevComponents.DotNetBar.ButtonItem buttonItem36;
+        private DevComponents.DotNetBar.ButtonItem buttonItem37;
     }
 }

@@ -872,7 +872,7 @@ namespace InvAcc.Forms
             this.checkBox_NetWork.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_NetWork.Location = new System.Drawing.Point(28, 21);
             this.checkBox_NetWork.Name = "checkBox_NetWork";
-            this.checkBox_NetWork.Size = new System.Drawing.Size(63, 16);
+            this.checkBox_NetWork.Size = new System.Drawing.Size(68, 17);
             this.checkBox_NetWork.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_NetWork.TabIndex = 1022;
             this.checkBox_NetWork.Text = "شبكـــة";
@@ -892,7 +892,7 @@ namespace InvAcc.Forms
             this.checkBox_Credit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_Credit.Location = new System.Drawing.Point(110, 21);
             this.checkBox_Credit.Name = "checkBox_Credit";
-            this.checkBox_Credit.Size = new System.Drawing.Size(54, 16);
+            this.checkBox_Credit.Size = new System.Drawing.Size(58, 17);
             this.checkBox_Credit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_Credit.TabIndex = 16;
             this.checkBox_Credit.Text = "أجـــل";
@@ -913,7 +913,7 @@ namespace InvAcc.Forms
             this.checkBox_Chash.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_Chash.Location = new System.Drawing.Point(178, 21);
             this.checkBox_Chash.Name = "checkBox_Chash";
-            this.checkBox_Chash.Size = new System.Drawing.Size(60, 16);
+            this.checkBox_Chash.Size = new System.Drawing.Size(65, 17);
             this.checkBox_Chash.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_Chash.TabIndex = 15;
             this.checkBox_Chash.Text = "نقـــدي";
@@ -1009,7 +1009,7 @@ namespace InvAcc.Forms
             this.button_opendraft.Checked = true;
             this.button_opendraft.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.button_opendraft.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button_opendraft.Location = new System.Drawing.Point(31, 3);
+            this.button_opendraft.Location = new System.Drawing.Point(34, 4);
             this.button_opendraft.Name = "button_opendraft";
             this.button_opendraft.Size = new System.Drawing.Size(113, 24);
             this.button_opendraft.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1032,7 +1032,7 @@ namespace InvAcc.Forms
             this.button_Draft.Checked = true;
             this.button_Draft.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.button_Draft.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button_Draft.Location = new System.Drawing.Point(151, 3);
+            this.button_Draft.Location = new System.Drawing.Point(154, 4);
             this.button_Draft.Name = "button_Draft";
             this.button_Draft.Size = new System.Drawing.Size(113, 24);
             this.button_Draft.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -2026,7 +2026,7 @@ namespace InvAcc.Forms
             superTabPanelItemColorTable1.Background = superTabLinearGradientColorTable2;
             superTabPanelColorTable1.Bottom = superTabPanelItemColorTable1;
             this.superTabControlPanel3.PanelColor = superTabPanelColorTable1;
-            this.superTabControlPanel3.Size = new System.Drawing.Size(968, 106);
+            this.superTabControlPanel3.Size = new System.Drawing.Size(968, 104);
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.superTabItem_items;
             // 
@@ -2920,7 +2920,7 @@ namespace InvAcc.Forms
             this.checkBox_GaidBankComm.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_GaidBankComm.Location = new System.Drawing.Point(7, 45);
             this.checkBox_GaidBankComm.Name = "checkBox_GaidBankComm";
-            this.checkBox_GaidBankComm.Size = new System.Drawing.Size(97, 16);
+            this.checkBox_GaidBankComm.Size = new System.Drawing.Size(103, 17);
             this.checkBox_GaidBankComm.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_GaidBankComm.TabIndex = 1156;
             this.checkBox_GaidBankComm.Text = "سند محاسبي";
@@ -3135,7 +3135,7 @@ namespace InvAcc.Forms
             this.checkBox_GaidDis.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_GaidDis.Location = new System.Drawing.Point(7, 44);
             this.checkBox_GaidDis.Name = "checkBox_GaidDis";
-            this.checkBox_GaidDis.Size = new System.Drawing.Size(97, 16);
+            this.checkBox_GaidDis.Size = new System.Drawing.Size(103, 17);
             this.checkBox_GaidDis.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_GaidDis.TabIndex = 1156;
             this.checkBox_GaidDis.Text = "سند محاسبي";
@@ -3297,7 +3297,7 @@ namespace InvAcc.Forms
             this.checkBox_CostGaidTax.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_CostGaidTax.Location = new System.Drawing.Point(7, 44);
             this.checkBox_CostGaidTax.Name = "checkBox_CostGaidTax";
-            this.checkBox_CostGaidTax.Size = new System.Drawing.Size(97, 16);
+            this.checkBox_CostGaidTax.Size = new System.Drawing.Size(103, 17);
             this.checkBox_CostGaidTax.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_CostGaidTax.TabIndex = 1144;
             this.checkBox_CostGaidTax.Text = "سند محاسبي";
@@ -3912,7 +3912,7 @@ namespace InvAcc.Forms
             superTabPanelItemColorTable4.Background = superTabLinearGradientColorTable9;
             superTabPanelColorTable4.Bottom = superTabPanelItemColorTable4;
             this.superTabControlPanel1.PanelColor = superTabPanelColorTable4;
-            this.superTabControlPanel1.Size = new System.Drawing.Size(968, 106);
+            this.superTabControlPanel1.Size = new System.Drawing.Size(968, 104);
             this.superTabControlPanel1.TabIndex = 1;
             // 
             // superTabControlPanel9
@@ -3920,7 +3920,7 @@ namespace InvAcc.Forms
             this.superTabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel9.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel9.Name = "superTabControlPanel9";
-            this.superTabControlPanel9.Size = new System.Drawing.Size(968, 106);
+            this.superTabControlPanel9.Size = new System.Drawing.Size(968, 104);
             this.superTabControlPanel9.TabIndex = 4;
             // 
             // checkBoxItem_BarCode

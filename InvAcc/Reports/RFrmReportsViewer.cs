@@ -133,9 +133,10 @@ namespace InvAcc.Forms
         {
             get
             {
-                if (dbInstance == null)
+                dbInstance = null;
+               // if (dbInstance == null)
                 {
-                    dbInstance = VarGeneral.dbshared;
+                    dbInstance = new Stock_DataDataContext(VarGeneral.BranchCS); 
                 }
                 return dbInstance;
             }
@@ -600,7 +601,7 @@ namespace InvAcc.Forms
             MainCryRep = new ReportDocument();
             string spath = Path.GetFullPath(path + n);
             MainCryRep.Load(spath);
-            if(spath.Contains("RepInvSal.rpt")|| spath.Contains("RepInvPurchase.rpt") ||
+            if(spath.Contains("RepInvSal.rpt")|| spath.Contains("RepInvPurchase.rpt") || spath.Contains("RepInvCustQutation.rpt") ||
                 spath.Contains("RepInvPurchaseReturn.rpt") || spath.Contains("RepInvSalReturn.rpt"))
             {
                 KKS = 10;
@@ -708,6 +709,61 @@ namespace InvAcc.Forms
             MainCryRep.Load(spath);
             return MainCryRep;
         }
+        void hidmcoluns2(ReportDocument rpt)
+        {
+
+            rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true; 
+            rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+            try
+            {
+                rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+                rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+            }
+            catch
+            {
+            }
+            rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
+            try
+            {
+                rpt.ReportDefinition.ReportObjects["Line22t"].ObjectFormat.EnableSuppress = true;
+            }
+            catch
+            {
+            }
+            rpt.ReportDefinition.ReportObjects["Text7"].Width = 1700;
+            rpt.ReportDefinition.ReportObjects["Amount1"].Width = 1700;
+            rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+         //   rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
+            rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
+        }
+        void hidmcoluns(ReportDocument rpt)
+        {
+            rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; 
+            rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+            try
+            {
+                rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+                rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+            }
+            catch
+            {
+            }
+            rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+            try
+            {
+                rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
+            }
+            catch
+            {
+            }
+
+            rpt.ReportDefinition.ReportObjects["Text28"].Width = 1632;
+            rpt.ReportDefinition.ReportObjects["Text40"].Width = 1632;
+            rpt.ReportDefinition.ReportObjects["Text28"].Left = 1156;
+            rpt.ReportDefinition.ReportObjects["Text40"].Left = 1156;
+        }
         void setpagesetting(ReportDocument rpt)
         {
             int vLines; PaperOrientation vType; string vPeaperNm; int vReplay; string _PrintNm;
@@ -729,6 +785,42 @@ namespace InvAcc.Forms
                 catch
                 {
 
+                }
+                int kk = 0;
+                if (VarGeneral.TString.ChkStatShow(db.SystemSettingStock().Seting, 92) == true)
+                {
+                    foreach (DataRow r in VarGeneral.RepData.Tables[0].Rows)
+                    {
+                        try
+                        {
+                            if (r["RunCod"] == "") kk++;
+
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+                    if (VarGeneral.RepData.Tables[0].Rows.Count - 1 == kk)
+                        hidmcoluns(rpt);
+                }
+                if (VarGeneral.TString.ChkStatShow(db.SystemSettingStock().Seting, 91))
+                {
+                    kk = 0;
+                    foreach (DataRow r in VarGeneral.RepData.Tables[0].Rows)
+                    {
+                        try
+                        {
+                            if (r["DatExper"] == "") kk++;
+
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+                    if (VarGeneral.RepData.Tables[0].Rows.Count - 1 == kk)
+                        hidmcoluns2(rpt);
                 }
                 try
                 {
@@ -3480,7 +3572,7 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
                                 if ((orientationSetting.GetValueOrDefault() != 1 ? 0 : (orientationSetting.HasValue == true ? 1 : 0)) == 0)
                                 {
                                     this.STEP_Cachier_1();
-                                    if ((this.db.StockPrinterSetting(VarGeneral.UserID, 1).InvInfo.ISdirectPrinting ? true : this.BarcodSts))
+                                  //  if ((this.db.StockPrinterSetting(VarGeneral.UserID, 1).ISdirectPrinting ? true : this.BarcodSts))
                                     {
                                         this.STEP_Cachier_2();
                                     }
@@ -6532,7 +6624,8 @@ rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSu
                 catch
                 {
                 }
-   setitemsoptionsRpt(_InvSetting,rpt);setitemsoptionsRpt2(_InvSetting,rpt); rpt.SetParameterValue("UserName", vUsrNmA);
+   setitemsoptionsRpt(_InvSetting,rpt);setitemsoptionsRpt2(_InvSetting,rpt);
+                rpt.SetParameterValue("UserName", vUsrNmA);
                 rpt.SetParameterValue("BranchName", vBranchNmA);
                 rpt.SetParameterValue("UsrNamE", vUsrNmE);
                 rpt.SetParameterValue("BranchNameE", vBranchNmE);
@@ -13301,7 +13394,7 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
 
                     try
                     {
-                if(f)      r["LineDetails"] = s3;
+                if(f&&VarGeneral.SSSLev!="R")      r["LineDetails"] = s3;
                     }
                     catch
                     { }
@@ -13499,6 +13592,7 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
                 vCustNm = "";
             }
             string vGdat;
+            VarGeneral.printersNames.Clear();
             try
             {
                 vGdat = VarGeneral.RepData.Tables[0].Rows[1]["GDat"].ToString();
@@ -13581,6 +13675,7 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
                 }
             }
             VarGeneral.RepData.Tables[0].Rows.RemoveAt(0);
+           
             DataRowCollection row;
             row = VarGeneral.RepData.Tables[0].Rows;
 
@@ -13594,28 +13689,310 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
                        select s).Distinct().ToList();
             try
             {
-                for (int i = 0; i < (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? myData2.Count() : myData.Count()); i++)
+                bool typ = VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33);
+
+                for (int i = 0; i < (typ ? myData2.Count() : myData.Count()); i++)
                 {
                     new T_INVSETTING();
                     T_Printer _InvSetting;
 
-                    if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33))
                     {
-                        _InvSetting = this.db.StockInvSettingInvoicesDefPrinters(myData2[i], VarGeneral.InvTyp);
+                        _InvSetting = (typ ? db.StockInvSettingInvoicesDefPrinter(VarGeneral.UserID, myData2[i]) : db.StockInvSettingInvoices(VarGeneral.UserID, myData[i]).InvpRINTERInfo);
                     }
-                    else
-                    {
-                        _InvSetting = this.db.StockInvSettingInvoicess(myData[i]);
-                    }
-                    if (_InvSetting.InvInfo.PrintCat.GetValueOrDefault())
-                    {
-                        continue;
-                    }
+                   
                     ReportDocument rpt;
                     DataSet newData;
                     DataRow[] query;
                     ids = _InvSetting.InvID;
+                    if (_InvSetting.InvInfo.PrintCat.Value)
+                    {
+                        continue;
+                    }
                     if (_InvSetting.ISCashierType)
+                    {
+                        try
+                        {
+                            if (base.Tag.ToString() == "0")
+                            {
+                                try
+                                {
+                                    if (VarGeneral.gUserName == "runsetting")
+                                    {
+                                        if (File.Exists(Application.StartupPath + "\\Reps\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvoicCachier.rpt"))
+                                        {
+                                            this.MainCryRep.FileName = Application.StartupPath + "\\Reps\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvoicCachier.rpt";
+                                        }
+                                        else
+                                        {
+                                            this.MainCryRep = getdoc("InvAcc.Reports.RepInvoicCachier");
+                                        }
+                                    }
+                                    else if (File.Exists(Application.StartupPath + "\\Reps\\RepInvoicCachier.rpt"))
+                                    {
+                                        this.MainCryRep.FileName = Application.StartupPath + "\\Reps\\RepInvoicCachier.rpt";
+                                    }
+                                    else
+                                    {
+                                        this.MainCryRep = getdoc("InvAcc.Reports.RepInvoicCachier");
+                                    }
+                                }
+                                catch
+                                {
+                                    this.MainCryRep = getdoc("InvAcc.Reports.RepInvoicCachier");
+                                }
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    if (VarGeneral.gUserName == "runsetting")
+                                    {
+                                        if (File.Exists(Application.StartupPath + "\\RepsE\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvoicCachier.rpt"))
+                                        {
+                                            this.MainCryRep.FileName = Application.StartupPath + "\\RepsE\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvoicCachier.rpt";
+                                        }
+                                        else
+                                        {
+                                            this.MainCryRep = getdoc("InvAcc.ReportsE.RepInvoicCachier");
+                                        }
+                                    }
+                                    else if (File.Exists(Application.StartupPath + "\\RepsE\\RepInvoicCachier.rpt"))
+                                    {
+                                        this.MainCryRep.FileName = Application.StartupPath + "\\RepsE\\RepInvoicCachier.rpt";
+                                    }
+                                    else
+                                    {
+                                        this.MainCryRep = getdoc("InvAcc.ReportsE.RepInvoicCachier");
+                                    }
+                                }
+                                catch
+                                {
+                                    this.MainCryRep = getdoc("InvAcc.ReportsE.RepInvoicCachier");
+                                }
+                            }
+                            rpt = this.MainCryRep;
+                            newData = new DataSet();
+
+
+                            query = VarGeneral.RepData.Tables[0].Select(typ ? ("defPrn = '" + myData2[i] + "'") : ("ItmCat = " + myData[i]));
+                            string s = "will send these Itmes";
+                            foreach (DataRow d in query)
+                                try { s += "-" + d["ItmDes"].ToString(); } catch { }
+                            s += "  To Printer +" + _InvSetting.defPrn;
+                            VarGeneral.printersNames.Add(s);
+                            if (query.Count() <= 0)
+                            {
+                                continue;
+                            }
+                            newData.Tables.Add(query.CopyToDataTable());
+                            rpt.SetDataSource(newData.Tables[0]);
+                            setTarwisaa(rpt);
+
+                            try
+                            {
+                                if (!VarGeneral.TString.ChkStatShow(_InvSetting.InvInfo.TaxOptions, 1))
+                                {
+                                    rpt.ReportDefinition.ReportObjects["TextTotTax"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.ReportObjects["TotTax1"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.ReportObjects["TextTaxHeader"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.ReportObjects["TaxNo1"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.Sections["DetailSection5"].SectionFormat.EnableSuppress = true;
+                                }
+                            }
+                            catch
+                            {
+                            }
+                            try
+                            {
+                                if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 64))
+                                {
+                                    rpt.ReportDefinition.Sections["DetailSection5"].SectionFormat.EnableSuppress = true;
+                                }
+                            }
+                            catch
+                            {
+                            }
+                            try
+                            {
+                                rpt.SetParameterValue("CompanyFax", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 29) ? "Show" : "Hide");
+                            }
+                            catch
+                            {
+                            }
+                            try
+                            {
+                                rpt.SetParameterValue("CompanyFaxE", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 43) ? "Show" : "Hide");
+                            }
+                            catch
+                            {
+                            }
+                            try
+                            {
+                                if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 43))
+                                {
+                                    rpt.ReportDefinition.ReportObjects["Text14"].Width = rpt.ReportDefinition.ReportObjects["Text14"].Width * 2;
+                                    rpt.ReportDefinition.ReportObjects["Amount1"].Width = rpt.ReportDefinition.ReportObjects["Amount1"].Width * 2;
+                                    if (base.Tag.ToString() != "0")
+                                    {
+                                        rpt.ReportDefinition.ReportObjects["Text14"].Left = rpt.ReportDefinition.ReportObjects["Text7"].Left;
+                                        rpt.ReportDefinition.ReportObjects["Amount1"].Left = rpt.ReportDefinition.ReportObjects["Text7"].Left;
+                                    }
+                                }
+                            }
+                            catch
+                            {
+                            }
+                            try
+                            {
+                                rpt.SetParameterValue("IsCashCredit", VarGeneral.IsCashCredit ? "1" : "0");
+                            }
+                            catch
+                            {
+                            }
+                            try
+                            {
+                                rpt.SetParameterValue("vDecimal", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? "1" : "0");
+                            }
+                            catch
+                            {
+                            }
+                            try
+                            {
+                                rpt.SetParameterValue("IsTotWithTax", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 65) ? "1" : "0");
+                            }
+                            catch
+                            {
+                            }
+                            try
+                            {
+                                (rpt.ReportDefinition.ReportObjects["TextCostCenter"] as TextObject).Text = VarGeneral.CostCenterlbl;
+                            }
+                            catch
+                            {
+                            }
+                            try
+                            {
+                                (rpt.ReportDefinition.ReportObjects["TextMndob"] as TextObject).Text = VarGeneral.Mndoblbl;
+                            }
+                            catch
+                            {
+                            }
+                            rpt.SetParameterValue("CompanyPic", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) && VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 35)) ? "Show" : "Hide");
+                            rpt.SetParameterValue("vPage", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 12) ? "Show" : "Hide");
+                            rpt.SetParameterValue("vTitle", VarGeneral.vTitle);
+                            try
+                            {
+                                if (base.Tag.ToString() == "0")
+                                {
+                                    rpt.SetParameterValue("HDate", (!string.IsNullOrEmpty(_InvSetting.invGdADesc)) ? _InvSetting.invGdADesc : "شكرا\u064c لكم");
+                                }
+                                else
+                                {
+                                    rpt.SetParameterValue("HDate", (!string.IsNullOrEmpty(_InvSetting.invGdEDesc)) ? _InvSetting.invGdEDesc : "Thank you");
+                                }
+                            }
+                            catch
+                            {
+                                rpt.SetParameterValue("HDate", "");
+                            }
+                            rpt.SetParameterValue("vSts", false);
+                            rpt.SetParameterValue("vLines", 1);
+                            if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.LineDetailSts, this.vStr(VarGeneral.InvTyp)))
+                            {
+                                rpt.SetParameterValue("LineDetailNa", VarGeneral.Settings_Sys.LineDetailNameA);
+                                rpt.SetParameterValue("LineDetailNa_Eng", VarGeneral.Settings_Sys.LineDetailNameE);
+                            }
+                            else
+                            {
+                                rpt.SetParameterValue("LineDetailNa", "");
+                                rpt.SetParameterValue("LineDetailNa_Eng", "");
+                            }
+                            rpt.SetParameterValue("UserName", vUsrNmA);
+                            rpt.SetParameterValue("BranchName", vBranchNmA);
+                            rpt.SetParameterValue("UsrNamE", vUsrNmE);
+                            rpt.SetParameterValue("BranchNameE", vBranchNmE);
+                            rpt.SetParameterValue("UsrNamE", vUsrNmE);
+                            rpt.SetParameterValue("BranchNameE", vBranchNmE);
+                            rpt.SetParameterValue("InvNo", vInvNo);
+                            rpt.SetParameterValue("Gdat", vGdat);
+                            rpt.SetParameterValue("Hdat", vHdat);
+                            rpt.SetParameterValue("InvId", vInvID);
+                            rpt.SetParameterValue("vCash", vInvCash);
+                            rpt.SetParameterValue("TaxNo", TaxNo);
+                            rpt.SetParameterValue("vCustNo", vCustNo);
+                            rpt.SetParameterValue("vCustNm", vCustNm);
+                            try
+                            {
+                                if (VarGeneral._IsPOS || VarGeneral._IsWaiter)
+                                {
+                                    rpt.SetParameterValue("TableNo_", vTableNo);
+                                    rpt.SetParameterValue("TableTyp_", vTableTyp);
+                                    rpt.SetParameterValue("Waiter_", vWaiterNm);
+                                    switch (orderTyp)
+                                    {
+                                        case "0":
+                                            rpt.SetParameterValue("OrderTyp", (base.Tag.ToString() == "0") ? "محلي" : "Local");
+                                            break;
+                                        case "1":
+                                            rpt.SetParameterValue("OrderTyp", (base.Tag.ToString() == "0") ? "سفري" : "Take Away");
+                                            break;
+                                        case "2":
+                                            rpt.SetParameterValue("OrderTyp", (base.Tag.ToString() == "0") ? "توصيل" : "Delivery");
+                                            break;
+                                        default:
+                                            rpt.SetParameterValue("OrderTyp", "");
+                                            break;
+                                    }
+                                }
+                                else
+                                {
+                                    rpt.SetParameterValue("TableNo_", "");
+                                    rpt.SetParameterValue("TableTyp_", "");
+                                    rpt.SetParameterValue("Waiter_", "");
+                                    rpt.SetParameterValue("OrderTyp", "");
+                                }
+                            }
+                            catch
+                            {
+                                rpt.SetParameterValue("TableNo_", "");
+                                rpt.SetParameterValue("TableTyp_", "");
+                                rpt.SetParameterValue("Waiter_", "");
+                                rpt.SetParameterValue("OrderTyp", "");
+                            }
+                            try
+                            {
+                                if (string.IsNullOrEmpty(vInvID) || vInvID == "0")
+                                {
+                                    if (base.Tag.ToString() == "0")
+                                    {
+                                        rpt.ReportDefinition.ReportObjects["InvNo1"].Width = 2108;
+                                        rpt.ReportDefinition.ReportObjects["InvNo1"].Left = 204;
+                                    }
+                                    else
+                                    {
+                                        rpt.ReportDefinition.ReportObjects["InvNo1"].Width = 2006;
+                                        rpt.ReportDefinition.ReportObjects["InvNo1"].Left = 1360;
+                                    }
+                                }
+                            }
+                            catch
+                            {
+                            }
+                            if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 35))
+                            {
+                                try { rpt.SetParameterValue("CATPrint", "True"); } catch { }
+                            }
+                            //try { rpt.SetParameterValue("CATPrint", "4False"); } catch { }
+
+                            this.PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
+
+                            continue;
+                        } catch (Exception ex)
+                        {
+                            MessageBox.Show("الرجاء الاتصال بالدعم الفني وارفاق صورة للرساله"+ex.Message);
+                        }
+                    }
+                    else
                     {
                         if (base.Tag.ToString() == "0")
                         {
@@ -13623,27 +14000,27 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
                             {
                                 if (VarGeneral.gUserName == "runsetting")
                                 {
-                                    if (File.Exists(Application.StartupPath + "\\Reps\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvoicCachier.rpt"))
+                                    if (File.Exists(Application.StartupPath + "\\Reps\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvSal.rpt"))
                                     {
-                                        this.MainCryRep.FileName = Application.StartupPath + "\\Reps\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvoicCachier.rpt";
+                                        this.MainCryRep.FileName = Application.StartupPath + "\\Reps\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvSal.rpt";
                                     }
                                     else
                                     {
-                                        this.MainCryRep = getdoc("InvAcc.Reports.RepInvoicCachier");
+                                        this.MainCryRep = getdoc("InvAcc.Reports.RepInvSal");
                                     }
                                 }
-                                else if (File.Exists(Application.StartupPath + "\\Reps\\RepInvoicCachier.rpt"))
+                                else if (File.Exists(Application.StartupPath + "\\Reps\\RepInvSal.rpt"))
                                 {
-                                    this.MainCryRep.FileName = Application.StartupPath + "\\Reps\\RepInvoicCachier.rpt";
+                                    this.MainCryRep.FileName = Application.StartupPath + "\\Reps\\RepInvSal.rpt";
                                 }
                                 else
                                 {
-                                    this.MainCryRep = getdoc("InvAcc.Reports.RepInvoicCachier");
+                                    this.MainCryRep = getdoc("InvAcc.Reports.RepInvSal");
                                 }
                             }
                             catch
                             {
-                                this.MainCryRep = getdoc("InvAcc.Reports.RepInvoicCachier");
+                                this.MainCryRep = getdoc("InvAcc.Reports.RepInvSal");
                             }
                         }
                         else
@@ -13652,42 +14029,164 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
                             {
                                 if (VarGeneral.gUserName == "runsetting")
                                 {
-                                    if (File.Exists(Application.StartupPath + "\\RepsE\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvoicCachier.rpt"))
+                                    if (File.Exists(Application.StartupPath + "\\RepsE\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvSal.rpt"))
                                     {
-                                        this.MainCryRep.FileName = Application.StartupPath + "\\RepsE\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvoicCachier.rpt";
+                                        this.MainCryRep.FileName = Application.StartupPath + "\\RepsE\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvSal.rpt";
                                     }
                                     else
                                     {
-                                        this.MainCryRep = getdoc("InvAcc.ReportsE.RepInvoicCachier");
+                                        this.MainCryRep = getdoc("InvAcc.ReportsE.RepInvSal");
                                     }
                                 }
-                                else if (File.Exists(Application.StartupPath + "\\RepsE\\RepInvoicCachier.rpt"))
+                                else if (File.Exists(Application.StartupPath + "\\RepsE\\RepInvSal.rpt"))
                                 {
-                                    this.MainCryRep.FileName = Application.StartupPath + "\\RepsE\\RepInvoicCachier.rpt";
+                                    this.MainCryRep.FileName = Application.StartupPath + "\\RepsE\\RepInvSal.rpt";
                                 }
                                 else
                                 {
-                                    this.MainCryRep = getdoc("InvAcc.ReportsE.RepInvoicCachier");
+                                    this.MainCryRep = getdoc("InvAcc.ReportsE.RepInvSal");
                                 }
                             }
                             catch
                             {
-                                this.MainCryRep = getdoc("InvAcc.ReportsE.RepInvoicCachier");
+                                this.MainCryRep = getdoc("InvAcc.ReportsE.RepInvSal");
                             }
+                        }
+                        try
+                        {
+                            vUsrNmA = VarGeneral.RepData.Tables[0].Rows[0]["UsrNamA"].ToString();
+                        }
+                        catch
+                        {
+                            vUsrNmA = "";
+                        }
+                        try
+                        {
+                            vUsrNmE = VarGeneral.RepData.Tables[0].Rows[0]["UsrNamE"].ToString();
+                        }
+                        catch
+                        {
+                            vUsrNmE = "";
+                        }
+                        try
+                        {
+                            vBranchNmA = VarGeneral.RepData.Tables[0].Rows[0]["Branch_Name"].ToString();
+                        }
+                        catch
+                        {
+                            vBranchNmA = "";
+                        }
+                        try
+                        {
+                            vBranchNmE = VarGeneral.RepData.Tables[0].Rows[0]["Branch_NameE"].ToString();
+                        }
+                        catch
+                        {
+                            vBranchNmE = "";
                         }
                         rpt = this.MainCryRep;
                         newData = new DataSet();
-                      
-
-                        query = VarGeneral.RepData.Tables[0].Select(VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? ("defPrn = '" + myData2[i] + "'") : ("ItmCat = " + myData[i]));
+                        query = VarGeneral.RepData.Tables[0].Select(typ ? ("defPrn = '" + myData2[i] + "'") : ("ItmCat = " + myData[i]));
                         if (query.Count() <= 0)
                         {
                             continue;
                         }
                         newData.Tables.Add(query.CopyToDataTable());
                         rpt.SetDataSource(newData.Tables[0]);
-                        setTarwisaa(rpt);
-                       
+                        this.listInfotb = this.db.StockInfoList();
+                        this._Infotb = this.listInfotb[0];
+                        for (int iiCnt = 0; iiCnt < this.listInfotb.Count; iiCnt++)
+                        {
+                            this._Infotb = this.listInfotb[iiCnt];
+                            if ("lTrwes1" == this._Infotb.fldFlag.ToString())
+                            {
+                                if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
+                                {
+                                    rpt.SetParameterValue("CompanyNameE", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
+                                }
+                                else
+                                {
+                                    rpt.SetParameterValue("CompanyNameE", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
+                                }
+                            }
+                            else if ("lTrwes2" == this._Infotb.fldFlag.ToString())
+                            {
+                                if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
+                                {
+                                    rpt.SetParameterValue("CompanyAddressE", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
+                                }
+                                else
+                                {
+                                    rpt.SetParameterValue("CompanyAddressE", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
+                                }
+                            }
+                            else if ("lTrwes3" == this._Infotb.fldFlag.ToString())
+                            {
+                                if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
+                                {
+                                    rpt.SetParameterValue("CompanyTelE", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
+                                }
+                                else
+                                {
+                                    rpt.SetParameterValue("CompanyTelE", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
+                                }
+                            }
+                            else if ("lTrwes4" == this._Infotb.fldFlag.ToString())
+                            {
+                                if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
+                                {
+                                    rpt.SetParameterValue("CompanyFaxE", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
+                                }
+                                else
+                                {
+                                    rpt.SetParameterValue("CompanyFaxE", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
+                                }
+                            }
+                            else if ("rTrwes1" == this._Infotb.fldFlag.ToString())
+                            {
+                                if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
+                                {
+                                    rpt.SetParameterValue("CompanyName", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
+                                }
+                                else
+                                {
+                                    rpt.SetParameterValue("CompanyName", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
+                                }
+                            }
+                            else if ("rTrwes2" == this._Infotb.fldFlag.ToString())
+                            {
+                                if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
+                                {
+                                    rpt.SetParameterValue("CompanyAddress", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
+                                }
+                                else
+                                {
+                                    rpt.SetParameterValue("CompanyAddress", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
+                                }
+                            }
+                            else if ("rTrwes3" == this._Infotb.fldFlag.ToString())
+                            {
+                                if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
+                                {
+                                    rpt.SetParameterValue("CompanyTel", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
+                                }
+                                else
+                                {
+                                    rpt.SetParameterValue("CompanyTel", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
+                                }
+                            }
+                            else if ("rTrwes4" == this._Infotb.fldFlag.ToString())
+                            {
+                                if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
+                                {
+                                    rpt.SetParameterValue("CompanyFax", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
+                                }
+                                else
+                                {
+                                    rpt.SetParameterValue("CompanyFax", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
+                                }
+                            }
+                        }
                         try
                         {
                             if (!VarGeneral.TString.ChkStatShow(_InvSetting.InvInfo.TaxOptions, 1))
@@ -13714,7 +14213,29 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
                         }
                         try
                         {
-                            rpt.SetParameterValue("CompanyFax", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 29) ? "Show" : "Hide");
+                            if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 16))
+                            {
+                                rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
+                                try
+                                {
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
+
+                                }
+                                catch { }
+                                rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
+                                rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
+                                rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 6494;
+                                rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Left = 6494;
+                                try
+                                {
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;
+                                }
+                                catch
+                                {
+                                }
+                            }
                         }
                         catch
                         {
@@ -13742,6 +14263,7 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
                         catch
                         {
                         }
+
                         try
                         {
                             rpt.SetParameterValue("IsCashCredit", VarGeneral.IsCashCredit ? "1" : "0");
@@ -13777,24 +14299,12 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
                         catch
                         {
                         }
+                        rpt.SetParameterValue("StoreSts", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 16) ? "Show" : "Hide");
                         rpt.SetParameterValue("CompanyPic", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) && VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 35)) ? "Show" : "Hide");
                         rpt.SetParameterValue("vPage", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 12) ? "Show" : "Hide");
                         rpt.SetParameterValue("vTitle", VarGeneral.vTitle);
-                        try
-                        {
-                            if (base.Tag.ToString() == "0")
-                            {
-                                rpt.SetParameterValue("HDate", (!string.IsNullOrEmpty(_InvSetting.invGdADesc)) ? _InvSetting.invGdADesc : "شكرا\u064c لكم");
-                            }
-                            else
-                            {
-                                rpt.SetParameterValue("HDate", (!string.IsNullOrEmpty(_InvSetting.invGdEDesc)) ? _InvSetting.invGdEDesc : "Thank you");
-                            }
-                        }
-                        catch
-                        {
-                            rpt.SetParameterValue("HDate", "");
-                        }
+                        rpt.SetParameterValue("HDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 11) ? VarGeneral.Hdate : "");
+                        rpt.SetParameterValue("GDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 10) ? VarGeneral.Gdate : "");
                         rpt.SetParameterValue("vSts", false);
                         rpt.SetParameterValue("vLines", 1);
                         if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.LineDetailSts, this.vStr(VarGeneral.InvTyp)))
@@ -13813,77 +14323,162 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
                         rpt.SetParameterValue("BranchNameE", vBranchNmE);
                         rpt.SetParameterValue("UsrNamE", vUsrNmE);
                         rpt.SetParameterValue("BranchNameE", vBranchNmE);
-                        rpt.SetParameterValue("InvNo", vInvNo);
-                        rpt.SetParameterValue("Gdat", vGdat);
-                        rpt.SetParameterValue("Hdat", vHdat);
-                        rpt.SetParameterValue("InvId", vInvID);
-                        rpt.SetParameterValue("vCash", vInvCash);
-                        rpt.SetParameterValue("TaxNo", TaxNo);
-                        rpt.SetParameterValue("vCustNo", vCustNo);
-                        rpt.SetParameterValue("vCustNm", vCustNm);
                         try
                         {
-                            if (VarGeneral._IsPOS || VarGeneral._IsWaiter)
+                            if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
                             {
-                                rpt.SetParameterValue("TableNo_", vTableNo);
-                                rpt.SetParameterValue("TableTyp_", vTableTyp);
-                                rpt.SetParameterValue("Waiter_", vWaiterNm);
-                                switch (orderTyp)
+                                rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
+                                rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
+                                try
                                 {
-                                    case "0":
-                                        rpt.SetParameterValue("OrderTyp", (base.Tag.ToString() == "0") ? "محلي" : "Local");
-                                        break;
-                                    case "1":
-                                        rpt.SetParameterValue("OrderTyp", (base.Tag.ToString() == "0") ? "سفري" : "Take Away");
-                                        break;
-                                    case "2":
-                                        rpt.SetParameterValue("OrderTyp", (base.Tag.ToString() == "0") ? "توصيل" : "Delivery");
-                                        break;
-                                    default:
-                                        rpt.SetParameterValue("OrderTyp", "");
-                                        break;
+                                    rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
+
+                                }
+                                catch
+                                {
+                                }
+                                rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
+                                try
+                                {
+                                    rpt.ReportDefinition.Sections[3].ReportObjects["Line2t"].ObjectFormat.EnableSuppress = true;
+                                }
+                                catch
+                                {
+                                }
+                                if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 16))
+                                {
+                                    rpt.ReportDefinition.ReportObjects["Text13"].Width = 2924;
+                                    rpt.ReportDefinition.ReportObjects["ItmDes1"].Width = 2924;
+                                    rpt.ReportDefinition.ReportObjects["Text13"].Left = 7106;
+                                    rpt.ReportDefinition.ReportObjects["ItmDes1"].Left = 7106;
+                                }
+                                else
+                                {
+                                    rpt.ReportDefinition.ReportObjects["Text13"].Width = 3536;
+                                    rpt.ReportDefinition.ReportObjects["ItmDes1"].Width = 3536;
+                                    rpt.ReportDefinition.ReportObjects["Text13"].Left = 6460;
+                                    rpt.ReportDefinition.ReportObjects["ItmDes1"].Left = 6460;
+                                }
+                            }
+                        }
+                        catch
+                        {
+                        }
+                        if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 19) || !VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 21))
+                        {
+                            if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 19) && VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 21))
+                            {
+                                try
+                                {
+                                    rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                                    try
+                                    {
+                                        rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+                                        rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+                                    }
+                                    catch
+                                    {
+                                    }
+                                    rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.ReportObjects["Text7"].Width = 1700;
+                                    rpt.ReportDefinition.ReportObjects["Amount1"].Width = 1700;
+                                    rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+                                    rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
+                                    rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
+                                }
+                                catch
+                                {
+                                }
+                            }
+                            else if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 19) && !VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 21))
+                            {
+                                try
+                                {
+                                    rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+                                    try
+                                    {
+                                        rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+                                        rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+                                    }
+                                    catch
+                                    {
+                                    }
+                                    rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                                    try
+                                    {
+                                        rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
+                                    }
+                                    catch
+                                    {
+                                    }
+                                    rpt.ReportDefinition.ReportObjects["Text28"].Width = 1632;
+                                    rpt.ReportDefinition.ReportObjects["Text40"].Width = 1632;
+                                    rpt.ReportDefinition.ReportObjects["Text28"].Left = 1156;
+                                    rpt.ReportDefinition.ReportObjects["Text40"].Left = 1156;
+                                    rpt.ReportDefinition.ReportObjects["DatExper1"].Width = 1632;
+                                    rpt.ReportDefinition.ReportObjects["DatExper1"].Left = 1156;
+                                }
+                                catch
+                                {
                                 }
                             }
                             else
                             {
-                                rpt.SetParameterValue("TableNo_", "");
-                                rpt.SetParameterValue("TableTyp_", "");
-                                rpt.SetParameterValue("Waiter_", "");
-                                rpt.SetParameterValue("OrderTyp", "");
+                                try
+                                {
+                                    rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
+                                    try
+                                    {
+                                        rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
+                                        rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
+                                    }
+                                    catch
+                                    {
+                                    }
+                                    rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
+                                    try
+                                    {
+                                        rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
+                                    }
+                                    catch
+                                    {
+                                    }
+                                    rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
+                                    try
+                                    {
+                                        rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
+                                        rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
+
+
+                                    }
+                                    catch
+                                    {
+                                    }
+                                    rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
+                                    rpt.ReportDefinition.ReportObjects["Text7"].Width = 2618;
+
+                                    rpt.ReportDefinition.ReportObjects["Text32"].Width = 2618;
+
+                                    rpt.ReportDefinition.ReportObjects["Amount1"].Width = 2618;
+                                    rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
+                                    rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
+                                    rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
+                                }
+                                catch
+                                {
+                                }
                             }
                         }
-                        catch
+
+                        if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 35))
                         {
-                            rpt.SetParameterValue("TableNo_", "");
-                            rpt.SetParameterValue("TableTyp_", "");
-                            rpt.SetParameterValue("Waiter_", "");
-                            rpt.SetParameterValue("OrderTyp", "");
-                        }
-                        try
-                        {
-                            if (string.IsNullOrEmpty(vInvID) || vInvID == "0")
-                            {
-                                if (base.Tag.ToString() == "0")
-                                {
-                                    rpt.ReportDefinition.ReportObjects["InvNo1"].Width = 2108;
-                                    rpt.ReportDefinition.ReportObjects["InvNo1"].Left = 204;
-                                }
-                                else
-                                {
-                                    rpt.ReportDefinition.ReportObjects["InvNo1"].Width = 2006;
-                                    rpt.ReportDefinition.ReportObjects["InvNo1"].Left = 1360;
-                                }
-                            }
-                        }
-                        catch
-                        {
-                        }
-                        if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 35)) 
-                            { 
                             try { rpt.SetParameterValue("CATPrint", "True"); } catch { }
                         }
-                        //try { rpt.SetParameterValue("CATPrint", "4False"); } catch { }
-                        if (_InvSetting.ISdirectPrinting || this.BarcodSts||_InvSetting.InvInfo.CatID.HasValue)
+                        if (_InvSetting.ISdirectPrinting || this.BarcodSts)
                         {
 
                             this.PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
@@ -13892,488 +14487,8 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
                         {
                             this.setpagesetting(rpt);
                         }
-                        continue;
-                    }
-                    if (base.Tag.ToString() == "0")
-                    {
-                        try
-                        {
-                            if (VarGeneral.gUserName == "runsetting")
-                            {
-                                if (File.Exists(Application.StartupPath + "\\Reps\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvSal.rpt"))
-                                {
-                                    this.MainCryRep.FileName = Application.StartupPath + "\\Reps\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvSal.rpt";
-                                }
-                                else
-                                {
-                                    this.MainCryRep = getdoc("InvAcc.Reports.RepInvSal");
-                                }
-                            }
-                            else if (File.Exists(Application.StartupPath + "\\Reps\\RepInvSal.rpt"))
-                            {
-                                this.MainCryRep.FileName = Application.StartupPath + "\\Reps\\RepInvSal.rpt";
-                            }
-                            else
-                            {
-                                this.MainCryRep = getdoc("InvAcc.Reports.RepInvSal");
-                            }
-                        }
-                        catch
-                        {
-                            this.MainCryRep = getdoc("InvAcc.Reports.RepInvSal");
-                        }
-                    }
-                    else
-                    {
-                        try
-                        {
-                            if (VarGeneral.gUserName == "runsetting")
-                            {
-                                if (File.Exists(Application.StartupPath + "\\RepsE\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvSal.rpt"))
-                                {
-                                    this.MainCryRep.FileName = Application.StartupPath + "\\RepsE\\" + VarGeneral.gServerName.Replace(Environment.MachineName + "\\", "").Trim() + "\\RepInvSal.rpt";
-                                }
-                                else
-                                {
-                                    this.MainCryRep = getdoc("InvAcc.ReportsE.RepInvSal");
-                                }
-                            }
-                            else if (File.Exists(Application.StartupPath + "\\RepsE\\RepInvSal.rpt"))
-                            {
-                                this.MainCryRep.FileName = Application.StartupPath + "\\RepsE\\RepInvSal.rpt";
-                            }
-                            else
-                            {
-                                this.MainCryRep = getdoc("InvAcc.ReportsE.RepInvSal");
-                            }
-                        }
-                        catch
-                        {
-                            this.MainCryRep = getdoc("InvAcc.ReportsE.RepInvSal");
-                        }
-                    }
-                    try
-                    {
-                        vUsrNmA = VarGeneral.RepData.Tables[0].Rows[0]["UsrNamA"].ToString();
-                    }
-                    catch
-                    {
-                        vUsrNmA = "";
-                    }
-                    try
-                    {
-                        vUsrNmE = VarGeneral.RepData.Tables[0].Rows[0]["UsrNamE"].ToString();
-                    }
-                    catch
-                    {
-                        vUsrNmE = "";
-                    }
-                    try
-                    {
-                        vBranchNmA = VarGeneral.RepData.Tables[0].Rows[0]["Branch_Name"].ToString();
-                    }
-                    catch
-                    {
-                        vBranchNmA = "";
-                    }
-                    try
-                    {
-                        vBranchNmE = VarGeneral.RepData.Tables[0].Rows[0]["Branch_NameE"].ToString();
-                    }
-                    catch
-                    {
-                        vBranchNmE = "";
-                    }
-                    rpt = this.MainCryRep;
-                    newData = new DataSet();
-                    query = VarGeneral.RepData.Tables[0].Select(VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? ("defPrn = '" + myData2[i] + "'") : ("ItmCat = " + myData[i]));
-                    if (query.Count() <= 0)
-                    {
-                        continue;
-                    }
-                    newData.Tables.Add(query.CopyToDataTable());
-                    rpt.SetDataSource(newData.Tables[0]);
-                    this.listInfotb = this.db.StockInfoList();
-                    this._Infotb = this.listInfotb[0];
-                    for (int iiCnt = 0; iiCnt < this.listInfotb.Count; iiCnt++)
-                    {
-                        this._Infotb = this.listInfotb[iiCnt];
-                        if ("lTrwes1" == this._Infotb.fldFlag.ToString())
-                        {
-                            if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
-                            {
-                                rpt.SetParameterValue("CompanyNameE", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
-                            }
-                            else
-                            {
-                                rpt.SetParameterValue("CompanyNameE", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
-                            }
-                        }
-                        else if ("lTrwes2" == this._Infotb.fldFlag.ToString())
-                        {
-                            if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
-                            {
-                                rpt.SetParameterValue("CompanyAddressE", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
-                            }
-                            else
-                            {
-                                rpt.SetParameterValue("CompanyAddressE", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
-                            }
-                        }
-                        else if ("lTrwes3" == this._Infotb.fldFlag.ToString())
-                        {
-                            if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
-                            {
-                                rpt.SetParameterValue("CompanyTelE", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
-                            }
-                            else
-                            {
-                                rpt.SetParameterValue("CompanyTelE", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
-                            }
-                        }
-                        else if ("lTrwes4" == this._Infotb.fldFlag.ToString())
-                        {
-                            if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
-                            {
-                                rpt.SetParameterValue("CompanyFaxE", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
-                            }
-                            else
-                            {
-                                rpt.SetParameterValue("CompanyFaxE", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
-                            }
-                        }
-                        else if ("rTrwes1" == this._Infotb.fldFlag.ToString())
-                        {
-                            if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
-                            {
-                                rpt.SetParameterValue("CompanyName", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
-                            }
-                            else
-                            {
-                                rpt.SetParameterValue("CompanyName", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
-                            }
-                        }
-                        else if ("rTrwes2" == this._Infotb.fldFlag.ToString())
-                        {
-                            if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
-                            {
-                                rpt.SetParameterValue("CompanyAddress", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
-                            }
-                            else
-                            {
-                                rpt.SetParameterValue("CompanyAddress", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
-                            }
-                        }
-                        else if ("rTrwes3" == this._Infotb.fldFlag.ToString())
-                        {
-                            if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
-                            {
-                                rpt.SetParameterValue("CompanyTel", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
-                            }
-                            else
-                            {
-                                rpt.SetParameterValue("CompanyTel", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
-                            }
-                        }
-                        else if ("rTrwes4" == this._Infotb.fldFlag.ToString())
-                        {
-                            if (VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 0))
-                            {
-                                rpt.SetParameterValue("CompanyFax", (!VarGeneral.TString.ChkStatShow(this.permission.StopBanner, 1)) ? this._Infotb.fldValue : "");
-                            }
-                            else
-                            {
-                                rpt.SetParameterValue("CompanyFax", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) ? this._Infotb.fldValue : "");
-                            }
-                        }
-                    }
-                    try
-                    {
-                        if (!VarGeneral.TString.ChkStatShow(_InvSetting.InvInfo.TaxOptions, 1))
-                        {
-                            rpt.ReportDefinition.ReportObjects["TextTotTax"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["TotTax1"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["TextTaxHeader"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.ReportObjects["TaxNo1"].ObjectFormat.EnableSuppress = true;
-                            rpt.ReportDefinition.Sections["DetailSection5"].SectionFormat.EnableSuppress = true;
-                        }
-                    }
-                    catch
-                    {
-                    }
-                    try
-                    {
-                        if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 64))
-                        {
-                            rpt.ReportDefinition.Sections["DetailSection5"].SectionFormat.EnableSuppress = true;
-                        }
-                    }
-                    catch
-                    {
-                    }
-                    try
-                    {
-                        if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 16))
-                        {
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Line7"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.Sections[3].ReportObjects["Text12"].ObjectFormat.EnableSuppress = true;
- try{ 
-rpt.ReportDefinition.Sections[3].ReportObjects["Text33"].ObjectFormat.EnableSuppress = true;
- rpt.ReportDefinition.Sections[3].ReportObjects["Line25"].ObjectFormat.EnableSuppress = true;
-                                   
-}catch{}
-                                    rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Width = 1496;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Width = 1496;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["Text27"].Left = 6494;
-                            rpt.ReportDefinition.Sections[3].ReportObjects["SerialKey1"].Left = 6494;
-                            try
-                            {
-                                rpt.ReportDefinition.Sections[3].ReportObjects["Line7t"].ObjectFormat.EnableSuppress = true;
-rpt.ReportDefinition.Sections[3].ReportObjects["StoreNo1"].ObjectFormat.EnableSuppress = true;}
-                            catch
-                            {
-                            }
-                        }
-                    }
-                    catch
-                    {
-                    }
-                    try
-                    {
-                        rpt.SetParameterValue("CompanyFaxE", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 43) ? "Show" : "Hide");
-                    }
-                    catch
-                    {
-                    }
-                    try
-                    {
-                        if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 43))
-                        {
-                            rpt.ReportDefinition.ReportObjects["Text14"].Width = rpt.ReportDefinition.ReportObjects["Text14"].Width * 2;
-                            rpt.ReportDefinition.ReportObjects["Amount1"].Width = rpt.ReportDefinition.ReportObjects["Amount1"].Width * 2;
-                            if (base.Tag.ToString() != "0")
-                            {
-                                rpt.ReportDefinition.ReportObjects["Text14"].Left = rpt.ReportDefinition.ReportObjects["Text7"].Left;
-                                rpt.ReportDefinition.ReportObjects["Amount1"].Left = rpt.ReportDefinition.ReportObjects["Text7"].Left;
-                            }
-                        }
-                    }
-                    catch
-                    {
-                    }
-                    Program.min();
-                    try
-                    {
-                        rpt.SetParameterValue("IsCashCredit", VarGeneral.IsCashCredit ? "1" : "0");
-                    }
-                    catch
-                    {
-                    }
-                    try
-                    {
-                        rpt.SetParameterValue("vDecimal", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 49) ? "1" : "0");
-                    }
-                    catch
-                    {
-                    }
-                    try
-                    {
-                        rpt.SetParameterValue("IsTotWithTax", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 65) ? "1" : "0");
-                    }
-                    catch
-                    {
-                    }
-                    try
-                    {
-                        (rpt.ReportDefinition.ReportObjects["TextCostCenter"] as TextObject).Text = VarGeneral.CostCenterlbl;
-                    }
-                    catch
-                    {
-                    }
-                    try
-                    {
-                        (rpt.ReportDefinition.ReportObjects["TextMndob"] as TextObject).Text = VarGeneral.Mndoblbl;
-                    }
-                    catch
-                    {
-                    }
-                    rpt.SetParameterValue("StoreSts", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 16) ? "Show" : "Hide");
-                    rpt.SetParameterValue("CompanyPic", (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 9) && VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 35)) ? "Show" : "Hide");
-                    rpt.SetParameterValue("vPage", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 12) ? "Show" : "Hide");
-                    rpt.SetParameterValue("vTitle", VarGeneral.vTitle);
-                    rpt.SetParameterValue("HDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 11) ? VarGeneral.Hdate : "");
-                    rpt.SetParameterValue("GDate", VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 10) ? VarGeneral.Gdate : "");
-                    rpt.SetParameterValue("vSts", false);
-                    rpt.SetParameterValue("vLines", 1);
-                    if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.LineDetailSts, this.vStr(VarGeneral.InvTyp)))
-                    {
-                        rpt.SetParameterValue("LineDetailNa", VarGeneral.Settings_Sys.LineDetailNameA);
-                        rpt.SetParameterValue("LineDetailNa_Eng", VarGeneral.Settings_Sys.LineDetailNameE);
-                    }
-                    else
-                    {
-                        rpt.SetParameterValue("LineDetailNa", "");
-                        rpt.SetParameterValue("LineDetailNa_Eng", "");
-                    }
-                    rpt.SetParameterValue("UserName", vUsrNmA);
-                    rpt.SetParameterValue("BranchName", vBranchNmA);
-                    rpt.SetParameterValue("UsrNamE", vUsrNmE);
-                    rpt.SetParameterValue("BranchNameE", vBranchNmE);
-                    rpt.SetParameterValue("UsrNamE", vUsrNmE);
-                    rpt.SetParameterValue("BranchNameE", vBranchNmE);
-                    try
-                    {
-                        if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 20))
-                        {
-                            rpt.ReportDefinition.ReportObjects["Line2"].ObjectFormat.EnableSuppress = true;
-                             rpt.ReportDefinition.ReportObjects["Text27"].ObjectFormat.EnableSuppress = true;
-try{
-rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
- rpt.ReportDefinition.ReportObjects["Line26"].ObjectFormat.EnableSuppress = true;
-
-}catch
-{
-}
-                            rpt.ReportDefinition.ReportObjects["SerialKey1"].ObjectFormat.EnableSuppress = true;
-                            try
-                            {
-                                rpt.ReportDefinition.Sections[3].ReportObjects["Line2t"].ObjectFormat.EnableSuppress = true;
-                            }
-                            catch
-                            {
-                            }
-                            if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 16))
-                            {
-                                rpt.ReportDefinition.ReportObjects["Text13"].Width = 2924;
-                                rpt.ReportDefinition.ReportObjects["ItmDes1"].Width = 2924;
-                                rpt.ReportDefinition.ReportObjects["Text13"].Left = 7106;
-                                rpt.ReportDefinition.ReportObjects["ItmDes1"].Left = 7106;
-                            }
-                            else
-                            {
-                                rpt.ReportDefinition.ReportObjects["Text13"].Width = 3536;
-                                rpt.ReportDefinition.ReportObjects["ItmDes1"].Width = 3536;
-                                rpt.ReportDefinition.ReportObjects["Text13"].Left = 6460;
-                                rpt.ReportDefinition.ReportObjects["ItmDes1"].Left = 6460;
-                            }
-                        }
-                    }
-                    catch
-                    {
-                    }
-                    if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 19) || !VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 21))
-                    {
-                        if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 19) && VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 21))
-                        {
-                            try
-                            {
-                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
-try{
-rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
- rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
-
-
-}catch
-{
-}
-                                rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text7"].Width = 1700;
-                                rpt.ReportDefinition.ReportObjects["Amount1"].Width = 1700;
-                                rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
-rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
-                                rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
-                            }
-                            catch
-                            {
-                            }
-                        }
-                        else if (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 19) && !VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 21))
-                        {
-                            try
-                            {
-                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
- try{
-rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
- rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
-}catch
-{
-}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
-                                try
-                                {
-                                    rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
-                                }
-                                catch
-                                {
-                                }
-                                rpt.ReportDefinition.ReportObjects["Text28"].Width = 1632;
-rpt.ReportDefinition.ReportObjects["Text40"].Width = 1632;
-                                rpt.ReportDefinition.ReportObjects["Text28"].Left = 1156;
-rpt.ReportDefinition.ReportObjects["Text40"].Left = 1156;
-                                rpt.ReportDefinition.ReportObjects["DatExper1"].Width = 1632;
-                                rpt.ReportDefinition.ReportObjects["DatExper1"].Left = 1156;
-                            }
-                            catch
-                            {
-                            }
-                        }
-                        else
-                        {
-                            try
-                            {
-                                rpt.ReportDefinition.ReportObjects["Line3"].ObjectFormat.EnableSuppress = true; 
-                                rpt.ReportDefinition.ReportObjects["Text29"].ObjectFormat.EnableSuppress = true;
- try{
-rpt.ReportDefinition.ReportObjects["Text41"].ObjectFormat.EnableSuppress = true;
- rpt.ReportDefinition.ReportObjects["Line14"].ObjectFormat.EnableSuppress = true;
-}catch
-{
-}rpt.ReportDefinition.ReportObjects["RunCod1"].ObjectFormat.EnableSuppress = true;
-                                try
-                                {
-                                    rpt.ReportDefinition.ReportObjects["Line3t"].ObjectFormat.EnableSuppress = true;
-                                }
-                                catch
-                                {
-                                }
-                                rpt.ReportDefinition.ReportObjects["Line22"].ObjectFormat.EnableSuppress = true; rpt.ReportDefinition.ReportObjects["Text28"].ObjectFormat.EnableSuppress = true;
-try{
-rpt.ReportDefinition.ReportObjects["Text40"].ObjectFormat.EnableSuppress = true;
- rpt.ReportDefinition.ReportObjects["Line13"].ObjectFormat.EnableSuppress = true;
-
-
-}catch
-{
-}
-                                rpt.ReportDefinition.ReportObjects["DatExper1"].ObjectFormat.EnableSuppress = true;
-                                rpt.ReportDefinition.ReportObjects["Text7"].Width = 2618;
-
-rpt.ReportDefinition.ReportObjects["Text32"].Width = 2618;
-
-                                rpt.ReportDefinition.ReportObjects["Amount1"].Width = 2618;
-                                rpt.ReportDefinition.ReportObjects["Text7"].Left = 170;
-rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
-                                rpt.ReportDefinition.ReportObjects["Amount1"].Left = 170;
-                            }
-                            catch
-                            {
-                            }
-                        }
-                    }
-
-                    if (!VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 35))
-                    {
-                        try { rpt.SetParameterValue("CATPrint", "True"); } catch { }
-                    }
-                    if (_InvSetting.ISdirectPrinting || this.BarcodSts)
-                    {
-
-                        this.PrintSet(rpt, (int)_InvSetting.lnPg.Value, (_InvSetting.Orientation == 1) ? PaperOrientation.Portrait : PaperOrientation.Landscape, _InvSetting.defSizePaper, _InvSetting.DefLines.Value, _InvSetting.defPrn, _InvSetting.hAs.Value, _InvSetting.hYs.Value, _InvSetting.hYm.Value, _InvSetting.hAl.Value);
-                    }
-                    else
-                    {
-                        this.setpagesetting(rpt);
                     }
                 }
-
             }
             catch (Exception ex)
             {
@@ -14383,6 +14498,20 @@ rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
         }
         private void STEP_2()
         {
+            VarGeneral._dbshared = null;
+            for (int i = 0; i < VarGeneral.RepData.Tables[0].Rows.Count; i++)
+            {
+                try
+                {
+                    int k = int.Parse(VarGeneral.RepData.Tables[0].Rows[i]["defPrn"].ToString());
+
+                    VarGeneral.RepData.Tables[0].Rows[i]["defPrn"] = (VarGeneral.dbshared.T_Printers.Single(ksa => ksa.InvID == k && ksa.User_ID == VarGeneral.UserID).defPrn);
+
+                }
+                catch (Exception ex)
+                { }
+            }
+
             string vUsrNmA = string.Empty;
             string vBranchNmA = string.Empty;
             string vUsrNmE = string.Empty;
@@ -14438,10 +14567,10 @@ rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                                     select myRow.Field<string>("defPrn")).Distinct().ToList();
             myData2 = myData2.Where((string s) => !string.IsNullOrEmpty(s)).Distinct().ToList();
 
-            for (int i = 0; i < (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? myData2.Count() : myData.Count()); i++)
+            for (int i = 0; i < (false ? myData2.Count() : myData.Count()); i++)
             {
                 T_Printer _InvSetting = new T_Printer();
-                _InvSetting = (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? db.StockInvSettingInvoicesDefPrinter(VarGeneral.UserID, myData2[i]).InvpRINTERInfo : db.StockInvSettingInvoices(VarGeneral.UserID, myData[i]).InvpRINTERInfo);
+                _InvSetting = (false ? db.StockInvSettingInvoicesDefPrinter(VarGeneral.UserID, myData2[i]) : db.StockInvSettingInvoices(VarGeneral.UserID, myData[i]).InvpRINTERInfo);
                 if (_InvSetting.InvInfo.PrintCat.Value)
                 {
                     continue;
@@ -14522,7 +14651,7 @@ rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                     this.SizeChanged += new System.EventHandler(this.FrmInvSale_SizeChanged);
                     ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
 
-                    query = VarGeneral.RepData.Tables[0].Select(VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? ("defPrn = '" + myData2[i] + "'") : ("ItmCat = " + myData[i]));
+                    query = VarGeneral.RepData.Tables[0].Select(false ? ("defPrn = '" + myData2[i] + "'") : ("ItmCat = " + myData[i]));
                     if (query.Count() <= 0)
                     {
                         continue;
@@ -14936,7 +15065,7 @@ rpt.ReportDefinition.ReportObjects["Text32"].Left = 170;
                 this.SizeChanged += new System.EventHandler(this.FrmInvSale_SizeChanged);
                 ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
 
-                query = VarGeneral.RepData.Tables[0].Select(VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? ("defPrn = '" + myData2[i] + "'") : ("ItmCat = " + myData[i]));
+                query = VarGeneral.RepData.Tables[0].Select(false ? ("defPrn = '" + myData2[i] + "'") : ("ItmCat = " + myData[i]));
                 if (query.Count() <= 0)
                 {
                     continue;

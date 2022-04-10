@@ -145,14 +145,14 @@ namespace InvAcc
 
             if (iscarversion())
             {
-                setnewviersion("CarVersion.CR.400.50" +
+                setnewviersion("CarVersion.CR.400.51" +
                     "");  
-                setdbver("CarVersion.CR.400.50");
+                setdbver("CarVersion.CR.400.51");
             }
             else
             {
-                setnewviersion(".CR.400.50");
-                setdbver(".CR.400.50");
+                setnewviersion(".CR.400.51");
+                setdbver(".CR.400.51");
 
             }
             FrmReportsViewer.TypeOfReporting = isfastversion();

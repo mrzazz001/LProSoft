@@ -727,7 +727,7 @@ namespace InvAcc.Forms
             set
             {
                 Button_Delete.Visible = value;
-                if (VarGeneral.DeleteOption == 1) Button_Delete.Visible = false;
+              //  if (VarGeneral.DeleteOption == 1) Button_Delete.Visible = false;
                 superTabControl_Main1.Refresh();
             }
         }
@@ -1235,8 +1235,8 @@ namespace InvAcc.Forms
         }
         private void Button_Edit_Click(object sender, EventArgs e)
         {
-            if (VarGeneral.DeleteOption == 1)
-                return;
+            //if (VarGeneral.DeleteOption == 1)
+            //    return;
             if (CanEdit && State != FormState.Edit && State != FormState.New && !string.IsNullOrEmpty(textBox_ID.Text))
             {
                 if (State != FormState.New)

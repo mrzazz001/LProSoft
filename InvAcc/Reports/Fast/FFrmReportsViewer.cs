@@ -26789,7 +26789,7 @@ namespace InvAcc.Forms
             for (int i = 0; i < (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? myData2.Count() : myData.Count()); i++)
             {
                 T_Printer _InvSetting = new T_Printer();
-                _InvSetting = (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? db.StockInvSettingInvoicesDefPrinter(VarGeneral.UserID, myData2[i]).InvpRINTERInfo : db.StockInvSettingInvoices(VarGeneral.UserID, myData[i]).InvpRINTERInfo);
+                _InvSetting = (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? db.StockInvSettingInvoicesDefPrinter(VarGeneral.UserID, myData2[i]) : db.StockInvSettingInvoices(VarGeneral.UserID, myData[i]).InvpRINTERInfo);
                 if (_InvSetting.InvInfo.PrintCat.Value)
                 {
                     continue;
@@ -28191,7 +28191,7 @@ namespace InvAcc.Forms
             for (int i = 0; i < (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? myData2.Count() : myData.Count()); i++)
             {
                 T_Printer _InvSetting = new T_Printer();
-                _InvSetting = (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? db.StockInvSettingInvoicesDefPrinter(VarGeneral.UserID, myData2[i]).InvpRINTERInfo : db.StockInvSettingInvoices(VarGeneral.UserID, myData[i]).InvpRINTERInfo);
+                _InvSetting = (VarGeneral.TString.ChkStatShow(VarGeneral.Settings_Sys.Seting, 33) ? db.StockInvSettingInvoicesDefPrinter(VarGeneral.UserID, myData2[i]) : db.StockInvSettingInvoices(VarGeneral.UserID, myData[i]).InvpRINTERInfo);
                 if (_InvSetting.InvInfo.PrintCat.Value)
                 {
                     continue;

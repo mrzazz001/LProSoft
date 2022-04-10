@@ -3648,6 +3648,13 @@ public        int Dtype = -1;
             catch
             {
             }
+            try {
+              //  FlxInv.Cols[6].Visible = VarGeneral.TString.ChkStatShow(_SysSetting.Seting, 16);
+            }
+            catch
+            {
+
+            }
             FlxInv.Cols[27].AllowEditing = false;
             FlxInv.Cols[35].AllowEditing = false;
             if (!VarGeneral.TString.ChkStatShow(_InvSetting.TaxOptions, 0))
@@ -5528,7 +5535,8 @@ public        int Dtype = -1;
             txtDescription.Visible = false;
             superTabItem_Tax.Visible = false;
             superTabItem_Gaids.Visible = false;
-            FlxInv.Cols[6].Visible = false;
+            FlxInv.Cols
+                [6].Visible = false;
             FlxInv.Cols[37].Visible = false;
             FlxInv.Cols[31].Visible = false;
         }

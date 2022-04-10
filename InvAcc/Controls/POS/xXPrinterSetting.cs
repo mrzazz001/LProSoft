@@ -284,6 +284,13 @@ namespace ProRealEstate.Utilties
 
                 }
                 t.InvInfo.PrintCat = (chk_Stoped.IsOn);
+                int kk = 0;
+                if (chk_Stoped.IsOn) kk = 1;
+                try
+                {
+                    db.ExecuteCommand("Update T_INVSETTING Set PrintCat =" + kk.ToString(),new object[0]);
+                }
+                catch { }
                 try
                 {
                     t.Paper_Size = Paper_SizeTextEdit.EditValue.ToString();

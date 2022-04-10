@@ -1122,7 +1122,7 @@
             this.chk1.Location = new System.Drawing.Point(848, 11);
             this.chk1.Name = "chk1";
             this.chk1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk1.Size = new System.Drawing.Size(202, 16);
+            this.chk1.Size = new System.Drawing.Size(211, 17);
             this.chk1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk1.TabIndex = 13;
             this.chk1.Text = "تمكين الترقيم التلقائي للأصناف إبتدا من ";
@@ -1138,7 +1138,7 @@
             this.chk3.Location = new System.Drawing.Point(886, 38);
             this.chk3.Name = "chk3";
             this.chk3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk3.Size = new System.Drawing.Size(162, 16);
+            this.chk3.Size = new System.Drawing.Size(170, 17);
             this.chk3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk3.TabIndex = 15;
             this.chk3.Text = "تنبيه بانتهاء صلاحية الصنف قبل";
@@ -1154,7 +1154,7 @@
             this.chk2.Location = new System.Drawing.Point(907, 61);
             this.chk2.Name = "chk2";
             this.chk2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk2.Size = new System.Drawing.Size(141, 16);
+            this.chk2.Size = new System.Drawing.Size(148, 17);
             this.chk2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk2.TabIndex = 18;
             this.chk2.Text = "التنبيه التلقائي لحد الطلب";
@@ -1254,7 +1254,7 @@
             this.radioButton_IsNotBackground.Location = new System.Drawing.Point(71, 172);
             this.radioButton_IsNotBackground.Name = "radioButton_IsNotBackground";
             this.radioButton_IsNotBackground.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioButton_IsNotBackground.Size = new System.Drawing.Size(105, 15);
+            this.radioButton_IsNotBackground.Size = new System.Drawing.Size(111, 17);
             this.radioButton_IsNotBackground.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.radioButton_IsNotBackground.TabIndex = 973;
             this.radioButton_IsNotBackground.Text = "إيقاف خلفية النظام";
@@ -1646,7 +1646,7 @@
             this.checkBox_AutoBackup.Location = new System.Drawing.Point(66, 196);
             this.checkBox_AutoBackup.Name = "checkBox_AutoBackup";
             this.checkBox_AutoBackup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_AutoBackup.Size = new System.Drawing.Size(160, 15);
+            this.checkBox_AutoBackup.Size = new System.Drawing.Size(167, 17);
             this.checkBox_AutoBackup.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_AutoBackup.TabIndex = 983;
             this.checkBox_AutoBackup.Text = "تمكين النسخ الإحتياطي كل ";
@@ -1746,7 +1746,7 @@
             this.chk71.Location = new System.Drawing.Point(3, 2);
             this.chk71.Name = "chk71";
             this.chk71.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk71.Size = new System.Drawing.Size(154, 16);
+            this.chk71.Size = new System.Drawing.Size(162, 17);
             this.chk71.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk71.TabIndex = 989;
             this.chk71.Text = "ايقاف تعبئة الدليل المحاسبية";
@@ -1762,7 +1762,7 @@
             this.chk27.Location = new System.Drawing.Point(159, 2);
             this.chk27.Name = "chk27";
             this.chk27.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk27.Size = new System.Drawing.Size(148, 16);
+            this.chk27.Size = new System.Drawing.Size(156, 17);
             this.chk27.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk27.TabIndex = 988;
             this.chk27.Text = "اعتماد البحث السريع للسند";
@@ -1778,7 +1778,7 @@
             this.chk24.Location = new System.Drawing.Point(308, 1);
             this.chk24.Name = "chk24";
             this.chk24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk24.Size = new System.Drawing.Size(141, 16);
+            this.chk24.Size = new System.Drawing.Size(148, 17);
             this.chk24.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk24.TabIndex = 976;
             this.chk24.Text = "اظهار كل الحسابات للسند";
@@ -1809,7 +1809,7 @@
             this.chk45.Location = new System.Drawing.Point(518, 0);
             this.chk45.Name = "chk45";
             this.chk45.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk45.Size = new System.Drawing.Size(131, 16);
+            this.chk45.Size = new System.Drawing.Size(138, 17);
             this.chk45.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.chk45.TabIndex = 1055;
             this.chk45.Text = "تعدد الخانات العشريه";
@@ -1971,7 +1971,7 @@
             this.ChkPageNumber.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.ChkPageNumber.Location = new System.Drawing.Point(28, 3);
             this.ChkPageNumber.Name = "ChkPageNumber";
-            this.ChkPageNumber.Size = new System.Drawing.Size(113, 15);
+            this.ChkPageNumber.Size = new System.Drawing.Size(119, 17);
             this.ChkPageNumber.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ChkPageNumber.TabIndex = 12;
             this.ChkPageNumber.Text = "إظهار رقم الصفحة";
@@ -1988,7 +1988,7 @@
             this.ChkGreg.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.ChkGreg.Location = new System.Drawing.Point(551, -3);
             this.ChkGreg.Name = "ChkGreg";
-            this.ChkGreg.Size = new System.Drawing.Size(129, 15);
+            this.ChkGreg.Size = new System.Drawing.Size(136, 17);
             this.ChkGreg.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ChkGreg.TabIndex = 11;
             this.ChkGreg.Text = "إظهار التاريخ الميلادي";
@@ -2005,7 +2005,7 @@
             this.ChkHijri.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.ChkHijri.Location = new System.Drawing.Point(551, 33);
             this.ChkHijri.Name = "ChkHijri";
-            this.ChkHijri.Size = new System.Drawing.Size(124, 15);
+            this.ChkHijri.Size = new System.Drawing.Size(131, 17);
             this.ChkHijri.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ChkHijri.TabIndex = 10;
             this.ChkHijri.Text = "إظهار التاريخ الهجري";
@@ -2021,7 +2021,7 @@
             this.ChkHead.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ChkHead.Location = new System.Drawing.Point(3, 24);
             this.ChkHead.Name = "ChkHead";
-            this.ChkHead.Size = new System.Drawing.Size(142, 16);
+            this.ChkHead.Size = new System.Drawing.Size(149, 17);
             this.ChkHead.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ChkHead.TabIndex = 9;
             this.ChkHead.Text = "إظهار الترويسة في التقارير";
@@ -3150,7 +3150,7 @@
             this.c1FlexGrid2.Font = new System.Drawing.Font("Tahoma", 8F);
             this.c1FlexGrid2.Location = new System.Drawing.Point(240, 27);
             this.c1FlexGrid2.Name = "c1FlexGrid2";
-            this.c1FlexGrid2.Rows.Count = 67;
+            this.c1FlexGrid2.Rows.Count = 69;
             this.c1FlexGrid2.Rows.DefaultSize = 19;
             this.c1FlexGrid2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.c1FlexGrid2.Size = new System.Drawing.Size(845, 398);
@@ -3750,7 +3750,7 @@
             this.chk39.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.chk39.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.chk39.DisplayMember = "Text";
-            this.chk39.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.chk39.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.chk39.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.chk39.FocusHighlightColor = System.Drawing.Color.Empty;
             this.chk39.FormattingEnabled = true;
@@ -3911,10 +3911,10 @@
             // 
             // 
             this.chk69.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.chk69.Location = new System.Drawing.Point(92, 337);
+            this.chk69.Location = new System.Drawing.Point(85, 336);
             this.chk69.Name = "chk69";
             this.chk69.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk69.Size = new System.Drawing.Size(145, 16);
+            this.chk69.Size = new System.Drawing.Size(152, 17);
             this.chk69.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk69.TabIndex = 1116;
             this.chk69.Text = "تنبيه بتاريخ الإستحقاق قبل";
@@ -3933,7 +3933,7 @@
             this.txtAlarmDeuDateBefor.DisplayFormat = "0";
             this.txtAlarmDeuDateBefor.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Bold);
             this.txtAlarmDeuDateBefor.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtAlarmDeuDateBefor.Location = new System.Drawing.Point(33, 334);
+            this.txtAlarmDeuDateBefor.Location = new System.Drawing.Point(26, 334);
             this.txtAlarmDeuDateBefor.MinValue = 0;
             this.txtAlarmDeuDateBefor.Name = "txtAlarmDeuDateBefor";
             this.txtAlarmDeuDateBefor.Size = new System.Drawing.Size(53, 19);
@@ -3947,7 +3947,7 @@
             this.labelAlarmDueo.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.labelAlarmDueo.ForeColor = System.Drawing.Color.MidnightBlue;
             this.labelAlarmDueo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelAlarmDueo.Location = new System.Drawing.Point(5, 343);
+            this.labelAlarmDueo.Location = new System.Drawing.Point(215, 368);
             this.labelAlarmDueo.Name = "labelAlarmDueo";
             this.labelAlarmDueo.Size = new System.Drawing.Size(22, 13);
             this.labelAlarmDueo.TabIndex = 1118;
@@ -3962,10 +3962,10 @@
             // 
             // 
             this.chk58.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.chk58.Location = new System.Drawing.Point(81, 362);
+            this.chk58.Location = new System.Drawing.Point(46, 361);
             this.chk58.Name = "chk58";
             this.chk58.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk58.Size = new System.Drawing.Size(156, 16);
+            this.chk58.Size = new System.Drawing.Size(163, 17);
             this.chk58.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk58.TabIndex = 1113;
             this.chk58.Text = "احتساب تاريخ الأستحقاق بعد";
@@ -3984,7 +3984,7 @@
             this.txtDateofInv.DisplayFormat = "0";
             this.txtDateofInv.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Bold);
             this.txtDateofInv.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtDateofInv.Location = new System.Drawing.Point(41, 359);
+            this.txtDateofInv.Location = new System.Drawing.Point(6, 359);
             this.txtDateofInv.MinValue = 0;
             this.txtDateofInv.Name = "txtDateofInv";
             this.txtDateofInv.Size = new System.Drawing.Size(34, 19);
@@ -3998,7 +3998,7 @@
             this.label76.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label76.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label76.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label76.Location = new System.Drawing.Point(13, 368);
+            this.label76.Location = new System.Drawing.Point(215, 381);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(22, 13);
             this.label76.TabIndex = 1115;
@@ -4879,7 +4879,7 @@
             this.chkSync5.Location = new System.Drawing.Point(13, 90);
             this.chkSync5.Name = "chkSync5";
             this.chkSync5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkSync5.Size = new System.Drawing.Size(58, 15);
+            this.chkSync5.Size = new System.Drawing.Size(62, 17);
             this.chkSync5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chkSync5.TabIndex = 980;
             this.chkSync5.Text = "مسافة";
@@ -4896,7 +4896,7 @@
             this.chkSync4.Location = new System.Drawing.Point(20, 69);
             this.chkSync4.Name = "chkSync4";
             this.chkSync4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkSync4.Size = new System.Drawing.Size(51, 15);
+            this.chkSync4.Size = new System.Drawing.Size(55, 17);
             this.chkSync4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chkSync4.TabIndex = 979;
             this.chkSync4.Text = "علامة";
@@ -4913,7 +4913,7 @@
             this.chkSync3.Location = new System.Drawing.Point(37, 48);
             this.chkSync3.Name = "chkSync3";
             this.chkSync3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkSync3.Size = new System.Drawing.Size(34, 15);
+            this.chkSync3.Size = new System.Drawing.Size(38, 17);
             this.chkSync3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chkSync3.TabIndex = 978;
             this.chkSync3.Text = "بلا";
@@ -4930,7 +4930,7 @@
             this.chkSync2.Location = new System.Drawing.Point(17, 27);
             this.chkSync2.Name = "chkSync2";
             this.chkSync2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkSync2.Size = new System.Drawing.Size(53, 15);
+            this.chkSync2.Size = new System.Drawing.Size(58, 17);
             this.chkSync2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chkSync2.TabIndex = 977;
             this.chkSync2.Text = "زوجي";
@@ -4947,7 +4947,7 @@
             this.chkSync1.Location = new System.Drawing.Point(21, 6);
             this.chkSync1.Name = "chkSync1";
             this.chkSync1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkSync1.Size = new System.Drawing.Size(50, 15);
+            this.chkSync1.Size = new System.Drawing.Size(54, 17);
             this.chkSync1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chkSync1.TabIndex = 976;
             this.chkSync1.Text = "فردي";
@@ -5008,7 +5008,7 @@
             this.chkData5.Location = new System.Drawing.Point(31, 90);
             this.chkData5.Name = "chkData5";
             this.chkData5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkData5.Size = new System.Drawing.Size(29, 15);
+            this.chkData5.Size = new System.Drawing.Size(33, 17);
             this.chkData5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chkData5.TabIndex = 980;
             this.chkData5.Text = "8";
@@ -5025,7 +5025,7 @@
             this.chkData4.Location = new System.Drawing.Point(31, 69);
             this.chkData4.Name = "chkData4";
             this.chkData4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkData4.Size = new System.Drawing.Size(29, 15);
+            this.chkData4.Size = new System.Drawing.Size(33, 17);
             this.chkData4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chkData4.TabIndex = 979;
             this.chkData4.Text = "7";
@@ -5042,7 +5042,7 @@
             this.chkData3.Location = new System.Drawing.Point(32, 48);
             this.chkData3.Name = "chkData3";
             this.chkData3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkData3.Size = new System.Drawing.Size(29, 15);
+            this.chkData3.Size = new System.Drawing.Size(33, 17);
             this.chkData3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chkData3.TabIndex = 978;
             this.chkData3.Text = "6";
@@ -5059,7 +5059,7 @@
             this.chkData2.Location = new System.Drawing.Point(32, 27);
             this.chkData2.Name = "chkData2";
             this.chkData2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkData2.Size = new System.Drawing.Size(29, 15);
+            this.chkData2.Size = new System.Drawing.Size(33, 17);
             this.chkData2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chkData2.TabIndex = 977;
             this.chkData2.Text = "5";
@@ -5076,7 +5076,7 @@
             this.chkData1.Location = new System.Drawing.Point(32, 6);
             this.chkData1.Name = "chkData1";
             this.chkData1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkData1.Size = new System.Drawing.Size(29, 15);
+            this.chkData1.Size = new System.Drawing.Size(33, 17);
             this.chkData1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chkData1.TabIndex = 976;
             this.chkData1.Text = "4";
@@ -5135,7 +5135,7 @@
             this.chkStop3.Location = new System.Drawing.Point(32, 83);
             this.chkStop3.Name = "chkStop3";
             this.chkStop3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkStop3.Size = new System.Drawing.Size(29, 15);
+            this.chkStop3.Size = new System.Drawing.Size(33, 17);
             this.chkStop3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chkStop3.TabIndex = 978;
             this.chkStop3.Text = "2";
@@ -5152,7 +5152,7 @@
             this.chkStop2.Location = new System.Drawing.Point(22, 47);
             this.chkStop2.Name = "chkStop2";
             this.chkStop2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkStop2.Size = new System.Drawing.Size(39, 15);
+            this.chkStop2.Size = new System.Drawing.Size(43, 17);
             this.chkStop2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chkStop2.TabIndex = 977;
             this.chkStop2.Text = "1.5";
@@ -5169,7 +5169,7 @@
             this.chkStop1.Location = new System.Drawing.Point(32, 11);
             this.chkStop1.Name = "chkStop1";
             this.chkStop1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkStop1.Size = new System.Drawing.Size(29, 15);
+            this.chkStop1.Size = new System.Drawing.Size(33, 17);
             this.chkStop1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chkStop1.TabIndex = 976;
             this.chkStop1.Text = "1";
@@ -5531,7 +5531,7 @@
             this.checkBoxX14.Location = new System.Drawing.Point(771, 119);
             this.checkBoxX14.Name = "checkBoxX14";
             this.checkBoxX14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBoxX14.Size = new System.Drawing.Size(152, 16);
+            this.checkBoxX14.Size = new System.Drawing.Size(159, 17);
             this.checkBoxX14.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBoxX14.TabIndex = 976;
             this.checkBoxX14.Text = "تحديد كفيل لكل موظف جديد";
@@ -5741,7 +5741,7 @@
             this.checkBoxX12.Location = new System.Drawing.Point(757, 115);
             this.checkBoxX12.Name = "checkBoxX12";
             this.checkBoxX12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBoxX12.Size = new System.Drawing.Size(152, 16);
+            this.checkBoxX12.Size = new System.Drawing.Size(159, 17);
             this.checkBoxX12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBoxX12.TabIndex = 976;
             this.checkBoxX12.Text = "تحديد كفيل لكل موظف جديد";
@@ -6138,7 +6138,7 @@
             this.chk43.Location = new System.Drawing.Point(316, 66);
             this.chk43.Name = "chk43";
             this.chk43.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk43.Size = new System.Drawing.Size(168, 16);
+            this.chk43.Size = new System.Drawing.Size(176, 17);
             this.chk43.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk43.TabIndex = 1044;
             this.chk43.Text = "إظهار حسابات النزلاء في الفواتير";
@@ -6189,7 +6189,7 @@
             this.chk42.Location = new System.Drawing.Point(346, 130);
             this.chk42.Name = "chk42";
             this.chk42.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk42.Size = new System.Drawing.Size(139, 16);
+            this.chk42.Size = new System.Drawing.Size(146, 17);
             this.chk42.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk42.TabIndex = 1040;
             this.chk42.Text = "ايقــــاف القيد التلقــــــائي";
@@ -6341,7 +6341,7 @@
             this.checkBoxX2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBoxX2.Location = new System.Drawing.Point(59, 54);
             this.checkBoxX2.Name = "checkBoxX2";
-            this.checkBoxX2.Size = new System.Drawing.Size(63, 16);
+            this.checkBoxX2.Size = new System.Drawing.Size(68, 17);
             this.checkBoxX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBoxX2.TabIndex = 1022;
             this.checkBoxX2.Text = "شبكـــة";
@@ -6363,7 +6363,7 @@
             this.RadioBox_LeavePM.Font = new System.Drawing.Font("Tahoma", 6F, System.Drawing.FontStyle.Bold);
             this.RadioBox_LeavePM.Location = new System.Drawing.Point(32, 9);
             this.RadioBox_LeavePM.Name = "RadioBox_LeavePM";
-            this.RadioBox_LeavePM.Size = new System.Drawing.Size(29, 16);
+            this.RadioBox_LeavePM.Size = new System.Drawing.Size(32, 16);
             this.RadioBox_LeavePM.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.RadioBox_LeavePM.TabIndex = 16;
             this.RadioBox_LeavePM.Text = "م";
@@ -6384,7 +6384,7 @@
             this.RadioBox_LeaveAM.Font = new System.Drawing.Font("Tahoma", 6F, System.Drawing.FontStyle.Bold);
             this.RadioBox_LeaveAM.Location = new System.Drawing.Point(92, 9);
             this.RadioBox_LeaveAM.Name = "RadioBox_LeaveAM";
-            this.RadioBox_LeaveAM.Size = new System.Drawing.Size(35, 16);
+            this.RadioBox_LeaveAM.Size = new System.Drawing.Size(38, 16);
             this.RadioBox_LeaveAM.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.RadioBox_LeaveAM.TabIndex = 15;
             this.RadioBox_LeaveAM.Text = "ص";
@@ -6419,7 +6419,7 @@
             this.checkBox_NetWork.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_NetWork.Location = new System.Drawing.Point(59, 54);
             this.checkBox_NetWork.Name = "checkBox_NetWork";
-            this.checkBox_NetWork.Size = new System.Drawing.Size(63, 16);
+            this.checkBox_NetWork.Size = new System.Drawing.Size(68, 17);
             this.checkBox_NetWork.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_NetWork.TabIndex = 1022;
             this.checkBox_NetWork.Text = "شبكـــة";
@@ -6438,7 +6438,7 @@
             this.RadioBox_AllowPM.Font = new System.Drawing.Font("Tahoma", 6F, System.Drawing.FontStyle.Bold);
             this.RadioBox_AllowPM.Location = new System.Drawing.Point(32, 9);
             this.RadioBox_AllowPM.Name = "RadioBox_AllowPM";
-            this.RadioBox_AllowPM.Size = new System.Drawing.Size(29, 16);
+            this.RadioBox_AllowPM.Size = new System.Drawing.Size(32, 16);
             this.RadioBox_AllowPM.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.RadioBox_AllowPM.TabIndex = 16;
             this.RadioBox_AllowPM.Text = "م";
@@ -6462,7 +6462,7 @@
             this.RadioBox_AllowAM.Font = new System.Drawing.Font("Tahoma", 6F, System.Drawing.FontStyle.Bold);
             this.RadioBox_AllowAM.Location = new System.Drawing.Point(92, 9);
             this.RadioBox_AllowAM.Name = "RadioBox_AllowAM";
-            this.RadioBox_AllowAM.Size = new System.Drawing.Size(35, 16);
+            this.RadioBox_AllowAM.Size = new System.Drawing.Size(38, 16);
             this.RadioBox_AllowAM.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.RadioBox_AllowAM.TabIndex = 15;
             this.RadioBox_AllowAM.Text = "ص";
@@ -6733,7 +6733,7 @@
             this.chk44.Location = new System.Drawing.Point(310, 98);
             this.chk44.Name = "chk44";
             this.chk44.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk44.Size = new System.Drawing.Size(174, 16);
+            this.chk44.Size = new System.Drawing.Size(182, 17);
             this.chk44.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.chk44.TabIndex = 1047;
             this.chk44.Text = "اضافة المديونية الى حساب النزيل";
@@ -6749,7 +6749,7 @@
             this.checkBoxX3.Location = new System.Drawing.Point(904, 119);
             this.checkBoxX3.Name = "checkBoxX3";
             this.checkBoxX3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBoxX3.Size = new System.Drawing.Size(152, 16);
+            this.checkBoxX3.Size = new System.Drawing.Size(159, 17);
             this.checkBoxX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBoxX3.TabIndex = 976;
             this.checkBoxX3.Text = "تحديد كفيل لكل موظف جديد";
@@ -7603,7 +7603,7 @@
             this.ChkEmp1.Location = new System.Drawing.Point(379, 39);
             this.ChkEmp1.Name = "ChkEmp1";
             this.ChkEmp1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ChkEmp1.Size = new System.Drawing.Size(236, 16);
+            this.ChkEmp1.Size = new System.Drawing.Size(246, 17);
             this.ChkEmp1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ChkEmp1.TabIndex = 980;
             this.ChkEmp1.TabStop = false;
@@ -7633,7 +7633,7 @@
             this.checkBox_VacationManually.Location = new System.Drawing.Point(105, 92);
             this.checkBox_VacationManually.Name = "checkBox_VacationManually";
             this.checkBox_VacationManually.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_VacationManually.Size = new System.Drawing.Size(198, 16);
+            this.checkBox_VacationManually.Size = new System.Drawing.Size(207, 17);
             this.checkBox_VacationManually.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_VacationManually.TabIndex = 18;
             this.checkBox_VacationManually.Text = "احتساب تلقائي للاجازة في قرار الاجازة";
@@ -7649,7 +7649,7 @@
             this.checkBox_Sponer.Location = new System.Drawing.Point(304, 89);
             this.checkBox_Sponer.Name = "checkBox_Sponer";
             this.checkBox_Sponer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_Sponer.Size = new System.Drawing.Size(152, 16);
+            this.checkBox_Sponer.Size = new System.Drawing.Size(159, 17);
             this.checkBox_Sponer.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_Sponer.TabIndex = 976;
             this.checkBox_Sponer.Text = "تحديد كفيل لكل موظف جديد";
@@ -7687,7 +7687,7 @@
             this.checkBox_AttendanceManually.Location = new System.Drawing.Point(445, 12);
             this.checkBox_AttendanceManually.Name = "checkBox_AttendanceManually";
             this.checkBox_AttendanceManually.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_AttendanceManually.Size = new System.Drawing.Size(169, 16);
+            this.checkBox_AttendanceManually.Size = new System.Drawing.Size(177, 17);
             this.checkBox_AttendanceManually.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_AttendanceManually.TabIndex = 976;
             this.checkBox_AttendanceManually.Text = "السماح بإدخال وقت الحضور يدوياَ";
@@ -7703,7 +7703,7 @@
             this.checkBox_AutoLeave.Location = new System.Drawing.Point(446, 66);
             this.checkBox_AutoLeave.Name = "checkBox_AutoLeave";
             this.checkBox_AutoLeave.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox_AutoLeave.Size = new System.Drawing.Size(169, 16);
+            this.checkBox_AutoLeave.Size = new System.Drawing.Size(177, 17);
             this.checkBox_AutoLeave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_AutoLeave.TabIndex = 978;
             this.checkBox_AutoLeave.Text = "صـــرف الموظفــــين تلقــــائيا بعد ";
