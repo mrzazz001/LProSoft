@@ -5693,11 +5693,11 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         string BranchFlag;
         // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
         private void Frm_Main_Load(object sender, EventArgs e)
-        // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
-        {
+         {
             n = VarGeneral.n;
             VarGeneral.loginoccures = 1;
             LangArEn = 0;
+             
             //Program.min();
             loc = new Point(35, c1Ribbon1.Height + 15);
             buttonItem34.SubItems.Add(mdiWindowListItem1);
@@ -15822,6 +15822,25 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 Application.ExitThread();
             }
         }
+        void setlayout(int v)
+        {
+            if (v == 1)
+            {
+                buttonItem_OpenAcc.Visible = false;
+                buttonItem_SndGaid.Visible = false;
+                ribbonGroup5.Visible = false;
+                buttonItem_CenterCost.Visible = false;
+                ribbonGroup17.Visible = false;
+                ribbonGroup6.Visible = false;
+                buttonItem_AccTree.Visible = false;
+                ribbonGroup18.Visible = false;
+                ribbonGroup13.Visible = false;
+                ribbonGroup14.Visible = false;
+                ribbonGroup12.Visible = false;
+                buttonItem_AccCat.Visible = false;
+
+            }
+        }
         private void DBBackupElectronic(bool vMsg, int sts)
         {
 
@@ -20564,6 +20583,11 @@ WHERE row_num > 1;
                 VarGeneral.insertMessingCategoriesPrinterSettengs();
             }
             catch { }
+        }
+
+        private void ribbonGroup12_DialogLauncherClick(object sender, EventArgs e)
+        {
+
         }
     }
 }
