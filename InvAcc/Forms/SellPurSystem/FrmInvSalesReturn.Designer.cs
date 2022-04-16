@@ -787,7 +787,7 @@ private void InitializeComponent()
             superTabPanelItemColorTable1.Background = superTabLinearGradientColorTable1;
             superTabPanelColorTable1.Default = superTabPanelItemColorTable1;
             this.superTabControlPanel3.PanelColor = superTabPanelColorTable1;
-            this.superTabControlPanel3.Size = new System.Drawing.Size(997, 104);
+            this.superTabControlPanel3.Size = new System.Drawing.Size(997, 102);
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.superTabItem_items;
             // 
@@ -1651,7 +1651,7 @@ private void InitializeComponent()
             this.checkBox_CostGaidTax.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_CostGaidTax.Location = new System.Drawing.Point(7, 46);
             this.checkBox_CostGaidTax.Name = "checkBox_CostGaidTax";
-            this.checkBox_CostGaidTax.Size = new System.Drawing.Size(97, 16);
+            this.checkBox_CostGaidTax.Size = new System.Drawing.Size(103, 17);
             this.checkBox_CostGaidTax.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_CostGaidTax.TabIndex = 1144;
             this.checkBox_CostGaidTax.Text = "سند محاسبي";
@@ -1869,7 +1869,7 @@ private void InitializeComponent()
             this.checkBox_GaidDis.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_GaidDis.Location = new System.Drawing.Point(31, 51);
             this.checkBox_GaidDis.Name = "checkBox_GaidDis";
-            this.checkBox_GaidDis.Size = new System.Drawing.Size(97, 16);
+            this.checkBox_GaidDis.Size = new System.Drawing.Size(103, 17);
             this.checkBox_GaidDis.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_GaidDis.TabIndex = 1156;
             this.checkBox_GaidDis.Text = "سند محاسبي";
@@ -2194,7 +2194,7 @@ private void InitializeComponent()
             // 
             this.txtCustNo.BackColor = System.Drawing.Color.White;
             this.txtCustNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtCustNo.Location = new System.Drawing.Point(275, 13);
+            this.txtCustNo.Location = new System.Drawing.Point(275, 11);
             this.txtCustNo.MaxLength = 30;
             this.txtCustNo.Name = "txtCustNo";
             this.txtCustNo.ReadOnly = true;
@@ -2888,7 +2888,7 @@ private void InitializeComponent()
             this.checkBox_NetWork.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_NetWork.Location = new System.Drawing.Point(9, 22);
             this.checkBox_NetWork.Name = "checkBox_NetWork";
-            this.checkBox_NetWork.Size = new System.Drawing.Size(63, 16);
+            this.checkBox_NetWork.Size = new System.Drawing.Size(68, 17);
             this.checkBox_NetWork.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_NetWork.TabIndex = 1022;
             this.checkBox_NetWork.Text = "شبكـــة";
@@ -2908,7 +2908,7 @@ private void InitializeComponent()
             this.checkBox_Credit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_Credit.Location = new System.Drawing.Point(74, 22);
             this.checkBox_Credit.Name = "checkBox_Credit";
-            this.checkBox_Credit.Size = new System.Drawing.Size(54, 16);
+            this.checkBox_Credit.Size = new System.Drawing.Size(58, 17);
             this.checkBox_Credit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_Credit.TabIndex = 16;
             this.checkBox_Credit.Text = "أجـــل";
@@ -2929,7 +2929,7 @@ private void InitializeComponent()
             this.checkBox_Chash.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.checkBox_Chash.Location = new System.Drawing.Point(129, 22);
             this.checkBox_Chash.Name = "checkBox_Chash";
-            this.checkBox_Chash.Size = new System.Drawing.Size(60, 16);
+            this.checkBox_Chash.Size = new System.Drawing.Size(65, 17);
             this.checkBox_Chash.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBox_Chash.TabIndex = 15;
             this.checkBox_Chash.Text = "نقـــدي";

@@ -663,11 +663,11 @@ namespace InvAcc.Forms
             this.labelVersion.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelVersion.ForeColor = System.Drawing.Color.Goldenrod;
             this.labelVersion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelVersion.Location = new System.Drawing.Point(364, 598);
+            this.labelVersion.Location = new System.Drawing.Point(233, 598);
             this.labelVersion.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.labelVersion.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(244, 17);
+            this.labelVersion.Size = new System.Drawing.Size(185, 17);
             this.labelVersion.TabIndex = 884;
             this.labelVersion.Text = "Version : 1.0.5";
             this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -960,7 +960,7 @@ namespace InvAcc.Forms
             this.netResize1.SetResizeChildren(this.label5, false);
             this.netResize1.SetResizeControl(this.label5, false);
             this.netResize1.SetResizeFont(this.label5, false);
-            this.label5.Size = new System.Drawing.Size(236, 17);
+            this.label5.Size = new System.Drawing.Size(0, 17);
             this.label5.TabIndex = 1189;
             this.label5.Text = "DB Version: ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -968,6 +968,8 @@ namespace InvAcc.Forms
             // 
             // netResize1
             // 
+            this.netResize1.DPIAutoResize = false;
+            this.netResize1.Enabled = false;
             this.netResize1.LabelsAutoEllipse = false;
             this.netResize1.ParentControl = this;
             this.netResize1.ResizeMode = Softgroup.NetResize.NetResize.ResizeModeEnum.rmAdvanced;
@@ -1035,7 +1037,8 @@ namespace InvAcc.Forms
             // 
             // FrmLog
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(50)))), ((int)(((byte)(59)))));
             this.BackgroundImage = global::InvAcc.Properties.Resources.Log;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

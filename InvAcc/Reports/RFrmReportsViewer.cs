@@ -3572,7 +3572,8 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
                                 if ((orientationSetting.GetValueOrDefault() != 1 ? 0 : (orientationSetting.HasValue == true ? 1 : 0)) == 0)
                                 {
                                     this.STEP_Cachier_1();
-                                  //  if ((this.db.StockPrinterSetting(VarGeneral.UserID, 1).ISdirectPrinting ? true : this.BarcodSts))
+                               
+                                  if ((this.db.StockPrinterSetting(VarGeneral.UserID, 1).ISdirectPrinting ? true : this.BarcodSts))
                                     {
                                         this.STEP_Cachier_2();
                                     }
