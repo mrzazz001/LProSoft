@@ -544,7 +544,7 @@ private void InitializeComponent()
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label5.Location = new System.Drawing.Point(235, 460);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 1071;
             this.label5.Text = "رقم الشيك";
             this.label5.Visible = false;
@@ -595,7 +595,7 @@ private void InitializeComponent()
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label8.Location = new System.Drawing.Point(712, 94);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.Size = new System.Drawing.Size(62, 13);
             this.label8.TabIndex = 1059;
             this.label8.Text = "أصرفوا لـــ :";
             // 
@@ -743,7 +743,7 @@ private void InitializeComponent()
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label6.Location = new System.Drawing.Point(662, 162);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.Size = new System.Drawing.Size(59, 13);
             this.label6.TabIndex = 1052;
             this.label6.Text = "الحســــاب :";
             // 

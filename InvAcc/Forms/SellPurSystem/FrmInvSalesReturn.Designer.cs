@@ -365,7 +365,7 @@ private void InitializeComponent()
             this.PanelSpecialContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelSpecialContainer.Location = new System.Drawing.Point(0, 0);
             this.PanelSpecialContainer.Name = "PanelSpecialContainer";
-            this.PanelSpecialContainer.Size = new System.Drawing.Size(1278, 514);
+            this.PanelSpecialContainer.Size = new System.Drawing.Size(608, 514);
             this.PanelSpecialContainer.TabIndex = 1220;
             // 
             // ribbonBar1
@@ -446,7 +446,7 @@ private void InitializeComponent()
             this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(1278, 463);
+            this.ribbonBar1.Size = new System.Drawing.Size(608, 463);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             this.ribbonBar1.TabIndex = 867;
             this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -480,7 +480,7 @@ private void InitializeComponent()
             this.label43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label43.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label43.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label43.Location = new System.Drawing.Point(717, 64);
+            this.label43.Location = new System.Drawing.Point(47, 64);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(101, 13);
             this.label43.TabIndex = 1247;
@@ -504,7 +504,7 @@ private void InitializeComponent()
             this.label42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label42.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label42.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label42.Location = new System.Drawing.Point(407, 65);
+            this.label42.Location = new System.Drawing.Point(-263, 65);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(99, 13);
             this.label42.TabIndex = 1244;
@@ -577,7 +577,7 @@ private void InitializeComponent()
             this.label40.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.label40.ForeColor = System.Drawing.Color.Black;
             this.label40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label40.Location = new System.Drawing.Point(186, 284);
+            this.label40.Location = new System.Drawing.Point(-484, 284);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(88, 20);
             this.label40.TabIndex = 1226;
@@ -2215,7 +2215,7 @@ private void InitializeComponent()
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label21.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label21.Location = new System.Drawing.Point(727, 87);
+            this.label21.Location = new System.Drawing.Point(57, 87);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(33, 13);
             this.label21.TabIndex = 1054;
@@ -2229,7 +2229,7 @@ private void InitializeComponent()
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(416, 87);
+            this.label12.Location = new System.Drawing.Point(-254, 87);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(38, 13);
             this.label12.TabIndex = 1054;
@@ -2262,7 +2262,7 @@ private void InitializeComponent()
             // 
             this.txtCustName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustName.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.txtCustName.Location = new System.Drawing.Point(523, 36);
+            this.txtCustName.Location = new System.Drawing.Point(-147, 36);
             this.txtCustName.Name = "txtCustName";
             this.netResize1.SetResizeTextBoxMultiline(this.txtCustName, false);
             this.txtCustName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2278,7 +2278,7 @@ private void InitializeComponent()
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(726, 41);
+            this.label10.Location = new System.Drawing.Point(56, 41);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 13);
             this.label10.TabIndex = 495;
@@ -2293,7 +2293,7 @@ private void InitializeComponent()
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(726, 17);
+            this.label4.Location = new System.Drawing.Point(56, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 493;
@@ -2308,7 +2308,7 @@ private void InitializeComponent()
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label13.Location = new System.Drawing.Point(453, 39);
+            this.label13.Location = new System.Drawing.Point(-217, 39);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(74, 13);
             this.label13.TabIndex = 1053;
@@ -2323,7 +2323,7 @@ private void InitializeComponent()
             this.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Label2.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label2.Location = new System.Drawing.Point(1208, 41);
+            this.Label2.Location = new System.Drawing.Point(538, 41);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(66, 13);
             this.Label2.TabIndex = 480;
@@ -2337,7 +2337,7 @@ private void InitializeComponent()
             this.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Label1.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label1.Location = new System.Drawing.Point(1208, 17);
+            this.Label1.Location = new System.Drawing.Point(538, 17);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(66, 13);
             this.Label1.TabIndex = 479;
@@ -2358,7 +2358,7 @@ private void InitializeComponent()
             this.txtInvCost.Increment = 0D;
             this.txtInvCost.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtInvCost.IsInputReadOnly = true;
-            this.txtInvCost.Location = new System.Drawing.Point(812, 526);
+            this.txtInvCost.Location = new System.Drawing.Point(142, 526);
             this.txtInvCost.Name = "txtInvCost";
             this.txtInvCost.Size = new System.Drawing.Size(109, 21);
             this.txtInvCost.TabIndex = 1059;
@@ -2378,7 +2378,7 @@ private void InitializeComponent()
             this.txtCustNet.Increment = 0D;
             this.txtCustNet.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtCustNet.IsInputReadOnly = true;
-            this.txtCustNet.Location = new System.Drawing.Point(931, 526);
+            this.txtCustNet.Location = new System.Drawing.Point(261, 526);
             this.txtCustNet.Name = "txtCustNet";
             this.txtCustNet.Size = new System.Drawing.Size(109, 21);
             this.txtCustNet.TabIndex = 1060;
@@ -2398,7 +2398,7 @@ private void InitializeComponent()
             this.txtCustRep.Increment = 0D;
             this.txtCustRep.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtCustRep.IsInputReadOnly = true;
-            this.txtCustRep.Location = new System.Drawing.Point(931, 553);
+            this.txtCustRep.Location = new System.Drawing.Point(261, 553);
             this.txtCustRep.Name = "txtCustRep";
             this.txtCustRep.Size = new System.Drawing.Size(109, 21);
             this.txtCustRep.TabIndex = 1061;
@@ -2418,7 +2418,7 @@ private void InitializeComponent()
             this.textBox2.Increment = 0D;
             this.textBox2.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.textBox2.IsInputReadOnly = true;
-            this.textBox2.Location = new System.Drawing.Point(812, 582);
+            this.textBox2.Location = new System.Drawing.Point(142, 582);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(109, 21);
             this.textBox2.TabIndex = 1063;
@@ -2438,7 +2438,7 @@ private void InitializeComponent()
             this.textBox1.Increment = 0D;
             this.textBox1.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.textBox1.IsInputReadOnly = true;
-            this.textBox1.Location = new System.Drawing.Point(927, 584);
+            this.textBox1.Location = new System.Drawing.Point(257, 584);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(109, 21);
             this.textBox1.TabIndex = 1056;
@@ -2867,7 +2867,7 @@ private void InitializeComponent()
             this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupBox5.Location = new System.Drawing.Point(9, 8);
+            this.groupBox5.Location = new System.Drawing.Point(-661, 8);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox5.Size = new System.Drawing.Size(214, 50);
@@ -2943,7 +2943,7 @@ private void InitializeComponent()
             this.labelHeader.Font = new System.Drawing.Font("Tahoma", 15.75F);
             this.labelHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.labelHeader.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelHeader.Location = new System.Drawing.Point(456, 12);
+            this.labelHeader.Location = new System.Drawing.Point(-214, 12);
             this.labelHeader.Name = "labelHeader";
             this.labelHeader.Size = new System.Drawing.Size(169, 40);
             this.labelHeader.TabIndex = 1123;
@@ -2967,7 +2967,7 @@ private void InitializeComponent()
             this.doubleInput_Rate.Increment = 0D;
             this.doubleInput_Rate.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.doubleInput_Rate.IsInputReadOnly = true;
-            this.doubleInput_Rate.Location = new System.Drawing.Point(822, 86);
+            this.doubleInput_Rate.Location = new System.Drawing.Point(152, 86);
             this.doubleInput_Rate.Name = "doubleInput_Rate";
             this.doubleInput_Rate.Size = new System.Drawing.Size(62, 19);
             this.doubleInput_Rate.TabIndex = 1084;
@@ -3033,7 +3033,7 @@ private void InitializeComponent()
             // 
             this.txtRef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRef.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.txtRef.Location = new System.Drawing.Point(820, 61);
+            this.txtRef.Location = new System.Drawing.Point(150, 61);
             this.txtRef.Name = "txtRef";
             this.netResize1.SetResizeTextBoxMultiline(this.txtRef, false);
             this.txtRef.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -3048,7 +3048,7 @@ private void InitializeComponent()
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(414, 113);
+            this.label5.Location = new System.Drawing.Point(-256, 113);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 13);
             this.label5.TabIndex = 1066;
@@ -3062,7 +3062,7 @@ private void InitializeComponent()
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label15.Location = new System.Drawing.Point(726, 112);
+            this.label15.Location = new System.Drawing.Point(56, 112);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(85, 13);
             this.label15.TabIndex = 497;
@@ -3077,7 +3077,7 @@ private void InitializeComponent()
             this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label19.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label19.Location = new System.Drawing.Point(1208, 89);
+            this.label19.Location = new System.Drawing.Point(538, 89);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(67, 13);
             this.label19.TabIndex = 1049;
@@ -3091,7 +3091,7 @@ private void InitializeComponent()
             this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label18.Location = new System.Drawing.Point(1208, 113);
+            this.label18.Location = new System.Drawing.Point(538, 113);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(66, 13);
             this.label18.TabIndex = 1048;
@@ -3105,7 +3105,7 @@ private void InitializeComponent()
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(1208, 65);
+            this.label7.Location = new System.Drawing.Point(538, 65);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 13);
             this.label7.TabIndex = 482;
@@ -3142,7 +3142,7 @@ private void InitializeComponent()
             this.txtDiscoundPointsLoc.Increment = 0D;
             this.txtDiscoundPointsLoc.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtDiscoundPointsLoc.IsInputReadOnly = true;
-            this.txtDiscoundPointsLoc.Location = new System.Drawing.Point(42, 284);
+            this.txtDiscoundPointsLoc.Location = new System.Drawing.Point(-628, 284);
             this.txtDiscoundPointsLoc.MinValue = 0D;
             this.txtDiscoundPointsLoc.Name = "txtDiscoundPointsLoc";
             this.txtDiscoundPointsLoc.Size = new System.Drawing.Size(57, 21);
@@ -3165,7 +3165,7 @@ private void InitializeComponent()
             this.txtDiscoundPoints.Increment = 0D;
             this.txtDiscoundPoints.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
             this.txtDiscoundPoints.IsInputReadOnly = true;
-            this.txtDiscoundPoints.Location = new System.Drawing.Point(100, 284);
+            this.txtDiscoundPoints.Location = new System.Drawing.Point(-570, 284);
             this.txtDiscoundPoints.MinValue = 0D;
             this.txtDiscoundPoints.Name = "txtDiscoundPoints";
             this.txtDiscoundPoints.Size = new System.Drawing.Size(85, 21);
@@ -3210,7 +3210,7 @@ private void InitializeComponent()
             this.ribbonBar_Tasks.DragDropSupport = true;
             this.ribbonBar_Tasks.Location = new System.Drawing.Point(0, 463);
             this.ribbonBar_Tasks.Name = "ribbonBar_Tasks";
-            this.ribbonBar_Tasks.Size = new System.Drawing.Size(1278, 51);
+            this.ribbonBar_Tasks.Size = new System.Drawing.Size(608, 51);
             this.ribbonBar_Tasks.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_Tasks.TabIndex = 872;
             this.ribbonBar_Tasks.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -3255,7 +3255,7 @@ private void InitializeComponent()
             this.superTabControl_Main1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.superTabControl_Main1.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.superTabControl_Main1.SelectedTabIndex = -1;
-            this.superTabControl_Main1.Size = new System.Drawing.Size(781, 51);
+            this.superTabControl_Main1.Size = new System.Drawing.Size(111, 51);
             this.superTabControl_Main1.TabFont = new System.Drawing.Font("Tahoma", 8F);
             this.superTabControl_Main1.TabIndex = 10;
             this.superTabControl_Main1.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -3478,7 +3478,7 @@ private void InitializeComponent()
             this.superTabControl_Main2.ItemPadding.Left = 4;
             this.superTabControl_Main2.ItemPadding.Right = 4;
             this.superTabControl_Main2.ItemPadding.Top = 4;
-            this.superTabControl_Main2.Location = new System.Drawing.Point(781, 0);
+            this.superTabControl_Main2.Location = new System.Drawing.Point(111, 0);
             this.superTabControl_Main2.Name = "superTabControl_Main2";
             this.superTabControl_Main2.ReorderTabsEnabled = true;
             this.superTabControl_Main2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -3632,7 +3632,7 @@ private void InitializeComponent()
             this.barTopDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.barTopDockSite.Location = new System.Drawing.Point(0, 0);
             this.barTopDockSite.Name = "barTopDockSite";
-            this.barTopDockSite.Size = new System.Drawing.Size(1278, 0);
+            this.barTopDockSite.Size = new System.Drawing.Size(608, 0);
             this.barTopDockSite.TabIndex = 878;
             this.barTopDockSite.TabStop = false;
             // 
@@ -3643,7 +3643,7 @@ private void InitializeComponent()
             this.barBottomDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.barBottomDockSite.Location = new System.Drawing.Point(0, 514);
             this.barBottomDockSite.Name = "barBottomDockSite";
-            this.barBottomDockSite.Size = new System.Drawing.Size(1278, 0);
+            this.barBottomDockSite.Size = new System.Drawing.Size(608, 0);
             this.barBottomDockSite.TabIndex = 879;
             this.barBottomDockSite.TabStop = false;
             // 
@@ -3663,7 +3663,7 @@ private void InitializeComponent()
             this.barRightDockSite.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.barRightDockSite.Dock = System.Windows.Forms.DockStyle.Right;
             this.barRightDockSite.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.barRightDockSite.Location = new System.Drawing.Point(1278, 0);
+            this.barRightDockSite.Location = new System.Drawing.Point(608, 0);
             this.barRightDockSite.Name = "barRightDockSite";
             this.barRightDockSite.Size = new System.Drawing.Size(0, 514);
             this.barRightDockSite.TabIndex = 881;
@@ -3704,7 +3704,7 @@ private void InitializeComponent()
             this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
             this.dockSite3.Location = new System.Drawing.Point(0, 0);
             this.dockSite3.Name = "dockSite3";
-            this.dockSite3.Size = new System.Drawing.Size(1278, 0);
+            this.dockSite3.Size = new System.Drawing.Size(608, 0);
             this.dockSite3.TabIndex = 884;
             this.dockSite3.TabStop = false;
             // 
@@ -3714,7 +3714,7 @@ private void InitializeComponent()
             this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dockSite4.Location = new System.Drawing.Point(0, 514);
             this.dockSite4.Name = "dockSite4";
-            this.dockSite4.Size = new System.Drawing.Size(1278, 0);
+            this.dockSite4.Size = new System.Drawing.Size(608, 0);
             this.dockSite4.TabIndex = 885;
             this.dockSite4.TabStop = false;
             // 
@@ -3747,7 +3747,7 @@ private void InitializeComponent()
             // 
             this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockSite2.Location = new System.Drawing.Point(1278, 0);
+            this.dockSite2.Location = new System.Drawing.Point(608, 0);
             this.dockSite2.Name = "dockSite2";
             this.dockSite2.Size = new System.Drawing.Size(0, 514);
             this.dockSite2.TabIndex = 883;
@@ -3811,7 +3811,7 @@ private void InitializeComponent()
             this.expandableSplitter1.HotGripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
             this.expandableSplitter1.HotGripLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
             this.expandableSplitter1.HotGripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.expandableSplitter1.Location = new System.Drawing.Point(1264, 0);
+            this.expandableSplitter1.Location = new System.Drawing.Point(594, 0);
             this.expandableSplitter1.Name = "expandableSplitter1";
             this.expandableSplitter1.Size = new System.Drawing.Size(14, 0);
             this.expandableSplitter1.TabIndex = 1;
@@ -3824,7 +3824,7 @@ private void InitializeComponent()
             this.panelEx2.Location = new System.Drawing.Point(0, 0);
             this.panelEx2.MinimumSize = new System.Drawing.Size(824, 484);
             this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(1278, 514);
+            this.panelEx2.Size = new System.Drawing.Size(824, 514);
             this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx2.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -3843,7 +3843,7 @@ private void InitializeComponent()
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1278, 514);
+            this.panel1.Size = new System.Drawing.Size(608, 514);
             this.panel1.TabIndex = 886;
             // 
             // panelEx3
@@ -3854,7 +3854,7 @@ private void InitializeComponent()
             this.panelEx3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx3.Location = new System.Drawing.Point(0, 0);
             this.panelEx3.Name = "panelEx3";
-            this.panelEx3.Size = new System.Drawing.Size(1264, 0);
+            this.panelEx3.Size = new System.Drawing.Size(594, 0);
             this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelEx3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -3946,7 +3946,7 @@ private void InitializeComponent()
             this.DGV_Main.PrimaryGrid.Title.Visible = false;
             this.DGV_Main.PrimaryGrid.Visible = false;
             this.DGV_Main.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DGV_Main.Size = new System.Drawing.Size(1264, 0);
+            this.DGV_Main.Size = new System.Drawing.Size(594, 0);
             this.DGV_Main.TabIndex = 876;
             this.DGV_Main.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
@@ -3967,7 +3967,7 @@ private void InitializeComponent()
             this.ribbonBar_DGV.DragDropSupport = true;
             this.ribbonBar_DGV.Location = new System.Drawing.Point(0, -51);
             this.ribbonBar_DGV.Name = "ribbonBar_DGV";
-            this.ribbonBar_DGV.Size = new System.Drawing.Size(1264, 51);
+            this.ribbonBar_DGV.Size = new System.Drawing.Size(594, 51);
             this.ribbonBar_DGV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_DGV.TabIndex = 877;
             this.ribbonBar_DGV.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4013,7 +4013,7 @@ private void InitializeComponent()
             this.superTabControl_DGV.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.superTabControl_DGV.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.superTabControl_DGV.SelectedTabIndex = -1;
-            this.superTabControl_DGV.Size = new System.Drawing.Size(1264, 51);
+            this.superTabControl_DGV.Size = new System.Drawing.Size(594, 51);
             this.superTabControl_DGV.TabFont = new System.Drawing.Font("Tahoma", 8F);
             this.superTabControl_DGV.TabIndex = 12;
             this.superTabControl_DGV.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -4141,7 +4141,7 @@ private void InitializeComponent()
             // 
             // FrmInvSalesReturn
             // 
-            this.ClientSize = new System.Drawing.Size(1278, 514);
+            this.ClientSize = new System.Drawing.Size(608, 514);
             this.Controls.Add(this.PanelSpecialContainer);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.barTopDockSite);
@@ -4155,7 +4155,7 @@ private void InitializeComponent()
             this.Controls.Add(this.FlxInvToCopy);
             this.Icon = global::InvAcc.Properties.Resources.favicon;
             this.KeyPreview = true;
-            this.MinimumSize = new System.Drawing.Size(834, 505);
+            this.MinimumSize = new System.Drawing.Size(602, 505);
             this.Name = "FrmInvSalesReturn";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

@@ -1462,6 +1462,7 @@ public        int Dtype = -1;
                     {
                         
                         FrmReportsViewer frm = new FrmReportsViewer();
+                     
                         FrmReportsViewer.QRCodeData = Utilites.GetWQRCodeData(DataThis);
 
                         frm.Repvalue = "InvSal";
@@ -1473,8 +1474,7 @@ public        int Dtype = -1;
                             {
                                 if(r["CusVenNo"].ToString()=="")
                                 {
-                                    r["TaxCustNo"] = r["CusVenTaxNo"];
-                                      
+                                    r["TaxCustNo"] = text_CusTaxNo.Text;                                      
                                 }
 
                             }

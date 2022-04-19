@@ -187,16 +187,16 @@ namespace InvAcc.Forms
             this.buttonItem_GetAndSetMoney = new C1.Win.C1Ribbon.RibbonButton();
             this.buttonItem_CatchAndPay = new C1.Win.C1Ribbon.RibbonButton();
             this.buttonItem_Boxes = new C1.Win.C1Ribbon.RibbonButton();
-            this.ribbonGroup13 = new C1.Win.C1Ribbon.RibbonGroup();
-            this.buttonItem_SuppSndDiscount = new C1.Win.C1Ribbon.RibbonButton();
-            this.buttonItem_SupplierBalance = new C1.Win.C1Ribbon.RibbonButton();
-            this.buttonItem_SupplierAge = new C1.Win.C1Ribbon.RibbonButton();
-            this.buttonItem_SupplierSleep = new C1.Win.C1Ribbon.RibbonButton();
             this.ribbonGroup14 = new C1.Win.C1Ribbon.RibbonGroup();
             this.buttonItem_CustSndDiscount = new C1.Win.C1Ribbon.RibbonButton();
             this.buttonItem_ClientBalance = new C1.Win.C1Ribbon.RibbonButton();
             this.buttonItem_ClientAge = new C1.Win.C1Ribbon.RibbonButton();
             this.buttonItem_ClientSleep = new C1.Win.C1Ribbon.RibbonButton();
+            this.ribbonGroup13 = new C1.Win.C1Ribbon.RibbonGroup();
+            this.buttonItem_SuppSndDiscount = new C1.Win.C1Ribbon.RibbonButton();
+            this.buttonItem_SupplierBalance = new C1.Win.C1Ribbon.RibbonButton();
+            this.buttonItem_SupplierAge = new C1.Win.C1Ribbon.RibbonButton();
+            this.buttonItem_SupplierSleep = new C1.Win.C1Ribbon.RibbonButton();
             this.sideBarPanelItem_RepAcc = new C1.Win.C1Ribbon.RibbonTab();
             this.ribbonGroup81 = new C1.Win.C1Ribbon.RibbonGroup();
             this.buttonItem_RepAccDirctory = new C1.Win.C1Ribbon.RibbonButton();
@@ -453,7 +453,6 @@ namespace InvAcc.Forms
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem22 = new DevComponents.DotNetBar.ButtonItem();
             this.labelItem_TotSales = new DevComponents.DotNetBar.LabelItem();
-            this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
             this.applicationButton1 = new DevComponents.DotNetBar.ApplicationButton();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
@@ -473,6 +472,7 @@ namespace InvAcc.Forms
             this.itemContainer4 = new DevComponents.DotNetBar.ItemContainer();
             this.buttonItem20 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem21 = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
             this.buttonItem9 = new DevComponents.DotNetBar.ButtonItem();
             this.bar2 = new DevComponents.DotNetBar.Bar();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -1832,42 +1832,6 @@ namespace InvAcc.Forms
             this.buttonItem_Boxes.Text = "ادارة صناديق الخزانه";
             this.buttonItem_Boxes.Click += new System.EventHandler(this.buttonItem_Boxes_Click);
             // 
-            // ribbonGroup13
-            // 
-            this.ribbonGroup13.Items.Add(this.buttonItem_SuppSndDiscount);
-            this.ribbonGroup13.Items.Add(this.buttonItem_SupplierBalance);
-            this.ribbonGroup13.Items.Add(this.buttonItem_SupplierAge);
-            this.ribbonGroup13.Items.Add(this.buttonItem_SupplierSleep);
-            this.ribbonGroup13.Name = "ribbonGroup13";
-            // 
-            // buttonItem_SuppSndDiscount
-            // 
-            this.buttonItem_SuppSndDiscount.Name = "buttonItem_SuppSndDiscount";
-            this.buttonItem_SuppSndDiscount.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonItem_SuppSndDiscount.SmallImage")));
-            this.buttonItem_SuppSndDiscount.Text = "تخفيض المديونيه";
-            this.buttonItem_SuppSndDiscount.Click += new System.EventHandler(this.buttonItem_SuppSndDiscount_Click);
-            // 
-            // buttonItem_SupplierBalance
-            // 
-            this.buttonItem_SupplierBalance.Name = "buttonItem_SupplierBalance";
-            this.buttonItem_SupplierBalance.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonItem_SupplierBalance.SmallImage")));
-            this.buttonItem_SupplierBalance.Text = "ارصدة الموردين";
-            this.buttonItem_SupplierBalance.Click += new System.EventHandler(this.buttonItem_SupplierBalance_Click);
-            // 
-            // buttonItem_SupplierAge
-            // 
-            this.buttonItem_SupplierAge.Name = "buttonItem_SupplierAge";
-            this.buttonItem_SupplierAge.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonItem_SupplierAge.SmallImage")));
-            this.buttonItem_SupplierAge.Text = "ذمم الموردين";
-            this.buttonItem_SupplierAge.Click += new System.EventHandler(this.buttonItem_SupplierAge_Click);
-            // 
-            // buttonItem_SupplierSleep
-            // 
-            this.buttonItem_SupplierSleep.Name = "buttonItem_SupplierSleep";
-            this.buttonItem_SupplierSleep.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonItem_SupplierSleep.SmallImage")));
-            this.buttonItem_SupplierSleep.Text = "الموردون الراكدون";
-            this.buttonItem_SupplierSleep.Click += new System.EventHandler(this.buttonItem_SupplierSleep_Click);
-            // 
             // ribbonGroup14
             // 
             this.ribbonGroup14.Items.Add(this.buttonItem_CustSndDiscount);
@@ -1903,6 +1867,42 @@ namespace InvAcc.Forms
             this.buttonItem_ClientSleep.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonItem_ClientSleep.SmallImage")));
             this.buttonItem_ClientSleep.Text = "العملاء الراكدون";
             this.buttonItem_ClientSleep.Click += new System.EventHandler(this.buttonItem_ClientSleep_Click);
+            // 
+            // ribbonGroup13
+            // 
+            this.ribbonGroup13.Items.Add(this.buttonItem_SuppSndDiscount);
+            this.ribbonGroup13.Items.Add(this.buttonItem_SupplierBalance);
+            this.ribbonGroup13.Items.Add(this.buttonItem_SupplierAge);
+            this.ribbonGroup13.Items.Add(this.buttonItem_SupplierSleep);
+            this.ribbonGroup13.Name = "ribbonGroup13";
+            // 
+            // buttonItem_SuppSndDiscount
+            // 
+            this.buttonItem_SuppSndDiscount.Name = "buttonItem_SuppSndDiscount";
+            this.buttonItem_SuppSndDiscount.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonItem_SuppSndDiscount.SmallImage")));
+            this.buttonItem_SuppSndDiscount.Text = "تخفيض المديونيه";
+            this.buttonItem_SuppSndDiscount.Click += new System.EventHandler(this.buttonItem_SuppSndDiscount_Click);
+            // 
+            // buttonItem_SupplierBalance
+            // 
+            this.buttonItem_SupplierBalance.Name = "buttonItem_SupplierBalance";
+            this.buttonItem_SupplierBalance.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonItem_SupplierBalance.SmallImage")));
+            this.buttonItem_SupplierBalance.Text = "ارصدة الموردين";
+            this.buttonItem_SupplierBalance.Click += new System.EventHandler(this.buttonItem_SupplierBalance_Click);
+            // 
+            // buttonItem_SupplierAge
+            // 
+            this.buttonItem_SupplierAge.Name = "buttonItem_SupplierAge";
+            this.buttonItem_SupplierAge.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonItem_SupplierAge.SmallImage")));
+            this.buttonItem_SupplierAge.Text = "ذمم الموردين";
+            this.buttonItem_SupplierAge.Click += new System.EventHandler(this.buttonItem_SupplierAge_Click);
+            // 
+            // buttonItem_SupplierSleep
+            // 
+            this.buttonItem_SupplierSleep.Name = "buttonItem_SupplierSleep";
+            this.buttonItem_SupplierSleep.SmallImage = ((System.Drawing.Image)(resources.GetObject("buttonItem_SupplierSleep.SmallImage")));
+            this.buttonItem_SupplierSleep.Text = "الموردون الراكدون";
+            this.buttonItem_SupplierSleep.Click += new System.EventHandler(this.buttonItem_SupplierSleep_Click);
             // 
             // sideBarPanelItem_RepAcc
             // 
@@ -3780,7 +3780,7 @@ namespace InvAcc.Forms
             // 
             // OnlineWarning
             // 
-            this.OnlineWarning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(223)))), ((int)(((byte)(245)))));
+            this.OnlineWarning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(219)))), ((int)(((byte)(249)))));
             this.OnlineWarning.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.OnlineWarning.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.OnlineWarning.Font = new System.Drawing.Font("Tahoma", 8F);
@@ -3930,13 +3930,13 @@ namespace InvAcc.Forms
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.applicationButton1,
             this.ribbonTabItem1});
             this.ribbonControl1.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
             this.ribbonControl1.Location = new System.Drawing.Point(3, 71);
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.ribbonControl1.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.applicationButton1,
             this.buttonItem9});
             this.ribbonControl1.Size = new System.Drawing.Size(1022, 120);
             this.ribbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -3970,10 +3970,10 @@ namespace InvAcc.Forms
             this.ribbonPanel1.Controls.Add(this.ribbonBar3);
             this.ribbonPanel1.Controls.Add(this.ribbonBar1);
             this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel1.Location = new System.Drawing.Point(0, 36);
+            this.ribbonPanel1.Location = new System.Drawing.Point(0, 37);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(1022, 81);
+            this.ribbonPanel1.Size = new System.Drawing.Size(1022, 80);
             // 
             // 
             // 
@@ -4013,7 +4013,7 @@ namespace InvAcc.Forms
             this.circularProgressItem1});
             this.ribbonBar8.Location = new System.Drawing.Point(870, 0);
             this.ribbonBar8.Name = "ribbonBar8";
-            this.ribbonBar8.Size = new System.Drawing.Size(35, 78);
+            this.ribbonBar8.Size = new System.Drawing.Size(35, 77);
             this.ribbonBar8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar8.TabIndex = 7;
             this.ribbonBar8.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4055,7 +4055,7 @@ namespace InvAcc.Forms
             this.labelItem_TotPurReturn});
             this.ribbonBar4.Location = new System.Drawing.Point(725, 0);
             this.ribbonBar4.Name = "ribbonBar4";
-            this.ribbonBar4.Size = new System.Drawing.Size(145, 78);
+            this.ribbonBar4.Size = new System.Drawing.Size(145, 77);
             this.ribbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar4.TabIndex = 3;
             this.ribbonBar4.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4111,7 +4111,7 @@ namespace InvAcc.Forms
             this.labelItem_TotSalReturn});
             this.ribbonBar2.Location = new System.Drawing.Point(580, 0);
             this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(145, 78);
+            this.ribbonBar2.Size = new System.Drawing.Size(145, 77);
             this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar2.TabIndex = 1;
             this.ribbonBar2.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4166,7 +4166,7 @@ namespace InvAcc.Forms
             this.labelItem_PurchInvCount});
             this.ribbonBar7.Location = new System.Drawing.Point(435, 0);
             this.ribbonBar7.Name = "ribbonBar7";
-            this.ribbonBar7.Size = new System.Drawing.Size(145, 78);
+            this.ribbonBar7.Size = new System.Drawing.Size(145, 77);
             this.ribbonBar7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar7.TabIndex = 6;
             this.ribbonBar7.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4221,7 +4221,7 @@ namespace InvAcc.Forms
             this.labelItem_SalesInvCount});
             this.ribbonBar6.Location = new System.Drawing.Point(290, 0);
             this.ribbonBar6.Name = "ribbonBar6";
-            this.ribbonBar6.Size = new System.Drawing.Size(145, 78);
+            this.ribbonBar6.Size = new System.Drawing.Size(145, 77);
             this.ribbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar6.TabIndex = 5;
             this.ribbonBar6.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4276,7 +4276,7 @@ namespace InvAcc.Forms
             this.labelItem_TotPurch});
             this.ribbonBar3.Location = new System.Drawing.Point(145, 0);
             this.ribbonBar3.Name = "ribbonBar3";
-            this.ribbonBar3.Size = new System.Drawing.Size(145, 78);
+            this.ribbonBar3.Size = new System.Drawing.Size(145, 77);
             this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar3.TabIndex = 2;
             this.ribbonBar3.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4331,7 +4331,7 @@ namespace InvAcc.Forms
             this.labelItem_TotSales});
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(145, 78);
+            this.ribbonBar1.Size = new System.Drawing.Size(145, 77);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar1.TabIndex = 0;
             this.ribbonBar1.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -4363,23 +4363,14 @@ namespace InvAcc.Forms
             this.labelItem_TotSales.TextAlignment = System.Drawing.StringAlignment.Center;
             this.labelItem_TotSales.Width = 100;
             // 
-            // ribbonTabItem1
-            // 
-            this.ribbonTabItem1.Checked = true;
-            this.ribbonTabItem1.ColorTable = DevComponents.DotNetBar.eRibbonTabColor.Magenta;
-            this.ribbonTabItem1.Name = "ribbonTabItem1";
-            this.ribbonTabItem1.Panel = this.ribbonPanel1;
-            this.ribbonTabItem1.Symbol = "";
-            // 
             // applicationButton1
             // 
             this.applicationButton1.AutoExpandOnClick = true;
             this.applicationButton1.CanCustomize = false;
             this.applicationButton1.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.Image;
             this.applicationButton1.Image = ((System.Drawing.Image)(resources.GetObject("applicationButton1.Image")));
-            this.applicationButton1.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.applicationButton1.ImagePaddingHorizontal = 0;
-            this.applicationButton1.ImagePaddingVertical = 0;
+            this.applicationButton1.ImagePaddingHorizontal = 2;
+            this.applicationButton1.ImagePaddingVertical = 2;
             this.applicationButton1.Name = "applicationButton1";
             this.applicationButton1.ShowSubItems = false;
             this.applicationButton1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -4603,6 +4594,14 @@ namespace InvAcc.Forms
             this.buttonItem21.SubItemsExpandWidth = 24;
             this.buttonItem21.Text = "E&xit";
             // 
+            // ribbonTabItem1
+            // 
+            this.ribbonTabItem1.Checked = true;
+            this.ribbonTabItem1.ColorTable = DevComponents.DotNetBar.eRibbonTabColor.Magenta;
+            this.ribbonTabItem1.Name = "ribbonTabItem1";
+            this.ribbonTabItem1.Panel = this.ribbonPanel1;
+            this.ribbonTabItem1.Symbol = "";
+            // 
             // buttonItem9
             // 
             this.buttonItem9.Name = "buttonItem9";
@@ -4785,10 +4784,10 @@ namespace InvAcc.Forms
             this.labelItem_Level,
             this.labelItem_Reg});
             this.metroToolbar_main.ItemSpacing = 12;
-            this.metroToolbar_main.Location = new System.Drawing.Point(0, 730);
+            this.metroToolbar_main.Location = new System.Drawing.Point(0, 694);
             this.metroToolbar_main.Name = "metroToolbar_main";
             this.metroToolbar_main.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.metroToolbar_main.Size = new System.Drawing.Size(1028, 19);
+            this.metroToolbar_main.Size = new System.Drawing.Size(1028, 55);
             this.metroToolbar_main.TabIndex = 1086;
             this.metroToolbar_main.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
@@ -4907,7 +4906,7 @@ namespace InvAcc.Forms
             this.panelWarning.Controls.Add(this.label_SupportTimer);
             this.panelWarning.Controls.Add(this.warningBox);
             this.panelWarning.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelWarning.Location = new System.Drawing.Point(0, 701);
+            this.panelWarning.Location = new System.Drawing.Point(0, 665);
             this.panelWarning.Name = "panelWarning";
             this.panelWarning.Size = new System.Drawing.Size(1028, 29);
             this.panelWarning.TabIndex = 1088;
@@ -4972,7 +4971,7 @@ namespace InvAcc.Forms
             // 
             // warningBox
             // 
-            this.warningBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(223)))), ((int)(((byte)(245)))));
+            this.warningBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(219)))), ((int)(((byte)(249)))));
             this.warningBox.CloseButtonTooltip = "إخفاء";
             this.warningBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.warningBox.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
@@ -4997,7 +4996,7 @@ namespace InvAcc.Forms
             this.tabControl1.Location = new System.Drawing.Point(0, 181);
             this.tabControl1.MenuRenderer = null;
             this.tabControl1.Name = "tabControl1";
-            this.tabControl1.Size = new System.Drawing.Size(1028, 520);
+            this.tabControl1.Size = new System.Drawing.Size(1028, 484);
             this.tabControl1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
             this.tabControl1.TabCloseButtonImage = null;
             this.tabControl1.TabCloseButtonImageDisabled = null;

@@ -5697,7 +5697,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             n = VarGeneral.n;
             VarGeneral.loginoccures = 1;
             LangArEn = 0;
-             
+
             //Program.min();
             loc = new Point(35, c1Ribbon1.Height + 15);
             buttonItem34.SubItems.Add(mdiWindowListItem1);
@@ -6615,6 +6615,30 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
                 //childmin();
                 showChild(frmEqarAlarm);
             }
+            RegistryKey registryKey = null;
+            try
+            {
+                registryKey = Registry.CurrentUser.OpenSubKey("Software\\PRS AND PR Settings\\WinSystemOperation", true);
+                if (registryKey != null)
+                {
+
+                    int ks = 0;
+                    try
+                    {
+                        object kd = registryKey.GetValue("Light");
+                        ks = int.Parse(kd.ToString());
+                        setlayout(ks);
+                    }
+                    catch
+                    {
+
+                    }
+                }
+            }
+            catch
+            {
+            }
+            ;
         }
 #pragma warning disable CS0414 // The field 'Frm_Main.syncflag' is assigned but its value is never used
         int syncflag = 0; bool kkk = false;
@@ -15826,6 +15850,8 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
         {
             if (v == 1)
             {
+                labelItem_Reg.Text = "بروسوفت لايت";
+                RIbbon_Resturnat.Visible = false;
                 buttonItem_OpenAcc.Visible = false;
                 buttonItem_SndGaid.Visible = false;
                 ribbonGroup5.Visible = false;

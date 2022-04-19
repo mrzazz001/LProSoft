@@ -25,6 +25,42 @@ partial class FrmInvPuchaesReturn
 private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates1 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
+            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates2 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
+            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable8 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable9 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates3 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
+            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable10 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates4 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
+            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable11 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable12 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
@@ -32,42 +68,6 @@ private void InitializeComponent()
             DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates5 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
             DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable13 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable10 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates4 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
-            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable11 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates1 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
-            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates2 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
-            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable8 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates3 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
-            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable9 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable14 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
@@ -82,6 +82,59 @@ private void InitializeComponent()
             DevComponents.DotNetBar.SuperGrid.Style.Background background4 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvPuchaesReturn));
             this.PanelSpecialContainer = new System.Windows.Forms.Panel();
+            this.hideContainerLeft = new DevExpress.XtraBars.Docking.AutoHideContainer();
+            this.dockPanel3 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.dataLayoutControl3 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.CreaditAccNo_DLookUpEdit = new ProRealEstate.LookUpEditWithDataSource();
+            this.NetworkAccNo_DLookUpEdit = new ProRealEstate.LookUpEditWithDataSource();
+            this.CashAccNo_DLookUpEdit = new ProRealEstate.LookUpEditWithDataSource();
+            this.CashAccNo_CLookUpEdit = new ProRealEstate.LookUpEditWithDataSource();
+            this.NetworkAccNo_CLookUpEdit = new ProRealEstate.LookUpEditWithDataSource();
+            this.CreaditAccNo_CLookUpEdit = new ProRealEstate.LookUpEditWithDataSource();
+            this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup8 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup9 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup10 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.dataLayoutControl2 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.IsExtrnalGaidCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.IsTaxGaidCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
+            this.toggleSwitch2 = new DevExpress.XtraEditors.ToggleSwitch();
+            this.IsDisGaidCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.IsCommGaidCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.IsCommUseCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.CommCreditTextEdit = new ProRealEstate.LookUpEditWithDataSource();
+            this.CommDebitTextEdit = new ProRealEstate.LookUpEditWithDataSource();
+            this.DisCreditTextEdit = new ProRealEstate.LookUpEditWithDataSource();
+            this.DisDebitTextEdit = new ProRealEstate.LookUpEditWithDataSource();
+            this.TaxCreditTextEdit = new ProRealEstate.LookUpEditWithDataSource();
+            this.TaxDebitTextEdit = new ProRealEstate.LookUpEditWithDataSource();
+            this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup12 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup13 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup14 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.txtCrn_No = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
@@ -112,13 +165,6 @@ private void InitializeComponent()
             this.txtLCost = new System.Windows.Forms.TextBox();
             this.txtVCost = new System.Windows.Forms.TextBox();
             this.superTabItem_items = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.label_LockeName = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txtTotalQ = new DevComponents.Editors.DoubleInput();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox_Usr = new System.Windows.Forms.TextBox();
-            this.superTabItem_Detiles = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel8 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabControl3 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
@@ -204,6 +250,13 @@ private void InitializeComponent()
             this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.txtRemark = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.superTabItem_Note = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.label_LockeName = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtTotalQ = new DevComponents.Editors.DoubleInput();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox_Usr = new System.Windows.Forms.TextBox();
+            this.superTabItem_Detiles = new DevComponents.DotNetBar.SuperTabItem();
             this.button_SrchCustNo = new DevComponents.DotNetBar.ButtonX();
             this.txtCustNo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -317,15 +370,73 @@ private void InitializeComponent()
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtItemName = new System.Windows.Forms.TextBox();
             this.netResize1 = new Softgroup.NetResize.NetResize(this.components);
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.dockManager2 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.dockPanel4 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel4_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.xPrinterSetting1 = new ProRealEstate.Utilties.XPrinterSetting();
             this.PanelSpecialContainer.SuspendLayout();
+            this.hideContainerLeft.SuspendLayout();
+            this.dockPanel3.SuspendLayout();
+            this.dockPanel3_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl3)).BeginInit();
+            this.dataLayoutControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CreaditAccNo_DLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetworkAccNo_DLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CashAccNo_DLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CashAccNo_CLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetworkAccNo_CLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CreaditAccNo_CLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            this.dockPanel1.SuspendLayout();
+            this.dockPanel1_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl2)).BeginInit();
+            this.dataLayoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IsExtrnalGaidCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IsTaxGaidCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IsDisGaidCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IsCommGaidCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IsCommUseCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CommCreditTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CommDebitTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisCreditTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisDebitTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TaxCreditTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TaxDebitTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             this.ribbonBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FlxDat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Info)).BeginInit();
             this.superTabControl_Info.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FlxStkQty)).BeginInit();
-            this.superTabControlPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).BeginInit();
             this.superTabControlPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl3)).BeginInit();
             this.superTabControl3.SuspendLayout();
@@ -347,6 +458,8 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.txtTotCostExtrnal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotCostLocExtrnal)).BeginInit();
             this.superTabControlPanel4.SuspendLayout();
+            this.superTabControlPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Credit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInvCost)).BeginInit();
@@ -382,10 +495,15 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dockManager2)).BeginInit();
+            this.dockPanel4.SuspendLayout();
+            this.dockPanel4_Container.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelSpecialContainer
             // 
+            this.PanelSpecialContainer.Controls.Add(this.hideContainerLeft);
             this.PanelSpecialContainer.Controls.Add(this.ribbonBar1);
             this.PanelSpecialContainer.Controls.Add(this.ribbonBar_Tasks);
             this.PanelSpecialContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -393,6 +511,699 @@ private void InitializeComponent()
             this.PanelSpecialContainer.Name = "PanelSpecialContainer";
             this.PanelSpecialContainer.Size = new System.Drawing.Size(1278, 514);
             this.PanelSpecialContainer.TabIndex = 1220;
+            // 
+            // hideContainerLeft
+            // 
+            this.hideContainerLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(242)))));
+            this.hideContainerLeft.Controls.Add(this.dockPanel3);
+            this.hideContainerLeft.Controls.Add(this.dockPanel1);
+            this.hideContainerLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.hideContainerLeft.Location = new System.Drawing.Point(0, 0);
+            this.hideContainerLeft.Name = "hideContainerLeft";
+            this.hideContainerLeft.Size = new System.Drawing.Size(23, 463);
+            // 
+            // dockPanel3
+            // 
+            this.dockPanel3.Controls.Add(this.dockPanel3_Container);
+            this.dockPanel3.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel3.ID = new System.Guid("eeb672e1-f9ab-4320-8fbb-c537f86854a4");
+            this.dockPanel3.Location = new System.Drawing.Point(23, 0);
+            this.dockPanel3.Name = "dockPanel3";
+            this.dockPanel3.OriginalSize = new System.Drawing.Size(270, 200);
+            this.dockPanel3.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel3.SavedIndex = 1;
+            this.dockPanel3.Size = new System.Drawing.Size(270, 523);
+            this.dockPanel3.Text = "الدفع";
+            this.dockPanel3.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+            // 
+            // dockPanel3_Container
+            // 
+            this.dockPanel3_Container.Controls.Add(this.dataLayoutControl3);
+            this.dockPanel3_Container.Location = new System.Drawing.Point(4, 24);
+            this.dockPanel3_Container.Name = "dockPanel3_Container";
+            this.dockPanel3_Container.Size = new System.Drawing.Size(263, 496);
+            this.dockPanel3_Container.TabIndex = 0;
+            // 
+            // dataLayoutControl3
+            // 
+            this.dataLayoutControl3.Controls.Add(this.CreaditAccNo_DLookUpEdit);
+            this.dataLayoutControl3.Controls.Add(this.NetworkAccNo_DLookUpEdit);
+            this.dataLayoutControl3.Controls.Add(this.CashAccNo_DLookUpEdit);
+            this.dataLayoutControl3.Controls.Add(this.CashAccNo_CLookUpEdit);
+            this.dataLayoutControl3.Controls.Add(this.NetworkAccNo_CLookUpEdit);
+            this.dataLayoutControl3.Controls.Add(this.CreaditAccNo_CLookUpEdit);
+            this.dataLayoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataLayoutControl3.Location = new System.Drawing.Point(0, 0);
+            this.dataLayoutControl3.Name = "dataLayoutControl3";
+            this.dataLayoutControl3.OptionsView.RightToLeftMirroringApplied = true;
+            this.dataLayoutControl3.Root = this.layoutControlGroup7;
+            this.dataLayoutControl3.Size = new System.Drawing.Size(263, 496);
+            this.dataLayoutControl3.TabIndex = 0;
+            this.dataLayoutControl3.Text = "dataLayoutControl3";
+            // 
+            // CreaditAccNo_DLookUpEdit
+            // 
+            this.CreaditAccNo_DLookUpEdit.db = null;
+            this.CreaditAccNo_DLookUpEdit.Location = new System.Drawing.Point(24, 160);
+            this.CreaditAccNo_DLookUpEdit.Name = "CreaditAccNo_DLookUpEdit";
+            this.CreaditAccNo_DLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CreaditAccNo_DLookUpEdit.Properties.NullText = "";
+            this.CreaditAccNo_DLookUpEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.CreaditAccNo_DLookUpEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.CreaditAccNo_DLookUpEdit.Properties.ShowFooter = false;
+            this.CreaditAccNo_DLookUpEdit.Properties.ShowHeader = false;
+            this.CreaditAccNo_DLookUpEdit.SelectedIndex = 0;
+            this.CreaditAccNo_DLookUpEdit.setdisplayListColumns = "";
+            this.CreaditAccNo_DLookUpEdit.Size = new System.Drawing.Size(188, 20);
+            this.CreaditAccNo_DLookUpEdit.StyleController = this.dataLayoutControl3;
+            this.CreaditAccNo_DLookUpEdit.TabIndex = 101;
+            this.CreaditAccNo_DLookUpEdit.TypeOFDataSource = ProRealEstate.typeofDatasource.Non;
+            // 
+            // NetworkAccNo_DLookUpEdit
+            // 
+            this.NetworkAccNo_DLookUpEdit.db = null;
+            this.NetworkAccNo_DLookUpEdit.Location = new System.Drawing.Point(24, 252);
+            this.NetworkAccNo_DLookUpEdit.Name = "NetworkAccNo_DLookUpEdit";
+            this.NetworkAccNo_DLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NetworkAccNo_DLookUpEdit.Properties.NullText = "";
+            this.NetworkAccNo_DLookUpEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.NetworkAccNo_DLookUpEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.NetworkAccNo_DLookUpEdit.Properties.ShowFooter = false;
+            this.NetworkAccNo_DLookUpEdit.Properties.ShowHeader = false;
+            this.NetworkAccNo_DLookUpEdit.SelectedIndex = 0;
+            this.NetworkAccNo_DLookUpEdit.setdisplayListColumns = "";
+            this.NetworkAccNo_DLookUpEdit.Size = new System.Drawing.Size(188, 20);
+            this.NetworkAccNo_DLookUpEdit.StyleController = this.dataLayoutControl3;
+            this.NetworkAccNo_DLookUpEdit.TabIndex = 100;
+            this.NetworkAccNo_DLookUpEdit.TypeOFDataSource = ProRealEstate.typeofDatasource.Non;
+            // 
+            // CashAccNo_DLookUpEdit
+            // 
+            this.CashAccNo_DLookUpEdit.db = null;
+            this.CashAccNo_DLookUpEdit.Location = new System.Drawing.Point(24, 68);
+            this.CashAccNo_DLookUpEdit.Name = "CashAccNo_DLookUpEdit";
+            this.CashAccNo_DLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CashAccNo_DLookUpEdit.Properties.NullText = "";
+            this.CashAccNo_DLookUpEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.CashAccNo_DLookUpEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.CashAccNo_DLookUpEdit.Properties.ShowFooter = false;
+            this.CashAccNo_DLookUpEdit.Properties.ShowHeader = false;
+            this.CashAccNo_DLookUpEdit.SelectedIndex = 0;
+            this.CashAccNo_DLookUpEdit.setdisplayListColumns = "";
+            this.CashAccNo_DLookUpEdit.Size = new System.Drawing.Size(188, 20);
+            this.CashAccNo_DLookUpEdit.StyleController = this.dataLayoutControl3;
+            this.CashAccNo_DLookUpEdit.TabIndex = 99;
+            this.CashAccNo_DLookUpEdit.TypeOFDataSource = ProRealEstate.typeofDatasource.Non;
+            // 
+            // CashAccNo_CLookUpEdit
+            // 
+            this.CashAccNo_CLookUpEdit.db = null;
+            this.CashAccNo_CLookUpEdit.Location = new System.Drawing.Point(24, 44);
+            this.CashAccNo_CLookUpEdit.Name = "CashAccNo_CLookUpEdit";
+            this.CashAccNo_CLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CashAccNo_CLookUpEdit.Properties.NullText = "";
+            this.CashAccNo_CLookUpEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.CashAccNo_CLookUpEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.CashAccNo_CLookUpEdit.Properties.ShowFooter = false;
+            this.CashAccNo_CLookUpEdit.Properties.ShowHeader = false;
+            this.CashAccNo_CLookUpEdit.SelectedIndex = 0;
+            this.CashAccNo_CLookUpEdit.setdisplayListColumns = "";
+            this.CashAccNo_CLookUpEdit.Size = new System.Drawing.Size(188, 20);
+            this.CashAccNo_CLookUpEdit.StyleController = this.dataLayoutControl3;
+            this.CashAccNo_CLookUpEdit.TabIndex = 98;
+            this.CashAccNo_CLookUpEdit.TypeOFDataSource = ProRealEstate.typeofDatasource.Non;
+            // 
+            // NetworkAccNo_CLookUpEdit
+            // 
+            this.NetworkAccNo_CLookUpEdit.db = null;
+            this.NetworkAccNo_CLookUpEdit.Location = new System.Drawing.Point(24, 228);
+            this.NetworkAccNo_CLookUpEdit.Name = "NetworkAccNo_CLookUpEdit";
+            this.NetworkAccNo_CLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NetworkAccNo_CLookUpEdit.Properties.NullText = "";
+            this.NetworkAccNo_CLookUpEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.NetworkAccNo_CLookUpEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.NetworkAccNo_CLookUpEdit.Properties.ShowFooter = false;
+            this.NetworkAccNo_CLookUpEdit.Properties.ShowHeader = false;
+            this.NetworkAccNo_CLookUpEdit.SelectedIndex = 0;
+            this.NetworkAccNo_CLookUpEdit.setdisplayListColumns = "";
+            this.NetworkAccNo_CLookUpEdit.Size = new System.Drawing.Size(188, 20);
+            this.NetworkAccNo_CLookUpEdit.StyleController = this.dataLayoutControl3;
+            this.NetworkAccNo_CLookUpEdit.TabIndex = 97;
+            this.NetworkAccNo_CLookUpEdit.TypeOFDataSource = ProRealEstate.typeofDatasource.Non;
+            // 
+            // CreaditAccNo_CLookUpEdit
+            // 
+            this.CreaditAccNo_CLookUpEdit.db = null;
+            this.CreaditAccNo_CLookUpEdit.Location = new System.Drawing.Point(24, 136);
+            this.CreaditAccNo_CLookUpEdit.Name = "CreaditAccNo_CLookUpEdit";
+            this.CreaditAccNo_CLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CreaditAccNo_CLookUpEdit.Properties.NullText = "";
+            this.CreaditAccNo_CLookUpEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.CreaditAccNo_CLookUpEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.CreaditAccNo_CLookUpEdit.Properties.ShowFooter = false;
+            this.CreaditAccNo_CLookUpEdit.Properties.ShowHeader = false;
+            this.CreaditAccNo_CLookUpEdit.SelectedIndex = 0;
+            this.CreaditAccNo_CLookUpEdit.setdisplayListColumns = "";
+            this.CreaditAccNo_CLookUpEdit.Size = new System.Drawing.Size(188, 20);
+            this.CreaditAccNo_CLookUpEdit.StyleController = this.dataLayoutControl3;
+            this.CreaditAccNo_CLookUpEdit.TabIndex = 96;
+            this.CreaditAccNo_CLookUpEdit.TypeOFDataSource = ProRealEstate.typeofDatasource.Non;
+            // 
+            // layoutControlGroup7
+            // 
+            this.layoutControlGroup7.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup7.GroupBordersVisible = false;
+            this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup8,
+            this.layoutControlGroup9,
+            this.layoutControlGroup10});
+            this.layoutControlGroup7.Name = "Root";
+            this.layoutControlGroup7.Size = new System.Drawing.Size(263, 496);
+            this.layoutControlGroup7.TextVisible = false;
+            // 
+            // layoutControlGroup8
+            // 
+            this.layoutControlGroup8.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem8,
+            this.layoutControlItem7});
+            this.layoutControlGroup8.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup8.Name = "layoutControlGroup8";
+            this.layoutControlGroup8.Size = new System.Drawing.Size(243, 92);
+            this.layoutControlGroup8.Text = "كاش";
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem8.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem8.Control = this.CashAccNo_CLookUpEdit;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.OptionsPrint.AppearanceItem.Options.UseTextOptions = true;
+            this.layoutControlItem8.OptionsPrint.AppearanceItem.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem8.Size = new System.Drawing.Size(219, 24);
+            this.layoutControlItem8.Text = "دائن";
+            this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(23, 13);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem7.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem7.Control = this.CashAccNo_DLookUpEdit;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.OptionsPrint.AppearanceItem.Options.UseTextOptions = true;
+            this.layoutControlItem7.OptionsPrint.AppearanceItem.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem7.Size = new System.Drawing.Size(219, 24);
+            this.layoutControlItem7.Text = "مدين";
+            this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(23, 13);
+            // 
+            // layoutControlGroup9
+            // 
+            this.layoutControlGroup9.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem9,
+            this.layoutControlItem6});
+            this.layoutControlGroup9.Location = new System.Drawing.Point(0, 184);
+            this.layoutControlGroup9.Name = "layoutControlGroup9";
+            this.layoutControlGroup9.Size = new System.Drawing.Size(243, 292);
+            this.layoutControlGroup9.Text = "شبكه";
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem9.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem9.Control = this.NetworkAccNo_CLookUpEdit;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.OptionsPrint.AppearanceItem.Options.UseTextOptions = true;
+            this.layoutControlItem9.OptionsPrint.AppearanceItem.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem9.Size = new System.Drawing.Size(219, 24);
+            this.layoutControlItem9.Text = "دائن";
+            this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(23, 13);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem6.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem6.Control = this.NetworkAccNo_DLookUpEdit;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.OptionsPrint.AppearanceItem.Options.UseTextOptions = true;
+            this.layoutControlItem6.OptionsPrint.AppearanceItem.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem6.Size = new System.Drawing.Size(219, 224);
+            this.layoutControlItem6.Text = "مدين";
+            this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(23, 13);
+            // 
+            // layoutControlGroup10
+            // 
+            this.layoutControlGroup10.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem5,
+            this.layoutControlItem10});
+            this.layoutControlGroup10.Location = new System.Drawing.Point(0, 92);
+            this.layoutControlGroup10.Name = "layoutControlGroup10";
+            this.layoutControlGroup10.Size = new System.Drawing.Size(243, 92);
+            this.layoutControlGroup10.Text = "اجل";
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem5.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem5.Control = this.CreaditAccNo_DLookUpEdit;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.OptionsPrint.AppearanceItem.Options.UseTextOptions = true;
+            this.layoutControlItem5.OptionsPrint.AppearanceItem.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem5.Size = new System.Drawing.Size(219, 24);
+            this.layoutControlItem5.Text = "مدين";
+            this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(23, 13);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem10.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem10.Control = this.CreaditAccNo_CLookUpEdit;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.OptionsPrint.AppearanceItem.Options.UseTextOptions = true;
+            this.layoutControlItem10.OptionsPrint.AppearanceItem.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.layoutControlItem10.Size = new System.Drawing.Size(219, 24);
+            this.layoutControlItem10.Text = "دائن";
+            this.layoutControlItem10.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(23, 13);
+            // 
+            // dockPanel1
+            // 
+            this.dockPanel1.Controls.Add(this.dockPanel1_Container);
+            this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel1.ID = new System.Guid("a5bda3ed-5a9d-46ee-a9cb-153661806838");
+            this.dockPanel1.Location = new System.Drawing.Point(23, 0);
+            this.dockPanel1.Name = "dockPanel1";
+            this.dockPanel1.OriginalSize = new System.Drawing.Size(194, 200);
+            this.dockPanel1.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel1.SavedIndex = 0;
+            this.dockPanel1.Size = new System.Drawing.Size(194, 523);
+            this.dockPanel1.Text = "اعدادات القيود";
+            this.dockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+            // 
+            // dockPanel1_Container
+            // 
+            this.dockPanel1_Container.Controls.Add(this.dataLayoutControl2);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 24);
+            this.dockPanel1_Container.Name = "dockPanel1_Container";
+            this.dockPanel1_Container.Size = new System.Drawing.Size(187, 496);
+            this.dockPanel1_Container.TabIndex = 0;
+            // 
+            // dataLayoutControl2
+            // 
+            this.dataLayoutControl2.Controls.Add(this.IsExtrnalGaidCheckEdit);
+            this.dataLayoutControl2.Controls.Add(this.IsTaxGaidCheckEdit);
+            this.dataLayoutControl2.Controls.Add(this.toggleSwitch1);
+            this.dataLayoutControl2.Controls.Add(this.toggleSwitch2);
+            this.dataLayoutControl2.Controls.Add(this.IsDisGaidCheckEdit);
+            this.dataLayoutControl2.Controls.Add(this.IsCommGaidCheckEdit);
+            this.dataLayoutControl2.Controls.Add(this.IsCommUseCheckEdit);
+            this.dataLayoutControl2.Controls.Add(this.CommCreditTextEdit);
+            this.dataLayoutControl2.Controls.Add(this.CommDebitTextEdit);
+            this.dataLayoutControl2.Controls.Add(this.DisCreditTextEdit);
+            this.dataLayoutControl2.Controls.Add(this.DisDebitTextEdit);
+            this.dataLayoutControl2.Controls.Add(this.TaxCreditTextEdit);
+            this.dataLayoutControl2.Controls.Add(this.TaxDebitTextEdit);
+            this.dataLayoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataLayoutControl2.Location = new System.Drawing.Point(0, 0);
+            this.dataLayoutControl2.Name = "dataLayoutControl2";
+            this.dataLayoutControl2.OptionsView.RightToLeftMirroringApplied = true;
+            this.dataLayoutControl2.Root = this.layoutControlGroup6;
+            this.dataLayoutControl2.Size = new System.Drawing.Size(187, 496);
+            this.dataLayoutControl2.TabIndex = 0;
+            this.dataLayoutControl2.Text = "dataLayoutControl2";
+            // 
+            // IsExtrnalGaidCheckEdit
+            // 
+            this.IsExtrnalGaidCheckEdit.Location = new System.Drawing.Point(11, 436);
+            this.IsExtrnalGaidCheckEdit.Name = "IsExtrnalGaidCheckEdit";
+            this.IsExtrnalGaidCheckEdit.Properties.Caption = "Is Extrnal Gaid";
+            this.IsExtrnalGaidCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.IsExtrnalGaidCheckEdit.Size = new System.Drawing.Size(164, 19);
+            this.IsExtrnalGaidCheckEdit.StyleController = this.dataLayoutControl2;
+            this.IsExtrnalGaidCheckEdit.TabIndex = 112;
+            // 
+            // IsTaxGaidCheckEdit
+            // 
+            this.IsTaxGaidCheckEdit.Location = new System.Drawing.Point(23, 120);
+            this.IsTaxGaidCheckEdit.Name = "IsTaxGaidCheckEdit";
+            this.IsTaxGaidCheckEdit.Properties.Caption = "سند محاسبي";
+            this.IsTaxGaidCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.IsTaxGaidCheckEdit.Size = new System.Drawing.Size(140, 19);
+            this.IsTaxGaidCheckEdit.StyleController = this.dataLayoutControl2;
+            this.IsTaxGaidCheckEdit.TabIndex = 111;
+            // 
+            // toggleSwitch1
+            // 
+            this.toggleSwitch1.Location = new System.Drawing.Point(23, 44);
+            this.toggleSwitch1.Name = "toggleSwitch1";
+            this.toggleSwitch1.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.toggleSwitch1.Properties.OffText = "غير معتمد";
+            this.toggleSwitch1.Properties.OnText = "معتمد";
+            this.toggleSwitch1.Size = new System.Drawing.Size(140, 24);
+            this.toggleSwitch1.StyleController = this.dataLayoutControl2;
+            this.toggleSwitch1.TabIndex = 110;
+            // 
+            // toggleSwitch2
+            // 
+            this.toggleSwitch2.Location = new System.Drawing.Point(23, 235);
+            this.toggleSwitch2.Name = "toggleSwitch2";
+            this.toggleSwitch2.Properties.OffText = "سطور +(OFF)";
+            this.toggleSwitch2.Properties.OnText = "سطور +(ON)";
+            this.toggleSwitch2.Size = new System.Drawing.Size(140, 24);
+            this.toggleSwitch2.StyleController = this.dataLayoutControl2;
+            this.toggleSwitch2.TabIndex = 109;
+            // 
+            // IsDisGaidCheckEdit
+            // 
+            this.IsDisGaidCheckEdit.Location = new System.Drawing.Point(23, 263);
+            this.IsDisGaidCheckEdit.Name = "IsDisGaidCheckEdit";
+            this.IsDisGaidCheckEdit.Properties.Caption = "سند محاسبي";
+            this.IsDisGaidCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.IsDisGaidCheckEdit.Size = new System.Drawing.Size(140, 19);
+            this.IsDisGaidCheckEdit.StyleController = this.dataLayoutControl2;
+            this.IsDisGaidCheckEdit.TabIndex = 108;
+            // 
+            // IsCommGaidCheckEdit
+            // 
+            this.IsCommGaidCheckEdit.Location = new System.Drawing.Point(23, 330);
+            this.IsCommGaidCheckEdit.Name = "IsCommGaidCheckEdit";
+            this.IsCommGaidCheckEdit.Properties.Caption = "Is Comm Gaid";
+            this.IsCommGaidCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.IsCommGaidCheckEdit.Size = new System.Drawing.Size(140, 19);
+            this.IsCommGaidCheckEdit.StyleController = this.dataLayoutControl2;
+            this.IsCommGaidCheckEdit.TabIndex = 106;
+            // 
+            // IsCommUseCheckEdit
+            // 
+            this.IsCommUseCheckEdit.Location = new System.Drawing.Point(23, 353);
+            this.IsCommUseCheckEdit.Name = "IsCommUseCheckEdit";
+            this.IsCommUseCheckEdit.Properties.Caption = "Is Comm Use";
+            this.IsCommUseCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.IsCommUseCheckEdit.Size = new System.Drawing.Size(140, 19);
+            this.IsCommUseCheckEdit.StyleController = this.dataLayoutControl2;
+            this.IsCommUseCheckEdit.TabIndex = 107;
+            // 
+            // CommCreditTextEdit
+            // 
+            this.CommCreditTextEdit.db = null;
+            this.CommCreditTextEdit.Location = new System.Drawing.Point(23, 376);
+            this.CommCreditTextEdit.Name = "CommCreditTextEdit";
+            this.CommCreditTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CommCreditTextEdit.Properties.NullText = "";
+            this.CommCreditTextEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.CommCreditTextEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.CommCreditTextEdit.Properties.ShowFooter = false;
+            this.CommCreditTextEdit.Properties.ShowHeader = false;
+            this.CommCreditTextEdit.SelectedIndex = 0;
+            this.CommCreditTextEdit.setdisplayListColumns = "";
+            this.CommCreditTextEdit.Size = new System.Drawing.Size(113, 20);
+            this.CommCreditTextEdit.StyleController = this.dataLayoutControl2;
+            this.CommCreditTextEdit.TabIndex = 105;
+            this.CommCreditTextEdit.TypeOFDataSource = ProRealEstate.typeofDatasource.Non;
+            // 
+            // CommDebitTextEdit
+            // 
+            this.CommDebitTextEdit.db = null;
+            this.CommDebitTextEdit.Location = new System.Drawing.Point(23, 400);
+            this.CommDebitTextEdit.Name = "CommDebitTextEdit";
+            this.CommDebitTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CommDebitTextEdit.Properties.NullText = "";
+            this.CommDebitTextEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.CommDebitTextEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.CommDebitTextEdit.Properties.ShowFooter = false;
+            this.CommDebitTextEdit.Properties.ShowHeader = false;
+            this.CommDebitTextEdit.SelectedIndex = 0;
+            this.CommDebitTextEdit.setdisplayListColumns = "";
+            this.CommDebitTextEdit.Size = new System.Drawing.Size(113, 20);
+            this.CommDebitTextEdit.StyleController = this.dataLayoutControl2;
+            this.CommDebitTextEdit.TabIndex = 104;
+            this.CommDebitTextEdit.TypeOFDataSource = ProRealEstate.typeofDatasource.Non;
+            // 
+            // DisCreditTextEdit
+            // 
+            this.DisCreditTextEdit.db = null;
+            this.DisCreditTextEdit.Location = new System.Drawing.Point(23, 187);
+            this.DisCreditTextEdit.Name = "DisCreditTextEdit";
+            this.DisCreditTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DisCreditTextEdit.Properties.NullText = "";
+            this.DisCreditTextEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.DisCreditTextEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.DisCreditTextEdit.Properties.ShowFooter = false;
+            this.DisCreditTextEdit.Properties.ShowHeader = false;
+            this.DisCreditTextEdit.SelectedIndex = 0;
+            this.DisCreditTextEdit.setdisplayListColumns = "";
+            this.DisCreditTextEdit.Size = new System.Drawing.Size(113, 20);
+            this.DisCreditTextEdit.StyleController = this.dataLayoutControl2;
+            this.DisCreditTextEdit.TabIndex = 103;
+            this.DisCreditTextEdit.TypeOFDataSource = ProRealEstate.typeofDatasource.Non;
+            // 
+            // DisDebitTextEdit
+            // 
+            this.DisDebitTextEdit.db = null;
+            this.DisDebitTextEdit.Location = new System.Drawing.Point(23, 211);
+            this.DisDebitTextEdit.Name = "DisDebitTextEdit";
+            this.DisDebitTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DisDebitTextEdit.Properties.NullText = "";
+            this.DisDebitTextEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.DisDebitTextEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.DisDebitTextEdit.Properties.ShowFooter = false;
+            this.DisDebitTextEdit.Properties.ShowHeader = false;
+            this.DisDebitTextEdit.SelectedIndex = 0;
+            this.DisDebitTextEdit.setdisplayListColumns = "";
+            this.DisDebitTextEdit.Size = new System.Drawing.Size(113, 20);
+            this.DisDebitTextEdit.StyleController = this.dataLayoutControl2;
+            this.DisDebitTextEdit.TabIndex = 102;
+            this.DisDebitTextEdit.TypeOFDataSource = ProRealEstate.typeofDatasource.Non;
+            // 
+            // TaxCreditTextEdit
+            // 
+            this.TaxCreditTextEdit.db = null;
+            this.TaxCreditTextEdit.Location = new System.Drawing.Point(23, 72);
+            this.TaxCreditTextEdit.Name = "TaxCreditTextEdit";
+            this.TaxCreditTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TaxCreditTextEdit.Properties.NullText = "";
+            this.TaxCreditTextEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.TaxCreditTextEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.TaxCreditTextEdit.Properties.ShowFooter = false;
+            this.TaxCreditTextEdit.Properties.ShowHeader = false;
+            this.TaxCreditTextEdit.SelectedIndex = 0;
+            this.TaxCreditTextEdit.setdisplayListColumns = "";
+            this.TaxCreditTextEdit.Size = new System.Drawing.Size(113, 20);
+            this.TaxCreditTextEdit.StyleController = this.dataLayoutControl2;
+            this.TaxCreditTextEdit.TabIndex = 101;
+            this.TaxCreditTextEdit.TypeOFDataSource = ProRealEstate.typeofDatasource.Non;
+            // 
+            // TaxDebitTextEdit
+            // 
+            this.TaxDebitTextEdit.db = null;
+            this.TaxDebitTextEdit.Location = new System.Drawing.Point(23, 96);
+            this.TaxDebitTextEdit.Name = "TaxDebitTextEdit";
+            this.TaxDebitTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TaxDebitTextEdit.Properties.NullText = "";
+            this.TaxDebitTextEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.TaxDebitTextEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.TaxDebitTextEdit.Properties.ShowFooter = false;
+            this.TaxDebitTextEdit.Properties.ShowHeader = false;
+            this.TaxDebitTextEdit.SelectedIndex = 0;
+            this.TaxDebitTextEdit.setdisplayListColumns = "";
+            this.TaxDebitTextEdit.Size = new System.Drawing.Size(113, 20);
+            this.TaxDebitTextEdit.StyleController = this.dataLayoutControl2;
+            this.TaxDebitTextEdit.TabIndex = 100;
+            this.TaxDebitTextEdit.TypeOFDataSource = ProRealEstate.typeofDatasource.Non;
+            // 
+            // layoutControlGroup6
+            // 
+            this.layoutControlGroup6.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup6.GroupBordersVisible = false;
+            this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup12,
+            this.layoutControlGroup13,
+            this.layoutControlGroup14,
+            this.layoutControlItem26});
+            this.layoutControlGroup6.Name = "Root";
+            this.layoutControlGroup6.Size = new System.Drawing.Size(188, 496);
+            this.layoutControlGroup6.TextVisible = false;
+            // 
+            // layoutControlGroup12
+            // 
+            this.layoutControlGroup12.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.layoutControlItem23,
+            this.layoutControlItem24});
+            this.layoutControlGroup12.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup12.Name = "layoutControlGroup12";
+            this.layoutControlGroup12.Size = new System.Drawing.Size(168, 143);
+            this.layoutControlGroup12.Text = "الضريبة";
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.TaxCreditTextEdit;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(144, 24);
+            this.layoutControlItem3.Text = "دائن";
+            this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(23, 13);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.TaxDebitTextEdit;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 52);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(144, 24);
+            this.layoutControlItem4.Text = "مدين";
+            this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(23, 13);
+            // 
+            // layoutControlItem23
+            // 
+            this.layoutControlItem23.Control = this.toggleSwitch1;
+            this.layoutControlItem23.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem23.Name = "layoutControlItem23";
+            this.layoutControlItem23.Size = new System.Drawing.Size(144, 28);
+            this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem23.TextVisible = false;
+            // 
+            // layoutControlItem24
+            // 
+            this.layoutControlItem24.Control = this.IsTaxGaidCheckEdit;
+            this.layoutControlItem24.Location = new System.Drawing.Point(0, 76);
+            this.layoutControlItem24.Name = "layoutControlItem24";
+            this.layoutControlItem24.Size = new System.Drawing.Size(144, 23);
+            this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem24.TextVisible = false;
+            // 
+            // layoutControlGroup13
+            // 
+            this.layoutControlGroup13.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem12,
+            this.layoutControlItem11,
+            this.layoutControlItem17,
+            this.layoutControlItem22});
+            this.layoutControlGroup13.Location = new System.Drawing.Point(0, 143);
+            this.layoutControlGroup13.Name = "layoutControlGroup13";
+            this.layoutControlGroup13.Size = new System.Drawing.Size(168, 143);
+            this.layoutControlGroup13.Text = "الخصم";
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.DisCreditTextEdit;
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(144, 24);
+            this.layoutControlItem12.Text = "دائن";
+            this.layoutControlItem12.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(23, 13);
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.DisDebitTextEdit;
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(144, 24);
+            this.layoutControlItem11.Text = "مدين";
+            this.layoutControlItem11.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(23, 13);
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.Control = this.IsDisGaidCheckEdit;
+            this.layoutControlItem17.Location = new System.Drawing.Point(0, 76);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(144, 23);
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem17.TextVisible = false;
+            // 
+            // layoutControlItem22
+            // 
+            this.layoutControlItem22.Control = this.toggleSwitch2;
+            this.layoutControlItem22.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem22.Name = "layoutControlItem22";
+            this.layoutControlItem22.Size = new System.Drawing.Size(144, 28);
+            this.layoutControlItem22.Text = "سطور +";
+            this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem22.TextVisible = false;
+            // 
+            // layoutControlGroup14
+            // 
+            this.layoutControlGroup14.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem13,
+            this.layoutControlItem14,
+            this.layoutControlItem15,
+            this.layoutControlItem16});
+            this.layoutControlGroup14.Location = new System.Drawing.Point(0, 286);
+            this.layoutControlGroup14.Name = "layoutControlGroup14";
+            this.layoutControlGroup14.Size = new System.Drawing.Size(168, 138);
+            this.layoutControlGroup14.Text = "العمولات البنكية";
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.CommCreditTextEdit;
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 46);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(144, 24);
+            this.layoutControlItem13.Text = "دائن";
+            this.layoutControlItem13.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(23, 13);
+            // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.Control = this.CommDebitTextEdit;
+            this.layoutControlItem14.Location = new System.Drawing.Point(0, 70);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(144, 24);
+            this.layoutControlItem14.Text = "مدين";
+            this.layoutControlItem14.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(23, 13);
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.IsCommGaidCheckEdit;
+            this.layoutControlItem15.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(144, 23);
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem15.TextVisible = false;
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.IsCommUseCheckEdit;
+            this.layoutControlItem16.Location = new System.Drawing.Point(0, 23);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.Size = new System.Drawing.Size(144, 23);
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem16.TextVisible = false;
+            // 
+            // layoutControlItem26
+            // 
+            this.layoutControlItem26.Control = this.IsExtrnalGaidCheckEdit;
+            this.layoutControlItem26.Location = new System.Drawing.Point(0, 424);
+            this.layoutControlItem26.Name = "layoutControlItem26";
+            this.layoutControlItem26.Size = new System.Drawing.Size(168, 52);
+            this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem26.TextVisible = false;
             // 
             // ribbonBar1
             // 
@@ -484,7 +1295,7 @@ private void InitializeComponent()
             this.txtCrn_No.MaxLength = 100;
             this.txtCrn_No.Name = "txtCrn_No";
             this.netResize1.SetResizeTextBoxMultiline(this.txtCrn_No, false);
-            this.txtCrn_No.Size = new System.Drawing.Size(144, 20);
+            this.txtCrn_No.Size = new System.Drawing.Size(144, 21);
             this.txtCrn_No.TabIndex = 1254;
             // 
             // label44
@@ -508,7 +1319,7 @@ private void InitializeComponent()
             this.text_CusTaxNo.MaxLength = 100;
             this.text_CusTaxNo.Name = "text_CusTaxNo";
             this.netResize1.SetResizeTextBoxMultiline(this.text_CusTaxNo, false);
-            this.text_CusTaxNo.Size = new System.Drawing.Size(142, 20);
+            this.text_CusTaxNo.Size = new System.Drawing.Size(142, 21);
             this.text_CusTaxNo.TabIndex = 1253;
             // 
             // label45
@@ -575,7 +1386,7 @@ private void InitializeComponent()
             this.text_Mobile.Name = "text_Mobile";
             this.netResize1.SetResizeTextBoxMultiline(this.text_Mobile, false);
             this.text_Mobile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.text_Mobile.Size = new System.Drawing.Size(154, 20);
+            this.text_Mobile.Size = new System.Drawing.Size(154, 21);
             this.text_Mobile.TabIndex = 1209;
             this.text_Mobile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -590,7 +1401,7 @@ private void InitializeComponent()
             this.textBox_ID.Location = new System.Drawing.Point(901, 8);
             this.textBox_ID.Name = "textBox_ID";
             this.netResize1.SetResizeTextBoxMultiline(this.textBox_ID, false);
-            this.textBox_ID.Size = new System.Drawing.Size(300, 20);
+            this.textBox_ID.Size = new System.Drawing.Size(300, 21);
             this.textBox_ID.TabIndex = 1208;
             this.textBox_ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox_ID.ButtonCustomClick += new System.EventHandler(this.textBox_ID_ButtonCustomClick);
@@ -680,11 +1491,11 @@ private void InitializeComponent()
             this.superTabControl_Info.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl_Info.ControlBox.CloseBox,
             this.superTabControl_Info.ControlBox.MenuBox});
+            this.superTabControl_Info.Controls.Add(this.superTabControlPanel3);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel8);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel5);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel4);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel2);
-            this.superTabControl_Info.Controls.Add(this.superTabControlPanel3);
             this.superTabControl_Info.ForeColor = System.Drawing.Color.Black;
             this.superTabControl_Info.Location = new System.Drawing.Point(278, 307);
             this.superTabControl_Info.Name = "superTabControl_Info";
@@ -724,12 +1535,12 @@ private void InitializeComponent()
             this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel3.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel3.Name = "superTabControlPanel3";
-            superTabLinearGradientColorTable12.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable1.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable7.Background = superTabLinearGradientColorTable12;
-            superTabPanelColorTable7.Default = superTabPanelItemColorTable7;
-            this.superTabControlPanel3.PanelColor = superTabPanelColorTable7;
+            superTabPanelItemColorTable1.Background = superTabLinearGradientColorTable1;
+            superTabPanelColorTable1.Default = superTabPanelItemColorTable1;
+            this.superTabControlPanel3.PanelColor = superTabPanelColorTable1;
             this.superTabControlPanel3.Size = new System.Drawing.Size(986, 109);
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.superTabItem_items;
@@ -786,7 +1597,7 @@ private void InitializeComponent()
             this.txtVSerial.Name = "txtVSerial";
             this.txtVSerial.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtVSerial, false);
-            this.txtVSerial.Size = new System.Drawing.Size(123, 13);
+            this.txtVSerial.Size = new System.Drawing.Size(123, 14);
             this.txtVSerial.TabIndex = 1082;
             this.txtVSerial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVSerial.Visible = false;
@@ -799,7 +1610,7 @@ private void InitializeComponent()
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtUnit, false);
-            this.txtUnit.Size = new System.Drawing.Size(68, 13);
+            this.txtUnit.Size = new System.Drawing.Size(68, 14);
             this.txtUnit.TabIndex = 60;
             this.txtUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -811,7 +1622,7 @@ private void InitializeComponent()
             this.txtLPrice.Name = "txtLPrice";
             this.txtLPrice.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtLPrice, false);
-            this.txtLPrice.Size = new System.Drawing.Size(68, 13);
+            this.txtLPrice.Size = new System.Drawing.Size(68, 14);
             this.txtLPrice.TabIndex = 4;
             this.txtLPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -883,7 +1694,7 @@ private void InitializeComponent()
             this.txtLCost.Name = "txtLCost";
             this.txtLCost.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtLCost, false);
-            this.txtLCost.Size = new System.Drawing.Size(68, 13);
+            this.txtLCost.Size = new System.Drawing.Size(68, 14);
             this.txtLCost.TabIndex = 59;
             this.txtLCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -895,7 +1706,7 @@ private void InitializeComponent()
             this.txtVCost.Name = "txtVCost";
             this.txtVCost.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtVCost, false);
-            this.txtVCost.Size = new System.Drawing.Size(68, 13);
+            this.txtVCost.Size = new System.Drawing.Size(68, 14);
             this.txtVCost.TabIndex = 57;
             this.txtVCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -904,126 +1715,13 @@ private void InitializeComponent()
             this.superTabItem_items.AttachedControl = this.superTabControlPanel3;
             this.superTabItem_items.GlobalItem = false;
             this.superTabItem_items.Name = "superTabItem_items";
-            superTabLinearGradientColorTable13.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable2.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.White};
-            superTabItemStateColorTable5.Background = superTabLinearGradientColorTable13;
-            superTabColorStates5.Normal = superTabItemStateColorTable5;
-            superTabItemColorTable5.Default = superTabColorStates5;
-            this.superTabItem_items.TabColor = superTabItemColorTable5;
+            superTabItemStateColorTable1.Background = superTabLinearGradientColorTable2;
+            superTabColorStates1.Normal = superTabItemStateColorTable1;
+            superTabItemColorTable1.Default = superTabColorStates1;
+            this.superTabItem_items.TabColor = superTabItemColorTable1;
             this.superTabItem_items.Text = "م.الصنف";
-            // 
-            // superTabControlPanel2
-            // 
-            this.superTabControlPanel2.Controls.Add(this.label_LockeName);
-            this.superTabControlPanel2.Controls.Add(this.label27);
-            this.superTabControlPanel2.Controls.Add(this.txtTotalQ);
-            this.superTabControlPanel2.Controls.Add(this.label30);
-            this.superTabControlPanel2.Controls.Add(this.textBox_Usr);
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            superTabLinearGradientColorTable10.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.Gray,
-        System.Drawing.Color.White};
-            superTabPanelItemColorTable6.Background = superTabLinearGradientColorTable10;
-            superTabPanelColorTable6.Default = superTabPanelItemColorTable6;
-            this.superTabControlPanel2.PanelColor = superTabPanelColorTable6;
-            this.superTabControlPanel2.Size = new System.Drawing.Size(986, 109);
-            this.superTabControlPanel2.TabIndex = 0;
-            this.superTabControlPanel2.TabItem = this.superTabItem_Detiles;
-            this.superTabControlPanel2.Visible = false;
-            // 
-            // label_LockeName
-            // 
-            this.label_LockeName.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label_LockeName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label_LockeName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label_LockeName.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.label_LockeName.ForeColor = System.Drawing.Color.Maroon;
-            this.label_LockeName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label_LockeName.Location = new System.Drawing.Point(0, 0);
-            this.label_LockeName.Name = "label_LockeName";
-            this.label_LockeName.Size = new System.Drawing.Size(132, 109);
-            this.label_LockeName.TabIndex = 1118;
-            this.label_LockeName.Text = "--";
-            this.label_LockeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label27
-            // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.label27.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label27.Location = new System.Drawing.Point(892, 55);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(67, 14);
-            this.label27.TabIndex = 1056;
-            this.label27.Text = "المستخدم :";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtTotalQ
-            // 
-            this.txtTotalQ.AllowEmptyState = false;
-            this.txtTotalQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.txtTotalQ.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtTotalQ.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTotalQ.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtTotalQ.DisplayFormat = "0.00";
-            this.txtTotalQ.Font = new System.Drawing.Font("Tahoma", 6.75F);
-            this.txtTotalQ.Increment = 0D;
-            this.txtTotalQ.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtTotalQ.IsInputReadOnly = true;
-            this.txtTotalQ.Location = new System.Drawing.Point(837, 21);
-            this.txtTotalQ.Name = "txtTotalQ";
-            this.txtTotalQ.Size = new System.Drawing.Size(53, 18);
-            this.txtTotalQ.TabIndex = 1051;
-            // 
-            // label30
-            // 
-            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.label30.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label30.Location = new System.Drawing.Point(892, 21);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(86, 14);
-            this.label30.TabIndex = 1050;
-            this.label30.Text = "إجمالي الكمية :";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox_Usr
-            // 
-            this.textBox_Usr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_Usr.BackColor = System.Drawing.Color.SteelBlue;
-            this.textBox_Usr.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.textBox_Usr.ForeColor = System.Drawing.Color.White;
-            this.textBox_Usr.Location = new System.Drawing.Point(620, 52);
-            this.textBox_Usr.MaxLength = 30;
-            this.textBox_Usr.Name = "textBox_Usr";
-            this.textBox_Usr.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.textBox_Usr, false);
-            this.textBox_Usr.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_Usr.Size = new System.Drawing.Size(268, 20);
-            this.textBox_Usr.TabIndex = 1058;
-            this.textBox_Usr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // superTabItem_Detiles
-            // 
-            this.superTabItem_Detiles.AttachedControl = this.superTabControlPanel2;
-            this.superTabItem_Detiles.GlobalItem = false;
-            this.superTabItem_Detiles.Name = "superTabItem_Detiles";
-            superTabLinearGradientColorTable11.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.White};
-            superTabItemStateColorTable4.Background = superTabLinearGradientColorTable11;
-            superTabColorStates4.Normal = superTabItemStateColorTable4;
-            superTabItemColorTable4.Default = superTabColorStates4;
-            this.superTabItem_Detiles.TabColor = superTabItemColorTable4;
-            this.superTabItem_Detiles.Text = "تفاصيل";
             // 
             // superTabControlPanel8
             // 
@@ -1075,9 +1773,9 @@ private void InitializeComponent()
             this.switchButton_TaxByNet,
             this.textBoxItem_TaxByNetValue,
             this.labelItem_TaxByNetPer});
-            superTabLinearGradientColorTable4.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable6.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gainsboro};
-            superTabColorTable1.Background = superTabLinearGradientColorTable4;
+            superTabColorTable1.Background = superTabLinearGradientColorTable6;
             this.superTabControl3.TabStripColor = superTabColorTable1;
             this.superTabControl3.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
             this.superTabControl3.Text = "superTabControl3";
@@ -1111,12 +1809,12 @@ private void InitializeComponent()
             this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel1.Location = new System.Drawing.Point(0, 25);
             this.superTabControlPanel1.Name = "superTabControlPanel1";
-            superTabLinearGradientColorTable1.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable3.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable1.Background = superTabLinearGradientColorTable1;
-            superTabPanelColorTable1.Default = superTabPanelItemColorTable1;
-            this.superTabControlPanel1.PanelColor = superTabPanelColorTable1;
+            superTabPanelItemColorTable2.Background = superTabLinearGradientColorTable3;
+            superTabPanelColorTable2.Default = superTabPanelItemColorTable2;
+            this.superTabControlPanel1.PanelColor = superTabPanelColorTable2;
             this.superTabControlPanel1.Size = new System.Drawing.Size(986, 84);
             this.superTabControlPanel1.TabIndex = 1;
             this.superTabControlPanel1.TabItem = this.superTabItem_Pay;
@@ -1528,12 +2226,12 @@ private void InitializeComponent()
             this.superTabControlPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel10.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel10.Name = "superTabControlPanel10";
-            superTabLinearGradientColorTable2.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable4.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable2.Background = superTabLinearGradientColorTable2;
-            superTabPanelColorTable2.Default = superTabPanelItemColorTable2;
-            this.superTabControlPanel10.PanelColor = superTabPanelColorTable2;
+            superTabPanelItemColorTable3.Background = superTabLinearGradientColorTable4;
+            superTabPanelColorTable3.Default = superTabPanelItemColorTable3;
+            this.superTabControlPanel10.PanelColor = superTabPanelColorTable3;
             this.superTabControlPanel10.Size = new System.Drawing.Size(986, 111);
             this.superTabControlPanel10.TabIndex = 0;
             this.superTabControlPanel10.TabItem = this.superTabItem_Dis;
@@ -1729,12 +2427,12 @@ private void InitializeComponent()
             this.superTabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel9.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel9.Name = "superTabControlPanel9";
-            superTabLinearGradientColorTable3.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable5.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable3.Background = superTabLinearGradientColorTable3;
-            superTabPanelColorTable3.Default = superTabPanelItemColorTable3;
-            this.superTabControlPanel9.PanelColor = superTabPanelColorTable3;
+            superTabPanelItemColorTable4.Background = superTabLinearGradientColorTable5;
+            superTabPanelColorTable4.Default = superTabPanelItemColorTable4;
+            this.superTabControlPanel9.PanelColor = superTabPanelColorTable4;
             this.superTabControlPanel9.Size = new System.Drawing.Size(986, 111);
             this.superTabControlPanel9.TabIndex = 1;
             this.superTabControlPanel9.TabItem = this.superTabItem_Tax;
@@ -1948,12 +2646,12 @@ private void InitializeComponent()
             this.superTabItem_Gaids.AttachedControl = this.superTabControlPanel8;
             this.superTabItem_Gaids.GlobalItem = false;
             this.superTabItem_Gaids.Name = "superTabItem_Gaids";
-            superTabLinearGradientColorTable5.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable7.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Empty};
-            superTabItemStateColorTable1.Background = superTabLinearGradientColorTable5;
-            superTabColorStates1.Normal = superTabItemStateColorTable1;
-            superTabItemColorTable1.Default = superTabColorStates1;
-            this.superTabItem_Gaids.TabColor = superTabItemColorTable1;
+            superTabItemStateColorTable2.Background = superTabLinearGradientColorTable7;
+            superTabColorStates2.Normal = superTabItemStateColorTable2;
+            superTabItemColorTable2.Default = superTabColorStates2;
+            this.superTabItem_Gaids.TabColor = superTabItemColorTable2;
             this.superTabItem_Gaids.Text = "القيود";
             // 
             // superTabControlPanel5
@@ -2013,12 +2711,12 @@ private void InitializeComponent()
             this.superTabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel6.Location = new System.Drawing.Point(0, 25);
             this.superTabControlPanel6.Name = "superTabControlPanel6";
-            superTabLinearGradientColorTable6.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable8.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable4.Background = superTabLinearGradientColorTable6;
-            superTabPanelColorTable4.Default = superTabPanelItemColorTable4;
-            this.superTabControlPanel6.PanelColor = superTabPanelColorTable4;
+            superTabPanelItemColorTable5.Background = superTabLinearGradientColorTable8;
+            superTabPanelColorTable5.Default = superTabPanelItemColorTable5;
+            this.superTabControlPanel6.PanelColor = superTabPanelColorTable5;
             this.superTabControlPanel6.Size = new System.Drawing.Size(986, 84);
             this.superTabControlPanel6.TabIndex = 1;
             this.superTabControlPanel6.TabItem = this.superTabItem_LocalCosts;
@@ -2140,12 +2838,12 @@ private void InitializeComponent()
             this.superTabControlPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel7.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel7.Name = "superTabControlPanel7";
-            superTabLinearGradientColorTable7.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable9.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable5.Background = superTabLinearGradientColorTable7;
-            superTabPanelColorTable5.Default = superTabPanelItemColorTable5;
-            this.superTabControlPanel7.PanelColor = superTabPanelColorTable5;
+            superTabPanelItemColorTable6.Background = superTabLinearGradientColorTable9;
+            superTabPanelColorTable6.Default = superTabPanelItemColorTable6;
+            this.superTabControlPanel7.PanelColor = superTabPanelColorTable6;
             this.superTabControlPanel7.Size = new System.Drawing.Size(986, 111);
             this.superTabControlPanel7.TabIndex = 0;
             this.superTabControlPanel7.TabItem = this.superTabItem_ExtrnalCosts;
@@ -2383,12 +3081,12 @@ private void InitializeComponent()
             this.superTabItem_Costs.AttachedControl = this.superTabControlPanel5;
             this.superTabItem_Costs.GlobalItem = false;
             this.superTabItem_Costs.Name = "superTabItem_Costs";
-            superTabLinearGradientColorTable8.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable10.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.White};
-            superTabItemStateColorTable2.Background = superTabLinearGradientColorTable8;
-            superTabColorStates2.Normal = superTabItemStateColorTable2;
-            superTabItemColorTable2.Default = superTabColorStates2;
-            this.superTabItem_Costs.TabColor = superTabItemColorTable2;
+            superTabItemStateColorTable3.Background = superTabLinearGradientColorTable10;
+            superTabColorStates3.Normal = superTabItemStateColorTable3;
+            superTabItemColorTable3.Default = superTabColorStates3;
+            this.superTabItem_Costs.TabColor = superTabItemColorTable3;
             this.superTabItem_Costs.Text = "التكاليف";
             // 
             // superTabControlPanel4
@@ -2430,13 +3128,126 @@ private void InitializeComponent()
             this.superTabItem_Note.AttachedControl = this.superTabControlPanel4;
             this.superTabItem_Note.GlobalItem = false;
             this.superTabItem_Note.Name = "superTabItem_Note";
-            superTabLinearGradientColorTable9.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable11.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.White};
-            superTabItemStateColorTable3.Background = superTabLinearGradientColorTable9;
-            superTabColorStates3.Normal = superTabItemStateColorTable3;
-            superTabItemColorTable3.Default = superTabColorStates3;
-            this.superTabItem_Note.TabColor = superTabItemColorTable3;
+            superTabItemStateColorTable4.Background = superTabLinearGradientColorTable11;
+            superTabColorStates4.Normal = superTabItemStateColorTable4;
+            superTabItemColorTable4.Default = superTabColorStates4;
+            this.superTabItem_Note.TabColor = superTabItemColorTable4;
             this.superTabItem_Note.Text = "ملاحظات";
+            // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.Controls.Add(this.label_LockeName);
+            this.superTabControlPanel2.Controls.Add(this.label27);
+            this.superTabControlPanel2.Controls.Add(this.txtTotalQ);
+            this.superTabControlPanel2.Controls.Add(this.label30);
+            this.superTabControlPanel2.Controls.Add(this.textBox_Usr);
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            superTabLinearGradientColorTable12.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.Gray,
+        System.Drawing.Color.White};
+            superTabPanelItemColorTable7.Background = superTabLinearGradientColorTable12;
+            superTabPanelColorTable7.Default = superTabPanelItemColorTable7;
+            this.superTabControlPanel2.PanelColor = superTabPanelColorTable7;
+            this.superTabControlPanel2.Size = new System.Drawing.Size(986, 109);
+            this.superTabControlPanel2.TabIndex = 0;
+            this.superTabControlPanel2.TabItem = this.superTabItem_Detiles;
+            this.superTabControlPanel2.Visible = false;
+            // 
+            // label_LockeName
+            // 
+            this.label_LockeName.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label_LockeName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_LockeName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label_LockeName.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label_LockeName.ForeColor = System.Drawing.Color.Maroon;
+            this.label_LockeName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label_LockeName.Location = new System.Drawing.Point(0, 0);
+            this.label_LockeName.Name = "label_LockeName";
+            this.label_LockeName.Size = new System.Drawing.Size(132, 109);
+            this.label_LockeName.TabIndex = 1118;
+            this.label_LockeName.Text = "--";
+            this.label_LockeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label27
+            // 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label27.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label27.Location = new System.Drawing.Point(892, 55);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(67, 14);
+            this.label27.TabIndex = 1056;
+            this.label27.Text = "المستخدم :";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtTotalQ
+            // 
+            this.txtTotalQ.AllowEmptyState = false;
+            this.txtTotalQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.txtTotalQ.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTotalQ.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTotalQ.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTotalQ.DisplayFormat = "0.00";
+            this.txtTotalQ.Font = new System.Drawing.Font("Tahoma", 6.75F);
+            this.txtTotalQ.Increment = 0D;
+            this.txtTotalQ.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtTotalQ.IsInputReadOnly = true;
+            this.txtTotalQ.Location = new System.Drawing.Point(837, 21);
+            this.txtTotalQ.Name = "txtTotalQ";
+            this.txtTotalQ.Size = new System.Drawing.Size(53, 18);
+            this.txtTotalQ.TabIndex = 1051;
+            // 
+            // label30
+            // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label30.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label30.Location = new System.Drawing.Point(892, 21);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(86, 14);
+            this.label30.TabIndex = 1050;
+            this.label30.Text = "إجمالي الكمية :";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox_Usr
+            // 
+            this.textBox_Usr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_Usr.BackColor = System.Drawing.Color.SteelBlue;
+            this.textBox_Usr.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.textBox_Usr.ForeColor = System.Drawing.Color.White;
+            this.textBox_Usr.Location = new System.Drawing.Point(620, 52);
+            this.textBox_Usr.MaxLength = 30;
+            this.textBox_Usr.Name = "textBox_Usr";
+            this.textBox_Usr.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.textBox_Usr, false);
+            this.textBox_Usr.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox_Usr.Size = new System.Drawing.Size(268, 20);
+            this.textBox_Usr.TabIndex = 1058;
+            this.textBox_Usr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // superTabItem_Detiles
+            // 
+            this.superTabItem_Detiles.AttachedControl = this.superTabControlPanel2;
+            this.superTabItem_Detiles.GlobalItem = false;
+            this.superTabItem_Detiles.Name = "superTabItem_Detiles";
+            superTabLinearGradientColorTable13.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.White};
+            superTabItemStateColorTable5.Background = superTabLinearGradientColorTable13;
+            superTabColorStates5.Normal = superTabItemStateColorTable5;
+            superTabItemColorTable5.Default = superTabColorStates5;
+            this.superTabItem_Detiles.TabColor = superTabItemColorTable5;
+            this.superTabItem_Detiles.Text = "تفاصيل";
             // 
             // button_SrchCustNo
             // 
@@ -2462,7 +3273,7 @@ private void InitializeComponent()
             this.txtCustNo.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtCustNo, false);
             this.txtCustNo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtCustNo.Size = new System.Drawing.Size(402, 20);
+            this.txtCustNo.Size = new System.Drawing.Size(402, 21);
             this.txtCustNo.TabIndex = 8;
             this.txtCustNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCustNo.TextChanged += new System.EventHandler(this.txtCustNo_TextChanged);
@@ -2488,7 +3299,7 @@ private void InitializeComponent()
             this.txtAddress.MaxLength = 100;
             this.txtAddress.Name = "txtAddress";
             this.netResize1.SetResizeTextBoxMultiline(this.txtAddress, false);
-            this.txtAddress.Size = new System.Drawing.Size(144, 20);
+            this.txtAddress.Size = new System.Drawing.Size(144, 21);
             this.txtAddress.TabIndex = 11;
             this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
@@ -2500,7 +3311,7 @@ private void InitializeComponent()
             this.txtTele.Name = "txtTele";
             this.netResize1.SetResizeTextBoxMultiline(this.txtTele, false);
             this.txtTele.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtTele.Size = new System.Drawing.Size(159, 20);
+            this.txtTele.Size = new System.Drawing.Size(159, 21);
             this.txtTele.TabIndex = 12;
             this.txtTele.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTele.TextChanged += new System.EventHandler(this.txtTele_TextChanged);
@@ -3144,10 +3955,10 @@ private void InitializeComponent()
             this.CmbInvPrice.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbInvPrice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbInvPrice.FormattingEnabled = true;
-            this.CmbInvPrice.ItemHeight = 15;
+            this.CmbInvPrice.ItemHeight = 16;
             this.CmbInvPrice.Location = new System.Drawing.Point(277, 104);
             this.CmbInvPrice.Name = "CmbInvPrice";
-            this.CmbInvPrice.Size = new System.Drawing.Size(158, 21);
+            this.CmbInvPrice.Size = new System.Drawing.Size(158, 22);
             this.CmbInvPrice.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbInvPrice.TabIndex = 14;
             // 
@@ -3158,10 +3969,10 @@ private void InitializeComponent()
             this.CmbCostC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbCostC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCostC.FormattingEnabled = true;
-            this.CmbCostC.ItemHeight = 15;
+            this.CmbCostC.ItemHeight = 16;
             this.CmbCostC.Location = new System.Drawing.Point(530, 104);
             this.CmbCostC.Name = "CmbCostC";
-            this.CmbCostC.Size = new System.Drawing.Size(155, 21);
+            this.CmbCostC.Size = new System.Drawing.Size(155, 22);
             this.CmbCostC.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbCostC.TabIndex = 13;
             this.CmbCostC.SelectedIndexChanged += new System.EventHandler(this.CmbCostC_SelectedIndexChanged);
@@ -3173,10 +3984,10 @@ private void InitializeComponent()
             this.CmbCurr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbCurr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCurr.FormattingEnabled = true;
-            this.CmbCurr.ItemHeight = 15;
+            this.CmbCurr.ItemHeight = 16;
             this.CmbCurr.Location = new System.Drawing.Point(839, 80);
             this.CmbCurr.Name = "CmbCurr";
-            this.CmbCurr.Size = new System.Drawing.Size(362, 21);
+            this.CmbCurr.Size = new System.Drawing.Size(362, 22);
             this.CmbCurr.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbCurr.TabIndex = 6;
             // 
@@ -3187,10 +3998,10 @@ private void InitializeComponent()
             this.CmbLegate.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CmbLegate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbLegate.FormattingEnabled = true;
-            this.CmbLegate.ItemHeight = 15;
+            this.CmbLegate.ItemHeight = 16;
             this.CmbLegate.Location = new System.Drawing.Point(779, 104);
             this.CmbLegate.Name = "CmbLegate";
-            this.CmbLegate.Size = new System.Drawing.Size(421, 21);
+            this.CmbLegate.Size = new System.Drawing.Size(421, 22);
             this.CmbLegate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CmbLegate.TabIndex = 7;
             // 
@@ -4342,7 +5153,7 @@ private void InitializeComponent()
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.ReadOnly = true;
             this.netResize1.SetResizeTextBoxMultiline(this.txtItemName, false);
-            this.txtItemName.Size = new System.Drawing.Size(374, 13);
+            this.txtItemName.Size = new System.Drawing.Size(374, 14);
             this.txtItemName.TabIndex = 1079;
             this.txtItemName.Visible = false;
             // 
@@ -4352,6 +5163,70 @@ private void InitializeComponent()
             this.netResize1.LabelsAutoEllipse = false;
             this.netResize1.ParentControl = this;
             this.netResize1.AfterControlResize += new Softgroup.NetResize.NetResize.AfterControlResizeEventHandler(this.netResize1_AfterControlResize);
+            // 
+            // dockManager1
+            // 
+            this.dockManager1.TopZIndexControls.AddRange(new string[] {
+            "DevExpress.XtraBars.BarDockControl",
+            "DevExpress.XtraBars.StandaloneBarDockControl",
+            "System.Windows.Forms.MenuStrip",
+            "System.Windows.Forms.StatusStrip",
+            "System.Windows.Forms.StatusBar",
+            "DevExpress.XtraBars.Ribbon.RibbonStatusBar",
+            "DevExpress.XtraBars.Ribbon.RibbonControl",
+            "DevExpress.XtraBars.Navigation.OfficeNavigationBar",
+            "DevExpress.XtraBars.Navigation.TileNavPane",
+            "DevExpress.XtraBars.TabFormControl",
+            "DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl",
+            "DevExpress.XtraBars.ToolbarForm.ToolbarFormControl"});
+            // 
+            // dockManager2
+            // 
+            this.dockManager2.Form = this;
+            this.dockManager2.TopZIndexControls.AddRange(new string[] {
+            "DevExpress.XtraBars.BarDockControl",
+            "DevExpress.XtraBars.StandaloneBarDockControl",
+            "System.Windows.Forms.MenuStrip",
+            "System.Windows.Forms.StatusStrip",
+            "System.Windows.Forms.StatusBar",
+            "DevExpress.XtraBars.Ribbon.RibbonStatusBar",
+            "DevExpress.XtraBars.Ribbon.RibbonControl",
+            "DevExpress.XtraBars.Navigation.OfficeNavigationBar",
+            "DevExpress.XtraBars.Navigation.TileNavPane",
+            "DevExpress.XtraBars.TabFormControl",
+            "DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl",
+            "DevExpress.XtraBars.ToolbarForm.ToolbarFormControl"});
+            // 
+            // dockPanel4
+            // 
+            this.dockPanel4.Controls.Add(this.dockPanel4_Container);
+            this.dockPanel4.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel4.ID = new System.Guid("c76afa7e-108b-468a-b785-b935fe8cb0b6");
+            this.dockPanel4.Location = new System.Drawing.Point(23, 0);
+            this.dockPanel4.Name = "dockPanel4";
+            this.dockPanel4.OriginalSize = new System.Drawing.Size(297, 200);
+            this.dockPanel4.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel4.SavedIndex = 0;
+            this.dockPanel4.Size = new System.Drawing.Size(297, 523);
+            this.dockPanel4.Text = "اعدادات الطباعة";
+            this.dockPanel4.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+            // 
+            // dockPanel4_Container
+            // 
+            this.dockPanel4_Container.Controls.Add(this.xPrinterSetting1);
+            this.dockPanel4_Container.Location = new System.Drawing.Point(4, 24);
+            this.dockPanel4_Container.Name = "dockPanel4_Container";
+            this.dockPanel4_Container.Size = new System.Drawing.Size(290, 496);
+            this.dockPanel4_Container.TabIndex = 0;
+            // 
+            // xPrinterSetting1
+            // 
+            this.xPrinterSetting1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xPrinterSetting1.Location = new System.Drawing.Point(0, 0);
+            this.xPrinterSetting1.Name = "xPrinterSetting1";
+            this.xPrinterSetting1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.xPrinterSetting1.Size = new System.Drawing.Size(290, 496);
+            this.xPrinterSetting1.TabIndex = 0;
             // 
             // FrmInvPuchaesReturn
             // 
@@ -4367,7 +5242,7 @@ private void InitializeComponent()
             this.Controls.Add(this.dockSite3);
             this.Controls.Add(this.dockSite1);
             this.Controls.Add(this.txtItemName);
-            this.Icon = global::InvAcc.Properties.Resources.favicon;
+            this.IconOptions.Icon = global::InvAcc.Properties.Resources.favicon;
             this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(834, 505);
             this.Name = "FrmInvPuchaesReturn";
@@ -4382,6 +5257,61 @@ private void InitializeComponent()
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Frm_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmInvPuchaesReturn_KeyUp);
             this.PanelSpecialContainer.ResumeLayout(false);
+            this.hideContainerLeft.ResumeLayout(false);
+            this.dockPanel3.ResumeLayout(false);
+            this.dockPanel3_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl3)).EndInit();
+            this.dataLayoutControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CreaditAccNo_DLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetworkAccNo_DLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CashAccNo_DLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CashAccNo_CLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetworkAccNo_CLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CreaditAccNo_CLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            this.dockPanel1.ResumeLayout(false);
+            this.dockPanel1_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl2)).EndInit();
+            this.dataLayoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.IsExtrnalGaidCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IsTaxGaidCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IsDisGaidCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IsCommGaidCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IsCommUseCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CommCreditTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CommDebitTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisCreditTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisDebitTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TaxCreditTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TaxDebitTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             this.ribbonBar1.ResumeLayout(false);
             this.ribbonBar1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FlxDat)).EndInit();
@@ -4390,9 +5320,6 @@ private void InitializeComponent()
             this.superTabControlPanel3.ResumeLayout(false);
             this.superTabControlPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FlxStkQty)).EndInit();
-            this.superTabControlPanel2.ResumeLayout(false);
-            this.superTabControlPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).EndInit();
             this.superTabControlPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl3)).EndInit();
             this.superTabControl3.ResumeLayout(false);
@@ -4419,6 +5346,9 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.txtTotCostExtrnal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotCostLocExtrnal)).EndInit();
             this.superTabControlPanel4.ResumeLayout(false);
+            this.superTabControlPanel2.ResumeLayout(false);
+            this.superTabControlPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Credit)).EndInit();
@@ -4456,6 +5386,10 @@ private void InitializeComponent()
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Main2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.netResize1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dockManager2)).EndInit();
+            this.dockPanel4.ResumeLayout(false);
+            this.dockPanel4_Container.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4489,5 +5423,63 @@ private void InitializeComponent()
         internal System.Windows.Forms.Label label44;
         private System.Windows.Forms.TextBox text_CusTaxNo;
         internal System.Windows.Forms.Label label45;
+        private DevExpress.XtraBars.Docking.DockManager dockManager1;
+        private DevExpress.XtraBars.Docking.DockManager dockManager2;
+        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerLeft;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel4;
+        private DevExpress.XtraBars.Docking.ControlContainer dockPanel4_Container;
+        private ProRealEstate.Utilties.XPrinterSetting xPrinterSetting1;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel3;
+        private DevExpress.XtraBars.Docking.ControlContainer dockPanel3_Container;
+        private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl3;
+        private ProRealEstate.LookUpEditWithDataSource CreaditAccNo_DLookUpEdit;
+        private ProRealEstate.LookUpEditWithDataSource NetworkAccNo_DLookUpEdit;
+        private ProRealEstate.LookUpEditWithDataSource CashAccNo_DLookUpEdit;
+        private ProRealEstate.LookUpEditWithDataSource CashAccNo_CLookUpEdit;
+        private ProRealEstate.LookUpEditWithDataSource NetworkAccNo_CLookUpEdit;
+        private ProRealEstate.LookUpEditWithDataSource CreaditAccNo_CLookUpEdit;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup7;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup9;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup10;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel1;
+        private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
+        private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl2;
+        private DevExpress.XtraEditors.CheckEdit IsExtrnalGaidCheckEdit;
+        private DevExpress.XtraEditors.CheckEdit IsTaxGaidCheckEdit;
+        private DevExpress.XtraEditors.ToggleSwitch toggleSwitch1;
+        private DevExpress.XtraEditors.ToggleSwitch toggleSwitch2;
+        private DevExpress.XtraEditors.CheckEdit IsDisGaidCheckEdit;
+        private DevExpress.XtraEditors.CheckEdit IsCommGaidCheckEdit;
+        private DevExpress.XtraEditors.CheckEdit IsCommUseCheckEdit;
+        private ProRealEstate.LookUpEditWithDataSource CommCreditTextEdit;
+        private ProRealEstate.LookUpEditWithDataSource CommDebitTextEdit;
+        private ProRealEstate.LookUpEditWithDataSource DisCreditTextEdit;
+        private ProRealEstate.LookUpEditWithDataSource DisDebitTextEdit;
+        private ProRealEstate.LookUpEditWithDataSource TaxCreditTextEdit;
+        private ProRealEstate.LookUpEditWithDataSource TaxDebitTextEdit;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup12;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup13;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup14;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
     }
 }
