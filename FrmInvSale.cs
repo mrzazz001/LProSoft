@@ -41,16 +41,7 @@ namespace InvAcc.Forms
         void avs(int arln)
 
 { 
- textBox_AccBalance.Text=   (arln == 0 ? "  0  " : "  0") ; labelBalance.Text=   (arln == 0 ? "  الرصيـــــــد   " : "  balance") ; button_SrchInvNoBarcod.Text=   (arln == 0 ? "  بحث  " : "  Search") ; label40.Text=   (arln == 0 ? "  خصم النقـاط  " : "  Points Discount") ; buttonItem_POSReturn.Text=   (arln == 0 ? "  مرتجع  " : "  bounce") ; label_Pay.Text=   (arln == 0 ? "  تسديد  " : "  payment") ; labelPharmacy3.Text=   (arln == 0 ? "  يوم  " : "  day") ; labelPharmacy2.Text=   (arln == 0 ? "  يوم ,يصرف منها  " : "  day, spent") ; labelPharmacy1.Text=   (arln == 0 ? "  مدة العلاج :  " : "  Duration of treatment:") ;  checkBox_NetWork.Text=   (arln == 0 ? "  شبكـــة  " : "Network") ; checkBox_Credit.Text=   (arln == 0 ? "  أجـــل  " : "Credit") ; checkBox_Chash.Text=   (arln == 0 ? "  نقـــدي  " : "Cach") ; superTabStrip_ORders.Text=   (arln == 0 ? "  superTabStrip1  " : "  superTabStrip1") ; button_opendraft.Text=   (arln == 0 ? "  الفواتير المعلقة  " : "  Pending invoices") ; button_Draft.Text=   (arln == 0 ? "  تعليق الفاتورة  " : "  Invoice comment") ; c1BarCode1.Text=   (arln == 0 ? "  1225  " : "  1225") ; button_GoodsDisbursedInv.Text=   (arln == 0 ? "  فواتير صرف البضاعة  " : "  Goods exchange invoices") ; label10.Text=   (arln == 0 ? "  اسم العميـــــل :  " : "  Client name:") ; label4.Text=   (arln == 0 ? "  حساب العميــل :  " : "  Customer account:") ; label12.Text=   (arln == 0 ? "  هاتف :  " : "  Telephone :") ; label33.Text=   (arln == 0 ? "  قيمة الضريبة:  " : "  Tax value:") ; label8.Text=   (arln == 0 ? "  نسبة الخصم  " : "  discount percentage") ; Label26.Text=   (arln == 0 ? "  قيمة الخصم  " : "  discount value") ; label3.Text=   (arln == 0 ? "  بالريــال  " : "  in riyals") ; label9.Text=   (arln == 0 ? "  صافي الفاتورة :  " : "  net bill:") ; label17.Text=   (arln == 0 ? "  قيمة الفاتـــورة :  " : "  Invoice value:") ; label36.Text=   (arln == 0 ? "  الجوال :  " : "  cell phone :") ; label15.Text=   (arln == 0 ? "  مركز التكلفـــــة :  " : "  cost center:") ; label13.Text=   (arln == 0 ? "  عنوان العميل :  " : "  Customer address:") ; label19.Text=   (arln == 0 ? "  العملــــــــة :  " : "  work:") ; label18.Text=   (arln == 0 ? "  المنـــــدوب :  " : "  The delegate:") ; label7.Text=   (arln == 0 ? "  رقم المرجع :  " : "  reference number :") ; Label2.Text=   (arln == 0 ? "  التاريــــــــخ :  " : "  date:") ; Label1.Text=   (arln == 0 ? "  رقم الفاتورة :  " : "  invoice number :") ; label32.Text=   (arln == 0 ? "  السيريال  " : "  serial السي") ; label25.Text=   (arln == 0 ? "  الوحدة  " : "  Unit") ; label22.Text=   (arln == 0 ? "  سعر اخر بيع  " : "  last sale price") ; label23.Text=   (arln == 0 ? "  أخر تكلفة  " : "  latest cost") ; label24.Text=   (arln == 0 ? "  متوسط التكلفة  " : "  average cost") ; 
-            //superTabItem_items.Text=   (arln == 0 ? "  م.الصنف  " : "  M. Category") ; 
-            superTabControl_CostSts.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; textBox_AccBalanceBottom.Text=   (arln == 0 ? "  0  " : "  0") ; labelBalanceBottom.Text=   (arln == 0 ? "  الرصيـد   " : "  balance") ; labelC1.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; label14.Text=   (arln == 0 ? "  شبكة :  " : "  Network :") ; labelC2.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; label11.Text=   (arln == 0 ? "  آجــل :  " : "  deferred:") ; label6.Text=   (arln == 0 ? "  نقــــداّ :  " : "  cash:") ; labelC3.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; labelD1.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; labelD3.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; labelD2.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ;
-            //superTabItem_Pay.Text=   (arln == 0 ? "  الدفع  " : "  paying off") ; label31.Text=   (arln == 0 ? "  إجمالي القيمة  " : "  Total value") ; label37.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label38.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; label39.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; checkBox_GaidDis.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; superTabItem_Dis.Text=   (arln == 0 ? "  الخصـــــم  " : "  discount ال") ; label34.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label35.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; checkBox_CostGaidTax.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; superTabItem_Tax.Text=   (arln == 0 ? "  الضـــرائب  " : "  taxes") ; label48.Text=   (arln == 0 ? "  إجمالي القيمة  " : "  Total value") ; label41.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label49.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; checkBox_GaidBankComm.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; superTabItem_LocalComm.Text=   (arln == 0 ? "  عمولات بنكية  " : "  Bank commissions") ; label44.Text=   (arln == 0 ? "  إجمالي القيمة  " : "  Total value") ; label45.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label46.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; label47.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; labelItem_TaxByNetPer.Text=   (arln == 0 ? "  %  " : "  %") ;
-            ////superTabControl_Info.Text=   (arln == 0 ? "  القيود  " : "  limitations") ;
-            label_LockeName.Text=   (arln == 0 ? "  --  " : "  --") ; label16.Text=   (arln == 0 ? "  إجمالي المتبقي :  " : "  Remaining total:") ; label20.Text=   (arln == 0 ? "  المدفوع من العميل :  " : "  Paid by the customer:") ; label27.Text=   (arln == 0 ? "  المستخدم :  " : "  the user :") ; label28.Text=   (arln == 0 ? "  صافـي الــربــح :  " : "  net profit:") ; label30.Text=   (arln == 0 ? "  إجمالــي الكميــة :  " : "  Total Quantity:") ; label_Curr.Text=   (arln == 0 ? "  العملة  " : "  the currency") ; 
-            //superTabItem_Detiles.Text=   (arln == 0 ? "  تفاصيل  " : "  details") ; 
-            label29.Text=   (arln == 0 ? "  رقم الحاوية :  " : "  containers number :") ; label21.Text=   (arln == 0 ? "  تاريخ الإستحقاق   " : "  due date") ; labelPharmcy4.Text=   (arln == 0 ? "  المدفوع من العميل :  " : "  Paid by the customer:") ;
-            //superTabItem_Note.Text=   (arln == 0 ? "  ملاحظات  " : "  Notes") ; 
-            checkBoxItem_BarCode.Text=   (arln == 0 ? "  قراءه تلقائية  " : "  automatic reading") ; label5.Text=   (arln == 0 ? "  السعر المعتمــد :  " : "  Approved price:") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_BarcodPrint.Text=   (arln == 0 ? "  BC  " : "  BC") ; ButReturnShow.Text=   (arln == 0 ? "  عروض الأسعـــــار  " : "  Price Offers") ; ButPurchaseShow.Text=   (arln == 0 ? "  فواتير المشتريــات  " : "  Purchase invoices") ; ButOutGoodShow.Text=   (arln == 0 ? "  فواتير إخراج بضاعة  " : "  merchandise delivery invoices") ; buttonItem1.Text=   (arln == 0 ? "  الفواتير المعلقة  " : "  Pending invoices") ; ButEnterGoodShow.Text=   (arln == 0 ? "  فواتير إدخال بضاعة  " : "  Goods entry invoices") ; button_Repetition.Text=   (arln == 0 ? "  تكرار  " : "  Repetition") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; /*buttonItem_Print.Text=   (arln == 0 ? "  طباعة  " : "  Print") ;*/ printerSetting.Text=   (arln == 0 ? "  اعدادات الطابعة  " : "  printer settings") ; Button_Search.Text=   (arln == 0 ? "  بحث  " : "  Search") ;
+ textBox_AccBalance.Text=   (arln == 0 ? "  0  " : "  0") ; labelBalance.Text=   (arln == 0 ? "  الرصيـــــــد   " : "  balance") ; button_SrchInvNoBarcod.Text=   (arln == 0 ? "  بحث  " : "  Search") ; label40.Text=   (arln == 0 ? "  خصم النقـاط  " : "  Points Discount") ; buttonItem_POSReturn.Text=   (arln == 0 ? "  مرتجع  " : "  bounce") ; label_Pay.Text=   (arln == 0 ? "  تسديد  " : "  payment") ; labelPharmacy3.Text=   (arln == 0 ? "  يوم  " : "  day") ; labelPharmacy2.Text=   (arln == 0 ? "  يوم ,يصرف منها  " : "  day, spent") ; labelPharmacy1.Text=   (arln == 0 ? "  مدة العلاج :  " : "  Duration of treatment:") ;  checkBox_NetWork.Text=   (arln == 0 ? "  شبكـــة  " : "Network") ; checkBox_Credit.Text=   (arln == 0 ? "  أجـــل  " : "Credit") ; checkBox_Chash.Text=   (arln == 0 ? "  نقـــدي  " : "Cach") ; superTabStrip_ORders.Text=   (arln == 0 ? "  superTabStrip1  " : "  superTabStrip1") ; button_opendraft.Text=   (arln == 0 ? "  الفواتير المعلقة  " : "  Pending invoices") ; button_Draft.Text=   (arln == 0 ? "  تعليق الفاتورة  " : "  Invoice comment") ; c1BarCode1.Text=   (arln == 0 ? "  1225  " : "  1225") ; button_GoodsDisbursedInv.Text=   (arln == 0 ? "  فواتير صرف البضاعة  " : "  Goods exchange invoices") ; label10.Text=   (arln == 0 ? "  اسم العميـــــل :  " : "  Client name:") ; label4.Text=   (arln == 0 ? "  حساب العميــل :  " : "  Customer account:") ; label12.Text=   (arln == 0 ? "  هاتف :  " : "  Telephone :") ; label33.Text=   (arln == 0 ? "  قيمة الضريبة:  " : "  Tax value:") ; label8.Text=   (arln == 0 ? "  نسبة الخصم  " : "  discount percentage") ; Label26.Text=   (arln == 0 ? "  قيمة الخصم  " : "  discount value") ; label3.Text=   (arln == 0 ? "  بالريــال  " : "  in riyals") ; label9.Text=   (arln == 0 ? "  صافي الفاتورة :  " : "  net bill:") ; label17.Text=   (arln == 0 ? "  قيمة الفاتـــورة :  " : "  Invoice value:") ; label36.Text=   (arln == 0 ? "  الجوال :  " : "  cell phone :") ; label15.Text=   (arln == 0 ? "  مركز التكلفـــــة :  " : "  cost center:") ; label13.Text=   (arln == 0 ? "  عنوان العميل :  " : "  Customer address:") ; label19.Text=   (arln == 0 ? "  العملــــــــة :  " : "  work:") ; label18.Text=   (arln == 0 ? "  المنـــــدوب :  " : "  The delegate:") ; label7.Text=   (arln == 0 ? "  رقم المرجع :  " : "  reference number :") ; Label2.Text=   (arln == 0 ? "  التاريــــــــخ :  " : "  date:") ; Label1.Text=   (arln == 0 ? "  رقم الفاتورة :  " : "  invoice number :") ; label32.Text=   (arln == 0 ? "  السيريال  " : "  serial السي") ; label25.Text=   (arln == 0 ? "  الوحدة  " : "  Unit") ; label22.Text=   (arln == 0 ? "  سعر اخر بيع  " : "  last sale price") ; label23.Text=   (arln == 0 ? "  أخر تكلفة  " : "  latest cost") ; label24.Text=   (arln == 0 ? "  متوسط التكلفة  " : "  average cost") ; superTabItem_items.Text=   (arln == 0 ? "  م.الصنف  " : "  M. Category") ; superTabControl_CostSts.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; textBox_AccBalanceBottom.Text=   (arln == 0 ? "  0  " : "  0") ; labelBalanceBottom.Text=   (arln == 0 ? "  الرصيـد   " : "  balance") ; labelC1.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; label14.Text=   (arln == 0 ? "  شبكة :  " : "  Network :") ; labelC2.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; label11.Text=   (arln == 0 ? "  آجــل :  " : "  deferred:") ; label6.Text=   (arln == 0 ? "  نقــــداّ :  " : "  cash:") ; labelC3.Text=   (arln == 0 ? "  الدائـــن :  " : "  creditor:") ; labelD1.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; labelD3.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; labelD2.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; superTabItem_Pay.Text=   (arln == 0 ? "  الدفع  " : "  paying off") ; label31.Text=   (arln == 0 ? "  إجمالي القيمة  " : "  Total value") ; label37.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label38.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; label39.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; checkBox_GaidDis.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; superTabItem_Dis.Text=   (arln == 0 ? "  الخصـــــم  " : "  discount ال") ; label34.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label35.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; checkBox_CostGaidTax.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; superTabItem_Tax.Text=   (arln == 0 ? "  الضـــرائب  " : "  taxes") ; label48.Text=   (arln == 0 ? "  إجمالي القيمة  " : "  Total value") ; label41.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label49.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; checkBox_GaidBankComm.Text=   (arln == 0 ? "  سند محاسبي  " : "  accounting document") ; superTabItem_LocalComm.Text=   (arln == 0 ? "  عمولات بنكية  " : "  Bank commissions") ; label44.Text=   (arln == 0 ? "  إجمالي القيمة  " : "  Total value") ; label45.Text=   (arln == 0 ? "  الدائـــــن :  " : "  creditor:") ; label46.Text=   (arln == 0 ? "  المـــدين :  " : "  Debtor:") ; label47.Text=   (arln == 0 ? "  بالريــــال  " : "  in riyals") ; labelItem_TaxByNetPer.Text=   (arln == 0 ? "  %  " : "  %") ; superTabItem_Gaids.Text=   (arln == 0 ? "  القيود  " : "  limitations") ; label_LockeName.Text=   (arln == 0 ? "  --  " : "  --") ; label16.Text=   (arln == 0 ? "  إجمالي المتبقي :  " : "  Remaining total:") ; label20.Text=   (arln == 0 ? "  المدفوع من العميل :  " : "  Paid by the customer:") ; label27.Text=   (arln == 0 ? "  المستخدم :  " : "  the user :") ; label28.Text=   (arln == 0 ? "  صافـي الــربــح :  " : "  net profit:") ; label30.Text=   (arln == 0 ? "  إجمالــي الكميــة :  " : "  Total Quantity:") ; label_Curr.Text=   (arln == 0 ? "  العملة  " : "  the currency") ; superTabItem_Detiles.Text=   (arln == 0 ? "  تفاصيل  " : "  details") ; label29.Text=   (arln == 0 ? "  رقم الحاوية :  " : "  containers number :") ; label21.Text=   (arln == 0 ? "  تاريخ الإستحقاق   " : "  due date") ; labelPharmcy4.Text=   (arln == 0 ? "  المدفوع من العميل :  " : "  Paid by the customer:") ; superTabItem_Note.Text=   (arln == 0 ? "  ملاحظات  " : "  Notes") ; checkBoxItem_BarCode.Text=   (arln == 0 ? "  قراءه تلقائية  " : "  automatic reading") ; label5.Text=   (arln == 0 ? "  السعر المعتمــد :  " : "  Approved price:") ; superTabControl_Main1.Text=   (arln == 0 ? "  superTabControl3  " : "  superTabControl3") ; Button_BarcodPrint.Text=   (arln == 0 ? "  BC  " : "  BC") ; ButReturnShow.Text=   (arln == 0 ? "  عروض الأسعـــــار  " : "  Price Offers") ; ButPurchaseShow.Text=   (arln == 0 ? "  فواتير المشتريــات  " : "  Purchase invoices") ; ButOutGoodShow.Text=   (arln == 0 ? "  فواتير إخراج بضاعة  " : "  merchandise delivery invoices") ; buttonItem1.Text=   (arln == 0 ? "  الفواتير المعلقة  " : "  Pending invoices") ; ButEnterGoodShow.Text=   (arln == 0 ? "  فواتير إدخال بضاعة  " : "  Goods entry invoices") ; button_Repetition.Text=   (arln == 0 ? "  تكرار  " : "  Repetition") ; Button_Close.Text=   (arln == 0 ? "  إغلاق  " : "  Close") ; /*buttonItem_Print.Text=   (arln == 0 ? "  طباعة  " : "  Print") ;*/ printerSetting.Text=   (arln == 0 ? "  اعدادات الطابعة  " : "  printer settings") ; Button_Search.Text=   (arln == 0 ? "  بحث  " : "  Search") ;
             
             Button_Delete.Text=   (arln == 0 ? "  حذف  " : "  delete") ; 
             
@@ -60,7 +51,7 @@ namespace InvAcc.Forms
         private void langloads(object sender, EventArgs e)
         {
               avs(ProShared. GeneralM.VarGeneral.currentintlanguage);;
-            //netResize1.SetResizeControl(//superTabControl_Info, true);
+            netResize1.SetResizeControl(superTabControl_Info, true);
         }
    
         public class ColumnDictinary_ORDERACC
@@ -211,7 +202,14 @@ namespace InvAcc.Forms
         internal Label labelPharmacy3;
         internal Label labelPharmacy2;
         internal Label labelPharmacy1;
-            private CheckBoxItem ChkA4Cahir;
+        private SuperTabControlPanel superTabControlPanel10;
+        internal Label label44;
+        internal Label label45;
+        internal Label label46;
+        private TextBoxX txtCredit8;
+        private TextBoxX textBoxX4;
+        internal Label label47;
+        private CheckBoxItem ChkA4Cahir;
         private C1FlexGrid FlxInvToCopy;
         private SwitchButton switchButton_IfPrint;
         private ButtonItem ButReturnShow;
@@ -2690,7 +2688,7 @@ public        int Dtype = -1;
             label_Due.Text = "";
             ButReturnShow.Tag = 0;
             CmbInvSide.SelectedIndex = 0;
-            //superTabControl_Info.SelectedTabIndex = 0;
+            superTabControl_Info.SelectedTabIndex = 0;
             try
             {
                 CmbCurr.SelectedValue = int.Parse(VarGeneral.Settings_Sys.ImportIp.ToString());
@@ -2829,7 +2827,7 @@ public        int Dtype = -1;
         }
         private void checkBox_Chash_CheckedChanged(object sender, EventArgs e)
         {
-            //superTabControl_Info.SelectedTabIndex = 4;
+            superTabControl_Info.SelectedTabIndex = 4;
             InvModeChanged();
             if (Utilites.isnollorempty(txtCredit1.Tag))
 
@@ -2885,7 +2883,7 @@ public        int Dtype = -1;
         }
         private void checkBox_Credit_CheckedChanged(object sender, EventArgs e)
         {
-            //superTabControl_Info.SelectedTabIndex = 4;
+            superTabControl_Info.SelectedTabIndex = 4;
             InvModeChanged();
             if (Utilites.isnollorempty(txtCredit2.Tag))
                 txtCredit2.Tag = ((_InvSetting.AccCredit1.Trim() != "***") ? _InvSetting.AccCredit1.Trim() : "");
@@ -3060,7 +3058,7 @@ public        int Dtype = -1;
 
         private void checkBox_NetWork_CheckedChanged(object sender, EventArgs e)
         {
-            //superTabControl_Info.SelectedTabIndex = 4;
+            superTabControl_Info.SelectedTabIndex = 4;
             InvModeChanged();
             doubleInput_NetWorkLoc_Leave(null, null);
             if (Utilites.isnollorempty(txtCredit3.Tag))
@@ -3880,7 +3878,7 @@ public        int Dtype = -1;
                 {
                 }
             }
-            //superTabControl_Info.SelectedTabIndex = 3;
+            superTabControl_Info.SelectedTabIndex = 3;
             FlxInv.Focus();
         }
         private void AutoGaidAcc()
@@ -4705,7 +4703,7 @@ public        int Dtype = -1;
                 switchButton_Tax.OnText = "معتمد";
                 superTabItem_Tax.Text = "ضرائب";
                 superTabItem_Dis.Text = "الخصـــــم";
-                //superTabControl_Info.Text = "القيود";
+                superTabItem_Gaids.Text = "القيود";
                 switchButton_Dis.OffText = "+ السطــور";
                 switchButton_Dis.OnText = "+ السطــور";
                 superTabItem_LocalComm.Text = "عمولات بنكية";
@@ -4816,7 +4814,7 @@ public        int Dtype = -1;
                 switchButton_Dis.OnText = "+ Lines";
                 superTabItem_Tax.Text = "Taxes";
                 superTabItem_Dis.Text = "Discount";
-                //superTabControl_Info.Text = "Accounting entries";
+                superTabItem_Gaids.Text = "Accounting entries";
                 superTabItem_LocalComm.Text = "Bank commissions";
                 switchButton_BankComm.OffText = "Not issuing";
                 switchButton_BankComm.OnText = "issuing";
@@ -5338,14 +5336,14 @@ public        int Dtype = -1;
             label15.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             CmbCostC.Visible = false;
             CmbInvSide.Visible = false;
-            //superTabItem_items.Visible = false;
+            superTabItem_items.Visible = false;
             label28.Visible = false;
             doubleInput_LostOrWin.Visible = false;
             label_Curr.Visible = false;
             label29.Visible = false;
             txtDescription.Visible = false;
-            //superTabItem_Tax.Visible = false;
-            ////superTabControl_Info.Visible = false;
+            superTabItem_Tax.Visible = false;
+            superTabItem_Gaids.Visible = false;
             FlxInv.Cols
                 [6].Visible = false;
             FlxInv.Cols[37].Visible = false;
@@ -7754,21 +7752,21 @@ public        int Dtype = -1;
             if (txtPaymentLoc.Value + doubleInput_NetWorkLoc.Value + doubleInput_CreditLoc.Value != (checkBox_CostGaidTax.Checked ? (txtDueAmountLoc.Value - txtTotTax.Value) : txtDueAmountLoc.Value))
             {
                 MessageBox.Show((LangArEn == 0) ? "يجب ان يكون مجموع المدفوعات النقدية والآجلة مساوية لصافي الفاتورة .. يرجى التاكد من المدفوعات!" : "You must be the total cash payments and futures is equal to the net invoice .. Please confirm the payments!", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                //superTabControl_Info.SelectedTabIndex = 1;
+                superTabControl_Info.SelectedTabIndex = 1;
                 txtPaymentLoc.Focus();
                 return false;
             }
             if (!VarGeneral.TString.ChkStatShow(VarGeneral.UserPassQty, 9) && checkBox_Chash.Checked && txtPaymentLoc.Value <= 0.0 && doubleInput_NetWorkLoc.Value <= 0.0)
             {
                 MessageBox.Show((LangArEn == 0) ? "لايمكن الحفظ كفاتورة نقدية واجمالي المدفوعات النقدية أصغر من او يساوي الصفر " : "You can not save a bill in cash and total cash payments smaller than or equal to zero", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                //superTabControl_Info.SelectedTabIndex = 1;
+                superTabControl_Info.SelectedTabIndex = 1;
                 txtPaymentLoc.Focus();
                 return false;
             }
             if (checkBox_Credit.Checked && doubleInput_CreditLoc.Value <= 0.0 && doubleInput_NetWorkLoc.Value <= 0.0)
             {
                 MessageBox.Show((LangArEn == 0) ? "لايمكن الحفظ كفاتورة آجلة واجمالي المدفوعات الآجلة أصغر من او يساوي الصفر " : "You can not save a bill futures and futures total payments smaller than or equal to zero", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                //superTabControl_Info.SelectedTabIndex = 1;
+                superTabControl_Info.SelectedTabIndex = 1;
                 doubleInput_CreditLoc.Focus();
                 return false;
             }
@@ -8114,37 +8112,37 @@ public        int Dtype = -1;
                 if (txtPaymentLoc.Value > 0.0 && string.IsNullOrEmpty(txtCredit1.Text))
                 {
                     MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة الطرف الدائن للقيد النقدي .. راجع تهيئة النظام " : "You can not complete the operation .. Make sure the creditor under the party .. see the system configuration", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    //superTabControl_Info.SelectedTabIndex = 1;
+                    superTabControl_Info.SelectedTabIndex = 1;
                     return false;
                 }
                 if (txtPaymentLoc.Value > 0.0 && string.IsNullOrEmpty(txtDebit1.Text))
                 {
                     MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة الطرف المدين للقيد النقدي .. راجع تهيئة النظام " : "You can not complete the operation .. Make sure the debtor under the party .. see the system configuration", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    //superTabControl_Info.SelectedTabIndex = 1;
+                    superTabControl_Info.SelectedTabIndex = 1;
                     return false;
                 }
                 if (doubleInput_CreditLoc.Value > 0.0 && string.IsNullOrEmpty(txtCredit2.Text))
                 {
                     MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة الطرف الدائن للقيد الآجل .. راجع تهيئة النظام " : "You can not complete the operation .. Make sure the creditor under the party .. see the system configuration", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    //superTabControl_Info.SelectedTabIndex = 1;
+                    superTabControl_Info.SelectedTabIndex = 1;
                     return false;
                 }
                 if (doubleInput_CreditLoc.Value > 0.0 && string.IsNullOrEmpty(txtDebit2.Text))
                 {
                     MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة الطرف المدين للقيد الآجل .. راجع تهيئة النظام " : "You can not complete the operation .. Make sure the debtor under the party .. see the system configuration", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    //superTabControl_Info.SelectedTabIndex = 1;
+                    superTabControl_Info.SelectedTabIndex = 1;
                     return false;
                 }
                 if (doubleInput_NetWorkLoc.Value > 0.0 && string.IsNullOrEmpty(txtCredit3.Text))
                 {
                     MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة الطرف الدائن للقيد الشبكة .. راجع تهيئة النظام " : "You can not complete the operation .. Make sure the creditor under the party .. see the system configuration", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    //superTabControl_Info.SelectedTabIndex = 1;
+                    superTabControl_Info.SelectedTabIndex = 1;
                     return false;
                 }
                 if (doubleInput_NetWorkLoc.Value > 0.0 && string.IsNullOrEmpty(txtDebit3.Text))
                 {
                     MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة الطرف المدين للقيد الشبكة .. راجع تهيئة النظام " : "You can not complete the operation .. Make sure the debtor under the party .. see the system configuration", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    //superTabControl_Info.SelectedTabIndex = 1;
+                    superTabControl_Info.SelectedTabIndex = 1;
                     return false;
                 }
                 try
@@ -8301,19 +8299,19 @@ public        int Dtype = -1;
             if (checkBox_CostGaidTax.Checked && txtTotTax.Value <= 0.0)
             {
                 MessageBox.Show((LangArEn == 0) ? "لايمكن انشاء سند محاسبي بقيمة الضريبة واجمالي الضريبة يساوي صفر" : "You can not set up an accounting support tax and the total tax is equal to zero.", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                //superTabControl_Info.SelectedTabIndex = 5;
+                superTabControl_Info.SelectedTabIndex = 5;
                 return false;
             }
             if (checkBox_GaidDis.Checked && txtTotDis.Value <= 0.0)
             {
                 MessageBox.Show((LangArEn == 0) ? "لايمكن انشاء سند محاسبي بقيمة الخصم واجمالي الخصم يساوي صفر" : "You can not set up an accounting support Discount and the total Discount is equal to zero.", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                //superTabControl_Info.SelectedTabIndex = 5;
+                superTabControl_Info.SelectedTabIndex = 5;
                 return false;
             }
             if (checkBox_GaidBankComm.Checked && txtTotBankComm.Value <= 0.0)
             {
                 MessageBox.Show((LangArEn == 0) ? "لايمكن انشاء سند محاسبي بقيمة العمولة واجمالي العمولة يساوي صفر" : "You can not set up an accounting support Commition and the total Commition is equal to zero.", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                //superTabControl_Info.SelectedTabIndex = 5;
+                superTabControl_Info.SelectedTabIndex = 5;
                 return false;
             }
             if (txtDiscoundPoints.Value > 0.0 && !string.IsNullOrEmpty(txtCustNo.Text) && switchButton_PointActiv.Value)
@@ -8750,7 +8748,7 @@ public        int Dtype = -1;
             if (checkBox_CostGaidTax.Checked && (string.IsNullOrEmpty(AccDbt_Cost_Tax) || string.IsNullOrEmpty(AccCrdt_Cost_Tax) || string.IsNullOrEmpty(txtDebit5.Text) || string.IsNullOrEmpty(txtCredit5.Text)))
             {
                 MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة حسابات الدائن والمدين الخاص بقيمة الضريبة " : "You can not complete the operation ..verify the accounts of the private creditor and the debtor for Tax Value", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                //superTabControl_Info.SelectedTabIndex = 5;
+                superTabControl_Info.SelectedTabIndex = 5;
                 return false;
             }
             string AccCrdt_Cost_Dis = "";
@@ -8774,7 +8772,7 @@ public        int Dtype = -1;
             if (checkBox_GaidDis.Checked && (string.IsNullOrEmpty(AccDbt_Cost_Dis) || string.IsNullOrEmpty(AccCrdt_Cost_Dis) || string.IsNullOrEmpty(txtDebit6.Text) || string.IsNullOrEmpty(txtCredit6.Text)))
             {
                 MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة حسابات الدائن والمدين الخاص بقيمة الخصم " : "You can not complete the operation ..verify the accounts of the private creditor and the debtor for Discount Value", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                //superTabControl_Info.SelectedTabIndex = 5;
+                superTabControl_Info.SelectedTabIndex = 5;
                 return false;
             }
             string AccCrdt_Cost_Comm = "";
@@ -8798,7 +8796,7 @@ public        int Dtype = -1;
             if (checkBox_GaidBankComm.Checked && (string.IsNullOrEmpty(AccDbt_Cost_Comm) || string.IsNullOrEmpty(AccCrdt_Cost_Comm) || string.IsNullOrEmpty(txtDebit3.Text) || string.IsNullOrEmpty(txtCredit7.Text)))
             {
                 MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة حسابات الدائن والمدين الخاص بقيمة العمولات البنكية " : "You can not complete the operation ..verify the accounts of the private creditor and the debtor for Commition Value", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                //superTabControl_Info.SelectedTabIndex = 5;
+                superTabControl_Info.SelectedTabIndex = 5;
                 return false;
             }
             if ((_InvSetting.InvSetting.Substring(1, 1) == "1" || VarGeneral.SSSTyp == 0) && VarGeneral.SSSLev != "M")
@@ -8821,38 +8819,38 @@ public        int Dtype = -1;
                 if (AccCrdt == "" && txtPaymentLoc.Value > 0.0)
                 {
                     MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة الطرف الدائن للقيد النقدي .. راجع تهيئة النظام " : "You can not complete the operation .. Make sure the creditor under the party .. see the system configuration", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    //superTabControl_Info.SelectedTabIndex = 1;
+                    superTabControl_Info.SelectedTabIndex = 1;
                     return false;
                 }
                 if (AccDbt == "" && txtPaymentLoc.Value > 0.0)
                 {
                     MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة الطرف المدين للقيد النقدي .. راجع تهيئة النظام " : "You can not complete the operation .. Make sure the debtor under the party .. see the system configuration", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    //superTabControl_Info.SelectedTabIndex = 1;
+                    superTabControl_Info.SelectedTabIndex = 1;
                     return false;
                 }
                 if (AccCrdt_Credit == "" && doubleInput_CreditLoc.Value > 0.0)
                 {
                     MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة الطرف الدائن للقيد الآجل .. راجع تهيئة النظام " : "You can not complete the operation .. Make sure the creditor under the party .. see the system configuration", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    //superTabControl_Info.SelectedTabIndex = 1;
+                    superTabControl_Info.SelectedTabIndex = 1;
                     return false;
                 }
                 if (AccDbt_Credit == "" && doubleInput_CreditLoc.Value > 0.0)
                 {
                     MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة الطرف المدين للقيد الآجل .. راجع تهيئة النظام " : "You can not complete the operation .. Make sure the debtor under the party .. see the system configuration", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    //superTabControl_Info.SelectedTabIndex = 1;
-                    //superTabControl_Info.SelectedTabIndex = 1;
+                    superTabControl_Info.SelectedTabIndex = 1;
+                    superTabControl_Info.SelectedTabIndex = 1;
                     return false;
                 }
                 if (AccCrdt_NewtWork == "" && doubleInput_NetWorkLoc.Value > 0.0)
                 {
                     MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة الطرف الدائن للقيد (شيك - شبكة).. راجع تهيئة النظام " : "You can not complete the operation .. Make sure the creditor under the party .. see the system configuration", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    //superTabControl_Info.SelectedTabIndex = 1;
+                    superTabControl_Info.SelectedTabIndex = 1;
                     return false;
                 }
                 if (AccDbt_NetWork == "" && doubleInput_NetWorkLoc.Value > 0.0)
                 {
                     MessageBox.Show((LangArEn == 0) ? "لا يمكن إتمام العملية .. تأكد من صحة الطرف المدين للقيد (شيك - شبكة).. راجع تهيئة النظام " : "You can not complete the operation .. Make sure the debtor under the party .. see the system configuration", VarGeneral.ProdectNam, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    //superTabControl_Info.SelectedTabIndex = 1;
+                    superTabControl_Info.SelectedTabIndex = 1;
                     return false;
                 }
             }
@@ -9459,11 +9457,11 @@ public        int Dtype = -1;
        
                 if (checkBox_Credit.Checked)
                 {
-                    //superTabControl_Info.SelectedTabIndex = 3;
+                    superTabControl_Info.SelectedTabIndex = 3;
                 }
                 else
                 {
-                    //superTabControl_Info.SelectedTabIndex = 2;
+                    superTabControl_Info.SelectedTabIndex = 2;
                 }
                 if (checkBox_CostGaidTax.Checked && !string.IsNullOrEmpty(txtDebit5.Tag.ToString()) && !string.IsNullOrEmpty(txtCredit5.Tag.ToString()) && txtTotTax.Value > 0.0)
                 {
@@ -17834,11 +17832,6 @@ public        int Dtype = -1;
         }
 
         private void txtDebit5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FlxInv_Click_2(object sender, EventArgs e)
         {
 
         }

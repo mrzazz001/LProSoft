@@ -13990,6 +13990,8 @@ rpt.ReportDefinition.ReportObjects["Text39"].ObjectFormat.EnableSuppress = true;
                             continue;
                         } catch (Exception ex)
                         {
+                            VarGeneral.DebLog.writeLog("crystalReportViewe_RepShow:", ex, enable: true);
+
                             MessageBox.Show("الرجاء الاتصال بالدعم الفني وارفاق صورة للرساله"+ex.Message);
                         }
                     }

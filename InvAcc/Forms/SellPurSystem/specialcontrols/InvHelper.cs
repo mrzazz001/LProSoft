@@ -12,9 +12,40 @@ using System.Threading.Tasks;
 using System.Linq;
 using System.Collections.Generic;
 using ProShared;
+using DevExpress.XtraLayout;
 
 namespace InvAcc.Forms.SellPurSystem.specialcontrols
 {
+    public sealed class LayoutControlItemss : LayoutControlItem
+    {
+        bool v = false;
+        public bool Visible
+        {
+
+
+            set
+            {
+                if (value)
+                {
+                    Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+                }
+                else
+                {
+                    Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+
+
+                }
+
+            }
+            get
+            {
+                if (Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always) return true;
+                else return false;
+
+            }
+
+        }
+    }
     class InvHelper
     {
         private static T_GDHEAD GetData(int CmbLegate,int costcenter, int currancy ,string txtInvNo,string txtHDate,string txtGDate,string textBox_ID,string txtChequeNo,double txtTotalCredit,string txtReceivedForm)

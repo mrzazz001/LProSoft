@@ -59,7 +59,7 @@ namespace InvAcc.Forms
         {
             if (e.OldRange.r1 != e.NewRange.r1)
             {
-                superTabControl_Info.SelectedTabIndex = 0;
+              //  superTabControl_Info.SelectedTabIndex = 0;
                 FlxInv.Focus();
                 try
                 {

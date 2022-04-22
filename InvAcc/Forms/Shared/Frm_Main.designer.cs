@@ -453,6 +453,7 @@ namespace InvAcc.Forms
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem22 = new DevComponents.DotNetBar.ButtonItem();
             this.labelItem_TotSales = new DevComponents.DotNetBar.LabelItem();
+            this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
             this.applicationButton1 = new DevComponents.DotNetBar.ApplicationButton();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
@@ -472,7 +473,6 @@ namespace InvAcc.Forms
             this.itemContainer4 = new DevComponents.DotNetBar.ItemContainer();
             this.buttonItem20 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem21 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
             this.buttonItem9 = new DevComponents.DotNetBar.ButtonItem();
             this.bar2 = new DevComponents.DotNetBar.Bar();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -4363,6 +4363,14 @@ namespace InvAcc.Forms
             this.labelItem_TotSales.TextAlignment = System.Drawing.StringAlignment.Center;
             this.labelItem_TotSales.Width = 100;
             // 
+            // ribbonTabItem1
+            // 
+            this.ribbonTabItem1.Checked = true;
+            this.ribbonTabItem1.ColorTable = DevComponents.DotNetBar.eRibbonTabColor.Magenta;
+            this.ribbonTabItem1.Name = "ribbonTabItem1";
+            this.ribbonTabItem1.Panel = this.ribbonPanel1;
+            this.ribbonTabItem1.Symbol = "";
+            // 
             // applicationButton1
             // 
             this.applicationButton1.AutoExpandOnClick = true;
@@ -4594,14 +4602,6 @@ namespace InvAcc.Forms
             this.buttonItem21.SubItemsExpandWidth = 24;
             this.buttonItem21.Text = "E&xit";
             // 
-            // ribbonTabItem1
-            // 
-            this.ribbonTabItem1.Checked = true;
-            this.ribbonTabItem1.ColorTable = DevComponents.DotNetBar.eRibbonTabColor.Magenta;
-            this.ribbonTabItem1.Name = "ribbonTabItem1";
-            this.ribbonTabItem1.Panel = this.ribbonPanel1;
-            this.ribbonTabItem1.Symbol = "";
-            // 
             // buttonItem9
             // 
             this.buttonItem9.Name = "buttonItem9";
@@ -4784,10 +4784,10 @@ namespace InvAcc.Forms
             this.labelItem_Level,
             this.labelItem_Reg});
             this.metroToolbar_main.ItemSpacing = 12;
-            this.metroToolbar_main.Location = new System.Drawing.Point(0, 694);
+            this.metroToolbar_main.Location = new System.Drawing.Point(0, 726);
             this.metroToolbar_main.Name = "metroToolbar_main";
             this.metroToolbar_main.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.metroToolbar_main.Size = new System.Drawing.Size(1028, 55);
+            this.metroToolbar_main.Size = new System.Drawing.Size(1028, 23);
             this.metroToolbar_main.TabIndex = 1086;
             this.metroToolbar_main.Tag = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
@@ -4906,7 +4906,7 @@ namespace InvAcc.Forms
             this.panelWarning.Controls.Add(this.label_SupportTimer);
             this.panelWarning.Controls.Add(this.warningBox);
             this.panelWarning.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelWarning.Location = new System.Drawing.Point(0, 665);
+            this.panelWarning.Location = new System.Drawing.Point(0, 697);
             this.panelWarning.Name = "panelWarning";
             this.panelWarning.Size = new System.Drawing.Size(1028, 29);
             this.panelWarning.TabIndex = 1088;
@@ -4996,7 +4996,7 @@ namespace InvAcc.Forms
             this.tabControl1.Location = new System.Drawing.Point(0, 181);
             this.tabControl1.MenuRenderer = null;
             this.tabControl1.Name = "tabControl1";
-            this.tabControl1.Size = new System.Drawing.Size(1028, 484);
+            this.tabControl1.Size = new System.Drawing.Size(1028, 516);
             this.tabControl1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
             this.tabControl1.TabCloseButtonImage = null;
             this.tabControl1.TabCloseButtonImageDisabled = null;

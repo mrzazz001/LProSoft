@@ -15851,6 +15851,7 @@ ALTER DATABASE[<<new database name>>] MODIFY FILE(NAME = <<OldDBName>> _Log, NEW
             if (v == 1)
             {
                 labelItem_Reg.Text = "بروسوفت لايت";
+                labelItem_Level.Text = "بروسوفت لايت";
                 RIbbon_Resturnat.Visible = false;
                 buttonItem_OpenAcc.Visible = false;
                 buttonItem_SndGaid.Visible = false;

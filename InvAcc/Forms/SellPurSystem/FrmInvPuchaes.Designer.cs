@@ -12,7 +12,7 @@ partial class FrmInvPuchaes
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-    
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,7 +22,7 @@ partial class FrmInvPuchaes
             base.Dispose(disposing);
         }
 
-private void InitializeComponent()
+        private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
@@ -32,23 +32,27 @@ private void InitializeComponent()
             DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates1 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
             DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates2 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
             DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable2 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates3 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
+            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabColorTable superTabColorTable1 = new DevComponents.DotNetBar.Rendering.SuperTabColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable12 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable5 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable8 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable6 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
@@ -56,13 +60,9 @@ private void InitializeComponent()
             DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable7 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable10 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates3 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
-            DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable3 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable11 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable superTabPanelColorTable8 = new DevComponents.DotNetBar.Rendering.SuperTabPanelColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable superTabPanelItemColorTable8 = new DevComponents.DotNetBar.Rendering.SuperTabPanelItemColorTable();
-            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable12 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
+            DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable superTabLinearGradientColorTable11 = new DevComponents.DotNetBar.Rendering.SuperTabLinearGradientColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabItemColorTable superTabItemColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabItemColorTable();
             DevComponents.DotNetBar.Rendering.SuperTabColorStates superTabColorStates4 = new DevComponents.DotNetBar.Rendering.SuperTabColorStates();
             DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable superTabItemStateColorTable4 = new DevComponents.DotNetBar.Rendering.SuperTabItemStateColorTable();
@@ -125,6 +125,37 @@ private void InitializeComponent()
             this.txtVCost = new System.Windows.Forms.TextBox();
             this.xGmesures1 = new InvAcc.Forms.SellPurSystem.specialcontrols.XGmesures();
             this.superTabItem_items = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.label_Due = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.txtDueDate = new System.Windows.Forms.MaskedTextBox();
+            this.txtRemark = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.superTabItem_Note = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.superTabControl_CostSts = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel6 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.checkBox_CostLocal = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtTotCost = new DevComponents.Editors.DoubleInput();
+            this.txtTotCostLoc = new DevComponents.Editors.DoubleInput();
+            this.superTabItem_LocalCosts = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel7 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.button_AutoCost = new DevComponents.DotNetBar.ButtonX();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button_CustC4 = new DevComponents.DotNetBar.ButtonX();
+            this.txtCredit4 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.button_CustD4 = new DevComponents.DotNetBar.ButtonX();
+            this.txtDebit4 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.checkBox_CostGaid = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtTotCostExtrnal = new DevComponents.Editors.DoubleInput();
+            this.txtTotCostLocExtrnal = new DevComponents.Editors.DoubleInput();
+            this.superTabItem_ExtrnalCosts = new DevComponents.DotNetBar.SuperTabItem();
+            this.switch_Cost = new DevComponents.DotNetBar.SwitchButtonItem();
+            this.superTabItem_Costs = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel8 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabControl3 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
@@ -193,37 +224,6 @@ private void InitializeComponent()
             this.labelItem_TaxByNetPer = new DevComponents.DotNetBar.LabelItem();
             this.ChkPriceIncludeTax = new DevComponents.DotNetBar.SwitchButtonItem();
             this.superTabItem_Gaids = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.superTabControl_CostSts = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel6 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.checkBox_CostLocal = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtTotCost = new DevComponents.Editors.DoubleInput();
-            this.txtTotCostLoc = new DevComponents.Editors.DoubleInput();
-            this.superTabItem_LocalCosts = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel7 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.button_AutoCost = new DevComponents.DotNetBar.ButtonX();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button_CustC4 = new DevComponents.DotNetBar.ButtonX();
-            this.txtCredit4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.button_CustD4 = new DevComponents.DotNetBar.ButtonX();
-            this.txtDebit4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.checkBox_CostGaid = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txtTotCostExtrnal = new DevComponents.Editors.DoubleInput();
-            this.txtTotCostLocExtrnal = new DevComponents.Editors.DoubleInput();
-            this.superTabItem_ExtrnalCosts = new DevComponents.DotNetBar.SuperTabItem();
-            this.switch_Cost = new DevComponents.DotNetBar.SwitchButtonItem();
-            this.superTabItem_Costs = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.label_Due = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.txtDueDate = new System.Windows.Forms.MaskedTextBox();
-            this.txtRemark = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.superTabItem_Note = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.label_LockeName = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -359,6 +359,16 @@ private void InitializeComponent()
             this.superTabControl_Info.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FlxStkQty)).BeginInit();
+            this.superTabControlPanel4.SuspendLayout();
+            this.superTabControlPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.superTabControl_CostSts)).BeginInit();
+            this.superTabControl_CostSts.SuspendLayout();
+            this.superTabControlPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotCostLoc)).BeginInit();
+            this.superTabControlPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotCostExtrnal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotCostLocExtrnal)).BeginInit();
             this.superTabControlPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl3)).BeginInit();
             this.superTabControl3.SuspendLayout();
@@ -373,16 +383,6 @@ private void InitializeComponent()
             this.superTabControlPanel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotBankComm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotBankCommLoc)).BeginInit();
-            this.superTabControlPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.superTabControl_CostSts)).BeginInit();
-            this.superTabControl_CostSts.SuspendLayout();
-            this.superTabControlPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotCost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotCostLoc)).BeginInit();
-            this.superTabControlPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotCostExtrnal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotCostLocExtrnal)).BeginInit();
-            this.superTabControlPanel4.SuspendLayout();
             this.superTabControlPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -584,7 +584,7 @@ private void InitializeComponent()
             this.billUcontrolType31.CurrentBill = null;
             this.billUcontrolType31.currentGH = null;
             this.billUcontrolType31.isCashe = true;
-            this.billUcontrolType31.Location = new System.Drawing.Point(4, 229);
+            this.billUcontrolType31.Location = new System.Drawing.Point(4, 61);
             this.billUcontrolType31.Name = "billUcontrolType31";
             this.billUcontrolType31.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.billUcontrolType31.Size = new System.Drawing.Size(1271, 206);
@@ -796,9 +796,9 @@ private void InitializeComponent()
             this.superTabControl_Info.ControlBox.CloseBox,
             this.superTabControl_Info.ControlBox.MenuBox});
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel3);
-            this.superTabControl_Info.Controls.Add(this.superTabControlPanel8);
-            this.superTabControl_Info.Controls.Add(this.superTabControlPanel5);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel4);
+            this.superTabControl_Info.Controls.Add(this.superTabControlPanel5);
+            this.superTabControl_Info.Controls.Add(this.superTabControlPanel8);
             this.superTabControl_Info.Controls.Add(this.superTabControlPanel2);
             this.superTabControl_Info.ForeColor = System.Drawing.Color.Black;
             this.superTabControl_Info.Location = new System.Drawing.Point(277, 300);
@@ -1027,6 +1027,540 @@ private void InitializeComponent()
             this.superTabItem_items.TabColor = superTabItemColorTable1;
             this.superTabItem_items.Text = "م.الصنف";
             // 
+            // superTabControlPanel4
+            // 
+            this.superTabControlPanel4.Controls.Add(this.label_Due);
+            this.superTabControlPanel4.Controls.Add(this.label42);
+            this.superTabControlPanel4.Controls.Add(this.txtDueDate);
+            this.superTabControlPanel4.Controls.Add(this.txtRemark);
+            this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel4.Name = "superTabControlPanel4";
+            superTabLinearGradientColorTable3.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.Gray,
+        System.Drawing.Color.White};
+            superTabPanelItemColorTable2.Background = superTabLinearGradientColorTable3;
+            superTabPanelColorTable2.Default = superTabPanelItemColorTable2;
+            this.superTabControlPanel4.PanelColor = superTabPanelColorTable2;
+            this.superTabControlPanel4.Size = new System.Drawing.Size(988, 116);
+            this.superTabControlPanel4.TabIndex = 2;
+            this.superTabControlPanel4.TabItem = this.superTabItem_Note;
+            this.superTabControlPanel4.Visible = false;
+            // 
+            // label_Due
+            // 
+            this.label_Due.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_Due.BackColor = System.Drawing.Color.Transparent;
+            this.label_Due.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_Due.Font = new System.Drawing.Font("Tahoma", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.label_Due.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label_Due.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label_Due.Location = new System.Drawing.Point(638, 55);
+            this.label_Due.Name = "label_Due";
+            this.label_Due.Size = new System.Drawing.Size(347, 22);
+            this.label_Due.TabIndex = 485;
+            this.label_Due.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label42
+            // 
+            this.label42.BackColor = System.Drawing.Color.Transparent;
+            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label42.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label42.ForeColor = System.Drawing.Color.Black;
+            this.label42.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label42.Location = new System.Drawing.Point(99, 57);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(88, 22);
+            this.label42.TabIndex = 484;
+            this.label42.Text = "تاريخ الإستحقاق ";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtDueDate
+            // 
+            this.txtDueDate.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtDueDate.Enabled = false;
+            this.txtDueDate.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.txtDueDate.Location = new System.Drawing.Point(5, 57);
+            this.txtDueDate.Mask = "0000/00/00";
+            this.txtDueDate.Name = "txtDueDate";
+            this.txtDueDate.Size = new System.Drawing.Size(90, 21);
+            this.txtDueDate.TabIndex = 483;
+            this.txtDueDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDueDate.Click += new System.EventHandler(this.txtDueDate_Click);
+            this.txtDueDate.Leave += new System.EventHandler(this.txtDueDate_Leave);
+            // 
+            // txtRemark
+            // 
+            this.txtRemark.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtRemark.Border.Class = "TextBoxBorder";
+            this.txtRemark.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtRemark.ButtonCustom.Image = ((System.Drawing.Image)(resources.GetObject("txtRemark.ButtonCustom.Image")));
+            this.txtRemark.ButtonCustom.Visible = true;
+            this.txtRemark.ButtonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("txtRemark.ButtonCustom2.Image")));
+            this.txtRemark.ButtonCustom2.Visible = true;
+            this.txtRemark.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtRemark.ForeColor = System.Drawing.Color.Black;
+            this.txtRemark.Location = new System.Drawing.Point(0, 0);
+            this.txtRemark.Multiline = true;
+            this.txtRemark.Name = "txtRemark";
+            this.netResize1.SetResizeTextBoxMultiline(this.txtRemark, false);
+            this.txtRemark.Size = new System.Drawing.Size(988, 54);
+            this.txtRemark.TabIndex = 480;
+            this.txtRemark.WatermarkText = "ملاحظات الفاتورة";
+            this.txtRemark.ButtonCustom2Click += new System.EventHandler(this.txtRemark_ButtonCustom2Click);
+            // 
+            // superTabItem_Note
+            // 
+            this.superTabItem_Note.AttachedControl = this.superTabControlPanel4;
+            this.superTabItem_Note.GlobalItem = false;
+            this.superTabItem_Note.Name = "superTabItem_Note";
+            superTabLinearGradientColorTable4.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.Empty};
+            superTabItemStateColorTable2.Background = superTabLinearGradientColorTable4;
+            superTabColorStates2.Normal = superTabItemStateColorTable2;
+            superTabItemColorTable2.Default = superTabColorStates2;
+            this.superTabItem_Note.TabColor = superTabItemColorTable2;
+            this.superTabItem_Note.Text = "ملاحظات";
+            // 
+            // superTabControlPanel5
+            // 
+            this.superTabControlPanel5.Controls.Add(this.superTabControl_CostSts);
+            this.superTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel5.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel5.Name = "superTabControlPanel5";
+            this.superTabControlPanel5.Size = new System.Drawing.Size(988, 116);
+            this.superTabControlPanel5.TabIndex = 0;
+            this.superTabControlPanel5.TabItem = this.superTabItem_Costs;
+            this.superTabControlPanel5.Visible = false;
+            // 
+            // superTabControl_CostSts
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.superTabControl_CostSts.ControlBox.CloseBox.Name = "";
+            // 
+            // 
+            // 
+            this.superTabControl_CostSts.ControlBox.MenuBox.Name = "";
+            this.superTabControl_CostSts.ControlBox.Name = "";
+            this.superTabControl_CostSts.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.superTabControl_CostSts.ControlBox.MenuBox,
+            this.superTabControl_CostSts.ControlBox.CloseBox});
+            this.superTabControl_CostSts.ControlBox.Visible = false;
+            this.superTabControl_CostSts.Controls.Add(this.superTabControlPanel6);
+            this.superTabControl_CostSts.Controls.Add(this.superTabControlPanel7);
+            this.superTabControl_CostSts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControl_CostSts.Location = new System.Drawing.Point(0, 0);
+            this.superTabControl_CostSts.Name = "superTabControl_CostSts";
+            this.superTabControl_CostSts.ReorderTabsEnabled = true;
+            this.superTabControl_CostSts.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.superTabControl_CostSts.SelectedTabIndex = 0;
+            this.superTabControl_CostSts.Size = new System.Drawing.Size(988, 116);
+            this.superTabControl_CostSts.TabFont = new System.Drawing.Font("Tahoma", 8F);
+            this.superTabControl_CostSts.TabIndex = 1024;
+            this.superTabControl_CostSts.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.superTabItem_LocalCosts,
+            this.superTabItem_ExtrnalCosts,
+            this.switch_Cost});
+            this.superTabControl_CostSts.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
+            this.superTabControl_CostSts.Text = "superTabControl3";
+            // 
+            // superTabControlPanel6
+            // 
+            this.superTabControlPanel6.Controls.Add(this.checkBox_CostLocal);
+            this.superTabControlPanel6.Controls.Add(this.label29);
+            this.superTabControlPanel6.Controls.Add(this.label20);
+            this.superTabControlPanel6.Controls.Add(this.txtTotCost);
+            this.superTabControlPanel6.Controls.Add(this.txtTotCostLoc);
+            this.superTabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel6.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel6.Name = "superTabControlPanel6";
+            superTabLinearGradientColorTable5.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.Gray,
+        System.Drawing.Color.White};
+            superTabPanelItemColorTable3.Background = superTabLinearGradientColorTable5;
+            superTabPanelColorTable3.Default = superTabPanelItemColorTable3;
+            this.superTabControlPanel6.PanelColor = superTabPanelColorTable3;
+            this.superTabControlPanel6.Size = new System.Drawing.Size(988, 91);
+            this.superTabControlPanel6.TabIndex = 1;
+            this.superTabControlPanel6.TabItem = this.superTabItem_LocalCosts;
+            // 
+            // checkBox_CostLocal
+            // 
+            this.checkBox_CostLocal.AutoSize = true;
+            this.checkBox_CostLocal.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.checkBox_CostLocal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBox_CostLocal.BackgroundStyle.TextShadowColor = System.Drawing.SystemColors.ControlLight;
+            this.checkBox_CostLocal.BackgroundStyle.TextShadowOffset = new System.Drawing.Point(3, 3);
+            this.checkBox_CostLocal.CheckSignSize = new System.Drawing.Size(14, 14);
+            this.checkBox_CostLocal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.checkBox_CostLocal.Location = new System.Drawing.Point(16, 32);
+            this.checkBox_CostLocal.Name = "checkBox_CostLocal";
+            this.checkBox_CostLocal.Size = new System.Drawing.Size(160, 17);
+            this.checkBox_CostLocal.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBox_CostLocal.TabIndex = 1113;
+            this.checkBox_CostLocal.Text = "يضاف الى صافي الفاتورة";
+            this.checkBox_CostLocal.CheckedChanged += new System.EventHandler(this.checkBox_CostLocal_CheckedChanged);
+            // 
+            // label29
+            // 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label29.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label29.ForeColor = System.Drawing.Color.Navy;
+            this.label29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label29.Location = new System.Drawing.Point(843, 7);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(136, 21);
+            this.label29.TabIndex = 1112;
+            this.label29.Text = "إجمالي التكلفة المحلية";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label20.Location = new System.Drawing.Point(704, 7);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(136, 21);
+            this.label20.TabIndex = 1111;
+            this.label20.Text = "بالريــــال";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtTotCost
+            // 
+            this.txtTotCost.AllowEmptyState = false;
+            this.txtTotCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.txtTotCost.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTotCost.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTotCost.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTotCost.DisplayFormat = "0.00";
+            this.txtTotCost.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtTotCost.Increment = 0D;
+            this.txtTotCost.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtTotCost.Location = new System.Drawing.Point(843, 30);
+            this.txtTotCost.MinValue = 0D;
+            this.txtTotCost.Name = "txtTotCost";
+            this.txtTotCost.Size = new System.Drawing.Size(136, 21);
+            this.txtTotCost.TabIndex = 1109;
+            this.txtTotCost.Leave += new System.EventHandler(this.txtTotCost_Leave);
+            // 
+            // txtTotCostLoc
+            // 
+            this.txtTotCostLoc.AllowEmptyState = false;
+            this.txtTotCostLoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.txtTotCostLoc.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
+            this.txtTotCostLoc.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTotCostLoc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTotCostLoc.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTotCostLoc.DisplayFormat = "0.00";
+            this.txtTotCostLoc.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtTotCostLoc.Increment = 0D;
+            this.txtTotCostLoc.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtTotCostLoc.IsInputReadOnly = true;
+            this.txtTotCostLoc.Location = new System.Drawing.Point(704, 30);
+            this.txtTotCostLoc.MinValue = 0D;
+            this.txtTotCostLoc.Name = "txtTotCostLoc";
+            this.txtTotCostLoc.Size = new System.Drawing.Size(136, 21);
+            this.txtTotCostLoc.TabIndex = 1110;
+            // 
+            // superTabItem_LocalCosts
+            // 
+            this.superTabItem_LocalCosts.AttachedControl = this.superTabControlPanel6;
+            this.superTabItem_LocalCosts.GlobalItem = false;
+            this.superTabItem_LocalCosts.Name = "superTabItem_LocalCosts";
+            this.superTabItem_LocalCosts.Text = "تكاليف محلية";
+            // 
+            // superTabControlPanel7
+            // 
+            this.superTabControlPanel7.Controls.Add(this.button_AutoCost);
+            this.superTabControlPanel7.Controls.Add(this.label31);
+            this.superTabControlPanel7.Controls.Add(this.label21);
+            this.superTabControlPanel7.Controls.Add(this.label16);
+            this.superTabControlPanel7.Controls.Add(this.button_CustC4);
+            this.superTabControlPanel7.Controls.Add(this.txtCredit4);
+            this.superTabControlPanel7.Controls.Add(this.button_CustD4);
+            this.superTabControlPanel7.Controls.Add(this.txtDebit4);
+            this.superTabControlPanel7.Controls.Add(this.checkBox_CostGaid);
+            this.superTabControlPanel7.Controls.Add(this.label28);
+            this.superTabControlPanel7.Controls.Add(this.txtTotCostExtrnal);
+            this.superTabControlPanel7.Controls.Add(this.txtTotCostLocExtrnal);
+            this.superTabControlPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel7.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel7.Name = "superTabControlPanel7";
+            superTabLinearGradientColorTable6.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.Gray,
+        System.Drawing.Color.White};
+            superTabPanelItemColorTable4.Background = superTabLinearGradientColorTable6;
+            superTabPanelColorTable4.Default = superTabPanelItemColorTable4;
+            this.superTabControlPanel7.PanelColor = superTabPanelColorTable4;
+            this.superTabControlPanel7.Size = new System.Drawing.Size(988, 118);
+            this.superTabControlPanel7.TabIndex = 0;
+            this.superTabControlPanel7.TabItem = this.superTabItem_ExtrnalCosts;
+            this.superTabControlPanel7.Visible = false;
+            // 
+            // button_AutoCost
+            // 
+            this.button_AutoCost.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_AutoCost.Checked = true;
+            this.button_AutoCost.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_AutoCost.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.button_AutoCost.Location = new System.Drawing.Point(7, 7);
+            this.button_AutoCost.Name = "button_AutoCost";
+            this.button_AutoCost.Size = new System.Drawing.Size(103, 21);
+            this.button_AutoCost.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_AutoCost.SymbolSize = 12F;
+            this.button_AutoCost.TabIndex = 1128;
+            this.button_AutoCost.Text = "تقسيم تلقائي";
+            this.button_AutoCost.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_AutoCost.Tooltip = "توزيع التكلفة بالتساوي على جميع الأسطر";
+            this.button_AutoCost.Visible = false;
+            this.button_AutoCost.Click += new System.EventHandler(this.button_AutoCost_Click);
+            // 
+            // label31
+            // 
+            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label31.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label31.ForeColor = System.Drawing.Color.Navy;
+            this.label31.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label31.Location = new System.Drawing.Point(883, 7);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(99, 21);
+            this.label31.TabIndex = 1127;
+            this.label31.Text = "التكلفة الخارجية";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label21.Location = new System.Drawing.Point(725, 34);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(49, 13);
+            this.label21.TabIndex = 1126;
+            this.label21.Text = "الدائـــن :";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label16.Location = new System.Drawing.Point(725, 11);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 13);
+            this.label16.TabIndex = 1125;
+            this.label16.Text = "المـــدين :";
+            // 
+            // button_CustC4
+            // 
+            this.button_CustC4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_CustC4.Checked = true;
+            this.button_CustC4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_CustC4.Enabled = false;
+            this.button_CustC4.Location = new System.Drawing.Point(115, 33);
+            this.button_CustC4.Name = "button_CustC4";
+            this.button_CustC4.Size = new System.Drawing.Size(15, 15);
+            this.button_CustC4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_CustC4.Symbol = "";
+            this.button_CustC4.SymbolSize = 7F;
+            this.button_CustC4.TabIndex = 1124;
+            this.button_CustC4.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_CustC4.Tooltip = "حساب العميل";
+            // 
+            // txtCredit4
+            // 
+            this.txtCredit4.BackColor = System.Drawing.SystemColors.Control;
+            // 
+            // 
+            // 
+            this.txtCredit4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtCredit4.ButtonCustom.Visible = true;
+            this.txtCredit4.Enabled = false;
+            this.txtCredit4.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.txtCredit4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtCredit4.Location = new System.Drawing.Point(133, 33);
+            this.txtCredit4.Name = "txtCredit4";
+            this.txtCredit4.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtCredit4, false);
+            this.txtCredit4.Size = new System.Drawing.Size(146, 14);
+            this.txtCredit4.TabIndex = 1123;
+            this.txtCredit4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button_CustD4
+            // 
+            this.button_CustD4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button_CustD4.Checked = true;
+            this.button_CustD4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button_CustD4.Enabled = false;
+            this.button_CustD4.Location = new System.Drawing.Point(115, 10);
+            this.button_CustD4.Name = "button_CustD4";
+            this.button_CustD4.Size = new System.Drawing.Size(15, 15);
+            this.button_CustD4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button_CustD4.Symbol = "";
+            this.button_CustD4.SymbolSize = 7F;
+            this.button_CustD4.TabIndex = 1122;
+            this.button_CustD4.TextColor = System.Drawing.Color.SteelBlue;
+            this.button_CustD4.Tooltip = "حساب العميل";
+            // 
+            // txtDebit4
+            // 
+            this.txtDebit4.BackColor = System.Drawing.SystemColors.Control;
+            // 
+            // 
+            // 
+            this.txtDebit4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtDebit4.ButtonCustom.Visible = true;
+            this.txtDebit4.Enabled = false;
+            this.txtDebit4.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.txtDebit4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtDebit4.Location = new System.Drawing.Point(133, 10);
+            this.txtDebit4.Name = "txtDebit4";
+            this.txtDebit4.ReadOnly = true;
+            this.netResize1.SetResizeTextBoxMultiline(this.txtDebit4, false);
+            this.txtDebit4.Size = new System.Drawing.Size(146, 14);
+            this.txtDebit4.TabIndex = 1121;
+            this.txtDebit4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // checkBox_CostGaid
+            // 
+            this.checkBox_CostGaid.AutoSize = true;
+            this.checkBox_CostGaid.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.checkBox_CostGaid.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBox_CostGaid.BackgroundStyle.TextShadowColor = System.Drawing.SystemColors.ControlLight;
+            this.checkBox_CostGaid.BackgroundStyle.TextShadowOffset = new System.Drawing.Point(3, 3);
+            this.checkBox_CostGaid.CheckSignSize = new System.Drawing.Size(14, 14);
+            this.checkBox_CostGaid.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.checkBox_CostGaid.Location = new System.Drawing.Point(7, 32);
+            this.checkBox_CostGaid.Name = "checkBox_CostGaid";
+            this.checkBox_CostGaid.Size = new System.Drawing.Size(103, 17);
+            this.checkBox_CostGaid.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBox_CostGaid.TabIndex = 1109;
+            this.checkBox_CostGaid.Text = "سند محاسبي";
+            this.checkBox_CostGaid.CheckedChanged += new System.EventHandler(this.checkBox_CostGaid_CheckedChanged);
+            // 
+            // label28
+            // 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label28.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label28.ForeColor = System.Drawing.Color.White;
+            this.label28.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label28.Location = new System.Drawing.Point(782, 7);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(99, 21);
+            this.label28.TabIndex = 1108;
+            this.label28.Text = "بالريــــال";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtTotCostExtrnal
+            // 
+            this.txtTotCostExtrnal.AllowEmptyState = false;
+            this.txtTotCostExtrnal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.txtTotCostExtrnal.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTotCostExtrnal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTotCostExtrnal.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTotCostExtrnal.DisplayFormat = "0.00";
+            this.txtTotCostExtrnal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtTotCostExtrnal.Increment = 0D;
+            this.txtTotCostExtrnal.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtTotCostExtrnal.Location = new System.Drawing.Point(883, 30);
+            this.txtTotCostExtrnal.MinValue = 0D;
+            this.txtTotCostExtrnal.Name = "txtTotCostExtrnal";
+            this.txtTotCostExtrnal.Size = new System.Drawing.Size(99, 21);
+            this.txtTotCostExtrnal.TabIndex = 1106;
+            this.txtTotCostExtrnal.ValueChanged += new System.EventHandler(this.txtTotCostExtrnal_ValueChanged);
+            this.txtTotCostExtrnal.Leave += new System.EventHandler(this.txtTotCostExtrnal_Leave);
+            // 
+            // txtTotCostLocExtrnal
+            // 
+            this.txtTotCostLocExtrnal.AllowEmptyState = false;
+            this.txtTotCostLocExtrnal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.txtTotCostLocExtrnal.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
+            this.txtTotCostLocExtrnal.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTotCostLocExtrnal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTotCostLocExtrnal.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtTotCostLocExtrnal.DisplayFormat = "0.00";
+            this.txtTotCostLocExtrnal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtTotCostLocExtrnal.Increment = 0D;
+            this.txtTotCostLocExtrnal.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
+            this.txtTotCostLocExtrnal.IsInputReadOnly = true;
+            this.txtTotCostLocExtrnal.Location = new System.Drawing.Point(782, 30);
+            this.txtTotCostLocExtrnal.MinValue = 0D;
+            this.txtTotCostLocExtrnal.Name = "txtTotCostLocExtrnal";
+            this.txtTotCostLocExtrnal.Size = new System.Drawing.Size(99, 21);
+            this.txtTotCostLocExtrnal.TabIndex = 1107;
+            // 
+            // superTabItem_ExtrnalCosts
+            // 
+            this.superTabItem_ExtrnalCosts.AttachedControl = this.superTabControlPanel7;
+            this.superTabItem_ExtrnalCosts.GlobalItem = false;
+            this.superTabItem_ExtrnalCosts.Name = "superTabItem_ExtrnalCosts";
+            this.superTabItem_ExtrnalCosts.Text = "تكاليف خارجية";
+            // 
+            // switch_Cost
+            // 
+            this.switch_Cost.ButtonWidth = 230;
+            this.switch_Cost.Name = "switch_Cost";
+            this.switch_Cost.OffText = "إعتماد التكلفة الإضافية";
+            this.switch_Cost.OnText = "ايقاف إعتماد التكلفة الإضافية";
+            this.switch_Cost.SwitchWidth = 50;
+            this.switch_Cost.Value = true;
+            this.switch_Cost.ValueChanged += new System.EventHandler(this.switch_Cost_ValueChanged);
+            // 
+            // superTabItem_Costs
+            // 
+            this.superTabItem_Costs.AttachedControl = this.superTabControlPanel5;
+            this.superTabItem_Costs.GlobalItem = false;
+            this.superTabItem_Costs.Name = "superTabItem_Costs";
+            superTabLinearGradientColorTable7.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.White};
+            superTabItemStateColorTable3.Background = superTabLinearGradientColorTable7;
+            superTabColorStates3.Normal = superTabItemStateColorTable3;
+            superTabItemColorTable3.Default = superTabColorStates3;
+            this.superTabItem_Costs.TabColor = superTabItemColorTable3;
+            this.superTabItem_Costs.Text = "التكــاليف";
+            // 
             // superTabControlPanel8
             // 
             this.superTabControlPanel8.AutoSize = true;
@@ -1081,9 +1615,9 @@ private void InitializeComponent()
             this.textBoxItem_TaxByNetValue,
             this.labelItem_TaxByNetPer,
             this.ChkPriceIncludeTax});
-            superTabLinearGradientColorTable7.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable12.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gainsboro};
-            superTabColorTable1.Background = superTabLinearGradientColorTable7;
+            superTabColorTable1.Background = superTabLinearGradientColorTable12;
             this.superTabControl3.TabStripColor = superTabColorTable1;
             this.superTabControl3.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
             this.superTabControl3.Text = "superTabControl3";
@@ -1117,12 +1651,12 @@ private void InitializeComponent()
             this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel1.Location = new System.Drawing.Point(0, 25);
             this.superTabControlPanel1.Name = "superTabControlPanel1";
-            superTabLinearGradientColorTable3.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable8.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable2.Background = superTabLinearGradientColorTable3;
-            superTabPanelColorTable2.Default = superTabPanelItemColorTable2;
-            this.superTabControlPanel1.PanelColor = superTabPanelColorTable2;
+            superTabPanelItemColorTable5.Background = superTabLinearGradientColorTable8;
+            superTabPanelColorTable5.Default = superTabPanelItemColorTable5;
+            this.superTabControlPanel1.PanelColor = superTabPanelColorTable5;
             this.superTabControlPanel1.Size = new System.Drawing.Size(988, 93);
             this.superTabControlPanel1.TabIndex = 1;
             this.superTabControlPanel1.TabItem = this.superTabItem_Pay;
@@ -1535,12 +2069,12 @@ private void InitializeComponent()
             this.superTabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel9.Location = new System.Drawing.Point(0, 24);
             this.superTabControlPanel9.Name = "superTabControlPanel9";
-            superTabLinearGradientColorTable4.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable9.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable3.Background = superTabLinearGradientColorTable4;
-            superTabPanelColorTable3.Default = superTabPanelItemColorTable3;
-            this.superTabControlPanel9.PanelColor = superTabPanelColorTable3;
+            superTabPanelItemColorTable6.Background = superTabLinearGradientColorTable9;
+            superTabPanelColorTable6.Default = superTabPanelItemColorTable6;
+            this.superTabControlPanel9.PanelColor = superTabPanelColorTable6;
             this.superTabControlPanel9.Size = new System.Drawing.Size(988, 94);
             this.superTabControlPanel9.TabIndex = 1;
             this.superTabControlPanel9.TabItem = this.superTabItem_Tax;
@@ -1719,12 +2253,12 @@ private void InitializeComponent()
             this.superTabControlPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel10.Location = new System.Drawing.Point(0, 24);
             this.superTabControlPanel10.Name = "superTabControlPanel10";
-            superTabLinearGradientColorTable5.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable10.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable4.Background = superTabLinearGradientColorTable5;
-            superTabPanelColorTable4.Default = superTabPanelItemColorTable4;
-            this.superTabControlPanel10.PanelColor = superTabPanelColorTable4;
+            superTabPanelItemColorTable7.Background = superTabLinearGradientColorTable10;
+            superTabPanelColorTable7.Default = superTabPanelItemColorTable7;
+            this.superTabControlPanel10.PanelColor = superTabPanelColorTable7;
             this.superTabControlPanel10.Size = new System.Drawing.Size(988, 94);
             this.superTabControlPanel10.TabIndex = 0;
             this.superTabControlPanel10.TabItem = this.superTabItem_Dis;
@@ -1919,12 +2453,12 @@ private void InitializeComponent()
             this.superTabControlPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel11.Location = new System.Drawing.Point(0, 24);
             this.superTabControlPanel11.Name = "superTabControlPanel11";
-            superTabLinearGradientColorTable6.Colors = new System.Drawing.Color[] {
+            superTabLinearGradientColorTable11.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.Gray,
         System.Drawing.Color.White};
-            superTabPanelItemColorTable5.Background = superTabLinearGradientColorTable6;
-            superTabPanelColorTable5.Default = superTabPanelItemColorTable5;
-            this.superTabControlPanel11.PanelColor = superTabPanelColorTable5;
+            superTabPanelItemColorTable8.Background = superTabLinearGradientColorTable11;
+            superTabPanelColorTable8.Default = superTabPanelItemColorTable8;
+            this.superTabControlPanel11.PanelColor = superTabPanelColorTable8;
             this.superTabControlPanel11.Size = new System.Drawing.Size(988, 94);
             this.superTabControlPanel11.TabIndex = 3;
             this.superTabControlPanel11.TabItem = this.superTabItem_LocalComm;
@@ -2135,547 +2669,13 @@ private void InitializeComponent()
             this.superTabItem_Gaids.AttachedControl = this.superTabControlPanel8;
             this.superTabItem_Gaids.GlobalItem = false;
             this.superTabItem_Gaids.Name = "superTabItem_Gaids";
-            superTabLinearGradientColorTable8.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.White};
-            superTabItemStateColorTable2.Background = superTabLinearGradientColorTable8;
-            superTabColorStates2.Normal = superTabItemStateColorTable2;
-            superTabItemColorTable2.Default = superTabColorStates2;
-            this.superTabItem_Gaids.TabColor = superTabItemColorTable2;
-            this.superTabItem_Gaids.Text = "القيود";
-            // 
-            // superTabControlPanel5
-            // 
-            this.superTabControlPanel5.Controls.Add(this.superTabControl_CostSts);
-            this.superTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel5.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel5.Name = "superTabControlPanel5";
-            this.superTabControlPanel5.Size = new System.Drawing.Size(988, 118);
-            this.superTabControlPanel5.TabIndex = 0;
-            this.superTabControlPanel5.TabItem = this.superTabItem_Costs;
-            this.superTabControlPanel5.Visible = false;
-            // 
-            // superTabControl_CostSts
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.superTabControl_CostSts.ControlBox.CloseBox.Name = "";
-            // 
-            // 
-            // 
-            this.superTabControl_CostSts.ControlBox.MenuBox.Name = "";
-            this.superTabControl_CostSts.ControlBox.Name = "";
-            this.superTabControl_CostSts.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.superTabControl_CostSts.ControlBox.MenuBox,
-            this.superTabControl_CostSts.ControlBox.CloseBox});
-            this.superTabControl_CostSts.ControlBox.Visible = false;
-            this.superTabControl_CostSts.Controls.Add(this.superTabControlPanel6);
-            this.superTabControl_CostSts.Controls.Add(this.superTabControlPanel7);
-            this.superTabControl_CostSts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControl_CostSts.Location = new System.Drawing.Point(0, 0);
-            this.superTabControl_CostSts.Name = "superTabControl_CostSts";
-            this.superTabControl_CostSts.ReorderTabsEnabled = true;
-            this.superTabControl_CostSts.SelectedTabFont = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.superTabControl_CostSts.SelectedTabIndex = 0;
-            this.superTabControl_CostSts.Size = new System.Drawing.Size(988, 118);
-            this.superTabControl_CostSts.TabFont = new System.Drawing.Font("Tahoma", 8F);
-            this.superTabControl_CostSts.TabIndex = 1024;
-            this.superTabControl_CostSts.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.superTabItem_LocalCosts,
-            this.superTabItem_ExtrnalCosts,
-            this.switch_Cost});
-            this.superTabControl_CostSts.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
-            this.superTabControl_CostSts.Text = "superTabControl3";
-            // 
-            // superTabControlPanel6
-            // 
-            this.superTabControlPanel6.Controls.Add(this.checkBox_CostLocal);
-            this.superTabControlPanel6.Controls.Add(this.label29);
-            this.superTabControlPanel6.Controls.Add(this.label20);
-            this.superTabControlPanel6.Controls.Add(this.txtTotCost);
-            this.superTabControlPanel6.Controls.Add(this.txtTotCostLoc);
-            this.superTabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel6.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel6.Name = "superTabControlPanel6";
-            superTabLinearGradientColorTable9.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.Gray,
-        System.Drawing.Color.White};
-            superTabPanelItemColorTable6.Background = superTabLinearGradientColorTable9;
-            superTabPanelColorTable6.Default = superTabPanelItemColorTable6;
-            this.superTabControlPanel6.PanelColor = superTabPanelColorTable6;
-            this.superTabControlPanel6.Size = new System.Drawing.Size(988, 93);
-            this.superTabControlPanel6.TabIndex = 1;
-            this.superTabControlPanel6.TabItem = this.superTabItem_LocalCosts;
-            // 
-            // checkBox_CostLocal
-            // 
-            this.checkBox_CostLocal.AutoSize = true;
-            this.checkBox_CostLocal.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.checkBox_CostLocal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.checkBox_CostLocal.BackgroundStyle.TextShadowColor = System.Drawing.SystemColors.ControlLight;
-            this.checkBox_CostLocal.BackgroundStyle.TextShadowOffset = new System.Drawing.Point(3, 3);
-            this.checkBox_CostLocal.CheckSignSize = new System.Drawing.Size(14, 14);
-            this.checkBox_CostLocal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.checkBox_CostLocal.Location = new System.Drawing.Point(16, 32);
-            this.checkBox_CostLocal.Name = "checkBox_CostLocal";
-            this.checkBox_CostLocal.Size = new System.Drawing.Size(160, 17);
-            this.checkBox_CostLocal.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.checkBox_CostLocal.TabIndex = 1113;
-            this.checkBox_CostLocal.Text = "يضاف الى صافي الفاتورة";
-            this.checkBox_CostLocal.CheckedChanged += new System.EventHandler(this.checkBox_CostLocal_CheckedChanged);
-            // 
-            // label29
-            // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label29.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.label29.ForeColor = System.Drawing.Color.Navy;
-            this.label29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label29.Location = new System.Drawing.Point(843, 7);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(136, 21);
-            this.label29.TabIndex = 1112;
-            this.label29.Text = "إجمالي التكلفة المحلية";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label20.Location = new System.Drawing.Point(704, 7);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(136, 21);
-            this.label20.TabIndex = 1111;
-            this.label20.Text = "بالريــــال";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtTotCost
-            // 
-            this.txtTotCost.AllowEmptyState = false;
-            this.txtTotCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.txtTotCost.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtTotCost.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTotCost.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtTotCost.DisplayFormat = "0.00";
-            this.txtTotCost.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtTotCost.Increment = 0D;
-            this.txtTotCost.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtTotCost.Location = new System.Drawing.Point(843, 30);
-            this.txtTotCost.MinValue = 0D;
-            this.txtTotCost.Name = "txtTotCost";
-            this.txtTotCost.Size = new System.Drawing.Size(136, 21);
-            this.txtTotCost.TabIndex = 1109;
-            this.txtTotCost.Leave += new System.EventHandler(this.txtTotCost_Leave);
-            // 
-            // txtTotCostLoc
-            // 
-            this.txtTotCostLoc.AllowEmptyState = false;
-            this.txtTotCostLoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.txtTotCostLoc.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
-            this.txtTotCostLoc.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtTotCostLoc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTotCostLoc.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtTotCostLoc.DisplayFormat = "0.00";
-            this.txtTotCostLoc.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtTotCostLoc.Increment = 0D;
-            this.txtTotCostLoc.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtTotCostLoc.IsInputReadOnly = true;
-            this.txtTotCostLoc.Location = new System.Drawing.Point(704, 30);
-            this.txtTotCostLoc.MinValue = 0D;
-            this.txtTotCostLoc.Name = "txtTotCostLoc";
-            this.txtTotCostLoc.Size = new System.Drawing.Size(136, 21);
-            this.txtTotCostLoc.TabIndex = 1110;
-            // 
-            // superTabItem_LocalCosts
-            // 
-            this.superTabItem_LocalCosts.AttachedControl = this.superTabControlPanel6;
-            this.superTabItem_LocalCosts.GlobalItem = false;
-            this.superTabItem_LocalCosts.Name = "superTabItem_LocalCosts";
-            this.superTabItem_LocalCosts.Text = "تكاليف محلية";
-            // 
-            // superTabControlPanel7
-            // 
-            this.superTabControlPanel7.Controls.Add(this.button_AutoCost);
-            this.superTabControlPanel7.Controls.Add(this.label31);
-            this.superTabControlPanel7.Controls.Add(this.label21);
-            this.superTabControlPanel7.Controls.Add(this.label16);
-            this.superTabControlPanel7.Controls.Add(this.button_CustC4);
-            this.superTabControlPanel7.Controls.Add(this.txtCredit4);
-            this.superTabControlPanel7.Controls.Add(this.button_CustD4);
-            this.superTabControlPanel7.Controls.Add(this.txtDebit4);
-            this.superTabControlPanel7.Controls.Add(this.checkBox_CostGaid);
-            this.superTabControlPanel7.Controls.Add(this.label28);
-            this.superTabControlPanel7.Controls.Add(this.txtTotCostExtrnal);
-            this.superTabControlPanel7.Controls.Add(this.txtTotCostLocExtrnal);
-            this.superTabControlPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel7.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel7.Name = "superTabControlPanel7";
-            superTabLinearGradientColorTable10.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.Gray,
-        System.Drawing.Color.White};
-            superTabPanelItemColorTable7.Background = superTabLinearGradientColorTable10;
-            superTabPanelColorTable7.Default = superTabPanelItemColorTable7;
-            this.superTabControlPanel7.PanelColor = superTabPanelColorTable7;
-            this.superTabControlPanel7.Size = new System.Drawing.Size(988, 118);
-            this.superTabControlPanel7.TabIndex = 0;
-            this.superTabControlPanel7.TabItem = this.superTabItem_ExtrnalCosts;
-            this.superTabControlPanel7.Visible = false;
-            // 
-            // button_AutoCost
-            // 
-            this.button_AutoCost.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_AutoCost.Checked = true;
-            this.button_AutoCost.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_AutoCost.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.button_AutoCost.Location = new System.Drawing.Point(7, 7);
-            this.button_AutoCost.Name = "button_AutoCost";
-            this.button_AutoCost.Size = new System.Drawing.Size(103, 21);
-            this.button_AutoCost.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_AutoCost.SymbolSize = 12F;
-            this.button_AutoCost.TabIndex = 1128;
-            this.button_AutoCost.Text = "تقسيم تلقائي";
-            this.button_AutoCost.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_AutoCost.Tooltip = "توزيع التكلفة بالتساوي على جميع الأسطر";
-            this.button_AutoCost.Visible = false;
-            this.button_AutoCost.Click += new System.EventHandler(this.button_AutoCost_Click);
-            // 
-            // label31
-            // 
-            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label31.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.label31.ForeColor = System.Drawing.Color.Navy;
-            this.label31.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label31.Location = new System.Drawing.Point(883, 7);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(99, 21);
-            this.label31.TabIndex = 1127;
-            this.label31.Text = "التكلفة الخارجية";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label21
-            // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label21.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label21.Location = new System.Drawing.Point(725, 34);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(49, 13);
-            this.label21.TabIndex = 1126;
-            this.label21.Text = "الدائـــن :";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label16.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label16.Location = new System.Drawing.Point(725, 11);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 13);
-            this.label16.TabIndex = 1125;
-            this.label16.Text = "المـــدين :";
-            // 
-            // button_CustC4
-            // 
-            this.button_CustC4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_CustC4.Checked = true;
-            this.button_CustC4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_CustC4.Enabled = false;
-            this.button_CustC4.Location = new System.Drawing.Point(115, 33);
-            this.button_CustC4.Name = "button_CustC4";
-            this.button_CustC4.Size = new System.Drawing.Size(15, 15);
-            this.button_CustC4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_CustC4.Symbol = "";
-            this.button_CustC4.SymbolSize = 7F;
-            this.button_CustC4.TabIndex = 1124;
-            this.button_CustC4.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_CustC4.Tooltip = "حساب العميل";
-            // 
-            // txtCredit4
-            // 
-            this.txtCredit4.BackColor = System.Drawing.SystemColors.Control;
-            // 
-            // 
-            // 
-            this.txtCredit4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtCredit4.ButtonCustom.Visible = true;
-            this.txtCredit4.Enabled = false;
-            this.txtCredit4.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.txtCredit4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCredit4.Location = new System.Drawing.Point(133, 33);
-            this.txtCredit4.Name = "txtCredit4";
-            this.txtCredit4.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.txtCredit4, false);
-            this.txtCredit4.Size = new System.Drawing.Size(146, 14);
-            this.txtCredit4.TabIndex = 1123;
-            this.txtCredit4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button_CustD4
-            // 
-            this.button_CustD4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_CustD4.Checked = true;
-            this.button_CustD4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_CustD4.Enabled = false;
-            this.button_CustD4.Location = new System.Drawing.Point(115, 10);
-            this.button_CustD4.Name = "button_CustD4";
-            this.button_CustD4.Size = new System.Drawing.Size(15, 15);
-            this.button_CustD4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_CustD4.Symbol = "";
-            this.button_CustD4.SymbolSize = 7F;
-            this.button_CustD4.TabIndex = 1122;
-            this.button_CustD4.TextColor = System.Drawing.Color.SteelBlue;
-            this.button_CustD4.Tooltip = "حساب العميل";
-            // 
-            // txtDebit4
-            // 
-            this.txtDebit4.BackColor = System.Drawing.SystemColors.Control;
-            // 
-            // 
-            // 
-            this.txtDebit4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtDebit4.ButtonCustom.Visible = true;
-            this.txtDebit4.Enabled = false;
-            this.txtDebit4.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.txtDebit4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtDebit4.Location = new System.Drawing.Point(133, 10);
-            this.txtDebit4.Name = "txtDebit4";
-            this.txtDebit4.ReadOnly = true;
-            this.netResize1.SetResizeTextBoxMultiline(this.txtDebit4, false);
-            this.txtDebit4.Size = new System.Drawing.Size(146, 14);
-            this.txtDebit4.TabIndex = 1121;
-            this.txtDebit4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // checkBox_CostGaid
-            // 
-            this.checkBox_CostGaid.AutoSize = true;
-            this.checkBox_CostGaid.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.checkBox_CostGaid.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.checkBox_CostGaid.BackgroundStyle.TextShadowColor = System.Drawing.SystemColors.ControlLight;
-            this.checkBox_CostGaid.BackgroundStyle.TextShadowOffset = new System.Drawing.Point(3, 3);
-            this.checkBox_CostGaid.CheckSignSize = new System.Drawing.Size(14, 14);
-            this.checkBox_CostGaid.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.checkBox_CostGaid.Location = new System.Drawing.Point(7, 32);
-            this.checkBox_CostGaid.Name = "checkBox_CostGaid";
-            this.checkBox_CostGaid.Size = new System.Drawing.Size(103, 17);
-            this.checkBox_CostGaid.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.checkBox_CostGaid.TabIndex = 1109;
-            this.checkBox_CostGaid.Text = "سند محاسبي";
-            this.checkBox_CostGaid.CheckedChanged += new System.EventHandler(this.checkBox_CostGaid_CheckedChanged);
-            // 
-            // label28
-            // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label28.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label28.Location = new System.Drawing.Point(782, 7);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(99, 21);
-            this.label28.TabIndex = 1108;
-            this.label28.Text = "بالريــــال";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtTotCostExtrnal
-            // 
-            this.txtTotCostExtrnal.AllowEmptyState = false;
-            this.txtTotCostExtrnal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.txtTotCostExtrnal.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtTotCostExtrnal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTotCostExtrnal.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtTotCostExtrnal.DisplayFormat = "0.00";
-            this.txtTotCostExtrnal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtTotCostExtrnal.Increment = 0D;
-            this.txtTotCostExtrnal.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtTotCostExtrnal.Location = new System.Drawing.Point(883, 30);
-            this.txtTotCostExtrnal.MinValue = 0D;
-            this.txtTotCostExtrnal.Name = "txtTotCostExtrnal";
-            this.txtTotCostExtrnal.Size = new System.Drawing.Size(99, 21);
-            this.txtTotCostExtrnal.TabIndex = 1106;
-            this.txtTotCostExtrnal.ValueChanged += new System.EventHandler(this.txtTotCostExtrnal_ValueChanged);
-            this.txtTotCostExtrnal.Leave += new System.EventHandler(this.txtTotCostExtrnal_Leave);
-            // 
-            // txtTotCostLocExtrnal
-            // 
-            this.txtTotCostLocExtrnal.AllowEmptyState = false;
-            this.txtTotCostLocExtrnal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.txtTotCostLocExtrnal.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
-            this.txtTotCostLocExtrnal.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtTotCostLocExtrnal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTotCostLocExtrnal.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtTotCostLocExtrnal.DisplayFormat = "0.00";
-            this.txtTotCostLocExtrnal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtTotCostLocExtrnal.Increment = 0D;
-            this.txtTotCostLocExtrnal.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center;
-            this.txtTotCostLocExtrnal.IsInputReadOnly = true;
-            this.txtTotCostLocExtrnal.Location = new System.Drawing.Point(782, 30);
-            this.txtTotCostLocExtrnal.MinValue = 0D;
-            this.txtTotCostLocExtrnal.Name = "txtTotCostLocExtrnal";
-            this.txtTotCostLocExtrnal.Size = new System.Drawing.Size(99, 21);
-            this.txtTotCostLocExtrnal.TabIndex = 1107;
-            // 
-            // superTabItem_ExtrnalCosts
-            // 
-            this.superTabItem_ExtrnalCosts.AttachedControl = this.superTabControlPanel7;
-            this.superTabItem_ExtrnalCosts.GlobalItem = false;
-            this.superTabItem_ExtrnalCosts.Name = "superTabItem_ExtrnalCosts";
-            this.superTabItem_ExtrnalCosts.Text = "تكاليف خارجية";
-            // 
-            // switch_Cost
-            // 
-            this.switch_Cost.ButtonWidth = 230;
-            this.switch_Cost.Name = "switch_Cost";
-            this.switch_Cost.OffText = "إعتماد التكلفة الإضافية";
-            this.switch_Cost.OnText = "ايقاف إعتماد التكلفة الإضافية";
-            this.switch_Cost.SwitchWidth = 50;
-            this.switch_Cost.Value = true;
-            this.switch_Cost.ValueChanged += new System.EventHandler(this.switch_Cost_ValueChanged);
-            // 
-            // superTabItem_Costs
-            // 
-            this.superTabItem_Costs.AttachedControl = this.superTabControlPanel5;
-            this.superTabItem_Costs.GlobalItem = false;
-            this.superTabItem_Costs.Name = "superTabItem_Costs";
-            superTabLinearGradientColorTable11.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.White};
-            superTabItemStateColorTable3.Background = superTabLinearGradientColorTable11;
-            superTabColorStates3.Normal = superTabItemStateColorTable3;
-            superTabItemColorTable3.Default = superTabColorStates3;
-            this.superTabItem_Costs.TabColor = superTabItemColorTable3;
-            this.superTabItem_Costs.Text = "التكــاليف";
-            // 
-            // superTabControlPanel4
-            // 
-            this.superTabControlPanel4.Controls.Add(this.label_Due);
-            this.superTabControlPanel4.Controls.Add(this.label42);
-            this.superTabControlPanel4.Controls.Add(this.txtDueDate);
-            this.superTabControlPanel4.Controls.Add(this.txtRemark);
-            this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel4.Name = "superTabControlPanel4";
-            superTabLinearGradientColorTable12.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.Gray,
-        System.Drawing.Color.White};
-            superTabPanelItemColorTable8.Background = superTabLinearGradientColorTable12;
-            superTabPanelColorTable8.Default = superTabPanelItemColorTable8;
-            this.superTabControlPanel4.PanelColor = superTabPanelColorTable8;
-            this.superTabControlPanel4.Size = new System.Drawing.Size(988, 118);
-            this.superTabControlPanel4.TabIndex = 2;
-            this.superTabControlPanel4.TabItem = this.superTabItem_Note;
-            this.superTabControlPanel4.Visible = false;
-            // 
-            // label_Due
-            // 
-            this.label_Due.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_Due.BackColor = System.Drawing.Color.Transparent;
-            this.label_Due.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_Due.Font = new System.Drawing.Font("Tahoma", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label_Due.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label_Due.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label_Due.Location = new System.Drawing.Point(638, 55);
-            this.label_Due.Name = "label_Due";
-            this.label_Due.Size = new System.Drawing.Size(347, 22);
-            this.label_Due.TabIndex = 485;
-            this.label_Due.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label42
-            // 
-            this.label42.BackColor = System.Drawing.Color.Transparent;
-            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label42.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label42.Location = new System.Drawing.Point(99, 57);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(88, 22);
-            this.label42.TabIndex = 484;
-            this.label42.Text = "تاريخ الإستحقاق ";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtDueDate
-            // 
-            this.txtDueDate.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtDueDate.Enabled = false;
-            this.txtDueDate.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.txtDueDate.Location = new System.Drawing.Point(5, 57);
-            this.txtDueDate.Mask = "0000/00/00";
-            this.txtDueDate.Name = "txtDueDate";
-            this.txtDueDate.Size = new System.Drawing.Size(90, 21);
-            this.txtDueDate.TabIndex = 483;
-            this.txtDueDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtDueDate.Click += new System.EventHandler(this.txtDueDate_Click);
-            this.txtDueDate.Leave += new System.EventHandler(this.txtDueDate_Leave);
-            // 
-            // txtRemark
-            // 
-            this.txtRemark.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtRemark.Border.Class = "TextBoxBorder";
-            this.txtRemark.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtRemark.ButtonCustom.Image = ((System.Drawing.Image)(resources.GetObject("txtRemark.ButtonCustom.Image")));
-            this.txtRemark.ButtonCustom.Visible = true;
-            this.txtRemark.ButtonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("txtRemark.ButtonCustom2.Image")));
-            this.txtRemark.ButtonCustom2.Visible = true;
-            this.txtRemark.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtRemark.ForeColor = System.Drawing.Color.Black;
-            this.txtRemark.Location = new System.Drawing.Point(0, 0);
-            this.txtRemark.Multiline = true;
-            this.txtRemark.Name = "txtRemark";
-            this.netResize1.SetResizeTextBoxMultiline(this.txtRemark, false);
-            this.txtRemark.Size = new System.Drawing.Size(988, 54);
-            this.txtRemark.TabIndex = 480;
-            this.txtRemark.WatermarkText = "ملاحظات الفاتورة";
-            this.txtRemark.ButtonCustom2Click += new System.EventHandler(this.txtRemark_ButtonCustom2Click);
-            // 
-            // superTabItem_Note
-            // 
-            this.superTabItem_Note.AttachedControl = this.superTabControlPanel4;
-            this.superTabItem_Note.GlobalItem = false;
-            this.superTabItem_Note.Name = "superTabItem_Note";
             superTabLinearGradientColorTable13.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.Empty};
+        System.Drawing.Color.White};
             superTabItemStateColorTable4.Background = superTabLinearGradientColorTable13;
             superTabColorStates4.Normal = superTabItemStateColorTable4;
             superTabItemColorTable4.Default = superTabColorStates4;
-            this.superTabItem_Note.TabColor = superTabItemColorTable4;
-            this.superTabItem_Note.Text = "ملاحظات";
+            this.superTabItem_Gaids.TabColor = superTabItemColorTable4;
+            this.superTabItem_Gaids.Text = "القيود";
             // 
             // superTabControlPanel2
             // 
@@ -4851,6 +4851,19 @@ private void InitializeComponent()
             this.superTabControlPanel3.ResumeLayout(false);
             this.superTabControlPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FlxStkQty)).EndInit();
+            this.superTabControlPanel4.ResumeLayout(false);
+            this.superTabControlPanel4.PerformLayout();
+            this.superTabControlPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.superTabControl_CostSts)).EndInit();
+            this.superTabControl_CostSts.ResumeLayout(false);
+            this.superTabControlPanel6.ResumeLayout(false);
+            this.superTabControlPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotCostLoc)).EndInit();
+            this.superTabControlPanel7.ResumeLayout(false);
+            this.superTabControlPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotCostExtrnal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotCostLocExtrnal)).EndInit();
             this.superTabControlPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl3)).EndInit();
             this.superTabControl3.ResumeLayout(false);
@@ -4869,19 +4882,6 @@ private void InitializeComponent()
             this.superTabControlPanel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotBankComm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotBankCommLoc)).EndInit();
-            this.superTabControlPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.superTabControl_CostSts)).EndInit();
-            this.superTabControl_CostSts.ResumeLayout(false);
-            this.superTabControlPanel6.ResumeLayout(false);
-            this.superTabControlPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotCost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotCostLoc)).EndInit();
-            this.superTabControlPanel7.ResumeLayout(false);
-            this.superTabControlPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotCostExtrnal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotCostLocExtrnal)).EndInit();
-            this.superTabControlPanel4.ResumeLayout(false);
-            this.superTabControlPanel4.PerformLayout();
             this.superTabControlPanel2.ResumeLayout(false);
             this.superTabControlPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalQ)).EndInit();
